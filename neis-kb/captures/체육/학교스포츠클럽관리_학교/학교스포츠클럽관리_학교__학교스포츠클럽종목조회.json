@@ -1,0 +1,107 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교스포츠클럽관리#학교›학교스포츠클럽관리#학교›학교스포츠클럽종목조회",
+ "name": "학교스포츠클럽종목조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:08:47+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      185,
+      82,
+      242,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "종목명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:종목명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "전체검색",
+     "box": [
+      25,
+      143,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "전체검색",
+     "id": "heading:전체검색"
+    },
+    {
+     "aria": "전체검색",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전체검색",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "종목명",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        786,
+        36
+       ],
+       "id": "col:전체검색/종목명"
+      },
+      {
+       "label": "종목코드",
+       "depth": 0,
+       "box": [
+        812,
+        174,
+        786,
+        36
+       ],
+       "id": "col:전체검색/종목코드"
+      }
+     ],
+     "id": "grid:전체검색"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교스포츠클럽관리 > 학교스포츠클럽관리 > 학교스포츠클럽종목조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

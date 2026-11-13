@@ -1,0 +1,154 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교운동부관리#학교›기초자료#학교›세부종목조회",
+ "name": "세부종목조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:07:49+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "종목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:종목"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "세부종목명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:세부종목명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "세부종목 목록",
+     "box": [
+      25,
+      163,
+      1590,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "세부종목 목록",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        50,
+        36
+       ],
+       "id": "col:세부종목 목록/순번"
+      },
+      {
+       "label": "종목",
+       "depth": 0,
+       "box": [
+        76,
+        164,
+        619,
+        36
+       ],
+       "id": "col:세부종목 목록/종목"
+      },
+      {
+       "label": "종목코드",
+       "depth": 0,
+       "box": [
+        695,
+        164,
+        100,
+        36
+       ],
+       "id": "col:세부종목 목록/종목코드"
+      },
+      {
+       "label": "세부종목명",
+       "depth": 0,
+       "box": [
+        795,
+        164,
+        619,
+        36
+       ],
+       "id": "col:세부종목 목록/세부종목명"
+      },
+      {
+       "label": "세부종목코드",
+       "depth": 0,
+       "box": [
+        1414,
+        164,
+        100,
+        36
+       ],
+       "id": "col:세부종목 목록/세부종목코드"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1514,
+        164,
+        100,
+        36
+       ],
+       "id": "col:세부종목 목록/사용여부"
+      }
+     ],
+     "id": "grid:세부종목 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교운동부관리 > 기초자료 > 세부종목조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

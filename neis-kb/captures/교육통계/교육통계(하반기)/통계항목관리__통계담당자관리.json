@@ -1,0 +1,241 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육통계›교육통계(하반기)›통계항목관리›통계담당자관리",
+ "name": "통계담당자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:43:33+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      130,
+      93,
+      85,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:통계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      300,
+      93,
+      185,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "관할조직",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:관할조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      560,
+      93,
+      245,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "학교명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학교명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1511,
+      93,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      155,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 통계담당자는 조직명 또는 담당자명 선택 후 변경 가능합니다.",
+     "id": "note:※ 통계담당자는 조직명 또는 담당자명 선택 후 변경 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      209,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "권한부여안내",
+     "variant": "primary",
+     "id": "button:권한부여안내"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      209,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "통계담당자 세부리스트",
+     "box": [
+      25,
+      249,
+      1590,
+      525
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "통계담당자 세부리스트",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "관할기관",
+       "depth": 0,
+       "box": [
+        26,
+        250,
+        256,
+        36
+       ],
+       "id": "col:통계담당자 세부리스트/관할기관"
+      },
+      {
+       "label": "조직코드",
+       "depth": 0,
+       "box": [
+        282,
+        250,
+        196,
+        36
+       ],
+       "id": "col:통계담당자 세부리스트/조직코드"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        478,
+        250,
+        211,
+        36
+       ],
+       "id": "col:통계담당자 세부리스트/조직명"
+      },
+      {
+       "label": "기관종류구분",
+       "depth": 0,
+       "box": [
+        689,
+        250,
+        184,
+        36
+       ],
+       "id": "col:통계담당자 세부리스트/기관종류구분"
+      },
+      {
+       "label": "담당자ID",
+       "depth": 0,
+       "box": [
+        873,
+        250,
+        160,
+        36
+       ],
+       "id": "col:통계담당자 세부리스트/담당자ID"
+      },
+      {
+       "label": "담당자명",
+       "depth": 0,
+       "box": [
+        1033,
+        250,
+        182,
+        36
+       ],
+       "id": "col:통계담당자 세부리스트/담당자명"
+      },
+      {
+       "label": "사무실 전화번호",
+       "depth": 0,
+       "box": [
+        1215,
+        250,
+        211,
+        36
+       ],
+       "id": "col:통계담당자 세부리스트/사무실 전화번호"
+      },
+      {
+       "label": "E-MAIL",
+       "depth": 0,
+       "box": [
+        1426,
+        250,
+        188,
+        36
+       ],
+       "id": "col:통계담당자 세부리스트/E-MAIL"
+      }
+     ],
+     "id": "grid:통계담당자 세부리스트"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "교육통계 > {교육통계}교육통계(상반기) > 통계항목관리 > 통계담당자관리",
+ "alsoVia": [
+  "교육통계",
+  "부서장(나이스부)",
+  "부서장(나이스부)",
+  "부서장(정보화부)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

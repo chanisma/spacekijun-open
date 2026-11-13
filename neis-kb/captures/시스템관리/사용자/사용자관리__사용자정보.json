@@ -1,0 +1,88 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›사용자›사용자관리›사용자정보",
+ "name": "사용자정보",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:01:42+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:사용자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      381,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "link",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      680
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [
+     "사용자명 입력시 사용자 찾기 후 조회을(를) 하십시오."
+    ],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}사용자 > 사용자관리 > 사용자정보",
+ "viewport": [
+  1920,
+  945
+ ]
+}

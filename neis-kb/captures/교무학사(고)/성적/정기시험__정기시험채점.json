@@ -1,0 +1,368 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›정기시험›정기시험채점",
+ "name": "정기시험채점",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:29:08+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정기시험 채점 서답형 점수 설정 안내",
+     "id": "note:※ 정기시험 채점 서답형 점수 설정 안내"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      374,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정기시험 채점 유의사항",
+     "id": "note:※ 정기시험 채점 유의사항"
+    },
+    {
+     "aria": null,
+     "box": [
+      461,
+      557,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄채점",
+     "variant": "primary",
+     "id": "button:일괄채점"
+    },
+    {
+     "aria": "채점",
+     "box": [
+      1479,
+      557,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "채점",
+     "variant": "primary",
+     "id": "button:채점"
+    },
+    {
+     "aria": "검증",
+     "box": [
+      1527,
+      557,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검증",
+     "variant": "link",
+     "id": "button:검증"
+    },
+    {
+     "aria": "이력",
+     "box": [
+      1575,
+      557,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "이력",
+     "variant": "link",
+     "id": "button:이력"
+    },
+    {
+     "aria": null,
+     "box": [
+      132,
+      595,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "+",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:+"
+    },
+    {
+     "aria": null,
+     "box": [
+      351,
+      595,
+      125,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "성적관리 기타점수",
+     "checked": false,
+     "id": "check:성적관리 기타점수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1490,
+      595,
+      125,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "성적관리 기타점수",
+     "checked": false,
+     "id": "check:성적관리 기타점수#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      635,
+      500,
+      179
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        76,
+        636,
+        224,
+        36
+       ],
+       "id": "col:그리드/강의실"
+      },
+      {
+       "label": "대상자",
+       "depth": 0,
+       "box": [
+        300,
+        636,
+        224,
+        36
+       ],
+       "id": "col:그리드/대상자"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": "채점대상자",
+     "box": [
+      540,
+      871,
+      81,
+      20
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "heading",
+     "label": "채점대상자",
+     "id": "heading:채점대상자"
+    },
+    {
+     "aria": null,
+     "box": [
+      540,
+      901,
+      1075,
+      2
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        541,
+        902,
+        151,
+        31
+       ],
+       "id": "col:그리드/강의실"
+      },
+      {
+       "label": "반/번호",
+       "depth": 0,
+       "box": [
+        692,
+        902,
+        151,
+        31
+       ],
+       "id": "col:그리드/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        843,
+        902,
+        302,
+        31
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1145,
+        902,
+        453,
+        31
+       ],
+       "id": "col:그리드/비고"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 정기시험 > 정기시험채점",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

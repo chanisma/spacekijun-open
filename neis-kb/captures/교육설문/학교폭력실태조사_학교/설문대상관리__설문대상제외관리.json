@@ -1,0 +1,11 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학교폭력실태조사#학교›설문대상관리›설문대상제외관리",
+ "name": "설문대상제외관리",
+ "status": "not_found",
+ "capturedAt": "2026-10-05T05:50:32+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [],
+ "error": "메뉴 검색 결과 0건 중 경로가 맞는 것이 없습니다"
+}

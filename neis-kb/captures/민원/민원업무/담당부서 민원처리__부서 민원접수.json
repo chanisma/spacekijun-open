@@ -1,0 +1,273 @@
+{
+ "schema": "neis-capture/1",
+ "key": "민원›민원업무›담당부서 민원처리›부서 민원접수",
+ "name": "부서 민원접수",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:34:18+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      180,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "처리부서명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:처리부서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      82,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "접수번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:접수번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      890,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "접수일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:접수일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1025,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "접수일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:접수일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      180,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "접수구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:접수구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청인성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:신청인성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      890,
+      122,
+      256,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "민원사무명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:민원사무명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      173,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "처리담당자변경",
+     "variant": "primary",
+     "id": "button:처리담당자변경"
+    },
+    {
+     "aria": "부서 민원접수 목록",
+     "box": [
+      25,
+      213,
+      1590,
+      370
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "부서 민원접수 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "접수번호",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        170,
+        36
+       ],
+       "id": "col:부서 민원접수 목록/접수번호"
+      },
+      {
+       "label": "접수구분",
+       "depth": 0,
+       "box": [
+        246,
+        214,
+        115,
+        36
+       ],
+       "id": "col:부서 민원접수 목록/접수구분"
+      },
+      {
+       "label": "접수일자",
+       "depth": 0,
+       "box": [
+        361,
+        214,
+        120,
+        36
+       ],
+       "id": "col:부서 민원접수 목록/접수일자"
+      },
+      {
+       "label": "신청인",
+       "depth": 0,
+       "box": [
+        481,
+        214,
+        120,
+        36
+       ],
+       "id": "col:부서 민원접수 목록/신청인"
+      },
+      {
+       "label": "민원사무명",
+       "depth": 0,
+       "box": [
+        601,
+        214,
+        693,
+        36
+       ],
+       "id": "col:부서 민원접수 목록/민원사무명"
+      },
+      {
+       "label": "처리부서명",
+       "depth": 0,
+       "box": [
+        1294,
+        214,
+        200,
+        36
+       ],
+       "id": "col:부서 민원접수 목록/처리부서명"
+      },
+      {
+       "label": "처리부서담당자",
+       "depth": 0,
+       "box": [
+        1494,
+        214,
+        120,
+        36
+       ],
+       "id": "col:부서 민원접수 목록/처리부서담당자"
+      }
+     ],
+     "id": "grid:부서 민원접수 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      596,
+      40,
+      25
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {민원}민원업무 > 담당부서 민원처리 > 부서 민원접수",
+ "viewport": [
+  1920,
+  945
+ ]
+}

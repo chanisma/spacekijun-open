@@ -1,0 +1,296 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교운영위원회›회의관리›심의안건등록(안건제출자)›심의안건등록(안건제출자)",
+ "name": "심의안건등록(안건제출자)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:31:25+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "안건명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:안건명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1516,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1167,
+      133,
+      56,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "위로",
+     "variant": "plain",
+     "id": "button:위로"
+    },
+    {
+     "aria": null,
+     "box": [
+      1231,
+      133,
+      68,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "아래로",
+     "variant": "plain",
+     "id": "button:아래로"
+    },
+    {
+     "aria": null,
+     "box": [
+      1315,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1375,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1443,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1491,
+      133,
+      109,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "K-에듀파인(기안)",
+     "variant": "primary",
+     "id": "button:K-에듀파인(기안)"
+    },
+    {
+     "aria": "심의안건",
+     "box": [
+      25,
+      173,
+      1575,
+      438
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "심의안건",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "F",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        36
+       ],
+       "id": "col:심의안건/F"
+      },
+      {
+       "label": "연도",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        295,
+        36
+       ],
+       "id": "col:심의안건/연도"
+      },
+      {
+       "label": "안건명",
+       "depth": 0,
+       "box": [
+        421,
+        174,
+        295,
+        36
+       ],
+       "id": "col:심의안건/안건명"
+      },
+      {
+       "label": "안건파일",
+       "depth": 0,
+       "box": [
+        715,
+        174,
+        295,
+        36
+       ],
+       "id": "col:심의안건/안건파일"
+      },
+      {
+       "label": "제안자",
+       "depth": 0,
+       "box": [
+        1010,
+        174,
+        295,
+        36
+       ],
+       "id": "col:심의안건/제안자"
+      },
+      {
+       "label": "안건부의",
+       "depth": 0,
+       "box": [
+        1304,
+        174,
+        295,
+        36
+       ],
+       "id": "col:심의안건/안건부의"
+      }
+     ],
+     "id": "grid:심의안건"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      627,
+      261,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "제안자",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:제안자"
+    },
+    {
+     "aria": null,
+     "box": [
+      541,
+      627,
+      522,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "안건명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:안건명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      683,
+      784,
+      20
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "heading",
+     "label": "안건파일",
+     "id": "heading:안건파일"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교운영위원회}회의관리 > 심의안건등록(안건제출자)",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,386 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›시간표관리›교사별결보강처리",
+ "name": "교사별결보강처리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:00:35+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "기간별 또는 날짜별",
+     "box": [
+      285,
+      82,
+      142,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "학년도",
+     "options": [
+      "기간별",
+      "날짜별"
+     ],
+     "id": "radio:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      437,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": "검색시작일 하루빼기",
+     "box": [
+      567,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색시작일 하루빼기",
+     "variant": "plain",
+     "id": "button:검색시작일 하루빼기"
+    },
+    {
+     "aria": "검색시작일 하루더하기",
+     "box": [
+      597,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색시작일 하루더하기",
+     "variant": "plain",
+     "id": "button:검색시작일 하루더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      639,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자~"
+    },
+    {
+     "aria": "검색종료일 하루빼기",
+     "box": [
+      769,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색종료일 하루빼기",
+     "variant": "plain",
+     "id": "button:검색종료일 하루빼기"
+    },
+    {
+     "aria": "검색종료일 하루더하기",
+     "box": [
+      799,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색종료일 하루더하기",
+     "variant": "plain",
+     "id": "button:검색종료일 하루더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      967,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교사",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:교사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1077,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교사",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:교사#2"
+    },
+    {
+     "aria": "교사찾기",
+     "box": [
+      1187,
+      82,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "교사찾기",
+     "variant": "secondary",
+     "id": "button:교사찾기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "대체교사찾기",
+     "box": [
+      1228,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "대체교사찾기",
+     "variant": "primary",
+     "id": "button:대체교사찾기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1324,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1372,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "대체교사삭제",
+     "box": [
+      1420,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "대체교사삭제",
+     "variant": "secondary",
+     "id": "button:대체교사삭제"
+    },
+    {
+     "aria": "오류결보강삭제",
+     "box": [
+      1515,
+      133,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "오류결보강삭제",
+     "variant": "secondary",
+     "id": "button:오류결보강삭제"
+    },
+    {
+     "aria": "결보강처리목록",
+     "box": [
+      25,
+      173,
+      1590,
+      588
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "결보강처리목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        190,
+        36
+       ],
+       "id": "col:결보강처리목록/일자"
+      },
+      {
+       "label": "요일",
+       "depth": 0,
+       "box": [
+        266,
+        174,
+        133,
+        36
+       ],
+       "id": "col:결보강처리목록/요일"
+      },
+      {
+       "label": "교시",
+       "depth": 0,
+       "box": [
+        399,
+        174,
+        133,
+        36
+       ],
+       "id": "col:결보강처리목록/교시"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        532,
+        174,
+        133,
+        36
+       ],
+       "id": "col:결보강처리목록/학년"
+      },
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        665,
+        174,
+        380,
+        36
+       ],
+       "id": "col:결보강처리목록/강의실"
+      },
+      {
+       "label": "내용",
+       "depth": 0,
+       "box": [
+        1044,
+        174,
+        380,
+        36
+       ],
+       "id": "col:결보강처리목록/내용"
+      },
+      {
+       "label": "대체교사",
+       "depth": 0,
+       "box": [
+        1424,
+        174,
+        190,
+        36
+       ],
+       "id": "col:결보강처리목록/대체교사"
+      }
+     ],
+     "id": "grid:결보강처리목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      777,
+      1460,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "결보강사유",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결보강사유"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 시간표관리 > 교사별결보강처리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

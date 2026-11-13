@@ -1,0 +1,1409 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›학교기본정보등록›업체(군)관리",
+ "name": "업체(군)관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:09:23+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:업체관리",
+   "tab": "업체관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "업체관리",
+      "업체군관리",
+      "에듀파인업체정보요청"
+     ],
+     "active": "업체관리",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사업자번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사업자번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대표자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:대표자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1440,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1512,
+      137,
+      68,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학교급식 조달시스템(eaT) 발주 시 계약시점에 업체정보 1차 수신, 검수시점에 에듀파인으로부터 검수정보(업체포함) 2차 수신",
+     "id": "note:※ 학교급식 조달시스템(eaT) 발주 시 계약시점에 업체정보 1차 수신, 검수시점에 에듀파인으로부터 검수정보(업체포함) 2차 수신"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학교급식 조달시스템(eaT) 발주시 검수시점에 에듀파인으로부터 검수정보(업체포함) 수신",
+     "id": "note:※ 학교급식 조달시스템(eaT) 발주시 검수시점에 에듀파인으로부터 검수정보(업체포함) 수신"
+    },
+    {
+     "aria": null,
+     "box": [
+      1380,
+      280,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1440,
+      280,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      280,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      280,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "업체목록",
+     "box": [
+      25,
+      290,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "업체목록",
+     "id": "heading:업체목록"
+    },
+    {
+     "aria": "업체목록",
+     "box": [
+      25,
+      320,
+      1575,
+      250
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "업체목록",
+     "selectable": true,
+     "declaredColumns": 19,
+     "columns": [
+      {
+       "label": "업체구분",
+       "depth": 0,
+       "box": [
+        76,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/업체구분"
+      },
+      {
+       "label": "업체명",
+       "depth": 0,
+       "box": [
+        198,
+        321,
+        180,
+        62
+       ],
+       "span": 2,
+       "id": "col:업체목록/업체명"
+      },
+      {
+       "label": "대표자명",
+       "depth": 0,
+       "box": [
+        378,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/대표자명"
+      },
+      {
+       "label": "전화번호",
+       "depth": 0,
+       "box": [
+        500,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/전화번호"
+      },
+      {
+       "label": "계약방법",
+       "depth": 0,
+       "box": [
+        622,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/계약방법"
+      },
+      {
+       "label": "계약 유지여부",
+       "depth": 0,
+       "box": [
+        744,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/계약 유지여부"
+      },
+      {
+       "label": "영양사 (명)",
+       "depth": 0,
+       "box": [
+        867,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/영양사 (명)"
+      },
+      {
+       "label": "조리사 (명)",
+       "depth": 0,
+       "box": [
+        989,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/조리사 (명)"
+      },
+      {
+       "label": "조리보조명 (명)",
+       "depth": 0,
+       "box": [
+        1111,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/조리보조명 (명)"
+      },
+      {
+       "label": "우유단가 (원)",
+       "depth": 0,
+       "box": [
+        1233,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/우유단가 (원)"
+      },
+      {
+       "label": "출처구분",
+       "depth": 0,
+       "box": [
+        1355,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/출처구분"
+      },
+      {
+       "label": "수신일자",
+       "depth": 0,
+       "box": [
+        1477,
+        321,
+        122,
+        62
+       ],
+       "id": "col:업체목록/수신일자"
+      },
+      {
+       "label": "업체관리구분",
+       "depth": 0,
+       "box": [
+        1599,
+        321,
+        1,
+        62
+       ],
+       "id": "col:업체목록/업체관리구분"
+      },
+      {
+       "label": "사업자등록번호",
+       "depth": 0,
+       "box": [
+        1599,
+        321,
+        1,
+        62
+       ],
+       "id": "col:업체목록/사업자등록번호"
+      },
+      {
+       "label": "기타내용",
+       "depth": 0,
+       "box": [
+        1599,
+        321,
+        1,
+        62
+       ],
+       "id": "col:업체목록/기타내용"
+      },
+      {
+       "label": "업체우편번호",
+       "depth": 0,
+       "box": [
+        1599,
+        321,
+        1,
+        62
+       ],
+       "id": "col:업체목록/업체우편번호"
+      },
+      {
+       "label": "업체도로명주소",
+       "depth": 0,
+       "box": [
+        1599,
+        321,
+        1,
+        62
+       ],
+       "id": "col:업체목록/업체도로명주소"
+      },
+      {
+       "label": "업체도로명상세주소",
+       "depth": 0,
+       "box": [
+        1599,
+        321,
+        1,
+        62
+       ],
+       "id": "col:업체목록/업체도로명상세주소"
+      }
+     ],
+     "id": "grid:업체목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      583,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      630,
+      450,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "업체정보 상세",
+     "id": "heading:업체정보 상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      666,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업체구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:업체구분#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      666,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업체관리구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:업체관리구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      666,
+      213,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사업자번호",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:사업자번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      706,
+      658,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:업체명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      706,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "대표자명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:대표자명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1331,
+      706,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1410,
+      706,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전화번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      746,
+      60,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주소",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:주소"
+    },
+    {
+     "aria": "주소검색",
+     "box": [
+      216,
+      746,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "주소검색",
+     "variant": "link",
+     "id": "button:주소검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      252,
+      746,
+      669,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주소",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:주소#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      786,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "계약방법",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계약방법"
+    },
+    {
+     "aria": "계약유지여부",
+     "box": [
+      544,
+      786,
+      264,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "계약유지여부",
+     "options": [
+      "예",
+      "아니오"
+     ],
+     "id": "radio:계약유지여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      786,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "계약기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계약기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      1073,
+      786,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "계약기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계약기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1331,
+      786,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "출처구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:출처구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      826,
+      246,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "영양사",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:영양사"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      826,
+      246,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조리사",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:조리사"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      826,
+      246,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조리보조원",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:조리보조원"
+    },
+    {
+     "aria": null,
+     "box": [
+      1331,
+      826,
+      246,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "우유단가(원)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:우유단가(원)"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      866,
+      1445,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비고",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비고"
+    }
+   ]
+  },
+  {
+   "id": "tab:업체군관리",
+   "tab": "업체군관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "업체관리",
+      "업체군관리",
+      "에듀파인업체정보요청"
+     ],
+     "active": "업체군관리",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체군명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      188,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식재료 품의목록에서 사용된 내역이 존재하는 업체군은 삭제할 수 없습니다.",
+     "id": "note:※ 식재료 품의목록에서 사용된 내역이 존재하는 업체군은 삭제할 수 없습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      207,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 업체군의 이름을 수정할 경우 과거 발주서 및 검수서 등의 업체군 이름도 같이 변경됩니다.",
+     "id": "note:※ 업체군의 이름을 수정할 경우 과거 발주서 및 검수서 등의 업체군 이름도 같이 변경됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1313,
+      260,
+      29,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "△",
+     "variant": "plain",
+     "id": "button:△"
+    },
+    {
+     "aria": null,
+     "box": [
+      1350,
+      260,
+      29,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "▽",
+     "variant": "plain",
+     "id": "button:▽"
+    },
+    {
+     "aria": null,
+     "box": [
+      1395,
+      260,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      260,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      260,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      260,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "업체군목록",
+     "box": [
+      25,
+      270,
+      81,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "업체군목록",
+     "id": "heading:업체군목록"
+    },
+    {
+     "aria": "요리군코드목록",
+     "box": [
+      25,
+      295,
+      1590,
+      39
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "요리군코드목록",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "업체군코드",
+       "depth": 0,
+       "box": [
+        76,
+        296,
+        308,
+        36
+       ],
+       "id": "col:요리군코드목록/업체군코드"
+      },
+      {
+       "label": "업체군명",
+       "depth": 0,
+       "box": [
+        384,
+        296,
+        308,
+        36
+       ],
+       "id": "col:요리군코드목록/업체군명"
+      },
+      {
+       "label": "정렬순서",
+       "depth": 0,
+       "box": [
+        691,
+        296,
+        308,
+        36
+       ],
+       "id": "col:요리군코드목록/정렬순서"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        999,
+        296,
+        308,
+        36
+       ],
+       "id": "col:요리군코드목록/사용여부"
+      },
+      {
+       "label": "수정일자",
+       "depth": 0,
+       "box": [
+        1306,
+        296,
+        308,
+        36
+       ],
+       "id": "col:요리군코드목록/수정일자"
+      }
+     ],
+     "id": "grid:요리군코드목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:에듀파인업체정보요청",
+   "tab": "에듀파인업체정보요청",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "업체관리",
+      "업체군관리",
+      "에듀파인업체정보요청"
+     ],
+     "active": "에듀파인업체정보요청",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "회계년도",
+     "control": "date",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:회계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      435,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사업자번호",
+     "control": "mask",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사업자번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      695,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요청기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:요청기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      830,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요청기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:요청기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      137,
+      68,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1348,
+      198,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1407,
+      198,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": "에듀파인요청",
+     "box": [
+      1467,
+      198,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "에듀파인요청",
+     "variant": "primary",
+     "id": "button:에듀파인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      198,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "요청내역",
+     "box": [
+      25,
+      208,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요청내역",
+     "id": "heading:요청내역"
+    },
+    {
+     "aria": "요청",
+     "box": [
+      985,
+      208,
+      32,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요청",
+     "id": "heading:요청"
+    },
+    {
+     "aria": "요청내역",
+     "box": [
+      25,
+      238,
+      945,
+      468
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "요청내역",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        50,
+        36
+       ],
+       "id": "col:요청내역/순번"
+      },
+      {
+       "label": "요청일자",
+       "depth": 0,
+       "box": [
+        76,
+        239,
+        223,
+        36
+       ],
+       "id": "col:요청내역/요청일자"
+      },
+      {
+       "label": "회계년도",
+       "depth": 0,
+       "box": [
+        299,
+        239,
+        223,
+        36
+       ],
+       "id": "col:요청내역/회계년도"
+      },
+      {
+       "label": "사업자등록번호",
+       "depth": 0,
+       "box": [
+        523,
+        239,
+        223,
+        36
+       ],
+       "id": "col:요청내역/사업자등록번호"
+      },
+      {
+       "label": "연계상태",
+       "depth": 0,
+       "box": [
+        746,
+        239,
+        223,
+        36
+       ],
+       "id": "col:요청내역/연계상태"
+      }
+     ],
+     "id": "grid:요청내역"
+    },
+    {
+     "aria": "요청",
+     "box": [
+      985,
+      238,
+      630,
+      468
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "요청",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "회계년도",
+       "depth": 0,
+       "box": [
+        1036,
+        239,
+        289,
+        36
+       ],
+       "id": "col:요청/회계년도"
+      },
+      {
+       "label": "사업자등록번호",
+       "depth": 0,
+       "box": [
+        1325,
+        239,
+        289,
+        36
+       ],
+       "id": "col:요청/사업자등록번호"
+      }
+     ],
+     "id": "grid:요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      719,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 학교기본정보등록 > 업체(군)관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

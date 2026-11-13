@@ -1,0 +1,2383 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›전입관리›전입자료관리",
+ "name": "전입자료관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:11:13+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:정기시험성적관리",
+   "tab": "정기시험성적관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험성적관리 선택됨",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정기시험성적관리",
+      "수행평가성적관리",
+      "학기말성적관리",
+      "세부능력및특기사항관리",
+      "독서활동상황관리",
+      "이전출결자료등록",
+      "이전인정학점관리"
+     ],
+     "active": "정기시험성적관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      156,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 과목이 조회되지 않을 경우, 학적>전입관리>학적반영메뉴의 수강과목편성 또는 교육과정>편제 및 과목개설관리>편제 및 과목개설관리>수강생편성에서 수강학생을 편성하시기 바랍니다. ※ 과목이 비활성화된 경우, 성적>정기시험>정기시험성적관리 메뉴에서 해당 고사, 해당 학생, 해당 과목의 성적을 삭제하시기 바랍니다. ※ [이전학교성적보기]의 과목평균은 응시생 수 기준으로 산출되며 단순 참고용입니다.",
+     "id": "note:※ 과목이 조회되지 않을 경우, 학적>전입관리>학적반영메뉴의 수강과목편성 또는 교육과정>편제 및 과목개설관리>편제 및 과목개설관리>수강생편성에서 수강학생을 편성하시기 바랍니다. ※ 과목이 비활성화된 경우, 성적>정기시험>정기시험성적관리 메뉴에서 해당 고사, 해당 학생, 해당 과목의 성적을 삭제하시기 바랍니다. ※ [이전학교성적보기]의 과목평균은 응시생 수 기준으로 산출되며 단순 참고용입니다."
+    },
+    {
+     "aria": "1학년",
+     "box": [
+      25,
+      311,
+      42,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "1학년",
+     "id": "heading:1학년"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      341,
+      525,
+      473
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        26,
+        342,
+        67,
+        36
+       ],
+       "id": "col:학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        93,
+        342,
+        67,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        160,
+        342,
+        120,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        280,
+        342,
+        134,
+        36
+       ],
+       "id": "col:학생목록/구분"
+      },
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        415,
+        342,
+        134,
+        36
+       ],
+       "id": "col:학생목록/일자"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "정기시험성적관리 목록",
+     "box": [
+      565,
+      399,
+      1050,
+      415
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "정기시험성적관리 목록",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        616,
+        400,
+        359,
+        36
+       ],
+       "id": "col:정기시험성적관리 목록/과목명"
+      },
+      {
+       "label": "만점",
+       "depth": 0,
+       "box": [
+        975,
+        400,
+        90,
+        36
+       ],
+       "id": "col:정기시험성적관리 목록/만점"
+      },
+      {
+       "label": "학점(단위수)",
+       "depth": 0,
+       "box": [
+        1065,
+        400,
+        90,
+        36
+       ],
+       "id": "col:정기시험성적관리 목록/학점(단위수)"
+      },
+      {
+       "label": "점수",
+       "depth": 0,
+       "box": [
+        1155,
+        400,
+        90,
+        36
+       ],
+       "id": "col:정기시험성적관리 목록/점수"
+      },
+      {
+       "label": "결시명칭",
+       "depth": 0,
+       "box": [
+        1245,
+        400,
+        269,
+        36
+       ],
+       "id": "col:정기시험성적관리 목록/결시명칭"
+      },
+      {
+       "label": "수기등록여부",
+       "depth": 0,
+       "box": [
+        1514,
+        400,
+        100,
+        36
+       ],
+       "id": "col:정기시험성적관리 목록/수기등록여부"
+      }
+     ],
+     "id": "grid:정기시험성적관리 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:수행평가성적관리",
+   "tab": "수행평가성적관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험성적관리",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정기시험성적관리",
+      "수행평가성적관리",
+      "학기말성적관리",
+      "세부능력및특기사항관리",
+      "독서활동상황관리",
+      "이전출결자료등록",
+      "이전인정학점관리"
+     ],
+     "active": "수행평가성적관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      156,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ [이전학교성적보기]의 과목평균은 응시생 수 기준으로 산출되며 단순 참고용입니다.",
+     "id": "note:※ [이전학교성적보기]의 과목평균은 응시생 수 기준으로 산출되며 단순 참고용입니다."
+    },
+    {
+     "aria": "이전학교성적보기",
+     "box": [
+      1455,
+      277,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "이전학교성적보기",
+     "variant": "link",
+     "id": "button:이전학교성적보기"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      277,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "1학년",
+     "box": [
+      25,
+      287,
+      42,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "1학년",
+     "id": "heading:1학년"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      317,
+      525,
+      496
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        26,
+        318,
+        67,
+        36
+       ],
+       "id": "col:학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        93,
+        318,
+        67,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        160,
+        318,
+        120,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        280,
+        318,
+        134,
+        36
+       ],
+       "id": "col:학생목록/구분"
+      },
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        415,
+        318,
+        134,
+        36
+       ],
+       "id": "col:학생목록/일자"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "수행평가성적관리 목록",
+     "box": [
+      565,
+      375,
+      1050,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수행평가성적관리 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        616,
+        376,
+        150,
+        36
+       ],
+       "id": "col:수행평가성적관리 목록/과목명"
+      },
+      {
+       "label": "영역명",
+       "depth": 0,
+       "box": [
+        766,
+        376,
+        150,
+        36
+       ],
+       "id": "col:수행평가성적관리 목록/영역명"
+      },
+      {
+       "label": "만점",
+       "depth": 0,
+       "box": [
+        915,
+        376,
+        150,
+        36
+       ],
+       "id": "col:수행평가성적관리 목록/만점"
+      },
+      {
+       "label": "학점(단위수)",
+       "depth": 0,
+       "box": [
+        1065,
+        376,
+        150,
+        36
+       ],
+       "id": "col:수행평가성적관리 목록/학점(단위수)"
+      },
+      {
+       "label": "점수",
+       "depth": 0,
+       "box": [
+        1215,
+        376,
+        150,
+        36
+       ],
+       "id": "col:수행평가성적관리 목록/점수"
+      },
+      {
+       "label": "결시명칭",
+       "depth": 0,
+       "box": [
+        1364,
+        376,
+        150,
+        36
+       ],
+       "id": "col:수행평가성적관리 목록/결시명칭"
+      },
+      {
+       "label": "수기등록여부",
+       "depth": 0,
+       "box": [
+        1514,
+        376,
+        100,
+        36
+       ],
+       "id": "col:수행평가성적관리 목록/수기등록여부"
+      }
+     ],
+     "id": "grid:수행평가성적관리 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:학기말성적관리",
+   "tab": "학기말성적관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험성적관리",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정기시험성적관리",
+      "수행평가성적관리",
+      "학기말성적관리",
+      "세부능력및특기사항관리",
+      "독서활동상황관리",
+      "이전출결자료등록",
+      "이전인정학점관리"
+     ],
+     "active": "학기말성적관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      156,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "이전학교성적보기",
+     "box": [
+      1455,
+      217,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "이전학교성적보기",
+     "variant": "link",
+     "id": "button:이전학교성적보기"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      217,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "1학년",
+     "box": [
+      25,
+      227,
+      42,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "1학년",
+     "id": "heading:1학년"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      257,
+      394,
+      556
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        26,
+        258,
+        136,
+        36
+       ],
+       "id": "col:학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        162,
+        258,
+        136,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        298,
+        258,
+        120,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "학기말성적관리 목록",
+     "box": [
+      434,
+      257,
+      1181,
+      556
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학기말성적관리 목록",
+     "selectable": true,
+     "declaredColumns": 22,
+     "columns": [
+      {
+       "label": "과목군 구분",
+       "depth": 0,
+       "box": [
+        485,
+        258,
+        70,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/과목군 구분"
+      },
+      {
+       "label": "성적처리유형",
+       "depth": 0,
+       "box": [
+        555,
+        258,
+        160,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/성적처리유형"
+      },
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        715,
+        258,
+        70,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/과목명"
+      },
+      {
+       "label": "학점 (단위수)",
+       "depth": 0,
+       "box": [
+        785,
+        258,
+        60,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/학점 (단위수)"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        845,
+        258,
+        50,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/학기"
+      },
+      {
+       "label": "이수 시간",
+       "depth": 0,
+       "box": [
+        895,
+        258,
+        70,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/이수 시간"
+      },
+      {
+       "label": "원점수",
+       "depth": 0,
+       "box": [
+        965,
+        258,
+        70,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/원점수"
+      },
+      {
+       "label": "성취도",
+       "depth": 0,
+       "box": [
+        1035,
+        258,
+        70,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/성취도"
+      },
+      {
+       "label": "석차등급",
+       "depth": 0,
+       "box": [
+        1105,
+        258,
+        70,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/석차등급"
+      },
+      {
+       "label": "과목 평균",
+       "depth": 0,
+       "box": [
+        1175,
+        258,
+        70,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/과목 평균"
+      },
+      {
+       "label": "수강 자수",
+       "depth": 0,
+       "box": [
+        1245,
+        258,
+        70,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/수강 자수"
+      },
+      {
+       "label": "성취도별 분포비율",
+       "depth": 0,
+       "box": [
+        1315,
+        258,
+        90,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/성취도별 분포비율"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1405,
+        258,
+        70,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/비고"
+      },
+      {
+       "label": "공동 교육과정",
+       "depth": 0,
+       "box": [
+        1475,
+        258,
+        50,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/공동 교육과정"
+      },
+      {
+       "label": "학교밖 교육",
+       "depth": 0,
+       "box": [
+        1525,
+        258,
+        50,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/학교밖 교육"
+      },
+      {
+       "label": "온라인 학교",
+       "depth": 0,
+       "box": [
+        1575,
+        258,
+        50,
+        62
+       ],
+       "id": "col:학기말성적관리 목록/온라인 학교"
+      }
+     ],
+     "id": "grid:학기말성적관리 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:세부능력및특기사항관리",
+   "tab": "세부능력및특기사항관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험성적관리",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정기시험성적관리",
+      "수행평가성적관리",
+      "학기말성적관리",
+      "세부능력및특기사항관리",
+      "독서활동상황관리",
+      "이전출결자료등록",
+      "이전인정학점관리"
+     ],
+     "active": "세부능력및특기사항관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      156,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1242,
+      217,
+      89,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "영재 미표시",
+     "checked": true,
+     "id": "check:영재 미표시"
+    },
+    {
+     "aria": "입력창축소",
+     "box": [
+      1339,
+      217,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창축소",
+     "variant": "plain",
+     "id": "button:입력창축소"
+    },
+    {
+     "aria": "입력창확대",
+     "box": [
+      1397,
+      217,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창확대",
+     "variant": "plain",
+     "id": "button:입력창확대"
+    },
+    {
+     "aria": "이전학교자료보기",
+     "box": [
+      1455,
+      217,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "이전학교자료보기",
+     "variant": "link",
+     "id": "button:이전학교자료보기"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      217,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "1학년",
+     "box": [
+      25,
+      227,
+      42,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "1학년",
+     "id": "heading:1학년"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      257,
+      394,
+      556
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        26,
+        258,
+        136,
+        36
+       ],
+       "id": "col:학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        162,
+        258,
+        136,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        298,
+        258,
+        120,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "세부능력 및 특기사항 목록",
+     "box": [
+      434,
+      257,
+      1181,
+      556
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "세부능력 및 특기사항 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "교과",
+       "depth": 0,
+       "box": [
+        485,
+        258,
+        100,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/교과"
+      },
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        585,
+        258,
+        164,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/과목명"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        749,
+        258,
+        60,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/학기"
+      },
+      {
+       "label": "학점 (단위수)",
+       "depth": 0,
+       "box": [
+        809,
+        258,
+        70,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/학점 (단위수)"
+      },
+      {
+       "label": "입력가능 글자(byte)",
+       "depth": 0,
+       "box": [
+        879,
+        258,
+        80,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/입력가능 글자(byte)"
+      },
+      {
+       "label": "세부능력및특기사항",
+       "depth": 0,
+       "box": [
+        959,
+        258,
+        555,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/세부능력및특기사항"
+      },
+      {
+       "label": "수기입력여부",
+       "depth": 0,
+       "box": [
+        1514,
+        258,
+        100,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/수기입력여부"
+      }
+     ],
+     "id": "grid:세부능력 및 특기사항 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:독서활동상황관리",
+   "tab": "독서활동상황관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험성적관리",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정기시험성적관리",
+      "수행평가성적관리",
+      "학기말성적관리",
+      "세부능력및특기사항관리",
+      "독서활동상황관리",
+      "이전출결자료등록",
+      "이전인정학점관리"
+     ],
+     "active": "세부능력및특기사항관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      156,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1242,
+      217,
+      89,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "영재 미표시",
+     "checked": true,
+     "id": "check:영재 미표시"
+    },
+    {
+     "aria": "입력창축소",
+     "box": [
+      1339,
+      217,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창축소",
+     "variant": "plain",
+     "id": "button:입력창축소"
+    },
+    {
+     "aria": "입력창확대",
+     "box": [
+      1397,
+      217,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창확대",
+     "variant": "plain",
+     "id": "button:입력창확대"
+    },
+    {
+     "aria": "이전학교자료보기",
+     "box": [
+      1455,
+      217,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "이전학교자료보기",
+     "variant": "link",
+     "id": "button:이전학교자료보기"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      217,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "1학년",
+     "box": [
+      25,
+      227,
+      42,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "1학년",
+     "id": "heading:1학년"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      257,
+      394,
+      556
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        26,
+        258,
+        136,
+        36
+       ],
+       "id": "col:학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        162,
+        258,
+        136,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        298,
+        258,
+        120,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "세부능력 및 특기사항 목록",
+     "box": [
+      434,
+      257,
+      1181,
+      556
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "세부능력 및 특기사항 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "교과",
+       "depth": 0,
+       "box": [
+        485,
+        258,
+        100,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/교과"
+      },
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        585,
+        258,
+        164,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/과목명"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        749,
+        258,
+        60,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/학기"
+      },
+      {
+       "label": "학점 (단위수)",
+       "depth": 0,
+       "box": [
+        809,
+        258,
+        70,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/학점 (단위수)"
+      },
+      {
+       "label": "입력가능 글자(byte)",
+       "depth": 0,
+       "box": [
+        879,
+        258,
+        80,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/입력가능 글자(byte)"
+      },
+      {
+       "label": "세부능력및특기사항",
+       "depth": 0,
+       "box": [
+        959,
+        258,
+        555,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/세부능력및특기사항"
+      },
+      {
+       "label": "수기입력여부",
+       "depth": 0,
+       "box": [
+        1514,
+        258,
+        100,
+        62
+       ],
+       "id": "col:세부능력 및 특기사항 목록/수기입력여부"
+      }
+     ],
+     "id": "grid:세부능력 및 특기사항 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:이전출결자료등록",
+   "tab": "이전출결자료등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험성적관리",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정기시험성적관리",
+      "수행평가성적관리",
+      "학기말성적관리",
+      "세부능력및특기사항관리",
+      "독서활동상황관리",
+      "이전출결자료등록",
+      "이전인정학점관리"
+     ],
+     "active": "이전출결자료등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학년",
+     "box": [
+      415,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      156,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      217,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      257,
+      788,
+      556
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "학적반영일자",
+       "depth": 0,
+       "box": [
+        26,
+        258,
+        99,
+        62
+       ],
+       "id": "col:학생목록/학적반영일자"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        125,
+        258,
+        113,
+        62
+       ],
+       "id": "col:학생목록/구분"
+      },
+      {
+       "label": "전출학교",
+       "depth": 0,
+       "box": [
+        239,
+        258,
+        142,
+        62
+       ],
+       "id": "col:학생목록/전출학교"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        380,
+        258,
+        120,
+        62
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "신규취득학적",
+       "depth": 0,
+       "box": [
+        500,
+        258,
+        170,
+        31
+       ],
+       "span": 4,
+       "id": "col:학생목록/신규취득학적"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        670,
+        258,
+        142,
+        62
+       ],
+       "id": "col:학생목록/상태"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        500,
+        289,
+        57,
+        31
+       ],
+       "id": "col:학생목록/신규취득학적>학년"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        557,
+        289,
+        57,
+        31
+       ],
+       "id": "col:학생목록/신규취득학적>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        614,
+        289,
+        57,
+        31
+       ],
+       "id": "col:학생목록/신규취득학적>번호"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "이전출결목록",
+     "box": [
+      828,
+      257,
+      788,
+      556
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "이전출결목록",
+     "selectable": false,
+     "declaredColumns": 19,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        829,
+        258,
+        50,
+        72
+       ],
+       "id": "col:이전출결목록/학년"
+      },
+      {
+       "label": "기준일자",
+       "depth": 0,
+       "box": [
+        879,
+        258,
+        120,
+        72
+       ],
+       "id": "col:이전출결목록/기준일자"
+      },
+      {
+       "label": "수업일수",
+       "depth": 0,
+       "box": [
+        999,
+        258,
+        60,
+        72
+       ],
+       "id": "col:이전출결목록/수업일수"
+      },
+      {
+       "label": "결석일수",
+       "depth": 0,
+       "box": [
+        1059,
+        258,
+        150,
+        36
+       ],
+       "span": 3,
+       "id": "col:이전출결목록/결석일수"
+      },
+      {
+       "label": "지각",
+       "depth": 0,
+       "box": [
+        1209,
+        258,
+        150,
+        36
+       ],
+       "span": 3,
+       "id": "col:이전출결목록/지각"
+      },
+      {
+       "label": "조퇴",
+       "depth": 0,
+       "box": [
+        1359,
+        258,
+        150,
+        36
+       ],
+       "span": 3,
+       "id": "col:이전출결목록/조퇴"
+      },
+      {
+       "label": "결과",
+       "depth": 0,
+       "box": [
+        1509,
+        258,
+        150,
+        36
+       ],
+       "span": 3,
+       "id": "col:이전출결목록/결과"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1059,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/결석일수>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1109,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/결석일수>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1159,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/결석일수>기타"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1209,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/지각>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1259,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/지각>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1309,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/지각>기타"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1359,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/조퇴>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1409,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/조퇴>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1459,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/조퇴>기타"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1509,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/결과>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1559,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/결과>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1609,
+        294,
+        50,
+        36
+       ],
+       "id": "col:이전출결목록/결과>기타"
+      }
+     ],
+     "id": "grid:이전출결목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:이전인정학점관리",
+   "tab": "이전인정학점관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험성적관리",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정기시험성적관리",
+      "수행평가성적관리",
+      "학기말성적관리",
+      "세부능력및특기사항관리",
+      "독서활동상황관리",
+      "이전출결자료등록",
+      "이전인정학점관리"
+     ],
+     "active": "이전인정학점관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학년",
+     "box": [
+      415,
+      156,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      156,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 2025학년도 1학년 학생, 2026학년도 1,2학년 학생, 2027학년도 전체학년 대상 화면입니다. ※ 전입관리의 편입학, 추가입학의 편입학, 위탁생등 과년도 및 이전 학기의 교과학습발달상황(학기말성적)이 없는 경우 인정학점 부여하는 화면입니다. 학기별 최대 32학점이며, 입력한 인정학점은 졸업처리 여부를 판단하는 기준으로 사용됩니다.",
+     "id": "note:※ 2025학년도 1학년 학생, 2026학년도 1,2학년 학생, 2027학년도 전체학년 대상 화면입니다. ※ 전입관리의 편입학, 추가입학의 편입학, 위탁생등 과년도 및 이전 학기의 교과학습발달상황(학기말성적)이 없는 경우 인정학점 부여하는 화면입니다. 학기별 최대 32학점이며, 입력한 인정학점은 졸업처리 여부를 판단하는 기준으로 사용됩니다."
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      358,
+      788,
+      456
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "학적반영일자",
+       "depth": 0,
+       "box": [
+        26,
+        359,
+        103,
+        62
+       ],
+       "id": "col:학생목록/학적반영일자"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        129,
+        359,
+        77,
+        62
+       ],
+       "id": "col:학생목록/구분"
+      },
+      {
+       "label": "이전학교",
+       "depth": 0,
+       "box": [
+        206,
+        359,
+        120,
+        62
+       ],
+       "id": "col:학생목록/이전학교"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        326,
+        359,
+        100,
+        62
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "신규취득학적",
+       "depth": 0,
+       "box": [
+        426,
+        359,
+        257,
+        31
+       ],
+       "span": 5,
+       "id": "col:학생목록/신규취득학적"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        683,
+        359,
+        129,
+        62
+       ],
+       "id": "col:학생목록/상태"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        426,
+        390,
+        51,
+        31
+       ],
+       "id": "col:학생목록/신규취득학적>학년"
+      },
+      {
+       "label": "학과",
+       "depth": 1,
+       "box": [
+        478,
+        390,
+        103,
+        31
+       ],
+       "id": "col:학생목록/신규취득학적>학과"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        580,
+        390,
+        51,
+        31
+       ],
+       "id": "col:학생목록/신규취득학적>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        632,
+        390,
+        51,
+        31
+       ],
+       "id": "col:학생목록/신규취득학적>번호"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "이전인정학점목록",
+     "box": [
+      828,
+      358,
+      788,
+      456
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "이전인정학점목록",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        879,
+        359,
+        184,
+        36
+       ],
+       "id": "col:이전인정학점목록/학년도"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        1063,
+        359,
+        184,
+        36
+       ],
+       "id": "col:이전인정학점목록/학년"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        1247,
+        359,
+        184,
+        36
+       ],
+       "id": "col:이전인정학점목록/학기"
+      },
+      {
+       "label": "인정학점",
+       "depth": 0,
+       "box": [
+        1431,
+        359,
+        184,
+        36
+       ],
+       "id": "col:이전인정학점목록/인정학점"
+      }
+     ],
+     "id": "grid:이전인정학점목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 전입관리 > 전입자료관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

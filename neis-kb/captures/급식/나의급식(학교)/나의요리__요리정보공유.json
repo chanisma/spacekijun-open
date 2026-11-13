@@ -1,0 +1,621 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›나의급식(학교)›나의요리›요리정보공유",
+ "name": "요리정보공유",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:08:37+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요리군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요리군"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요리명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요리명"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요리코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요리코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "송수신구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:송수신구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "송수신자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:송수신자명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1448,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1512,
+      122,
+      68,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 영양교사‧영양사의 공유요리정보 + 내요리 공유정보 목록이 조회됩니다.",
+     "id": "note:※ 영양교사‧영양사의 공유요리정보 + 내요리 공유정보 목록이 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      192,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 영양교사‧영양사의 공유요리정보일 경우 내요리로 가져가기, 영양교사‧영양사가 나한테 공유한 요리정보 및 내요리정보 공유내역에 대해서 공유취소가 가능합니다.",
+     "id": "note:※ 영양교사‧영양사의 공유요리정보일 경우 내요리로 가져가기, 영양교사‧영양사가 나한테 공유한 요리정보 및 내요리정보 공유내역에 대해서 공유취소가 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      210,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 영양교사‧영양사의 공유요리를 내요리로 가져갈 경우 출처가 관리되며, 내요리로 가져간 요리정보를 다시 가져갈 경우 기존 정보에 반영됩니다.",
+     "id": "note:※ 영양교사‧영양사의 공유요리를 내요리로 가져갈 경우 출처가 관리되며, 내요리로 가져간 요리정보를 다시 가져갈 경우 기존 정보에 반영됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      229,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 공유취소(삭제) 시 송수신구분이 '송신'일 경우 수신자를 기준으로 송수신 내역이 일괄 공유취소(삭제)됩니다. 송수신구분이 '수신'일 경우 수신 내역이 일괄 공유취소(삭제)됩니다.",
+     "id": "note:※ 공유취소(삭제) 시 송수신구분이 '송신'일 경우 수신자를 기준으로 송수신 내역이 일괄 공유취소(삭제)됩니다. 송수신구분이 '수신'일 경우 수신 내역이 일괄 공유취소(삭제)됩니다."
+    },
+    {
+     "aria": "내요리로가져가기",
+     "box": [
+      1384,
+      282,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "내요리로가져가기",
+     "variant": "primary",
+     "id": "button:내요리로가져가기"
+    },
+    {
+     "aria": "공유취소(삭제)",
+     "box": [
+      1503,
+      282,
+      97,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "공유취소(삭제)",
+     "variant": "secondary",
+     "id": "button:공유취소(삭제)"
+    },
+    {
+     "aria": "공유요리목록",
+     "box": [
+      25,
+      292,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "공유요리목록",
+     "id": "heading:공유요리목록"
+    },
+    {
+     "aria": "공유요리목록",
+     "box": [
+      25,
+      322,
+      1575,
+      440
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "공유요리목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "요리코드",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        169,
+        36
+       ],
+       "id": "col:공유요리목록/요리코드"
+      },
+      {
+       "label": "요리군",
+       "depth": 0,
+       "box": [
+        245,
+        323,
+        169,
+        36
+       ],
+       "id": "col:공유요리목록/요리군"
+      },
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        414,
+        323,
+        169,
+        36
+       ],
+       "id": "col:공유요리목록/요리명"
+      },
+      {
+       "label": "식단검토 등록여부",
+       "depth": 0,
+       "box": [
+        584,
+        323,
+        169,
+        36
+       ],
+       "id": "col:공유요리목록/식단검토 등록여부"
+      },
+      {
+       "label": "송수신구분",
+       "depth": 0,
+       "box": [
+        753,
+        323,
+        169,
+        36
+       ],
+       "id": "col:공유요리목록/송수신구분"
+      },
+      {
+       "label": "출처구분",
+       "depth": 0,
+       "box": [
+        922,
+        323,
+        169,
+        36
+       ],
+       "id": "col:공유요리목록/출처구분"
+      },
+      {
+       "label": "송수신자명",
+       "depth": 0,
+       "box": [
+        1091,
+        323,
+        338,
+        36
+       ],
+       "id": "col:공유요리목록/송수신자명"
+      },
+      {
+       "label": "송수신일자",
+       "depth": 0,
+       "box": [
+        1430,
+        323,
+        169,
+        36
+       ],
+       "id": "col:공유요리목록/송수신일자"
+      }
+     ],
+     "id": "grid:공유요리목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      775,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": "식단검토",
+     "box": [
+      1536,
+      812,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단검토",
+     "variant": "plain",
+     "id": "button:식단검토"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      822,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "공유요리 상세",
+     "id": "heading:공유요리 상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      858,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "출처구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:출처구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      858,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요리군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요리군#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      898,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요리코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요리코드#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      898,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요리명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요리명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      898,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식단출력명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식단출력명"
+    },
+    {
+     "aria": null,
+     "box": [
+      820,
+      944,
+      209,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "● 요리방법 및 중점관리사항",
+     "id": "heading:● 요리방법 및 중점관리사항"
+    },
+    {
+     "aria": "● 요리구성식품",
+     "box": [
+      25,
+      954,
+      119,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "● 요리구성식품",
+     "id": "heading:● 요리구성식품"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      984,
+      780,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "공통식품코드",
+       "depth": 0,
+       "box": [
+        76,
+        985,
+        168,
+        36
+       ],
+       "id": "col:그리드/공통식품코드"
+      },
+      {
+       "label": "공통식품명",
+       "depth": 0,
+       "box": [
+        244,
+        985,
+        226,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/공통식품명"
+      },
+      {
+       "label": "1인량",
+       "depth": 0,
+       "box": [
+        469,
+        985,
+        168,
+        36
+       ],
+       "id": "col:그리드/1인량"
+      },
+      {
+       "label": "식품알레르기",
+       "depth": 0,
+       "box": [
+        637,
+        985,
+        168,
+        36
+       ],
+       "id": "col:그리드/식품알레르기"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      980,
+      640,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(요리)알레르기정보",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:(요리)알레르기정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      1020,
+      640,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(식품)알레르기정보",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:(식품)알레르기정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      1060,
+      640,
+      173
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "레시피 (요리방법)",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:레시피 (요리방법)"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      1243,
+      640,
+      173
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "중점관리사항 (특이사항)",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:중점관리사항 (특이사항)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1432,
+      119,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "● 요리영양성분",
+     "id": "heading:● 요리영양성분"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}나의급식(학교) > 나의요리 > 요리정보공유",
+ "viewport": [
+  1920,
+  945
+ ]
+}

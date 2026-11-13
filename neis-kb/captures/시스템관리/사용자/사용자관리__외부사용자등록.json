@@ -1,0 +1,452 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›사용자›사용자관리›외부사용자등록",
+ "name": "외부사용자등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:49:39+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      165,
+      82,
+      142,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      322,
+      82,
+      142,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      784,
+      82,
+      243,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "소속조직명",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:소속조직명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1032,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1212,
+      82,
+      299,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "외부업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:외부업체명"
+    },
+    {
+     "aria": null,
+     "box": [
+      165,
+      122,
+      243,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "법인명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:법인명"
+    },
+    {
+     "aria": null,
+     "box": [
+      414,
+      122,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기#2"
+    },
+    {
+     "aria": "사용자이름 및 사용자ID 선택",
+     "box": [
+      474,
+      122,
+      300,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "사용자이름 및 사용자ID 선택",
+     "options": [
+      "업무담당자",
+      "외부직원명",
+      "사용자ID"
+     ],
+     "id": "radio:사용자이름 및 사용자ID 선택"
+    },
+    {
+     "aria": "사용여부",
+     "box": [
+      1212,
+      122,
+      299,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "사용여부",
+     "options": [
+      "전체",
+      "가능",
+      "불가능"
+     ],
+     "id": "radio:사용여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1359,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1407,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수정",
+     "variant": "plain",
+     "id": "button:수정"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "상신",
+     "variant": "primary",
+     "id": "button:상신"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "연계실행",
+     "variant": "primary",
+     "id": "button:연계실행"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "외부사용자등록 목록",
+     "box": [
+      25,
+      183,
+      150,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "외부사용자등록 목록",
+     "id": "heading:외부사용자등록 목록"
+    },
+    {
+     "aria": "임시사용자 목록",
+     "box": [
+      25,
+      213,
+      1590,
+      450
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "임시사용자 목록",
+     "selectable": true,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        83,
+        214,
+        57,
+        36
+       ],
+       "id": "col:임시사용자 목록/순번"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        140,
+        214,
+        114,
+        36
+       ],
+       "id": "col:임시사용자 목록/사용자ID"
+      },
+      {
+       "label": "업무담당자명",
+       "depth": 0,
+       "box": [
+        254,
+        214,
+        137,
+        36
+       ],
+       "id": "col:임시사용자 목록/업무담당자명"
+      },
+      {
+       "label": "외부직원명",
+       "depth": 0,
+       "box": [
+        392,
+        214,
+        114,
+        36
+       ],
+       "id": "col:임시사용자 목록/외부직원명"
+      },
+      {
+       "label": "사용자구분",
+       "depth": 0,
+       "box": [
+        506,
+        214,
+        91,
+        36
+       ],
+       "id": "col:임시사용자 목록/사용자구분"
+      },
+      {
+       "label": "소속조직명",
+       "depth": 0,
+       "box": [
+        597,
+        214,
+        137,
+        36
+       ],
+       "id": "col:임시사용자 목록/소속조직명"
+      },
+      {
+       "label": "법인명",
+       "depth": 0,
+       "box": [
+        734,
+        214,
+        114,
+        36
+       ],
+       "id": "col:임시사용자 목록/법인명"
+      },
+      {
+       "label": "외부업체명",
+       "depth": 0,
+       "box": [
+        849,
+        214,
+        137,
+        36
+       ],
+       "id": "col:임시사용자 목록/외부업체명"
+      },
+      {
+       "label": "전화번호",
+       "depth": 0,
+       "box": [
+        986,
+        214,
+        114,
+        36
+       ],
+       "id": "col:임시사용자 목록/전화번호"
+      },
+      {
+       "label": "연계반영",
+       "depth": 0,
+       "box": [
+        1100,
+        214,
+        69,
+        36
+       ],
+       "id": "col:임시사용자 목록/연계반영"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1168,
+        214,
+        80,
+        36
+       ],
+       "id": "col:임시사용자 목록/결재상태"
+      },
+      {
+       "label": "사용자고유번호",
+       "depth": 0,
+       "box": [
+        1248,
+        214,
+        160,
+        36
+       ],
+       "id": "col:임시사용자 목록/사용자고유번호"
+      },
+      {
+       "label": "승인요청일",
+       "depth": 0,
+       "box": [
+        1408,
+        214,
+        103,
+        36
+       ],
+       "id": "col:임시사용자 목록/승인요청일"
+      },
+      {
+       "label": "승인완료일",
+       "depth": 0,
+       "box": [
+        1511,
+        214,
+        103,
+        36
+       ],
+       "id": "col:임시사용자 목록/승인완료일"
+      }
+     ],
+     "id": "grid:임시사용자 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      676,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}사용자 > 사용자관리 > 외부사용자등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,1049 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식재료품의›식재료검수처리",
+ "name": "식재료검수처리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:46:42+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:캘린더",
+   "tab": "캘린더",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수예정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수예정일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      440,
+      82,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "(월~금 5일간만 출력)",
+     "checked": false,
+     "id": "check:(월~금 5일간만 출력)"
+    },
+    {
+     "aria": null,
+     "box": [
+      720,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      779,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      847,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      914,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진행상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:진행상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공통식품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      122,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      173,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "캘린더",
+      "상세"
+     ],
+     "active": "캘린더",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      26,
+      264,
+      1573,
+      560
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "일",
+       "depth": 0,
+       "box": [
+        137,
+        265,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/일"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        346,
+        265,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/월"
+      },
+      {
+       "label": "화",
+       "depth": 0,
+       "box": [
+        554,
+        265,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/화"
+      },
+      {
+       "label": "수",
+       "depth": 0,
+       "box": [
+        763,
+        265,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/수"
+      },
+      {
+       "label": "목",
+       "depth": 0,
+       "box": [
+        972,
+        265,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/목"
+      },
+      {
+       "label": "금",
+       "depth": 0,
+       "box": [
+        1181,
+        265,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/금"
+      },
+      {
+       "label": "토",
+       "depth": 0,
+       "box": [
+        1389,
+        265,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/토"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:상세",
+   "tab": "상세",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수예정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수예정일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      440,
+      82,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "(월~금 5일간만 출력)",
+     "checked": false,
+     "id": "check:(월~금 5일간만 출력)"
+    },
+    {
+     "aria": null,
+     "box": [
+      720,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      779,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      847,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      914,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진행상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:진행상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공통식품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      122,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      173,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "캘린더",
+      "상세"
+     ],
+     "active": "상세",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      208,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식재료품의목록에서 품의처리한 식품목록이 조회됩니다.",
+     "id": "note:※ 식재료품의목록에서 품의처리한 식품목록이 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      227,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 단가가 변경되면 급식일지의 단가도 변경됩니다.",
+     "id": "note:※ 단가가 변경되면 급식일지의 단가도 변경됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      245,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식품명이 붉은색은 농산물유통공사의 계약단가, 녹색은 에듀파인 품의완료 또는 검수정보가 적용된 상태입니다. (현재 조회기준)",
+     "id": "note:※ 식품명이 붉은색은 농산물유통공사의 계약단가, 녹색은 에듀파인 품의완료 또는 검수정보가 적용된 상태입니다. (현재 조회기준)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      264,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 계약금액업로드/다운로드 : 계약금액다운로드 후 엑셀파일에서 단가만 수정하여 업로드 가능합니다.",
+     "id": "note:※ 계약금액업로드/다운로드 : 계약금액다운로드 후 엑셀파일에서 단가만 수정하여 업로드 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      282,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 단, 유통기한 표시대상인 우유류(냉장보관 흰우유)는 '소비기한'란에 유통기한 기재",
+     "id": "note:※ 단, 유통기한 표시대상인 우유류(냉장보관 흰우유)는 '소비기한'란에 유통기한 기재"
+    },
+    {
+     "aria": null,
+     "box": [
+      1153,
+      346,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "계약금액올리기",
+     "variant": "plain",
+     "id": "button:계약금액올리기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1285,
+      346,
+      136,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "계약금액내려받기",
+     "variant": "plain",
+     "id": "button:계약금액내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1428,
+      346,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "plain",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      346,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      346,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "식재료검수목록",
+     "box": [
+      25,
+      356,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식재료검수목록",
+     "id": "heading:식재료검수목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      153,
+      397,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "예정단가반영",
+     "variant": "primary",
+     "id": "button:예정단가반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      245,
+      397,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검수처리",
+     "variant": "primary",
+     "id": "button:검수처리"
+    },
+    {
+     "aria": null,
+     "box": [
+      314,
+      397,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검수취소",
+     "variant": "secondary",
+     "id": "button:검수취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      383,
+      397,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "품의수량반영",
+     "variant": "plain",
+     "id": "button:품의수량반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      476,
+      397,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "품의단가반영",
+     "variant": "plain",
+     "id": "button:품의단가반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      397,
+      165,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "업체군별/단위기준총량조회",
+     "variant": "plain",
+     "id": "button:업체군별/단위기준총량조회"
+    },
+    {
+     "aria": "식재료검수목록",
+     "box": [
+      25,
+      438,
+      1575,
+      460
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "식재료검수목록",
+     "selectable": true,
+     "declaredColumns": 31,
+     "columns": [
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        76,
+        439,
+        87,
+        72
+       ],
+       "id": "col:식재료검수목록/진행상태"
+      },
+      {
+       "label": "검수예정일자",
+       "depth": 0,
+       "box": [
+        163,
+        439,
+        90,
+        72
+       ],
+       "id": "col:식재료검수목록/검수예정일자"
+      },
+      {
+       "label": "품의일자",
+       "depth": 0,
+       "box": [
+        253,
+        439,
+        90,
+        72
+       ],
+       "id": "col:식재료검수목록/품의일자"
+      },
+      {
+       "label": "급식일자",
+       "depth": 0,
+       "box": [
+        343,
+        439,
+        90,
+        72
+       ],
+       "id": "col:식재료검수목록/급식일자"
+      },
+      {
+       "label": "식사구분",
+       "depth": 0,
+       "box": [
+        433,
+        439,
+        60,
+        72
+       ],
+       "id": "col:식재료검수목록/식사구분"
+      },
+      {
+       "label": "식품소분류명",
+       "depth": 0,
+       "box": [
+        493,
+        439,
+        100,
+        72
+       ],
+       "id": "col:식재료검수목록/식품소분류명"
+      },
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        593,
+        439,
+        208,
+        72
+       ],
+       "span": 2,
+       "id": "col:식재료검수목록/식품명"
+      },
+      {
+       "label": "식품속성",
+       "depth": 0,
+       "box": [
+        802,
+        439,
+        130,
+        72
+       ],
+       "id": "col:식재료검수목록/식품속성"
+      },
+      {
+       "label": "규격",
+       "depth": 0,
+       "box": [
+        932,
+        439,
+        76,
+        72
+       ],
+       "id": "col:식재료검수목록/규격"
+      },
+      {
+       "label": "단위",
+       "depth": 0,
+       "box": [
+        1008,
+        439,
+        71,
+        72
+       ],
+       "id": "col:식재료검수목록/단위"
+      },
+      {
+       "label": "품의수량",
+       "depth": 0,
+       "box": [
+        1079,
+        439,
+        80,
+        72
+       ],
+       "id": "col:식재료검수목록/품의수량"
+      },
+      {
+       "label": "품의단가",
+       "depth": 0,
+       "box": [
+        1159,
+        439,
+        80,
+        72
+       ],
+       "id": "col:식재료검수목록/품의단가"
+      },
+      {
+       "label": "검수수량",
+       "depth": 0,
+       "box": [
+        1239,
+        439,
+        80,
+        72
+       ],
+       "id": "col:식재료검수목록/검수수량"
+      },
+      {
+       "label": "단가",
+       "depth": 0,
+       "box": [
+        1319,
+        439,
+        80,
+        72
+       ],
+       "id": "col:식재료검수목록/단가"
+      },
+      {
+       "label": "계약금",
+       "depth": 0,
+       "box": [
+        1399,
+        439,
+        100,
+        72
+       ],
+       "id": "col:식재료검수목록/계약금"
+      },
+      {
+       "label": "원산지",
+       "depth": 0,
+       "box": [
+        1499,
+        439,
+        100,
+        36
+       ],
+       "id": "col:식재료검수목록/원산지"
+      },
+      {
+       "label": "포장상태",
+       "depth": 0,
+       "box": [
+        1599,
+        439,
+        80,
+        36
+       ],
+       "id": "col:식재료검수목록/포장상태"
+      },
+      {
+       "label": "선택",
+       "depth": 1,
+       "box": [
+        1499,
+        475,
+        100,
+        36
+       ],
+       "id": "col:식재료검수목록/원산지>선택"
+      },
+      {
+       "label": "선택",
+       "depth": 1,
+       "box": [
+        1599,
+        475,
+        80,
+        36
+       ],
+       "id": "col:식재료검수목록/포장상태>선택"
+      }
+     ],
+     "id": "grid:식재료검수목록"
+    },
+    {
+     "aria": "업체군별현황",
+     "box": [
+      25,
+      903,
+      1575,
+      200
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "업체군별현황",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "업체군",
+       "depth": 0,
+       "box": [
+        126,
+        904,
+        110,
+        36
+       ],
+       "id": "col:업체군별현황/업체군"
+      },
+      {
+       "label": "금액",
+       "depth": 0,
+       "box": [
+        236,
+        904,
+        150,
+        36
+       ],
+       "id": "col:업체군별현황/금액"
+      },
+      {
+       "label": "검수금액",
+       "depth": 0,
+       "box": [
+        386,
+        904,
+        150,
+        36
+       ],
+       "id": "col:업체군별현황/검수금액"
+      }
+     ],
+     "id": "grid:업체군별현황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식재료품의 > 식재료검수처리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

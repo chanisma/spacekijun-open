@@ -1,0 +1,192 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›편제및과목개설관리›교사별시수누계조회",
+ "name": "교사별시수누계조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:53:27+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "과정선택",
+     "box": [
+      285,
+      82,
+      229,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "학년도",
+     "options": [
+      "기간별",
+      "월별",
+      "날짜별"
+     ],
+     "id": "radio:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      524,
+      82,
+      149,
+      29
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "창의적체험활동",
+     "checked": false,
+     "id": "check:창의적체험활동"
+    },
+    {
+     "aria": null,
+     "box": [
+      793,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      923,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      953,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1025,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자~"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      1155,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기#2"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      1185,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기#2"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 편제및과목개설관리 > 교사별시수누계조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

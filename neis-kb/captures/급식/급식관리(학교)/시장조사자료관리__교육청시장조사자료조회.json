@@ -1,0 +1,538 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›시장조사자료관리›교육청시장조사자료조회",
+ "name": "교육청시장조사자료조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:45:41+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      133,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "시장조사일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:시장조사일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      268,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "시장조사일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:시장조사일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      488,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:대분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      788,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "중분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:중분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1088,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공통식품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      135,
+      122,
+      126,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "규격",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:규격"
+    },
+    {
+     "aria": null,
+     "box": [
+      491,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "단위",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:단위"
+    },
+    {
+     "aria": null,
+     "box": [
+      791,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조사장소",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:조사장소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      130,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      130,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      181,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교육청에서 관리하는 시장조사자료 정보 조회",
+     "id": "note:※ 교육청에서 관리하는 시장조사자료 정보 조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1488,
+      235,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": "시장조사자료내역",
+     "box": [
+      25,
+      245,
+      129,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "시장조사자료내역",
+     "id": "heading:시장조사자료내역"
+    },
+    {
+     "aria": "시장조사자료내역",
+     "box": [
+      25,
+      275,
+      1575,
+      696
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "시장조사자료내역",
+     "selectable": false,
+     "declaredColumns": 20,
+     "columns": [
+      {
+       "label": "기관명",
+       "depth": 0,
+       "box": [
+        26,
+        276,
+        161,
+        43
+       ],
+       "id": "col:시장조사자료내역/기관명"
+      },
+      {
+       "label": "공통식품코드",
+       "depth": 0,
+       "box": [
+        187,
+        276,
+        102,
+        43
+       ],
+       "id": "col:시장조사자료내역/공통식품코드"
+      },
+      {
+       "label": "공통식품명",
+       "depth": 0,
+       "box": [
+        289,
+        276,
+        170,
+        43
+       ],
+       "span": 2,
+       "id": "col:시장조사자료내역/공통식품명"
+      },
+      {
+       "label": "공통식품속성",
+       "depth": 0,
+       "box": [
+        459,
+        276,
+        121,
+        43
+       ],
+       "id": "col:시장조사자료내역/공통식품속성"
+      },
+      {
+       "label": "규격 (kg.l)",
+       "depth": 0,
+       "box": [
+        581,
+        276,
+        64,
+        43
+       ],
+       "id": "col:시장조사자료내역/규격 (kg.l)"
+      },
+      {
+       "label": "단위",
+       "depth": 0,
+       "box": [
+        645,
+        276,
+        81,
+        43
+       ],
+       "id": "col:시장조사자료내역/단위"
+      },
+      {
+       "label": "조사가1",
+       "depth": 0,
+       "box": [
+        726,
+        276,
+        87,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사가1"
+      },
+      {
+       "label": "조사가2",
+       "depth": 0,
+       "box": [
+        813,
+        276,
+        87,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사가2"
+      },
+      {
+       "label": "조사가3",
+       "depth": 0,
+       "box": [
+        900,
+        276,
+        87,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사가3"
+      },
+      {
+       "label": "조사가4",
+       "depth": 0,
+       "box": [
+        987,
+        276,
+        87,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사가4"
+      },
+      {
+       "label": "조사가5",
+       "depth": 0,
+       "box": [
+        1074,
+        276,
+        87,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사가5"
+      },
+      {
+       "label": "조사가6",
+       "depth": 0,
+       "box": [
+        1161,
+        276,
+        87,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사가6"
+      },
+      {
+       "label": "조사설명",
+       "depth": 0,
+       "box": [
+        1248,
+        276,
+        148,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사설명"
+      },
+      {
+       "label": "조사일자",
+       "depth": 0,
+       "box": [
+        1396,
+        276,
+        93,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사일자"
+      },
+      {
+       "label": "조사장소1",
+       "depth": 0,
+       "box": [
+        1489,
+        276,
+        90,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사장소1"
+      },
+      {
+       "label": "조사장소2",
+       "depth": 0,
+       "box": [
+        1579,
+        276,
+        90,
+        43
+       ],
+       "id": "col:시장조사자료내역/조사장소2"
+      }
+     ],
+     "id": "grid:시장조사자료내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      983,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": "상품조사이력내역",
+     "box": [
+      25,
+      1021,
+      129,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "상품조사이력내역",
+     "id": "heading:상품조사이력내역"
+    },
+    {
+     "aria": "상품조사이력내역",
+     "box": [
+      25,
+      1108,
+      1575,
+      213
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "상품조사이력내역",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "조사일자",
+       "depth": 0,
+       "box": [
+        26,
+        1109,
+        225,
+        36
+       ],
+       "id": "col:상품조사이력내역/조사일자"
+      },
+      {
+       "label": "조사가1",
+       "depth": 0,
+       "box": [
+        251,
+        1109,
+        225,
+        36
+       ],
+       "id": "col:상품조사이력내역/조사가1"
+      },
+      {
+       "label": "조사가2",
+       "depth": 0,
+       "box": [
+        475,
+        1109,
+        225,
+        36
+       ],
+       "id": "col:상품조사이력내역/조사가2"
+      },
+      {
+       "label": "조사가3",
+       "depth": 0,
+       "box": [
+        700,
+        1109,
+        225,
+        36
+       ],
+       "id": "col:상품조사이력내역/조사가3"
+      },
+      {
+       "label": "조사가4",
+       "depth": 0,
+       "box": [
+        925,
+        1109,
+        225,
+        36
+       ],
+       "id": "col:상품조사이력내역/조사가4"
+      },
+      {
+       "label": "조사가5",
+       "depth": 0,
+       "box": [
+        1150,
+        1109,
+        225,
+        36
+       ],
+       "id": "col:상품조사이력내역/조사가5"
+      },
+      {
+       "label": "조사가6",
+       "depth": 0,
+       "box": [
+        1374,
+        1109,
+        225,
+        36
+       ],
+       "id": "col:상품조사이력내역/조사가6"
+      }
+     ],
+     "id": "grid:상품조사이력내역"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 시장조사자료관리 > 교육청시장조사자료조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

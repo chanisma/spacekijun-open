@@ -1,0 +1,27 @@
+.menu { display:grid; gap:12px; margin:20px 0; }
+.menu button { text-align:left; padding:16px; border:1px solid #c9b18788; border-radius:12px 3px; color:#f3ead7; background:linear-gradient(125deg,#40564cd9,#252633ed); }
+.menu small { display:block; margin-top:6px; color:#d7d1c2; }
+.assessment p,.result p { line-height:1.8; margin:12px 0; }
+.progress { color:#e2c98f; }
+.question { border:0; padding:0; margin:18px 0; }
+.question legend { font-size:1.15rem; line-height:1.8; margin-bottom:16px; }
+.question label { display:flex; align-items:center; gap:10px; margin:8px 0; padding:12px; border:1px solid #c3b08b66; border-radius:7px; cursor:pointer; background:#232735; }
+.question label[data-selected=true] { border-color:#f7d795; background:#52614c; }
+.question input { accent-color:#e7c384; }
+.question label>span { color:#e7c384; }
+.actions { display:flex; gap:12px; }
+.result article { border-top:1px solid #ccb48555; margin:22px 0; padding-top:16px; }
+.result h3 { display:flex; justify-content:space-between; }
+.scale { height:9px; border-radius:10px; background:linear-gradient(90deg,#7e91b1,#ba9db4,#d7bc82); margin:25px 10px 15px; position:relative; }
+.scale>span { position:absolute; top:50%; transform:translate(-50%,-50%); color:#fff3c0; font-size:24px; text-shadow:0 1px 4px #100b20; }
+.poles { display:flex; justify-content:space-between; gap:16px; font-size:.75rem; color:#d8cbb1; }
+.result article>small { display:block; line-height:1.8; padding:12px; background:#52634a44; border-radius:6px; }
+.history { margin-top:16px; }
+.history button { display:block; margin:8px 0; }
+.period { color:#d5c6a9; font-size:.8rem; }
+.result .typeCard { padding:22px; border:1px solid #dabd83; border-radius:24px 5px; background:radial-gradient(ellipse at top,#57614c77,#27213dcc); }
+.typeCard>small,.typeEmblem { display:block; text-align:center; color:#f0d391; }
+.typeEmblem { font-size:40px; }
+.result .typeCard h3 { display:block; text-align:center; font-family:'Noto Serif KR',Georgia,serif; font-size:1.4rem; margin:12px 0; }
+.typeCard ul { padding-left:20px; }
+.typeCard li { margin:12px 0; line-height:1.8; }

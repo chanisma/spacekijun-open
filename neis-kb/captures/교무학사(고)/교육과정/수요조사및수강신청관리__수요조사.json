@@ -1,0 +1,172 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›수요조사및수강신청관리›수요조사",
+ "name": "수요조사",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:02:23+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "대상선택",
+     "box": [
+      155,
+      82,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "대상",
+     "options": [
+      "교사",
+      "학생"
+     ],
+     "id": "radio:대상"
+    },
+    {
+     "aria": "조사년도",
+     "box": [
+      445,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조사년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:조사년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "새로만들기",
+     "box": [
+      1491,
+      133,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "새로만들기",
+     "variant": "primary",
+     "id": "button:새로만들기"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "제목",
+       "depth": 0,
+       "box": [
+        96,
+        174,
+        1015,
+        36
+       ],
+       "id": "col:그리드/제목"
+      },
+      {
+       "label": "첨부파일",
+       "depth": 0,
+       "box": [
+        1111,
+        174,
+        70,
+        36
+       ],
+       "id": "col:그리드/첨부파일"
+      },
+      {
+       "label": "조사기간",
+       "depth": 0,
+       "box": [
+        1181,
+        174,
+        199,
+        36
+       ],
+       "id": "col:그리드/조사기간"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        1380,
+        174,
+        154,
+        36
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "결과관리",
+       "depth": 0,
+       "box": [
+        1534,
+        174,
+        80,
+        36
+       ],
+       "id": "col:그리드/결과관리"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 수요조사및수강신청관리 > 수요조사",
+ "viewport": [
+  1920,
+  945
+ ]
+}

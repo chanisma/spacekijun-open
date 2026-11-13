@@ -1,0 +1,231 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시자료관리›자료가져오기",
+ "name": "자료가져오기",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:53:38+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 비활성화 항목은 [자료검증]을 미실시하였거나, [제출자료작성자마감]이 완료된 항목입니다.",
+     "id": "note:※ 비활성화 항목은 [자료검증]을 미실시하였거나, [제출자료작성자마감]이 완료된 항목입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 취합 후 취합한 데이터가 존재할 경우 취합데이터 유무가 '유'로, 존재하지 않을 경우 '무'로 표기됩니다.",
+     "id": "note:※ 취합 후 취합한 데이터가 존재할 경우 취합데이터 유무가 '유'로, 존재하지 않을 경우 '무'로 표기됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 취합 시 기존에 취합된 자료는 삭제되고 재취합된 자료를 가져옵니다.",
+     "id": "note:※ 취합 시 기존에 취합된 자료는 삭제되고 재취합된 자료를 가져옵니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      189,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 일부 취합 항목들의 경우 공시자료 [등록화면에서 저장] 을 해야만 작성자 마감이 가능합니다.",
+     "id": "note:※ 일부 취합 항목들의 경우 공시자료 [등록화면에서 저장] 을 해야만 작성자 마감이 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1511,
+      261,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취합항목보기",
+     "variant": "plain",
+     "id": "button:취합항목보기"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      301,
+      1590,
+      493
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "공시항목",
+       "depth": 0,
+       "box": [
+        76,
+        302,
+        838,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/공시항목"
+      },
+      {
+       "label": "제외여부",
+       "depth": 0,
+       "box": [
+        914,
+        302,
+        100,
+        36
+       ],
+       "id": "col:그리드/제외여부"
+      },
+      {
+       "label": "취합자",
+       "depth": 0,
+       "box": [
+        1014,
+        302,
+        200,
+        36
+       ],
+       "id": "col:그리드/취합자"
+      },
+      {
+       "label": "취합일시",
+       "depth": 0,
+       "box": [
+        1214,
+        302,
+        180,
+        36
+       ],
+       "id": "col:그리드/취합일시"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        1394,
+        302,
+        120,
+        36
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "취합데이터 유무",
+       "depth": 0,
+       "box": [
+        1514,
+        302,
+        100,
+        36
+       ],
+       "id": "col:그리드/취합데이터 유무"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ],
+   "query": {
+    "alerts": [
+     "현재 공시차수 3 차는 조사가능일이 아닙니다."
+    ],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시자료관리 > 공시자료등록 > 자료가져오기",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

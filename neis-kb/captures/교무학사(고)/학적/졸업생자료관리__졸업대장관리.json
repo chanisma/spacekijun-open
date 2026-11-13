@@ -1,0 +1,503 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업생자료관리›졸업대장관리",
+ "name": "졸업대장관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:21:04+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 자료 저장시 졸업대장 자료만 수정됩니다. 졸업생 학생부가 있는 학생의 경우는 [졸업생학생부정정대장작성]화면에서 정정대장을 작성해 주시기 바랍니다. 정정대장 작성후 자료반영시 졸업대장 자료까지 수정됩니다.",
+     "id": "note:※ 자료 저장시 졸업대장 자료만 수정됩니다. 졸업생 학생부가 있는 학생의 경우는 [졸업생학생부정정대장작성]화면에서 정정대장을 작성해 주시기 바랍니다. 정정대장 작성후 자료반영시 졸업대장 자료까지 수정됩니다."
+    },
+    {
+     "aria": "졸업현황조회",
+     "box": [
+      1336,
+      197,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "졸업현황조회",
+     "variant": "link",
+     "id": "button:졸업현황조회"
+    },
+    {
+     "aria": "오류자료조회",
+     "box": [
+      1431,
+      197,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "오류자료조회",
+     "variant": "link",
+     "id": "button:오류자료조회"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1527,
+      197,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      197,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "졸업대장관리 목록",
+     "box": [
+      25,
+      237,
+      1590,
+      331
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "졸업대장관리 목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        238,
+        50,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/순번"
+      },
+      {
+       "label": "졸업대장번호",
+       "depth": 0,
+       "box": [
+        126,
+        238,
+        158,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/졸업대장번호"
+      },
+      {
+       "label": "졸업회차",
+       "depth": 0,
+       "box": [
+        284,
+        238,
+        158,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/졸업회차"
+      },
+      {
+       "label": "졸업수료구분",
+       "depth": 0,
+       "box": [
+        443,
+        238,
+        158,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/졸업수료구분"
+      },
+      {
+       "label": "학교명",
+       "depth": 0,
+       "box": [
+        601,
+        238,
+        158,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/학교명"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        759,
+        238,
+        158,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/학과"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        917,
+        238,
+        190,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        1107,
+        238,
+        158,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/성별"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        1266,
+        238,
+        190,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "졸업일자",
+       "depth": 0,
+       "box": [
+        1456,
+        238,
+        158,
+        62
+       ],
+       "id": "col:졸업대장관리 목록/졸업일자"
+      }
+     ],
+     "id": "grid:졸업대장관리 목록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      578,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      588,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "상세내역",
+     "id": "heading:상세내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      624,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:졸업학년도#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      548,
+      624,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      624,
+      250,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업수료구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:졸업수료구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1343,
+      624,
+      268,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업회차",
+     "control": "number",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:졸업회차"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      664,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:졸업일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      548,
+      664,
+      126,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업대장번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:졸업대장번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      664,
+      250,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학교명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1343,
+      664,
+      268,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학과명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학과명"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      704,
+      268,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      548,
+      704,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주민등록번호 (외국인등록번호)"
+    },
+    {
+     "aria": "성별",
+     "box": [
+      945,
+      704,
+      268,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "성별",
+     "options": [
+      "남성",
+      "여성"
+     ],
+     "id": "radio:성별"
+    },
+    {
+     "aria": null,
+     "box": [
+      1343,
+      704,
+      268,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "생년월일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:생년월일"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      744,
+      1460,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비고",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비고"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업생자료관리 > 졸업대장관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

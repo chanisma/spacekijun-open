@@ -1,0 +1,423 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›프로그램관리›프로그램별수강생현황",
+ "name": "프로그램별수강생현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:00:19+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "유형분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:유형분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1095,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "내용분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:내용분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "프로그램명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:프로그램명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "프로그램 조회 목록",
+     "box": [
+      25,
+      203,
+      1590,
+      283
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "프로그램 조회 목록",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        176,
+        36
+       ],
+       "id": "col:프로그램 조회 목록/프로그램명"
+      },
+      {
+       "label": "프로그램분류",
+       "depth": 0,
+       "box": [
+        202,
+        204,
+        176,
+        36
+       ],
+       "id": "col:프로그램 조회 목록/프로그램분류"
+      },
+      {
+       "label": "강사명",
+       "depth": 0,
+       "box": [
+        379,
+        204,
+        176,
+        36
+       ],
+       "id": "col:프로그램 조회 목록/강사명"
+      },
+      {
+       "label": "수강료",
+       "depth": 0,
+       "box": [
+        555,
+        204,
+        176,
+        36
+       ],
+       "id": "col:프로그램 조회 목록/수강료"
+      },
+      {
+       "label": "정원",
+       "depth": 0,
+       "box": [
+        732,
+        204,
+        176,
+        36
+       ],
+       "id": "col:프로그램 조회 목록/정원"
+      },
+      {
+       "label": "신청자",
+       "depth": 0,
+       "box": [
+        908,
+        204,
+        176,
+        36
+       ],
+       "id": "col:프로그램 조회 목록/신청자"
+      },
+      {
+       "label": "수강자",
+       "depth": 0,
+       "box": [
+        1085,
+        204,
+        176,
+        36
+       ],
+       "id": "col:프로그램 조회 목록/수강자"
+      },
+      {
+       "label": "신청률",
+       "depth": 0,
+       "box": [
+        1261,
+        204,
+        176,
+        36
+       ],
+       "id": "col:프로그램 조회 목록/신청률"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        1438,
+        204,
+        176,
+        36
+       ],
+       "id": "col:프로그램 조회 목록/상태"
+      }
+     ],
+     "id": "grid:프로그램 조회 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      501,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "프로그램명: ",
+     "box": [
+      25,
+      511,
+      91,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "프로그램명:",
+     "id": "heading:프로그램명:"
+    },
+    {
+     "aria": "프로그램별 수강생 목록",
+     "box": [
+      25,
+      541,
+      1590,
+      273
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "프로그램별 수강생 목록",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        542,
+        50,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/순번"
+      },
+      {
+       "label": "원적교명",
+       "depth": 0,
+       "box": [
+        76,
+        542,
+        130,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/원적교명"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        206,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        331,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        455,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        580,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/성명"
+      },
+      {
+       "label": "최종학적변동",
+       "depth": 0,
+       "box": [
+        704,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/최종학적변동"
+      },
+      {
+       "label": "신청일시",
+       "depth": 0,
+       "box": [
+        829,
+        542,
+        162,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/신청일시"
+      },
+      {
+       "label": "중도추가일자",
+       "depth": 0,
+       "box": [
+        991,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/중도추가일자"
+      },
+      {
+       "label": "신청구분",
+       "depth": 0,
+       "box": [
+        1116,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/신청구분"
+      },
+      {
+       "label": "신청상태",
+       "depth": 0,
+       "box": [
+        1240,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/신청상태"
+      },
+      {
+       "label": "대기순번",
+       "depth": 0,
+       "box": [
+        1365,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/대기순번"
+      },
+      {
+       "label": "자유수강권",
+       "depth": 0,
+       "box": [
+        1489,
+        542,
+        125,
+        36
+       ],
+       "id": "col:프로그램별 수강생 목록/자유수강권"
+      }
+     ],
+     "id": "grid:프로그램별 수강생 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 프로그램관리 > 프로그램별수강생현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

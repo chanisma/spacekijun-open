@@ -1,0 +1,13 @@
+import { existsSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { spawn } from 'node:child_process';
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+const suffix = process.platform === 'win32' ? 'Scripts/python.exe' : 'bin/python';
+const installed = ['.venv-timetable', 'reports/private/feasibility-venv'].map(p => resolve(root, p, suffix)).find(existsSync);
+const python = process.env.TIMETABLE_SOLVER_PYTHON || installed || 'python';
+const child = spawn(python, ['-m', 'timetable_solver.server'], { cwd: resolve(root, 'services'), stdio: 'inherit', windowsHide: true });
+child.on('error', error => { console.error('계산 서비스 실행 실패:', error.message); process.exitCode = 1; });
+child.on('exit', code => { process.exitCode = code ?? 1; });
+process.on('SIGINT', () => child.kill('SIGINT'));
+process.on('SIGTERM', () => child.kill('SIGTERM'));

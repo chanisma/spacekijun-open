@@ -1,0 +1,172 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›학생건강검사관리›소아청소년신체발육표준조회",
+ "name": "소아청소년신체발육표준조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:45:58+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "조회구분",
+     "box": [
+      175,
+      82,
+      178,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "조회구분",
+     "options": [
+      "상대체중",
+      "체질량지수"
+     ],
+     "id": "radio:조회구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      493,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "개정년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:개정년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      713,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성별",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:성별"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "상대체중 목록",
+     "box": [
+      25,
+      163,
+      1590,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "상대체중 목록",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "키",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        200,
+        62
+       ],
+       "id": "col:상대체중 목록/키"
+      },
+      {
+       "label": "남성",
+       "depth": 0,
+       "box": [
+        226,
+        164,
+        1388,
+        31
+       ],
+       "span": 4,
+       "id": "col:상대체중 목록/남성"
+      },
+      {
+       "label": "표준체중",
+       "depth": 1,
+       "box": [
+        226,
+        195,
+        347,
+        31
+       ],
+       "id": "col:상대체중 목록/남성>표준체중"
+      },
+      {
+       "label": "경도비만시작",
+       "depth": 1,
+       "box": [
+        573,
+        195,
+        347,
+        31
+       ],
+       "id": "col:상대체중 목록/남성>경도비만시작"
+      },
+      {
+       "label": "중등도비만시작",
+       "depth": 1,
+       "box": [
+        920,
+        195,
+        347,
+        31
+       ],
+       "id": "col:상대체중 목록/남성>중등도비만시작"
+      },
+      {
+       "label": "고도비만시작",
+       "depth": 1,
+       "box": [
+        1267,
+        195,
+        347,
+        31
+       ],
+       "id": "col:상대체중 목록/남성>고도비만시작"
+      }
+     ],
+     "id": "grid:상대체중 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 학생건강검사관리 > 소아청소년신체발육표준조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

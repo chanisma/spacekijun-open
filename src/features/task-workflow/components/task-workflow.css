@@ -1,0 +1,34 @@
+.task-workflow-canvas .react-flow__pane {
+  cursor: grab;
+}
+
+.task-workflow-canvas .react-flow__pane.dragging {
+  cursor: grabbing;
+}
+
+.task-workflow-canvas .react-flow__edge-path {
+  transition: stroke 150ms ease, stroke-width 150ms ease;
+}
+
+.task-workflow-canvas .react-flow__edge.selected .react-flow__edge-path {
+  stroke: #2563eb !important;
+  stroke-width: 3px !important;
+}
+
+.task-workflow-canvas .react-flow__handle.connecting {
+  background: #2563eb !important;
+  box-shadow: 0 0 0 5px rgb(59 130 246 / 18%);
+}
+
+.task-workflow-canvas .react-flow__controls-button {
+  border-bottom-color: #e2e8f0;
+  background: rgb(255 255 255 / 92%);
+  color: #475569;
+}
+
+.task-workflow-canvas .react-flow__attribution {
+  border-radius: 6px 0 0 0;
+  background: rgb(255 255 255 / 72%);
+  color: #94a3b8;
+  font-size: 9px;
+}

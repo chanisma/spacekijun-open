@@ -1,0 +1,703 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생배치›예비소집현황›예비소집현황작성›예비소집현황작성",
+ "name": "예비소집현황작성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:36:58+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      135,
+      82,
+      210,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교육지원청",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:교육지원청"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      82,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기준연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:기준연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      82,
+      240,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교급",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교급"
+    },
+    {
+     "aria": null,
+     "box": [
+      1045,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생배치개요명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학생배치개요명"
+    },
+    {
+     "aria": "학급편성기준명",
+     "box": [
+      155,
+      122,
+      390,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학급편성기준명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학급편성기준명"
+    },
+    {
+     "aria": "학교명",
+     "box": [
+      645,
+      122,
+      34,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학교명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1285,
+      173,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "결재",
+     "variant": "plain",
+     "id": "button:결재"
+    },
+    {
+     "aria": "기결취소",
+     "box": [
+      1340,
+      173,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기결취소",
+     "variant": "plain",
+     "id": "button:기결취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      173,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      173,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "예비소집현황 목록",
+     "box": [
+      25,
+      183,
+      133,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "예비소집현황 목록",
+     "id": "heading:예비소집현황 목록"
+    },
+    {
+     "aria": "시설현황 목록",
+     "box": [
+      25,
+      211,
+      1590,
+      461
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "시설현황 목록",
+     "selectable": true,
+     "declaredColumns": 29,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        212,
+        50,
+        108
+       ],
+       "id": "col:시설현황 목록/순번"
+      },
+      {
+       "label": "학교명",
+       "depth": 0,
+       "box": [
+        126,
+        212,
+        100,
+        108
+       ],
+       "id": "col:시설현황 목록/학교명"
+      },
+      {
+       "label": "예비소집 참여 예정자(취업예정자) 현황",
+       "depth": 0,
+       "box": [
+        226,
+        212,
+        720,
+        36
+       ],
+       "span": 9,
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황"
+      },
+      {
+       "label": "예비소집 미참여 아동수",
+       "depth": 0,
+       "box": [
+        946,
+        212,
+        240,
+        72
+       ],
+       "span": 3,
+       "id": "col:시설현황 목록/예비소집 미참여 아동수"
+      },
+      {
+       "label": "예비소집 참여 아동수",
+       "depth": 0,
+       "box": [
+        1186,
+        212,
+        240,
+        72
+       ],
+       "span": 3,
+       "id": "col:시설현황 목록/예비소집 참여 아동수"
+      },
+      {
+       "label": "입학연기 아동수",
+       "depth": 0,
+       "box": [
+        1426,
+        212,
+        80,
+        108
+       ],
+       "id": "col:시설현황 목록/입학연기 아동수"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        1506,
+        212,
+        100,
+        108
+       ],
+       "id": "col:시설현황 목록/상태"
+      },
+      {
+       "label": "취소결재여부",
+       "depth": 0,
+       "box": [
+        1606,
+        212,
+        100,
+        108
+       ],
+       "id": "col:시설현황 목록/취소결재여부"
+      },
+      {
+       "label": "적령아동수",
+       "depth": 1,
+       "box": [
+        226,
+        248,
+        240,
+        36
+       ],
+       "span": 3,
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>적령아동수"
+      },
+      {
+       "label": "과령아동수",
+       "depth": 1,
+       "box": [
+        466,
+        248,
+        240,
+        36
+       ],
+       "span": 3,
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>과령아동수"
+      },
+      {
+       "label": "조기 입학 아동수",
+       "depth": 1,
+       "box": [
+        706,
+        248,
+        240,
+        36
+       ],
+       "span": 3,
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>조기 입학 아동수"
+      },
+      {
+       "label": "남",
+       "depth": 2,
+       "box": [
+        226,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>적령아동수>남"
+      },
+      {
+       "label": "여",
+       "depth": 2,
+       "box": [
+        306,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>적령아동수>여"
+      },
+      {
+       "label": "소계",
+       "depth": 2,
+       "box": [
+        386,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>적령아동수>소계"
+      },
+      {
+       "label": "남",
+       "depth": 2,
+       "box": [
+        466,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>과령아동수>남"
+      },
+      {
+       "label": "여",
+       "depth": 2,
+       "box": [
+        546,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>과령아동수>여"
+      },
+      {
+       "label": "소계",
+       "depth": 2,
+       "box": [
+        626,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>과령아동수>소계"
+      },
+      {
+       "label": "남",
+       "depth": 2,
+       "box": [
+        706,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>조기 입학 아동수>남"
+      },
+      {
+       "label": "여",
+       "depth": 2,
+       "box": [
+        786,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>조기 입학 아동수>여"
+      },
+      {
+       "label": "소계",
+       "depth": 2,
+       "box": [
+        866,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 예정자(취업예정자) 현황>조기 입학 아동수>소계"
+      },
+      {
+       "label": "남",
+       "depth": 2,
+       "box": [
+        946,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 미참여 아동수>남"
+      },
+      {
+       "label": "여",
+       "depth": 2,
+       "box": [
+        1026,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 미참여 아동수>여"
+      },
+      {
+       "label": "소계",
+       "depth": 2,
+       "box": [
+        1106,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 미참여 아동수>소계"
+      },
+      {
+       "label": "남",
+       "depth": 2,
+       "box": [
+        1186,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 아동수>남"
+      },
+      {
+       "label": "여",
+       "depth": 2,
+       "box": [
+        1266,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 아동수>여"
+      },
+      {
+       "label": "소계",
+       "depth": 2,
+       "box": [
+        1346,
+        284,
+        80,
+        36
+       ],
+       "id": "col:시설현황 목록/예비소집 참여 아동수>소계"
+      }
+     ],
+     "id": "grid:시설현황 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      31,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "남",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:남"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "여",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:여"
+    },
+    {
+     "aria": null,
+     "box": [
+      320,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "남",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:남#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      464,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "여",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:여#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      608,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "남",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:남#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      753,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "여",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:여#3"
+    },
+    {
+     "aria": "예비소집 미참여 아동수 남아",
+     "box": [
+      897,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "남",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:남#4"
+    },
+    {
+     "aria": "예비소집 미참여 아동수 여아",
+     "box": [
+      1042,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "여",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:여#4"
+    },
+    {
+     "aria": "예비소집 참여 아동수 남아",
+     "box": [
+      1186,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "남",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:남#5"
+    },
+    {
+     "aria": "예비소집 참여 아동수 여아",
+     "box": [
+      1330,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "여",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:여#5"
+    },
+    {
+     "aria": "입학연기아동수",
+     "box": [
+      1475,
+      779,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "입학연기 아동수",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:입학연기 아동수"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생배치}예비소집현황 > 예비소집현황작성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

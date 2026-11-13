@@ -1,0 +1,373 @@
+{
+ "schema": "neis-capture/1",
+ "key": "업무승인관리›업무승인›결재경로관리›대리결재자지정관리",
+ "name": "대리결재자지정관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:53:02+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      135,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "권한조직",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:권한조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:사용자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      631,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "link",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      486,
+      223,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조직추가",
+     "variant": "link",
+     "id": "button:조직추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1276,
+      223,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1336,
+      223,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "위임이력조회",
+     "variant": "link",
+     "id": "button:위임이력조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1431,
+      223,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "대결이력조회",
+     "variant": "link",
+     "id": "button:대결이력조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      223,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      223,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "조직목록",
+     "box": [
+      25,
+      233,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "조직목록",
+     "id": "heading:조직목록"
+    },
+    {
+     "aria": "대리결재자정보",
+     "box": [
+      565,
+      233,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대리결재자정보",
+     "id": "heading:대리결재자정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      263,
+      525,
+      550
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        264,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "조직구분",
+       "depth": 0,
+       "box": [
+        76,
+        264,
+        69,
+        36
+       ],
+       "id": "col:그리드/조직구분"
+      },
+      {
+       "label": "조직코드",
+       "depth": 0,
+       "box": [
+        145,
+        264,
+        97,
+        36
+       ],
+       "id": "col:그리드/조직코드"
+      },
+      {
+       "label": "조직명(기안자기준)",
+       "depth": 0,
+       "box": [
+        241,
+        264,
+        180,
+        36
+       ],
+       "id": "col:그리드/조직명(기안자기준)"
+      },
+      {
+       "label": "만료건수",
+       "depth": 0,
+       "box": [
+        422,
+        264,
+        64,
+        36
+       ],
+       "id": "col:그리드/만료건수"
+      },
+      {
+       "label": "전체건수",
+       "depth": 0,
+       "box": [
+        485,
+        264,
+        64,
+        36
+       ],
+       "id": "col:그리드/전체건수"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      565,
+      263,
+      1050,
+      550
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        616,
+        264,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "적용상태",
+       "depth": 0,
+       "box": [
+        666,
+        264,
+        86,
+        36
+       ],
+       "id": "col:그리드/적용상태"
+      },
+      {
+       "label": "적용시작일시",
+       "depth": 0,
+       "box": [
+        752,
+        264,
+        171,
+        36
+       ],
+       "id": "col:그리드/적용시작일시"
+      },
+      {
+       "label": "적용종료일시",
+       "depth": 0,
+       "box": [
+        923,
+        264,
+        171,
+        36
+       ],
+       "id": "col:그리드/적용종료일시"
+      },
+      {
+       "label": "대리결재자",
+       "depth": 0,
+       "box": [
+        1095,
+        264,
+        163,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/대리결재자"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        1258,
+        264,
+        158,
+        36
+       ],
+       "id": "col:그리드/직위"
+      },
+      {
+       "label": "대리결재자조직명",
+       "depth": 0,
+       "box": [
+        1416,
+        264,
+        198,
+        36
+       ],
+       "id": "col:그리드/대리결재자조직명"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {업무승인관리}업무승인 > 결재경로관리 > 대리결재자지정관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

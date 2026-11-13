@@ -1,0 +1,1640 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›전출관리›통폐합학교전출학생처리",
+ "name": "통폐합학교전출학생처리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:12:08+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:통폐합 학생등록",
+   "tab": "통폐합 학생등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "통폐합 학생등록\n(2026학년도) 선택됨",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "통폐합 학생등록",
+      "월출결자료등록(선택)",
+      "상신",
+      "학적반영",
+      "전송",
+      "통폐합학교전출 종합검색",
+      "학교생활기록부생성"
+     ],
+     "active": "통폐합 학생등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1527,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "통폐합 학생등록 목록",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "통폐합 학생등록 목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "전출학년도",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        183,
+        62
+       ],
+       "id": "col:통폐합 학생등록 목록/전출학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        259,
+        323,
+        274,
+        62
+       ],
+       "id": "col:통폐합 학생등록 목록/전출일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        533,
+        323,
+        114,
+        62
+       ],
+       "id": "col:통폐합 학생등록 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        648,
+        323,
+        114,
+        62
+       ],
+       "id": "col:통폐합 학생등록 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        762,
+        323,
+        114,
+        62
+       ],
+       "id": "col:통폐합 학생등록 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        876,
+        323,
+        120,
+        62
+       ],
+       "id": "col:통폐합 학생등록 목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        996,
+        323,
+        274,
+        62
+       ],
+       "id": "col:통폐합 학생등록 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        1271,
+        323,
+        343,
+        62
+       ],
+       "id": "col:통폐합 학생등록 목록/전입학교명"
+      }
+     ],
+     "id": "grid:통폐합 학생등록 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:월출결자료등록(선택)",
+   "tab": "월출결자료등록(선택)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "통폐합 학생등록\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "통폐합 학생등록",
+      "월출결자료등록(선택)",
+      "상신",
+      "학적반영",
+      "전송",
+      "통폐합학교전출 종합검색",
+      "학교생활기록부생성"
+     ],
+     "active": "월출결자료등록(선택)",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "월출결자료등록(선택) 목록",
+     "box": [
+      25,
+      312,
+      1590,
+      501
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "월출결자료등록(선택) 목록",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "전출학년도",
+       "depth": 0,
+       "box": [
+        26,
+        313,
+        143,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/전출학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        169,
+        313,
+        215,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/전출일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        384,
+        313,
+        90,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        474,
+        313,
+        90,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        563,
+        313,
+        90,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        653,
+        313,
+        120,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        773,
+        313,
+        304,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        1077,
+        313,
+        358,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/전입학교명"
+      },
+      {
+       "label": "출석일수",
+       "depth": 0,
+       "box": [
+        1435,
+        313,
+        179,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/출석일수"
+      }
+     ],
+     "id": "grid:월출결자료등록(선택) 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:상신",
+   "tab": "상신",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "통폐합 학생등록\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "통폐합 학생등록",
+      "월출결자료등록(선택)",
+      "상신",
+      "학적반영",
+      "전송",
+      "통폐합학교전출 종합검색",
+      "학교생활기록부생성"
+     ],
+     "active": "월출결자료등록(선택)",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "월출결자료등록(선택) 목록",
+     "box": [
+      25,
+      312,
+      1590,
+      501
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "월출결자료등록(선택) 목록",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "전출학년도",
+       "depth": 0,
+       "box": [
+        26,
+        313,
+        143,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/전출학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        169,
+        313,
+        215,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/전출일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        384,
+        313,
+        90,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        474,
+        313,
+        90,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        563,
+        313,
+        90,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        653,
+        313,
+        120,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        773,
+        313,
+        304,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        1077,
+        313,
+        358,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/전입학교명"
+      },
+      {
+       "label": "출석일수",
+       "depth": 0,
+       "box": [
+        1435,
+        313,
+        179,
+        62
+       ],
+       "id": "col:월출결자료등록(선택) 목록/출석일수"
+      }
+     ],
+     "id": "grid:월출결자료등록(선택) 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:학적반영",
+   "tab": "학적반영",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "통폐합 학생등록\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "통폐합 학생등록",
+      "월출결자료등록(선택)",
+      "상신",
+      "학적반영",
+      "전송",
+      "통폐합학교전출 종합검색",
+      "학교생활기록부생성",
+      "학적반영"
+     ],
+     "active": "학적반영",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "전체 또는 반영완료 또는 미반영",
+     "box": [
+      765,
+      221,
+      250,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "반",
+     "options": [
+      "전체",
+      "반영완료",
+      "미반영"
+     ],
+     "id": "radio:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학적반영 목록",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학적반영 목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "전출학년도",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        172,
+        62
+       ],
+       "id": "col:학적반영 목록/전출학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        248,
+        323,
+        215,
+        62
+       ],
+       "id": "col:학적반영 목록/전출일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        463,
+        323,
+        107,
+        62
+       ],
+       "id": "col:학적반영 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        570,
+        323,
+        107,
+        62
+       ],
+       "id": "col:학적반영 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        678,
+        323,
+        107,
+        62
+       ],
+       "id": "col:학적반영 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        785,
+        323,
+        120,
+        62
+       ],
+       "id": "col:학적반영 목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        905,
+        323,
+        279,
+        62
+       ],
+       "id": "col:학적반영 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        1184,
+        323,
+        215,
+        62
+       ],
+       "id": "col:학적반영 목록/전입학교명"
+      },
+      {
+       "label": "학적반영여부",
+       "depth": 0,
+       "box": [
+        1399,
+        323,
+        215,
+        62
+       ],
+       "id": "col:학적반영 목록/학적반영여부"
+      }
+     ],
+     "id": "grid:학적반영 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:전송",
+   "tab": "전송",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "통폐합 학생등록\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      1422,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "통폐합 학생등록",
+      "월출결자료등록(선택)",
+      "상신",
+      "학적반영",
+      "전송",
+      "통폐합학교전출 종합검색",
+      "학교생활기록부생성",
+      "학적반영취소"
+     ],
+     "active": "전송",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "전체 또는 전송완료 또는 자료미전송",
+     "box": [
+      765,
+      221,
+      280,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "반",
+     "options": [
+      "전체",
+      "전송완료",
+      "자료미전송"
+     ],
+     "id": "radio:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "자료전송",
+     "box": [
+      1455,
+      282,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료전송",
+     "variant": "primary",
+     "id": "button:자료전송"
+    },
+    {
+     "aria": "자료전송취소",
+     "box": [
+      1527,
+      282,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료전송취소",
+     "variant": "secondary",
+     "id": "button:자료전송취소"
+    },
+    {
+     "aria": "전송 목록",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전송 목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "전출학년도",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        167,
+        62
+       ],
+       "id": "col:전송 목록/전출학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        243,
+        323,
+        209,
+        62
+       ],
+       "id": "col:전송 목록/전출일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        453,
+        323,
+        105,
+        62
+       ],
+       "id": "col:전송 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        557,
+        323,
+        105,
+        62
+       ],
+       "id": "col:전송 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        662,
+        323,
+        105,
+        62
+       ],
+       "id": "col:전송 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        766,
+        323,
+        120,
+        62
+       ],
+       "id": "col:전송 목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        886,
+        323,
+        209,
+        62
+       ],
+       "id": "col:전송 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        1096,
+        323,
+        209,
+        62
+       ],
+       "id": "col:전송 목록/전입학교명"
+      },
+      {
+       "label": "전송여부",
+       "depth": 0,
+       "box": [
+        1305,
+        323,
+        209,
+        62
+       ],
+       "id": "col:전송 목록/전송여부"
+      },
+      {
+       "label": "전입학교 전출입처리상태",
+       "depth": 0,
+       "box": [
+        1514,
+        323,
+        100,
+        62
+       ],
+       "id": "col:전송 목록/전입학교 전출입처리상태"
+      }
+     ],
+     "id": "grid:전송 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:통폐합학교전출 종합검색",
+   "tab": "통폐합학교전출 종합검색",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "통폐합 학생등록\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "통폐합 학생등록",
+      "월출결자료등록(선택)",
+      "상신",
+      "학적반영",
+      "전송",
+      "통폐합학교전출 종합검색",
+      "학교생활기록부생성"
+     ],
+     "active": "통폐합학교전출 종합검색",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      221,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:상태"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "통폐합학교전출종합검색 목록",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "통폐합학교전출종합검색 목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "전출학년도",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        180,
+        62
+       ],
+       "id": "col:통폐합학교전출종합검색 목록/전출학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        256,
+        323,
+        225,
+        62
+       ],
+       "id": "col:통폐합학교전출종합검색 목록/전출일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        481,
+        323,
+        113,
+        62
+       ],
+       "id": "col:통폐합학교전출종합검색 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        594,
+        323,
+        113,
+        62
+       ],
+       "id": "col:통폐합학교전출종합검색 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        706,
+        323,
+        113,
+        62
+       ],
+       "id": "col:통폐합학교전출종합검색 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        819,
+        323,
+        120,
+        62
+       ],
+       "id": "col:통폐합학교전출종합검색 목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        939,
+        323,
+        225,
+        62
+       ],
+       "id": "col:통폐합학교전출종합검색 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        1164,
+        323,
+        225,
+        62
+       ],
+       "id": "col:통폐합학교전출종합검색 목록/전입학교명"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        1389,
+        323,
+        225,
+        62
+       ],
+       "id": "col:통폐합학교전출종합검색 목록/상태"
+      }
+     ],
+     "id": "grid:통폐합학교전출종합검색 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:학교생활기록부생성",
+   "tab": "학교생활기록부생성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "통폐합 학생등록\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "통폐합 학생등록",
+      "월출결자료등록(선택)",
+      "상신",
+      "학적반영",
+      "전송",
+      "통폐합학교전출 종합검색",
+      "학교생활기록부생성",
+      "학교생활기록부생성"
+     ],
+     "active": "학교생활기록부생성",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "전체 또는 생성완료 또는 미생성",
+     "box": [
+      765,
+      221,
+      250,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "반",
+     "options": [
+      "전체",
+      "생성완료",
+      "미생성"
+     ],
+     "id": "radio:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학교생활기록부생성 목록",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교생활기록부생성 목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "전출학년도",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        127,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/전출학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        203,
+        323,
+        191,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/전출일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        395,
+        323,
+        80,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        474,
+        323,
+        80,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        554,
+        323,
+        80,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        634,
+        323,
+        120,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        754,
+        323,
+        271,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        1024,
+        323,
+        319,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/전입학교명"
+      },
+      {
+       "label": "생성 여부",
+       "depth": 0,
+       "box": [
+        1343,
+        323,
+        80,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/생성 여부"
+      },
+      {
+       "label": "생성일자",
+       "depth": 0,
+       "box": [
+        1423,
+        323,
+        191,
+        62
+       ],
+       "id": "col:학교생활기록부생성 목록/생성일자"
+      }
+     ],
+     "id": "grid:학교생활기록부생성 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 전출관리 > 통폐합학교전출학생처리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

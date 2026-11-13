@@ -1,0 +1,225 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(영재)›교육과정›편제및과목개설관리›과목별/강의실별시수누계조회",
+ "name": "과목별/강의실별시수누계조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:55:40+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학기",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학기"
+    },
+    {
+     "aria": "과정선택 라디오버튼(강의실별, 반별, 개설강좌별)",
+     "box": [
+      765,
+      82,
+      303,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "학기",
+     "options": [
+      "강의실별",
+      "반별",
+      "개설강좌별"
+     ],
+     "id": "radio:학기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "기준일자",
+     "box": [
+      165,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기준일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기준일자"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      295,
+      122,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      325,
+      122,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      392,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기준일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기준일자~"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      522,
+      122,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기#2"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      552,
+      122,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기#2"
+    },
+    {
+     "aria": "기준일자 라디오버큰(기간별, 날짜별)",
+     "box": [
+      589,
+      122,
+      213,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "기준일자 라디오버큰(기간별, 날짜별)",
+     "options": [
+      "기간별",
+      "날짜별"
+     ],
+     "id": "radio:기준일자 라디오버큰(기간별, 날짜별)"
+    },
+    {
+     "aria": null,
+     "box": [
+      812,
+      122,
+      213,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "빈강의실 미표기",
+     "checked": true,
+     "id": "check:빈강의실 미표기"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      595
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 편제및과목개설관리 > 과목별/강의실별시수누계조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

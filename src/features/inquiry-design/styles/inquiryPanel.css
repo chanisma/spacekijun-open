@@ -1,0 +1,73 @@
+/* Split by task, not card order. The panel width controls the breakpoint. */
+.inquiry-workspace {
+  container: inquiry-workspace / inline-size;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+.inquiry-workspace-columns {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.inquiry-workspace-pane {
+  min-width: 0;
+  padding: 1rem;
+  overflow-wrap: anywhere;
+}
+.inquiry-workspace-pane:focus-visible {
+  outline: 2px solid #94a3b8;
+  outline-offset: -2px;
+}
+.inquiry-workspace-secondary { padding-top: 0; }
+.inquiry-workspace-heading {
+  display: none;
+  margin-bottom: 1rem;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.inquiry-wide-only { display: none; }
+.inquiry-history .inquiry-workspace-secondary { display: none; }
+.inquiry-history-selected .inquiry-workspace-primary { display: none; }
+.inquiry-history-selected .inquiry-workspace-secondary { display: block; padding-top: 1rem; }
+@container inquiry-workspace (min-width: 760px) {
+  .inquiry-workspace-wide > .inquiry-workspace-columns {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.85fr) minmax(0, 1.15fr);
+    overflow: hidden;
+    scrollbar-gutter: auto;
+  }
+  .inquiry-workspace-wide.inquiry-workspace-review > .inquiry-workspace-columns {
+    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  }
+  .inquiry-workspace-wide > .inquiry-workspace-columns > .inquiry-workspace-pane {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    padding: 1.25rem;
+  }
+  .inquiry-workspace-wide > .inquiry-workspace-columns > .inquiry-workspace-secondary {
+    border-left: 1px solid #e2e8f0;
+    background: #fff;
+  }
+  .inquiry-workspace-wide .inquiry-workspace-heading,
+  .inquiry-workspace-wide .inquiry-wide-only { display: block; }
+  .inquiry-workspace-wide .inquiry-recommendation[data-active="false"] { display: none; }
+  .inquiry-workspace-wide.inquiry-history .inquiry-workspace-pane { display: block; }
+  .inquiry-workspace-wide .inquiry-compact-only { display: none; }
+}
+/* On a wide panel, the footer is a toolbar rather than a full-width button. */
+.inquiry-panel { container: inquiry-panel / inline-size; }
+@container inquiry-panel (min-width: 760px) {
+  .inquiry-panel-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+  .inquiry-panel-footer > p { text-align: left; margin-right: auto; }
+  .inquiry-panel-footer > button { width: auto; min-width: 220px; margin-top: 0; }
+}

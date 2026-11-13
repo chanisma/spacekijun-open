@@ -1,0 +1,479 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›코드›공통코드관리›분류코드관리",
+ "name": "분류코드관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:47:54+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      1516,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      173,
+      85,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "분류코드값",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:분류코드값"
+    },
+    {
+     "aria": null,
+     "box": [
+      503,
+      85,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "분류코드명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:분류코드명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1488,
+      138,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이력조회",
+     "variant": "primary",
+     "id": "button:이력조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      138,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "분류코드 목록",
+     "box": [
+      25,
+      148,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "분류코드 목록",
+     "id": "heading:분류코드 목록"
+    },
+    {
+     "aria": "분류코드 목록",
+     "box": [
+      25,
+      178,
+      1575,
+      452
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "분류코드 목록",
+     "selectable": false,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        179,
+        50,
+        50
+       ],
+       "id": "col:분류코드 목록/순번"
+      },
+      {
+       "label": "분류코드값",
+       "depth": 0,
+       "box": [
+        76,
+        179,
+        260,
+        50
+       ],
+       "id": "col:분류코드 목록/분류코드값"
+      },
+      {
+       "label": "분류코드명",
+       "depth": 0,
+       "box": [
+        336,
+        179,
+        260,
+        50
+       ],
+       "id": "col:분류코드 목록/분류코드명"
+      },
+      {
+       "label": "사용영역",
+       "depth": 0,
+       "box": [
+        596,
+        179,
+        111,
+        50
+       ],
+       "id": "col:분류코드 목록/사용영역"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        707,
+        179,
+        111,
+        50
+       ],
+       "id": "col:분류코드 목록/사용여부"
+      },
+      {
+       "label": "통합코드 수정가능여부",
+       "depth": 0,
+       "box": [
+        819,
+        179,
+        111,
+        50
+       ],
+       "id": "col:분류코드 목록/통합코드 수정가능여부"
+      },
+      {
+       "label": "통합코드 승인필요여부",
+       "depth": 0,
+       "box": [
+        930,
+        179,
+        111,
+        50
+       ],
+       "id": "col:분류코드 목록/통합코드 승인필요여부"
+      },
+      {
+       "label": "교육청코드 등록가능여부",
+       "depth": 0,
+       "box": [
+        1042,
+        179,
+        111,
+        50
+       ],
+       "id": "col:분류코드 목록/교육청코드 등록가능여부"
+      },
+      {
+       "label": "소스분류코드",
+       "depth": 0,
+       "box": [
+        1153,
+        179,
+        149,
+        50
+       ],
+       "id": "col:분류코드 목록/소스분류코드"
+      },
+      {
+       "label": "이전분류코드",
+       "depth": 0,
+       "box": [
+        1302,
+        179,
+        149,
+        50
+       ],
+       "id": "col:분류코드 목록/이전분류코드"
+      },
+      {
+       "label": "이전분류코드명",
+       "depth": 0,
+       "box": [
+        1450,
+        179,
+        149,
+        50
+       ],
+       "id": "col:분류코드 목록/이전분류코드명"
+      }
+     ],
+     "id": "grid:분류코드 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      640,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": "분류코드 상세",
+     "box": [
+      25,
+      685,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "분류코드 상세",
+     "id": "heading:분류코드 상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      124,
+      721,
+      303,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "분류코드값",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:분류코드값#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      531,
+      721,
+      383,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "사용영역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사용영역"
+    },
+    {
+     "aria": "분류코드 목록",
+     "box": [
+      929,
+      715,
+      671,
+      240
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "분류코드 목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "사용자정의설명 순서번호",
+       "depth": 0,
+       "box": [
+        930,
+        716,
+        100,
+        40
+       ],
+       "id": "col:분류코드 목록/사용자정의설명 순서번호"
+      },
+      {
+       "label": "사용자정의설명",
+       "depth": 0,
+       "box": [
+        1030,
+        716,
+        569,
+        40
+       ],
+       "id": "col:분류코드 목록/사용자정의설명"
+      }
+     ],
+     "id": "grid:분류코드 목록#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      124,
+      761,
+      303,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "분류코드명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:분류코드명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      531,
+      761,
+      164,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "소스분류코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:소스분류코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      705,
+      761,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      124,
+      801,
+      303,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사용자정의내용",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사용자정의내용"
+    },
+    {
+     "aria": "통합코드수정가능여부",
+     "box": [
+      531,
+      801,
+      164,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "통합코드 수정가능여부",
+     "options": [
+      "가능",
+      "불가능"
+     ],
+     "id": "radio:통합코드 수정가능여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      124,
+      841,
+      303,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이전분류코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:이전분류코드"
+    },
+    {
+     "aria": "교육청등록가능여부",
+     "box": [
+      531,
+      841,
+      164,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "교육청코드 등록가능여부",
+     "options": [
+      "가능",
+      "불가능"
+     ],
+     "id": "radio:교육청코드 등록가능여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      124,
+      881,
+      303,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이전분류코드명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:이전분류코드명"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}코드 > 공통코드관리 > 분류코드관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

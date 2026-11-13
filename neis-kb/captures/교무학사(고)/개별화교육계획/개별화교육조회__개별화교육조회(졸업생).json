@@ -1,0 +1,199 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›개별화교육계획›개별화교육조회›개별화교육조회(졸업생)",
+ "name": "개별화교육조회(졸업생)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:42:49+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "학생찾기",
+     "box": [
+      621,
+      82,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "학생찾기",
+     "variant": "link",
+     "id": "button:학생찾기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "조회학년도",
+     "box": [
+      121,
+      143,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조회학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:조회학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      143,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "교과영역",
+     "checked": false,
+     "id": "check:교과영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      143,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "생활지원영역",
+     "checked": false,
+     "id": "check:생활지원영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      615,
+      143,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "기능중심영역",
+     "checked": false,
+     "id": "check:기능중심영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      725,
+      148,
+      98,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "학기별개별화",
+     "checked": false,
+     "id": "check:학기별개별화"
+    },
+    {
+     "aria": null,
+     "box": [
+      841,
+      148,
+      86,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "월별개별화",
+     "checked": false,
+     "id": "check:월별개별화"
+    },
+    {
+     "aria": null,
+     "box": [
+      944,
+      148,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "인적사항",
+     "checked": false,
+     "id": "check:인적사항"
+    },
+    {
+     "aria": null,
+     "box": [
+      1035,
+      148,
+      98,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "특수교육관련",
+     "checked": false,
+     "id": "check:특수교육관련"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 개별화교육계획 > 개별화교육조회 > 개별화교육조회(졸업생)",
+ "viewport": [
+  1920,
+  945
+ ]
+}

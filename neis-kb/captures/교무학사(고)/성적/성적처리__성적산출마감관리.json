@@ -1,0 +1,260 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적처리›성적산출마감관리",
+ "name": "성적산출마감관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:33:28+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "산출기준",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:산출기준"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1459,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "학생/학부모서비스 반영",
+     "box": [
+      1204,
+      244,
+      144,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학생/학부모서비스 반영",
+     "variant": "link",
+     "id": "button:학생/학부모서비스 반영"
+    },
+    {
+     "aria": "반영결과 보기",
+     "box": [
+      1356,
+      244,
+      91,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "반영결과 보기",
+     "variant": "link",
+     "id": "button:반영결과 보기"
+    },
+    {
+     "aria": "성적산출전체마감",
+     "box": [
+      1455,
+      244,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "성적산출전체마감",
+     "variant": "primary",
+     "id": "button:성적산출전체마감"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      244,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "※ 학기말 : 성적산출마감상신",
+     "box": [
+      25,
+      284,
+      1590,
+      530
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "※ 학기말 : 성적산출마감상신",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "과목",
+       "depth": 0,
+       "box": [
+        26,
+        285,
+        355,
+        36
+       ],
+       "id": "col:※ 학기말 : 성적산출마감상신/과목"
+      },
+      {
+       "label": "산출단위",
+       "depth": 0,
+       "box": [
+        381,
+        285,
+        237,
+        36
+       ],
+       "id": "col:※ 학기말 : 성적산출마감상신/산출단위"
+      },
+      {
+       "label": "성적산출처리단위",
+       "depth": 0,
+       "box": [
+        618,
+        285,
+        237,
+        36
+       ],
+       "id": "col:※ 학기말 : 성적산출마감상신/성적산출처리단위"
+      },
+      {
+       "label": "성적산출단위 내역",
+       "depth": 0,
+       "box": [
+        854,
+        285,
+        473,
+        36
+       ],
+       "id": "col:※ 학기말 : 성적산출마감상신/성적산출단위 내역"
+      },
+      {
+       "label": "산출여부",
+       "depth": 0,
+       "box": [
+        1327,
+        285,
+        118,
+        36
+       ],
+       "id": "col:※ 학기말 : 성적산출마감상신/산출여부"
+      },
+      {
+       "label": "마감여부",
+       "depth": 0,
+       "box": [
+        1446,
+        285,
+        118,
+        36
+       ],
+       "id": "col:※ 학기말 : 성적산출마감상신/마감여부"
+      }
+     ],
+     "id": "grid:※ 학기말 : 성적산출마감상신"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적처리 > 성적산출마감관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

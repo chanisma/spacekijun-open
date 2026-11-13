@@ -1,0 +1,288 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교운동부관리#학교›학생선수관리#학교›학교운동부훈련일지관리",
+ "name": "학교운동부훈련일지관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:07:05+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "종목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:종목"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "활동상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:활동상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1036,
+      133,
+      95,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조회년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:조회년월"
+    },
+    {
+     "aria": null,
+     "box": [
+      1227,
+      133,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "승인상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:승인상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1348,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1396,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1444,
+      133,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1526,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "학교운동부내역",
+     "box": [
+      25,
+      143,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학교운동부내역",
+     "id": "heading:학교운동부내역"
+    },
+    {
+     "aria": "일지목록",
+     "box": [
+      653,
+      143,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "일지목록",
+     "id": "heading:일지목록"
+    },
+    {
+     "aria": "학교운동부내역",
+     "box": [
+      25,
+      173,
+      613,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교운동부내역",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "종목",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        204,
+        36
+       ],
+       "id": "col:학교운동부내역/종목"
+      },
+      {
+       "label": "활동상태",
+       "depth": 0,
+       "box": [
+        230,
+        174,
+        204,
+        36
+       ],
+       "id": "col:학교운동부내역/활동상태"
+      },
+      {
+       "label": "인원",
+       "depth": 0,
+       "box": [
+        433,
+        174,
+        204,
+        36
+       ],
+       "id": "col:학교운동부내역/인원"
+      }
+     ],
+     "id": "grid:학교운동부내역"
+    },
+    {
+     "aria": "일지목록",
+     "box": [
+      653,
+      173,
+      913,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "일지목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        704,
+        174,
+        287,
+        36
+       ],
+       "id": "col:일지목록/일자"
+      },
+      {
+       "label": "훈련장소",
+       "depth": 0,
+       "box": [
+        991,
+        174,
+        287,
+        36
+       ],
+       "id": "col:일지목록/훈련장소"
+      },
+      {
+       "label": "승인상태",
+       "depth": 0,
+       "box": [
+        1278,
+        174,
+        287,
+        36
+       ],
+       "id": "col:일지목록/승인상태"
+      }
+     ],
+     "id": "grid:일지목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교운동부관리 > 학생선수관리 > 학교운동부훈련일지관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

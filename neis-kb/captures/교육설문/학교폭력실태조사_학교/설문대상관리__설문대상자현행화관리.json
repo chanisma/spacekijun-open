@@ -1,0 +1,290 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학교폭력실태조사#학교›설문대상관리›설문대상자현행화관리",
+ "name": "설문대상자현행화관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:12:51+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "설문연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:설문연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "설문연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:설문연도#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      525,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주야",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:주야"
+    },
+    {
+     "aria": null,
+     "box": [
+      765,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계열",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계열"
+    },
+    {
+     "aria": null,
+     "box": [
+      1005,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학과",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학과"
+    },
+    {
+     "aria": null,
+     "box": [
+      1245,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 이전학교에서 설문에 참여한 학생의 경우 참여번호관리 메뉴에서 조회되지 않습니다. ※ 전.출입의 경우 두 학교의 학적반영이 완료되어야만 설문대상자 현행화를 처리를 할 수 있습니다.",
+     "id": "note:※ 이전학교에서 설문에 참여한 학생의 경우 참여번호관리 메뉴에서 조회되지 않습니다. ※ 전.출입의 경우 두 학교의 학적반영이 완료되어야만 설문대상자 현행화를 처리를 할 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      229,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설문대상자현행화",
+     "variant": "primary",
+     "id": "button:설문대상자현행화"
+    },
+    {
+     "aria": "설문대상자현행화 목록",
+     "box": [
+      25,
+      269,
+      1590,
+      544
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "설문대상자현행화 목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        270,
+        50,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        270,
+        171,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        247,
+        270,
+        171,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        418,
+        270,
+        171,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        589,
+        270,
+        171,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        760,
+        270,
+        171,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/성별"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        930,
+        270,
+        171,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/구분"
+      },
+      {
+       "label": "설문대상자 현행화 여부",
+       "depth": 0,
+       "box": [
+        1101,
+        270,
+        171,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/설문대상자 현행화 여부"
+      },
+      {
+       "label": "참여번호 발급 여부",
+       "depth": 0,
+       "box": [
+        1272,
+        270,
+        171,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/참여번호 발급 여부"
+      },
+      {
+       "label": "이전학교 설문참여",
+       "depth": 0,
+       "box": [
+        1443,
+        270,
+        171,
+        36
+       ],
+       "id": "col:설문대상자현행화 목록/이전학교 설문참여"
+      }
+     ],
+     "id": "grid:설문대상자현행화 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교폭력실태조사 > 설문대상관리 > 설문대상자현행화관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

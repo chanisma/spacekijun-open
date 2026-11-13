@@ -1,0 +1,312 @@
+{
+ "schema": "neis-capture/1",
+ "key": "업무승인관리›업무승인›결재진행관리›메시지함",
+ "name": "메시지함",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:55:57+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      115,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      295,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      430,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      630,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "제목",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:제목"
+    },
+    {
+     "aria": null,
+     "box": [
+      910,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "내용",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1190,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조회여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:조회여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      115,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "보낸사람명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:보낸사람명"
+    },
+    {
+     "aria": "조회버튼",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "미확인메시지보기버튼",
+     "box": [
+      1396,
+      173,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "미확인메시지",
+     "variant": "primary",
+     "id": "button:미확인메시지"
+    },
+    {
+     "aria": "메시지작성버튼",
+     "box": [
+      1491,
+      173,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "메시지작성",
+     "variant": "primary",
+     "id": "button:메시지작성"
+    },
+    {
+     "aria": "삭제버튼",
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "메시지",
+     "box": [
+      25,
+      213,
+      1590,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "메시지",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        50,
+        36
+       ],
+       "id": "col:메시지/순번"
+      },
+      {
+       "label": "제목",
+       "depth": 0,
+       "box": [
+        126,
+        214,
+        331,
+        36
+       ],
+       "id": "col:메시지/제목"
+      },
+      {
+       "label": "보낸사람ID",
+       "depth": 0,
+       "box": [
+        457,
+        214,
+        181,
+        36
+       ],
+       "id": "col:메시지/보낸사람ID"
+      },
+      {
+       "label": "보낸사람명",
+       "depth": 0,
+       "box": [
+        638,
+        214,
+        181,
+        36
+       ],
+       "id": "col:메시지/보낸사람명"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        819,
+        214,
+        181,
+        36
+       ],
+       "id": "col:메시지/조직명"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        1000,
+        214,
+        181,
+        36
+       ],
+       "id": "col:메시지/직위"
+      },
+      {
+       "label": "보낸일시",
+       "depth": 0,
+       "box": [
+        1181,
+        214,
+        217,
+        36
+       ],
+       "id": "col:메시지/보낸일시"
+      },
+      {
+       "label": "확인일시",
+       "depth": 0,
+       "box": [
+        1397,
+        214,
+        217,
+        36
+       ],
+       "id": "col:메시지/확인일시"
+      }
+     ],
+     "id": "grid:메시지"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      664,
+      40,
+      25
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {업무승인관리}업무승인 > 결재진행관리 > 메시지함",
+ "viewport": [
+  1920,
+  945
+ ]
+}

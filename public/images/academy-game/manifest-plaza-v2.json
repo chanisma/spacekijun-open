@@ -1,0 +1,12 @@
+{
+  "asset": "plaza.png",
+  "status": "ready",
+  "date": "2026-09-13",
+  "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-e5a991bc-98b0-4f6f-ab1e-25f34d4f9071.png",
+  "prompt": "Create a new landscape 1536x1024 background for a Korean romance fantasy academy game. Reference images show the established exquisite painterly ivory Gothic architecture, lavender sunset, warm gold filigree and rose gardens. REDESIGN the central plaza as a clearly navigable campus with FOUR DISTINCT destination buildings arranged across the UPPER 65% of frame: far left (center x17%, entrance y53%) tall royal library with large ornate double doors and book crest; inner left (center x39%, entrance y44%) cozy multi-storey STARLIGHT DORMITORY with many residential windows, balconies, mauve roofs, roses, crescent moon crest, visually distinctive as a residence; inner right (center x65%, entrance y43%) star research observatory with prominent astronomical dome and telescope silhouette; far right (center x86%, entrance y54%) smaller charming royal pigeon post office with a dovecote, white pigeons, envelope crest. All four entrances must be visible and separated by garden paths. A small low fountain in the middle distance near x52% y60%, not blocking doors. Lower 35% must be unobstructed wide polished stone courtyard with soft star mosaic and ample walkable floor for game character sprites and interaction buttons. Elevated slightly wide angle eye-level establishing shot, consistent realistic perspective, rich romantic fantasy painted game environment, cinematic ambient light, detailed charming architecture. No people, no character silhouettes, no text, no lettering, no labels, no UI, no watermark. Same visual world as references but a completely new composition explicitly accommodating the dormitory.",
+  "references": [
+    "plaza.png (previous composition)",
+    "dorm.png"
+  ],
+  "description": "Four distinct facilities surrounding the central courtyard: library, dormitory, observatory and pigeon post office."
+}

@@ -1,0 +1,11 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›수급자관리›교육급여 수급자 진학관리",
+ "name": "교육급여 수급자 진학관리",
+ "status": "not_found",
+ "capturedAt": "2026-10-05T06:19:39+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [],
+ "error": "메뉴 검색 결과 0건 중 경로가 맞는 것이 없습니다"
+}

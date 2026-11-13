@@ -1,0 +1,455 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›사용자›원격업무관리›원격업무관리",
+ "name": "원격업무관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:50:58+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      180,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조직구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:조직구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      82,
+      133,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      643,
+      82,
+      133,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      915,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자아이디",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사용자아이디"
+    },
+    {
+     "aria": null,
+     "box": [
+      1255,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사용자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1516,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1403,
+      266,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      266,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      30,
+      306,
+      1565,
+      430
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        81,
+        307,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "사용자명",
+       "depth": 0,
+       "box": [
+        131,
+        307,
+        340,
+        36
+       ],
+       "id": "col:그리드/사용자명"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        471,
+        307,
+        187,
+        36
+       ],
+       "id": "col:그리드/사용자ID"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        659,
+        307,
+        187,
+        36
+       ],
+       "id": "col:그리드/직위"
+      },
+      {
+       "label": "소속기관",
+       "depth": 0,
+       "box": [
+        846,
+        307,
+        187,
+        36
+       ],
+       "id": "col:그리드/소속기관"
+      },
+      {
+       "label": "사용시작일",
+       "depth": 0,
+       "box": [
+        1033,
+        307,
+        187,
+        36
+       ],
+       "id": "col:그리드/사용시작일"
+      },
+      {
+       "label": "사용종료일",
+       "depth": 0,
+       "box": [
+        1220,
+        307,
+        187,
+        36
+       ],
+       "id": "col:그리드/사용종료일"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1407,
+        307,
+        187,
+        36
+       ],
+       "id": "col:그리드/결재상태"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      216,
+      748,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1464,
+      791,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신규",
+     "variant": "primary",
+     "id": "button:신규"
+    },
+    {
+     "aria": null,
+     "box": [
+      1512,
+      791,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      791,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      837,
+      98,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사용자",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:사용자"
+    },
+    {
+     "aria": null,
+     "box": [
+      254,
+      837,
+      196,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사용자",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:사용자#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      456,
+      837,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      837,
+      125,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사용기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:사용기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      815,
+      837,
+      125,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사용기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사용기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      837,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "접속그룹",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:접속그룹"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      877,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "VPN패스워드",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:VPN패스워드"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      877,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "VPN 패스워드 확인",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:VPN 패스워드 확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      917,
+      1445,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요청사유",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요청사유"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}사용자 > 원격업무관리 > 원격업무관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

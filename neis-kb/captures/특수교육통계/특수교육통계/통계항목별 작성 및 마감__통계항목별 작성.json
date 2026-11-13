@@ -1,0 +1,155 @@
+{
+ "schema": "neis-capture/1",
+ "key": "특수교육통계›특수교육통계›통계항목별 작성 및 마감›통계항목별 작성",
+ "name": "통계항목별 작성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:46:21+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      116,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력지침조회",
+     "variant": "link",
+     "id": "button:입력지침조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      149,
+      133,
+      233,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 통계조사 기준일 : 2026년 04월 01일",
+     "id": "note:※ 통계조사 기준일 : 2026년 04월 01일"
+    },
+    {
+     "aria": null,
+     "box": [
+      1395,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "관련자료조회",
+     "variant": "link",
+     "id": "button:관련자료조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1491,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      133,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      357,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 1,
+     "columns": [
+      {
+       "label": "통계항목",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        339,
+        36
+       ],
+       "id": "col:그리드/통계항목"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1502,
+      743,
+      113,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "원자료 취합항목",
+     "checked": true,
+     "id": "check:원자료 취합항목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1542,
+      783,
+      73,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "입력항목",
+     "checked": true,
+     "id": "check:입력항목"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 특수교육통계 > 통계항목별 작성 및 마감 > 통계항목별 작성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

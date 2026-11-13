@@ -1,0 +1,259 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학교폭력실태조사#학교›결과통계›문항별결과통계",
+ "name": "문항별결과통계",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:14:28+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "설문연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:설문연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "설문연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:설문연도#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      525,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "문항분류",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:문항분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "문항분류",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:문항분류#2"
+    },
+    {
+     "aria": "조회구분",
+     "box": [
+      975,
+      82,
+      202,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "radio",
+     "label": "조회구분",
+     "options": [
+      "원자료조회",
+      "응답오류처리"
+     ],
+     "id": "radio:조회구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      133,
+      115,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": "문항별결과통계 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "문항별결과통계 목록",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "문항분류",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        128,
+        62
+       ],
+       "id": "col:문항별결과통계 목록/문항분류"
+      },
+      {
+       "label": "문항영역",
+       "depth": 0,
+       "box": [
+        154,
+        174,
+        160,
+        62
+       ],
+       "id": "col:문항별결과통계 목록/문항영역"
+      },
+      {
+       "label": "선택유형",
+       "depth": 0,
+       "box": [
+        315,
+        174,
+        128,
+        62
+       ],
+       "id": "col:문항별결과통계 목록/선택유형"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        443,
+        174,
+        529,
+        62
+       ],
+       "span": 2,
+       "id": "col:문항별결과통계 목록/구분"
+      },
+      {
+       "label": "전체(해당 학교)",
+       "depth": 0,
+       "box": [
+        972,
+        174,
+        160,
+        62
+       ],
+       "id": "col:문항별결과통계 목록/전체(해당 학교)"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        1133,
+        174,
+        481,
+        31
+       ],
+       "span": 3,
+       "id": "col:문항별결과통계 목록/학년"
+      },
+      {
+       "label": "고1",
+       "depth": 1,
+       "box": [
+        1133,
+        205,
+        160,
+        31
+       ],
+       "id": "col:문항별결과통계 목록/학년>고1"
+      },
+      {
+       "label": "고2",
+       "depth": 1,
+       "box": [
+        1293,
+        205,
+        160,
+        31
+       ],
+       "id": "col:문항별결과통계 목록/학년>고2"
+      },
+      {
+       "label": "고3",
+       "depth": 1,
+       "box": [
+        1454,
+        205,
+        160,
+        31
+       ],
+       "id": "col:문항별결과통계 목록/학년>고3"
+      }
+     ],
+     "id": "grid:문항별결과통계 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교폭력실태조사 > 결과통계 > 문항별결과통계",
+ "viewport": [
+  1920,
+  945
+ ]
+}

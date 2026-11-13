@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-13",
+  "description": "NPC-assisted actions and interactive research desktop; solo telescope draft was not used.",
+  "assets": [
+    {
+      "file": "ria-telescope-assisted.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-14a6b8fa-3537-43d1-9fc8-05fe6112a2fa.png",
+      "generator": "built-in imagegen",
+      "key": "ria-telescope-assisted",
+      "refs": [
+        "D:/spacekijun/public/images/academy-game/ria-player.png",
+        "D:/spacekijun/public/images/academy-game/professor.png",
+        "D:/spacekijun/public/images/academy-game/observatory.png"
+      ],
+      "prompt": "Use case: illustration-story. ONE finished landscape 1536x1024 Korean romance-fantasy visual-novel game CG. References: first image Ria identity/clothes, second Cassian identity/clothes, third setting/style. The petite FEMALE protagonist Ria actively looks through the eyepiece of a brass telescope, one hand on its focus wheel. The taller MALE professor Cassian stands BESIDE her, warmly helping steady/adjust the telescope with his hand and explaining the stars. She performs the action; he assists. Ria has long wavy brown hair, violet eyes, purple ribbon, white puff sleeves and purple gold-embroidered astronomer dress. Cassian has black hair, white shirt, dark plum gold-trimmed long coat. Ria is visibly shorter and smaller framed, about 80% his standing height, not a child, natural human anatomy. Show both expressive faces, both characters' upper bodies and hands and the real eyepiece clearly. Telescope on left pointing upward, Ria near center at eyepiece, Cassian at her right side. Keep both characters and telescope eyepiece in central 65% of frame for mobile contain display. Mid shot, sumptuous brass observatory, starlit dome, warm golden candles, purple twilight. Painterly detailed rofan game CG matching references. Friendly scholarly assistance, no embrace. Full opaque environment, no additional people, no text, no UI, no watermark. New action illustration using references only for consistent identities and style."
+    },
+    {
+      "file": "ria-reading-assisted.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-b10ba326-10e2-49fe-a48f-d4f74bc5244b.png",
+      "generator": "built-in imagegen",
+      "key": "ria-reading-assisted",
+      "refs": [
+        "D:/spacekijun/public/images/academy-game/ria-player.png",
+        "D:/spacekijun/public/images/academy-game/librarian-male.png",
+        "D:/spacekijun/public/images/academy-game/library.png"
+      ],
+      "prompt": "Use case: illustration-story. ONE finished landscape 1536x1024 Korean romance-fantasy visual-novel game CG. References: first Ria identity/clothes; second Elian male librarian identity/clothes; third library setting. Ria actively OPENING a large antique leather book at a reading table, one hand lifting the cover, the other turning the first parchment page. Elian stands BESIDE her slightly leaning to help support the heavy book and pointing gently at the opening page. Ria is the active heroine; NPC assists. Ria petite young woman, visibly smaller than tall male Elian, long wavy brown hair, violet eyes, purple ribbon, white puff sleeves, purple dress with gold star embroidery. Elian tall slender MAN, teal hair, thin glasses, emerald gold-trimmed cape and vest, white sleeves. Both warm curious expressions, looking at book. Medium waist-up composition, both faces, hands and opening book readable in central 65% frame. Towering royal library shelves and violet arched windows, warm golden page light, subtle magical dust, intricate painterly rofan CG, match reference identities. Natural anatomy and practical friendly assistance. Full opaque environment, no extra people, no legible writing, no UI, no watermark."
+    },
+    {
+      "file": "research-desk.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-887b2534-36ae-4b38-88c7-badc245aa096.png",
+      "generator": "built-in imagegen",
+      "key": "research-desk",
+      "refs": [
+        "D:/spacekijun/public/images/academy-game/observatory.png"
+      ],
+      "prompt": "Use case: stylized-concept. ONE landscape 1536x1024 finished interactive game background, a close up overhead / gently oblique view of Ria's research desktop in the SAME royal astronomy facility as reference. No people. The dark polished ornate wooden desktop fills the image. A large indigo parchment constellation chart lies across the middle. On top of this map, TWO visually separated clear interactable objects: LEFT at center x=34%,y=56%, a cream parchment sheet for a new discovery, elegant curled corners, a quill and brass compass beside it; RIGHT at center x=72%,y=57%, a CLOSED thick plum-purple leather research notebook with gold star emblem and violet ribbon bookmark. Objects large and prominent with breathing space, parchment occupies x18-48% y29-83%, notebook x60-84% y32-82%. An astrolabe and candle at back corners, golden ruler, small ink bottle, warm light and violet starlight. Intricate painterly Korean romance-fantasy visual-novel background, luxurious realistic materials. This must feel like looking DOWN at real objects on a desk, not a UI mockup. No buttons, no text, no letters, no watermark. Keep object positions matching specification for clickable areas."
+    }
+  ]
+}

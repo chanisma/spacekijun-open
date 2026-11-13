@@ -1,0 +1,88 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›통계관리›통계현황",
+ "name": "통계현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:59:44+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:통계년월"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      680
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 통계관리 > 통계현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

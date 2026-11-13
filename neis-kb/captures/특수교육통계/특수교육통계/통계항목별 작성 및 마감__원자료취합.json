@@ -1,0 +1,187 @@
+{
+ "schema": "neis-capture/1",
+ "key": "특수교육통계›특수교육통계›통계항목별 작성 및 마감›원자료취합",
+ "name": "원자료취합",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:46:09+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      115,
+      82,
+      142,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:통계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      322,
+      82,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      542,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "취합상태",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:취합상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1421,
+      133,
+      79,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "원자료 취합",
+     "variant": "primary",
+     "id": "button:원자료 취합"
+    },
+    {
+     "aria": null,
+     "box": [
+      1508,
+      133,
+      107,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "원자료 취합 취소",
+     "variant": "secondary",
+     "id": "button:원자료 취합 취소"
+    },
+    {
+     "aria": "원자료취합 현황",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "원자료취합 현황",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "통계항목",
+       "depth": 0,
+       "box": [
+        87,
+        174,
+        509,
+        36
+       ],
+       "id": "col:원자료취합 현황/통계항목"
+      },
+      {
+       "label": "통계항목진행상태",
+       "depth": 0,
+       "box": [
+        596,
+        174,
+        204,
+        36
+       ],
+       "id": "col:원자료취합 현황/통계항목진행상태"
+      },
+      {
+       "label": "취합상태",
+       "depth": 0,
+       "box": [
+        800,
+        174,
+        204,
+        36
+       ],
+       "id": "col:원자료취합 현황/취합상태"
+      },
+      {
+       "label": "취합일시",
+       "depth": 0,
+       "box": [
+        1003,
+        174,
+        204,
+        36
+       ],
+       "id": "col:원자료취합 현황/취합일시"
+      },
+      {
+       "label": "나이스시스템출처",
+       "depth": 0,
+       "box": [
+        1207,
+        174,
+        407,
+        36
+       ],
+       "id": "col:원자료취합 현황/나이스시스템출처"
+      }
+     ],
+     "id": "grid:원자료취합 현황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 특수교육통계 > 통계항목별 작성 및 마감 > 원자료취합",
+ "viewport": [
+  1920,
+  945
+ ]
+}

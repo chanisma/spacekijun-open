@@ -1,0 +1,500 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›대외기관자료제공관리›대외기관 자료제공 사전승인 관리",
+ "name": "대외기관 자료제공 사전승인 관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:20:40+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:대외기관",
+   "tab": "대외기관",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대외기관",
+      "독서로"
+     ],
+     "active": "대외기관",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대외기관",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:대외기관"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "자료종류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:자료종류"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가"
+    },
+    {
+     "aria": "대외기관자료제공사전승인 목록",
+     "box": [
+      25,
+      213,
+      1590,
+      390
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "대외기관자료제공사전승인 목록",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        214,
+        50,
+        36
+       ],
+       "id": "col:대외기관자료제공사전승인 목록/순번"
+      },
+      {
+       "label": "수신기관코드",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        205,
+        36
+       ],
+       "id": "col:대외기관자료제공사전승인 목록/수신기관코드"
+      },
+      {
+       "label": "수신기관명",
+       "depth": 0,
+       "box": [
+        281,
+        214,
+        205,
+        36
+       ],
+       "id": "col:대외기관자료제공사전승인 목록/수신기관명"
+      },
+      {
+       "label": "자료종류",
+       "depth": 0,
+       "box": [
+        486,
+        214,
+        410,
+        36
+       ],
+       "id": "col:대외기관자료제공사전승인 목록/자료종류"
+      },
+      {
+       "label": "승인일자",
+       "depth": 0,
+       "box": [
+        896,
+        214,
+        205,
+        36
+       ],
+       "id": "col:대외기관자료제공사전승인 목록/승인일자"
+      },
+      {
+       "label": "만료일자",
+       "depth": 0,
+       "box": [
+        1101,
+        214,
+        205,
+        36
+       ],
+       "id": "col:대외기관자료제공사전승인 목록/만료일자"
+      },
+      {
+       "label": "승인자",
+       "depth": 0,
+       "box": [
+        1306,
+        214,
+        205,
+        36
+       ],
+       "id": "col:대외기관자료제공사전승인 목록/승인자"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        1511,
+        214,
+        103,
+        36
+       ],
+       "id": "col:대외기관자료제공사전승인 목록/상태"
+      }
+     ],
+     "id": "grid:대외기관자료제공사전승인 목록"
+    },
+    {
+     "aria": "승인",
+     "box": [
+      1479,
+      613,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인",
+     "variant": "primary",
+     "id": "button:승인"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1527,
+      613,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      613,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      659,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수신기관명",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:수신기관명"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      659,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "자료종류명",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:자료종류명"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      699,
+      665,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당자",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:담당자"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      739,
+      1460,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "상태",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:상태"
+    }
+   ]
+  },
+  {
+   "id": "tab:독서로",
+   "tab": "독서로",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대외기관",
+      "독서로"
+     ],
+     "active": "독서로",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "독서로자료제공승인요청 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      550
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "독서로자료제공승인요청 목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/순번"
+      },
+      {
+       "label": "요청학년도",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        163,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/요청학년도"
+      },
+      {
+       "label": "자료종류",
+       "depth": 0,
+       "box": [
+        239,
+        174,
+        326,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/자료종류"
+      },
+      {
+       "label": "요청일시",
+       "depth": 0,
+       "box": [
+        566,
+        174,
+        163,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/요청일시"
+      },
+      {
+       "label": "요청자 이름",
+       "depth": 0,
+       "box": [
+        729,
+        174,
+        163,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/요청자 이름"
+      },
+      {
+       "label": "요청자 ID",
+       "depth": 0,
+       "box": [
+        892,
+        174,
+        163,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/요청자 ID"
+      },
+      {
+       "label": "확인일시",
+       "depth": 0,
+       "box": [
+        1055,
+        174,
+        163,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/확인일시"
+      },
+      {
+       "label": "확인자 이름",
+       "depth": 0,
+       "box": [
+        1218,
+        174,
+        196,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/확인자 이름"
+      },
+      {
+       "label": "확인상태",
+       "depth": 0,
+       "box": [
+        1414,
+        174,
+        100,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/확인상태"
+      },
+      {
+       "label": "승인",
+       "depth": 0,
+       "box": [
+        1514,
+        174,
+        100,
+        36
+       ],
+       "id": "col:독서로자료제공승인요청 목록/승인"
+      }
+     ],
+     "id": "grid:독서로자료제공승인요청 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 대외기관자료제공관리 > 대외기관 자료제공 사전승인 관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

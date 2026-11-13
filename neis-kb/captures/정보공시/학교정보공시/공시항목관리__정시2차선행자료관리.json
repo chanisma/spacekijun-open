@@ -1,0 +1,431 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시항목관리›정시2차선행자료관리",
+ "name": "정시2차선행자료관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:51:14+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": true
+   }
+  },
+  {
+   "id": "main+조회",
+   "after": "query",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      143,
+      76,
+      25
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "지침서보기",
+     "variant": "plain",
+     "id": "button:지침서보기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1395,
+      143,
+      221,
+      25
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 고객상담센터 : 1544-0079 (내선 2-1)",
+     "id": "note:※ 고객상담센터 : 1544-0079 (내선 2-1)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      178,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 2025학년도 전체 학생수 자료기준일은 2025년 4월 1일, 2026학년도 전체 학생수 기준일은 2026년 4월 1일.",
+     "id": "note:※ 2025학년도 전체 학생수 자료기준일은 2025년 4월 1일, 2026학년도 전체 학생수 기준일은 2026년 4월 1일."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      197,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교원수는 2026년 4월 1일 현재, 학교에 소속된 모든 교원(재직자, 휴직자, 파견자, 기간제교사 및 강사 포함)",
+     "id": "note:※ 교원수는 2026년 4월 1일 현재, 학교에 소속된 모든 교원(재직자, 휴직자, 파견자, 기간제교사 및 강사 포함)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      215,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 수업교원수는 2026년 4월 1일 현재, 소속된 학교에서 교과목 정규수업을 하는 교사",
+     "id": "note:※ 수업교원수는 2026년 4월 1일 현재, 소속된 학교에서 교과목 정규수업을 하는 교사"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      234,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 2013년도 이후 예결산 구분은 복식부기로 정함.",
+     "id": "note:※ 2013년도 이후 예결산 구분은 복식부기로 정함."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      252,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교육통계 전체연계 항목으로 교육통계의 [자체통계 마감]에서 마감 후 연계 가능",
+     "id": "note:※ 교육통계 전체연계 항목으로 교육통계의 [자체통계 마감]에서 마감 후 연계 가능"
+    },
+    {
+     "aria": null,
+     "box": [
+      1030,
+      334,
+      375,
+      25
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학교전체마감",
+     "id": "note:※ 학교전체마감"
+    },
+    {
+     "aria": null,
+     "box": [
+      1413,
+      334,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교육통계비교조회",
+     "variant": "link",
+     "id": "button:교육통계비교조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1541,
+      334,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인쇄",
+     "variant": "link",
+     "id": "button:인쇄"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      344,
+      66,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "(단위:명)",
+     "id": "heading:(단위:명)"
+    },
+    {
+     "aria": null,
+     "box": [
+      31,
+      442,
+      308,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "2025학년도 전체 학생수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:2025학년도 전체 학생수"
+    },
+    {
+     "aria": null,
+     "box": [
+      349,
+      442,
+      308,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "2026학년도 전체 학생수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:2026학년도 전체 학생수"
+    },
+    {
+     "aria": null,
+     "box": [
+      666,
+      442,
+      308,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "2026학년도 총교원수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:2026학년도 총교원수"
+    },
+    {
+     "aria": null,
+     "box": [
+      984,
+      442,
+      308,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "2026학년도 수업교원수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:2026학년도 수업교원수"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      508,
+      791,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "입력근거자료 조회",
+     "id": "heading:입력근거자료 조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      533,
+      1590,
+      182
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        534,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "입력근거명",
+       "depth": 0,
+       "box": [
+        76,
+        534,
+        381,
+        36
+       ],
+       "id": "col:그리드/입력근거명"
+      },
+      {
+       "label": "자료경로 및 출처",
+       "depth": 0,
+       "box": [
+        457,
+        534,
+        381,
+        36
+       ],
+       "id": "col:그리드/자료경로 및 출처"
+      },
+      {
+       "label": "입력근거 첨부파일",
+       "depth": 0,
+       "box": [
+        838,
+        534,
+        396,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/입력근거 첨부파일"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1233,
+        534,
+        381,
+        36
+       ],
+       "id": "col:그리드/비고"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시항목관리 > 기준정보관리 > 정시2차선행자료관리",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

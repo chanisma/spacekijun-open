@@ -1,0 +1,952 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›진급대상자 반편성관리›반편성 배정",
+ "name": "반편성 배정",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:02:01+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:반편성기준그룹등록",
+   "tab": "반편성기준그룹등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "반편성기준그룹등록 선택됨",
+     "box": [
+      25,
+      86,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반편성기준그룹등록",
+      "소속반등록",
+      "지원학생등록",
+      "반편성배정자조정"
+     ],
+     "active": "반편성기준그룹등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      220,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진급학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:진급학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1496,
+      220,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      60,
+      281,
+      1520,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 신입생(1학년)은 반편성 기준그룹 등록 처리를 할 수 없습니다.",
+     "id": "note:※ 신입생(1학년)은 반편성 기준그룹 등록 처리를 할 수 없습니다."
+    },
+    {
+     "aria": "이전년도기준그룹복사",
+     "box": [
+      1301,
+      341,
+      136,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이전년도기준그룹복사",
+     "variant": "primary",
+     "id": "button:이전년도기준그룹복사"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1444,
+      341,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1492,
+      341,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1540,
+      341,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "반편성기준그룹 목록",
+     "box": [
+      60,
+      381,
+      1520,
+      397
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반편성기준그룹 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        139,
+        382,
+        44,
+        36
+       ],
+       "id": "col:반편성기준그룹 목록/순번"
+      },
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        183,
+        382,
+        60,
+        36
+       ],
+       "id": "col:반편성기준그룹 목록/학년도"
+      },
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        243,
+        382,
+        223,
+        36
+       ],
+       "id": "col:반편성기준그룹 목록/과정"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        466,
+        382,
+        158,
+        36
+       ],
+       "id": "col:반편성기준그룹 목록/학년"
+      },
+      {
+       "label": "반편성기준그룹코드",
+       "depth": 0,
+       "box": [
+        624,
+        382,
+        301,
+        36
+       ],
+       "id": "col:반편성기준그룹 목록/반편성기준그룹코드"
+      },
+      {
+       "label": "반편성기준그룹명",
+       "depth": 0,
+       "box": [
+        926,
+        382,
+        430,
+        36
+       ],
+       "id": "col:반편성기준그룹 목록/반편성기준그룹명"
+      },
+      {
+       "label": "글자수",
+       "depth": 0,
+       "box": [
+        1356,
+        382,
+        223,
+        36
+       ],
+       "id": "col:반편성기준그룹 목록/글자수"
+      }
+     ],
+     "id": "grid:반편성기준그룹 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:소속반등록",
+   "tab": "소속반등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "반편성기준그룹등록",
+     "box": [
+      25,
+      86,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반편성기준그룹등록",
+      "소속반등록",
+      "지원학생등록",
+      "반편성배정자조정"
+     ],
+     "active": "소속반등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      220,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진급학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:진급학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      450,
+      220,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1496,
+      220,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1492,
+      281,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1540,
+      281,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": "소속반 목록",
+     "box": [
+      60,
+      321,
+      1520,
+      457
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "소속반 목록",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        61,
+        322,
+        189,
+        36
+       ],
+       "id": "col:소속반 목록/순번"
+      },
+      {
+       "label": "진급학년",
+       "depth": 0,
+       "box": [
+        250,
+        322,
+        142,
+        36
+       ],
+       "id": "col:소속반 목록/진급학년"
+      },
+      {
+       "label": "계열",
+       "depth": 0,
+       "box": [
+        393,
+        322,
+        237,
+        36
+       ],
+       "id": "col:소속반 목록/계열"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        629,
+        322,
+        118,
+        36
+       ],
+       "id": "col:소속반 목록/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        748,
+        322,
+        237,
+        36
+       ],
+       "id": "col:소속반 목록/반"
+      },
+      {
+       "label": "반편성기준그룹",
+       "depth": 0,
+       "box": [
+        985,
+        322,
+        594,
+        36
+       ],
+       "id": "col:소속반 목록/반편성기준그룹"
+      }
+     ],
+     "id": "grid:소속반 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:지원학생등록",
+   "tab": "지원학생등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "반편성기준그룹등록",
+     "box": [
+      25,
+      86,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반편성기준그룹등록",
+      "소속반등록",
+      "지원학생등록",
+      "반편성배정자조정"
+     ],
+     "active": "지원학생등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      220,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      460,
+      220,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      710,
+      220,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1496,
+      220,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      527,
+      294,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1492,
+      291,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1540,
+      291,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "지원학생 목록",
+     "box": [
+      60,
+      336,
+      1520,
+      442
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "지원학생 목록",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        134,
+        337,
+        156,
+        36
+       ],
+       "id": "col:지원학생 목록/순번"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        291,
+        337,
+        179,
+        36
+       ],
+       "id": "col:지원학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        469,
+        337,
+        159,
+        36
+       ],
+       "id": "col:지원학생 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        629,
+        337,
+        319,
+        36
+       ],
+       "id": "col:지원학생 목록/성별"
+      },
+      {
+       "label": "계열/학과/기준그룹",
+       "depth": 0,
+       "box": [
+        948,
+        337,
+        631,
+        36
+       ],
+       "id": "col:지원학생 목록/계열/학과/기준그룹"
+      }
+     ],
+     "id": "grid:지원학생 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:반편성배정자조정",
+   "tab": "반편성배정자조정",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "반편성기준그룹등록",
+     "box": [
+      25,
+      86,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반편성기준그룹등록",
+      "소속반등록",
+      "지원학생등록",
+      "반편성배정자조정"
+     ],
+     "active": "반편성배정자조정",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1496,
+      220,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      215,
+      225,
+      90,
+      25
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      455,
+      225,
+      90,
+      25
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1540,
+      281,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "기준그룹",
+     "box": [
+      471,
+      321,
+      300,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "기준그룹",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기준그룹"
+    },
+    {
+     "aria": "기준그룹",
+     "box": [
+      1280,
+      321,
+      300,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "기준그룹",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기준그룹#2"
+    },
+    {
+     "aria": "반편성배정자(왼쪽)목록",
+     "box": [
+      60,
+      361,
+      711,
+      360
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반편성배정자(왼쪽)목록",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        111,
+        362,
+        100,
+        36
+       ],
+       "id": "col:반편성배정자(왼쪽)목록/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        211,
+        362,
+        100,
+        36
+       ],
+       "id": "col:반편성배정자(왼쪽)목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        311,
+        362,
+        100,
+        36
+       ],
+       "id": "col:반편성배정자(왼쪽)목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        411,
+        362,
+        86,
+        36
+       ],
+       "id": "col:반편성배정자(왼쪽)목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        497,
+        362,
+        173,
+        36
+       ],
+       "id": "col:반편성배정자(왼쪽)목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        670,
+        362,
+        100,
+        36
+       ],
+       "id": "col:반편성배정자(왼쪽)목록/성별"
+      }
+     ],
+     "id": "grid:반편성배정자(왼쪽)목록"
+    },
+    {
+     "aria": "반편성배정자(오른쪽)목록",
+     "box": [
+      869,
+      361,
+      711,
+      360
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반편성배정자(오른쪽)목록",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        920,
+        362,
+        100,
+        36
+       ],
+       "id": "col:반편성배정자(오른쪽)목록/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        1020,
+        362,
+        100,
+        36
+       ],
+       "id": "col:반편성배정자(오른쪽)목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        1120,
+        362,
+        100,
+        36
+       ],
+       "id": "col:반편성배정자(오른쪽)목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        1220,
+        362,
+        86,
+        36
+       ],
+       "id": "col:반편성배정자(오른쪽)목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1306,
+        362,
+        173,
+        36
+       ],
+       "id": "col:반편성배정자(오른쪽)목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        1479,
+        362,
+        100,
+        36
+       ],
+       "id": "col:반편성배정자(오른쪽)목록/성별"
+      }
+     ],
+     "id": "grid:반편성배정자(오른쪽)목록"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      795,
+      426,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "반환",
+     "box": [
+      795,
+      496,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반환",
+     "variant": "plain",
+     "id": "button:반환"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 진급대상자 반편성관리 > 반편성 배정",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학생정서행동특성검사#학교›자료관리›검사지조회",
+ "name": "검사지조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:59:25+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:AMPQ-Ⅲ-Ⅰ(중등)",
+   "tab": "AMPQ-Ⅲ-Ⅰ(중등)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검사연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:검사연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "언어",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:언어"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "AMPQ-Ⅲ-Ⅰ(중등)",
+      "AMPQ-Ⅲ-T(교사)"
+     ],
+     "active": "AMPQ-Ⅲ-Ⅰ(중등)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      188,
+      1590,
+      625
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:AMPQ-Ⅲ-T(교사)",
+   "tab": "AMPQ-Ⅲ-T(교사)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검사연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:검사연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "AMPQ-Ⅲ-Ⅰ(중등)",
+      "AMPQ-Ⅲ-T(교사)"
+     ],
+     "active": "AMPQ-Ⅲ-T(교사)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      188,
+      1590,
+      625
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생정서행동특성검사 > 자료관리 > 검사지조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,303 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›정기시험›정기시험성적관리",
+ "name": "정기시험성적관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:29:19+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "잠금/해제",
+     "box": [
+      127,
+      406,
+      69,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "잠금/해제",
+     "variant": "primary",
+     "id": "button:잠금/해제"
+    },
+    {
+     "aria": "정기시험 성적관리 그리드",
+     "box": [
+      25,
+      446,
+      1590,
+      327
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "정기시험 성적관리 그리드",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        76,
+        447,
+        62,
+        62
+       ],
+       "id": "col:정기시험 성적관리 그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        138,
+        447,
+        62,
+        62
+       ],
+       "id": "col:정기시험 성적관리 그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        200,
+        447,
+        372,
+        62
+       ],
+       "id": "col:정기시험 성적관리 그리드/성명"
+      },
+      {
+       "label": "점수(과목만점:미등록)",
+       "depth": 0,
+       "box": [
+        572,
+        447,
+        670,
+        31
+       ],
+       "span": 6,
+       "id": "col:정기시험 성적관리 그리드/점수(과목만점:미등록)"
+      },
+      {
+       "label": "결시명칭",
+       "depth": 0,
+       "box": [
+        1242,
+        447,
+        124,
+        62
+       ],
+       "id": "col:정기시험 성적관리 그리드/결시명칭"
+      },
+      {
+       "label": "고사별학적변동",
+       "depth": 0,
+       "box": [
+        1366,
+        447,
+        124,
+        62
+       ],
+       "id": "col:정기시험 성적관리 그리드/고사별학적변동"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1490,
+        447,
+        124,
+        62
+       ],
+       "id": "col:정기시험 성적관리 그리드/비고"
+      },
+      {
+       "label": "선택형(미등록)",
+       "depth": 1,
+       "box": [
+        572,
+        478,
+        124,
+        31
+       ],
+       "id": "col:정기시험 성적관리 그리드/점수(과목만점:미등록)>선택형(미등록)"
+      },
+      {
+       "label": "서답형(미등록)",
+       "depth": 1,
+       "box": [
+        696,
+        478,
+        124,
+        31
+       ],
+       "id": "col:정기시험 성적관리 그리드/점수(과목만점:미등록)>서답형(미등록)"
+      },
+      {
+       "label": "기타(미등록)",
+       "depth": 1,
+       "box": [
+        820,
+        478,
+        124,
+        31
+       ],
+       "id": "col:정기시험 성적관리 그리드/점수(과목만점:미등록)>기타(미등록)"
+      },
+      {
+       "label": "기타2(미등록)",
+       "depth": 1,
+       "box": [
+        944,
+        478,
+        124,
+        31
+       ],
+       "id": "col:정기시험 성적관리 그리드/점수(과목만점:미등록)>기타2(미등록)"
+      },
+      {
+       "label": "합계",
+       "depth": 1,
+       "box": [
+        1068,
+        478,
+        174,
+        31
+       ],
+       "span": 2,
+       "id": "col:정기시험 성적관리 그리드/점수(과목만점:미등록)>합계"
+      }
+     ],
+     "id": "grid:정기시험 성적관리 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 정기시험 > 정기시험성적관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

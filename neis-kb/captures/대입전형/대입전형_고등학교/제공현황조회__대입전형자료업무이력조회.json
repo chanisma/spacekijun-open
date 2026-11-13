@@ -1,0 +1,222 @@
+{
+ "schema": "neis-capture/1",
+ "key": "대입전형›대입전형#고등학교›제공현황조회›대입전형자료업무이력조회",
+ "name": "대입전형자료업무이력조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:45:33+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업무",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업무"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      143,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "대입전형자료업무이력",
+     "box": [
+      25,
+      153,
+      161,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대입전형자료업무이력",
+     "id": "heading:대입전형자료업무이력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      183,
+      1590,
+      398
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        184,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "업무",
+       "depth": 0,
+       "box": [
+        76,
+        184,
+        259,
+        36
+       ],
+       "id": "col:그리드/업무"
+      },
+      {
+       "label": "상세업무",
+       "depth": 0,
+       "box": [
+        335,
+        184,
+        518,
+        36
+       ],
+       "id": "col:그리드/상세업무"
+      },
+      {
+       "label": "처리자",
+       "depth": 0,
+       "box": [
+        854,
+        184,
+        207,
+        36
+       ],
+       "id": "col:그리드/처리자"
+      },
+      {
+       "label": "IP",
+       "depth": 0,
+       "box": [
+        1061,
+        184,
+        207,
+        36
+       ],
+       "id": "col:그리드/IP"
+      },
+      {
+       "label": "처리일시",
+       "depth": 0,
+       "box": [
+        1268,
+        184,
+        207,
+        36
+       ],
+       "id": "col:그리드/처리일시"
+      },
+      {
+       "label": "생성구분",
+       "depth": 0,
+       "box": [
+        1476,
+        184,
+        138,
+        36
+       ],
+       "id": "col:그리드/생성구분"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      219,
+      594,
+      40,
+      25
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 대입전형 > 제공현황조회 > 대입전형자료업무이력조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

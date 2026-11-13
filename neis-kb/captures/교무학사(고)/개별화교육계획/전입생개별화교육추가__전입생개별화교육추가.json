@@ -1,0 +1,1691 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›개별화교육계획›전입생개별화교육추가›전입생개별화교육추가",
+ "name": "전입생개별화교육추가",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:43:00+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:학기별개별화교육계획",
+   "tab": "학기별개별화교육계획",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "입력구분",
+     "box": [
+      1115,
+      82,
+      305,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "입력구분",
+     "options": [
+      "교과영역",
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:입력구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      434,
+      173,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학기별개별화교육계획",
+      "학기별개별화교육평가",
+      "월별개별화교육계획",
+      "월별개별화교육평가"
+     ],
+     "active": "학기별개별화교육계획",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      203,
+      394,
+      530
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        104,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/강의실"
+      },
+      {
+       "label": "반/번호",
+       "depth": 0,
+       "box": [
+        183,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        261,
+        204,
+        157,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": "이전학교자료",
+     "box": [
+      1431,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이전학교자료",
+     "variant": "link",
+     "id": "button:이전학교자료"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      274,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      797,
+      274,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1055,
+      274,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "결재상태",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:결재상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1314,
+      274,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당교사",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:담당교사"
+    },
+    {
+     "aria": "교사찾기",
+     "box": [
+      1536,
+      274,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교사찾기",
+     "variant": "link",
+     "id": "button:교사찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      314,
+      1071,
+      200
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "현행수준",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:현행수준"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      524,
+      1071,
+      200
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기목표",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학기목표"
+    }
+   ]
+  },
+  {
+   "id": "tab:학기별개별화교육평가",
+   "tab": "학기별개별화교육평가",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "입력구분",
+     "box": [
+      1115,
+      82,
+      305,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "입력구분",
+     "options": [
+      "교과영역",
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:입력구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      434,
+      173,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학기별개별화교육계획",
+      "학기별개별화교육평가",
+      "월별개별화교육계획",
+      "월별개별화교육평가"
+     ],
+     "active": "학기별개별화교육평가",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      203,
+      394,
+      530
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        104,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/강의실"
+      },
+      {
+       "label": "반/번호",
+       "depth": 0,
+       "box": [
+        183,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        261,
+        204,
+        157,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      274,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      797,
+      274,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1055,
+      274,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "결재상태",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:결재상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1314,
+      274,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당교사",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:담당교사"
+    },
+    {
+     "aria": "교사찾기",
+     "box": [
+      1536,
+      274,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교사찾기",
+     "variant": "link",
+     "id": "button:교사찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      314,
+      1071,
+      130
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "현행수준",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:현행수준"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      454,
+      1071,
+      130
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기목표",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학기목표"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      594,
+      1071,
+      130
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "평가",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:평가"
+    }
+   ]
+  },
+  {
+   "id": "tab:월별개별화교육계획",
+   "tab": "월별개별화교육계획",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "입력구분",
+     "box": [
+      1115,
+      82,
+      305,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "입력구분",
+     "options": [
+      "교과영역",
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:입력구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      434,
+      173,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학기별개별화교육계획",
+      "학기별개별화교육평가",
+      "월별개별화교육계획",
+      "월별개별화교육평가"
+     ],
+     "active": "월별개별화교육계획",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      203,
+      394,
+      530
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        104,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/강의실"
+      },
+      {
+       "label": "반/번호",
+       "depth": 0,
+       "box": [
+        183,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        261,
+        204,
+        157,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": "이전학교자료",
+     "box": [
+      1372,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이전학교자료",
+     "variant": "primary",
+     "id": "button:이전학교자료"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      1467,
+      228,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "월별 개별화교육 계획 테이블",
+     "box": [
+      434,
+      268,
+      1181,
+      158
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "월별 개별화교육 계획 테이블",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순서",
+       "depth": 0,
+       "box": [
+        485,
+        269,
+        87,
+        36
+       ],
+       "id": "col:월별 개별화교육 계획 테이블/순서"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        572,
+        269,
+        87,
+        36
+       ],
+       "id": "col:월별 개별화교육 계획 테이블/월"
+      },
+      {
+       "label": "교육목표",
+       "depth": 0,
+       "box": [
+        658,
+        269,
+        208,
+        36
+       ],
+       "id": "col:월별 개별화교육 계획 테이블/교육목표"
+      },
+      {
+       "label": "교육내용",
+       "depth": 0,
+       "box": [
+        867,
+        269,
+        208,
+        36
+       ],
+       "id": "col:월별 개별화교육 계획 테이블/교육내용"
+      },
+      {
+       "label": "교육방법",
+       "depth": 0,
+       "box": [
+        1075,
+        269,
+        208,
+        36
+       ],
+       "id": "col:월별 개별화교육 계획 테이블/교육방법"
+      },
+      {
+       "label": "평가계획",
+       "depth": 0,
+       "box": [
+        1284,
+        269,
+        208,
+        36
+       ],
+       "id": "col:월별 개별화교육 계획 테이블/평가계획"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1492,
+        269,
+        122,
+        36
+       ],
+       "id": "col:월별 개별화교육 계획 테이블/결재상태"
+      }
+     ],
+     "id": "grid:월별 개별화교육 계획 테이블"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      452,
+      213,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "순서",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:순서"
+    },
+    {
+     "aria": null,
+     "box": [
+      862,
+      452,
+      213,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:월"
+    },
+    {
+     "aria": null,
+     "box": [
+      1184,
+      452,
+      346,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당교사",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:담당교사"
+    },
+    {
+     "aria": "교사찾기",
+     "box": [
+      1536,
+      452,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교사찾기",
+     "variant": "link",
+     "id": "button:교사찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      492,
+      536,
+      120
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "교육목표",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교육목표"
+    },
+    {
+     "aria": null,
+     "box": [
+      1184,
+      492,
+      426,
+      120
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "교육내용",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교육내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      622,
+      536,
+      90
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "교육방법",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교육방법"
+    },
+    {
+     "aria": null,
+     "box": [
+      1184,
+      622,
+      426,
+      90
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "평가계획",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:평가계획"
+    }
+   ]
+  },
+  {
+   "id": "tab:월별개별화교육평가",
+   "tab": "월별개별화교육평가",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "입력구분",
+     "box": [
+      1115,
+      82,
+      305,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "입력구분",
+     "options": [
+      "교과영역",
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:입력구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      434,
+      173,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학기별개별화교육계획",
+      "학기별개별화교육평가",
+      "월별개별화교육계획",
+      "월별개별화교육평가"
+     ],
+     "active": "월별개별화교육평가",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      203,
+      394,
+      530
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        104,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/강의실"
+      },
+      {
+       "label": "반/번호",
+       "depth": 0,
+       "box": [
+        183,
+        204,
+        78,
+        36
+       ],
+       "id": "col:그리드/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        261,
+        204,
+        157,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "월별 개별화교육 평가 테이블",
+     "box": [
+      434,
+      268,
+      1181,
+      158
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "월별 개별화교육 평가 테이블",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순서",
+       "depth": 0,
+       "box": [
+        485,
+        269,
+        75,
+        36
+       ],
+       "id": "col:월별 개별화교육 평가 테이블/순서"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        560,
+        269,
+        75,
+        36
+       ],
+       "id": "col:월별 개별화교육 평가 테이블/월"
+      },
+      {
+       "label": "교육목표",
+       "depth": 0,
+       "box": [
+        635,
+        269,
+        181,
+        36
+       ],
+       "id": "col:월별 개별화교육 평가 테이블/교육목표"
+      },
+      {
+       "label": "교육내용",
+       "depth": 0,
+       "box": [
+        816,
+        269,
+        181,
+        36
+       ],
+       "id": "col:월별 개별화교육 평가 테이블/교육내용"
+      },
+      {
+       "label": "교육방법",
+       "depth": 0,
+       "box": [
+        997,
+        269,
+        181,
+        36
+       ],
+       "id": "col:월별 개별화교육 평가 테이블/교육방법"
+      },
+      {
+       "label": "평가계획",
+       "depth": 0,
+       "box": [
+        1177,
+        269,
+        181,
+        36
+       ],
+       "id": "col:월별 개별화교육 평가 테이블/평가계획"
+      },
+      {
+       "label": "평가",
+       "depth": 0,
+       "box": [
+        1358,
+        269,
+        151,
+        36
+       ],
+       "id": "col:월별 개별화교육 평가 테이블/평가"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1508,
+        269,
+        105,
+        36
+       ],
+       "id": "col:월별 개별화교육 평가 테이블/결재상태"
+      }
+     ],
+     "id": "grid:월별 개별화교육 평가 테이블"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      452,
+      209,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "순서",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:순서"
+    },
+    {
+     "aria": null,
+     "box": [
+      858,
+      452,
+      209,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "월",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:월"
+    },
+    {
+     "aria": null,
+     "box": [
+      1177,
+      452,
+      338,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당교사",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:담당교사"
+    },
+    {
+     "aria": "교사찾기",
+     "box": [
+      1521,
+      452,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교사찾기",
+     "variant": "link",
+     "id": "button:교사찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      492,
+      1056,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "교육목표",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교육목표"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      562,
+      1056,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "교육내용",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교육내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      632,
+      1056,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "교육방법",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교육방법"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      702,
+      1056,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "평가계획",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:평가계획"
+    },
+    {
+     "aria": null,
+     "box": [
+      539,
+      772,
+      1056,
+      60
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "평가",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:평가"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 개별화교육계획 > 전입생개별화교육추가 > 전입생개별화교육추가",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식단관리›조리방법조회",
+ "name": "조리방법조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:56:59+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:급식일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      629,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      697,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      764,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      228,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "식재료 사용량(총량) 0인 품목 제외",
+     "checked": false,
+     "id": "check:식재료 사용량(총량) 0인 품목 제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      403,
+      122,
+      113,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "사용재료제외",
+     "checked": false,
+     "id": "check:사용재료제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      516,
+      122,
+      113,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "요리방법제외",
+     "checked": false,
+     "id": "check:요리방법제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      629,
+      122,
+      113,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "특이사항포함",
+     "checked": false,
+     "id": "check:특이사항포함"
+    },
+    {
+     "aria": null,
+     "box": [
+      742,
+      122,
+      97,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "1인량포함",
+     "checked": false,
+     "id": "check:1인량포함"
+    },
+    {
+     "aria": null,
+     "box": [
+      839,
+      122,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "알레르기표시여부",
+     "checked": false,
+     "id": "check:알레르기표시여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      976,
+      122,
+      101,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "요리명출력",
+     "checked": false,
+     "id": "check:요리명출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1077,
+      122,
+      101,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "식단명출력",
+     "checked": false,
+     "id": "check:식단명출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      122,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식단에 등록된 요리방법 및 특이사항이 표시됩니다.",
+     "id": "note:※ 식단에 등록된 요리방법 및 특이사항이 표시됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      227,
+      1590,
+      587
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식단관리 > 조리방법조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,1696 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›창의적체험활동›동아리활동관리",
+ "name": "동아리활동관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:21:30+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:부서만들기",
+   "tab": "부서만들기",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "부서만들기 선택됨",
+     "box": [
+      25,
+      71,
+      1575,
+      50
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "부서만들기",
+      "부서배정",
+      "이수시간기준등록",
+      "동아리활동 출결관리",
+      "동아리활동관리"
+     ],
+     "active": "부서만들기",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      142,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1516,
+      142,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      203,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 동아리담당교사의 동아리활동권한은 학교장 승인을 받은 후 사용할 수 있습니다. [기본메뉴-권한관리-교무자료권한승인관리] 에서 승인요청을 하시기 바랍니다.",
+     "id": "note:※ 동아리담당교사의 동아리활동권한은 학교장 승인을 받은 후 사용할 수 있습니다. [기본메뉴-권한관리-교무자료권한승인관리] 에서 승인요청을 하시기 바랍니다."
+    },
+    {
+     "aria": "전년도부서·반복사",
+     "box": [
+      1411,
+      285,
+      119,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전년도부서·반복사",
+     "variant": "link",
+     "id": "button:전년도부서·반복사"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      1538,
+      285,
+      62,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "동아리활동 부서목록",
+     "box": [
+      25,
+      325,
+      1575,
+      236
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "동아리활동 부서목록",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        326,
+        50,
+        36
+       ],
+       "id": "col:동아리활동 부서목록/순번"
+      },
+      {
+       "label": "동아리부서구분",
+       "depth": 0,
+       "box": [
+        76,
+        326,
+        381,
+        36
+       ],
+       "id": "col:동아리활동 부서목록/동아리부서구분"
+      },
+      {
+       "label": "부서명",
+       "depth": 0,
+       "box": [
+        457,
+        326,
+        508,
+        36
+       ],
+       "id": "col:동아리활동 부서목록/부서명"
+      },
+      {
+       "label": "부서반",
+       "depth": 0,
+       "box": [
+        964,
+        326,
+        254,
+        36
+       ],
+       "id": "col:동아리활동 부서목록/부서반"
+      },
+      {
+       "label": "담당교사",
+       "depth": 0,
+       "box": [
+        1218,
+        326,
+        381,
+        36
+       ],
+       "id": "col:동아리활동 부서목록/담당교사"
+      }
+     ],
+     "id": "grid:동아리활동 부서목록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1464,
+      583,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1512,
+      583,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "link",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1560,
+      583,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      593,
+      248,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "동아리활동 부서반 등록/수정/삭제",
+     "id": "heading:동아리활동 부서반 등록/수정/삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      160,
+      629,
+      648,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "동아리활동부서명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:동아리활동부서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      948,
+      629,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "부서반 명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:부서반 명"
+    },
+    {
+     "aria": null,
+     "box": [
+      160,
+      669,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "동아리부서구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:동아리부서구분"
+    },
+    {
+     "aria": "자료권한재등록",
+     "box": [
+      1309,
+      720,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료권한재등록",
+     "variant": "link",
+     "id": "button:자료권한재등록"
+    },
+    {
+     "aria": "담당교사추가",
+     "box": [
+      1416,
+      720,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "담당교사추가",
+     "variant": "link",
+     "id": "button:담당교사추가"
+    },
+    {
+     "aria": "담당교사삭제",
+     "box": [
+      1512,
+      720,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "담당교사삭제",
+     "variant": "link",
+     "id": "button:담당교사삭제"
+    },
+    {
+     "aria": "동아리활동 담당교사",
+     "box": [
+      150,
+      771,
+      1445,
+      152
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "동아리활동 담당교사",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "담당자ID",
+       "depth": 0,
+       "box": [
+        201,
+        772,
+        669,
+        36
+       ],
+       "id": "col:동아리활동 담당교사/담당자ID"
+      },
+      {
+       "label": "담당교사명",
+       "depth": 0,
+       "box": [
+        870,
+        772,
+        669,
+        36
+       ],
+       "id": "col:동아리활동 담당교사/담당교사명"
+      },
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        1539,
+        772,
+        55,
+        36
+       ],
+       "id": "col:동아리활동 담당교사/순번"
+      }
+     ],
+     "id": "grid:동아리활동 담당교사"
+    }
+   ]
+  },
+  {
+   "id": "tab:부서배정",
+   "tab": "부서배정",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "부서만들기",
+     "box": [
+      25,
+      71,
+      1575,
+      50
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "부서만들기",
+      "부서배정",
+      "이수시간기준등록",
+      "동아리활동 출결관리",
+      "동아리활동관리"
+     ],
+     "active": "부서배정",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      173,
+      142,
+      102,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      413,
+      142,
+      102,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1516,
+      145,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      194,
+      1575,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 부서배정수를 클릭하시면 학생별 부서목록이 조회되고 삭제할 수 있습니다. ※ 배정학생수를 클릭하시면 부서별 학생목록이 조회되고 삭제할 수 있습니다. ※ 동아리활동 누가기록 및 학생부 자료 기록은 [동아리담임] 경로에서 입력하실 수 있습니다.",
+     "id": "note:※ 부서배정수를 클릭하시면 학생별 부서목록이 조회되고 삭제할 수 있습니다. ※ 배정학생수를 클릭하시면 부서별 학생목록이 조회되고 삭제할 수 있습니다. ※ 동아리활동 누가기록 및 학생부 자료 기록은 [동아리담임] 경로에서 입력하실 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      430,
+      283,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      838,
+      283,
+      136,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄배정파일올리기",
+     "variant": "primary",
+     "id": "button:일괄배정파일올리기"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      982,
+      283,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1030,
+      283,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "1학년",
+     "box": [
+      25,
+      293,
+      42,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "1학년",
+     "id": "heading:1학년"
+    },
+    {
+     "aria": "동아리부서",
+     "box": [
+      555,
+      293,
+      81,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "동아리부서",
+     "id": "heading:동아리부서"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      323,
+      515,
+      502
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        76,
+        324,
+        83,
+        62
+       ],
+       "id": "col:학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        159,
+        324,
+        83,
+        62
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        242,
+        324,
+        166,
+        62
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "부서 배정수",
+       "depth": 0,
+       "box": [
+        407,
+        324,
+        116,
+        62
+       ],
+       "id": "col:학생목록/부서 배정수"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "동아리부서목록",
+     "box": [
+      555,
+      323,
+      515,
+      502
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "동아리부서목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "동아리 부서구분",
+       "depth": 0,
+       "box": [
+        606,
+        324,
+        144,
+        62
+       ],
+       "id": "col:동아리부서목록/동아리 부서구분"
+      },
+      {
+       "label": "부서명(부서담당자)",
+       "depth": 0,
+       "box": [
+        750,
+        324,
+        202,
+        62
+       ],
+       "id": "col:동아리부서목록/부서명(부서담당자)"
+      },
+      {
+       "label": "배정 학생수",
+       "depth": 0,
+       "box": [
+        952,
+        324,
+        101,
+        62
+       ],
+       "id": "col:동아리부서목록/배정 학생수"
+      }
+     ],
+     "id": "grid:동아리부서목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:이수시간기준등록",
+   "tab": "이수시간기준등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "부서만들기",
+     "box": [
+      25,
+      71,
+      1575,
+      50
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "부서만들기",
+      "부서배정",
+      "이수시간기준등록",
+      "동아리활동 출결관리",
+      "동아리활동관리"
+     ],
+     "active": "이수시간기준등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      142,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      142,
+      63,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "부서명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:부서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      618,
+      142,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      753,
+      142,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1524,
+      142,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      191,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전체시간표 일자가 있어야 체크박스가 활성화 됩니다. ※ 동아리활동 이수시간 기준등록 후 전체시간표 삭제시 '삭제' 표시됩니다.",
+     "id": "note:※ 전체시간표 일자가 있어야 체크박스가 활성화 됩니다. ※ 동아리활동 이수시간 기준등록 후 전체시간표 삭제시 '삭제' 표시됩니다."
+    },
+    {
+     "aria": "담당교사일괄변경",
+     "box": [
+      1440,
+      261,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "담당교사일괄변경",
+     "variant": "link",
+     "id": "button:담당교사일괄변경"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1560,
+      261,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "동아리활동 이수시간 기준목록",
+     "box": [
+      25,
+      271,
+      219,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "동아리활동 이수시간 기준목록",
+     "id": "heading:동아리활동 이수시간 기준목록"
+    },
+    {
+     "aria": "동아리활동 이수시간 기준목록",
+     "box": [
+      25,
+      301,
+      1575,
+      582
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "동아리활동 이수시간 기준목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        302,
+        50,
+        62
+       ],
+       "id": "col:동아리활동 이수시간 기준목록/순번"
+      },
+      {
+       "label": "시간표 일자",
+       "depth": 0,
+       "box": [
+        76,
+        302,
+        275,
+        62
+       ],
+       "id": "col:동아리활동 이수시간 기준목록/시간표 일자"
+      },
+      {
+       "label": "교시",
+       "depth": 0,
+       "box": [
+        351,
+        302,
+        275,
+        62
+       ],
+       "id": "col:동아리활동 이수시간 기준목록/교시"
+      },
+      {
+       "label": "1학년",
+       "depth": 0,
+       "box": [
+        625,
+        302,
+        325,
+        31
+       ],
+       "span": 2,
+       "id": "col:동아리활동 이수시간 기준목록/1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 0,
+       "box": [
+        950,
+        302,
+        325,
+        31
+       ],
+       "span": 2,
+       "id": "col:동아리활동 이수시간 기준목록/2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 0,
+       "box": [
+        1274,
+        302,
+        325,
+        31
+       ],
+       "span": 2,
+       "id": "col:동아리활동 이수시간 기준목록/3학년"
+      }
+     ],
+     "id": "grid:동아리활동 이수시간 기준목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:동아리활동 출결관리",
+   "tab": "동아리활동 출결관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "부서만들기",
+     "box": [
+      25,
+      71,
+      1575,
+      50
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "부서만들기",
+      "부서배정",
+      "이수시간기준등록",
+      "동아리활동 출결관리",
+      "동아리활동관리"
+     ],
+     "active": "이수시간기준등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      142,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      142,
+      63,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "부서명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:부서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      618,
+      142,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      753,
+      142,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1524,
+      142,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      191,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전체시간표 일자가 있어야 체크박스가 활성화 됩니다. ※ 동아리활동 이수시간 기준등록 후 전체시간표 삭제시 '삭제' 표시됩니다.",
+     "id": "note:※ 전체시간표 일자가 있어야 체크박스가 활성화 됩니다. ※ 동아리활동 이수시간 기준등록 후 전체시간표 삭제시 '삭제' 표시됩니다."
+    },
+    {
+     "aria": "담당교사일괄변경",
+     "box": [
+      1440,
+      261,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "담당교사일괄변경",
+     "variant": "link",
+     "id": "button:담당교사일괄변경"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1560,
+      261,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "동아리활동 이수시간 기준목록",
+     "box": [
+      25,
+      271,
+      219,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "동아리활동 이수시간 기준목록",
+     "id": "heading:동아리활동 이수시간 기준목록"
+    },
+    {
+     "aria": "동아리활동 이수시간 기준목록",
+     "box": [
+      25,
+      301,
+      1575,
+      582
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "동아리활동 이수시간 기준목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        302,
+        50,
+        62
+       ],
+       "id": "col:동아리활동 이수시간 기준목록/순번"
+      },
+      {
+       "label": "시간표 일자",
+       "depth": 0,
+       "box": [
+        76,
+        302,
+        275,
+        62
+       ],
+       "id": "col:동아리활동 이수시간 기준목록/시간표 일자"
+      },
+      {
+       "label": "교시",
+       "depth": 0,
+       "box": [
+        351,
+        302,
+        275,
+        62
+       ],
+       "id": "col:동아리활동 이수시간 기준목록/교시"
+      },
+      {
+       "label": "1학년",
+       "depth": 0,
+       "box": [
+        625,
+        302,
+        325,
+        31
+       ],
+       "span": 2,
+       "id": "col:동아리활동 이수시간 기준목록/1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 0,
+       "box": [
+        950,
+        302,
+        325,
+        31
+       ],
+       "span": 2,
+       "id": "col:동아리활동 이수시간 기준목록/2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 0,
+       "box": [
+        1274,
+        302,
+        325,
+        31
+       ],
+       "span": 2,
+       "id": "col:동아리활동 이수시간 기준목록/3학년"
+      }
+     ],
+     "id": "grid:동아리활동 이수시간 기준목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:동아리활동관리",
+   "tab": "동아리활동관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "부서만들기",
+     "box": [
+      25,
+      71,
+      299,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "부서만들기",
+     "variant": "link",
+     "id": "button:부서만들기"
+    },
+    {
+     "aria": "부서배정",
+     "box": [
+      344,
+      71,
+      299,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "부서배정",
+     "variant": "link",
+     "id": "button:부서배정"
+    },
+    {
+     "aria": "이수시간기준등록",
+     "box": [
+      663,
+      71,
+      299,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이수시간기준등록",
+     "variant": "link",
+     "id": "button:이수시간기준등록"
+    },
+    {
+     "aria": "동아리활동 출결관리",
+     "box": [
+      982,
+      71,
+      299,
+      50
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "동아리활동 출결관리",
+     "variant": "link",
+     "id": "button:동아리활동 출결관리"
+    },
+    {
+     "aria": "동아리활동관리 선택됨",
+     "box": [
+      1301,
+      71,
+      299,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "동아리활동관리",
+     "variant": "link",
+     "id": "button:동아리활동관리"
+    },
+    {
+     "aria": "탭폴더가 3개 존재합니다.",
+     "box": [
+      36,
+      142,
+      1132,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생부자료기록",
+      "누가기록",
+      "활동내역"
+     ],
+     "active": "학생부자료기록",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "누가기록 작성",
+     "box": [
+      1439,
+      147,
+      150,
+      25
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "누가기록 작성",
+     "options": [
+      "ON",
+      "OFF"
+     ],
+     "id": "radio:누가기록 작성"
+    },
+    {
+     "aria": null,
+     "box": [
+      184,
+      208,
+      102,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      424,
+      208,
+      202,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      764,
+      208,
+      63,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "부서명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:부서명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1505,
+      208,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      36,
+      257,
+      1553,
+      74
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ '이수시간반영'은 전체시간표에 등록된 시간과 학생 개인별 출결상황을 계산합니다. ※ 글자수는 Byte로 계산되며 한글은 3Byte, 영문, 띄어쓰기는 1Byte입니다. ※ 학적변동자(반변경, 전출입 등)의 경우 학생부 이수시간과 누가기록 이수시간 합계가 다를 수 있으니 학교에서는 확인하여 수기입력하여 주시기 바랍니다. ※ 자율동아리는 동아리활동 부서명과 특기사항을 포함하여 최대 90byte(한글30자)까지 입력할 수 있으며, 글자수에 자율동아리 부서명이 포함되어 있습니다.",
+     "id": "note:※ '이수시간반영'은 전체시간표에 등록된 시간과 학생 개인별 출결상황을 계산합니다. ※ 글자수는 Byte로 계산되며 한글은 3Byte, 영문, 띄어쓰기는 1Byte입니다. ※ 학적변동자(반변경, 전출입 등)의 경우 학생부 이수시간과 누가기록 이수시간 합계가 다를 수 있으니 학교에서는 확인하여 수기입력하여 주시기 바랍니다. ※ 자율동아리는 동아리활동 부서명과 특기사항을 포함하여 최대 90byte(한글30자)까지 입력할 수 있으며, 글자수에 자율동아리 부서명이 포함되어 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1257,
+      368,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이수시간기준일",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:이수시간기준일"
+    },
+    {
+     "aria": null,
+     "box": [
+      1367,
+      368,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이수시간기준일",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:이수시간기준일#2"
+    },
+    {
+     "aria": "이수시간반영",
+     "box": [
+      1497,
+      368,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이수시간반영",
+     "variant": "primary",
+     "id": "button:이수시간반영"
+    },
+    {
+     "aria": "그리드 축소",
+     "box": [
+      699,
+      406,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그리드 축소",
+     "variant": "plain",
+     "id": "button:그리드 축소"
+    },
+    {
+     "aria": "그리드 확대",
+     "box": [
+      737,
+      406,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그리드 확대",
+     "variant": "plain",
+     "id": "button:그리드 확대"
+    },
+    {
+     "aria": null,
+     "box": [
+      775,
+      406,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      905,
+      406,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀업로드",
+     "variant": "plain",
+     "id": "button:엑셀업로드"
+    },
+    {
+     "aria": "학생부 일괄반영",
+     "box": [
+      1035,
+      406,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생부 일괄반영",
+     "variant": "link",
+     "id": "button:학생부 일괄반영"
+    },
+    {
+     "aria": "학생부 일괄반영취소",
+     "box": [
+      1146,
+      406,
+      127,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생부 일괄반영취소",
+     "variant": "link",
+     "id": "button:학생부 일괄반영취소"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      1282,
+      406,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "link",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": "문자열바꾸기",
+     "box": [
+      1353,
+      406,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "문자열바꾸기",
+     "variant": "link",
+     "id": "button:문자열바꾸기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1449,
+      406,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1497,
+      406,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1545,
+      406,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "동아리활동 학생부 자료기록",
+     "box": [
+      36,
+      420,
+      203,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "동아리활동 학생부 자료기록",
+     "id": "heading:동아리활동 학생부 자료기록"
+    },
+    {
+     "aria": "동아리활동 학생부 자료기록 목록",
+     "box": [
+      36,
+      448,
+      1553,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "동아리활동 학생부 자료기록 목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        87,
+        449,
+        50,
+        60
+       ],
+       "id": "col:동아리활동 학생부 자료기록 목록/학년"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        137,
+        449,
+        100,
+        60
+       ],
+       "id": "col:동아리활동 학생부 자료기록 목록/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        237,
+        449,
+        50,
+        60
+       ],
+       "id": "col:동아리활동 학생부 자료기록 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        287,
+        449,
+        50,
+        60
+       ],
+       "id": "col:동아리활동 학생부 자료기록 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        337,
+        449,
+        100,
+        60
+       ],
+       "id": "col:동아리활동 학생부 자료기록 목록/성명"
+      },
+      {
+       "label": "이수시간",
+       "depth": 0,
+       "box": [
+        437,
+        449,
+        70,
+        60
+       ],
+       "id": "col:동아리활동 학생부 자료기록 목록/이수시간"
+      },
+      {
+       "label": "누가기록 이수시간 합계",
+       "depth": 0,
+       "box": [
+        507,
+        449,
+        70,
+        60
+       ],
+       "id": "col:동아리활동 학생부 자료기록 목록/누가기록 이수시간 합계"
+      },
+      {
+       "label": "특기사항",
+       "depth": 0,
+       "box": [
+        577,
+        449,
+        861,
+        60
+       ],
+       "id": "col:동아리활동 학생부 자료기록 목록/특기사항"
+      },
+      {
+       "label": "글자수",
+       "depth": 0,
+       "box": [
+        1438,
+        449,
+        150,
+        60
+       ],
+       "id": "col:동아리활동 학생부 자료기록 목록/글자수"
+      }
+     ],
+     "id": "grid:동아리활동 학생부 자료기록 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 창의적체험활동 > 동아리활동관리",
+ "alsoVia": [
+  "동아리담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

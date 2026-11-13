@@ -1,0 +1,318 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›정기시험/수행평가선행작업›반영비율/만점관리",
+ "name": "반영비율/만점관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:26:56+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "유의사항",
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 반영비율/만점 관리 유의사항",
+     "id": "note:※ 반영비율/만점 관리 유의사항"
+    },
+    {
+     "aria": "타학과 복사",
+     "box": [
+      1108,
+      290,
+      79,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "타학과 복사",
+     "variant": "primary",
+     "id": "button:타학과 복사"
+    },
+    {
+     "aria": "반영비율/만점정보 복사",
+     "box": [
+      1195,
+      290,
+      144,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "반영비율/만점정보 복사",
+     "variant": "primary",
+     "id": "button:반영비율/만점정보 복사"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1348,
+      290,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1395,
+      290,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1443,
+      290,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전과목출력",
+     "box": [
+      1491,
+      290,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전과목출력",
+     "variant": "primary",
+     "id": "button:전과목출력"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      290,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "반영비율/만점관리 그리드",
+     "box": [
+      25,
+      330,
+      1590,
+      483
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반영비율/만점관리 그리드",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "과목명(학점)",
+       "depth": 0,
+       "box": [
+        26,
+        331,
+        233,
+        62
+       ],
+       "id": "col:반영비율/만점관리 그리드/과목명(학점)"
+      },
+      {
+       "label": "평가구분",
+       "depth": 0,
+       "box": [
+        259,
+        331,
+        233,
+        62
+       ],
+       "id": "col:반영비율/만점관리 그리드/평가구분"
+      },
+      {
+       "label": "고사/영역명",
+       "depth": 0,
+       "box": [
+        542,
+        331,
+        233,
+        62
+       ],
+       "id": "col:반영비율/만점관리 그리드/고사/영역명"
+      },
+      {
+       "label": "마감여부",
+       "depth": 0,
+       "box": [
+        775,
+        331,
+        186,
+        62
+       ],
+       "id": "col:반영비율/만점관리 그리드/마감여부"
+      },
+      {
+       "label": "학기말 반영여부",
+       "depth": 0,
+       "box": [
+        962,
+        331,
+        186,
+        62
+       ],
+       "id": "col:반영비율/만점관리 그리드/학기말 반영여부"
+      },
+      {
+       "label": "반영비율(%)",
+       "depth": 0,
+       "box": [
+        1148,
+        331,
+        233,
+        62
+       ],
+       "id": "col:반영비율/만점관리 그리드/반영비율(%)"
+      },
+      {
+       "label": "과목/영역 만점",
+       "depth": 0,
+       "box": [
+        1381,
+        331,
+        233,
+        62
+       ],
+       "id": "col:반영비율/만점관리 그리드/과목/영역 만점"
+      }
+     ],
+     "id": "grid:반영비율/만점관리 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 정기시험/수행평가선행작업 > 반영비율/만점관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

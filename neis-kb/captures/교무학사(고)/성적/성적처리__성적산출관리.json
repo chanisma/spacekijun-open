@@ -1,0 +1,453 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적처리›성적산출관리",
+ "name": "성적산출관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:32:50+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:결시생 인정점 관리",
+   "tab": "결시생 인정점 관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "결시생 인정점 관리 선택됨",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "결시생 인정점 관리",
+      "과목별 성적산출"
+     ],
+     "active": "결시생 인정점 관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "산출기준",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:산출기준"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      152,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      148
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 결시생 인정점의 경우 결시명칭, 기준점, 인정점으로 구분되어 있습니다. ※ 모든 학생의 모든 고사/영역에 대하여 ①점수입력 ②결시처리 ③학적변동처리 중의 하나로 처리되어 있어야 합니다. [미입력]으로 되어 있는 학생의 고사/영역은 정기시험/수행평가 성적관리에서 처리해야 합니다. ※ 인정점 산출시 인정점이 과목 만점을 초과할 경우 과목만점까지만 부여됩니다. ※ 미인정결 차하점 부여는 성적산출 대상자로 인정점을 부여합니다. ※ 해당 고사의 최하점은 [정기시험통계 - 성적집계표조회]에서 확인 할 수 있습니다. ※ 해당 고사의 {과목별",
+     "id": "note:※ 결시생 인정점의 경우 결시명칭, 기준점, 인정점으로 구분되어 있습니다. ※ 모든 학생의 모든 고사/영역에 대하여 ①점수입력 ②결시처리 ③학적변동처리 중의 하나로 처리되어 있어야 합니다. [미입력]으로 되어 있는 학생의 고사/영역은 정기시험/수행평가 성적관리에서 처리해야 합니다. ※ 인정점 산출시 인정점이 과목 만점을 초과할 경우 과목만점까지만 부여됩니다. ※ 미인정결 차하점 부여는 성적산출 대상자로 인정점을 부여합니다. ※ 해당 고사의 최하점은 [정기시험통계 - 성적집계표조회]에서 확인 할 수 있습니다. ※ 해당 고사의 {과목별"
+    },
+    {
+     "aria": "평균점수조회",
+     "box": [
+      1240,
+      406,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평균점수조회",
+     "variant": "primary",
+     "id": "button:평균점수조회"
+    },
+    {
+     "aria": "수동입력",
+     "box": [
+      1336,
+      406,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수동입력",
+     "variant": "primary",
+     "id": "button:수동입력"
+    },
+    {
+     "aria": "인정점산출",
+     "box": [
+      1407,
+      406,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인정점산출",
+     "variant": "primary",
+     "id": "button:인정점산출"
+    },
+    {
+     "aria": "인정점삭제",
+     "box": [
+      1491,
+      406,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인정점삭제",
+     "variant": "secondary",
+     "id": "button:인정점삭제"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      406,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "결시생 인정점 부여 과목",
+     "box": [
+      25,
+      446,
+      1590,
+      367
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "결시생 인정점 부여 과목",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        26,
+        447,
+        526,
+        106
+       ],
+       "id": "col:결시생 인정점 부여 과목/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        552,
+        447,
+        526,
+        106
+       ],
+       "id": "col:결시생 인정점 부여 과목/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1078,
+        447,
+        536,
+        106
+       ],
+       "id": "col:결시생 인정점 부여 과목/성명"
+      }
+     ],
+     "id": "grid:결시생 인정점 부여 과목"
+    }
+   ]
+  },
+  {
+   "id": "tab:과목별 성적산출",
+   "tab": "과목별 성적산출",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "결시생 인정점 관리",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "결시생 인정점 관리",
+      "과목별 성적산출"
+     ],
+     "active": "과목별 성적산출",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      152,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      152,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      152,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "산출기준",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:산출기준"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      152,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 성적 산출 단위가 [학년], [통합산출]일 경우는, 성적 산출시 모든 계열, 학과의 성적이 산출됩니다.",
+     "id": "note:※ 성적 산출 단위가 [학년], [통합산출]일 경우는, 성적 산출시 모든 계열, 학과의 성적이 산출됩니다."
+    },
+    {
+     "aria": "정기시험/수행평가 점수누락자 보기",
+     "box": [
+      1252,
+      277,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정기시험/수행평가 점수누락자 보기",
+     "variant": "link",
+     "id": "button:정기시험/수행평가 점수누락자 보기"
+    },
+    {
+     "aria": "성적산출준비",
+     "box": [
+      1467,
+      277,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적산출준비",
+     "variant": "link",
+     "id": "button:성적산출준비"
+    },
+    {
+     "aria": "산출함",
+     "box": [
+      1563,
+      277,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "산출함",
+     "variant": "primary",
+     "id": "button:산출함"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      287,
+      324,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "☞ 성적산출 대상 및 기준은 다음과 같습니다.",
+     "id": "heading:☞ 성적산출 대상 및 기준은 다음과 같습니다."
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적처리 > 성적산출관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

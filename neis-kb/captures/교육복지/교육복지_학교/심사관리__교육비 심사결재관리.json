@@ -1,0 +1,230 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›심사관리›교육비 심사결재관리",
+ "name": "교육비 심사결재관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:24:26+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:결재상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조회조건",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:조회조건"
+    },
+    {
+     "aria": null,
+     "box": [
+      525,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조회조건",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:조회조건#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      660,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조회조건~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:조회조건~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "결재요청일자",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        80,
+        36
+       ],
+       "id": "col:그리드/결재요청일자"
+      },
+      {
+       "label": "상신내용",
+       "depth": 0,
+       "box": [
+        156,
+        174,
+        376,
+        36
+       ],
+       "id": "col:그리드/상신내용"
+      },
+      {
+       "label": "결재항목",
+       "depth": 0,
+       "box": [
+        532,
+        174,
+        120,
+        36
+       ],
+       "id": "col:그리드/결재항목"
+      },
+      {
+       "label": "결재요청건수",
+       "depth": 0,
+       "box": [
+        652,
+        174,
+        85,
+        36
+       ],
+       "id": "col:그리드/결재요청건수"
+      },
+      {
+       "label": "기안자",
+       "depth": 0,
+       "box": [
+        737,
+        174,
+        251,
+        36
+       ],
+       "id": "col:그리드/기안자"
+      },
+      {
+       "label": "결재권자",
+       "depth": 0,
+       "box": [
+        988,
+        174,
+        100,
+        36
+       ],
+       "id": "col:그리드/결재권자"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1088,
+        174,
+        70,
+        36
+       ],
+       "id": "col:그리드/결재상태"
+      },
+      {
+       "label": "결재의견",
+       "depth": 0,
+       "box": [
+        1158,
+        174,
+        376,
+        36
+       ],
+       "id": "col:그리드/결재의견"
+      },
+      {
+       "label": "결재일자",
+       "depth": 0,
+       "box": [
+        1534,
+        174,
+        80,
+        36
+       ],
+       "id": "col:그리드/결재일자"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 심사관리 > 교육비 심사결재관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

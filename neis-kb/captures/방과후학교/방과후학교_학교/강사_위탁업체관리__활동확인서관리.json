@@ -1,0 +1,310 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›강사/위탁업체관리›활동확인서관리",
+ "name": "활동확인서관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:03:04+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청인",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:신청인"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:신청번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "처리상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:처리상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:신청년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      40
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ [수기발급]은 시스템상에 등록되지 않은 강사의 발급번호 채번만을 위한 기능으로, 발급번호 채번 외에 시스템의 출력기능(발급버튼)을 사용할 수 없습니다. 별도로 관리 중인 문서에 활동확인서를 작성하여 출력해주세요.",
+     "id": "note:※ [수기발급]은 시스템상에 등록되지 않은 강사의 발급번호 채번만을 위한 기능으로, 발급번호 채번 외에 시스템의 출력기능(발급버튼)을 사용할 수 없습니다. 별도로 관리 중인 문서에 활동확인서를 작성하여 출력해주세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      1407,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반려",
+     "variant": "plain",
+     "id": "button:반려"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인",
+     "variant": "plain",
+     "id": "button:승인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      183,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수기발급",
+     "variant": "link",
+     "id": "button:수기발급"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "활동확인서 관리 목록 정보",
+     "box": [
+      25,
+      223,
+      1590,
+      590
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "활동확인서 관리 목록 정보",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        95,
+        224,
+        69,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/순번"
+      },
+      {
+       "label": "신청번호",
+       "depth": 0,
+       "box": [
+        165,
+        224,
+        229,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/신청번호"
+      },
+      {
+       "label": "신청인",
+       "depth": 0,
+       "box": [
+        394,
+        224,
+        229,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/신청인"
+      },
+      {
+       "label": "신청일시",
+       "depth": 0,
+       "box": [
+        622,
+        224,
+        139,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/신청일시"
+      },
+      {
+       "label": "온라인",
+       "depth": 0,
+       "box": [
+        761,
+        224,
+        69,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/온라인"
+      },
+      {
+       "label": "수기 발급",
+       "depth": 0,
+       "box": [
+        830,
+        224,
+        69,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/수기 발급"
+      },
+      {
+       "label": "처리상태",
+       "depth": 0,
+       "box": [
+        900,
+        224,
+        139,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/처리상태"
+      },
+      {
+       "label": "발급상태",
+       "depth": 0,
+       "box": [
+        1038,
+        224,
+        139,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/발급상태"
+      },
+      {
+       "label": "발급번호",
+       "depth": 0,
+       "box": [
+        1177,
+        224,
+        229,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/발급번호"
+      },
+      {
+       "label": "발급일시",
+       "depth": 0,
+       "box": [
+        1406,
+        224,
+        139,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/발급일시"
+      },
+      {
+       "label": "발급",
+       "depth": 0,
+       "box": [
+        1545,
+        224,
+        69,
+        40
+       ],
+       "id": "col:활동확인서 관리 목록 정보/발급"
+      }
+     ],
+     "id": "grid:활동확인서 관리 목록 정보"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 강사/위탁업체관리 > 활동확인서관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

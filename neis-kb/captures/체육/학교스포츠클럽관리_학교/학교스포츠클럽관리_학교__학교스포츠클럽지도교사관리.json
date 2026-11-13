@@ -1,0 +1,228 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교스포츠클럽관리#학교›학교스포츠클럽관리#학교›학교스포츠클럽지도교사관리",
+ "name": "학교스포츠클럽지도교사관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:08:58+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "종목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:종목"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "재직여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:재직여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1095,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄등록",
+     "variant": "primary",
+     "id": "button:일괄등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "학교스포츠클럽 지도교사 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교스포츠클럽 지도교사 목록",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "종목",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        304,
+        36
+       ],
+       "id": "col:학교스포츠클럽 지도교사 목록/종목"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        380,
+        174,
+        304,
+        36
+       ],
+       "id": "col:학교스포츠클럽 지도교사 목록/성명"
+      },
+      {
+       "label": "나이스 개인번호 끝3자리 (동명이인 구분용)",
+       "depth": 0,
+       "box": [
+        684,
+        174,
+        173,
+        36
+       ],
+       "id": "col:학교스포츠클럽 지도교사 목록/나이스 개인번호 끝3자리 (동명이인 구분용)"
+      },
+      {
+       "label": "인력구분",
+       "depth": 0,
+       "box": [
+        857,
+        174,
+        304,
+        36
+       ],
+       "id": "col:학교스포츠클럽 지도교사 목록/인력구분"
+      },
+      {
+       "label": "지도기간",
+       "depth": 0,
+       "box": [
+        1160,
+        174,
+        304,
+        36
+       ],
+       "id": "col:학교스포츠클럽 지도교사 목록/지도기간"
+      },
+      {
+       "label": "재직여부",
+       "depth": 0,
+       "box": [
+        1464,
+        174,
+        150,
+        36
+       ],
+       "id": "col:학교스포츠클럽 지도교사 목록/재직여부"
+      }
+     ],
+     "id": "grid:학교스포츠클럽 지도교사 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교스포츠클럽관리 > 학교스포츠클럽관리 > 학교스포츠클럽지도교사관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

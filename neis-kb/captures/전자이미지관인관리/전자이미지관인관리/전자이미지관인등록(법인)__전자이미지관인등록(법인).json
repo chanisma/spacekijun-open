@@ -1,0 +1,181 @@
+{
+ "schema": "neis-capture/1",
+ "key": "전자이미지관인관리›전자이미지관인관리›전자이미지관인등록(법인)›전자이미지관인등록(법인)",
+ "name": "전자이미지관인등록(법인)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:56:20+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 파일은 gif 형식이어야 합니다. ※ 파일크기는 7Kbte를 초과할 수 없습니다.",
+     "id": "note:※ 파일은 gif 형식이어야 합니다. ※ 파일크기는 7Kbte를 초과할 수 없습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      154,
+      190,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "법인명",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:법인명"
+    },
+    {
+     "aria": null,
+     "box": [
+      375,
+      154,
+      97,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "사용중인관인",
+     "checked": true,
+     "id": "check:사용중인관인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      154,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      284,
+      210,
+      70,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "전자이미지관인(법인)",
+     "box": [
+      30,
+      220,
+      158,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "전자이미지관인(법인)",
+     "id": "heading:전자이미지관인(법인)"
+    },
+    {
+     "aria": "전자이미지관인 등록(교육청)",
+     "box": [
+      25,
+      255,
+      788,
+      427
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전자이미지관인 등록(교육청)",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        256,
+        100,
+        36
+       ],
+       "id": "col:전자이미지관인 등록(교육청)/순번"
+      },
+      {
+       "label": "법인코드",
+       "depth": 0,
+       "box": [
+        126,
+        256,
+        100,
+        36
+       ],
+       "id": "col:전자이미지관인 등록(교육청)/법인코드"
+      },
+      {
+       "label": "법인명",
+       "depth": 0,
+       "box": [
+        226,
+        256,
+        227,
+        36
+       ],
+       "id": "col:전자이미지관인 등록(교육청)/법인명"
+      },
+      {
+       "label": "등록자",
+       "depth": 0,
+       "box": [
+        453,
+        256,
+        132,
+        36
+       ],
+       "id": "col:전자이미지관인 등록(교육청)/등록자"
+      },
+      {
+       "label": "등록일시",
+       "depth": 0,
+       "box": [
+        585,
+        256,
+        227,
+        36
+       ],
+       "id": "col:전자이미지관인 등록(교육청)/등록일시"
+      }
+     ],
+     "id": "grid:전자이미지관인 등록(교육청)"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(정보화부) > 전자이미지관인관리 > 전자이미지관인등록(법인)",
+ "viewport": [
+  1920,
+  945
+ ]
+}

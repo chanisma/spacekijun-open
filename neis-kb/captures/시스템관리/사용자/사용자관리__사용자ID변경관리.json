@@ -1,0 +1,251 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›사용자›사용자관리›사용자ID변경관리",
+ "name": "사용자ID변경관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:50:14+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:사용자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      381,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      571,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재상태구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:결재상태구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "사용자ID변경신청 목록",
+     "box": [
+      25,
+      143,
+      167,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "사용자ID변경신청 목록",
+     "id": "heading:사용자ID변경신청 목록"
+    },
+    {
+     "aria": "사용자ID변경신청 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "사용자ID변경신청 목록",
+     "selectable": false,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/순번"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        124,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/사용자ID"
+      },
+      {
+       "label": "사용자명",
+       "depth": 0,
+       "box": [
+        200,
+        174,
+        124,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/사용자명"
+      },
+      {
+       "label": "소속조직명",
+       "depth": 0,
+       "box": [
+        324,
+        174,
+        186,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/소속조직명"
+      },
+      {
+       "label": "변경후사용자ID",
+       "depth": 0,
+       "box": [
+        510,
+        174,
+        124,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/변경후사용자ID"
+      },
+      {
+       "label": "사용자ID사용시작일시",
+       "depth": 0,
+       "box": [
+        634,
+        174,
+        174,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/사용자ID사용시작일시"
+      },
+      {
+       "label": "사용자ID사용종료일시",
+       "depth": 0,
+       "box": [
+        808,
+        174,
+        174,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/사용자ID사용종료일시"
+      },
+      {
+       "label": "사용자ID변경사유내용",
+       "depth": 0,
+       "box": [
+        981,
+        174,
+        186,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/사용자ID변경사유내용"
+      },
+      {
+       "label": "결재상태코드",
+       "depth": 0,
+       "box": [
+        1167,
+        174,
+        99,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/결재상태코드"
+      },
+      {
+       "label": "승인요청일시",
+       "depth": 0,
+       "box": [
+        1267,
+        174,
+        174,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/승인요청일시"
+      },
+      {
+       "label": "승인완료일시",
+       "depth": 0,
+       "box": [
+        1440,
+        174,
+        174,
+        36
+       ],
+       "id": "col:사용자ID변경신청 목록/승인완료일시"
+      }
+     ],
+     "id": "grid:사용자ID변경신청 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}사용자 > 사용자관리 > 사용자ID변경관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

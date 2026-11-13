@@ -1,0 +1,852 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›개별화교육계획›개별화교육계획영역관리›개별화교육계획영역개설관리",
+ "name": "개별화교육계획영역개설관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:41:04+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:영역개설",
+   "tab": "영역개설",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "영역",
+     "box": [
+      855,
+      82,
+      300,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "영역",
+     "options": [
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:영역"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "영역개설",
+      "영역조회 및 수정",
+      "수강학생편성"
+     ],
+     "active": "영역개설",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "교사명",
+     "box": [
+      25,
+      238,
+      48,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "교사명",
+     "id": "heading:교사명"
+    },
+    {
+     "aria": "영역명",
+     "box": [
+      560,
+      238,
+      48,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "영역명",
+     "id": "heading:영역명"
+    },
+    {
+     "aria": "강의실",
+     "box": [
+      1095,
+      238,
+      48,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "강의실",
+     "id": "heading:강의실"
+    },
+    {
+     "aria": "교사 테이블",
+     "box": [
+      25,
+      268,
+      520,
+      545
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "교사 테이블",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "교사 명",
+       "depth": 0,
+       "box": [
+        76,
+        269,
+        280,
+        36
+       ],
+       "id": "col:교사 테이블/교사 명"
+      },
+      {
+       "label": "사용자 ID",
+       "depth": 0,
+       "box": [
+        356,
+        269,
+        188,
+        36
+       ],
+       "id": "col:교사 테이블/사용자 ID"
+      }
+     ],
+     "id": "grid:교사 테이블"
+    },
+    {
+     "aria": "영역 테이블",
+     "box": [
+      560,
+      268,
+      520,
+      545
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "영역 테이블",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        611,
+        269,
+        67,
+        36
+       ],
+       "id": "col:영역 테이블/순번"
+      },
+      {
+       "label": "영역명",
+       "depth": 0,
+       "box": [
+        678,
+        269,
+        401,
+        36
+       ],
+       "id": "col:영역 테이블/영역명"
+      }
+     ],
+     "id": "grid:영역 테이블"
+    },
+    {
+     "aria": "강의실 테이블",
+     "box": [
+      1095,
+      268,
+      520,
+      545
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "강의실 테이블",
+     "selectable": true,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        1146,
+        269,
+        468,
+        36
+       ],
+       "id": "col:강의실 테이블/강의실"
+      }
+     ],
+     "id": "grid:강의실 테이블"
+    }
+   ]
+  },
+  {
+   "id": "tab:영역조회 및 수정",
+   "tab": "영역조회 및 수정",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "영역",
+     "box": [
+      855,
+      82,
+      300,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "영역",
+     "options": [
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:영역"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "영역개설",
+      "영역조회 및 수정",
+      "수강학생편성"
+     ],
+     "active": "영역조회 및 수정",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "영역 테이블",
+     "box": [
+      25,
+      228,
+      1590,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "영역 테이블",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "교사명",
+       "depth": 0,
+       "box": [
+        76,
+        229,
+        439,
+        36
+       ],
+       "id": "col:영역 테이블/교사명"
+      },
+      {
+       "label": "영역명",
+       "depth": 0,
+       "box": [
+        515,
+        229,
+        439,
+        36
+       ],
+       "id": "col:영역 테이블/영역명"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        955,
+        229,
+        220,
+        36
+       ],
+       "id": "col:영역 테이블/학년"
+      },
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        1175,
+        229,
+        439,
+        36
+       ],
+       "id": "col:영역 테이블/강의실"
+      }
+     ],
+     "id": "grid:영역 테이블"
+    }
+   ]
+  },
+  {
+   "id": "tab:수강학생편성",
+   "tab": "수강학생편성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "영역",
+     "box": [
+      855,
+      82,
+      300,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "영역",
+     "options": [
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:영역"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "영역개설",
+      "영역조회 및 수정",
+      "수강학생편성"
+     ],
+     "active": "수강학생편성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "영역",
+     "box": [
+      25,
+      198,
+      32,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "영역",
+     "id": "heading:영역"
+    },
+    {
+     "aria": "편성학생",
+     "box": [
+      828,
+      198,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "편성학생",
+     "id": "heading:편성학생"
+    },
+    {
+     "aria": "영역 및 수강생 테이블",
+     "box": [
+      25,
+      228,
+      788,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "영역 및 수강생 테이블",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        229,
+        119,
+        36
+       ],
+       "id": "col:영역 및 수강생 테이블/학년"
+      },
+      {
+       "label": "강의실",
+       "depth": 0,
+       "box": [
+        145,
+        229,
+        238,
+        36
+       ],
+       "id": "col:영역 및 수강생 테이블/강의실"
+      },
+      {
+       "label": "영역명",
+       "depth": 0,
+       "box": [
+        383,
+        229,
+        238,
+        36
+       ],
+       "id": "col:영역 및 수강생 테이블/영역명"
+      },
+      {
+       "label": "수강생수",
+       "depth": 0,
+       "box": [
+        621,
+        229,
+        191,
+        36
+       ],
+       "id": "col:영역 및 수강생 테이블/수강생수"
+      }
+     ],
+     "id": "grid:영역 및 수강생 테이블"
+    },
+    {
+     "aria": "편성학생 테이블",
+     "box": [
+      828,
+      228,
+      788,
+      224
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "편성학생 테이블",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        888,
+        229,
+        110,
+        36
+       ],
+       "id": "col:편성학생 테이블/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        998,
+        229,
+        220,
+        36
+       ],
+       "id": "col:편성학생 테이블/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        1218,
+        229,
+        176,
+        36
+       ],
+       "id": "col:편성학생 테이블/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1394,
+        229,
+        220,
+        36
+       ],
+       "id": "col:편성학생 테이블/성명"
+      }
+     ],
+     "id": "grid:편성학생 테이블"
+    },
+    {
+     "aria": "편성",
+     "box": [
+      1165,
+      476,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "편성",
+     "variant": "plain",
+     "id": "button:편성"
+    },
+    {
+     "aria": "해제",
+     "box": [
+      1227,
+      476,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "해제",
+     "variant": "plain",
+     "id": "button:해제"
+    },
+    {
+     "aria": "미편성학생",
+     "box": [
+      828,
+      550,
+      81,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "미편성학생",
+     "id": "heading:미편성학생"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1312,
+      588,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회#2"
+    },
+    {
+     "aria": "미편성학생 테이블",
+     "box": [
+      828,
+      638,
+      788,
+      176
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "미편성학생 테이블",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        891,
+        639,
+        110,
+        36
+       ],
+       "id": "col:미편성학생 테이블/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        1000,
+        639,
+        219,
+        36
+       ],
+       "id": "col:미편성학생 테이블/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        1220,
+        639,
+        176,
+        36
+       ],
+       "id": "col:미편성학생 테이블/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1395,
+        639,
+        219,
+        36
+       ],
+       "id": "col:미편성학생 테이블/성명"
+      }
+     ],
+     "id": "grid:미편성학생 테이블"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 개별화교육계획 > 개별화교육계획영역관리 > 개별화교육계획영역개설관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

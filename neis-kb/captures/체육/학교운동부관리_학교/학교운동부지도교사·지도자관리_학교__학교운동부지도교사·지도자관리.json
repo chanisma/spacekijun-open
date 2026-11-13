@@ -1,0 +1,255 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교운동부관리#학교›학교운동부지도교사·지도자관리#학교›학교운동부지도교사·지도자관리",
+ "name": "학교운동부지도교사·지도자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:06:30+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "종목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:종목"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지도자구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:지도자구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "인사구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:인사구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "임용권자",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:임용권자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1431,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      173,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "연수일괄등록",
+     "variant": "link",
+     "id": "button:연수일괄등록"
+    },
+    {
+     "aria": "지도교사·지도자 목록",
+     "box": [
+      25,
+      213,
+      1590,
+      541
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "지도교사·지도자 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        50,
+        36
+       ],
+       "id": "col:지도교사·지도자 목록/순번"
+      },
+      {
+       "label": "종목",
+       "depth": 0,
+       "box": [
+        126,
+        214,
+        248,
+        36
+       ],
+       "id": "col:지도교사·지도자 목록/종목"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        374,
+        214,
+        248,
+        36
+       ],
+       "id": "col:지도교사·지도자 목록/성명"
+      },
+      {
+       "label": "지도자구분",
+       "depth": 0,
+       "box": [
+        622,
+        214,
+        248,
+        36
+       ],
+       "id": "col:지도교사·지도자 목록/지도자구분"
+      },
+      {
+       "label": "인사구분",
+       "depth": 0,
+       "box": [
+        870,
+        214,
+        248,
+        36
+       ],
+       "id": "col:지도교사·지도자 목록/인사구분"
+      },
+      {
+       "label": "임용권자",
+       "depth": 0,
+       "box": [
+        1118,
+        214,
+        248,
+        36
+       ],
+       "id": "col:지도교사·지도자 목록/임용권자"
+      },
+      {
+       "label": "지도기간",
+       "depth": 0,
+       "box": [
+        1366,
+        214,
+        248,
+        36
+       ],
+       "id": "col:지도교사·지도자 목록/지도기간"
+      }
+     ],
+     "id": "grid:지도교사·지도자 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교운동부관리 > 학교운동부지도교사·지도자관리 > 학교운동부지도교사·지도자관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

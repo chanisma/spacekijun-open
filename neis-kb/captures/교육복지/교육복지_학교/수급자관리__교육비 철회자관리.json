@@ -1,0 +1,293 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›수급자관리›교육비 철회자관리",
+ "name": "교육비 철회자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:19:27+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      209,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1388,
+      133,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      133,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "철회자신규등록",
+     "variant": "link",
+     "id": "button:철회자신규등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        113,
+        62
+       ],
+       "id": "col:그리드/학생명"
+      },
+      {
+       "label": "학생주민등록번호",
+       "depth": 0,
+       "box": [
+        139,
+        174,
+        113,
+        62
+       ],
+       "id": "col:그리드/학생주민등록번호"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        253,
+        174,
+        113,
+        62
+       ],
+       "id": "col:그리드/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        366,
+        174,
+        57,
+        62
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        423,
+        174,
+        57,
+        62
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "신청자명",
+       "depth": 0,
+       "box": [
+        480,
+        174,
+        113,
+        62
+       ],
+       "id": "col:그리드/신청자명"
+      },
+      {
+       "label": "심사상태",
+       "depth": 0,
+       "box": [
+        593,
+        174,
+        794,
+        31
+       ],
+       "span": 7,
+       "id": "col:그리드/심사상태"
+      },
+      {
+       "label": "철회사유",
+       "depth": 0,
+       "box": [
+        1387,
+        174,
+        113,
+        62
+       ],
+       "id": "col:그리드/철회사유"
+      },
+      {
+       "label": "근거공문",
+       "depth": 0,
+       "box": [
+        1501,
+        174,
+        113,
+        62
+       ],
+       "id": "col:그리드/근거공문"
+      },
+      {
+       "label": "입학금",
+       "depth": 1,
+       "box": [
+        593,
+        205,
+        113,
+        31
+       ],
+       "id": "col:그리드/심사상태>입학금"
+      },
+      {
+       "label": "수업료",
+       "depth": 1,
+       "box": [
+        707,
+        205,
+        113,
+        31
+       ],
+       "id": "col:그리드/심사상태>수업료"
+      },
+      {
+       "label": "학교운영비",
+       "depth": 1,
+       "box": [
+        820,
+        205,
+        113,
+        31
+       ],
+       "id": "col:그리드/심사상태>학교운영비"
+      },
+      {
+       "label": "급식",
+       "depth": 1,
+       "box": [
+        933,
+        205,
+        113,
+        31
+       ],
+       "id": "col:그리드/심사상태>급식"
+      },
+      {
+       "label": "방과후",
+       "depth": 1,
+       "box": [
+        1047,
+        205,
+        113,
+        31
+       ],
+       "id": "col:그리드/심사상태>방과후"
+      },
+      {
+       "label": "PC",
+       "depth": 1,
+       "box": [
+        1160,
+        205,
+        113,
+        31
+       ],
+       "id": "col:그리드/심사상태>PC"
+      },
+      {
+       "label": "인터넷",
+       "depth": 1,
+       "box": [
+        1274,
+        205,
+        113,
+        31
+       ],
+       "id": "col:그리드/심사상태>인터넷"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 수급자관리 > 교육비 철회자관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

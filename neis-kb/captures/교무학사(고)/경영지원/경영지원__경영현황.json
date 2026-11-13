@@ -1,0 +1,94 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›경영지원›경영지원›경영현황",
+ "name": "경영현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T03:58:39+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "이전 슬라이드로 이동",
+     "box": [
+      25,
+      71,
+      44,
+      742
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이전 슬라이드로 이동",
+     "variant": "plain",
+     "id": "button:이전 슬라이드로 이동"
+    },
+    {
+     "aria": "경영현황 설정 팝업 호출",
+     "box": [
+      1459,
+      71,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정"
+    },
+    {
+     "aria": "상세조회",
+     "box": [
+      1507,
+      71,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "상세조회",
+     "variant": "primary",
+     "id": "button:상세조회"
+    },
+    {
+     "aria": "이후 슬라이드로 이동",
+     "box": [
+      1571,
+      71,
+      44,
+      742
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이후 슬라이드로 이동",
+     "variant": "plain",
+     "id": "button:이후 슬라이드로 이동"
+    },
+    {
+     "aria": null,
+     "box": [
+      69,
+      81,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "봉사활동 현황",
+     "id": "heading:봉사활동 현황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 경영지원 > 경영지원 > 경영현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

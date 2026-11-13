@@ -1,0 +1,270 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교스포츠클럽관리#학교›학교스포츠클럽관리#학교›학교스포츠클럽활동내역관리",
+ "name": "학교스포츠클럽활동내역관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:09:33+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "활동상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:활동상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      298,
+      133,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "마감(나의할일전송)",
+     "variant": "link",
+     "id": "button:마감(나의할일전송)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "학년도 : 2026",
+     "box": [
+      25,
+      143,
+      104,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학년도 : 2026",
+     "id": "heading:학년도 : 2026"
+    },
+    {
+     "aria": "학교스포츠클럽 목록",
+     "box": [
+      25,
+      173,
+      394,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교스포츠클럽 목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "종목",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        131,
+        36
+       ],
+       "id": "col:학교스포츠클럽 목록/종목"
+      },
+      {
+       "label": "학교스포츠클럽명",
+       "depth": 0,
+       "box": [
+        157,
+        174,
+        131,
+        36
+       ],
+       "id": "col:학교스포츠클럽 목록/학교스포츠클럽명"
+      },
+      {
+       "label": "활동상태",
+       "depth": 0,
+       "box": [
+        287,
+        174,
+        131,
+        36
+       ],
+       "id": "col:학교스포츠클럽 목록/활동상태"
+      }
+     ],
+     "id": "grid:학교스포츠클럽 목록"
+    },
+    {
+     "aria": "학교스포츠클럽 활동내역 목록",
+     "box": [
+      434,
+      173,
+      1181,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교스포츠클럽 활동내역 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        485,
+        174,
+        50,
+        36
+       ],
+       "id": "col:학교스포츠클럽 활동내역 목록/순번"
+      },
+      {
+       "label": "종목",
+       "depth": 0,
+       "box": [
+        535,
+        174,
+        180,
+        36
+       ],
+       "id": "col:학교스포츠클럽 활동내역 목록/종목"
+      },
+      {
+       "label": "활동구분",
+       "depth": 0,
+       "box": [
+        715,
+        174,
+        180,
+        36
+       ],
+       "id": "col:학교스포츠클럽 활동내역 목록/활동구분"
+      },
+      {
+       "label": "활동명/대회명",
+       "depth": 0,
+       "box": [
+        894,
+        174,
+        180,
+        36
+       ],
+       "id": "col:학교스포츠클럽 활동내역 목록/활동명/대회명"
+      },
+      {
+       "label": "참가인원",
+       "depth": 0,
+       "box": [
+        1074,
+        174,
+        180,
+        36
+       ],
+       "id": "col:학교스포츠클럽 활동내역 목록/참가인원"
+      },
+      {
+       "label": "참가일시",
+       "depth": 0,
+       "box": [
+        1254,
+        174,
+        180,
+        36
+       ],
+       "id": "col:학교스포츠클럽 활동내역 목록/참가일시"
+      },
+      {
+       "label": "시간(분)",
+       "depth": 0,
+       "box": [
+        1434,
+        174,
+        180,
+        36
+       ],
+       "id": "col:학교스포츠클럽 활동내역 목록/시간(분)"
+      }
+     ],
+     "id": "grid:학교스포츠클럽 활동내역 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교스포츠클럽관리 > 학교스포츠클럽관리 > 학교스포츠클럽활동내역관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

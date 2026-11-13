@@ -1,0 +1,23 @@
+.gallery.gallery { transform:none; position:absolute; inset:16px; width:auto; max-width:none; height:auto; max-height:none; padding:24px; overflow:hidden; border:1px solid #c5a36a; background:radial-gradient(ellipse at top,#48304d,#191324 72%); color:#f4e4c6; }
+.layout { display:flex; flex-direction:column; height:100%; min-height:0; gap:16px; }
+.header { flex-shrink:0; padding-right:35px; }
+.header small { color:#cfb283; font-size:10px; letter-spacing:.15em; }
+.header h2 { margin:7px 0; font:26px Georgia,'Noto Serif KR',serif; }
+.header p,.note { margin:0; font-size:12px; color:#d9c7af; }
+.control { border:1px solid #b99a6877; background:#3c2b40; color:#f6dfb7; border-radius:5px; padding:10px 14px; cursor:pointer; }
+.control[aria-pressed=true],.control:hover:not(:disabled) { background:#684757; border-color:#e0bd7c; }
+.control:disabled { opacity:.4; cursor:default; }
+.control:focus-visible,.card:focus-visible { outline:3px solid #f5d192; outline-offset:3px; }
+.filters { display:flex; gap:8px; flex-wrap:wrap; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); align-content:start; gap:18px; overflow:auto; min-height:0; padding:4px; scrollbar-width:none; }
+.grid::-webkit-scrollbar { display:none; }
+.card { display:flex; flex-direction:column; text-align:left; border:1px solid #c9a37080; border-radius:6px; overflow:hidden; background:#2b2033; color:#f7e6c9; cursor:pointer; }
+.card img { width:100%; aspect-ratio:3/2; object-fit:cover; }
+.card span { display:grid; gap:6px; padding:12px; }.card small,.card em { color:#c8b28f; font-size:11px; font-style:normal; }.card strong { font-size:14px; font-weight:500; }
+.art { overflow:hidden; flex:1; min-height:0; display:grid; place-items:center; background:#110e1a; border:1px solid #b8956033; }
+.art img { width:100%; height:100%; min-height:0; object-fit:contain; }
+.viewerControls { display:flex; align-items:center; justify-content:space-between; gap:10px; }.viewerControls nav { display:flex; gap:8px; }
+.empty { margin:auto; text-align:center; padding:24px; }.empty > span { font-size:44px; color:#d8b981; }.empty h3 { font-weight:500; }.empty p { font-size:14px; color:#d1c0b3; }
+@media(max-width:560px) {
+  .gallery.gallery { transform:none; inset:8px; padding:18px 12px; }.layout { gap:12px; }.header h2 { font-size:21px; }.grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }.card span { padding:9px; }.card strong { font-size:12px; }.filters { gap:6px; }.control { padding:10px; font-size:12px; }.viewerControls { flex-wrap:wrap; justify-content:center; }
+}

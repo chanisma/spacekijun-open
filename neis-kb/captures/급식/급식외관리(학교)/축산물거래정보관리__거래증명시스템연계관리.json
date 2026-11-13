@@ -1,0 +1,2292 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식외관리(학교)›축산물거래정보관리›거래증명시스템연계관리",
+ "name": "거래증명시스템연계관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:11:51+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:납품업체",
+   "tab": "납품업체",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "납품업체",
+      "거래증명검수관리"
+     ],
+     "active": "납품업체",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "납품업체구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:납품업체구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      480,
+      137,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사업자번호",
+     "control": "mask",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사업자번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      785,
+      137,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      137,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체담당자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체담당자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "거래축종",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:거래축종"
+    },
+    {
+     "aria": null,
+     "box": [
+      480,
+      177,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "거래유형",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:거래유형"
+    },
+    {
+     "aria": null,
+     "box": [
+      785,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "거래기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:거래기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      920,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "거래기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:거래기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      217,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "송수신구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:송수신구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      480,
+      217,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "송수신일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:송수신일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1440,
+      217,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1512,
+      217,
+      68,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": "수신요청구분",
+     "box": [
+      150,
+      348,
+      240,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "수신요청구분",
+     "options": [
+      "수신일자",
+      "사업자번호"
+     ],
+     "id": "radio:수신요청구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      396,
+      348,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      531,
+      348,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      657,
+      348,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "납품업체수신요청",
+     "variant": "primary",
+     "id": "button:납품업체수신요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1266,
+      348,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "납품업체반영요청",
+     "variant": "primary",
+     "id": "button:납품업체반영요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1380,
+      429,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1440,
+      429,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      429,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      429,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "거래업체내역",
+     "box": [
+      25,
+      439,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "거래업체내역",
+     "id": "heading:거래업체내역"
+    },
+    {
+     "aria": "거래업체내역",
+     "box": [
+      25,
+      469,
+      1575,
+      250
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "거래업체내역",
+     "selectable": true,
+     "declaredColumns": 24,
+     "columns": [
+      {
+       "label": "납품업체구분",
+       "depth": 0,
+       "box": [
+        76,
+        470,
+        111,
+        36
+       ],
+       "id": "col:거래업체내역/납품업체구분"
+      },
+      {
+       "label": "사업자번호",
+       "depth": 0,
+       "box": [
+        187,
+        470,
+        111,
+        36
+       ],
+       "id": "col:거래업체내역/사업자번호"
+      },
+      {
+       "label": "업체명",
+       "depth": 0,
+       "box": [
+        298,
+        470,
+        111,
+        36
+       ],
+       "id": "col:거래업체내역/업체명"
+      },
+      {
+       "label": "대표자",
+       "depth": 0,
+       "box": [
+        409,
+        470,
+        89,
+        36
+       ],
+       "id": "col:거래업체내역/대표자"
+      },
+      {
+       "label": "담당자",
+       "depth": 0,
+       "box": [
+        498,
+        470,
+        89,
+        36
+       ],
+       "id": "col:거래업체내역/담당자"
+      },
+      {
+       "label": "전화번호",
+       "depth": 0,
+       "box": [
+        587,
+        470,
+        111,
+        36
+       ],
+       "id": "col:거래업체내역/전화번호"
+      },
+      {
+       "label": "거래축종",
+       "depth": 0,
+       "box": [
+        698,
+        470,
+        167,
+        36
+       ],
+       "id": "col:거래업체내역/거래축종"
+      },
+      {
+       "label": "거래유형",
+       "depth": 0,
+       "box": [
+        865,
+        470,
+        133,
+        36
+       ],
+       "id": "col:거래업체내역/거래유형"
+      },
+      {
+       "label": "거래기간",
+       "depth": 0,
+       "box": [
+        999,
+        470,
+        245,
+        36
+       ],
+       "span": 3,
+       "id": "col:거래업체내역/거래기간"
+      },
+      {
+       "label": "송수신구분",
+       "depth": 0,
+       "box": [
+        1243,
+        470,
+        89,
+        36
+       ],
+       "id": "col:거래업체내역/송수신구분"
+      },
+      {
+       "label": "송수신상태",
+       "depth": 0,
+       "box": [
+        1332,
+        470,
+        111,
+        36
+       ],
+       "id": "col:거래업체내역/송수신상태"
+      },
+      {
+       "label": "송수신일시",
+       "depth": 0,
+       "box": [
+        1443,
+        470,
+        167,
+        36
+       ],
+       "id": "col:거래업체내역/송수신일시"
+      }
+     ],
+     "id": "grid:거래업체내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      731,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      779,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "업체정보 상세",
+     "id": "heading:업체정보 상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      815,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업체구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      815,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업체관리구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체관리구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1240,
+      815,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사업자번호",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:사업자번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      855,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:업체명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      855,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "대표자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:대표자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1240,
+      855,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1318,
+      855,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전화번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      895,
+      60,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주소",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:주소"
+    },
+    {
+     "aria": "주소검색",
+     "box": [
+      336,
+      895,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "주소검색",
+     "variant": "link",
+     "id": "button:주소검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      372,
+      895,
+      609,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주소",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:주소#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      935,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "계약방법",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:계약방법"
+    },
+    {
+     "aria": "계약유지여부",
+     "box": [
+      755,
+      935,
+      355,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "계약유지여부",
+     "options": [
+      "예",
+      "아니오"
+     ],
+     "id": "radio:계약유지여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1240,
+      935,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "계약기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:계약기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      1375,
+      935,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "계약기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계약기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      975,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당자",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:담당자"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      975,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      833,
+      975,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전화번호#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      1015,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대폰번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:휴대폰번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      348,
+      1015,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대폰번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:휴대폰번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      1015,
+      271,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이메일",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:이메일"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      1055,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "인허가번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:인허가번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      1100,
+      38,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "소",
+     "checked": false,
+     "id": "check:소"
+    },
+    {
+     "aria": null,
+     "box": [
+      325,
+      1100,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "돼지",
+     "checked": false,
+     "id": "check:돼지"
+    },
+    {
+     "aria": null,
+     "box": [
+      393,
+      1100,
+      38,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "닭",
+     "checked": false,
+     "id": "check:닭"
+    },
+    {
+     "aria": null,
+     "box": [
+      448,
+      1100,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "계란",
+     "checked": false,
+     "id": "check:계란"
+    },
+    {
+     "aria": null,
+     "box": [
+      516,
+      1100,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "오리",
+     "checked": false,
+     "id": "check:오리"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      1140,
+      86,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "통합증명서",
+     "checked": false,
+     "id": "check:통합증명서"
+    },
+    {
+     "aria": null,
+     "box": [
+      373,
+      1140,
+      98,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "공공급식검수",
+     "checked": false,
+     "id": "check:공공급식검수"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      1180,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "급식학교",
+     "checked": false,
+     "id": "check:급식학교"
+    },
+    {
+     "aria": null,
+     "box": [
+      361,
+      1180,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "유통업체",
+     "checked": false,
+     "id": "check:유통업체"
+    },
+    {
+     "aria": null,
+     "box": [
+      453,
+      1180,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "자체매장",
+     "checked": false,
+     "id": "check:자체매장"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      1180,
+      62,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "음식점",
+     "checked": false,
+     "id": "check:음식점"
+    },
+    {
+     "aria": null,
+     "box": [
+      623,
+      1180,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "군납",
+     "checked": false,
+     "id": "check:군납"
+    },
+    {
+     "aria": null,
+     "box": [
+      691,
+      1180,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "단체급식",
+     "checked": false,
+     "id": "check:단체급식"
+    },
+    {
+     "aria": null,
+     "box": [
+      782,
+      1180,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "원본발행",
+     "checked": false,
+     "id": "check:원본발행"
+    },
+    {
+     "aria": null,
+     "box": [
+      874,
+      1180,
+      98,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "포장처리업체",
+     "checked": false,
+     "id": "check:포장처리업체"
+    },
+    {
+     "aria": null,
+     "box": [
+      989,
+      1180,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "기타",
+     "checked": false,
+     "id": "check:기타"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      1215,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "등록상태",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:등록상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      1255,
+      355,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "송수신구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:송수신구분#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      1295,
+      1325,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "송수신결과",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:송수신결과"
+    }
+   ]
+  },
+  {
+   "id": "tab:거래증명검수관리",
+   "tab": "거래증명검수관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "납품업체",
+      "거래증명검수관리"
+     ],
+     "active": "거래증명검수관리",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "납품업체구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:납품업체구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      480,
+      137,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사업자번호",
+     "control": "mask",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사업자번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      785,
+      137,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      137,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체담당자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체담당자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "거래축종",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:거래축종"
+    },
+    {
+     "aria": null,
+     "box": [
+      480,
+      177,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "거래유형",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:거래유형"
+    },
+    {
+     "aria": null,
+     "box": [
+      785,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "거래기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:거래기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      920,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "거래기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:거래기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      217,
+      165,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "송수신구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:송수신구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      480,
+      217,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "송수신일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:송수신일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      217,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      217,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": "수신요청구분",
+     "box": [
+      150,
+      385,
+      240,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "수신요청구분",
+     "options": [
+      "수신일자",
+      "확인서발급일자"
+     ],
+     "id": "radio:수신요청구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      396,
+      385,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      531,
+      385,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      657,
+      385,
+      141,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "검수대상/결과수신요청",
+     "variant": "primary",
+     "id": "button:검수대상/결과수신요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1266,
+      385,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "검수결과반영요청",
+     "variant": "primary",
+     "id": "button:검수결과반영요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1380,
+      466,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1440,
+      466,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      466,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      466,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "거래증명",
+     "box": [
+      25,
+      476,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "거래증명",
+     "id": "heading:거래증명"
+    },
+    {
+     "aria": "거래증명내역",
+     "box": [
+      25,
+      506,
+      1575,
+      250
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "거래증명내역",
+     "selectable": true,
+     "declaredColumns": 25,
+     "columns": [
+      {
+       "label": "검수구분",
+       "depth": 0,
+       "box": [
+        76,
+        507,
+        67,
+        36
+       ],
+       "id": "col:거래증명내역/검수구분"
+      },
+      {
+       "label": "검수일자",
+       "depth": 0,
+       "box": [
+        143,
+        507,
+        119,
+        36
+       ],
+       "id": "col:거래증명내역/검수일자"
+      },
+      {
+       "label": "등록상태",
+       "depth": 0,
+       "box": [
+        262,
+        507,
+        61,
+        36
+       ],
+       "id": "col:거래증명내역/등록상태"
+      },
+      {
+       "label": "공급업체",
+       "depth": 0,
+       "box": [
+        323,
+        507,
+        160,
+        36
+       ],
+       "id": "col:거래증명내역/공급업체"
+      },
+      {
+       "label": "확인서발급일자",
+       "depth": 0,
+       "box": [
+        483,
+        507,
+        107,
+        36
+       ],
+       "id": "col:거래증명내역/확인서발급일자"
+      },
+      {
+       "label": "확인서번호",
+       "depth": 0,
+       "box": [
+        590,
+        507,
+        133,
+        36
+       ],
+       "id": "col:거래증명내역/확인서번호"
+      },
+      {
+       "label": "축종",
+       "depth": 0,
+       "box": [
+        723,
+        507,
+        80,
+        36
+       ],
+       "id": "col:거래증명내역/축종"
+      },
+      {
+       "label": "부위",
+       "depth": 0,
+       "box": [
+        803,
+        507,
+        87,
+        36
+       ],
+       "id": "col:거래증명내역/부위"
+      },
+      {
+       "label": "검수량",
+       "depth": 0,
+       "box": [
+        890,
+        507,
+        80,
+        36
+       ],
+       "id": "col:거래증명내역/검수량"
+      },
+      {
+       "label": "총생산량",
+       "depth": 0,
+       "box": [
+        970,
+        507,
+        80,
+        36
+       ],
+       "id": "col:거래증명내역/총생산량"
+      },
+      {
+       "label": "검수여부",
+       "depth": 0,
+       "box": [
+        1050,
+        507,
+        70,
+        36
+       ],
+       "id": "col:거래증명내역/검수여부"
+      },
+      {
+       "label": "검수용도",
+       "depth": 0,
+       "box": [
+        1120,
+        507,
+        107,
+        36
+       ],
+       "id": "col:거래증명내역/검수용도"
+      },
+      {
+       "label": "송수신구분",
+       "depth": 0,
+       "box": [
+        1287,
+        507,
+        80,
+        36
+       ],
+       "id": "col:거래증명내역/송수신구분"
+      },
+      {
+       "label": "송수신상태",
+       "depth": 0,
+       "box": [
+        1367,
+        507,
+        80,
+        36
+       ],
+       "id": "col:거래증명내역/송수신상태"
+      },
+      {
+       "label": "송수신일시",
+       "depth": 0,
+       "box": [
+        1447,
+        507,
+        160,
+        36
+       ],
+       "id": "col:거래증명내역/송수신일시"
+      }
+     ],
+     "id": "grid:거래증명내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      768,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      816,
+      170,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "거래증명 검수정보 상세",
+     "id": "heading:거래증명 검수정보 상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      852,
+      603,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학교명"
+    },
+    {
+     "aria": null,
+     "box": [
+      993,
+      852,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:담당자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1359,
+      852,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1437,
+      852,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전화번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      892,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:업체명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      626,
+      892,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사업자번호",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:사업자번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      993,
+      892,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업체담당자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체담당자명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1359,
+      892,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      1437,
+      892,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전화번호#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      932,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검수일련번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:검수일련번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      626,
+      932,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "연계검수일련번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:연계검수일련번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      993,
+      932,
+      236,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "연계검수발급일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:연계검수발급일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      972,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검수구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:검수구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      626,
+      972,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "확인서발급일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:확인서발급일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      993,
+      972,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "확인서번호",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:확인서번호"
+    },
+    {
+     "aria": "축종",
+     "box": [
+      260,
+      1012,
+      723,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "축종",
+     "options": [
+      "소",
+      "돼지",
+      "닭",
+      "계란",
+      "오리"
+     ],
+     "id": "radio:축종"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      1052,
+      236,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "검수부위",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:검수부위"
+    },
+    {
+     "aria": null,
+     "box": [
+      626,
+      1052,
+      113,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검수량(무게)",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:검수량(무게)"
+    },
+    {
+     "aria": null,
+     "box": [
+      749,
+      1052,
+      113,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검수량(무게)",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:검수량(무게)#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      993,
+      1052,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "총생산량",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:총생산량"
+    },
+    {
+     "aria": null,
+     "box": [
+      1359,
+      1052,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "남은생산량",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:남은생산량"
+    },
+    {
+     "aria": "검수여부",
+     "box": [
+      260,
+      1092,
+      236,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "검수여부",
+     "options": [
+      "예",
+      "아니요"
+     ],
+     "id": "radio:검수여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      626,
+      1092,
+      236,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "검수일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:검수일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      993,
+      1097,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1060,
+      1097,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "중식",
+     "checked": false,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1127,
+      1097,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      1097,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "판매",
+     "checked": false,
+     "id": "check:판매"
+    },
+    {
+     "aria": null,
+     "box": [
+      1262,
+      1097,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "기타",
+     "checked": false,
+     "id": "check:기타"
+    },
+    {
+     "aria": "초과검수승인여부",
+     "box": [
+      260,
+      1132,
+      236,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "초과검수승인여부",
+     "options": [
+      "예",
+      "아니요"
+     ],
+     "id": "radio:초과검수승인여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      626,
+      1132,
+      969,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검수상세",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검수상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      1172,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "등록상태",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:등록상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      626,
+      1172,
+      969,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수정/삭제사유",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:수정/삭제사유"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      1212,
+      236,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "송수신구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:송수신구분#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      1252,
+      1335,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "송수신결과",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:송수신결과"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식외관리(학교) > 축산물거래정보관리 > 거래증명시스템연계관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

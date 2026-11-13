@@ -1,0 +1,415 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›감염병환자관리›감염병환자일괄등록",
+ "name": "감염병환자일괄등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:50:20+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      74
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 일괄적용은 그리드 체크박스를 체크한 제일 위에 있는 학생의 입력데이터를 기준으로 '일괄적용항목'에 체크된 항목을 그아래 체크박스를 체크한 학생에게 복사하는 기능입니다. ※ 만약, 그리드 제일 위에 체크박스를 체크한 학생의 입력 데이터가 하나도 없는 경우, 그 아래 체크박스를 체크한 학생들도 입력 데이터가 없는 상태로 복사됩니다. ※ *발생인지일, *감염병명, *확진여부, *치료현황, *등교중지현황, *발견경위, *주요증상은 필수입력 항목입니다. ※ 저장 후 학생목록이 다시 조회되는 것이 정상이며, 저장된 데이터는 [보건-감염병환",
+     "id": "note:※ 일괄적용은 그리드 체크박스를 체크한 제일 위에 있는 학생의 입력데이터를 기준으로 '일괄적용항목'에 체크된 항목을 그아래 체크박스를 체크한 학생에게 복사하는 기능입니다. ※ 만약, 그리드 제일 위에 체크박스를 체크한 학생의 입력 데이터가 하나도 없는 경우, 그 아래 체크박스를 체크한 학생들도 입력 데이터가 없는 상태로 복사됩니다. ※ *발생인지일, *감염병명, *확진여부, *치료현황, *등교중지현황, *발견경위, *주요증상은 필수입력 항목입니다. ※ 저장 후 학생목록이 다시 조회되는 것이 정상이며, 저장된 데이터는 [보건-감염병환"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      1503,
+      242,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      242,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "감염병환자일괄등록",
+     "box": [
+      25,
+      252,
+      145,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "감염병환자일괄등록",
+     "id": "heading:감염병환자일괄등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      738,
+      247,
+      86,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "발생인지일",
+     "checked": false,
+     "id": "check:발생인지일"
+    },
+    {
+     "aria": null,
+     "box": [
+      841,
+      247,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "감염병명",
+     "checked": false,
+     "id": "check:감염병명"
+    },
+    {
+     "aria": null,
+     "box": [
+      932,
+      247,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "확진여부",
+     "checked": false,
+     "id": "check:확진여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1024,
+      247,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "치료현황",
+     "checked": false,
+     "id": "check:치료현황"
+    },
+    {
+     "aria": null,
+     "box": [
+      1115,
+      247,
+      98,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "등교중지현황",
+     "checked": false,
+     "id": "check:등교중지현황"
+    },
+    {
+     "aria": null,
+     "box": [
+      1230,
+      247,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "발견경위",
+     "checked": false,
+     "id": "check:발견경위"
+    },
+    {
+     "aria": null,
+     "box": [
+      1322,
+      247,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "주요증상",
+     "checked": false,
+     "id": "check:주요증상"
+    },
+    {
+     "aria": null,
+     "box": [
+      1413,
+      247,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "참고사항",
+     "checked": false,
+     "id": "check:참고사항"
+    },
+    {
+     "aria": "감염병환자일괄등록 목록",
+     "box": [
+      25,
+      282,
+      1590,
+      531
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "감염병환자일괄등록 목록",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        283,
+        50,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/순번"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        126,
+        283,
+        120,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        246,
+        283,
+        50,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        296,
+        283,
+        50,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        346,
+        283,
+        130,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/성명"
+      },
+      {
+       "label": "발생인지일",
+       "depth": 0,
+       "box": [
+        476,
+        283,
+        130,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/발생인지일"
+      },
+      {
+       "label": "감염병명",
+       "depth": 0,
+       "box": [
+        606,
+        283,
+        230,
+        36
+       ],
+       "span": 2,
+       "id": "col:감염병환자일괄등록 목록/감염병명"
+      },
+      {
+       "label": "확진여부",
+       "depth": 0,
+       "box": [
+        835,
+        283,
+        130,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/확진여부"
+      },
+      {
+       "label": "치료현황",
+       "depth": 0,
+       "box": [
+        965,
+        283,
+        130,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/치료현황"
+      },
+      {
+       "label": "등교중지현황",
+       "depth": 0,
+       "box": [
+        1095,
+        283,
+        130,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/등교중지현황"
+      },
+      {
+       "label": "발견경위",
+       "depth": 0,
+       "box": [
+        1225,
+        283,
+        130,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/발견경위"
+      },
+      {
+       "label": "주요증상",
+       "depth": 0,
+       "box": [
+        1354,
+        283,
+        130,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/주요증상"
+      },
+      {
+       "label": "참고사항",
+       "depth": 0,
+       "box": [
+        1484,
+        283,
+        130,
+        36
+       ],
+       "id": "col:감염병환자일괄등록 목록/참고사항"
+      }
+     ],
+     "id": "grid:감염병환자일괄등록 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 감염병환자관리 > 감염병환자일괄등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

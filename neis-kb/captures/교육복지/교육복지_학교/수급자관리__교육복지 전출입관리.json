@@ -1,0 +1,815 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›수급자관리›교육복지 전출입관리",
+ "name": "교육복지 전출입관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:19:12+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:교육비 전출생",
+   "tab": "교육비 전출생",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육비 전출생",
+      "교육비 전입생",
+      "교육급여 전출생"
+     ],
+     "active": "교육비 전출생",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      550,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1372,
+      198,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교육비지원내역저장",
+     "variant": "primary",
+     "id": "button:교육비지원내역저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": "교육비 전출생 리스트",
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "교육비 전출생 리스트",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        30,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/순번"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        56,
+        239,
+        102,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/전출일자"
+      },
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        158,
+        239,
+        136,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/학생명"
+      },
+      {
+       "label": "학생 주민등록번호",
+       "depth": 0,
+       "box": [
+        294,
+        239,
+        136,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/학생 주민등록번호"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        429,
+        239,
+        170,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        599,
+        239,
+        50,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        649,
+        239,
+        50,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/번호"
+      },
+      {
+       "label": "전입 시도교육청",
+       "depth": 0,
+       "box": [
+        699,
+        239,
+        100,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/전입 시도교육청"
+      },
+      {
+       "label": "전입학교",
+       "depth": 0,
+       "box": [
+        799,
+        239,
+        170,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/전입학교"
+      },
+      {
+       "label": "전입일",
+       "depth": 0,
+       "box": [
+        969,
+        239,
+        80,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/전입일"
+      },
+      {
+       "label": "전출구분",
+       "depth": 0,
+       "box": [
+        1049,
+        239,
+        80,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/전출구분"
+      },
+      {
+       "label": "교육비지원내역",
+       "depth": 0,
+       "box": [
+        1129,
+        239,
+        305,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/교육비지원내역"
+      },
+      {
+       "label": "자료전송상태",
+       "depth": 0,
+       "box": [
+        1434,
+        239,
+        80,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/자료전송상태"
+      },
+      {
+       "label": "전송일시",
+       "depth": 0,
+       "box": [
+        1514,
+        239,
+        100,
+        36
+       ],
+       "id": "col:교육비 전출생 리스트/전송일시"
+      }
+     ],
+     "id": "grid:교육비 전출생 리스트"
+    }
+   ]
+  },
+  {
+   "id": "tab:교육비 전입생",
+   "tab": "교육비 전입생",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육비 전출생",
+      "교육비 전입생",
+      "교육급여 전출생"
+     ],
+     "active": "교육비 전입생",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      550,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1396,
+      198,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전입생가져오기",
+     "variant": "plain",
+     "id": "button:전입생가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": "전입생 목록",
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전입생 목록",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        239,
+        50,
+        36
+       ],
+       "id": "col:전입생 목록/순번"
+      },
+      {
+       "label": "전입일자",
+       "depth": 0,
+       "box": [
+        126,
+        239,
+        165,
+        36
+       ],
+       "id": "col:전입생 목록/전입일자"
+      },
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        291,
+        239,
+        165,
+        36
+       ],
+       "id": "col:전입생 목록/학생명"
+      },
+      {
+       "label": "학생 주민등록번호",
+       "depth": 0,
+       "box": [
+        456,
+        239,
+        198,
+        36
+       ],
+       "id": "col:전입생 목록/학생 주민등록번호"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        654,
+        239,
+        165,
+        36
+       ],
+       "id": "col:전입생 목록/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        819,
+        239,
+        50,
+        36
+       ],
+       "id": "col:전입생 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        869,
+        239,
+        50,
+        36
+       ],
+       "id": "col:전입생 목록/번호"
+      },
+      {
+       "label": "전출 시도교육청",
+       "depth": 0,
+       "box": [
+        919,
+        239,
+        100,
+        36
+       ],
+       "id": "col:전입생 목록/전출 시도교육청"
+      },
+      {
+       "label": "전출학교",
+       "depth": 0,
+       "box": [
+        1019,
+        239,
+        165,
+        36
+       ],
+       "id": "col:전입생 목록/전출학교"
+      },
+      {
+       "label": "전입구분",
+       "depth": 0,
+       "box": [
+        1184,
+        239,
+        165,
+        36
+       ],
+       "id": "col:전입생 목록/전입구분"
+      },
+      {
+       "label": "교육비지원내역",
+       "depth": 0,
+       "box": [
+        1349,
+        239,
+        165,
+        36
+       ],
+       "id": "col:전입생 목록/교육비지원내역"
+      },
+      {
+       "label": "재학여부",
+       "depth": 0,
+       "box": [
+        1514,
+        239,
+        100,
+        36
+       ],
+       "id": "col:전입생 목록/재학여부"
+      }
+     ],
+     "id": "grid:전입생 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:교육급여 전출생",
+   "tab": "교육급여 전출생",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육비 전출생",
+      "교육비 전입생",
+      "교육급여 전출생"
+     ],
+     "active": "교육급여 전출생",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생명"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "처리상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:처리상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "교육급여 전출생 목록",
+     "box": [
+      25,
+      295,
+      1590,
+      518
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "교육급여 전출생 목록",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        76,
+        296,
+        82,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/학년도"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        158,
+        296,
+        136,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        294,
+        296,
+        136,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        430,
+        296,
+        136,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/번호"
+      },
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        567,
+        296,
+        136,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/학생명"
+      },
+      {
+       "label": "학생 주민등록번호",
+       "depth": 0,
+       "box": [
+        703,
+        296,
+        120,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/학생 주민등록번호"
+      },
+      {
+       "label": "전입시도교육청",
+       "depth": 0,
+       "box": [
+        823,
+        296,
+        136,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/전입시도교육청"
+      },
+      {
+       "label": "전입학교",
+       "depth": 0,
+       "box": [
+        959,
+        296,
+        218,
+        36
+       ],
+       "span": 2,
+       "id": "col:교육급여 전출생 목록/전입학교"
+      },
+      {
+       "label": "전출일",
+       "depth": 0,
+       "box": [
+        1177,
+        296,
+        136,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/전출일"
+      },
+      {
+       "label": "반영시각",
+       "depth": 0,
+       "box": [
+        1314,
+        296,
+        136,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/반영시각"
+      },
+      {
+       "label": "전출처리",
+       "depth": 0,
+       "box": [
+        1450,
+        296,
+        82,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/전출처리"
+      },
+      {
+       "label": "전출확인",
+       "depth": 0,
+       "box": [
+        1532,
+        296,
+        82,
+        36
+       ],
+       "id": "col:교육급여 전출생 목록/전출확인"
+      }
+     ],
+     "id": "grid:교육급여 전출생 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 수급자관리 > 교육복지 전출입관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,660 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생배치›특수학생배치현황›기초자료작성›기초자료작성",
+ "name": "기초자료작성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:37:10+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      135,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교육지원청",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:교육지원청"
+    },
+    {
+     "aria": null,
+     "box": [
+      385,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기준연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:기준연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      585,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교급",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교급"
+    },
+    {
+     "aria": null,
+     "box": [
+      805,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생배치개요명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학생배치개요명"
+    },
+    {
+     "aria": "학급편성기준명",
+     "box": [
+      1025,
+      82,
+      390,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학급편성기준명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학급편성기준명"
+    },
+    {
+     "aria": "학교명",
+     "box": [
+      135,
+      122,
+      34,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학교명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "결재",
+     "box": [
+      1285,
+      173,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "결재",
+     "variant": "plain",
+     "id": "button:결재"
+    },
+    {
+     "aria": "기결취소",
+     "box": [
+      1340,
+      173,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기결취소",
+     "variant": "plain",
+     "id": "button:기결취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      173,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      173,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "기초자료목록",
+     "box": [
+      25,
+      183,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "기초자료목록",
+     "id": "heading:기초자료목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      211,
+      1590,
+      350
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 31,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        212,
+        50,
+        72
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "학교명",
+       "depth": 0,
+       "box": [
+        126,
+        212,
+        200,
+        72
+       ],
+       "id": "col:그리드/학교명"
+      },
+      {
+       "label": "1학년",
+       "depth": 0,
+       "box": [
+        326,
+        212,
+        240,
+        36
+       ],
+       "span": 3,
+       "id": "col:그리드/1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 0,
+       "box": [
+        566,
+        212,
+        240,
+        36
+       ],
+       "span": 3,
+       "id": "col:그리드/2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 0,
+       "box": [
+        806,
+        212,
+        240,
+        36
+       ],
+       "span": 3,
+       "id": "col:그리드/3학년"
+      },
+      {
+       "label": "4학년",
+       "depth": 0,
+       "box": [
+        1046,
+        212,
+        240,
+        36
+       ],
+       "span": 3,
+       "id": "col:그리드/4학년"
+      },
+      {
+       "label": "5학년",
+       "depth": 0,
+       "box": [
+        1286,
+        212,
+        240,
+        36
+       ],
+       "span": 3,
+       "id": "col:그리드/5학년"
+      },
+      {
+       "label": "6학년",
+       "depth": 0,
+       "box": [
+        1526,
+        212,
+        240,
+        36
+       ],
+       "span": 3,
+       "id": "col:그리드/6학년"
+      },
+      {
+       "label": "남학생수",
+       "depth": 1,
+       "box": [
+        326,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/1학년>남학생수"
+      },
+      {
+       "label": "여학생수",
+       "depth": 1,
+       "box": [
+        406,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/1학년>여학생수"
+      },
+      {
+       "label": "신입생수",
+       "depth": 1,
+       "box": [
+        486,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/1학년>신입생수"
+      },
+      {
+       "label": "남학생수",
+       "depth": 1,
+       "box": [
+        566,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/2학년>남학생수"
+      },
+      {
+       "label": "여학생수",
+       "depth": 1,
+       "box": [
+        646,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/2학년>여학생수"
+      },
+      {
+       "label": "신입생수",
+       "depth": 1,
+       "box": [
+        726,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/2학년>신입생수"
+      },
+      {
+       "label": "남학생수",
+       "depth": 1,
+       "box": [
+        806,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/3학년>남학생수"
+      },
+      {
+       "label": "여학생수",
+       "depth": 1,
+       "box": [
+        886,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/3학년>여학생수"
+      },
+      {
+       "label": "신입생수",
+       "depth": 1,
+       "box": [
+        966,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/3학년>신입생수"
+      },
+      {
+       "label": "남학생수",
+       "depth": 1,
+       "box": [
+        1046,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/4학년>남학생수"
+      },
+      {
+       "label": "여학생수",
+       "depth": 1,
+       "box": [
+        1126,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/4학년>여학생수"
+      },
+      {
+       "label": "신입생수",
+       "depth": 1,
+       "box": [
+        1206,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/4학년>신입생수"
+      },
+      {
+       "label": "남학생수",
+       "depth": 1,
+       "box": [
+        1286,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/5학년>남학생수"
+      },
+      {
+       "label": "여학생수",
+       "depth": 1,
+       "box": [
+        1366,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/5학년>여학생수"
+      },
+      {
+       "label": "신입생수",
+       "depth": 1,
+       "box": [
+        1446,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/5학년>신입생수"
+      },
+      {
+       "label": "남학생수",
+       "depth": 1,
+       "box": [
+        1526,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/6학년>남학생수"
+      },
+      {
+       "label": "여학생수",
+       "depth": 1,
+       "box": [
+        1606,
+        248,
+        80,
+        36
+       ],
+       "id": "col:그리드/6학년>여학생수"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      591,
+      145,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "기초자료학생수입력",
+     "id": "heading:기초자료학생수입력"
+    },
+    {
+     "aria": null,
+     "box": [
+      258,
+      658,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "남학생수",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:남학생수"
+    },
+    {
+     "aria": null,
+     "box": [
+      485,
+      658,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "2학년",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:2학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      712,
+      658,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "3학년",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:3학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      658,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "4학년",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:4학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      658,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "5학년",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:5학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1392,
+      658,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "6학년",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:6학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      258,
+      698,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "여학생수",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:여학생수"
+    },
+    {
+     "aria": null,
+     "box": [
+      258,
+      738,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "신입생수",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:신입생수"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생배치}특수학생배치현황 > 기초자료작성",
+ "alsoVia": [
+  "부서장(나이스부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

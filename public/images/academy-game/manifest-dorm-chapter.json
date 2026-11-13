@@ -1,0 +1,38 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-09-13",
+  "references": [
+    "ria.png",
+    "serin.png",
+    "dorm.png"
+  ],
+  "assets": [
+    {
+      "key": "chapter-dorm-hall",
+      "prompt": "Use case: illustration-story. A single landscape 1536x1024 Korean romantic fantasy visual novel event CG, polished softly painted manhwa matching the attached references, no panels, no text, no watermark. Ria is the brown long wavy-haired violet-eyed girl from reference 1, white high-neck blouse and plum dress with gold details. Serin is reference 2, gentle blonde girl with side braid, green eyes, ivory capelet and sage green dress, one school year older. Preserve recognizable faces and outfits. Characters and gestures comfortably centered in upper two-thirds, bottom quarter reserved for game dialogue overlay. Scene: grand central entrance hall of Starlight Dormitory at night, vaulted ceilings, moonlit arched windows, warm lamps and brass room signs without readable letters. Ria has just arrived and looks around uncertainly holding her small notebook. Serin notices her, approaches smiling and extends a welcoming helping hand, holding a reading book in her other arm. Intimate medium-wide two-person scene; both fully clothed, natural student proportions, no other people. Reference 3 only provides building decoration style; this is a public hall, no bed.",
+      "file": "chapter-dorm-hall.png",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "key": "chapter-dorm-planning",
+      "prompt": "Use case: illustration-story. A single landscape 1536x1024 Korean romantic fantasy visual novel event CG, polished softly painted manhwa matching the attached references, no panels, no text, no watermark. Ria is the brown long wavy-haired violet-eyed girl from reference 1, white high-neck blouse and plum dress with gold details. Serin is reference 2, gentle blonde girl with side braid, green eyes, ivory capelet and sage green dress, one school year older. Preserve recognizable faces and outfits. Characters and gestures comfortably centered in upper two-thirds, bottom quarter reserved for game dialogue overlay. Scene: the beautiful shared dorm room from reference 3 at night. Ria sits at the wooden writing desk, actively writing her first plan with a quill in an open paper planner, concentrating then smiling with pride. Serin stands immediately beside her, leans slightly to look at the planner, warmly encourages her with an open hand beside the notebook. Ria performs the action, Serin supports her. An atmospheric canopy bed and book-filled shelves behind them. No readable writing on the notebook.",
+      "file": "chapter-dorm-planning.png",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "key": "chapter-dorm-night",
+      "prompt": "Use case: illustration-story. A single landscape 1536x1024 Korean romantic fantasy visual novel event CG, polished softly painted manhwa matching the attached references, no panels, no text, no watermark. Ria is the brown long wavy-haired violet-eyed girl from reference 1, white high-neck blouse and plum dress with gold details. Serin is reference 2, gentle blonde girl with side braid, green eyes, ivory capelet and sage green dress, one school year older. Preserve recognizable faces and outfits. Characters and gestures comfortably centered in upper two-thirds, bottom quarter reserved for game dialogue overlay. Scene: quiet night in the beautiful dorm bedroom from reference 3. ONLY Ria is visible, resting in bed, head and shoulders on a pillow, body comfortably covered to the shoulders by a violet star embroidered duvet. A modest white long-sleeved high-neck nightdress at the collar. Preserve brown hair and violet eyes; she gazes thoughtfully toward moonlit window with a small peaceful smile remembering her first day. Closed planner on bedside table, faint lamplight and moonlight, contemplative gentle atmosphere, no other characters, no sensuality. Medium-wide eye-level composition.",
+      "file": "chapter-dorm-night.png",
+      "size": [
+        1536,
+        1024
+      ]
+    }
+  ]
+}

@@ -1,0 +1,734 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›입학생학교교육과정관리›입학생학교교육과정등록/검증",
+ "name": "입학생학교교육과정등록/검증",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:01:54+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:입학생 학교 교육과정 등록",
+   "tab": "입학생 학교 교육과정 등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "입학생 학교 교육과정 등록 선택됨",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "입학생 학교 교육과정 등록",
+      "입학생 학교 교육과정 검증",
+      "입학생 학교 교육과정 조회"
+     ],
+     "active": "입학생 학교 교육과정 등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "입학학년도",
+     "box": [
+      165,
+      152,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "입학학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:입학학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학교공통 과목 등록 선택됨",
+     "box": [
+      363,
+      223,
+      248,
+      31
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교공통 과목 등록",
+     "variant": "plain",
+     "id": "button:학교공통 과목 등록"
+    },
+    {
+     "aria": "학교공통 과목 학점입력",
+     "box": [
+      696,
+      223,
+      248,
+      31
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교공통 과목 학점입력",
+     "variant": "plain",
+     "id": "button:학교공통 과목 학점입력"
+    },
+    {
+     "aria": "학교유형정보 설정",
+     "box": [
+      30,
+      238,
+      248,
+      40
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교유형정보 설정",
+     "variant": "plain",
+     "id": "button:학교유형정보 설정"
+    },
+    {
+     "aria": "창의적 체험활동 편성",
+     "box": [
+      1029,
+      236,
+      248,
+      40
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "창의적 체험활동 편성",
+     "variant": "plain",
+     "id": "button:창의적 체험활동 편성"
+    },
+    {
+     "aria": "선택과목군 관리",
+     "box": [
+      363,
+      259,
+      248,
+      31
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택과목군 관리",
+     "variant": "plain",
+     "id": "button:선택과목군 관리"
+    },
+    {
+     "aria": "선택과목 등록",
+     "box": [
+      696,
+      259,
+      248,
+      31
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택과목 등록",
+     "variant": "plain",
+     "id": "button:선택과목 등록"
+    },
+    {
+     "aria": "과목찾기",
+     "box": [
+      858,
+      334,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "과목찾기",
+     "variant": "primary",
+     "id": "button:과목찾기"
+    },
+    {
+     "aria": "반영",
+     "box": [
+      930,
+      334,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반영",
+     "variant": "primary",
+     "id": "button:반영"
+    },
+    {
+     "aria": "이전년도가져오기",
+     "box": [
+      1454,
+      334,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이전년도가져오기",
+     "variant": "primary",
+     "id": "button:이전년도가져오기"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1574,
+      334,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "과목선택",
+     "box": [
+      26,
+      344,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "과목선택",
+     "id": "heading:과목선택"
+    },
+    {
+     "aria": "과목",
+     "box": [
+      503,
+      344,
+      32,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "과목",
+     "id": "heading:과목"
+    },
+    {
+     "aria": "과목군 편성과목",
+     "box": [
+      985,
+      344,
+      117,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "과목군 편성과목",
+     "id": "heading:과목군 편성과목"
+    },
+    {
+     "aria": "과목선택",
+     "box": [
+      26,
+      374,
+      467,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "과목선택",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [],
+     "id": "grid:과목선택"
+    },
+    {
+     "aria": "과목",
+     "box": [
+      503,
+      374,
+      467,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "과목",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "과목구분",
+       "depth": 0,
+       "box": [
+        561,
+        375,
+        163,
+        36
+       ],
+       "id": "col:과목/과목구분"
+      },
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        724,
+        375,
+        245,
+        36
+       ],
+       "id": "col:과목/과목명"
+      }
+     ],
+     "id": "grid:과목"
+    },
+    {
+     "aria": "과목군편성과목",
+     "box": [
+      985,
+      374,
+      629,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "과목군편성과목",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "교과",
+       "depth": 0,
+       "box": [
+        1035,
+        375,
+        140,
+        36
+       ],
+       "id": "col:과목군편성과목/교과"
+      },
+      {
+       "label": "과목구분",
+       "depth": 0,
+       "box": [
+        1175,
+        375,
+        140,
+        36
+       ],
+       "id": "col:과목군편성과목/과목구분"
+      },
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        1316,
+        375,
+        281,
+        36
+       ],
+       "id": "col:과목군편성과목/과목명"
+      }
+     ],
+     "id": "grid:과목군편성과목"
+    }
+   ]
+  },
+  {
+   "id": "tab:입학생 학교 교육과정 검증",
+   "tab": "입학생 학교 교육과정 검증",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "입학생 학교 교육과정 등록",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "입학생 학교 교육과정 등록",
+      "입학생 학교 교육과정 검증",
+      "입학생 학교 교육과정 조회"
+     ],
+     "active": "입학생 학교 교육과정 검증",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "입학학년도",
+     "box": [
+      165,
+      152,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "입학학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:입학학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "입학생 학교교육과정 검증",
+     "box": [
+      25,
+      213,
+      1575,
+      225
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "입학생 학교교육과정 검증",
+     "selectable": false,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        26,
+        214,
+        149,
+        62
+       ],
+       "id": "col:입학생 학교교육과정 검증/구분"
+      },
+      {
+       "label": "교과영역",
+       "depth": 0,
+       "box": [
+        175,
+        214,
+        98,
+        62
+       ],
+       "id": "col:입학생 학교교육과정 검증/교과영역"
+      },
+      {
+       "label": "교과(군)",
+       "depth": 0,
+       "box": [
+        273,
+        214,
+        199,
+        62
+       ],
+       "id": "col:입학생 학교교육과정 검증/교과(군)"
+      },
+      {
+       "label": "과목구분",
+       "depth": 0,
+       "box": [
+        472,
+        214,
+        133,
+        62
+       ],
+       "id": "col:입학생 학교교육과정 검증/과목구분"
+      },
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        604,
+        214,
+        265,
+        62
+       ],
+       "id": "col:입학생 학교교육과정 검증/과목명"
+      },
+      {
+       "label": "1학년",
+       "depth": 0,
+       "box": [
+        870,
+        214,
+        199,
+        31
+       ],
+       "span": 2,
+       "id": "col:입학생 학교교육과정 검증/1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 0,
+       "box": [
+        1068,
+        214,
+        199,
+        31
+       ],
+       "span": 2,
+       "id": "col:입학생 학교교육과정 검증/2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 0,
+       "box": [
+        1267,
+        214,
+        199,
+        31
+       ],
+       "span": 2,
+       "id": "col:입학생 학교교육과정 검증/3학년"
+      },
+      {
+       "label": "이수 학점",
+       "depth": 0,
+       "box": [
+        1466,
+        214,
+        133,
+        62
+       ],
+       "id": "col:입학생 학교교육과정 검증/이수 학점"
+      },
+      {
+       "label": "1학기",
+       "depth": 1,
+       "box": [
+        870,
+        245,
+        99,
+        31
+       ],
+       "id": "col:입학생 학교교육과정 검증/1학년>1학기"
+      },
+      {
+       "label": "2학기",
+       "depth": 1,
+       "box": [
+        969,
+        245,
+        99,
+        31
+       ],
+       "id": "col:입학생 학교교육과정 검증/1학년>2학기"
+      },
+      {
+       "label": "1학기",
+       "depth": 1,
+       "box": [
+        1068,
+        245,
+        99,
+        31
+       ],
+       "id": "col:입학생 학교교육과정 검증/2학년>1학기"
+      },
+      {
+       "label": "2학기",
+       "depth": 1,
+       "box": [
+        1168,
+        245,
+        99,
+        31
+       ],
+       "id": "col:입학생 학교교육과정 검증/2학년>2학기"
+      },
+      {
+       "label": "1학기",
+       "depth": 1,
+       "box": [
+        1267,
+        245,
+        99,
+        31
+       ],
+       "id": "col:입학생 학교교육과정 검증/3학년>1학기"
+      },
+      {
+       "label": "2학기",
+       "depth": 1,
+       "box": [
+        1367,
+        245,
+        99,
+        31
+       ],
+       "id": "col:입학생 학교교육과정 검증/3학년>2학기"
+      }
+     ],
+     "id": "grid:입학생 학교교육과정 검증"
+    },
+    {
+     "aria": null,
+     "box": [
+      30,
+      458,
+      200,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학점검증",
+     "id": "heading:학점검증"
+    },
+    {
+     "aria": null,
+     "box": [
+      30,
+      591,
+      200,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학기검증",
+     "id": "heading:학기검증"
+    },
+    {
+     "aria": null,
+     "box": [
+      30,
+      724,
+      200,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학점검증",
+     "id": "heading:학점검증#2"
+    }
+   ]
+  },
+  {
+   "id": "tab:입학생 학교 교육과정 조회",
+   "tab": "입학생 학교 교육과정 조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "입학생 학교 교육과정 등록",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "입학생 학교 교육과정 등록",
+      "입학생 학교 교육과정 검증",
+      "입학생 학교 교육과정 조회"
+     ],
+     "active": "입학생 학교 교육과정 조회",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "입학학년도",
+     "box": [
+      165,
+      152,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "입학학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:입학학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "제출",
+     "box": [
+      1503,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "제출",
+     "variant": "secondary",
+     "id": "button:제출"
+    },
+    {
+     "aria": "제출취소",
+     "box": [
+      1551,
+      213,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "제출취소",
+     "variant": "secondary",
+     "id": "button:제출취소"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 입학생학교교육과정관리 > 입학생학교교육과정등록/검증",
+ "viewport": [
+  1920,
+  945
+ ]
+}

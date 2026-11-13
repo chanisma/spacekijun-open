@@ -1,0 +1,164 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›수요조사및수강신청관리›수강신청",
+ "name": "수강신청",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:02:46+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "입학년도",
+     "box": [
+      165,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "입학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:입학년도"
+    },
+    {
+     "aria": "수강신청구분",
+     "box": [
+      415,
+      82,
+      231,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "수강신청",
+     "options": [
+      "본교교육과정",
+      "공동교육과정"
+     ],
+     "id": "radio:수강신청"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "개요복사(수강신청이력포함)",
+     "box": [
+      1339,
+      133,
+      168,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개요복사(수강신청이력포함)",
+     "variant": "primary",
+     "id": "button:개요복사(수강신청이력포함)"
+    },
+    {
+     "aria": "만들기",
+     "box": [
+      1515,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "만들기",
+     "variant": "primary",
+     "id": "button:만들기"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "수강신청 목록 테이블 시작",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수강신청 목록 테이블 시작",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "제목",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        961,
+        36
+       ],
+       "id": "col:수강신청 목록 테이블 시작/제목"
+      },
+      {
+       "label": "조사기간",
+       "depth": 0,
+       "box": [
+        1037,
+        174,
+        385,
+        36
+       ],
+       "id": "col:수강신청 목록 테이블 시작/조사기간"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        1422,
+        174,
+        192,
+        36
+       ],
+       "id": "col:수강신청 목록 테이블 시작/진행상태"
+      }
+     ],
+     "id": "grid:수강신청 목록 테이블 시작"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 수요조사및수강신청관리 > 수강신청",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업/수료관리›졸업/수료대장 출력",
+ "name": "졸업/수료대장 출력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:18:55+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": "구분",
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "구분",
+     "options": [
+      "졸업대장",
+      "수료대장"
+     ],
+     "id": "radio:구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "졸업대장번호",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "졸업대장번호",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "졸업대장번호",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        209,
+        62
+       ],
+       "id": "col:졸업대장번호/졸업대장번호"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        235,
+        174,
+        209,
+        62
+       ],
+       "id": "col:졸업대장번호/학과"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        444,
+        174,
+        251,
+        62
+       ],
+       "id": "col:졸업대장번호/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        695,
+        174,
+        251,
+        62
+       ],
+       "id": "col:졸업대장번호/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "졸업년월일",
+       "depth": 0,
+       "box": [
+        945,
+        174,
+        251,
+        62
+       ],
+       "id": "col:졸업대장번호/졸업년월일"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1196,
+        174,
+        418,
+        62
+       ],
+       "id": "col:졸업대장번호/비고"
+      }
+     ],
+     "id": "grid:졸업대장번호"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업/수료관리 > 졸업/수료대장 출력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

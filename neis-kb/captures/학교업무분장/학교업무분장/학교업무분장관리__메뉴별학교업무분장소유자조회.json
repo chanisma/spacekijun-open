@@ -1,0 +1,194 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교업무분장›학교업무분장›학교업무분장관리›메뉴별학교업무분장소유자조회",
+ "name": "메뉴별학교업무분장소유자조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:56:55+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      171,
+      82,
+      84,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "사용자명/사용자ID 선택",
+     "box": [
+      265,
+      82,
+      170,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "학년도",
+     "options": [
+      "사용자명",
+      "사용자ID"
+     ],
+     "id": "radio:학년도"
+    },
+    {
+     "aria": "사용자 찾기",
+     "box": [
+      570,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": "메뉴명/메뉴ID 선택",
+     "box": [
+      630,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "메뉴명/메뉴ID 선택",
+     "options": [
+      "메뉴명",
+      "메뉴ID"
+     ],
+     "id": "radio:메뉴명/메뉴ID 선택"
+    },
+    {
+     "aria": "메뉴 찾기",
+     "box": [
+      935,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "link",
+     "id": "button:찾기#2"
+    },
+    {
+     "aria": "사용자구분",
+     "box": [
+      1125,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사용자구분"
+    },
+    {
+     "aria": "본교재직자여부",
+     "box": [
+      1361,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "본교재직자여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:본교재직자여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      45,
+      122,
+      113,
+      21
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "메뉴별 업무분장",
+     "checked": true,
+     "id": "check:메뉴별 업무분장"
+    },
+    {
+     "aria": null,
+     "box": [
+      168,
+      122,
+      80,
+      21
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "자료권한",
+     "checked": true,
+     "id": "check:자료권한"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교업무분장 > 학교업무분장관리 > 메뉴별학교업무분장소유자조회",
+ "alsoVia": [
+  "업무분장설정업무"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

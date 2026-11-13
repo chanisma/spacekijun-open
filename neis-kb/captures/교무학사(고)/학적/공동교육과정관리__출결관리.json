@@ -1,0 +1,276 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›공동교육과정관리›출결관리",
+ "name": "출결관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:15:46+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "직전일자 이동",
+     "box": [
+      353,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "직전일자 이동",
+     "variant": "plain",
+     "id": "button:직전일자 이동"
+    },
+    {
+     "aria": null,
+     "box": [
+      391,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:일자"
+    },
+    {
+     "aria": "직후일자 이동",
+     "box": [
+      549,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "직후일자 이동",
+     "variant": "plain",
+     "id": "button:직후일자 이동"
+    },
+    {
+     "aria": null,
+     "box": [
+      719,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관명(개설학교)",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관명(개설학교)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1009,
+      82,
+      154,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "학생 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "기관명(개설학교)",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        150,
+        72
+       ],
+       "id": "col:학생 목록/기관명(개설학교)"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        176,
+        174,
+        70,
+        72
+       ],
+       "id": "col:학생 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        246,
+        174,
+        70,
+        72
+       ],
+       "id": "col:학생 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        316,
+        174,
+        70,
+        72
+       ],
+       "id": "col:학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        386,
+        174,
+        150,
+        72
+       ],
+       "id": "col:학생 목록/성명"
+      },
+      {
+       "label": "수강상태",
+       "depth": 0,
+       "box": [
+        536,
+        174,
+        120,
+        72
+       ],
+       "id": "col:학생 목록/수강상태"
+      },
+      {
+       "label": "출결내역",
+       "depth": 0,
+       "box": [
+        656,
+        174,
+        808,
+        36
+       ],
+       "span": 2,
+       "id": "col:학생 목록/출결내역"
+      },
+      {
+       "label": "최종수신일시",
+       "depth": 0,
+       "box": [
+        1464,
+        174,
+        150,
+        72
+       ],
+       "id": "col:학생 목록/최종수신일시"
+      },
+      {
+       "label": "교시",
+       "depth": 1,
+       "box": [
+        656,
+        210,
+        250,
+        36
+       ],
+       "id": "col:학생 목록/출결내역>교시"
+      },
+      {
+       "label": "비고",
+       "depth": 1,
+       "box": [
+        906,
+        210,
+        558,
+        36
+       ],
+       "id": "col:학생 목록/출결내역>비고"
+      }
+     ],
+     "id": "grid:학생 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 공동교육과정관리 > 출결관리",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

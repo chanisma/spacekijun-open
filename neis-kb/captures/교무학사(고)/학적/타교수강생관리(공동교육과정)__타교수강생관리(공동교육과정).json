@@ -1,0 +1,1975 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›타교수강생관리(공동교육과정)›타교수강생관리(공동교육과정)",
+ "name": "타교수강생관리(공동교육과정)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:16:51+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:등록",
+   "tab": "등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "등록 선택됨",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "등록",
+      "확인요청",
+      "학적반영",
+      "시간표",
+      "자료관리",
+      "자료전송"
+     ],
+     "active": "등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "원적교",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:원적교"
+    },
+    {
+     "aria": null,
+     "box": [
+      995,
+      221,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      221,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      232,
+      282,
+      688,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 타교 수강생의 정보를 수정하여 재확인 요청이 필요한 경우 노란색으로 표시됩니다.",
+     "id": "note:※ 타교 수강생의 정보를 수정하여 재확인 요청이 필요한 경우 노란색으로 표시됩니다."
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1252,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "가져오기",
+     "box": [
+      1300,
+      282,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "가져오기",
+     "variant": "primary",
+     "id": "button:가져오기"
+    },
+    {
+     "aria": "일괄등록",
+     "box": [
+      1372,
+      282,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄등록",
+     "variant": "link",
+     "id": "button:일괄등록"
+    },
+    {
+     "aria": "수강생조회",
+     "box": [
+      1443,
+      282,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수강생조회",
+     "variant": "link",
+     "id": "button:수강생조회"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1527,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "타교수강생목록",
+     "box": [
+      25,
+      292,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "타교수강생목록",
+     "id": "heading:타교수강생목록"
+    },
+    {
+     "aria": "타교수강생 목록 그리드",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "타교수강생 목록 그리드",
+     "selectable": true,
+     "declaredColumns": 21,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        50,
+        62
+       ],
+       "id": "col:타교수강생 목록 그리드/순번"
+      },
+      {
+       "label": "학적 반영",
+       "depth": 0,
+       "box": [
+        126,
+        323,
+        50,
+        62
+       ],
+       "id": "col:타교수강생 목록 그리드/학적 반영"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        176,
+        323,
+        70,
+        62
+       ],
+       "id": "col:타교수강생 목록 그리드/학기"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        247,
+        323,
+        101,
+        62
+       ],
+       "id": "col:타교수강생 목록 그리드/성명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        347,
+        323,
+        131,
+        62
+       ],
+       "id": "col:타교수강생 목록 그리드/생년월일"
+      },
+      {
+       "label": "전공",
+       "depth": 0,
+       "box": [
+        478,
+        323,
+        101,
+        62
+       ],
+       "id": "col:타교수강생 목록 그리드/전공"
+      },
+      {
+       "label": "시작일자",
+       "depth": 0,
+       "box": [
+        578,
+        323,
+        101,
+        62
+       ],
+       "id": "col:타교수강생 목록 그리드/시작일자"
+      },
+      {
+       "label": "종료일자",
+       "depth": 0,
+       "box": [
+        679,
+        323,
+        101,
+        62
+       ],
+       "id": "col:타교수강생 목록 그리드/종료일자"
+      },
+      {
+       "label": "공동교육과정 학생정보",
+       "depth": 0,
+       "box": [
+        780,
+        323,
+        241,
+        31
+       ],
+       "span": 4,
+       "id": "col:타교수강생 목록 그리드/공동교육과정 학생정보"
+      },
+      {
+       "label": "원적교 학생정보",
+       "depth": 0,
+       "box": [
+        1021,
+        323,
+        493,
+        31
+       ],
+       "span": 6,
+       "id": "col:타교수강생 목록 그리드/원적교 학생정보"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1513,
+        323,
+        101,
+        62
+       ],
+       "id": "col:타교수강생 목록 그리드/비고"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        780,
+        354,
+        70,
+        31
+       ],
+       "id": "col:타교수강생 목록 그리드/공동교육과정 학생정보>학년"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        850,
+        354,
+        101,
+        31
+       ],
+       "id": "col:타교수강생 목록 그리드/공동교육과정 학생정보>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        950,
+        354,
+        70,
+        31
+       ],
+       "id": "col:타교수강생 목록 그리드/공동교육과정 학생정보>번호"
+      },
+      {
+       "label": "학교명",
+       "depth": 1,
+       "box": [
+        1021,
+        354,
+        101,
+        31
+       ],
+       "id": "col:타교수강생 목록 그리드/원적교 학생정보>학교명"
+      },
+      {
+       "label": "학기",
+       "depth": 1,
+       "box": [
+        1121,
+        354,
+        50,
+        31
+       ],
+       "id": "col:타교수강생 목록 그리드/원적교 학생정보>학기"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        1172,
+        354,
+        70,
+        31
+       ],
+       "id": "col:타교수강생 목록 그리드/원적교 학생정보>학년"
+      },
+      {
+       "label": "학과",
+       "depth": 1,
+       "box": [
+        1242,
+        354,
+        101,
+        31
+       ],
+       "id": "col:타교수강생 목록 그리드/원적교 학생정보>학과"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        1343,
+        354,
+        101,
+        31
+       ],
+       "id": "col:타교수강생 목록 그리드/원적교 학생정보>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        1443,
+        354,
+        70,
+        31
+       ],
+       "id": "col:타교수강생 목록 그리드/원적교 학생정보>번호"
+      }
+     ],
+     "id": "grid:타교수강생 목록 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:확인요청",
+   "tab": "확인요청",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "등록",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "등록",
+      "확인요청",
+      "학적반영",
+      "시간표",
+      "자료관리",
+      "자료전송",
+      "확인요청",
+      "확인요청취소"
+     ],
+     "active": "확인요청",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      221,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      221,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "확인요청목록",
+     "box": [
+      25,
+      292,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "확인요청목록",
+     "id": "heading:확인요청목록"
+    },
+    {
+     "aria": "확인요청목록 그리드",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "확인요청목록 그리드",
+     "selectable": true,
+     "declaredColumns": 19,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        50,
+        62
+       ],
+       "id": "col:확인요청목록 그리드/순번"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        126,
+        323,
+        93,
+        62
+       ],
+       "id": "col:확인요청목록 그리드/학기"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        219,
+        323,
+        116,
+        62
+       ],
+       "id": "col:확인요청목록 그리드/성명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        335,
+        323,
+        140,
+        62
+       ],
+       "id": "col:확인요청목록 그리드/생년월일"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        475,
+        323,
+        105,
+        62
+       ],
+       "id": "col:확인요청목록 그리드/상태"
+      },
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        579,
+        323,
+        116,
+        62
+       ],
+       "id": "col:확인요청목록 그리드/일자"
+      },
+      {
+       "label": "공동교육과정 학생정보",
+       "depth": 0,
+       "box": [
+        696,
+        323,
+        233,
+        31
+       ],
+       "span": 4,
+       "id": "col:확인요청목록 그리드/공동교육과정 학생정보"
+      },
+      {
+       "label": "원적교 학생정보",
+       "depth": 0,
+       "box": [
+        928,
+        323,
+        570,
+        31
+       ],
+       "span": 6,
+       "id": "col:확인요청목록 그리드/원적교 학생정보"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1498,
+        323,
+        116,
+        62
+       ],
+       "id": "col:확인요청목록 그리드/비고"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        696,
+        354,
+        58,
+        31
+       ],
+       "id": "col:확인요청목록 그리드/공동교육과정 학생정보>학년"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        754,
+        354,
+        116,
+        31
+       ],
+       "id": "col:확인요청목록 그리드/공동교육과정 학생정보>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        870,
+        354,
+        58,
+        31
+       ],
+       "id": "col:확인요청목록 그리드/공동교육과정 학생정보>번호"
+      },
+      {
+       "label": "학교명",
+       "depth": 1,
+       "box": [
+        928,
+        354,
+        163,
+        31
+       ],
+       "id": "col:확인요청목록 그리드/원적교 학생정보>학교명"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        1091,
+        354,
+        58,
+        31
+       ],
+       "id": "col:확인요청목록 그리드/원적교 학생정보>학년"
+      },
+      {
+       "label": "학기",
+       "depth": 1,
+       "box": [
+        1149,
+        354,
+        58,
+        31
+       ],
+       "id": "col:확인요청목록 그리드/원적교 학생정보>학기"
+      },
+      {
+       "label": "학과",
+       "depth": 1,
+       "box": [
+        1207,
+        354,
+        116,
+        31
+       ],
+       "id": "col:확인요청목록 그리드/원적교 학생정보>학과"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        1323,
+        354,
+        116,
+        31
+       ],
+       "id": "col:확인요청목록 그리드/원적교 학생정보>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        1440,
+        354,
+        58,
+        31
+       ],
+       "id": "col:확인요청목록 그리드/원적교 학생정보>번호"
+      }
+     ],
+     "id": "grid:확인요청목록 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:학적반영",
+   "tab": "학적반영",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "등록",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "등록",
+      "확인요청",
+      "학적반영",
+      "시간표",
+      "자료관리",
+      "자료전송",
+      "승인요청",
+      "학적반영"
+     ],
+     "active": "학적반영",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "학적반영여부",
+     "box": [
+      865,
+      221,
+      300,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "학적반영여부",
+     "options": [
+      "미반영된자료",
+      "학적반영된자료"
+     ],
+     "id": "radio:학적반영여부"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      221,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      282,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 3세대 업무승인건은 기결취소 없이 학적반영취소 가능합니다. 다만 4세대이후 업무승인건은 기결취소 후 학적반영취소 하셔야합니다.",
+     "id": "note:※ 3세대 업무승인건은 기결취소 없이 학적반영취소 가능합니다. 다만 4세대이후 업무승인건은 기결취소 후 학적반영취소 하셔야합니다."
+    },
+    {
+     "aria": "학적반영목록",
+     "box": [
+      25,
+      331,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학적반영목록",
+     "id": "heading:학적반영목록"
+    },
+    {
+     "aria": "학적반영목록 그리드",
+     "box": [
+      25,
+      361,
+      1590,
+      452
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학적반영목록 그리드",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        76,
+        362,
+        110,
+        62
+       ],
+       "id": "col:학적반영목록 그리드/학기"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        186,
+        362,
+        220,
+        62
+       ],
+       "id": "col:학적반영목록 그리드/성명"
+      },
+      {
+       "label": "공동교육과정 학생정보",
+       "depth": 0,
+       "box": [
+        406,
+        362,
+        330,
+        31
+       ],
+       "span": 4,
+       "id": "col:학적반영목록 그리드/공동교육과정 학생정보"
+      },
+      {
+       "label": "원적교",
+       "depth": 0,
+       "box": [
+        735,
+        362,
+        439,
+        62
+       ],
+       "id": "col:학적반영목록 그리드/원적교"
+      },
+      {
+       "label": "승인상태",
+       "depth": 0,
+       "box": [
+        1175,
+        362,
+        220,
+        62
+       ],
+       "id": "col:학적반영목록 그리드/승인상태"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1394,
+        362,
+        220,
+        62
+       ],
+       "id": "col:학적반영목록 그리드/결재상태"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        406,
+        393,
+        110,
+        31
+       ],
+       "id": "col:학적반영목록 그리드/공동교육과정 학생정보>학년"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        515,
+        393,
+        110,
+        31
+       ],
+       "id": "col:학적반영목록 그리드/공동교육과정 학생정보>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        625,
+        393,
+        110,
+        31
+       ],
+       "id": "col:학적반영목록 그리드/공동교육과정 학생정보>번호"
+      }
+     ],
+     "id": "grid:학적반영목록 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:시간표",
+   "tab": "시간표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "등록",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "등록",
+      "확인요청",
+      "학적반영",
+      "시간표",
+      "자료관리",
+      "자료전송"
+     ],
+     "active": "시간표",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      221,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "일괄전송",
+     "box": [
+      283,
+      282,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄전송",
+     "variant": "primary",
+     "id": "button:일괄전송"
+    },
+    {
+     "aria": "일괄출력",
+     "box": [
+      355,
+      282,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄출력",
+     "variant": "link",
+     "id": "button:일괄출력"
+    },
+    {
+     "aria": "전송",
+     "box": [
+      1527,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전송",
+     "variant": "primary",
+     "id": "button:전송"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      292,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생목록",
+     "id": "heading:학생목록"
+    },
+    {
+     "aria": "학생목록 그리드",
+     "box": [
+      25,
+      322,
+      394,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록 그리드",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        50,
+        36
+       ],
+       "id": "col:학생목록 그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        126,
+        323,
+        146,
+        36
+       ],
+       "id": "col:학생목록 그리드/성명"
+      },
+      {
+       "label": "전송일시",
+       "depth": 0,
+       "box": [
+        272,
+        323,
+        146,
+        36
+       ],
+       "id": "col:학생목록 그리드/전송일시"
+      }
+     ],
+     "id": "grid:학생목록 그리드"
+    },
+    {
+     "aria": "학생별 기초시간표",
+     "box": [
+      434,
+      322,
+      1181,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생별 기초시간표",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "교시",
+       "depth": 0,
+       "box": [
+        435,
+        323,
+        111,
+        36
+       ],
+       "id": "col:학생별 기초시간표/교시"
+      },
+      {
+       "label": "월요일",
+       "depth": 0,
+       "box": [
+        546,
+        323,
+        178,
+        36
+       ],
+       "id": "col:학생별 기초시간표/월요일"
+      },
+      {
+       "label": "화요일",
+       "depth": 0,
+       "box": [
+        724,
+        323,
+        178,
+        36
+       ],
+       "id": "col:학생별 기초시간표/화요일"
+      },
+      {
+       "label": "수요일",
+       "depth": 0,
+       "box": [
+        902,
+        323,
+        178,
+        36
+       ],
+       "id": "col:학생별 기초시간표/수요일"
+      },
+      {
+       "label": "목요일",
+       "depth": 0,
+       "box": [
+        1080,
+        323,
+        178,
+        36
+       ],
+       "id": "col:학생별 기초시간표/목요일"
+      },
+      {
+       "label": "금요일",
+       "depth": 0,
+       "box": [
+        1258,
+        323,
+        178,
+        36
+       ],
+       "id": "col:학생별 기초시간표/금요일"
+      },
+      {
+       "label": "토요일",
+       "depth": 0,
+       "box": [
+        1436,
+        323,
+        178,
+        36
+       ],
+       "id": "col:학생별 기초시간표/토요일"
+      }
+     ],
+     "id": "grid:학생별 기초시간표"
+    }
+   ]
+  },
+  {
+   "id": "tab:자료관리",
+   "tab": "자료관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "등록",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "등록",
+      "확인요청",
+      "학적반영",
+      "시간표",
+      "자료관리",
+      "자료전송"
+     ],
+     "active": "자료관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      221,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      292,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생목록",
+     "id": "heading:학생목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      292,
+      292,
+      252,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "자료를 선택하세요.",
+     "id": "heading:자료를 선택하세요."
+    },
+    {
+     "aria": "학생목록 그리드",
+     "box": [
+      25,
+      322,
+      252,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록 그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        323,
+        83,
+        37
+       ],
+       "id": "col:학생목록 그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        109,
+        323,
+        167,
+        37
+       ],
+       "id": "col:학생목록 그리드/성명"
+      }
+     ],
+     "id": "grid:학생목록 그리드"
+    },
+    {
+     "aria": "자료목록 그리드",
+     "box": [
+      292,
+      322,
+      252,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "자료목록 그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [],
+     "id": "grid:자료목록 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:자료전송",
+   "tab": "자료전송",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "등록",
+     "box": [
+      25,
+      71,
+      1518,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "등록",
+      "확인요청",
+      "학적반영",
+      "시간표",
+      "자료관리",
+      "자료전송",
+      "승인요청",
+      "자료전송"
+     ],
+     "active": "자료전송",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "마감",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:마감"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "승인",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:승인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1375,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전송",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전송"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      221,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "수신정보갱신",
+     "box": [
+      1264,
+      282,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수신정보갱신",
+     "variant": "primary",
+     "id": "button:수신정보갱신"
+    },
+    {
+     "aria": "마감",
+     "box": [
+      1360,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "마감",
+     "variant": "primary",
+     "id": "button:마감"
+    },
+    {
+     "aria": "마감취소",
+     "box": [
+      1551,
+      282,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "마감취소",
+     "variant": "secondary",
+     "id": "button:마감취소"
+    },
+    {
+     "aria": "타교수강생목록",
+     "box": [
+      25,
+      292,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "타교수강생목록",
+     "id": "heading:타교수강생목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1039,
+      287,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "성적",
+     "checked": false,
+     "id": "check:성적"
+    },
+    {
+     "aria": null,
+     "box": [
+      1106,
+      287,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "세특",
+     "checked": false,
+     "id": "check:세특"
+    },
+    {
+     "aria": null,
+     "box": [
+      1173,
+      287,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "학생생활",
+     "checked": false,
+     "id": "check:학생생활"
+    },
+    {
+     "aria": "타교수강생 목록 그리드",
+     "box": [
+      25,
+      332,
+      1590,
+      481
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "타교수강생 목록 그리드",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        333,
+        50,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        126,
+        333,
+        50,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        176,
+        333,
+        150,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        326,
+        333,
+        50,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        376,
+        333,
+        253,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/성명"
+      },
+      {
+       "label": "원적교",
+       "depth": 0,
+       "box": [
+        629,
+        333,
+        379,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/원적교"
+      },
+      {
+       "label": "마감상태",
+       "depth": 0,
+       "box": [
+        1008,
+        333,
+        74,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/마감상태"
+      },
+      {
+       "label": "승인상태",
+       "depth": 0,
+       "box": [
+        1082,
+        333,
+        90,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/승인상태"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        1172,
+        333,
+        74,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/전송상태"
+      },
+      {
+       "label": "성적 전송상태",
+       "depth": 0,
+       "box": [
+        1246,
+        333,
+        90,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/성적 전송상태"
+      },
+      {
+       "label": "전송일시",
+       "depth": 0,
+       "box": [
+        1336,
+        333,
+        278,
+        36
+       ],
+       "id": "col:타교수강생 목록 그리드/전송일시"
+      }
+     ],
+     "id": "grid:타교수강생 목록 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 타교수강생관리(공동교육과정) > 타교수강생관리(공동교육과정)",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

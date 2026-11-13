@@ -1,0 +1,1227 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›수급자관리›교육복지 중지자관리",
+ "name": "교육복지 중지자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:17:52+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:교육비 지원",
+   "tab": "교육비 지원",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 당해 학년도에 수급중지처리한 대상만 중지취소, 취소요청가능 ※ 수기발송완료: e-그린우편 개통 이전 학교에서 우편 발송완료",
+     "id": "note:※ 당해 학년도에 수급중지처리한 대상만 중지취소, 취소요청가능 ※ 수기발송완료: e-그린우편 개통 이전 학교에서 우편 발송완료"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      127,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육비 지원",
+      "교육급여"
+     ],
+     "active": "교육비 지원",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      183,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      183,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1516,
+      183,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "(교육비탭) 수급중지자관리 목록",
+     "box": [
+      25,
+      269,
+      1575,
+      273
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "(교육비탭) 수급중지자관리 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        270,
+        50,
+        25
+       ],
+       "id": "col:(교육비탭) 수급중지자관리 목록/순번"
+      },
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        126,
+        270,
+        246,
+        25
+       ],
+       "id": "col:(교육비탭) 수급중지자관리 목록/학생명"
+      },
+      {
+       "label": "학생 주민번호",
+       "depth": 0,
+       "box": [
+        372,
+        270,
+        246,
+        25
+       ],
+       "id": "col:(교육비탭) 수급중지자관리 목록/학생 주민번호"
+      },
+      {
+       "label": "보장 중지일자",
+       "depth": 0,
+       "box": [
+        617,
+        270,
+        246,
+        25
+       ],
+       "id": "col:(교육비탭) 수급중지자관리 목록/보장 중지일자"
+      },
+      {
+       "label": "중지 결정일자",
+       "depth": 0,
+       "box": [
+        863,
+        270,
+        246,
+        25
+       ],
+       "id": "col:(교육비탭) 수급중지자관리 목록/중지 결정일자"
+      },
+      {
+       "label": "학적상태",
+       "depth": 0,
+       "box": [
+        1108,
+        270,
+        246,
+        25
+       ],
+       "id": "col:(교육비탭) 수급중지자관리 목록/학적상태"
+      },
+      {
+       "label": "중지취소",
+       "depth": 0,
+       "box": [
+        1354,
+        270,
+        246,
+        25
+       ],
+       "id": "col:(교육비탭) 수급중지자관리 목록/중지취소"
+      }
+     ],
+     "id": "grid:(교육비탭) 수급중지자관리 목록"
+    },
+    {
+     "aria": "(교육비탭)수급중지자의 지급항목",
+     "box": [
+      25,
+      577,
+      1575,
+      150
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "(교육비탭)수급중지자의 지급항목",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        578,
+        50,
+        25
+       ],
+       "id": "col:(교육비탭)수급중지자의 지급항목/순번"
+      },
+      {
+       "label": "중지신청인",
+       "depth": 0,
+       "box": [
+        76,
+        578,
+        381,
+        25
+       ],
+       "id": "col:(교육비탭)수급중지자의 지급항목/중지신청인"
+      },
+      {
+       "label": "학생과의 관계",
+       "depth": 0,
+       "box": [
+        457,
+        578,
+        150,
+        25
+       ],
+       "id": "col:(교육비탭)수급중지자의 지급항목/학생과의 관계"
+      },
+      {
+       "label": "지원학년도",
+       "depth": 0,
+       "box": [
+        607,
+        578,
+        229,
+        25
+       ],
+       "id": "col:(교육비탭)수급중지자의 지급항목/지원학년도"
+      },
+      {
+       "label": "중지항목",
+       "depth": 0,
+       "box": [
+        836,
+        578,
+        381,
+        25
+       ],
+       "id": "col:(교육비탭)수급중지자의 지급항목/중지항목"
+      },
+      {
+       "label": "중지사유",
+       "depth": 0,
+       "box": [
+        1218,
+        578,
+        381,
+        25
+       ],
+       "id": "col:(교육비탭)수급중지자의 지급항목/중지사유"
+      }
+     ],
+     "id": "grid:(교육비탭)수급중지자의 지급항목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1220,
+      783,
+      375,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "세대주와의관계",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:세대주와의관계"
+    },
+    {
+     "aria": null,
+     "box": [
+      1220,
+      813,
+      115,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1350,
+      813,
+      115,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전화번호#2"
+    },
+    {
+     "aria": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "box": [
+      296,
+      843,
+      30,
+      20
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "variant": "link",
+     "id": "button:우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      332,
+      843,
+      758,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:주민등록번호 (외국인등록번호)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1220,
+      843,
+      115,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대전화",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:휴대전화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1350,
+      843,
+      115,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대전화",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:휴대전화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      332,
+      869,
+      758,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:주민등록번호 (외국인등록번호)#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1220,
+      873,
+      375,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이메일",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:이메일"
+    }
+   ]
+  },
+  {
+   "id": "tab:교육급여",
+   "tab": "교육급여",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 당해 학년도에 수급중지처리한 대상만 중지취소, 취소요청가능 ※ 수기발송완료: e-그린우편 개통 이전 학교에서 우편 발송완료",
+     "id": "note:※ 당해 학년도에 수급중지처리한 대상만 중지취소, 취소요청가능 ※ 수기발송완료: e-그린우편 개통 이전 학교에서 우편 발송완료"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      127,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육비 지원",
+      "교육급여"
+     ],
+     "active": "교육급여",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      183,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      183,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "이름",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:이름"
+    },
+    {
+     "aria": null,
+     "box": [
+      501,
+      183,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "이름",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:이름#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      841,
+      183,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통보구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:통보구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1141,
+      183,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "중지사유",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:중지사유"
+    },
+    {
+     "aria": null,
+     "box": [
+      1506,
+      183,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1348,
+      229,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통지서출력",
+     "variant": "primary",
+     "id": "button:통지서출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      229,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통보완료처리(수기)",
+     "variant": "primary",
+     "id": "button:통보완료처리(수기)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      229,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통보",
+     "variant": "primary",
+     "id": "button:통보"
+    },
+    {
+     "aria": "(교육급여탭) 수급중지자관리 목록",
+     "box": [
+      25,
+      264,
+      1575,
+      278
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "(교육급여탭) 수급중지자관리 목록",
+     "selectable": false,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        84,
+        265,
+        58,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/순번"
+      },
+      {
+       "label": "요청구분",
+       "depth": 0,
+       "box": [
+        142,
+        265,
+        116,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/요청구분"
+      },
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        257,
+        265,
+        58,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/학년도"
+      },
+      {
+       "label": "학교명",
+       "depth": 0,
+       "box": [
+        315,
+        265,
+        139,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/학교명"
+      },
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        454,
+        265,
+        93,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/학생명"
+      },
+      {
+       "label": "신청자명",
+       "depth": 0,
+       "box": [
+        546,
+        265,
+        93,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/신청자명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        639,
+        265,
+        93,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/생년월일"
+      },
+      {
+       "label": "수급중지사유",
+       "depth": 0,
+       "box": [
+        732,
+        265,
+        116,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/수급중지사유"
+      },
+      {
+       "label": "자격서비스 중지일",
+       "depth": 0,
+       "box": [
+        847,
+        265,
+        139,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/자격서비스 중지일"
+      },
+      {
+       "label": "중지 결정일자",
+       "depth": 0,
+       "box": [
+        986,
+        265,
+        116,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/중지 결정일자"
+      },
+      {
+       "label": "통보여부",
+       "depth": 0,
+       "box": [
+        1102,
+        265,
+        69,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/통보여부"
+      },
+      {
+       "label": "통보일자",
+       "depth": 0,
+       "box": [
+        1171,
+        265,
+        116,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/통보일자"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        1287,
+        265,
+        93,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/구분"
+      },
+      {
+       "label": "출력 횟수",
+       "depth": 0,
+       "box": [
+        1379,
+        265,
+        69,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/출력 횟수"
+      },
+      {
+       "label": "중지/제외 취소 요청",
+       "depth": 0,
+       "box": [
+        1449,
+        265,
+        150,
+        25
+       ],
+       "id": "col:(교육급여탭) 수급중지자관리 목록/중지/제외 취소 요청"
+      }
+     ],
+     "id": "grid:(교육급여탭) 수급중지자관리 목록"
+    },
+    {
+     "aria": "(교육급여탭)수급중지자의 지급항목",
+     "box": [
+      25,
+      577,
+      1575,
+      150
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "(교육급여탭)수급중지자의 지급항목",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        578,
+        50,
+        25
+       ],
+       "id": "col:(교육급여탭)수급중지자의 지급항목/순번"
+      },
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        76,
+        578,
+        305,
+        25
+       ],
+       "id": "col:(교육급여탭)수급중지자의 지급항목/학년도"
+      },
+      {
+       "label": "지원항목명",
+       "depth": 0,
+       "box": [
+        381,
+        578,
+        305,
+        25
+       ],
+       "id": "col:(교육급여탭)수급중지자의 지급항목/지원항목명"
+      },
+      {
+       "label": "중지일자",
+       "depth": 0,
+       "box": [
+        685,
+        578,
+        305,
+        25
+       ],
+       "id": "col:(교육급여탭)수급중지자의 지급항목/중지일자"
+      },
+      {
+       "label": "기타상세내용",
+       "depth": 0,
+       "box": [
+        990,
+        578,
+        305,
+        25
+       ],
+       "id": "col:(교육급여탭)수급중지자의 지급항목/기타상세내용"
+      },
+      {
+       "label": "자격서비스중지일",
+       "depth": 0,
+       "box": [
+        1294,
+        578,
+        305,
+        25
+       ],
+       "id": "col:(교육급여탭)수급중지자의 지급항목/자격서비스중지일"
+      }
+     ],
+     "id": "grid:(교육급여탭)수급중지자의 지급항목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1497,
+      772,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "세부정보수정",
+     "variant": "primary",
+     "id": "button:세부정보수정"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      843,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1338,
+      843,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:전화번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      873,
+      200,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "장민헌",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:장민헌"
+    },
+    {
+     "aria": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "box": [
+      420,
+      873,
+      30,
+      20
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "variant": "link",
+     "id": "button:우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      460,
+      873,
+      620,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:주민등록번호 (외국인등록번호)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      873,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대전화",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:휴대전화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1338,
+      873,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대전화",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:휴대전화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      903,
+      870,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:주민등록번호 (외국인등록번호)#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      585,
+      935,
+      180,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "mask",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:주민등록번호 (외국인등록번호)#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      995,
+      72,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:전화번호#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      297,
+      995,
+      72,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:전화번호#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      383,
+      995,
+      72,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "일반계",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:일반계"
+    },
+    {
+     "aria": null,
+     "box": [
+      585,
+      995,
+      72,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:휴대전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      672,
+      995,
+      72,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:휴대전화번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      758,
+      995,
+      72,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "일반학과",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:일반학과"
+    },
+    {
+     "aria": null,
+     "box": [
+      710,
+      1024,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:전화번호#5"
+    },
+    {
+     "aria": null,
+     "box": [
+      838,
+      1024,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:전화번호#6"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      1024,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대전화",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:휴대전화#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      1338,
+      1024,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "휴대전화",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:휴대전화#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      1054,
+      200,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "세 대 주",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:세 대 주"
+    },
+    {
+     "aria": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "box": [
+      420,
+      1054,
+      30,
+      20
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "variant": "link",
+     "id": "button:우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      460,
+      1054,
+      620,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "장민헌",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:장민헌#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 수급자관리 > 교육복지 중지자관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

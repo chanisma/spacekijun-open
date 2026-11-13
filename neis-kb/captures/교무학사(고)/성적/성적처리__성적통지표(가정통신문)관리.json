@@ -1,0 +1,872 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적처리›성적통지표(가정통신문)관리",
+ "name": "성적통지표(가정통신문)관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:33:03+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:개인가정통신문",
+   "tab": "개인가정통신문",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "산출기준",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:산출기준"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 성적통지표의 출석상황에 나오는 자료는 월마감된 출결자료입니다. (전입생일 경우는 이전학교에서의 수업일수 포함)",
+     "id": "note:※ 성적통지표의 출석상황에 나오는 자료는 월마감된 출결자료입니다. (전입생일 경우는 이전학교에서의 수업일수 포함)"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      355,
+      171,
+      1260,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "개인가정통신문",
+      "전체가정통신문"
+     ],
+     "active": "개인가정통신문",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      201,
+      315,
+      613
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "반번호",
+       "depth": 0,
+       "box": [
+        76,
+        202,
+        54,
+        36
+       ],
+       "id": "col:그리드/반번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        130,
+        202,
+        109,
+        36
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "학적사항",
+       "depth": 0,
+       "box": [
+        239,
+        202,
+        100,
+        36
+       ],
+       "id": "col:그리드/학적사항"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      480,
+      267,
+      1130,
+      326
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "내용",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      613,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "미리보기",
+     "variant": "primary",
+     "id": "button:미리보기"
+    },
+    {
+     "aria": null,
+     "box": [
+      483,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "과목점수만 표시",
+     "checked": false,
+     "id": "check:과목점수만 표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      698,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "받은점수만 표시",
+     "checked": false,
+     "id": "check:받은점수만 표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      913,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "가정통신문제외(개별)",
+     "checked": false,
+     "id": "check:가정통신문제외(개별)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1128,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "가정통신문제외(전체)",
+     "checked": false,
+     "id": "check:가정통신문제외(전체)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1343,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "가정에서 학교로 제외",
+     "checked": false,
+     "id": "check:가정에서 학교로 제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      483,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "등급제외",
+     "checked": false,
+     "id": "check:등급제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      698,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "양면인쇄",
+     "checked": false,
+     "id": "check:양면인쇄"
+    },
+    {
+     "aria": null,
+     "box": [
+      913,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "설명자료 표시",
+     "checked": false,
+     "id": "check:설명자료 표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      1128,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "관찰내용",
+     "checked": false,
+     "id": "check:관찰내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1343,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "성취도별 분포비율",
+     "checked": false,
+     "id": "check:성취도별 분포비율"
+    },
+    {
+     "aria": null,
+     "box": [
+      483,
+      730,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "분산 그래프",
+     "checked": false,
+     "id": "check:분산 그래프"
+    },
+    {
+     "aria": null,
+     "box": [
+      698,
+      730,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "성적통지표(영문)",
+     "checked": false,
+     "id": "check:성적통지표(영문)"
+    }
+   ]
+  },
+  {
+   "id": "tab:전체가정통신문",
+   "tab": "전체가정통신문",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "산출기준",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:산출기준"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 성적통지표의 출석상황에 나오는 자료는 월마감된 출결자료입니다. (전입생일 경우는 이전학교에서의 수업일수 포함)",
+     "id": "note:※ 성적통지표의 출석상황에 나오는 자료는 월마감된 출결자료입니다. (전입생일 경우는 이전학교에서의 수업일수 포함)"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      355,
+      171,
+      1260,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "개인가정통신문",
+      "전체가정통신문"
+     ],
+     "active": "개인가정통신문",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      201,
+      315,
+      613
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "반번호",
+       "depth": 0,
+       "box": [
+        76,
+        202,
+        54,
+        36
+       ],
+       "id": "col:그리드/반번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        130,
+        202,
+        109,
+        36
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "학적사항",
+       "depth": 0,
+       "box": [
+        239,
+        202,
+        100,
+        36
+       ],
+       "id": "col:그리드/학적사항"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      480,
+      267,
+      1130,
+      326
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "내용",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      613,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "미리보기",
+     "variant": "primary",
+     "id": "button:미리보기"
+    },
+    {
+     "aria": null,
+     "box": [
+      483,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "과목점수만 표시",
+     "checked": false,
+     "id": "check:과목점수만 표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      698,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "받은점수만 표시",
+     "checked": false,
+     "id": "check:받은점수만 표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      913,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "가정통신문제외(개별)",
+     "checked": false,
+     "id": "check:가정통신문제외(개별)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1128,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "가정통신문제외(전체)",
+     "checked": false,
+     "id": "check:가정통신문제외(전체)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1343,
+      662,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "가정에서 학교로 제외",
+     "checked": false,
+     "id": "check:가정에서 학교로 제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      483,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "등급제외",
+     "checked": false,
+     "id": "check:등급제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      698,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "양면인쇄",
+     "checked": false,
+     "id": "check:양면인쇄"
+    },
+    {
+     "aria": null,
+     "box": [
+      913,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "설명자료 표시",
+     "checked": false,
+     "id": "check:설명자료 표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      1128,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "관찰내용",
+     "checked": false,
+     "id": "check:관찰내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1343,
+      696,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "성취도별 분포비율",
+     "checked": false,
+     "id": "check:성취도별 분포비율"
+    },
+    {
+     "aria": null,
+     "box": [
+      483,
+      730,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "분산 그래프",
+     "checked": false,
+     "id": "check:분산 그래프"
+    },
+    {
+     "aria": null,
+     "box": [
+      698,
+      730,
+      210,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "성적통지표(영문)",
+     "checked": false,
+     "id": "check:성적통지표(영문)"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적처리 > 성적통지표(가정통신문)관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

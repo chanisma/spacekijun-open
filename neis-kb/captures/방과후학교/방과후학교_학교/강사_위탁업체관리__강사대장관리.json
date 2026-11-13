@@ -1,0 +1,198 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›강사/위탁업체관리›강사대장관리",
+ "name": "강사대장관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:03:16+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "강사명",
+     "box": [
+      395,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강사명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:강사명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "강사대장 정보 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "강사대장 정보 목록",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        36
+       ],
+       "id": "col:강사대장 정보 목록/순번"
+      },
+      {
+       "label": "강사명",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        298,
+        36
+       ],
+       "id": "col:강사대장 정보 목록/강사명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        424,
+        174,
+        298,
+        36
+       ],
+       "id": "col:강사대장 정보 목록/생년월일"
+      },
+      {
+       "label": "연락처",
+       "depth": 0,
+       "box": [
+        721,
+        174,
+        298,
+        36
+       ],
+       "id": "col:강사대장 정보 목록/연락처"
+      },
+      {
+       "label": "계약일자",
+       "depth": 0,
+       "box": [
+        1019,
+        174,
+        298,
+        36
+       ],
+       "id": "col:강사대장 정보 목록/계약일자"
+      },
+      {
+       "label": "계약기간",
+       "depth": 0,
+       "box": [
+        1316,
+        174,
+        298,
+        36
+       ],
+       "id": "col:강사대장 정보 목록/계약기간"
+      }
+     ],
+     "id": "grid:강사대장 정보 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 강사/위탁업체관리 > 강사대장관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

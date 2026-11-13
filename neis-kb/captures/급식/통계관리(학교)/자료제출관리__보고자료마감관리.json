@@ -1,0 +1,211 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›통계관리(학교)›자료제출관리›보고자료마감관리",
+ "name": "보고자료마감관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:49:12+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "마감년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:마감년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      435,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "마감구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:마감구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": "마감",
+     "box": [
+      1503,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감",
+     "variant": "primary",
+     "id": "button:마감"
+    },
+    {
+     "aria": "마감취소",
+     "box": [
+      1551,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감취소",
+     "variant": "secondary",
+     "id": "button:마감취소"
+    },
+    {
+     "aria": "보고자료마감관리",
+     "box": [
+      25,
+      143,
+      129,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "보고자료마감관리",
+     "id": "heading:보고자료마감관리"
+    },
+    {
+     "aria": "보고자료마감관리",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "보고자료마감관리",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "마감종류",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        256,
+        36
+       ],
+       "id": "col:보고자료마감관리/마감종류"
+      },
+      {
+       "label": "마감자",
+       "depth": 0,
+       "box": [
+        332,
+        174,
+        256,
+        36
+       ],
+       "id": "col:보고자료마감관리/마감자"
+      },
+      {
+       "label": "마감일자",
+       "depth": 0,
+       "box": [
+        589,
+        174,
+        256,
+        36
+       ],
+       "id": "col:보고자료마감관리/마감일자"
+      },
+      {
+       "label": "제출일자",
+       "depth": 0,
+       "box": [
+        845,
+        174,
+        256,
+        36
+       ],
+       "id": "col:보고자료마감관리/제출일자"
+      },
+      {
+       "label": "반려일자",
+       "depth": 0,
+       "box": [
+        1101,
+        174,
+        256,
+        36
+       ],
+       "id": "col:보고자료마감관리/반려일자"
+      },
+      {
+       "label": "반려사유",
+       "depth": 0,
+       "box": [
+        1358,
+        174,
+        256,
+        36
+       ],
+       "id": "col:보고자료마감관리/반려사유"
+      }
+     ],
+     "id": "grid:보고자료마감관리"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}통계관리(학교) > 자료제출관리 > 보고자료마감관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

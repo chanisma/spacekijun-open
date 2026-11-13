@@ -1,0 +1,136 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생부보존›학생부보존#고등학교›보존자료조회›졸업생학생부조회",
+ "name": "졸업생학생부조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:22:55+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:학생부",
+   "tab": "학생부",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      601,
+      82,
+      86,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "졸업생찾기",
+     "variant": "link",
+     "id": "button:졸업생찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      697,
+      82,
+      97,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "정정이력포함",
+     "checked": false,
+     "id": "check:정정이력포함"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "탭이 1개 있습니다.",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생부"
+     ],
+     "active": "학생부",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      188,
+      1590,
+      625
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [
+     "졸업학년도는(은) 필수 항목입니다."
+    ],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부보존 > 보존자료조회 > 졸업생학생부조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

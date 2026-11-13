@@ -1,0 +1,182 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›자격증취득및NCS이수상황›자격종별능력단위편성정보",
+ "name": "자격종별능력단위편성정보",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:24:54+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1328,
+      133,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "직업기초능력이수시간등록",
+     "box": [
+      1455,
+      133,
+      160,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "직업기초능력이수시간등록",
+     "variant": "link",
+     "id": "button:직업기초능력이수시간등록"
+    },
+    {
+     "aria": "자격종명 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "자격종명 목록",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "시작년도",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        205,
+        62
+       ],
+       "id": "col:자격종명 목록/시작년도"
+      },
+      {
+       "label": "자격구분",
+       "depth": 0,
+       "box": [
+        231,
+        174,
+        256,
+        62
+       ],
+       "id": "col:자격종명 목록/자격구분"
+      },
+      {
+       "label": "자격종명",
+       "depth": 0,
+       "box": [
+        487,
+        174,
+        512,
+        62
+       ],
+       "id": "col:자격종명 목록/자격종명"
+      },
+      {
+       "label": "교육훈련 기준시간",
+       "depth": 0,
+       "box": [
+        999,
+        174,
+        205,
+        62
+       ],
+       "id": "col:자격종명 목록/교육훈련 기준시간"
+      },
+      {
+       "label": "필수",
+       "depth": 0,
+       "box": [
+        1204,
+        174,
+        205,
+        62
+       ],
+       "id": "col:자격종명 목록/필수"
+      },
+      {
+       "label": "선택",
+       "depth": 0,
+       "box": [
+        1409,
+        174,
+        205,
+        62
+       ],
+       "id": "col:자격종명 목록/선택"
+      }
+     ],
+     "id": "grid:자격종명 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 자격증취득및NCS이수상황 > 자격종별능력단위편성정보",
+ "viewport": [
+  1920,
+  945
+ ]
+}

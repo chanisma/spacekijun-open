@@ -1,0 +1,275 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›교육활동신청관리#학교›교외체험학습관리›교외체험학습기준관리",
+ "name": "교외체험학습기준관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:57:00+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      176,
+      83,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1530,
+      83,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      156,
+      135,
+      67,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "연간허용일수",
+     "control": "input",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:연간허용일수"
+    },
+    {
+     "aria": null,
+     "box": [
+      439,
+      135,
+      67,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "신청제한기한",
+     "control": "input",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:신청제한기한"
+    },
+    {
+     "aria": null,
+     "box": [
+      722,
+      135,
+      143,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "반일허용여부",
+     "options": [
+      "허용",
+      "미허용"
+     ],
+     "id": "radio:반일허용여부"
+    },
+    {
+     "aria": "학사일정",
+     "box": [
+      1430,
+      135,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학사일정",
+     "variant": "primary",
+     "id": "button:학사일정"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1502,
+      135,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1550,
+      135,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "결재승인 이력",
+     "box": [
+      26,
+      216,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "결재승인 이력",
+     "id": "heading:결재승인 이력"
+    },
+    {
+     "aria": null,
+     "box": [
+      26,
+      241,
+      1588,
+      571
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        27,
+        242,
+        96,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "기안자",
+       "depth": 0,
+       "box": [
+        123,
+        242,
+        138,
+        36
+       ],
+       "id": "col:그리드/기안자"
+      },
+      {
+       "label": "승인요청일자",
+       "depth": 0,
+       "box": [
+        261,
+        242,
+        236,
+        36
+       ],
+       "id": "col:그리드/승인요청일자"
+      },
+      {
+       "label": "연간허용일수",
+       "depth": 0,
+       "box": [
+        497,
+        242,
+        138,
+        36
+       ],
+       "id": "col:그리드/연간허용일수"
+      },
+      {
+       "label": "신청제한기한",
+       "depth": 0,
+       "box": [
+        636,
+        242,
+        145,
+        36
+       ],
+       "id": "col:그리드/신청제한기한"
+      },
+      {
+       "label": "반일허용여부",
+       "depth": 0,
+       "box": [
+        781,
+        242,
+        164,
+        36
+       ],
+       "id": "col:그리드/반일허용여부"
+      },
+      {
+       "label": "미허용기간",
+       "depth": 0,
+       "box": [
+        945,
+        242,
+        213,
+        36
+       ],
+       "id": "col:그리드/미허용기간"
+      },
+      {
+       "label": "승인일",
+       "depth": 0,
+       "box": [
+        1157,
+        242,
+        243,
+        36
+       ],
+       "id": "col:그리드/승인일"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1400,
+        242,
+        213,
+        36
+       ],
+       "id": "col:그리드/결재상태"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육활동신청관리 > 교외체험학습관리 > 교외체험학습기준관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

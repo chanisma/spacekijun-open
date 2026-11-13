@@ -1,0 +1,127 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›건강기록부관리›반별등록",
+ "name": "반별등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:47:49+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      213,
+      315,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        214,
+        75,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        101,
+        214,
+        238,
+        36
+       ],
+       "span": 2,
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 건강기록부관리 > 반별등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-09-13",
+  "mode": "built-in imagegen",
+  "references": [
+    "chapter-observatory-arrival.png",
+    "library.png"
+  ],
+  "assets": [
+    {
+      "file": "chapter-library-arrival.png",
+      "prompt": "Use case illustration-story. Create a new landscape romance fantasy visual novel CG for Chapter II opening. Reference1 is Ria and Luon identity/costume/art style, reference2 is royal library architecture and palette; treat them as references not edit targets. Outside the magnificent royal academy library at violet twilight, Ria and Luon stop together to gaze up at its grand entrance, golden-lit tall arched windows, carved stone pillars, a book and star crest without letters, elegant stairs. Three-quarter rear/side view allowing recognizable faces. Ria long brown wavy hair purple eyes purple ribbon plum ivory gold outfit, visibly shorter/smaller than taller silver-haired blue-eyed Luon navy gold uniform. Luon gently points out the library that helped him find his own questions, Ria looks up with curious anticipation. Exactly two characters, not dwarfed by the building, occupy foreground center at medium size, library majestic behind them. Wide composition, two characters close together near central 60 percent, lower quarter quiet for dialogue overlay. Match warm luminous detailed painterly Korean romance fantasy art. No text, UI, watermark or modern objects."
+    },
+    {
+      "file": "chapter-library-shelves.png",
+      "prompt": "Use case illustration-story. New landscape romance-fantasy visual novel CG. Reference1 establishes Ria and Luon faces, clothing and detailed Korean romance fantasy painterly art. Reference2 establishes inside royal library. In this vast library filled with countless antique books and soaring plum-and-gold carved shelves, Ria stands close to shelves, eyes wide with wonder and an excited delighted smile, looking upward at the multitude of books while her hand reaches toward a book at comfortable height. Taller silver-haired blue-eyed Luon stands beside her, warmly smiling and gently helping by pointing to a promising shelf while letting her choose. Ria is noticeably shorter/smaller than him, long brown waves purple ribbon violet eyes, ivory/plum academy outfit; Luon navy gold academy uniform. Exactly two people. Three-quarter medium shot, recognizable faces close together in central 60 percent of frame, huge shelves visible behind and above. Keep bottom quarter calmer for dialogue overlay. Warm gold lamps, violet twilight high arched windows, floating dust only, same library architecture as reference2. Earnest curiosity and discovery, not romance embrace. No text, no UI, no watermark. Landscape."
+    }
+  ],
+  "postprocessing": "None; original generated illustrations copied to project."
+}

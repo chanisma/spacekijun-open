@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "kr.hs.kijun.spacekijun",
+      "sha256_cert_fingerprints": [
+        "10:46:71:B7:1E:C4:EC:6F:ED:A7:4D:A8:5F:B5:6A:92:CC:7D:56:6A:CE:3F:70:1B:BC:79:85:61:1B:BB:5E:9F"
+      ]
+    }
+  }
+]

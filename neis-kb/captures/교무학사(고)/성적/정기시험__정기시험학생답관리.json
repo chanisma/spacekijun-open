@@ -1,0 +1,513 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›정기시험›정기시험학생답관리",
+ "name": "정기시험학생답관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:05:27+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1375,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학생 리스트",
+     "box": [
+      25,
+      168,
+      300,
+      645
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 리스트",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "반/번호",
+       "depth": 0,
+       "box": [
+        26,
+        169,
+        94,
+        36
+       ],
+       "id": "col:학생 리스트/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        120,
+        169,
+        204,
+        36
+       ],
+       "id": "col:학생 리스트/성명"
+      }
+     ],
+     "id": "grid:학생 리스트"
+    },
+    {
+     "aria": "결시확인",
+     "box": [
+      423,
+      173,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "결시확인",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결시확인"
+    },
+    {
+     "aria": "선택형 학생답(1~15)",
+     "box": [
+      345,
+      213,
+      306,
+      420
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "선택형 학생답(1~15)",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        346,
+        214,
+        40,
+        36
+       ],
+       "id": "col:선택형 학생답(1~15)/문항"
+      },
+      {
+       "label": "답안",
+       "depth": 0,
+       "box": [
+        386,
+        214,
+        264,
+        36
+       ],
+       "span": 5,
+       "id": "col:선택형 학생답(1~15)/답안"
+      }
+     ],
+     "id": "grid:선택형 학생답(1~15)"
+    },
+    {
+     "aria": "선택형 학생답(16~30)",
+     "box": [
+      666,
+      213,
+      306,
+      420
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "선택형 학생답(16~30)",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        667,
+        214,
+        40,
+        36
+       ],
+       "id": "col:선택형 학생답(16~30)/문항"
+      },
+      {
+       "label": "답안",
+       "depth": 0,
+       "box": [
+        707,
+        214,
+        264,
+        36
+       ],
+       "span": 5,
+       "id": "col:선택형 학생답(16~30)/답안"
+      }
+     ],
+     "id": "grid:선택형 학생답(16~30)"
+    },
+    {
+     "aria": "선택형 학생답(31~45)",
+     "box": [
+      988,
+      213,
+      306,
+      420
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "선택형 학생답(31~45)",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        989,
+        214,
+        40,
+        36
+       ],
+       "id": "col:선택형 학생답(31~45)/문항"
+      },
+      {
+       "label": "답안",
+       "depth": 0,
+       "box": [
+        1029,
+        214,
+        264,
+        36
+       ],
+       "span": 5,
+       "id": "col:선택형 학생답(31~45)/답안"
+      }
+     ],
+     "id": "grid:선택형 학생답(31~45)"
+    },
+    {
+     "aria": "선택형 학생답(46~60)",
+     "box": [
+      1309,
+      213,
+      306,
+      420
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "선택형 학생답(46~60)",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        1310,
+        214,
+        40,
+        36
+       ],
+       "id": "col:선택형 학생답(46~60)/문항"
+      },
+      {
+       "label": "답안",
+       "depth": 0,
+       "box": [
+        1350,
+        214,
+        264,
+        36
+       ],
+       "span": 5,
+       "id": "col:선택형 학생답(46~60)/답안"
+      }
+     ],
+     "id": "grid:선택형 학생답(46~60)"
+    },
+    {
+     "aria": "기타점수",
+     "box": [
+      465,
+      649,
+      455,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "기타점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기타점수"
+    },
+    {
+     "aria": "서답형점수/문항별점수합",
+     "box": [
+      1155,
+      649,
+      213,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "서답형점수/문항별점수합",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:서답형점수/문항별점수합"
+    },
+    {
+     "aria": "점수",
+     "box": [
+      465,
+      696,
+      110,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수"
+    },
+    {
+     "aria": "점수",
+     "box": [
+      580,
+      696,
+      110,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1270,
+      696,
+      110,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "/",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:/"
+    },
+    {
+     "aria": null,
+     "box": [
+      1385,
+      696,
+      110,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "/",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:/#2"
+    },
+    {
+     "aria": "점수",
+     "box": [
+      465,
+      742,
+      110,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#3"
+    },
+    {
+     "aria": "점수",
+     "box": [
+      580,
+      742,
+      110,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#4"
+    },
+    {
+     "aria": "점수",
+     "box": [
+      465,
+      789,
+      110,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#5"
+    },
+    {
+     "aria": "점수",
+     "box": [
+      580,
+      789,
+      110,
+      18
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#6"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 정기시험 > 정기시험학생답관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

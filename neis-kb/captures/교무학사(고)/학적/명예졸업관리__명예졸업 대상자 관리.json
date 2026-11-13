@@ -1,0 +1,411 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›명예졸업관리›명예졸업 대상자 관리",
+ "name": "명예졸업 대상자 관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:17:10+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "input",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학적반영여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학적반영여부"
+    },
+    {
+     "aria": "정렬순",
+     "box": [
+      775,
+      82,
+      185,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "정렬순",
+     "options": [
+      "졸업번호순",
+      "학년반번호순"
+     ],
+     "id": "radio:정렬순"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "명예졸업대장번호부여",
+     "box": [
+      1264,
+      133,
+      136,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "명예졸업대장번호부여",
+     "variant": "primary",
+     "id": "button:명예졸업대장번호부여"
+    },
+    {
+     "aria": "학적반영",
+     "box": [
+      1407,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학적반영",
+     "variant": "primary",
+     "id": "button:학적반영"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "명예졸업대상자목록",
+     "box": [
+      25,
+      173,
+      1590,
+      470
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "명예졸업대상자목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        112,
+        36
+       ],
+       "id": "col:명예졸업대상자목록/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        188,
+        174,
+        157,
+        36
+       ],
+       "id": "col:명예졸업대상자목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        346,
+        174,
+        157,
+        36
+       ],
+       "id": "col:명예졸업대상자목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        503,
+        174,
+        157,
+        36
+       ],
+       "id": "col:명예졸업대상자목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        660,
+        174,
+        225,
+        36
+       ],
+       "id": "col:명예졸업대상자목록/성명"
+      },
+      {
+       "label": "학적변동일자",
+       "depth": 0,
+       "box": [
+        885,
+        174,
+        225,
+        36
+       ],
+       "id": "col:명예졸업대상자목록/학적변동일자"
+      },
+      {
+       "label": "명예졸업대장번호",
+       "depth": 0,
+       "box": [
+        1110,
+        174,
+        225,
+        36
+       ],
+       "id": "col:명예졸업대상자목록/명예졸업대장번호"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1334,
+        174,
+        100,
+        36
+       ],
+       "id": "col:명예졸업대상자목록/결재상태"
+      },
+      {
+       "label": "학적반영여부",
+       "depth": 0,
+       "box": [
+        1434,
+        174,
+        180,
+        36
+       ],
+       "id": "col:명예졸업대상자목록/학적반영여부"
+      }
+     ],
+     "id": "grid:명예졸업대상자목록"
+    },
+    {
+     "aria": "학교생활기록부생성",
+     "box": [
+      1443,
+      653,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교생활기록부생성",
+     "variant": "primary",
+     "id": "button:학교생활기록부생성"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      653,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      663,
+      69,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "상세 내역",
+     "id": "heading:상세 내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      699,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      699,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      699,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      739,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      739,
+      193,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "명예졸업대장번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:명예졸업대장번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      739,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학적변동일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학적변동일자"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 명예졸업관리 > 명예졸업 대상자 관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

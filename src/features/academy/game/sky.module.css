@@ -1,0 +1,118 @@
+/* 창가의 하늘 — 하나의 하늘에 목표(큰 별)·계획(작은 별)이 끌림으로 모이는 보드 (2026-10-02).
+   크기·틀은 망원경(.telescopeSky)과 같고, 색은 아카데미 자주·황금·크림이다. */
+.skyScene { background: radial-gradient(ellipse at 50% 110%, #3a2b4e, #121225 65%); }
+.board { position: relative; flex: 1; min-height: 0; overflow: hidden; border: 1px solid #bb955855; border-radius: 4px; box-shadow: inset 0 0 50px #000;
+  background: radial-gradient(circle at 18% 72%, #ffffff10 1px, transparent 1.6px), radial-gradient(circle at 63% 28%, #ffffff12 1px, transparent 1.6px), radial-gradient(circle at 84% 66%, #ffffff0c 1px, transparent 1.6px), radial-gradient(circle at 40% 48%, #ffffff0a 1px, transparent 1.6px), radial-gradient(ellipse at bottom, #2a2040 0%, #110d1c 100%);
+  background-size: 190px 170px, 230px 210px, 170px 150px, 260px 240px, auto; }
+.sky { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; }
+.sky[data-panning=true] { cursor: grabbing; }
+.belongs { stroke: #efdfc0; stroke-opacity: .2; stroke-width: 1; }
+/* 단기 → 장기 목표 선 (2026-10-03, 종전 «뜻이 비슷한 별» kin 선 자리) — 금빛 실선, 굵기는 GameSky 가 준다. */
+.part { stroke: #e6c68e; stroke-opacity: .8; stroke-linecap: round; }
+.edge[data-dim=true] { stroke-opacity: .06; }
+.node { cursor: grab; outline: none; }
+.node[data-dim=true] { opacity: .22; }
+.node .glow { opacity: .16; }
+.node[data-lit=false] .glow { opacity: 0; }
+.node .core { stroke: #110d1c; stroke-width: 1.5; }
+.node[data-lit=false] .core { fill: transparent; stroke: #c2ad8f; stroke-dasharray: 2 2; }
+.node[data-kind=goal] .core { stroke: #ead4a3; stroke-width: 2; }
+/* 장기 목표 — 바깥에 금빛 고리 하나 더(2026-10-03) */
+.longRing { fill: none; stroke: #e6c68e; stroke-width: 1.5; stroke-opacity: .75; stroke-dasharray: 1 0; }
+.node[data-lit=false] .longRing { stroke-dasharray: 3 3; stroke-opacity: .5; }
+.node[data-named=true] .core { stroke: #e6c68e; stroke-width: 3.5; }
+.node[data-named=true] .glow { opacity: .3; }
+.node[data-archived=true] { opacity: .35; }
+.node[data-selected=true] .ring { stroke: #e6c68e; stroke-width: 2; fill: none; stroke-dasharray: 3 3; }
+.node[data-selected=true] .glow { opacity: .34; }
+.node:focus-visible .core { stroke: #ffdc9c; stroke-width: 3; }
+.node .glyph { fill: #2a1d2b; text-anchor: middle; pointer-events: none; opacity: .85; }
+.node .label { fill: #efdfc0; text-anchor: middle; paint-order: stroke; stroke: #110d1c; stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
+.node[data-kind=goal] .label { font-family: Georgia, 'Noto Serif KR', serif; fill: #f8ecd4; }
+.node[data-lit=false] .label { fill: #b9a386; }
+@media (prefers-reduced-motion: no-preference) { .node[data-lit=true][data-kind=plan] .glow { animation: skyTwinkle 4.2s ease-in-out infinite; } }
+@keyframes skyTwinkle { 0%, 100% { opacity: .14; } 50% { opacity: .3; } }
+.board[data-reduced=true] .glow { animation: none; }
+
+/* 왼쪽 위 — 보는 방식(확대·전체·모으기) 위, 찾기 아래, 거르기 그 아래. 망원경 크롬과 같은 자리·같은 색. */
+.chrome { position: absolute; z-index: 10; top: 14px; left: 14px; display: flex; flex-direction: column; gap: 8px; width: min(300px, calc(100% - 28px)); }
+.toolbar { display: flex; flex-wrap: wrap; gap: 6px; }
+.tool { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 10px; border: 1px solid #d4b27880; border-radius: 6px; background: #231b32e6; color: #efdfc0; font-size: 12px; white-space: nowrap; cursor: pointer; }
+.tool:hover:not(:disabled) { background: #34284a; border-color: #e6c68e; }
+.tool:disabled { opacity: .45; cursor: default; }
+.tool[aria-pressed=true] { background: #dab576; border-color: #e6c68e; color: #2a1d2b; }
+.tool:focus-visible { outline: 2px solid #e6c68e; outline-offset: 2px; }
+.iconTool { width: 32px; padding: 0; justify-content: center; font-size: 15px; }
+.searchBox { position: relative; }
+.searchBox input { box-sizing: border-box; width: 100%; height: 32px; margin: 0; padding: 0 30px 0 10px; border: 1px solid #d4b27880; border-radius: 6px; background: #231b32e6; color: #f8ecd4; font: inherit; font-size: 12px; }
+.searchBox input::placeholder { color: #9c8a71; }
+.searchBox input:focus { outline: none; border-color: #e6c68e; }
+.searchBox > button { position: absolute; top: 50%; right: 6px; width: 22px; height: 22px; transform: translateY(-50%); border: 0; border-radius: 50%; background: transparent; color: #c2ad8f; font-size: 14px; cursor: pointer; }
+.hits { display: grid; gap: 2px; max-height: 32vh; overflow-y: auto; padding: 4px; border: 1px solid #d4b27880; border-radius: 6px; background: #231b32e6; }
+.hits button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 6px 8px; border: 0; border-radius: 4px; background: transparent; color: #efdfc0; font-size: 12px; text-align: left; cursor: pointer; }
+.hits button:hover { background: #34284a; }
+.hits button > span:first-child { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; }
+.hits button > span:last-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hits small { flex-shrink: 0; margin-left: auto; color: #9c8a71; font-size: 10px; }
+.hits p { margin: 0; padding: 6px 8px; color: #9c8a71; font-size: 11px; }
+
+/* 왼쪽 아래 범례 — 오른쪽 아래는 별의 기록 패널(.graphDetail) 자리. */
+.legend { position: absolute; z-index: 10; left: 14px; bottom: 14px; display: grid; gap: 4px; max-width: 260px; padding: 8px 10px; border: 1px solid #d4b27880; border-radius: 6px; background: #231b32e6; color: #c2ad8f; font-size: 11px; line-height: 1.5; }
+.legend strong { color: #efdfc0; font-weight: 600; }
+.legend .row { display: flex; align-items: center; gap: 6px; }
+.legend .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #efdfc0; }
+.legend .dot[data-goal] { width: 12px; height: 12px; border: 2px solid #ead4a3; background: #c9a9ff; }
+.legend .dot[data-unlit] { background: transparent; border: 1px dashed #c2ad8f; }
+.legend .line { display: inline-block; width: 18px; height: 0; border-top: 1px dashed #e6c68e; }
+.legend .line[data-solid] { border-top: 1px solid #efdfc0aa; }
+.legend .line[data-part] { border-top: 2px solid #e6c68e; }
+.legend .status { margin-top: 2px; color: #9c8a71; font-size: 10px; }
+
+.banner { position: absolute; z-index: 11; top: 14px; left: 50%; transform: translateX(-50%); max-width: calc(100% - 340px); padding: 8px 14px; border: 1px solid #e6c68e; border-radius: 6px; background: #3b2a4ef2; color: #f8ecd4; font-size: 12px; text-align: center; pointer-events: none; }
+.notice { margin: 0 0 8px; padding: 8px 12px; border: 1px solid #d1b98050; border-radius: 4px; color: #e4d0a8; font-size: 12px; }
+.detailMeta { margin: 0 0 8px; color: #c2ad8f; font-size: 11.5px; }
+.records { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.records li { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; font-size: 12px; line-height: 1.6; }
+.records time { color: #d9c19b; font-variant-numeric: tabular-nums; }
+.kinList { display: grid; gap: 4px; margin-top: 10px; padding-top: 8px; border-top: 1px solid #d4b27833; }
+.kinList > small { color: #9c8a71; font-size: 10px; letter-spacing: .08em; }
+.kinList button { display: flex; align-items: center; gap: 8px; padding: 5px 6px; border: 0; border-radius: 4px; background: transparent; color: #efdfc0; font-size: 12px; text-align: left; cursor: pointer; }
+.kinList button:hover { background: #34284a; }
+.kinList button > span:first-child { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; }
+.kinList button > span:nth-child(2) { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kinList small { flex-shrink: 0; color: #9c8a71; font-size: 10px; }
+.detailActions { display: grid; gap: 8px; margin-top: 12px; }
+.detailActions form { display: grid; gap: 6px; }
+.detailActions input { box-sizing: border-box; width: 100%; height: 34px; margin: 0; padding: 0 10px; border: 1px solid #d4b27880; border-radius: 6px; background: #191326; color: #f8ecd4; font: inherit; font-size: 13px; }
+.detailActions small { color: #9c8a71; font-size: 10.5px; line-height: 1.5; }
+.gold { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 36px; padding: 8px 12px; border: 1px solid #dcc18b; border-radius: 4px; background: linear-gradient(110deg, #e7c992, #bc9765); color: #2a1d2b; font-size: 12.5px; font-weight: 650; cursor: pointer; }
+.gold:disabled { opacity: .5; cursor: default; }
+.quiet { display: flex; align-items: center; justify-content: center; min-height: 34px; padding: 6px 10px; border: 1px solid #ccad7845; border-radius: 4px; background: transparent; color: #d1bda0; font-size: 12px; cursor: pointer; }
+.quiet:disabled { opacity: .5; cursor: default; }
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-shrink: 0; min-height: 22px; padding-top: 8px; color: #e6cfaa; font-size: 12px; }
+.footer p { margin: 0; }
+.error { margin: 6px 0 0; padding: 8px 12px; border: 1px solid #d79aa6; border-radius: 4px; background: #4e2934; color: #ffd7dd; font-size: 12px; }
+.empty { position: absolute; z-index: 5; left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: 80%; text-align: center; color: #c2ad8f; font-size: 14px; line-height: 1.8; pointer-events: none; }
+.empty h3 { margin: 0 0 6px; font: 500 20px Georgia, 'Noto Serif KR', serif; color: #f8ecd4; }
+
+@media (max-width: 650px) {
+  .chrome { top: 8px; left: 8px; width: calc(100% - 16px); }
+  .legend { left: 8px; bottom: 8px; max-width: 46%; padding: 6px 8px; font-size: 10px; }
+  .legend .status { display: none; }
+  .banner { top: auto; bottom: 8px; left: 8px; right: 8px; transform: none; max-width: none; }
+  .hits { max-height: 26vh; }
+}
+/* 휴대폰에서 기록 패널이 열리면 범례는 그 아래 가려지므로 아예 감춘다(글자만 삐져나온다). */
+@media (max-width: 650px) { .board:has(> [aria-label$='의 기록']) .legend { display: none; } }
+/* UI 점검 2026-10-03: 범례 글자 하한 11px · 종이 위 대비 */
+.legend .status { font-size: 11px; color: #b9a78c; }
+
+/* 휴대폰 가로 화면 (2026-10-03) — 도구·찾기·거르기가 세 줄로 쌓여 보드 위 150px 를 덮고, 범례가 보드 왼쪽 절반을 가렸다.
+   도구 줄을 위 한 줄로 펴고 범례는 오른쪽 아래 작은 판으로. */
+@media (orientation: landscape) and (max-height: 520px) {
+  .chrome { top: 8px; left: 8px; right: 8px; width: auto; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .searchBox { flex: 0 1 220px; }
+  .legend { left: auto; right: 8px; bottom: 8px; max-width: 236px; gap: 2px; padding: 6px 8px; font-size: 11px; }
+  /* 빈 상태 글은 범례(오른쪽 아래 ~250px)를 뺀 자리의 가운데로. */
+  .empty { left: calc((100% - 252px) / 2); max-width: calc(100% - 290px); }
+}

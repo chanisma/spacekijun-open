@@ -1,0 +1,509 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학업중단›학업중단#학교›미인정결석학생관리›미인정결석학생관리",
+ "name": "미인정결석학생관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:18:48+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      75,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      610,
+      82,
+      75,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      825,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "진행상태",
+     "box": [
+      1165,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진행상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:진행상태"
+    },
+    {
+     "aria": "등록일",
+     "box": [
+      465,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "보고대상등록일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:보고대상등록일"
+    },
+    {
+     "aria": null,
+     "box": [
+      600,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "보고대상등록일~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:보고대상등록일~"
+    },
+    {
+     "aria": null,
+     "box": [
+      730,
+      122,
+      109,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "장기미인정결석",
+     "checked": false,
+     "id": "check:장기미인정결석"
+    },
+    {
+     "aria": null,
+     "box": [
+      849,
+      122,
+      85,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "소재미확인",
+     "checked": false,
+     "id": "check:소재미확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      122,
+      97,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "집중관리대상",
+     "checked": false,
+     "id": "check:집중관리대상"
+    },
+    {
+     "aria": null,
+     "box": [
+      1052,
+      122,
+      97,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "최신보고순번",
+     "checked": false,
+     "id": "check:최신보고순번"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "자료 내려받기",
+     "box": [
+      1164,
+      173,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": "변경이력조회",
+     "box": [
+      1288,
+      173,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "변경이력조회",
+     "variant": "plain",
+     "id": "button:변경이력조회"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1383,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "제출",
+     "box": [
+      1455,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "제출",
+     "variant": "primary",
+     "id": "button:제출"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1503,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "제출취소",
+     "box": [
+      1551,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "제출취소",
+     "variant": "secondary",
+     "id": "button:제출취소"
+    },
+    {
+     "aria": "미인정결석학생 목록",
+     "box": [
+      25,
+      213,
+      1590,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "미인정결석학생 목록",
+     "selectable": true,
+     "declaredColumns": 21,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        61,
+        214,
+        35,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/순번"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        96,
+        214,
+        180,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/진행상태"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        276,
+        214,
+        55,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        331,
+        214,
+        100,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        431,
+        214,
+        55,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        486,
+        214,
+        100,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/성명"
+      },
+      {
+       "label": "제출일자",
+       "depth": 0,
+       "box": [
+        586,
+        214,
+        100,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/제출일자"
+      },
+      {
+       "label": "보고대상등록일",
+       "depth": 0,
+       "box": [
+        686,
+        214,
+        120,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/보고대상등록일"
+      },
+      {
+       "label": "보고순번",
+       "depth": 0,
+       "box": [
+        806,
+        214,
+        80,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/보고순번"
+      },
+      {
+       "label": "장기미인정 결석일",
+       "depth": 0,
+       "box": [
+        886,
+        214,
+        100,
+        62
+       ],
+       "id": "col:미인정결석학생 목록/장기미인정 결석일"
+      },
+      {
+       "label": "최종상태 현황(간략)",
+       "depth": 0,
+       "box": [
+        986,
+        214,
+        360,
+        31
+       ],
+       "span": 3,
+       "id": "col:미인정결석학생 목록/최종상태 현황(간략)"
+      },
+      {
+       "label": "최근보고현황(해당사항있는경우)",
+       "depth": 0,
+       "box": [
+        1346,
+        214,
+        300,
+        31
+       ],
+       "span": 3,
+       "id": "col:미인정결석학생 목록/최근보고현황(해당사항있는경우)"
+      },
+      {
+       "label": "사유",
+       "depth": 1,
+       "box": [
+        986,
+        245,
+        100,
+        31
+       ],
+       "id": "col:미인정결석학생 목록/최종상태 현황(간략)>사유"
+      },
+      {
+       "label": "소재확인여부",
+       "depth": 1,
+       "box": [
+        1086,
+        245,
+        160,
+        31
+       ],
+       "id": "col:미인정결석학생 목록/최종상태 현황(간략)>소재확인여부"
+      },
+      {
+       "label": "경찰신고",
+       "depth": 1,
+       "box": [
+        1246,
+        245,
+        100,
+        31
+       ],
+       "id": "col:미인정결석학생 목록/최종상태 현황(간략)>경찰신고"
+      },
+      {
+       "label": "신규발생일",
+       "depth": 1,
+       "box": [
+        1346,
+        245,
+        100,
+        31
+       ],
+       "id": "col:미인정결석학생 목록/최근보고현황(해당사항있는경우)>신규발생일"
+      },
+      {
+       "label": "경찰신고일",
+       "depth": 1,
+       "box": [
+        1446,
+        245,
+        100,
+        31
+       ],
+       "id": "col:미인정결석학생 목록/최근보고현황(해당사항있는경우)>경찰신고일"
+      },
+      {
+       "label": "학교복귀일",
+       "depth": 1,
+       "box": [
+        1546,
+        245,
+        100,
+        31
+       ],
+       "id": "col:미인정결석학생 목록/최근보고현황(해당사항있는경우)>학교복귀일"
+      }
+     ],
+     "id": "grid:미인정결석학생 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학업중단 > 미인정결석학생관리 > 미인정결석학생관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,577 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›건강기록부관리›건강기록부항목별조회",
+ "name": "건강기록부항목별조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:20:41+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:예방접종",
+   "tab": "예방접종",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭 화면이 4개가 존재합니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "예방접종",
+      "신체발달",
+      "건강검진",
+      "별도검사"
+     ],
+     "active": "예방접종",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "취학전후구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:취학전후구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "접종명",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:접종명"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "접종구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:접종구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      177,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:신체발달",
+   "tab": "신체발달",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭 화면이 4개가 존재합니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "예방접종",
+      "신체발달",
+      "건강검진",
+      "별도검사"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      157,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      157,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      157,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      157,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "비만구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:비만구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      157,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      218,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생개인정보보호를 위해 파일 저장기능은 비활성화합니다.",
+     "id": "note:※ 학생개인정보보호를 위해 파일 저장기능은 비활성화합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:건강검진",
+   "tab": "건강검진",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭 화면이 4개가 존재합니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "예방접종",
+      "신체발달",
+      "건강검진",
+      "별도검사"
+     ],
+     "active": "건강검진",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      157,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      157,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      157,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      157,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검진명",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:검진명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      157,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검진여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:검진여부"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      157,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      218,
+      1590,
+      591
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:별도검사",
+   "tab": "별도검사",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭 화면이 4개가 존재합니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "예방접종",
+      "신체발달",
+      "건강검진",
+      "별도검사"
+     ],
+     "active": "별도검사",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      157,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      157,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      157,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      157,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검사명",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:검사명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      157,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      218,
+      1590,
+      591
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 건강기록부관리 > 건강기록부항목별조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

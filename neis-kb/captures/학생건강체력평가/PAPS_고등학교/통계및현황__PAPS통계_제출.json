@@ -1,0 +1,97 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›통계및현황›PAPS통계/제출",
+ "name": "PAPS통계/제출",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:16:11+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정시 측정자료만 통계 생성이 가능합니다.",
+     "id": "note:※ 정시 측정자료만 통계 생성이 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1431,
+      109,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계생성",
+     "variant": "primary",
+     "id": "button:통계생성"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      109,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계조회",
+     "variant": "link",
+     "id": "button:통계조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      109,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "제출",
+     "variant": "link",
+     "id": "button:제출"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      155,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 통계및현황 > PAPS통계/제출",
+ "viewport": [
+  1920,
+  945
+ ]
+}

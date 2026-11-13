@@ -1,0 +1,678 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›나의급식(학교)›나의식단›내식단정보",
+ "name": "내식단정보",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:08:48+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식단명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식단명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1432,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1504,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      250,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식단목록",
+     "id": "heading:식단목록"
+    },
+    {
+     "aria": "(전근무지)내식단가져오기",
+     "box": [
+      150,
+      169,
+      156,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "(전근무지)내식단가져오기",
+     "variant": "plain",
+     "id": "button:(전근무지)내식단가져오기"
+    },
+    {
+     "aria": "(타영양교사‧영양사)내식단보내기",
+     "box": [
+      312,
+      169,
+      205,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "(타영양교사‧영양사)내식단보내기",
+     "variant": "plain",
+     "id": "button:(타영양교사‧영양사)내식단보내기"
+    },
+    {
+     "aria": "식단목록",
+     "box": [
+      25,
+      260,
+      1575,
+      287
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "식단목록",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        261,
+        50,
+        36
+       ],
+       "id": "col:식단목록/순번"
+      },
+      {
+       "label": "식단코드",
+       "depth": 0,
+       "box": [
+        76,
+        261,
+        381,
+        36
+       ],
+       "id": "col:식단목록/식단코드"
+      },
+      {
+       "label": "식단명",
+       "depth": 0,
+       "box": [
+        457,
+        261,
+        381,
+        36
+       ],
+       "id": "col:식단목록/식단명"
+      },
+      {
+       "label": "출처구분",
+       "depth": 0,
+       "box": [
+        838,
+        261,
+        381,
+        36
+       ],
+       "id": "col:식단목록/출처구분"
+      },
+      {
+       "label": "작성일",
+       "depth": 0,
+       "box": [
+        1218,
+        261,
+        381,
+        36
+       ],
+       "id": "col:식단목록/작성일"
+      }
+     ],
+     "id": "grid:식단목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      560,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1464,
+      597,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1512,
+      597,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1560,
+      597,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      607,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식단상세",
+     "id": "heading:식단상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      643,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "출처구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:출처구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      643,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식단코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식단코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      643,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식단명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:식단명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1331,
+      643,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사용여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사용여부"
+    },
+    {
+     "aria": "(요리)행추가",
+     "box": [
+      1423,
+      689,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(요리)행추가",
+     "variant": "plain",
+     "id": "button:(요리)행추가"
+    },
+    {
+     "aria": "(요리)행삭제",
+     "box": [
+      1515,
+      689,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(요리)행삭제",
+     "variant": "plain",
+     "id": "button:(요리)행삭제"
+    },
+    {
+     "aria": "요리내역",
+     "box": [
+      25,
+      699,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요리내역",
+     "id": "heading:요리내역"
+    },
+    {
+     "aria": "요리내역",
+     "box": [
+      25,
+      729,
+      1575,
+      478
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "요리내역",
+     "selectable": true,
+     "declaredColumns": 32,
+     "columns": [
+      {
+       "label": "요리군",
+       "depth": 0,
+       "box": [
+        76,
+        730,
+        111,
+        40
+       ],
+       "id": "col:요리내역/요리군"
+      },
+      {
+       "label": "요리코드",
+       "depth": 0,
+       "box": [
+        187,
+        730,
+        111,
+        40
+       ],
+       "id": "col:요리내역/요리코드"
+      },
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        298,
+        730,
+        169,
+        40
+       ],
+       "span": 2,
+       "id": "col:요리내역/요리명"
+      },
+      {
+       "label": "에너지 (kcal)",
+       "depth": 0,
+       "box": [
+        467,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/에너지 (kcal)"
+      },
+      {
+       "label": "단백질 (g)",
+       "depth": 0,
+       "box": [
+        540,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/단백질 (g)"
+      },
+      {
+       "label": "비타민 A (μg RAE)",
+       "depth": 0,
+       "box": [
+        613,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/비타민 A (μg RAE)"
+      },
+      {
+       "label": "티아민 (mg)",
+       "depth": 0,
+       "box": [
+        687,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/티아민 (mg)"
+      },
+      {
+       "label": "리보플라빈 (mg)",
+       "depth": 0,
+       "box": [
+        760,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/리보플라빈 (mg)"
+      },
+      {
+       "label": "나이아신 (mg)",
+       "depth": 0,
+       "box": [
+        833,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/나이아신 (mg)"
+      },
+      {
+       "label": "비타민 C (mg)",
+       "depth": 0,
+       "box": [
+        906,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/비타민 C (mg)"
+      },
+      {
+       "label": "비타민 D (μg)",
+       "depth": 0,
+       "box": [
+        980,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/비타민 D (μg)"
+      },
+      {
+       "label": "칼슘 (mg)",
+       "depth": 0,
+       "box": [
+        1053,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/칼슘 (mg)"
+      },
+      {
+       "label": "인 (mg)",
+       "depth": 0,
+       "box": [
+        1126,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/인 (mg)"
+      },
+      {
+       "label": "철 (mg)",
+       "depth": 0,
+       "box": [
+        1199,
+        730,
+        73,
+        40
+       ],
+       "id": "col:요리내역/철 (mg)"
+      },
+      {
+       "label": "(식품)알레르기정보",
+       "depth": 0,
+       "box": [
+        1273,
+        730,
+        326,
+        40
+       ],
+       "id": "col:요리내역/(식품)알레르기정보"
+      },
+      {
+       "label": "합 계",
+       "depth": 1,
+       "box": [
+        298,
+        770,
+        169,
+        36
+       ],
+       "span": 2,
+       "id": "col:요리내역/요리명>합 계"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        467,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/에너지 (kcal)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        540,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/단백질 (g)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        613,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/비타민 A (μg RAE)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        687,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/티아민 (mg)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        760,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/리보플라빈 (mg)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        833,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/나이아신 (mg)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        906,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/비타민 C (mg)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        980,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/비타민 D (μg)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        1053,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/칼슘 (mg)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        1126,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/인 (mg)>0"
+      },
+      {
+       "label": "0",
+       "depth": 1,
+       "box": [
+        1199,
+        770,
+        73,
+        36
+       ],
+       "id": "col:요리내역/철 (mg)>0"
+      }
+     ],
+     "id": "grid:요리내역"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}나의급식(학교) > 나의식단 > 내식단정보",
+ "viewport": [
+  1920,
+  945
+ ]
+}

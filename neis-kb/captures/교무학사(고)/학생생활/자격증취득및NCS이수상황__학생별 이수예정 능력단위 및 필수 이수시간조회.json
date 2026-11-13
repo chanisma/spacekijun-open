@@ -1,0 +1,275 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›자격증취득및NCS이수상황›학생별 이수예정 능력단위 및 필수 이수시간조회",
+ "name": "학생별 이수예정 능력단위 및 필수 이수시간조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:24:29+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1136,
+      82,
+      189,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "자격종명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:자격종명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      163,
+      394,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        131,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        157,
+        164,
+        261,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "학생별 자격종명 및 능력단위명",
+     "box": [
+      434,
+      163,
+      1181,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생별 자격종명 및 능력단위명",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "자격종명",
+       "depth": 0,
+       "box": [
+        435,
+        164,
+        277,
+        93
+       ],
+       "id": "col:학생별 자격종명 및 능력단위명/자격종명"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        712,
+        164,
+        69,
+        93
+       ],
+       "id": "col:학생별 자격종명 및 능력단위명/구분"
+      },
+      {
+       "label": "능력단위명",
+       "depth": 0,
+       "box": [
+        782,
+        164,
+        277,
+        93
+       ],
+       "id": "col:학생별 자격종명 및 능력단위명/능력단위명"
+      },
+      {
+       "label": "훈련 기준 시간",
+       "depth": 0,
+       "box": [
+        1059,
+        164,
+        111,
+        93
+       ],
+       "id": "col:학생별 자격종명 및 능력단위명/훈련 기준 시간"
+      },
+      {
+       "label": "편성시간 (이수시간)",
+       "depth": 0,
+       "box": [
+        1170,
+        164,
+        444,
+        62
+       ],
+       "span": 4,
+       "id": "col:학생별 자격종명 및 능력단위명/편성시간 (이수시간)"
+      },
+      {
+       "label": "합계",
+       "depth": 1,
+       "box": [
+        1170,
+        226,
+        111,
+        31
+       ],
+       "id": "col:학생별 자격종명 및 능력단위명/편성시간 (이수시간)>합계"
+      },
+      {
+       "label": "1학년",
+       "depth": 1,
+       "box": [
+        1281,
+        226,
+        111,
+        31
+       ],
+       "id": "col:학생별 자격종명 및 능력단위명/편성시간 (이수시간)>1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 1,
+       "box": [
+        1392,
+        226,
+        111,
+        31
+       ],
+       "id": "col:학생별 자격종명 및 능력단위명/편성시간 (이수시간)>2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 1,
+       "box": [
+        1503,
+        226,
+        111,
+        31
+       ],
+       "id": "col:학생별 자격종명 및 능력단위명/편성시간 (이수시간)>3학년"
+      }
+     ],
+     "id": "grid:학생별 자격종명 및 능력단위명"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 자격증취득및NCS이수상황 > 학생별 이수예정 능력단위 및 필수 이수시간조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

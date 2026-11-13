@@ -1,0 +1,525 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업생자료관리›졸업생학생부정정대장조회",
+ "name": "졸업생학생부정정대장조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:19:53+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:출력",
+   "tab": "출력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:정정일자"
+    },
+    {
+     "aria": "시작일자 빼기",
+     "box": [
+      531,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "시작일자 빼기",
+     "variant": "plain",
+     "id": "button:시작일자 빼기"
+    },
+    {
+     "aria": "시작일자 더하기",
+     "box": [
+      561,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "시작일자 더하기",
+     "variant": "plain",
+     "id": "button:시작일자 더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      624,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:정정일자~"
+    },
+    {
+     "aria": "종료일자 빼기",
+     "box": [
+      760,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "종료일자 빼기",
+     "variant": "plain",
+     "id": "button:종료일자 빼기"
+    },
+    {
+     "aria": "종료일자 더하기",
+     "box": [
+      790,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "종료일자 더하기",
+     "variant": "plain",
+     "id": "button:종료일자 더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1030,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "출력",
+      "상세조회"
+     ],
+     "active": "출력",
+     "id": "tabs:안쪽 탭"
+    }
+   ]
+  },
+  {
+   "id": "tab:상세조회",
+   "tab": "상세조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:정정일자"
+    },
+    {
+     "aria": "시작일자 빼기",
+     "box": [
+      531,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "시작일자 빼기",
+     "variant": "plain",
+     "id": "button:시작일자 빼기"
+    },
+    {
+     "aria": "시작일자 더하기",
+     "box": [
+      561,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "시작일자 더하기",
+     "variant": "plain",
+     "id": "button:시작일자 더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      624,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:정정일자~"
+    },
+    {
+     "aria": "종료일자 빼기",
+     "box": [
+      760,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "종료일자 빼기",
+     "variant": "plain",
+     "id": "button:종료일자 빼기"
+    },
+    {
+     "aria": "종료일자 더하기",
+     "box": [
+      790,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "종료일자 더하기",
+     "variant": "plain",
+     "id": "button:종료일자 더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1030,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "출력",
+      "상세조회"
+     ],
+     "active": "상세조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "졸업생 학생부 정정대장 조회 ",
+     "box": [
+      25,
+      218,
+      1590,
+      595
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "졸업생 학생부 정정대장 조회",
+     "selectable": false,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "일련 번호",
+       "depth": 0,
+       "box": [
+        26,
+        219,
+        52,
+        93
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/일련 번호"
+      },
+      {
+       "label": "정정 연월일",
+       "depth": 0,
+       "box": [
+        78,
+        219,
+        104,
+        93
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/정정 연월일"
+      },
+      {
+       "label": "정정 대상자",
+       "depth": 0,
+       "box": [
+        183,
+        219,
+        313,
+        31
+       ],
+       "span": 2,
+       "id": "col:졸업생 학생부 정정대장 조회/정정 대상자"
+      },
+      {
+       "label": "정정 사항",
+       "depth": 0,
+       "box": [
+        496,
+        219,
+        825,
+        31
+       ],
+       "span": 4,
+       "id": "col:졸업생 학생부 정정대장 조회/정정 사항"
+      },
+      {
+       "label": "결재 및 입력확인",
+       "depth": 0,
+       "box": [
+        1321,
+        219,
+        293,
+        31
+       ],
+       "span": 4,
+       "id": "col:졸업생 학생부 정정대장 조회/결재 및 입력확인"
+      },
+      {
+       "label": "학년도,학년,반,번호 (졸업대장 번호)",
+       "depth": 1,
+       "box": [
+        183,
+        250,
+        209,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/정정 대상자>학년도,학년,반,번호 (졸업대장 번호)"
+      },
+      {
+       "label": "성명",
+       "depth": 1,
+       "box": [
+        392,
+        250,
+        104,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/정정 대상자>성명"
+      },
+      {
+       "label": "항목",
+       "depth": 1,
+       "box": [
+        496,
+        250,
+        104,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/정정 사항>항목"
+      },
+      {
+       "label": "오류내용",
+       "depth": 1,
+       "box": [
+        601,
+        250,
+        240,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/정정 사항>오류내용"
+      },
+      {
+       "label": "정정내용",
+       "depth": 1,
+       "box": [
+        841,
+        250,
+        240,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/정정 사항>정정내용"
+      },
+      {
+       "label": "정정사유",
+       "depth": 1,
+       "box": [
+        1081,
+        250,
+        240,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/정정 사항>정정사유"
+      },
+      {
+       "label": "담임(담당)",
+       "depth": 1,
+       "box": [
+        1321,
+        250,
+        84,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/결재 및 입력확인>담임(담당)"
+      },
+      {
+       "label": "담당부장",
+       "depth": 1,
+       "box": [
+        1405,
+        250,
+        84,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/결재 및 입력확인>담당부장"
+      },
+      {
+       "label": "교감",
+       "depth": 1,
+       "box": [
+        1489,
+        250,
+        63,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/결재 및 입력확인>교감"
+      },
+      {
+       "label": "교장",
+       "depth": 1,
+       "box": [
+        1551,
+        250,
+        63,
+        62
+       ],
+       "id": "col:졸업생 학생부 정정대장 조회/결재 및 입력확인>교장"
+      }
+     ],
+     "id": "grid:졸업생 학생부 정정대장 조회"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업생자료관리 > 졸업생학생부정정대장조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

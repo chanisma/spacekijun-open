@@ -1,0 +1,207 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업/수료관리›졸업생학생부출력",
+ "name": "졸업생학생부출력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:19:06+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1525,
+      82,
+      70,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 본 메뉴의 출력물은 증명, 제출 등의 용도로 사용 불가 ※ 대입전형자료 학생부 제출의 경우 학교생활기록부(대입전형용) 민원서류를 출력하여 제출 필요",
+     "id": "note:※ 본 메뉴의 출력물은 증명, 제출 등의 용도로 사용 불가 ※ 대입전형자료 학생부 제출의 경우 학교생활기록부(대입전형용) 민원서류를 출력하여 제출 필요"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      189,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "학생리스트 ",
+     "box": [
+      25,
+      229,
+      394,
+      544
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생리스트",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        76,
+        230,
+        171,
+        36
+       ],
+       "id": "col:학생리스트/성명"
+      },
+      {
+       "label": "대장번호",
+       "depth": 0,
+       "box": [
+        247,
+        230,
+        171,
+        36
+       ],
+       "id": "col:학생리스트/대장번호"
+      }
+     ],
+     "id": "grid:학생리스트"
+    },
+    {
+     "aria": null,
+     "box": [
+      534,
+      240,
+      116,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "학생부I",
+     "checked": false,
+     "id": "check:학생부I"
+    },
+    {
+     "aria": null,
+     "box": [
+      658,
+      240,
+      116,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "학생부II",
+     "checked": true,
+     "id": "check:학생부II"
+    },
+    {
+     "aria": null,
+     "box": [
+      905,
+      242,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "상급학교제출용",
+     "checked": false,
+     "id": "check:상급학교제출용"
+    },
+    {
+     "aria": null,
+     "box": [
+      534,
+      280,
+      116,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "양면출력",
+     "checked": false,
+     "id": "check:양면출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      658,
+      280,
+      116,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "단면출력",
+     "checked": true,
+     "id": "check:단면출력"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업/수료관리 > 졸업생학생부출력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

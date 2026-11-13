@@ -1,0 +1,184 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›개별화교육계획›개별화교육계획전송관리›개별화교육계획요청현황",
+ "name": "개별화교육계획요청현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:19:26+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:등록일"
+    },
+    {
+     "aria": null,
+     "box": [
+      1050,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록일~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1310,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전송상태",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:전송상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신교",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:출신교"
+    },
+    {
+     "aria": null,
+     "box": [
+      465,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 개별화교육계획 > 개별화교육계획전송관리 > 개별화교육계획요청현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

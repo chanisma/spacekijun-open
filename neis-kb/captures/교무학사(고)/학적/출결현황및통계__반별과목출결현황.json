@@ -1,0 +1,263 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›출결현황및통계›반별과목출결현황",
+ "name": "반별과목출결현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:14:54+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 2026학년도 3학년 공동교육과정 과목출결 및 위탁 과목출결 자료는 포함되지 않습니다. ※ 전입/위탁/공동교육과정 과목으로 수신한 타교 출결 정보는 이수기준 충족 여부를 클릭하여 확인하실 수 있습니다.",
+     "id": "note:※ 2026학년도 3학년 공동교육과정 과목출결 및 위탁 과목출결 자료는 포함되지 않습니다. ※ 전입/위탁/공동교육과정 과목으로 수신한 타교 출결 정보는 이수기준 충족 여부를 클릭하여 확인하실 수 있습니다."
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1493,
+      205,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      245,
+      315,
+      568
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        246,
+        104,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        130,
+        246,
+        209,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "반별과목별출결현황 테이블",
+     "box": [
+      355,
+      245,
+      1260,
+      568
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반별과목별출결현황 테이블",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        356,
+        246,
+        245,
+        36
+       ],
+       "id": "col:반별과목별출결현황 테이블/과목명"
+      },
+      {
+       "label": "총 수업시수 (학점당시수)",
+       "depth": 0,
+       "box": [
+        601,
+        246,
+        163,
+        36
+       ],
+       "id": "col:반별과목별출결현황 테이블/총 수업시수 (학점당시수)"
+      },
+      {
+       "label": "현재 수업시수",
+       "depth": 0,
+       "box": [
+        764,
+        246,
+        163,
+        36
+       ],
+       "id": "col:반별과목별출결현황 테이블/현재 수업시수"
+      },
+      {
+       "label": "출석시수",
+       "depth": 0,
+       "box": [
+        928,
+        246,
+        131,
+        36
+       ],
+       "id": "col:반별과목별출결현황 테이블/출석시수"
+      },
+      {
+       "label": "결과시수",
+       "depth": 0,
+       "box": [
+        1059,
+        246,
+        131,
+        36
+       ],
+       "id": "col:반별과목별출결현황 테이블/결과시수"
+      },
+      {
+       "label": "현재 수업시수 기준 충족 여부",
+       "depth": 0,
+       "box": [
+        1189,
+        246,
+        212,
+        36
+       ],
+       "id": "col:반별과목별출결현황 테이블/현재 수업시수 기준 충족 여부"
+      },
+      {
+       "label": "이수기준 충족 여부",
+       "depth": 0,
+       "box": [
+        1402,
+        246,
+        212,
+        36
+       ],
+       "id": "col:반별과목별출결현황 테이블/이수기준 충족 여부"
+      }
+     ],
+     "id": "grid:반별과목별출결현황 테이블"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 출결현황및통계 > 반별과목출결현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

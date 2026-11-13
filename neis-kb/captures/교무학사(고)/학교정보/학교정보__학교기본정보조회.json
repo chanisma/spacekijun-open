@@ -1,0 +1,481 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학교정보›학교정보›학교기본정보조회",
+ "name": "학교기본정보조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T03:59:27+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:반정보조회",
+   "tab": "반정보조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다. ",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반정보조회",
+      "학생수 현황",
+      "학생성명 중복현황"
+     ],
+     "active": "반정보조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "반 정보 엑셀내려받기 버튼",
+     "box": [
+      1503,
+      126,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "반정보",
+     "box": [
+      25,
+      136,
+      48,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "반정보",
+     "id": "heading:반정보"
+    },
+    {
+     "aria": "반정보 그리드",
+     "box": [
+      25,
+      166,
+      1590,
+      647
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반정보 그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        167,
+        225,
+        36
+       ],
+       "id": "col:반정보 그리드/순번"
+      },
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        251,
+        167,
+        225,
+        36
+       ],
+       "id": "col:반정보 그리드/학년도"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        475,
+        167,
+        225,
+        36
+       ],
+       "id": "col:반정보 그리드/학년"
+      },
+      {
+       "label": "학과명",
+       "depth": 0,
+       "box": [
+        700,
+        167,
+        225,
+        36
+       ],
+       "id": "col:반정보 그리드/학과명"
+      },
+      {
+       "label": "반명",
+       "depth": 0,
+       "box": [
+        924,
+        167,
+        225,
+        36
+       ],
+       "id": "col:반정보 그리드/반명"
+      },
+      {
+       "label": "반코드",
+       "depth": 0,
+       "box": [
+        1149,
+        167,
+        225,
+        36
+       ],
+       "id": "col:반정보 그리드/반코드"
+      },
+      {
+       "label": "등록일자",
+       "depth": 0,
+       "box": [
+        1373,
+        167,
+        225,
+        36
+       ],
+       "id": "col:반정보 그리드/등록일자"
+      }
+     ],
+     "id": "grid:반정보 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:학생수 현황",
+   "tab": "학생수 현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다. ",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반정보조회",
+      "학생수 현황",
+      "학생성명 중복현황"
+     ],
+     "active": "학생수 현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "과정",
+     "box": [
+      395,
+      137,
+      132,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      657,
+      137,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계열",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:계열"
+    },
+    {
+     "aria": "기준일자",
+     "box": [
+      887,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기준일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기준일자"
+    },
+    {
+     "aria": "학생 수 현황 조회 버튼",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ]
+  },
+  {
+   "id": "tab:학생성명 중복현황",
+   "tab": "학생성명 중복현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다. ",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반정보조회",
+      "학생수 현황",
+      "학생성명 중복현황"
+     ],
+     "active": "학생성명 중복현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1503,
+      188,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "학생성명 중복현황",
+     "box": [
+      25,
+      228,
+      1590,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생성명 중복현황",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        229,
+        115,
+        62
+       ],
+       "id": "col:학생성명 중복현황/순번"
+      },
+      {
+       "label": "학생성명",
+       "depth": 0,
+       "box": [
+        141,
+        229,
+        171,
+        62
+       ],
+       "id": "col:학생성명 중복현황/학생성명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        311,
+        229,
+        171,
+        62
+       ],
+       "id": "col:학생성명 중복현황/생년월일"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        482,
+        229,
+        137,
+        62
+       ],
+       "id": "col:학생성명 중복현황/성별"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        619,
+        229,
+        106,
+        62
+       ],
+       "id": "col:학생성명 중복현황/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        725,
+        229,
+        101,
+        62
+       ],
+       "id": "col:학생성명 중복현황/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        826,
+        229,
+        85,
+        62
+       ],
+       "id": "col:학생성명 중복현황/번호"
+      },
+      {
+       "label": "주소",
+       "depth": 0,
+       "box": [
+        911,
+        229,
+        453,
+        62
+       ],
+       "id": "col:학생성명 중복현황/주소"
+      },
+      {
+       "label": "출신학교",
+       "depth": 0,
+       "box": [
+        1364,
+        229,
+        250,
+        62
+       ],
+       "id": "col:학생성명 중복현황/출신학교"
+      }
+     ],
+     "id": "grid:학생성명 중복현황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교정보 > 학교정보 > 학교기본정보조회",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

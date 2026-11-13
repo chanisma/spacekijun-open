@@ -1,0 +1,227 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›PAPS자료실›평가기준조회",
+ "name": "평가기준조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:16:34+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교급",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교급"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성별",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:성별"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1240,
+      133,
+      160,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가기준파일내려받기",
+     "variant": "secondary",
+     "id": "button:평가기준파일내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1408,
+      133,
+      207,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교건강검사규칙파일내려받기",
+     "variant": "secondary",
+     "id": "button:학교건강검사규칙파일내려받기"
+    },
+    {
+     "aria": "체력요인 조회 목록",
+     "box": [
+      25,
+      163,
+      525,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "체력요인 조회 목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "체력요인",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        262,
+        36
+       ],
+       "id": "col:체력요인 조회 목록/체력요인"
+      },
+      {
+       "label": "평가종목",
+       "depth": 0,
+       "box": [
+        288,
+        164,
+        262,
+        36
+       ],
+       "id": "col:체력요인 조회 목록/평가종목"
+      }
+     ],
+     "id": "grid:체력요인 조회 목록"
+    },
+    {
+     "aria": "평가기준조회 목록",
+     "box": [
+      565,
+      340,
+      1050,
+      473
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "평가기준조회 목록",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "등급",
+       "depth": 0,
+       "box": [
+        566,
+        341,
+        262,
+        72
+       ],
+       "id": "col:평가기준조회 목록/등급"
+      },
+      {
+       "label": "점수",
+       "depth": 0,
+       "box": [
+        828,
+        341,
+        262,
+        72
+       ],
+       "id": "col:평가기준조회 목록/점수"
+      },
+      {
+       "label": "기준값",
+       "depth": 0,
+       "box": [
+        1090,
+        341,
+        524,
+        36
+       ],
+       "span": 2,
+       "id": "col:평가기준조회 목록/기준값"
+      },
+      {
+       "label": "시작",
+       "depth": 1,
+       "box": [
+        1090,
+        377,
+        262,
+        36
+       ],
+       "id": "col:평가기준조회 목록/기준값>시작"
+      },
+      {
+       "label": "종료",
+       "depth": 1,
+       "box": [
+        1352,
+        377,
+        262,
+        36
+       ],
+       "id": "col:평가기준조회 목록/기준값>종료"
+      }
+     ],
+     "id": "grid:평가기준조회 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > PAPS자료실 > 평가기준조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

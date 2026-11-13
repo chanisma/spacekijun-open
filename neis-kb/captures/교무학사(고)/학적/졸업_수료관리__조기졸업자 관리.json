@@ -1,0 +1,369 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업/수료관리›조기졸업자 관리",
+ "name": "조기졸업자 관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:17:44+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": " 조회",
+     "box": [
+      1535,
+      82,
+      60,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "졸업자 리스트",
+     "box": [
+      25,
+      173,
+      1590,
+      460
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "졸업자 리스트",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        36
+       ],
+       "id": "col:졸업자 리스트/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        131,
+        36
+       ],
+       "id": "col:졸업자 리스트/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        257,
+        174,
+        131,
+        36
+       ],
+       "id": "col:졸업자 리스트/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        387,
+        174,
+        131,
+        36
+       ],
+       "id": "col:졸업자 리스트/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        518,
+        174,
+        261,
+        36
+       ],
+       "id": "col:졸업자 리스트/성명"
+      },
+      {
+       "label": "입학일자",
+       "depth": 0,
+       "box": [
+        779,
+        174,
+        313,
+        36
+       ],
+       "id": "col:졸업자 리스트/입학일자"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1092,
+        174,
+        522,
+        36
+       ],
+       "id": "col:졸업자 리스트/비고"
+      }
+     ],
+     "id": "grid:졸업자 리스트"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      643,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      653,
+      69,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "상세 내역",
+     "id": "heading:상세 내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      689,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학년",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      689,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "계열",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:계열"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      689,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학과",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학과"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      729,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "반",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      729,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      729,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      769,
+      320,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "진학학교",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:진학학교"
+    },
+    {
+     "aria": "학교찾기",
+     "box": [
+      476,
+      769,
+      74,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학교찾기",
+     "variant": "primary",
+     "id": "button:학교찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      769,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "비고",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비고"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업/수료관리 > 조기졸업자 관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

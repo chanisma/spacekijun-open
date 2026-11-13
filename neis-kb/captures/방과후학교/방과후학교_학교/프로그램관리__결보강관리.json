@@ -1,0 +1,216 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›프로그램관리›결보강관리",
+ "name": "결보강관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:01:17+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "프로그램명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:프로그램명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "결보강관리 목록",
+     "box": [
+      25,
+      163,
+      1590,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "결보강관리 목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        50,
+        72
+       ],
+       "id": "col:결보강관리 목록/순번"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        76,
+        164,
+        271,
+        72
+       ],
+       "id": "col:결보강관리 목록/프로그램명"
+      },
+      {
+       "label": "총강",
+       "depth": 0,
+       "box": [
+        347,
+        164,
+        181,
+        72
+       ],
+       "id": "col:결보강관리 목록/총강"
+      },
+      {
+       "label": "본강",
+       "depth": 0,
+       "box": [
+        528,
+        164,
+        181,
+        72
+       ],
+       "id": "col:결보강관리 목록/본강"
+      },
+      {
+       "label": "결강",
+       "depth": 0,
+       "box": [
+        709,
+        164,
+        452,
+        36
+       ],
+       "span": 2,
+       "id": "col:결보강관리 목록/결강"
+      },
+      {
+       "label": "보강",
+       "depth": 0,
+       "box": [
+        1162,
+        164,
+        452,
+        36
+       ],
+       "span": 2,
+       "id": "col:결보강관리 목록/보강"
+      },
+      {
+       "label": "신청",
+       "depth": 1,
+       "box": [
+        709,
+        200,
+        226,
+        36
+       ],
+       "id": "col:결보강관리 목록/결강>신청"
+      },
+      {
+       "label": "승인",
+       "depth": 1,
+       "box": [
+        935,
+        200,
+        226,
+        36
+       ],
+       "id": "col:결보강관리 목록/결강>승인"
+      },
+      {
+       "label": "신청",
+       "depth": 1,
+       "box": [
+        1162,
+        200,
+        226,
+        36
+       ],
+       "id": "col:결보강관리 목록/보강>신청"
+      },
+      {
+       "label": "승인",
+       "depth": 1,
+       "box": [
+        1388,
+        200,
+        226,
+        36
+       ],
+       "id": "col:결보강관리 목록/보강>승인"
+      }
+     ],
+     "id": "grid:결보강관리 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 프로그램관리 > 결보강관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

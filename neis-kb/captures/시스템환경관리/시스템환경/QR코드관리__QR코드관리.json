@@ -1,0 +1,451 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템환경관리›시스템환경›QR코드관리›QR코드관리",
+ "name": "QR코드관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:52:29+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "생성기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:생성기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업무영역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업무영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      810,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "URL",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:URL"
+    },
+    {
+     "aria": null,
+     "box": [
+      1150,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "배너정보",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:배너정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사용여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1276,
+      173,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1335,
+      173,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인쇄",
+     "variant": "primary",
+     "id": "button:인쇄"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      342
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "업무영역",
+       "depth": 0,
+       "box": [
+        126,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/업무영역"
+      },
+      {
+       "label": "URL",
+       "depth": 0,
+       "box": [
+        226,
+        214,
+        427,
+        36
+       ],
+       "id": "col:그리드/URL"
+      },
+      {
+       "label": "배너정보",
+       "depth": 0,
+       "box": [
+        653,
+        214,
+        214,
+        36
+       ],
+       "id": "col:그리드/배너정보"
+      },
+      {
+       "label": "파라미터",
+       "depth": 0,
+       "box": [
+        867,
+        214,
+        320,
+        36
+       ],
+       "id": "col:그리드/파라미터"
+      },
+      {
+       "label": "생성일시",
+       "depth": 0,
+       "box": [
+        1187,
+        214,
+        214,
+        36
+       ],
+       "id": "col:그리드/생성일시"
+      },
+      {
+       "label": "일련번호",
+       "depth": 0,
+       "box": [
+        1400,
+        214,
+        107,
+        36
+       ],
+       "id": "col:그리드/일련번호"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1507,
+        214,
+        107,
+        36
+       ],
+       "id": "col:그리드/사용여부"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      565,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      606,
+      446,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "일련번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:일련번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      726,
+      606,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사용여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사용여부#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      646,
+      446,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업무영역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업무영역#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      726,
+      646,
+      446,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "배너정보",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:배너정보#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      686,
+      446,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "URL",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:URL#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      726,
+      686,
+      446,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "파라미터",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:파라미터"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      726,
+      1023,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "QR코드생성값",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:QR코드생성값"
+    },
+    {
+     "aria": "다운로드버튼",
+     "box": [
+      1406,
+      726,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "다운로드",
+     "variant": "primary",
+     "id": "button:다운로드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템환경관리}시스템환경 > QR코드관리 > QR코드관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

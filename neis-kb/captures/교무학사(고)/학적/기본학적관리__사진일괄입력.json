@@ -1,0 +1,281 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›기본학적관리›사진일괄입력",
+ "name": "사진일괄입력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:08:20+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 업로드할 사진의 크기는 최대 200Kbyte이며, 입학 당시 사진을 활용하되 졸업학년도에 촬영한 사진으로 새로 입력합니다. 다만, 고등학교의 졸업학년도에 입력하는 것은 여권용 사진으로 입력합니다.",
+     "id": "note:※ 업로드할 사진의 크기는 최대 200Kbyte이며, 입학 당시 사진을 활용하되 졸업학년도에 촬영한 사진으로 새로 입력합니다. 다만, 고등학교의 졸업학년도에 입력하는 것은 여권용 사진으로 입력합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      176,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 사진일괄 올리기를 사용하여 사진등록을 할때는 반드시 사진파일명을 성명(번호)로 변경해야 합니다. 예) 홍길동(1).jpg, 홍길동(12).jpg",
+     "id": "note:※ 사진일괄 올리기를 사용하여 사진등록을 할때는 반드시 사진파일명을 성명(번호)로 변경해야 합니다. 예) 홍길동(1).jpg, 홍길동(12).jpg"
+    },
+    {
+     "aria": "사진일괄변환",
+     "box": [
+      1156,
+      230,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "사진일괄변환",
+     "variant": "link",
+     "id": "button:사진일괄변환"
+    },
+    {
+     "aria": "사진일괄올리기",
+     "box": [
+      1252,
+      230,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "사진일괄올리기",
+     "variant": "link",
+     "id": "button:사진일괄올리기"
+    },
+    {
+     "aria": "사진일괄내리기",
+     "box": [
+      1360,
+      230,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "사진일괄내리기",
+     "variant": "primary",
+     "id": "button:사진일괄내리기"
+    },
+    {
+     "aria": "선택사진내리기",
+     "box": [
+      1467,
+      230,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택사진내리기",
+     "variant": "link",
+     "id": "button:선택사진내리기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      230,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "사진일괄입력 목록",
+     "box": [
+      25,
+      270,
+      1590,
+      544
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "사진일괄입력 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "사진",
+       "depth": 0,
+       "box": [
+        76,
+        271,
+        100,
+        36
+       ],
+       "id": "col:사진일괄입력 목록/사진"
+      },
+      {
+       "label": "학생개인번호",
+       "depth": 0,
+       "box": [
+        176,
+        271,
+        226,
+        36
+       ],
+       "id": "col:사진일괄입력 목록/학생개인번호"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        402,
+        271,
+        226,
+        36
+       ],
+       "id": "col:사진일괄입력 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        627,
+        271,
+        226,
+        36
+       ],
+       "id": "col:사진일괄입력 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        853,
+        271,
+        226,
+        36
+       ],
+       "id": "col:사진일괄입력 목록/성명"
+      },
+      {
+       "label": "사진등록일자",
+       "depth": 0,
+       "box": [
+        1079,
+        271,
+        226,
+        36
+       ],
+       "id": "col:사진일괄입력 목록/사진등록일자"
+      },
+      {
+       "label": "사진파일선택",
+       "depth": 0,
+       "box": [
+        1304,
+        271,
+        310,
+        36
+       ],
+       "span": 2,
+       "id": "col:사진일괄입력 목록/사진파일선택"
+      }
+     ],
+     "id": "grid:사진일괄입력 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 기본학적관리 > 사진일괄입력",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "date": "2026-10-03",
+ "chapter": "VI · 설명할 수 있을 때까지",
+ "method": "codex CLI 0.155.1 built-in image_generation (ChatGPT login; the local OPENAI_API_KEY was invalid so images/edits via API was not used). References attached with -i: ria-player.png, serin.png, library.png, chapter-library-shelves.png. Prompts passed verbatim from .tmp/reading-art/task2.txt.",
+ "size": "1536x1024",
+ "assets": [
+  {
+   "key": "chapter-reading-window",
+   "file": "chapter-reading-window.png",
+   "source": "C:/Users/you/AppData/Roaming/orca/codex-accounts/ad2941ea-e520-477a-b2c6-38d3c48f3056/home/generated_images/01a0fd89-9406-7021-a388-3a36feea56f4/exec-48c216a1-5dfe-4d6f-a914-dbb3d2f44028.png",
+   "prompt": "Use case illustration-story. Create one finished 1536x1024 landscape PNG for chapter VI of a Korean romance fantasy visual novel. Reference 1 is Ria (long wavy brown hair, violet eyes, purple fantasy dress with ivory blouse and gold accents), reference 2 is Serin (honey blonde braid, sage green eyes, cream blouse, long green skirt, purple bookmark), reference 3 is the royal academy library architecture and palette, reference 4 is the finished painterly detailed anime art style. Preserve the two characters' identities, faces, hair and costumes exactly. New scene: inside the grand royal library in late afternoon, at a wide arched window with golden light, Serin sits at a window-side reading table absorbed in an open book, a purple bookmark resting beside her hand. Ria has just arrived and stops a few steps away in gentle surprise, one hand lifted, recognizing her dormitory roommate in this unexpected place. Tall bookshelves and warm lamps behind, violet-tinted sky through the window. Both faces clearly visible in the upper two thirds of the frame, intimate eye-level composition. No text, no letters on book spines, no UI, labels, watermark, speech bubbles or other characters."
+  },
+  {
+   "key": "chapter-reading-shelves",
+   "file": "chapter-reading-shelves.png",
+   "source": "C:/Users/you/AppData/Roaming/orca/codex-accounts/ad2941ea-e520-477a-b2c6-38d3c48f3056/home/generated_images/01a0fd89-9406-7021-a388-3a36feea56f4/exec-97ee890f-5979-4e94-be9b-b5dacee3e90f.png",
+   "prompt": "Use case illustration-story. Create one finished 1536x1024 landscape PNG for chapter VI of a Korean romance fantasy visual novel. Reference 1 is Ria (long wavy brown hair, violet eyes, purple fantasy dress with ivory blouse and gold accents), reference 2 is Serin (honey blonde braid, sage green eyes, cream blouse, long green skirt), reference 3 is the royal academy library architecture and palette, reference 4 is the finished painterly detailed anime art style. Preserve the two characters' identities, faces, hair and costumes exactly. New scene: in front of a tall, beautifully carved recommended-books shelf in the royal library, Serin gently hands Ria a single hardcover book with both hands; Ria receives it holding it against her chest, looking at the cover with hesitant curiosity. Five shelf sections with ornate gold dividers suggest different fields, but all book spines and covers are blank with decorative patterns only. Warm late-afternoon light, dust motes, a rolling ladder in the background. Both faces clearly visible in the upper two thirds, medium shot, the two women close together. No text, no letters anywhere, no UI, labels, watermark, speech bubbles or other characters."
+  },
+  {
+   "key": "chapter-reading-card",
+   "file": "chapter-reading-card.png",
+   "source": "C:/Users/you/AppData/Roaming/orca/codex-accounts/ad2941ea-e520-477a-b2c6-38d3c48f3056/home/generated_images/01a0fd89-9406-7021-a388-3a36feea56f4/exec-4453e417-9dfb-4c44-b6a7-89aff6530e71.png",
+   "prompt": "Use case illustration-story. Create one finished 1536x1024 landscape PNG for chapter VI of a Korean romance fantasy visual novel. Reference 1 is Ria (long wavy brown hair, violet eyes, purple fantasy dress with ivory blouse and gold accents), reference 2 is Serin (honey blonde braid, sage green eyes, cream blouse, long green skirt), reference 3 is the royal academy library architecture and palette, reference 4 is the finished painterly detailed anime art style. Preserve the two characters' identities, faces, hair and costumes exactly. New scene: evening at the library window-side table under a warm brass lamp. Ria, seated, writes on a small ivory card with a quill, her book closed beside her as she explains the idea in her own words from memory; her expression is thoughtful, mid-sentence, slightly surprised at finding a gap. Serin sits beside her writing her own small card, glancing over with a gentle encouraging smile. A few blank cards and the closed book on the table, violet night sky through the arched window behind them. Both faces clearly visible in the upper two thirds, intimate eye-level composition. The cards are blank or show only illegible soft marks. No readable text, no UI, labels, watermark, speech bubbles or other characters."
+  }
+ ]
+}

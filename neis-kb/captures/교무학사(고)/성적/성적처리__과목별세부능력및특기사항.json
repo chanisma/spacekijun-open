@@ -1,0 +1,380 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적처리›과목별세부능력및특기사항",
+ "name": "과목별세부능력및특기사항",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:19:40+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "과목",
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "강의실",
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:강의실"
+    },
+    {
+     "aria": null,
+     "box": [
+      1245,
+      82,
+      89,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "영재 미표시",
+     "checked": true,
+     "id": "check:영재 미표시"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      226,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 위탁교의 위탁 학생일 경우 1,2학기 과목별 세부능력 및 특기사항의 byte가 자동 계산(합산)되지 않습니다.",
+     "id": "note:※ 위탁교의 위탁 학생일 경우 1,2학기 과목별 세부능력 및 특기사항의 byte가 자동 계산(합산)되지 않습니다."
+    },
+    {
+     "aria": "셀 크기 상하로 확대",
+     "box": [
+      1012,
+      279,
+      16,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "셀 크기 상하로 확대",
+     "variant": "plain",
+     "id": "button:셀 크기 상하로 확대"
+    },
+    {
+     "aria": "셀 크기 상하로 축소",
+     "box": [
+      1036,
+      279,
+      16,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "셀 크기 상하로 축소",
+     "variant": "plain",
+     "id": "button:셀 크기 상하로 축소"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1060,
+      279,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "엑셀업로드",
+     "box": [
+      1180,
+      279,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀업로드",
+     "variant": "plain",
+     "id": "button:엑셀업로드"
+    },
+    {
+     "aria": "문자열바꾸기",
+     "box": [
+      1288,
+      279,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "문자열바꾸기",
+     "variant": "link",
+     "id": "button:문자열바꾸기"
+    },
+    {
+     "aria": "관찰내용조회",
+     "box": [
+      1383,
+      279,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "관찰내용조회",
+     "variant": "link",
+     "id": "button:관찰내용조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "과목별",
+     "box": [
+      25,
+      289,
+      48,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "과목별",
+     "id": "heading:과목별"
+    },
+    {
+     "aria": "과목별 세부능력 및 특기사항 그리드",
+     "box": [
+      25,
+      319,
+      1590,
+      494
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "과목별 세부능력 및 특기사항 그리드",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "반/번호",
+       "depth": 0,
+       "box": [
+        76,
+        320,
+        192,
+        62
+       ],
+       "id": "col:과목별 세부능력 및 특기사항 그리드/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        268,
+        320,
+        192,
+        62
+       ],
+       "id": "col:과목별 세부능력 및 특기사항 그리드/성명"
+      },
+      {
+       "label": "학적변동 구분",
+       "depth": 0,
+       "box": [
+        460,
+        320,
+        154,
+        62
+       ],
+       "id": "col:과목별 세부능력 및 특기사항 그리드/학적변동 구분"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        614,
+        320,
+        40,
+        62
+       ],
+       "id": "col:과목별 세부능력 및 특기사항 그리드/구분"
+      },
+      {
+       "label": "입력가능글자 (Byte)",
+       "depth": 0,
+       "box": [
+        654,
+        320,
+        192,
+        62
+       ],
+       "id": "col:과목별 세부능력 및 특기사항 그리드/입력가능글자 (Byte)"
+      },
+      {
+       "label": "세부능력 및 특기사항",
+       "depth": 0,
+       "box": [
+        846,
+        320,
+        768,
+        62
+       ],
+       "id": "col:과목별 세부능력 및 특기사항 그리드/세부능력 및 특기사항"
+      }
+     ],
+     "id": "grid:과목별 세부능력 및 특기사항 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적처리 > 과목별세부능력및특기사항",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

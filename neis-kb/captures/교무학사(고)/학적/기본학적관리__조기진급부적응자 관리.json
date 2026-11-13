@@ -1,0 +1,366 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›기본학적관리›조기진급부적응자 관리",
+ "name": "조기진급부적응자 관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:01:27+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      59,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      374,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "미반영된자료/학적반영된자료",
+     "box": [
+      484,
+      82,
+      225,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "학년",
+     "options": [
+      "미반영된자료",
+      "학적반영된자료"
+     ],
+     "id": "radio:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학적반영",
+     "box": [
+      1359,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학적반영",
+     "variant": "primary",
+     "id": "button:학적반영"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1431,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "조기진급부적응자관리 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      400
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "조기진급부적응자관리 목록",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        62
+       ],
+       "id": "col:조기진급부적응자관리 목록/순번"
+      },
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        186,
+        62
+       ],
+       "id": "col:조기진급부적응자관리 목록/일자"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        312,
+        174,
+        186,
+        62
+       ],
+       "id": "col:조기진급부적응자관리 목록/성명"
+      },
+      {
+       "label": "기존",
+       "depth": 0,
+       "box": [
+        498,
+        174,
+        558,
+        31
+       ],
+       "span": 4,
+       "id": "col:조기진급부적응자관리 목록/기존"
+      },
+      {
+       "label": "배정",
+       "depth": 0,
+       "box": [
+        1056,
+        174,
+        558,
+        31
+       ],
+       "span": 4,
+       "id": "col:조기진급부적응자관리 목록/배정"
+      },
+      {
+       "label": "학과",
+       "depth": 1,
+       "box": [
+        498,
+        205,
+        372,
+        31
+       ],
+       "id": "col:조기진급부적응자관리 목록/기존>학과"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        870,
+        205,
+        93,
+        31
+       ],
+       "id": "col:조기진급부적응자관리 목록/기존>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        963,
+        205,
+        93,
+        31
+       ],
+       "id": "col:조기진급부적응자관리 목록/기존>번호"
+      },
+      {
+       "label": "학과",
+       "depth": 1,
+       "box": [
+        1056,
+        205,
+        372,
+        31
+       ],
+       "id": "col:조기진급부적응자관리 목록/배정>학과"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        1428,
+        205,
+        93,
+        31
+       ],
+       "id": "col:조기진급부적응자관리 목록/배정>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        1521,
+        205,
+        93,
+        31
+       ],
+       "id": "col:조기진급부적응자관리 목록/배정>번호"
+      }
+     ],
+     "id": "grid:조기진급부적응자관리 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      583,
+      1590,
+      20
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "heading",
+     "label": "변경될 학적내역",
+     "id": "heading:변경될 학적내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      659,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      699,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      699,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "번호",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:번호"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 기본학적관리 > 조기진급부적응자 관리",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,321 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›통계관리(학교)›학교급식실시현황›식재료사용현황",
+ "name": "식재료사용현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:12:04+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품대분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품대분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      465,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품중분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식품중분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "소분류명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:소분류명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1045,
+      82,
+      89,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품공통코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식품공통코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1140,
+      82,
+      133,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품공통코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품공통코드#2"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      1279,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1315,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "규격",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:규격"
+    },
+    {
+     "aria": null,
+     "box": [
+      465,
+      122,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "단위",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:단위"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      122,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "원산지",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:원산지"
+    },
+    {
+     "aria": null,
+     "box": [
+      1045,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:급식일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1180,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:급식일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      162,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공동구매",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:공동구매"
+    },
+    {
+     "aria": null,
+     "box": [
+      465,
+      162,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "친환경 인증정보",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:친환경 인증정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      162,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조리용도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:조리용도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1045,
+      162,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품안전검사",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품안전검사"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      202,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      202,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      202,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}통계관리(학교) > 학교급식실시현황 > 식재료사용현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

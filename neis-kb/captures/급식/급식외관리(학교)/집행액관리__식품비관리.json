@@ -1,0 +1,449 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식외관리(학교)›집행액관리›식품비관리",
+ "name": "식품비관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:48:18+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학교명"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      515,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      545,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식년월"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      671,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      705,
+      82,
+      175,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "품의처리 포함여부",
+     "checked": false,
+     "id": "check:품의처리 포함여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 회계년도를 기준으로 급식비예산 등록 후 월별 가용금액만 등록해 주세요.(잔액 표현 기준 -(1월 금액)=잔액, 2월:급식비예산-(1/2월 금액)=잔액....) ※ 식단/품의검수는 식단작성 및 품의처리, 검수처리 시 자동 반영됩니다. ※ 재적인원가져오기: 급식년월을 기준으로 학년도를 산출하여 재적인원을 조회합니다.",
+     "id": "note:※ 회계년도를 기준으로 급식비예산 등록 후 월별 가용금액만 등록해 주세요.(잔액 표현 기준 -(1월 금액)=잔액, 2월:급식비예산-(1/2월 금액)=잔액....) ※ 식단/품의검수는 식단작성 및 품의처리, 검수처리 시 자동 반영됩니다. ※ 재적인원가져오기: 급식년월을 기준으로 학년도를 산출하여 재적인원을 조회합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      235,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전월복사하기",
+     "variant": "primary",
+     "id": "button:전월복사하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      403,
+      235,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "재적인원가져오기",
+     "variant": "plain",
+     "id": "button:재적인원가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      524,
+      235,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "급식인원가져오기",
+     "variant": "primary",
+     "id": "button:급식인원가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      776,
+      235,
+      107,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "1인단가가져오기",
+     "variant": "plain",
+     "id": "button:1인단가가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1023,
+      235,
+      109,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식품비(현황)조회",
+     "variant": "plain",
+     "id": "button:식품비(현황)조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      826,
+      287,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      946,
+      287,
+      128,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "1인단가(원)일괄적용",
+     "variant": "plain",
+     "id": "button:1인단가(원)일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1082,
+      287,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "급식일수일괄적용",
+     "variant": "plain",
+     "id": "button:급식일수일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1201,
+      287,
+      149,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(수입예정액-기타)행추가",
+     "variant": "plain",
+     "id": "button:(수입예정액-기타)행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1358,
+      287,
+      149,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(수입예정액-기타)행삭제",
+     "variant": "plain",
+     "id": "button:(수입예정액-기타)행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      287,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      287,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      297,
+      148,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "수입(예정)/집행내역",
+     "id": "heading:수입(예정)/집행내역"
+    },
+    {
+     "aria": "수입(예정)/집행내역",
+     "box": [
+      25,
+      327,
+      1590,
+      115
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수입(예정)/집행내역",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        77,
+        328,
+        171,
+        72
+       ],
+       "id": "col:수입(예정)/집행내역/구분"
+      },
+      {
+       "label": "식사구분",
+       "depth": 0,
+       "box": [
+        248,
+        328,
+        171,
+        72
+       ],
+       "id": "col:수입(예정)/집행내역/식사구분"
+      },
+      {
+       "label": "학교과정구분",
+       "depth": 0,
+       "box": [
+        419,
+        328,
+        171,
+        72
+       ],
+       "id": "col:수입(예정)/집행내역/학교과정구분"
+      },
+      {
+       "label": "주체구분",
+       "depth": 0,
+       "box": [
+        589,
+        328,
+        171,
+        72
+       ],
+       "id": "col:수입(예정)/집행내역/주체구분"
+      },
+      {
+       "label": "급식인원",
+       "depth": 0,
+       "box": [
+        760,
+        328,
+        171,
+        72
+       ],
+       "id": "col:수입(예정)/집행내역/급식인원"
+      },
+      {
+       "label": "1인단가(원)",
+       "depth": 0,
+       "box": [
+        931,
+        328,
+        171,
+        36
+       ],
+       "id": "col:수입(예정)/집행내역/1인단가(원)"
+      },
+      {
+       "label": "급식일수",
+       "depth": 0,
+       "box": [
+        1102,
+        328,
+        171,
+        36
+       ],
+       "id": "col:수입(예정)/집행내역/급식일수"
+      },
+      {
+       "label": "금액(원)",
+       "depth": 0,
+       "box": [
+        1272,
+        328,
+        171,
+        72
+       ],
+       "id": "col:수입(예정)/집행내역/금액(원)"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1443,
+        328,
+        171,
+        72
+       ],
+       "id": "col:수입(예정)/집행내역/비고"
+      }
+     ],
+     "id": "grid:수입(예정)/집행내역"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식외관리(학교) > 집행액관리 > 식품비관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

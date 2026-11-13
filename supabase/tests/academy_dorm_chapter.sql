@@ -1,0 +1,80 @@
+begin;
+select set_config('dorm.owner',(select id::text from public.profiles where role='student' order by id limit 1),true);
+select set_config('dorm.other',(select id::text from public.profiles where role='student' and id::text<>current_setting('dorm.owner') order by id limit 1),true);
+select set_config('dorm.admin',(select id::text from public.profiles where role='admin' limit 1),true);
+delete from public.academy_chapters where user_id=current_setting('dorm.owner')::uuid;
+delete from public.academy_chapter_rewards where user_id=current_setting('dorm.owner')::uuid and chapter='dorm_first_plan';
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('dorm.owner'),'role','authenticated')::text,true);
+set local role authenticated;
+do $$ begin
+ begin perform public.academy_dorm_chapter_write('start',0); raise exception 'Chapter III unlocked before II' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+end $$;
+reset role;
+insert into public.academy_chapters(user_id,chapter,step,revision,completed_at) values
+ (current_setting('dorm.owner')::uuid,'first_star',16,16,now()),
+ (current_setting('dorm.owner')::uuid,'library_questions',18,18,now());
+select set_config('dorm.balance',coalesce((select coins from public.academy_user_stats where user_id=current_setting('dorm.owner')::uuid),100)::text,true);
+set local role authenticated;
+do $$ declare c jsonb; g jsonb; t jsonb; i integer; begin
+ c:=public.academy_dorm_chapter_write('start',0);
+ if c->>'step'<>'0' then raise exception 'Missing interlude'; end if;
+ perform public.academy_dorm_chapter_write('next',0);
+ c:=public.academy_dorm_chapter_write('next',0);
+ if c->>'step'<>'1' then raise exception 'Retry advanced twice'; end if;
+ for i in 1..5 loop perform public.academy_dorm_chapter_write('next',i); end loop;
+ begin perform public.academy_dorm_chapter_write('next',6); raise exception 'Travel skipped' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ perform public.academy_dorm_chapter_write('arrive',6);
+ for i in 7..19 loop perform public.academy_dorm_chapter_write('next',i); end loop;
+ begin perform public.academy_dorm_chapter_write('next',20); raise exception 'Goal skipped' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ begin perform public.academy_dorm_chapter_write('goal',20,gen_random_uuid()); raise exception 'Foreign/missing goal accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ g:=public.academy_dormitory_write('save_goal','{"title":"매일 영어 단어 10개 외우기","description":""}');
+ begin perform public.academy_dorm_chapter_write('goal',20,(g->>'id')::uuid); raise exception 'Reason skipped' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ g:=public.academy_dormitory_write('save_goal',g||'{"description":"영어로 된 이야기를 조금씩 읽고 싶어서"}');
+ perform public.academy_dorm_chapter_write('goal',20,(g->>'id')::uuid);
+ -- A goal can be deleted during the lesson; reopen that step without losing plans.
+ perform public.academy_dormitory_write('delete_goal',jsonb_build_object('id',g->>'id'));
+ c:=public.academy_chapter_read()->'dorm';
+ if c->>'step'<>'20' then raise exception 'Deleted goal strands lesson'; end if;
+ g:=public.academy_dormitory_write('save_goal','{"title":"영어 단어 10개 외우기","description":"작은 행동부터 익히고 싶어서"}');
+ c:=public.academy_dorm_chapter_write('goal',(c->>'revision')::integer,(g->>'id')::uuid);
+ for i in 1..5 loop c:=public.academy_dorm_chapter_write('next',(c->>'revision')::integer); end loop;
+ begin perform public.academy_dorm_chapter_write('next',(c->>'revision')::integer); raise exception 'Plan skipped' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ t:=public.academy_dormitory_write('save_task',jsonb_build_object('title','단어장 첫 페이지 10개 확인','task_date',(now() at time zone 'Asia/Seoul')::date+1,'related_goal_id',g->>'id','priority','high'));
+ begin perform public.academy_dorm_chapter_write('plan',(c->>'revision')::integer,(t->>'id')::uuid); raise exception 'Untimed plan accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ t:=public.academy_dormitory_write('save_task',t||'{"start_time":"18:00","end_time":"18:20"}');
+ if not exists(select 1 from jsonb_array_elements(public.academy_chapter_read()->'dormPlans') x where x->>'id'=t->>'id') then raise exception 'Saved plan recovery missing'; end if;
+ c:=public.academy_dorm_chapter_write('plan',(c->>'revision')::integer,(t->>'id')::uuid);
+ for i in 27..35 loop c:=public.academy_dorm_chapter_write('next',(c->>'revision')::integer); end loop;
+ if c->>'step'<>'36' or c->>'completed_at' is null then raise exception 'Completion failed'; end if;
+ perform public.academy_dorm_chapter_write('next',(c->>'revision')::integer);
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>current_setting('dorm.balance')::integer+50 then raise exception 'Missing/duplicate 50 coin reward'; end if;
+ perform public.academy_dormitory_write('save_feedback',jsonb_build_object('id',t->>'id','comment','처음에는 양을 줄이고 다시 시도하자.'));
+ perform public.academy_dormitory_write('save_feedback',jsonb_build_object('id',t->>'id','comment','내일도 작은 양부터 시작하자.'));
+ if (select count(*) from public.academy_task_feedback where task_id=(t->>'id')::uuid)<>1 then raise exception 'Feedback duplicated'; end if;
+ if not exists(select 1 from jsonb_array_elements(public.academy_dormitory_read((t->>'task_date')::date)->'tasks') x where x->>'id'=t->>'id' and x->>'feedback'='내일도 작은 양부터 시작하자.') then raise exception 'Feedback not visible'; end if;
+ perform public.academy_dormitory_write('complete_goal',jsonb_build_object('id',g->>'id','completed',true));
+ if not (select is_completed from public.academy_user_goals where id=(g->>'id')::uuid) then raise exception 'Goal completion failed'; end if;
+ perform public.academy_dormitory_write('complete_goal',jsonb_build_object('id',g->>'id','completed',false));
+ if (select completed_at from public.academy_user_goals where id=(g->>'id')::uuid) is not null then raise exception 'Goal reopen failed'; end if;
+ perform public.academy_dormitory_write('delete_goal',jsonb_build_object('id',g->>'id'));
+ if not exists(select 1 from public.academy_tasks where id=(t->>'id')::uuid and related_goal_id is null) or not exists(select 1 from public.academy_task_feedback where task_id=(t->>'id')::uuid) then raise exception 'Goal deletion removed plan/feedback'; end if;
+ if public.academy_chapter_read()->'dorm'->>'goal_title'<>'영어 단어 10개 외우기' then raise exception 'Historical chapter lost title'; end if;
+ perform set_config('dorm.task',t->>'id',true);
+end $$;
+reset role;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('dorm.other'),'role','authenticated')::text,true);
+set local role authenticated;
+do $$ begin
+ begin perform public.academy_dormitory_write('save_feedback',jsonb_build_object('id',current_setting('dorm.task'),'comment','forged')); raise exception 'Foreign feedback allowed' using errcode='XX000'; exception when insufficient_privilege then null; end;
+ if exists(select 1 from public.academy_chapters where user_id=current_setting('dorm.owner')::uuid) then raise exception 'Chapter privacy failed'; end if;
+end $$;
+reset role;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('dorm.admin'),'role','authenticated')::text,true);
+set local role authenticated;
+do $$ begin
+ begin perform public.academy_dorm_chapter_write('start',0); raise exception 'Admin wrote chapter' using errcode='XX000'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_dormitory_write('delete_goal',jsonb_build_object('id',gen_random_uuid())); raise exception 'Admin wrote goal' using errcode='XX000'; exception when insufficient_privilege then null; end;
+end $$;
+reset role;
+select 'PASS: Chapter III gates, actual own goal/linked timed priority plan, recovery, goal removal, feedback, completion/retry reward and student/admin permissions (rolled back)' as result;
+rollback;

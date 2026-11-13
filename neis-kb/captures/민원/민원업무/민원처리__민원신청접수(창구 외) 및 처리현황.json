@@ -1,0 +1,471 @@
+{
+ "schema": "neis-capture/1",
+ "key": "민원›민원업무›민원처리›민원신청접수(창구 외) 및 처리현황",
+ "name": "민원신청접수(창구 외) 및 처리현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:23:15+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "민원종류",
+     "box": [
+      135,
+      82,
+      70,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "민원종류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:민원종류"
+    },
+    {
+     "aria": "민원구분",
+     "box": [
+      305,
+      82,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "민원구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:민원구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      565,
+      82,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "접수구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:접수구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      805,
+      82,
+      180,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "접수번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:접수번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1085,
+      82,
+      110,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기간구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1205,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간구분",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간구분#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1340,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간구분~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간구분~"
+    },
+    {
+     "aria": null,
+     "box": [
+      135,
+      122,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "민원사무명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:민원사무명"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청인성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:신청인성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      625,
+      122,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "처리기관",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:처리기관"
+    },
+    {
+     "aria": null,
+     "box": [
+      890,
+      122,
+      110,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "민원현황알림",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:민원현황알림"
+    },
+    {
+     "aria": null,
+     "box": [
+      1100,
+      122,
+      135,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수기여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:수기여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1335,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "민원처리상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:민원처리상태"
+    },
+    {
+     "aria": "조회버튼",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1501,
+      176,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "민원처리현황",
+     "box": [
+      25,
+      188,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "민원처리현황",
+     "id": "heading:민원처리현황"
+    },
+    {
+     "aria": "민원처리현황",
+     "box": [
+      25,
+      218,
+      1590,
+      398
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "민원처리현황",
+     "selectable": false,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        219,
+        35,
+        36
+       ],
+       "id": "col:민원처리현황/순번"
+      },
+      {
+       "label": "민원종류",
+       "depth": 0,
+       "box": [
+        61,
+        219,
+        60,
+        36
+       ],
+       "id": "col:민원처리현황/민원종류"
+      },
+      {
+       "label": "접수번호",
+       "depth": 0,
+       "box": [
+        121,
+        219,
+        170,
+        36
+       ],
+       "id": "col:민원처리현황/접수번호"
+      },
+      {
+       "label": "접수구분",
+       "depth": 0,
+       "box": [
+        291,
+        219,
+        100,
+        36
+       ],
+       "id": "col:민원처리현황/접수구분"
+      },
+      {
+       "label": "접수일자",
+       "depth": 0,
+       "box": [
+        391,
+        219,
+        90,
+        36
+       ],
+       "id": "col:민원처리현황/접수일자"
+      },
+      {
+       "label": "신청일자",
+       "depth": 0,
+       "box": [
+        481,
+        219,
+        90,
+        36
+       ],
+       "id": "col:민원처리현황/신청일자"
+      },
+      {
+       "label": "신청인",
+       "depth": 0,
+       "box": [
+        571,
+        219,
+        80,
+        36
+       ],
+       "id": "col:민원처리현황/신청인"
+      },
+      {
+       "label": "민원사무명",
+       "depth": 0,
+       "box": [
+        651,
+        219,
+        203,
+        36
+       ],
+       "id": "col:민원처리현황/민원사무명"
+      },
+      {
+       "label": "처리기관",
+       "depth": 0,
+       "box": [
+        854,
+        219,
+        110,
+        36
+       ],
+       "id": "col:민원처리현황/처리기관"
+      },
+      {
+       "label": "수기여부",
+       "depth": 0,
+       "box": [
+        964,
+        219,
+        80,
+        36
+       ],
+       "id": "col:민원처리현황/수기여부"
+      },
+      {
+       "label": "수령방법",
+       "depth": 0,
+       "box": [
+        1044,
+        219,
+        100,
+        36
+       ],
+       "id": "col:민원처리현황/수령방법"
+      },
+      {
+       "label": "해결일자",
+       "depth": 0,
+       "box": [
+        1144,
+        219,
+        90,
+        36
+       ],
+       "id": "col:민원처리현황/해결일자"
+      },
+      {
+       "label": "처리기한",
+       "depth": 0,
+       "box": [
+        1234,
+        219,
+        200,
+        36
+       ],
+       "span": 2,
+       "id": "col:민원처리현황/처리기한"
+      },
+      {
+       "label": "처리상태",
+       "depth": 0,
+       "box": [
+        1434,
+        219,
+        90,
+        36
+       ],
+       "id": "col:민원처리현황/처리상태"
+      },
+      {
+       "label": "진행내역",
+       "depth": 0,
+       "box": [
+        1524,
+        219,
+        90,
+        36
+       ],
+       "id": "col:민원처리현황/진행내역"
+      }
+     ],
+     "id": "grid:민원처리현황"
+    },
+    {
+     "aria": null,
+     "box": [
+      219,
+      629,
+      40,
+      25
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {민원}민원업무 > 민원처리 > 민원신청접수(창구 외) 및 처리현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

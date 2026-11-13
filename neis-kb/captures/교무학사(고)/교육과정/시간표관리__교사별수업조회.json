@@ -1,0 +1,195 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›시간표관리›교사별수업조회",
+ "name": "교사별수업조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:55:10+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": "검색시작일자 하루빼기",
+     "box": [
+      545,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색시작일자 하루빼기",
+     "variant": "plain",
+     "id": "button:검색시작일자 하루빼기"
+    },
+    {
+     "aria": "검색시작일자 하루더하기",
+     "box": [
+      575,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색시작일자 하루더하기",
+     "variant": "plain",
+     "id": "button:검색시작일자 하루더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      618,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자~"
+    },
+    {
+     "aria": "검색종료일자 하루빼기",
+     "box": [
+      748,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색종료일자 하루빼기",
+     "variant": "plain",
+     "id": "button:검색종료일자 하루빼기"
+    },
+    {
+     "aria": "검색종료일자 하루더하기",
+     "box": [
+      778,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색종료일자 하루더하기",
+     "variant": "plain",
+     "id": "button:검색종료일자 하루더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      82,
+      166,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교사",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:교사"
+    },
+    {
+     "aria": "교사찾기",
+     "box": [
+      1121,
+      82,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "교사찾기",
+     "variant": "link",
+     "id": "button:교사찾기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      680
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [
+     "교사은(는) 필수 입력입니다."
+    ],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 시간표관리 > 교사별수업조회",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

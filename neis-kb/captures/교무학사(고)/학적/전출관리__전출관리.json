@@ -1,0 +1,2199 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›전출관리›전출관리",
+ "name": "전출관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:52:45+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:전출자료요청접수",
+   "tab": "전출자료요청접수",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "전출자료요청접수\n(2026학년도) 선택됨",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "전출자료요청접수",
+      "월출결자료등록(선택)",
+      "전출자료전송",
+      "상신",
+      "학적반영",
+      "종합자료검색",
+      "학교생활기록부생성"
+     ],
+     "active": "전출자료요청접수",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      790,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "미상신",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:미상신"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "2026학년도 전출자료요청접수 목록",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "2026학년도 전출자료요청접수 목록",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "전출 학년도",
+       "depth": 0,
+       "box": [
+        26,
+        323,
+        82,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/전출 학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        108,
+        323,
+        109,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/전출일자"
+      },
+      {
+       "label": "요청구분",
+       "depth": 0,
+       "box": [
+        216,
+        323,
+        95,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/요청구분"
+      },
+      {
+       "label": "전출자료 요청일자",
+       "depth": 0,
+       "box": [
+        311,
+        323,
+        136,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/전출자료 요청일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        447,
+        323,
+        68,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        515,
+        323,
+        68,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        583,
+        323,
+        68,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        651,
+        323,
+        120,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        771,
+        323,
+        163,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        934,
+        323,
+        136,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/전입학교명"
+      },
+      {
+       "label": "전입학교 대표번호",
+       "depth": 0,
+       "box": [
+        1070,
+        323,
+        163,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/전입학교 대표번호"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        1233,
+        323,
+        136,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/상태"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        1369,
+        323,
+        109,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/전송상태"
+      },
+      {
+       "label": "전입교상태",
+       "depth": 0,
+       "box": [
+        1478,
+        323,
+        136,
+        62
+       ],
+       "id": "col:2026학년도 전출자료요청접수 목록/전입교상태"
+      }
+     ],
+     "id": "grid:2026학년도 전출자료요청접수 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:월출결자료등록(선택)",
+   "tab": "월출결자료등록(선택)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "전출자료요청접수\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "전출자료요청접수",
+      "월출결자료등록(선택)",
+      "전출자료전송",
+      "상신",
+      "학적반영",
+      "종합자료검색",
+      "학교생활기록부생성"
+     ],
+     "active": "월출결자료등록(선택)",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      790,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "미상신",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:미상신"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "월출결자료등록목록",
+     "box": [
+      25,
+      312,
+      1590,
+      501
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "월출결자료등록목록",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "전출학년도",
+       "depth": 0,
+       "box": [
+        26,
+        313,
+        165,
+        62
+       ],
+       "id": "col:월출결자료등록목록/전출학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        191,
+        313,
+        207,
+        62
+       ],
+       "id": "col:월출결자료등록목록/전출일자"
+      },
+      {
+       "label": "요청구분",
+       "depth": 0,
+       "box": [
+        398,
+        313,
+        207,
+        62
+       ],
+       "id": "col:월출결자료등록목록/요청구분"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        605,
+        313,
+        145,
+        62
+       ],
+       "id": "col:월출결자료등록목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        750,
+        313,
+        145,
+        62
+       ],
+       "id": "col:월출결자료등록목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        894,
+        313,
+        145,
+        62
+       ],
+       "id": "col:월출결자료등록목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1039,
+        313,
+        120,
+        62
+       ],
+       "id": "col:월출결자료등록목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        1159,
+        313,
+        248,
+        62
+       ],
+       "id": "col:월출결자료등록목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "출석일수",
+       "depth": 0,
+       "box": [
+        1407,
+        313,
+        207,
+        62
+       ],
+       "id": "col:월출결자료등록목록/출석일수"
+      }
+     ],
+     "id": "grid:월출결자료등록목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:전출자료전송",
+   "tab": "전출자료전송",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "전출자료요청접수\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "전출자료요청접수",
+      "월출결자료등록(선택)",
+      "전출자료전송",
+      "상신",
+      "학적반영",
+      "종합자료검색",
+      "학교생활기록부생성"
+     ],
+     "active": "전출자료전송",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      790,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "미상신",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:미상신"
+    },
+    {
+     "aria": "전체 또는 전송완료 또는 미전송",
+     "box": [
+      920,
+      221,
+      320,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "전체 또는 전송완료 또는 미전송",
+     "options": [
+      "미전송",
+      "전송완료",
+      "전체"
+     ],
+     "id": "radio:전체 또는 전송완료 또는 미전송"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "전출자료전송목록",
+     "box": [
+      25,
+      312,
+      1590,
+      501
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전출자료전송목록",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "전출 학년도",
+       "depth": 0,
+       "box": [
+        26,
+        313,
+        80,
+        40
+       ],
+       "id": "col:전출자료전송목록/전출 학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        106,
+        313,
+        135,
+        40
+       ],
+       "id": "col:전출자료전송목록/전출일자"
+      },
+      {
+       "label": "요청구분",
+       "depth": 0,
+       "box": [
+        241,
+        313,
+        135,
+        40
+       ],
+       "id": "col:전출자료전송목록/요청구분"
+      },
+      {
+       "label": "전출자료 요청일자",
+       "depth": 0,
+       "box": [
+        376,
+        313,
+        135,
+        40
+       ],
+       "id": "col:전출자료전송목록/전출자료 요청일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        510,
+        313,
+        94,
+        40
+       ],
+       "id": "col:전출자료전송목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        605,
+        313,
+        94,
+        40
+       ],
+       "id": "col:전출자료전송목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        699,
+        313,
+        94,
+        40
+       ],
+       "id": "col:전출자료전송목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        793,
+        313,
+        120,
+        40
+       ],
+       "id": "col:전출자료전송목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        913,
+        313,
+        162,
+        40
+       ],
+       "id": "col:전출자료전송목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        1075,
+        313,
+        135,
+        40
+       ],
+       "id": "col:전출자료전송목록/전입학교명"
+      },
+      {
+       "label": "업무진행상태",
+       "depth": 0,
+       "box": [
+        1210,
+        313,
+        135,
+        40
+       ],
+       "id": "col:전출자료전송목록/업무진행상태"
+      },
+      {
+       "label": "전입학교상태",
+       "depth": 0,
+       "box": [
+        1344,
+        313,
+        135,
+        40
+       ],
+       "id": "col:전출자료전송목록/전입학교상태"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        1479,
+        313,
+        135,
+        40
+       ],
+       "id": "col:전출자료전송목록/전송상태"
+      }
+     ],
+     "id": "grid:전출자료전송목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:상신",
+   "tab": "상신",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "전출자료요청접수\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "전출자료요청접수",
+      "월출결자료등록(선택)",
+      "전출자료전송",
+      "상신",
+      "학적반영",
+      "종합자료검색",
+      "학교생활기록부생성"
+     ],
+     "active": "상신",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "상신",
+     "box": [
+      1512,
+      266,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "상신",
+     "variant": "primary",
+     "id": "button:상신"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1560,
+      266,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "plain",
+     "id": "button:취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      276,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "기안문서",
+     "id": "heading:기안문서"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      312,
+      1445,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "결재문서명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결재문서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      352,
+      1225,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "결재자",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결재자"
+    },
+    {
+     "aria": "개인결재선",
+     "box": [
+      1385,
+      352,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개인결재선",
+     "variant": "primary",
+     "id": "button:개인결재선"
+    },
+    {
+     "aria": "결재자지정",
+     "box": [
+      1495,
+      352,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "결재자지정",
+     "variant": "primary",
+     "id": "button:결재자지정"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      392,
+      1445,
+      50
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "내용",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:내용"
+    },
+    {
+     "aria": "결재구분",
+     "box": [
+      155,
+      457,
+      253,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "결재구분",
+     "options": [
+      "결재",
+      "검토",
+      "협조",
+      "공람"
+     ],
+     "id": "radio:결재구분"
+    },
+    {
+     "aria": "병렬",
+     "box": [
+      1161,
+      457,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "병렬",
+     "variant": "plain",
+     "id": "button:병렬"
+    },
+    {
+     "aria": "병렬해제",
+     "box": [
+      1209,
+      457,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "병렬해제",
+     "variant": "plain",
+     "id": "button:병렬해제"
+    },
+    {
+     "aria": "선택된행 한행 최상단으로 이동",
+     "box": [
+      1281,
+      457,
+      68,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "최상단",
+     "variant": "plain",
+     "id": "button:최상단"
+    },
+    {
+     "aria": "선택된행 한행 위로 이동",
+     "box": [
+      1357,
+      457,
+      45,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "▲ 위",
+     "variant": "plain",
+     "id": "button:▲ 위"
+    },
+    {
+     "aria": "선택된행 한행 아래로 이동",
+     "box": [
+      1410,
+      457,
+      57,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "▼ 아래",
+     "variant": "plain",
+     "id": "button:▼ 아래"
+    },
+    {
+     "aria": "선택된행 최하단으로 이동",
+     "box": [
+      1474,
+      457,
+      68,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "최하단",
+     "variant": "plain",
+     "id": "button:최하단"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1550,
+      457,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "plain",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      155,
+      497,
+      1435,
+      230
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "결재순서",
+       "depth": 0,
+       "box": [
+        206,
+        498,
+        60,
+        36
+       ],
+       "id": "col:그리드/결재순서"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        266,
+        498,
+        80,
+        36
+       ],
+       "id": "col:그리드/구분"
+      },
+      {
+       "label": "위임구분",
+       "depth": 0,
+       "box": [
+        346,
+        498,
+        100,
+        36
+       ],
+       "id": "col:그리드/위임구분"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        446,
+        498,
+        261,
+        36
+       ],
+       "id": "col:그리드/사용자ID"
+      },
+      {
+       "label": "사용자명",
+       "depth": 0,
+       "box": [
+        707,
+        498,
+        261,
+        36
+       ],
+       "id": "col:그리드/사용자명"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        968,
+        498,
+        261,
+        36
+       ],
+       "id": "col:그리드/직위"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        1228,
+        498,
+        261,
+        36
+       ],
+       "id": "col:그리드/조직명"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1489,
+        498,
+        100,
+        36
+       ],
+       "id": "col:그리드/비고"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": "결재문서 상세보기  팝업",
+     "box": [
+      1560,
+      824,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "팝업",
+     "variant": "primary",
+     "id": "button:팝업"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      834,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "기안내용",
+     "id": "heading:기안내용"
+    },
+    {
+     "aria": "상신목록",
+     "box": [
+      25,
+      904,
+      1575,
+      464
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "상신목록",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "전입학교",
+       "depth": 0,
+       "box": [
+        76,
+        905,
+        488,
+        36
+       ],
+       "id": "col:상신목록/전입학교"
+      },
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        564,
+        905,
+        305,
+        36
+       ],
+       "id": "col:상신목록/학년도"
+      },
+      {
+       "label": "전출순번",
+       "depth": 0,
+       "box": [
+        869,
+        905,
+        610,
+        36
+       ],
+       "id": "col:상신목록/전출순번"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1479,
+        905,
+        120,
+        36
+       ],
+       "id": "col:상신목록/성명"
+      }
+     ],
+     "id": "grid:상신목록"
+    },
+    {
+     "aria": "상신",
+     "box": [
+      769,
+      1378,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "상신",
+     "variant": "primary",
+     "id": "button:상신#2"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      817,
+      1378,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "plain",
+     "id": "button:취소#2"
+    }
+   ]
+  },
+  {
+   "id": "tab:학적반영",
+   "tab": "학적반영",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "전출자료요청접수\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      1446,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "전출자료요청접수",
+      "월출결자료등록(선택)",
+      "전출자료전송",
+      "상신",
+      "학적반영",
+      "종합자료검색",
+      "학교생활기록부생성",
+      "학적반영"
+     ],
+     "active": "학적반영",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      115,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      785,
+      221,
+      115,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "미상신",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:미상신"
+    },
+    {
+     "aria": "전체 또는 반영완료 또는 미반영",
+     "box": [
+      910,
+      221,
+      230,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "전체 또는 반영완료 또는 미반영",
+     "options": [
+      "전체",
+      "반영완료",
+      "미반영"
+     ],
+     "id": "radio:전체 또는 반영완료 또는 미반영"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      221,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "전출일자수정",
+     "box": [
+      1312,
+      282,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전출일자수정",
+     "variant": "link",
+     "id": "button:전출일자수정"
+    },
+    {
+     "aria": "학적반영취소",
+     "box": [
+      1479,
+      282,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학적반영취소",
+     "variant": "link",
+     "id": "button:학적반영취소"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "학적반영목록",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학적반영목록",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        135,
+        36
+       ],
+       "id": "col:학적반영목록/전출일자"
+      },
+      {
+       "label": "전입일자",
+       "depth": 0,
+       "box": [
+        211,
+        323,
+        135,
+        36
+       ],
+       "id": "col:학적반영목록/전입일자"
+      },
+      {
+       "label": "학적",
+       "depth": 0,
+       "box": [
+        346,
+        323,
+        135,
+        36
+       ],
+       "id": "col:학적반영목록/학적"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        481,
+        323,
+        120,
+        36
+       ],
+       "id": "col:학적반영목록/성명"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        601,
+        323,
+        68,
+        36
+       ],
+       "id": "col:학적반영목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        669,
+        323,
+        68,
+        36
+       ],
+       "id": "col:학적반영목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        736,
+        323,
+        68,
+        36
+       ],
+       "id": "col:학적반영목록/번호"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        804,
+        323,
+        135,
+        36
+       ],
+       "id": "col:학적반영목록/전입학교명"
+      },
+      {
+       "label": "전입학교상태",
+       "depth": 0,
+       "box": [
+        939,
+        323,
+        135,
+        36
+       ],
+       "id": "col:학적반영목록/전입학교상태"
+      },
+      {
+       "label": "요청구분",
+       "depth": 0,
+       "box": [
+        1074,
+        323,
+        135,
+        36
+       ],
+       "id": "col:학적반영목록/요청구분"
+      },
+      {
+       "label": "학적반영",
+       "depth": 0,
+       "box": [
+        1209,
+        323,
+        135,
+        36
+       ],
+       "id": "col:학적반영목록/학적반영"
+      },
+      {
+       "label": "유의사항",
+       "depth": 0,
+       "box": [
+        1344,
+        323,
+        270,
+        36
+       ],
+       "id": "col:학적반영목록/유의사항"
+      }
+     ],
+     "id": "grid:학적반영목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:종합자료검색",
+   "tab": "종합자료검색",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "전출자료요청접수\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "전출자료요청접수",
+      "월출결자료등록(선택)",
+      "전출자료전송",
+      "상신",
+      "학적반영",
+      "종합자료검색",
+      "학교생활기록부생성"
+     ],
+     "active": "종합자료검색",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      790,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "미상신",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:미상신"
+    },
+    {
+     "aria": null,
+     "box": [
+      1050,
+      221,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:상태"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      221,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1312,
+      282,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "전출생추가등록",
+     "box": [
+      1431,
+      282,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전출생추가등록",
+     "variant": "link",
+     "id": "button:전출생추가등록"
+    },
+    {
+     "aria": "전출생삭제",
+     "box": [
+      1539,
+      282,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전출생삭제",
+     "variant": "link",
+     "id": "button:전출생삭제"
+    },
+    {
+     "aria": "종합자료검색목록",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "종합자료검색목록",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        185,
+        36
+       ],
+       "id": "col:종합자료검색목록/전출일자"
+      },
+      {
+       "label": "전입일자",
+       "depth": 0,
+       "box": [
+        261,
+        323,
+        185,
+        36
+       ],
+       "id": "col:종합자료검색목록/전입일자"
+      },
+      {
+       "label": "학적",
+       "depth": 0,
+       "box": [
+        446,
+        323,
+        154,
+        36
+       ],
+       "id": "col:종합자료검색목록/학적"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        600,
+        323,
+        120,
+        36
+       ],
+       "id": "col:종합자료검색목록/성명"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        720,
+        323,
+        77,
+        36
+       ],
+       "id": "col:종합자료검색목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        797,
+        323,
+        77,
+        36
+       ],
+       "id": "col:종합자료검색목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        874,
+        323,
+        77,
+        36
+       ],
+       "id": "col:종합자료검색목록/번호"
+      },
+      {
+       "label": "전입학교명",
+       "depth": 0,
+       "box": [
+        951,
+        323,
+        200,
+        36
+       ],
+       "id": "col:종합자료검색목록/전입학교명"
+      },
+      {
+       "label": "전입학교상태",
+       "depth": 0,
+       "box": [
+        1152,
+        323,
+        154,
+        36
+       ],
+       "id": "col:종합자료검색목록/전입학교상태"
+      },
+      {
+       "label": "요청구분",
+       "depth": 0,
+       "box": [
+        1306,
+        323,
+        154,
+        36
+       ],
+       "id": "col:종합자료검색목록/요청구분"
+      },
+      {
+       "label": "유의사항",
+       "depth": 0,
+       "box": [
+        1460,
+        323,
+        154,
+        36
+       ],
+       "id": "col:종합자료검색목록/유의사항"
+      }
+     ],
+     "id": "grid:종합자료검색목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:학교생활기록부생성",
+   "tab": "학교생활기록부생성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "전출자료요청접수\n(2026학년도)",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "전출자료요청접수",
+      "월출결자료등록(선택)",
+      "전출자료전송",
+      "상신",
+      "학적반영",
+      "종합자료검색",
+      "학교생활기록부생성"
+     ],
+     "active": "학교생활기록부생성",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      221,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      790,
+      221,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "미상신",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:미상신"
+    },
+    {
+     "aria": "전체 또는 생성완료 또는 미생성",
+     "box": [
+      920,
+      221,
+      320,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "전체 또는 생성완료 또는 미생성",
+     "options": [
+      "전체",
+      "생성완료",
+      "미생성"
+     ],
+     "id": "radio:전체 또는 생성완료 또는 미생성"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      221,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학교생활기록부생성목록",
+     "box": [
+      25,
+      312,
+      1590,
+      501
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교생활기록부생성목록",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "전출학년도",
+       "depth": 0,
+       "box": [
+        26,
+        313,
+        178,
+        62
+       ],
+       "id": "col:학교생활기록부생성목록/전출학년도"
+      },
+      {
+       "label": "전출일자",
+       "depth": 0,
+       "box": [
+        204,
+        313,
+        222,
+        62
+       ],
+       "id": "col:학교생활기록부생성목록/전출일자"
+      },
+      {
+       "label": "요청구분",
+       "depth": 0,
+       "box": [
+        426,
+        313,
+        222,
+        62
+       ],
+       "id": "col:학교생활기록부생성목록/요청구분"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        649,
+        313,
+        156,
+        62
+       ],
+       "id": "col:학교생활기록부생성목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        804,
+        313,
+        156,
+        62
+       ],
+       "id": "col:학교생활기록부생성목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        960,
+        313,
+        156,
+        62
+       ],
+       "id": "col:학교생활기록부생성목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1116,
+        313,
+        120,
+        62
+       ],
+       "id": "col:학교생활기록부생성목록/성명"
+      },
+      {
+       "label": "생성 여부",
+       "depth": 0,
+       "box": [
+        1236,
+        313,
+        156,
+        62
+       ],
+       "id": "col:학교생활기록부생성목록/생성 여부"
+      },
+      {
+       "label": "생성일자",
+       "depth": 0,
+       "box": [
+        1392,
+        313,
+        222,
+        62
+       ],
+       "id": "col:학교생활기록부생성목록/생성일자"
+      }
+     ],
+     "id": "grid:학교생활기록부생성목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 전출관리 > 전출관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

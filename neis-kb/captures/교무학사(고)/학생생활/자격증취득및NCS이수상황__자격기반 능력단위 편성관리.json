@@ -1,0 +1,557 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›자격증취득및NCS이수상황›자격기반 능력단위 편성관리",
+ "name": "자격기반 능력단위 편성관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:24:41+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:편성된능력단위",
+   "tab": "편성된능력단위",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "입학 학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:입학 학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      356,
+      82,
+      129,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "기준학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:기준학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "자격종목등록",
+     "box": [
+      283,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자격종목등록",
+     "variant": "primary",
+     "id": "button:자격종목등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      379,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      434,
+      133,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "편성된능력단위",
+      "수강학생 편성"
+     ],
+     "active": "편성된능력단위",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "자격종명 목록",
+     "box": [
+      25,
+      173,
+      394,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "자격종명 목록",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "자격종목명",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        284,
+        36
+       ],
+       "id": "col:자격종명 목록/자격종목명"
+      },
+      {
+       "label": "수정",
+       "depth": 0,
+       "box": [
+        360,
+        174,
+        58,
+        36
+       ],
+       "id": "col:자격종명 목록/수정"
+      }
+     ],
+     "id": "grid:자격종명 목록"
+    },
+    {
+     "aria": "능력단위 목록",
+     "box": [
+      434,
+      218,
+      1181,
+      595
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "능력단위 목록",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        435,
+        219,
+        121,
+        36
+       ],
+       "id": "col:능력단위 목록/학년도"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        556,
+        219,
+        121,
+        36
+       ],
+       "id": "col:능력단위 목록/학기"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        677,
+        219,
+        121,
+        36
+       ],
+       "id": "col:능력단위 목록/학년"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        798,
+        219,
+        91,
+        36
+       ],
+       "id": "col:능력단위 목록/구분"
+      },
+      {
+       "label": "능력단위코드",
+       "depth": 0,
+       "box": [
+        888,
+        219,
+        181,
+        36
+       ],
+       "id": "col:능력단위 목록/능력단위코드"
+      },
+      {
+       "label": "능력단위명",
+       "depth": 0,
+       "box": [
+        1070,
+        219,
+        302,
+        36
+       ],
+       "id": "col:능력단위 목록/능력단위명"
+      },
+      {
+       "label": "시수",
+       "depth": 0,
+       "box": [
+        1372,
+        219,
+        121,
+        36
+       ],
+       "id": "col:능력단위 목록/시수"
+      },
+      {
+       "label": "학점(단위수)",
+       "depth": 0,
+       "box": [
+        1493,
+        219,
+        121,
+        36
+       ],
+       "id": "col:능력단위 목록/학점(단위수)"
+      }
+     ],
+     "id": "grid:능력단위 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:수강학생 편성",
+   "tab": "수강학생 편성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "입학 학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:입학 학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      356,
+      82,
+      129,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "기준학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:기준학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "자격종목등록",
+     "box": [
+      283,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자격종목등록",
+     "variant": "primary",
+     "id": "button:자격종목등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      379,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      434,
+      133,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "편성된능력단위",
+      "수강학생 편성"
+     ],
+     "active": "수강학생 편성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "자격종명 목록",
+     "box": [
+      25,
+      173,
+      394,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "자격종명 목록",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "자격종목명",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        284,
+        36
+       ],
+       "id": "col:자격종명 목록/자격종목명"
+      },
+      {
+       "label": "수정",
+       "depth": 0,
+       "box": [
+        360,
+        174,
+        58,
+        36
+       ],
+       "id": "col:자격종명 목록/수정"
+      }
+     ],
+     "id": "grid:자격종명 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      188,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ {수강학생 가져오기} 버튼은 교육과정에서의 자격기반 관련 능력단위에 학생이 편성되어야 합니다.",
+     "id": "note:※ {수강학생 가져오기} 버튼은 교육과정에서의 자격기반 관련 능력단위에 학생이 편성되어야 합니다."
+    },
+    {
+     "aria": "수강학생 가져오기",
+     "box": [
+      902,
+      236,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수강학생 가져오기",
+     "variant": "primary",
+     "id": "button:수강학생 가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      236,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "수강생 목록",
+     "box": [
+      434,
+      276,
+      583,
+      538
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수강생 목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        435,
+        277,
+        306,
+        36
+       ],
+       "id": "col:수강생 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        741,
+        277,
+        122,
+        36
+       ],
+       "id": "col:수강생 목록/반"
+      },
+      {
+       "label": "수강생",
+       "depth": 0,
+       "box": [
+        863,
+        277,
+        153,
+        36
+       ],
+       "id": "col:수강생 목록/수강생"
+      }
+     ],
+     "id": "grid:수강생 목록"
+    },
+    {
+     "aria": "전송학생 목록",
+     "box": [
+      1032,
+      276,
+      583,
+      538
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전송학생 목록",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        1033,
+        277,
+        100,
+        36
+       ],
+       "id": "col:전송학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1133,
+        277,
+        160,
+        36
+       ],
+       "id": "col:전송학생 목록/성명"
+      },
+      {
+       "label": "학적변동구분",
+       "depth": 0,
+       "box": [
+        1293,
+        277,
+        160,
+        36
+       ],
+       "id": "col:전송학생 목록/학적변동구분"
+      },
+      {
+       "label": "전송대상",
+       "depth": 0,
+       "box": [
+        1454,
+        277,
+        160,
+        36
+       ],
+       "id": "col:전송학생 목록/전송대상"
+      }
+     ],
+     "id": "grid:전송학생 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 자격증취득및NCS이수상황 > 자격기반 능력단위 편성관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

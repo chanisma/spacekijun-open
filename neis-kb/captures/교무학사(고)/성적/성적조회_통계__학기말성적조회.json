@@ -1,0 +1,1006 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적조회/통계›학기말성적조회",
+ "name": "학기말성적조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:35:44+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:성적일람표",
+   "tab": "성적일람표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "성적일람표 선택됨",
+     "box": [
+      46,
+      112,
+      798,
+      30
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "성적일람표",
+      "개인별성적일람표",
+      "학기말성적종합일람표",
+      "고사별비교",
+      "성적우수/부진자명단",
+      "정기시험/수행평가성적일람표",
+      "과목별세부능력및특기사항",
+      "개인별세부능력및특기사항",
+      "교양교과이수여부",
+      "과목별석차",
+      "성적일람표 전과목",
+      "성적일람표 전과목/전학생",
+      "성적산출기준별비교",
+      "교과학습발달상황 최종 변경내역",
+      "성적집계표조회"
+     ],
+     "active": "성적일람표",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      231,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "성적일람표",
+     "id": "heading:성적일람표"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      282,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      282,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      282,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      282,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "산출기준",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:산출기준"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      282,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      322,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "환산점기준 또는 받은점수기준 선택",
+     "box": [
+      315,
+      322,
+      202,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "강의실",
+     "options": [
+      "환산점기준",
+      "받은점수기준"
+     ],
+     "id": "radio:강의실"
+    },
+    {
+     "aria": null,
+     "box": [
+      527,
+      322,
+      73,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "개별출력",
+     "checked": false,
+     "id": "check:개별출력"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1501,
+      322,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "전과목출력",
+     "box": [
+      1509,
+      383,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전과목출력",
+     "variant": "primary",
+     "id": "button:전과목출력"
+    }
+   ]
+  },
+  {
+   "id": "tab:개인별성적일람표",
+   "tab": "개인별성적일람표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "성적일람표",
+     "box": [
+      46,
+      112,
+      92,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적일람표",
+     "variant": "link",
+     "id": "button:성적일람표"
+    },
+    {
+     "aria": "개인별성적일람표 선택됨",
+     "box": [
+      146,
+      112,
+      144,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개인별성적일람표",
+     "variant": "link",
+     "id": "button:개인별성적일람표"
+    },
+    {
+     "aria": "학기말성적종합일람표",
+     "box": [
+      297,
+      112,
+      152,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학기말성적종합일람표",
+     "variant": "link",
+     "id": "button:학기말성적종합일람표"
+    },
+    {
+     "aria": "고사별비교",
+     "box": [
+      457,
+      112,
+      92,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "고사별비교",
+     "variant": "link",
+     "id": "button:고사별비교"
+    },
+    {
+     "aria": "성적우수/부진자명단",
+     "box": [
+      557,
+      112,
+      145,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적우수/부진자명단",
+     "variant": "link",
+     "id": "button:성적우수/부진자명단"
+    },
+    {
+     "aria": "정기시험/수행평가성적일람표",
+     "box": [
+      710,
+      112,
+      193,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정기시험/수행평가성적일람표",
+     "variant": "link",
+     "id": "button:정기시험/수행평가성적일람표"
+    },
+    {
+     "aria": "과목별세부능력및특기사항",
+     "box": [
+      910,
+      112,
+      176,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "과목별세부능력및특기사항",
+     "variant": "link",
+     "id": "button:과목별세부능력및특기사항"
+    },
+    {
+     "aria": "개인별세부능력및특기사항",
+     "box": [
+      1094,
+      112,
+      176,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개인별세부능력및특기사항",
+     "variant": "link",
+     "id": "button:개인별세부능력및특기사항"
+    },
+    {
+     "aria": "교양교과이수여부",
+     "box": [
+      1277,
+      112,
+      128,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교양교과이수여부",
+     "variant": "link",
+     "id": "button:교양교과이수여부"
+    },
+    {
+     "aria": "과목별석차",
+     "box": [
+      1413,
+      112,
+      92,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "과목별석차",
+     "variant": "link",
+     "id": "button:과목별석차"
+    },
+    {
+     "aria": "성적일람표 전과목",
+     "box": [
+      46,
+      150,
+      131,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적일람표 전과목",
+     "variant": "link",
+     "id": "button:성적일람표 전과목"
+    },
+    {
+     "aria": "성적일람표 전과목/전학생",
+     "box": [
+      185,
+      150,
+      172,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적일람표 전과목/전학생",
+     "variant": "link",
+     "id": "button:성적일람표 전과목/전학생"
+    },
+    {
+     "aria": "성적산출기준별비교",
+     "box": [
+      366,
+      150,
+      140,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적산출기준별비교",
+     "variant": "link",
+     "id": "button:성적산출기준별비교"
+    },
+    {
+     "aria": "교과학습발달상황 최종 변경내역",
+     "box": [
+      513,
+      150,
+      207,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과학습발달상황 최종 변경내역",
+     "variant": "link",
+     "id": "button:교과학습발달상황 최종 변경내역"
+    },
+    {
+     "aria": "성적집계표조회",
+     "box": [
+      728,
+      150,
+      116,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적집계표조회",
+     "variant": "link",
+     "id": "button:성적집계표조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      231,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "개인성적일람표",
+     "id": "heading:개인성적일람표"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      55,
+      261,
+      1530,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정기시험",
+      "수행평가",
+      "학기말"
+     ],
+     "active": "정기시험",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      332,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      332,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      332,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "고사",
+     "box": [
+      1165,
+      332,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1501,
+      332,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      473,
+      1530,
+      238
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        565,
+        474,
+        509,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1075,
+        474,
+        509,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:학기말성적종합일람표",
+   "tab": "학기말성적종합일람표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "성적일람표",
+     "box": [
+      46,
+      112,
+      92,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적일람표",
+     "variant": "link",
+     "id": "button:성적일람표"
+    },
+    {
+     "aria": "개인별성적일람표 선택됨",
+     "box": [
+      146,
+      112,
+      144,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개인별성적일람표",
+     "variant": "link",
+     "id": "button:개인별성적일람표"
+    },
+    {
+     "aria": "학기말성적종합일람표",
+     "box": [
+      297,
+      112,
+      152,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학기말성적종합일람표",
+     "variant": "link",
+     "id": "button:학기말성적종합일람표"
+    },
+    {
+     "aria": "고사별비교",
+     "box": [
+      457,
+      112,
+      92,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "고사별비교",
+     "variant": "link",
+     "id": "button:고사별비교"
+    },
+    {
+     "aria": "성적우수/부진자명단",
+     "box": [
+      557,
+      112,
+      145,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적우수/부진자명단",
+     "variant": "link",
+     "id": "button:성적우수/부진자명단"
+    },
+    {
+     "aria": "정기시험/수행평가성적일람표",
+     "box": [
+      710,
+      112,
+      193,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정기시험/수행평가성적일람표",
+     "variant": "link",
+     "id": "button:정기시험/수행평가성적일람표"
+    },
+    {
+     "aria": "과목별세부능력및특기사항",
+     "box": [
+      910,
+      112,
+      176,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "과목별세부능력및특기사항",
+     "variant": "link",
+     "id": "button:과목별세부능력및특기사항"
+    },
+    {
+     "aria": "개인별세부능력및특기사항",
+     "box": [
+      1094,
+      112,
+      176,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개인별세부능력및특기사항",
+     "variant": "link",
+     "id": "button:개인별세부능력및특기사항"
+    },
+    {
+     "aria": "교양교과이수여부",
+     "box": [
+      1277,
+      112,
+      128,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교양교과이수여부",
+     "variant": "link",
+     "id": "button:교양교과이수여부"
+    },
+    {
+     "aria": "과목별석차",
+     "box": [
+      1413,
+      112,
+      92,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "과목별석차",
+     "variant": "link",
+     "id": "button:과목별석차"
+    },
+    {
+     "aria": "성적일람표 전과목",
+     "box": [
+      46,
+      150,
+      131,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적일람표 전과목",
+     "variant": "link",
+     "id": "button:성적일람표 전과목"
+    },
+    {
+     "aria": "성적일람표 전과목/전학생",
+     "box": [
+      185,
+      150,
+      172,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적일람표 전과목/전학생",
+     "variant": "link",
+     "id": "button:성적일람표 전과목/전학생"
+    },
+    {
+     "aria": "성적산출기준별비교",
+     "box": [
+      366,
+      150,
+      140,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적산출기준별비교",
+     "variant": "link",
+     "id": "button:성적산출기준별비교"
+    },
+    {
+     "aria": "교과학습발달상황 최종 변경내역",
+     "box": [
+      513,
+      150,
+      207,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과학습발달상황 최종 변경내역",
+     "variant": "link",
+     "id": "button:교과학습발달상황 최종 변경내역"
+    },
+    {
+     "aria": "성적집계표조회",
+     "box": [
+      728,
+      150,
+      116,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성적집계표조회",
+     "variant": "link",
+     "id": "button:성적집계표조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      231,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "개인성적일람표",
+     "id": "heading:개인성적일람표"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      55,
+      261,
+      1530,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정기시험",
+      "수행평가",
+      "학기말"
+     ],
+     "active": "학기말",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      332,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      332,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      332,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      332,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "산출기준",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:산출기준"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1501,
+      332,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      473,
+      1530,
+      238
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        565,
+        474,
+        509,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1075,
+        474,
+        509,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적조회/통계 > 학기말성적조회",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

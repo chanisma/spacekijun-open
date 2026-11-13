@@ -1,0 +1,42 @@
+.world {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+  border: 1px solid #eee6dc;
+  border-radius: 24px;
+  background: #faf7f1;
+  color: #483652;
+}
+
+.eyebrow { color: #9a7d50; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; }
+.modeButton { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 38px; padding: 8px 14px; border-radius: 24px; color: #95839f; }
+.modeActive { background: #4b355c; color: #fff9f0; }
+.featured { display: grid; grid-template-columns: 1.15fr 1fr; overflow: hidden; border-radius: 22px; background: #35273f; box-shadow: 0 12px 32px -20px #4a325b70; }
+.art { position: absolute; top: 50%; width: 100%; aspect-ratio: 1; transform: translateY(-50%); background-image: url('/images/world-today/academy-observers.png'); background-size: 200% 200%; background-repeat: no-repeat; background-color: #382c46; }
+.artShade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #35273f, transparent 24%), linear-gradient(0deg, #35273f80, transparent 30%); }
+.newsCard { display: flex; flex-direction: column; padding: 22px; border: 1px solid #e7ddd1; border-radius: 18px; background: #fffdf8; }
+.textButton { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; border-radius: 6px; font-size: 12px; font-weight: 600; color: #805e92; }
+.textButton:hover { color: #51365f; }
+.primaryButton { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; border-radius: 24px; background: #644574; padding: 10px 20px; color: #fff8f0; font-size: 13px; font-weight: 600; }
+.primaryButton:hover { background: #4d345a; }
+.select { min-height: 40px; max-width: 100%; border: 1px solid #e7dfea; border-radius: 10px; background: #fffdf9; padding: 8px 26px 8px 12px; color: #7c6687; font-size: 12px; }
+.empty { border: 1px dashed #d9cbdf; border-radius: 18px; padding: 48px 20px; background: #fffdf9; text-align: center; color: #8b7598; font-size: 13px; line-height: 2; }
+.pageButton { min-height: 40px; border: 1px solid #e4d9e8; border-radius: 10px; background: #fffdf9; padding: 8px 18px; }
+.reader { background: #fcf9f3; animation: none !important; }
+.reader [data-slot='dialog-viewport'] { gap: 0; }
+.modeButton:focus-visible, .textButton:focus-visible, .primaryButton:focus-visible, .select:focus-visible, .pageButton:focus-visible { outline: 2px solid #9473a6; outline-offset: 3px; }
+.textButton:disabled, .primaryButton:disabled, .pageButton:disabled { cursor: default; opacity: 0.45; }
+
+@media (max-width: 640px) {
+  .world { padding: 16px; border-radius: 18px; }
+  .featured { grid-template-columns: 1fr; }
+  .featured > :last-child { height: 240px; }
+  .artShade { background: linear-gradient(180deg, #35273f, transparent 25%); }
+  .modeButton { padding: 8px 10px; }
+  .newsCard { padding: 18px; }
+  .reader .pageButton { flex-shrink: 0; padding: 8px; white-space: nowrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader { animation: none !important; }
+}

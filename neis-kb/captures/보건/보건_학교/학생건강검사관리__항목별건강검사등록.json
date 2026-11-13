@@ -1,0 +1,2736 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›학생건강검사관리›항목별건강검사등록",
+ "name": "항목별건강검사등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:46:33+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:신체발달",
+   "tab": "신체발달",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "탭화면이 8개 존재합니다.",
+     "box": [
+      25,
+      173,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검진1",
+      "건강검진2",
+      "건강검진3",
+      "구강검진1",
+      "구강검진2",
+      "건강조사1",
+      "건강조사2"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생기초데이터가져오기",
+     "box": [
+      1161,
+      228,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기초자료가져오기",
+     "variant": "primary",
+     "id": "button:기초자료가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1281,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "신체발달+건강검진출력",
+     "box": [
+      1328,
+      228,
+      143,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신체발달+건강검진출력",
+     "variant": "primary",
+     "id": "button:신체발달+건강검진출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1479,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전체자료삭제",
+     "box": [
+      1527,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체자료삭제",
+     "variant": "secondary",
+     "id": "button:전체자료삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      67,
+      266,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검진일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검진일"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      193,
+      266,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      351,
+      266,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용개정년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:적용개정년도"
+    },
+    {
+     "aria": "신체발달목록",
+     "box": [
+      25,
+      306,
+      1590,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "신체발달목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "학생 식별번호",
+       "depth": 0,
+       "box": [
+        76,
+        307,
+        208,
+        62
+       ],
+       "span": 2,
+       "id": "col:신체발달목록/학생 식별번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        284,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        492,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/생년월일"
+      },
+      {
+       "label": "키 (cm)",
+       "depth": 0,
+       "box": [
+        741,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/키 (cm)"
+      },
+      {
+       "label": "몸무게(kg)",
+       "depth": 0,
+       "box": [
+        949,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/몸무게(kg)"
+      },
+      {
+       "label": "비만도",
+       "depth": 0,
+       "box": [
+        1157,
+        307,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도"
+      },
+      {
+       "label": "검진일",
+       "depth": 0,
+       "box": [
+        1365,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/검진일"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>반"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        180,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>순번"
+      },
+      {
+       "label": "체질량지수 (BMI)",
+       "depth": 1,
+       "box": [
+        1157,
+        369,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도>체질량지수 (BMI)"
+      }
+     ],
+     "id": "grid:신체발달목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:건강검진1",
+   "tab": "건강검진1",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "탭화면이 8개 존재합니다.",
+     "box": [
+      25,
+      173,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검진1",
+      "건강검진2",
+      "건강검진3",
+      "구강검진1",
+      "구강검진2",
+      "건강조사1",
+      "건강조사2"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생기초데이터가져오기",
+     "box": [
+      1161,
+      228,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기초자료가져오기",
+     "variant": "primary",
+     "id": "button:기초자료가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1281,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "신체발달+건강검진출력",
+     "box": [
+      1328,
+      228,
+      143,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신체발달+건강검진출력",
+     "variant": "primary",
+     "id": "button:신체발달+건강검진출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1479,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전체자료삭제",
+     "box": [
+      1527,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체자료삭제",
+     "variant": "secondary",
+     "id": "button:전체자료삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      67,
+      266,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검진일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검진일"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      193,
+      266,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      351,
+      266,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용개정년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:적용개정년도"
+    },
+    {
+     "aria": "신체발달목록",
+     "box": [
+      25,
+      306,
+      1590,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "신체발달목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "학생 식별번호",
+       "depth": 0,
+       "box": [
+        76,
+        307,
+        208,
+        62
+       ],
+       "span": 2,
+       "id": "col:신체발달목록/학생 식별번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        284,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        492,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/생년월일"
+      },
+      {
+       "label": "키 (cm)",
+       "depth": 0,
+       "box": [
+        741,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/키 (cm)"
+      },
+      {
+       "label": "몸무게(kg)",
+       "depth": 0,
+       "box": [
+        949,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/몸무게(kg)"
+      },
+      {
+       "label": "비만도",
+       "depth": 0,
+       "box": [
+        1157,
+        307,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도"
+      },
+      {
+       "label": "검진일",
+       "depth": 0,
+       "box": [
+        1365,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/검진일"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>반"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        180,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>순번"
+      },
+      {
+       "label": "체질량지수 (BMI)",
+       "depth": 1,
+       "box": [
+        1157,
+        369,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도>체질량지수 (BMI)"
+      }
+     ],
+     "id": "grid:신체발달목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:건강검진2",
+   "tab": "건강검진2",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "탭화면이 8개 존재합니다.",
+     "box": [
+      25,
+      173,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검진1",
+      "건강검진2",
+      "건강검진3",
+      "구강검진1",
+      "구강검진2",
+      "건강조사1",
+      "건강조사2"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생기초데이터가져오기",
+     "box": [
+      1161,
+      228,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기초자료가져오기",
+     "variant": "primary",
+     "id": "button:기초자료가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1281,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "신체발달+건강검진출력",
+     "box": [
+      1328,
+      228,
+      143,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신체발달+건강검진출력",
+     "variant": "primary",
+     "id": "button:신체발달+건강검진출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1479,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전체자료삭제",
+     "box": [
+      1527,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체자료삭제",
+     "variant": "secondary",
+     "id": "button:전체자료삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      67,
+      266,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검진일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검진일"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      193,
+      266,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      351,
+      266,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용개정년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:적용개정년도"
+    },
+    {
+     "aria": "신체발달목록",
+     "box": [
+      25,
+      306,
+      1590,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "신체발달목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "학생 식별번호",
+       "depth": 0,
+       "box": [
+        76,
+        307,
+        208,
+        62
+       ],
+       "span": 2,
+       "id": "col:신체발달목록/학생 식별번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        284,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        492,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/생년월일"
+      },
+      {
+       "label": "키 (cm)",
+       "depth": 0,
+       "box": [
+        741,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/키 (cm)"
+      },
+      {
+       "label": "몸무게(kg)",
+       "depth": 0,
+       "box": [
+        949,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/몸무게(kg)"
+      },
+      {
+       "label": "비만도",
+       "depth": 0,
+       "box": [
+        1157,
+        307,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도"
+      },
+      {
+       "label": "검진일",
+       "depth": 0,
+       "box": [
+        1365,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/검진일"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>반"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        180,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>순번"
+      },
+      {
+       "label": "체질량지수 (BMI)",
+       "depth": 1,
+       "box": [
+        1157,
+        369,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도>체질량지수 (BMI)"
+      }
+     ],
+     "id": "grid:신체발달목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:건강검진3",
+   "tab": "건강검진3",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "탭화면이 8개 존재합니다.",
+     "box": [
+      25,
+      173,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검진1",
+      "건강검진2",
+      "건강검진3",
+      "구강검진1",
+      "구강검진2",
+      "건강조사1",
+      "건강조사2"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생기초데이터가져오기",
+     "box": [
+      1161,
+      228,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기초자료가져오기",
+     "variant": "primary",
+     "id": "button:기초자료가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1281,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "신체발달+건강검진출력",
+     "box": [
+      1328,
+      228,
+      143,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신체발달+건강검진출력",
+     "variant": "primary",
+     "id": "button:신체발달+건강검진출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1479,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전체자료삭제",
+     "box": [
+      1527,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체자료삭제",
+     "variant": "secondary",
+     "id": "button:전체자료삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      67,
+      266,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검진일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검진일"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      193,
+      266,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      351,
+      266,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용개정년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:적용개정년도"
+    },
+    {
+     "aria": "신체발달목록",
+     "box": [
+      25,
+      306,
+      1590,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "신체발달목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "학생 식별번호",
+       "depth": 0,
+       "box": [
+        76,
+        307,
+        208,
+        62
+       ],
+       "span": 2,
+       "id": "col:신체발달목록/학생 식별번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        284,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        492,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/생년월일"
+      },
+      {
+       "label": "키 (cm)",
+       "depth": 0,
+       "box": [
+        741,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/키 (cm)"
+      },
+      {
+       "label": "몸무게(kg)",
+       "depth": 0,
+       "box": [
+        949,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/몸무게(kg)"
+      },
+      {
+       "label": "비만도",
+       "depth": 0,
+       "box": [
+        1157,
+        307,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도"
+      },
+      {
+       "label": "검진일",
+       "depth": 0,
+       "box": [
+        1365,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/검진일"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>반"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        180,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>순번"
+      },
+      {
+       "label": "체질량지수 (BMI)",
+       "depth": 1,
+       "box": [
+        1157,
+        369,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도>체질량지수 (BMI)"
+      }
+     ],
+     "id": "grid:신체발달목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:구강검진1",
+   "tab": "구강검진1",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "탭화면이 8개 존재합니다.",
+     "box": [
+      25,
+      173,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검진1",
+      "건강검진2",
+      "건강검진3",
+      "구강검진1",
+      "구강검진2",
+      "건강조사1",
+      "건강조사2"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생기초데이터가져오기",
+     "box": [
+      1161,
+      228,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기초자료가져오기",
+     "variant": "primary",
+     "id": "button:기초자료가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1281,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "신체발달+건강검진출력",
+     "box": [
+      1328,
+      228,
+      143,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신체발달+건강검진출력",
+     "variant": "primary",
+     "id": "button:신체발달+건강검진출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1479,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전체자료삭제",
+     "box": [
+      1527,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체자료삭제",
+     "variant": "secondary",
+     "id": "button:전체자료삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      67,
+      266,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검진일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검진일"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      193,
+      266,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      351,
+      266,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용개정년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:적용개정년도"
+    },
+    {
+     "aria": "신체발달목록",
+     "box": [
+      25,
+      306,
+      1590,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "신체발달목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "학생 식별번호",
+       "depth": 0,
+       "box": [
+        76,
+        307,
+        208,
+        62
+       ],
+       "span": 2,
+       "id": "col:신체발달목록/학생 식별번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        284,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        492,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/생년월일"
+      },
+      {
+       "label": "키 (cm)",
+       "depth": 0,
+       "box": [
+        741,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/키 (cm)"
+      },
+      {
+       "label": "몸무게(kg)",
+       "depth": 0,
+       "box": [
+        949,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/몸무게(kg)"
+      },
+      {
+       "label": "비만도",
+       "depth": 0,
+       "box": [
+        1157,
+        307,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도"
+      },
+      {
+       "label": "검진일",
+       "depth": 0,
+       "box": [
+        1365,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/검진일"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>반"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        180,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>순번"
+      },
+      {
+       "label": "체질량지수 (BMI)",
+       "depth": 1,
+       "box": [
+        1157,
+        369,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도>체질량지수 (BMI)"
+      }
+     ],
+     "id": "grid:신체발달목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:구강검진2",
+   "tab": "구강검진2",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "탭화면이 8개 존재합니다.",
+     "box": [
+      25,
+      173,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검진1",
+      "건강검진2",
+      "건강검진3",
+      "구강검진1",
+      "구강검진2",
+      "건강조사1",
+      "건강조사2"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생기초데이터가져오기",
+     "box": [
+      1161,
+      228,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기초자료가져오기",
+     "variant": "primary",
+     "id": "button:기초자료가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1281,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "신체발달+건강검진출력",
+     "box": [
+      1328,
+      228,
+      143,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신체발달+건강검진출력",
+     "variant": "primary",
+     "id": "button:신체발달+건강검진출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1479,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전체자료삭제",
+     "box": [
+      1527,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체자료삭제",
+     "variant": "secondary",
+     "id": "button:전체자료삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      67,
+      266,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검진일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검진일"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      193,
+      266,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      351,
+      266,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용개정년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:적용개정년도"
+    },
+    {
+     "aria": "신체발달목록",
+     "box": [
+      25,
+      306,
+      1590,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "신체발달목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "학생 식별번호",
+       "depth": 0,
+       "box": [
+        76,
+        307,
+        208,
+        62
+       ],
+       "span": 2,
+       "id": "col:신체발달목록/학생 식별번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        284,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        492,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/생년월일"
+      },
+      {
+       "label": "키 (cm)",
+       "depth": 0,
+       "box": [
+        741,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/키 (cm)"
+      },
+      {
+       "label": "몸무게(kg)",
+       "depth": 0,
+       "box": [
+        949,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/몸무게(kg)"
+      },
+      {
+       "label": "비만도",
+       "depth": 0,
+       "box": [
+        1157,
+        307,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도"
+      },
+      {
+       "label": "검진일",
+       "depth": 0,
+       "box": [
+        1365,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/검진일"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>반"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        180,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>순번"
+      },
+      {
+       "label": "체질량지수 (BMI)",
+       "depth": 1,
+       "box": [
+        1157,
+        369,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도>체질량지수 (BMI)"
+      }
+     ],
+     "id": "grid:신체발달목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:건강조사1",
+   "tab": "건강조사1",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "탭화면이 8개 존재합니다.",
+     "box": [
+      25,
+      173,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검진1",
+      "건강검진2",
+      "건강검진3",
+      "구강검진1",
+      "구강검진2",
+      "건강조사1",
+      "건강조사2"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생기초데이터가져오기",
+     "box": [
+      1161,
+      228,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기초자료가져오기",
+     "variant": "primary",
+     "id": "button:기초자료가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1281,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "신체발달+건강검진출력",
+     "box": [
+      1328,
+      228,
+      143,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신체발달+건강검진출력",
+     "variant": "primary",
+     "id": "button:신체발달+건강검진출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1479,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전체자료삭제",
+     "box": [
+      1527,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체자료삭제",
+     "variant": "secondary",
+     "id": "button:전체자료삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      67,
+      266,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검진일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검진일"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      193,
+      266,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      351,
+      266,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용개정년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:적용개정년도"
+    },
+    {
+     "aria": "신체발달목록",
+     "box": [
+      25,
+      306,
+      1590,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "신체발달목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "학생 식별번호",
+       "depth": 0,
+       "box": [
+        76,
+        307,
+        208,
+        62
+       ],
+       "span": 2,
+       "id": "col:신체발달목록/학생 식별번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        284,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        492,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/생년월일"
+      },
+      {
+       "label": "키 (cm)",
+       "depth": 0,
+       "box": [
+        741,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/키 (cm)"
+      },
+      {
+       "label": "몸무게(kg)",
+       "depth": 0,
+       "box": [
+        949,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/몸무게(kg)"
+      },
+      {
+       "label": "비만도",
+       "depth": 0,
+       "box": [
+        1157,
+        307,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도"
+      },
+      {
+       "label": "검진일",
+       "depth": 0,
+       "box": [
+        1365,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/검진일"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>반"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        180,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>순번"
+      },
+      {
+       "label": "체질량지수 (BMI)",
+       "depth": 1,
+       "box": [
+        1157,
+        369,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도>체질량지수 (BMI)"
+      }
+     ],
+     "id": "grid:신체발달목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:건강조사2",
+   "tab": "건강조사2",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "탭화면이 8개 존재합니다.",
+     "box": [
+      25,
+      173,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검진1",
+      "건강검진2",
+      "건강검진3",
+      "구강검진1",
+      "구강검진2",
+      "건강조사1",
+      "건강조사2"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생기초데이터가져오기",
+     "box": [
+      1161,
+      228,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기초자료가져오기",
+     "variant": "primary",
+     "id": "button:기초자료가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1281,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "신체발달+건강검진출력",
+     "box": [
+      1328,
+      228,
+      143,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신체발달+건강검진출력",
+     "variant": "primary",
+     "id": "button:신체발달+건강검진출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1479,
+      228,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전체자료삭제",
+     "box": [
+      1527,
+      228,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체자료삭제",
+     "variant": "secondary",
+     "id": "button:전체자료삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      67,
+      266,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검진일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검진일"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      193,
+      266,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      351,
+      266,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용개정년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:적용개정년도"
+    },
+    {
+     "aria": "신체발달목록",
+     "box": [
+      25,
+      306,
+      1590,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "신체발달목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "학생 식별번호",
+       "depth": 0,
+       "box": [
+        76,
+        307,
+        208,
+        62
+       ],
+       "span": 2,
+       "id": "col:신체발달목록/학생 식별번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        284,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        492,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/생년월일"
+      },
+      {
+       "label": "키 (cm)",
+       "depth": 0,
+       "box": [
+        741,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/키 (cm)"
+      },
+      {
+       "label": "몸무게(kg)",
+       "depth": 0,
+       "box": [
+        949,
+        307,
+        208,
+        124
+       ],
+       "id": "col:신체발달목록/몸무게(kg)"
+      },
+      {
+       "label": "비만도",
+       "depth": 0,
+       "box": [
+        1157,
+        307,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도"
+      },
+      {
+       "label": "검진일",
+       "depth": 0,
+       "box": [
+        1365,
+        307,
+        249,
+        124
+       ],
+       "id": "col:신체발달목록/검진일"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>반"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        180,
+        369,
+        104,
+        62
+       ],
+       "id": "col:신체발달목록/학생 식별번호>순번"
+      },
+      {
+       "label": "체질량지수 (BMI)",
+       "depth": 1,
+       "box": [
+        1157,
+        369,
+        208,
+        62
+       ],
+       "id": "col:신체발달목록/비만도>체질량지수 (BMI)"
+      }
+     ],
+     "id": "grid:신체발달목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 학생건강검사관리 > 항목별건강검사등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

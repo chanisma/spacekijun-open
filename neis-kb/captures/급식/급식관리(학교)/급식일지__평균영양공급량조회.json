@@ -1,0 +1,211 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›급식일지›평균영양공급량조회",
+ "name": "평균영양공급량조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:57:38+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점검기간1",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:점검기간1"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점검기간1~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:점검기간1~"
+    },
+    {
+     "aria": null,
+     "box": [
+      626,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점검기간2",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:점검기간2"
+    },
+    {
+     "aria": null,
+     "box": [
+      761,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점검기간2~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:점검기간2~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1077,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점검기간3",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:점검기간3"
+    },
+    {
+     "aria": null,
+     "box": [
+      1212,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점검기간3~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:점검기간3~"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점검기간4",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:점검기간4"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점검기간4~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:점검기간4~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      122,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 평균영양공급량은 중식을 기준으로 산출됩니다.",
+     "id": "note:※ 평균영양공급량은 중식을 기준으로 산출됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      227,
+      1590,
+      587
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 급식일지 > 평균영양공급량조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

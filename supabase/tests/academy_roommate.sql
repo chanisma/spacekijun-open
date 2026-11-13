@@ -1,0 +1,72 @@
+begin;
+select set_config('academy.owner',(select id::text from public.profiles where role='student' limit 1),true);
+select set_config('academy.other',(select id::text from public.profiles where role='student' and id::text<>current_setting('academy.owner') limit 1),true);
+select set_config('academy.admin',(select id::text from public.profiles where role='admin' limit 1),true);
+delete from public.academy_roommate_conversations where user_id=current_setting('academy.owner')::uuid;
+delete from public.academy_self_assessments where user_id=current_setting('academy.owner')::uuid;
+set local role service_role;
+do $$ declare u uuid:=current_setting('academy.owner')::uuid; d date:=(now() at time zone 'Asia/Seoul')::date; c jsonb; x jsonb; token uuid; old_token uuid; request uuid:=gen_random_uuid(); begin
+ c:=public.academy_roommate_claim(u,d,0,null);
+ if not (c->>'claimed')::boolean then raise exception 'First claim failed'; end if;
+ if c->'conversation'->>'question' is not null then raise exception 'Pre-generated question'; end if;
+ token:=(c->>'token')::uuid; old_token:=token;
+ x:=public.academy_roommate_claim(u,d,0,null);
+ if (x->>'claimed')::boolean then raise exception 'Duplicate generation accepted'; end if;
+ x:=public.academy_roommate_finish(u,d,gen_random_uuid(),'wrong token');
+ if x->>'question' is not null then raise exception 'Foreign worker overwrote question'; end if;
+ x:=public.academy_roommate_finish(u,d,token,'오늘은 어떤 마음으로 지내고 싶어?');
+ perform set_config('academy.period',x->>'period',true);
+ c:=public.academy_roommate_claim(u,d,(x->>'revision')::int,'천천히 지내고 싶어');
+ token:=(c->>'token')::uuid;
+ x:=public.academy_roommate_finish(u,d,token,null);
+ if x->>'pending_message'<>'천천히 지내고 싶어' then raise exception 'Failed answer not retained'; end if;
+ c:=public.academy_roommate_claim(u,d,(x->>'revision')::int,'different draft');
+ if c->'conversation'->>'pending_message'<>'천천히 지내고 싶어' then raise exception 'Retry replaced saved answer'; end if;
+ token:=(c->>'token')::uuid;
+ x:=public.academy_roommate_finish(u,d,old_token,'stale worker');
+ if x->>'status'<>'generating' then raise exception 'Stale worker finalized retry'; end if;
+ x:=public.academy_roommate_finish(u,d,token,'네가 편안한 속도를 존중해도 괜찮아.');
+ if x->>'question'<>'오늘은 어떤 마음으로 지내고 싶어?' or x->>'period'<>current_setting('academy.period') then raise exception 'Daily question/period changed'; end if;
+ if (select count(*) from jsonb_array_elements(x->'turns') t where t->>'role'='user')<>1 then raise exception 'Duplicate user turn'; end if;
+ c:=public.academy_roommate_claim(u,d,(x->>'revision')::int,null);
+ if (c->>'claimed')::boolean then raise exception 'Second root question generated'; end if;
+ begin perform public.academy_roommate_claim(u,d+1,0,null); raise exception 'Future date accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ x:=public.academy_roommate_save_assessment(u,request,'big5','{"o1":3}','{"open":3}');
+ perform public.academy_roommate_save_assessment(u,request,'big5','{"o1":3}','{"open":3}');
+ if (select count(*) from public.academy_self_assessments where user_id=u)<>1 then raise exception 'Duplicate assessment'; end if;
+ perform public.academy_roommate_save_assessment(u,gen_random_uuid(),'learning','{"p1":3}','{"planning":3}');
+ request:=gen_random_uuid();
+ x:=public.academy_roommate_save_assessment(u,request,'learning_type','{"lc1":3}','{"company":3,"approach":3,"structure":3}');
+ perform public.academy_roommate_save_assessment(u,request,'learning_type','{"lc1":3}','{"company":3,"approach":3,"structure":3}');
+ if (select count(*) from public.academy_self_assessments where user_id=u)<>3 then raise exception 'New type replaced old records or duplicated retry'; end if;
+ perform set_config('academy.assessment',x->>'id',true);
+end $$;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('academy.owner'),'role','authenticated')::text,true);
+do $$ declare s jsonb; begin
+ s:=public.academy_roommate_read();
+ if jsonb_array_length(s->'assessments')<>3 or jsonb_array_length(s->'conversations')<>1 then raise exception 'Owner read missing'; end if;
+ if s->'conversations'->0 ? 'lease_token' then raise exception 'Lease secret exposed'; end if;
+ begin perform public.academy_roommate_claim(auth.uid(),current_date,0,null); raise exception 'Client forged claim' using errcode='XX000'; exception when insufficient_privilege then null; end;
+ begin update public.academy_self_assessments set scores='{"open":99}'; raise exception 'Client forged score' using errcode='XX000'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_roommate_read('30101'); raise exception 'Student preview accepted' using errcode='XX000'; exception when insufficient_privilege then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('academy.other'),'role','authenticated')::text,true);
+do $$ begin
+ if exists(select 1 from public.academy_self_assessments where id=current_setting('academy.assessment')::uuid) then raise exception 'Foreign result exposed'; end if;
+ delete from public.academy_self_assessments where id=current_setting('academy.assessment')::uuid;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('academy.admin'),'role','authenticated')::text,true);
+do $$ begin
+ if jsonb_array_length(public.academy_roommate_read()->'assessments')<>0 then raise exception 'Unselected admin reads private results'; end if;
+end $$;
+set local role anon;
+do $$ begin
+ begin perform public.academy_roommate_read(); raise exception 'Anonymous read allowed' using errcode='XX000'; exception when insufficient_privilege then null; end;
+end $$;
+reset role;
+do $$ begin
+ if not exists(select 1 from public.academy_self_assessments where id=current_setting('academy.assessment')::uuid) then raise exception 'Foreign deletion succeeded'; end if;
+end $$;
+select 'PASS: first question on demand, fixed KST day/period, concurrent claim/token guards, saved retry, assessment idempotence, owner isolation, admin no-selection and anon denial. All rolled back.' as result;
+rollback;

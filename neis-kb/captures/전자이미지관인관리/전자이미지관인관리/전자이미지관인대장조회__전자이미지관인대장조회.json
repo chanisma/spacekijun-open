@@ -1,0 +1,283 @@
+{
+ "schema": "neis-capture/1",
+ "key": "전자이미지관인관리›전자이미지관인관리›전자이미지관인대장조회›전자이미지관인대장조회",
+ "name": "전자이미지관인대장조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:56:44+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      115,
+      81,
+      313,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조직명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:조직명"
+    },
+    {
+     "aria": null,
+     "box": [
+      648,
+      81,
+      313,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "관인종류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:관인종류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1062,
+      81,
+      313,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "발급문서번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:발급문서번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      115,
+      121,
+      433,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "발급문서명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:발급문서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      648,
+      121,
+      149,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용일시",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:사용일시"
+    },
+    {
+     "aria": null,
+     "box": [
+      812,
+      121,
+      149,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용일시~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:사용일시~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1390,
+      121,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1510,
+      121,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      191,
+      1590,
+      500
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        26,
+        192,
+        194,
+        36
+       ],
+       "id": "col:그리드/조직명"
+      },
+      {
+       "label": "관인종류",
+       "depth": 0,
+       "box": [
+        220,
+        192,
+        143,
+        36
+       ],
+       "id": "col:그리드/관인종류"
+      },
+      {
+       "label": "관인번호",
+       "depth": 0,
+       "box": [
+        363,
+        192,
+        175,
+        36
+       ],
+       "id": "col:그리드/관인번호"
+      },
+      {
+       "label": "메뉴명",
+       "depth": 0,
+       "box": [
+        538,
+        192,
+        238,
+        36
+       ],
+       "id": "col:그리드/메뉴명"
+      },
+      {
+       "label": "발급문서명",
+       "depth": 0,
+       "box": [
+        776,
+        192,
+        205,
+        36
+       ],
+       "id": "col:그리드/발급문서명"
+      },
+      {
+       "label": "문서발급번호",
+       "depth": 0,
+       "box": [
+        981,
+        192,
+        205,
+        36
+       ],
+       "id": "col:그리드/문서발급번호"
+      },
+      {
+       "label": "담당자",
+       "depth": 0,
+       "box": [
+        1186,
+        192,
+        205,
+        36
+       ],
+       "id": "col:그리드/담당자"
+      },
+      {
+       "label": "응답코드",
+       "depth": 0,
+       "box": [
+        1391,
+        192,
+        101,
+        36
+       ],
+       "id": "col:그리드/응답코드"
+      },
+      {
+       "label": "사용일시",
+       "depth": 0,
+       "box": [
+        1492,
+        192,
+        122,
+        36
+       ],
+       "id": "col:그리드/사용일시"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      709,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 전자이미지관인관리 > 전자이미지관인대장조회",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

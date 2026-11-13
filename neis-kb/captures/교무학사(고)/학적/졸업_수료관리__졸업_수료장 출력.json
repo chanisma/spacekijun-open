@@ -1,0 +1,264 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업/수료관리›졸업/수료장 출력",
+ "name": "졸업/수료장 출력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:18:43+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "구분",
+     "box": [
+      755,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "구분",
+     "options": [
+      "졸업장",
+      "수료장"
+     ],
+     "id": "radio:구분"
+    },
+    {
+     "aria": "정렬순",
+     "box": [
+      1095,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "정렬순",
+     "options": [
+      "졸업번호순",
+      "학년반번호순"
+     ],
+     "id": "radio:정렬순"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학년/반/번호는 재학 당시의 최종학년 정보이므로 재학생 자료가 없는 학년도는 조회되지 않습니다",
+     "id": "note:※ 학년/반/번호는 재학 당시의 최종학년 정보이므로 재학생 자료가 없는 학년도는 조회되지 않습니다"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      171,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      311,
+      209,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교장명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학교장명"
+    },
+    {
+     "aria": "졸업장리스트",
+     "box": [
+      25,
+      249,
+      1590,
+      464
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "졸업장리스트",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "졸업대장번호",
+       "depth": 0,
+       "box": [
+        76,
+        250,
+        194,
+        62
+       ],
+       "id": "col:졸업장리스트/졸업대장번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        270,
+        250,
+        194,
+        62
+       ],
+       "id": "col:졸업장리스트/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        465,
+        250,
+        194,
+        62
+       ],
+       "id": "col:졸업장리스트/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "졸업년월일",
+       "depth": 0,
+       "box": [
+        659,
+        250,
+        162,
+        62
+       ],
+       "id": "col:졸업장리스트/졸업년월일"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        821,
+        250,
+        130,
+        62
+       ],
+       "id": "col:졸업장리스트/학년"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        950,
+        250,
+        162,
+        62
+       ],
+       "id": "col:졸업장리스트/학과"
+      },
+      {
+       "label": "반명",
+       "depth": 0,
+       "box": [
+        1112,
+        250,
+        130,
+        62
+       ],
+       "id": "col:졸업장리스트/반명"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        1242,
+        250,
+        130,
+        62
+       ],
+       "id": "col:졸업장리스트/번호"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1371,
+        250,
+        243,
+        62
+       ],
+       "id": "col:졸업장리스트/비고"
+      }
+     ],
+     "id": "grid:졸업장리스트"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업/수료관리 > 졸업/수료장 출력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

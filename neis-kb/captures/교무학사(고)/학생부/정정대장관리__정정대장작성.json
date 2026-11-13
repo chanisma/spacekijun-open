@@ -1,0 +1,356 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생부›정정대장관리›정정대장작성",
+ "name": "정정대장작성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:39:25+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "반별조회 또는 재학아닌학생 선택",
+     "box": [
+      45,
+      82,
+      190,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "반별조회 또는 재학아닌학생 선택",
+     "options": [
+      "반별조회",
+      "재학아닌학생"
+     ],
+     "id": "radio:반별조회 또는 재학아닌학생 선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      375,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      615,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 결재 진행중인 정정대장은 수정, 삭제를 할 수 없으며 '정정내역확인'을 이용한 상세조회만 됩니다. ※ 입력/수정/삭제한 내용은 결재 및 학생부 반영된 후 분석을 통해 유의어 통계에 반영이 됩니다. (수상경력(수상명), 창의적체험활동(특기사항,봉사활동내용), 교과학습발달상황(세특), 행동특성및종합의견, 출결상황(특기사항), 학적사항(특기사항), 봉사활동내용)",
+     "id": "note:※ 결재 진행중인 정정대장은 수정, 삭제를 할 수 없으며 '정정내역확인'을 이용한 상세조회만 됩니다. ※ 입력/수정/삭제한 내용은 결재 및 학생부 반영된 후 분석을 통해 유의어 통계에 반영이 됩니다. (수상경력(수상명), 창의적체험활동(특기사항,봉사활동내용), 교과학습발달상황(세특), 행동특성및종합의견, 출결상황(특기사항), 학적사항(특기사항), 봉사활동내용)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      189,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다.",
+     "id": "note:※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다."
+    },
+    {
+     "aria": "1. 정정대장목록 선택됨 ",
+     "box": [
+      434,
+      242,
+      262,
+      29
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "1. 정정대장목록",
+     "variant": "plain",
+     "id": "button:1. 정정대장목록"
+    },
+    {
+     "aria": "2. 정정대장등록",
+     "box": [
+      740,
+      242,
+      262,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "2. 정정대장등록",
+     "variant": "plain",
+     "id": "button:2. 정정대장등록"
+    },
+    {
+     "aria": "3. 항목별정정",
+     "box": [
+      1047,
+      242,
+      262,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "3. 항목별정정",
+     "variant": "plain",
+     "id": "button:3. 항목별정정"
+    },
+    {
+     "aria": "4. 승인요청",
+     "box": [
+      1353,
+      242,
+      262,
+      29
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "4. 승인요청",
+     "variant": "plain",
+     "id": "button:4. 승인요청"
+    },
+    {
+     "aria": "학생 목록 그리드 ",
+     "box": [
+      25,
+      272,
+      394,
+      541
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록 그리드",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        273,
+        105,
+        36
+       ],
+       "id": "col:학생 목록 그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        131,
+        273,
+        120,
+        36
+       ],
+       "id": "col:학생 목록 그리드/성명"
+      },
+      {
+       "label": "확인",
+       "depth": 0,
+       "box": [
+        251,
+        273,
+        167,
+        36
+       ],
+       "id": "col:학생 목록 그리드/확인"
+      }
+     ],
+     "id": "grid:학생 목록 그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      442,
+      291,
+      583,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ '정정대장등록'화면에서 정정대장을 등록하면 '항목별정정'이 활성화 됩니다.",
+     "id": "note:※ '정정대장등록'화면에서 정정대장을 등록하면 '항목별정정'이 활성화 됩니다."
+    },
+    {
+     "aria": "정정내역확인",
+     "box": [
+      1384,
+      291,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "link",
+     "id": "button:정정내역확인"
+    },
+    {
+     "aria": "정정대장수정",
+     "box": [
+      1479,
+      291,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "정정대장수정",
+     "variant": "link",
+     "id": "button:정정대장수정"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      291,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "정정대장목록 그리드",
+     "box": [
+      434,
+      331,
+      1181,
+      482
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "정정대장목록 그리드",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "심의일자",
+       "depth": 0,
+       "box": [
+        485,
+        332,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/심의일자"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        706,
+        332,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/성명"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        927,
+        332,
+        553,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/항목"
+      },
+      {
+       "label": "상신상태",
+       "depth": 0,
+       "box": [
+        1481,
+        332,
+        133,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/상신상태"
+      }
+     ],
+     "id": "grid:정정대장목록 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부 > 정정대장관리 > 정정대장작성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

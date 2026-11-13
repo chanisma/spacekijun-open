@@ -1,0 +1,965 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›지원금관리›지원금현황조회",
+ "name": "지원금현황조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:58:55+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:수강생기준 조회",
+   "tab": "수강생기준 조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "수강생기준 조회",
+      "프로그램기준 조회",
+      "수익자부담금 현황"
+     ],
+     "active": "수강생기준 조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계열/학년/학과",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:계열/학년/학과"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수강생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:수강생명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      198,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      523
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        50,
+        62
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        76,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        204,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        332,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "수강생명",
+       "depth": 0,
+       "box": [
+        461,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/수강생명"
+      },
+      {
+       "label": "최종학적변동",
+       "depth": 0,
+       "box": [
+        589,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/최종학적변동"
+      },
+      {
+       "label": "중도 추가 /삭제",
+       "depth": 0,
+       "box": [
+        717,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/중도 추가 /삭제"
+      },
+      {
+       "label": "기간",
+       "depth": 0,
+       "box": [
+        845,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/기간"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        973,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/프로그램명"
+      },
+      {
+       "label": "수강료",
+       "depth": 0,
+       "box": [
+        1101,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/수강료"
+      },
+      {
+       "label": "지원금 사용액",
+       "depth": 0,
+       "box": [
+        1230,
+        239,
+        385,
+        31
+       ],
+       "span": 3,
+       "id": "col:그리드/지원금 사용액"
+      },
+      {
+       "label": "자유수강권 지원영역",
+       "depth": 1,
+       "box": [
+        1230,
+        270,
+        128,
+        31
+       ],
+       "id": "col:그리드/지원금 사용액>자유수강권 지원영역"
+      },
+      {
+       "label": "자유수강권",
+       "depth": 1,
+       "box": [
+        1358,
+        270,
+        128,
+        31
+       ],
+       "id": "col:그리드/지원금 사용액>자유수강권"
+      },
+      {
+       "label": "그외 지원금",
+       "depth": 1,
+       "box": [
+        1486,
+        270,
+        128,
+        31
+       ],
+       "id": "col:그리드/지원금 사용액>그외 지원금"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:프로그램기준 조회",
+   "tab": "프로그램기준 조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "수강생기준 조회",
+      "프로그램기준 조회",
+      "수익자부담금 현황"
+     ],
+     "active": "프로그램기준 조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "유형분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:유형분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      137,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "내용분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:내용분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1215,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "프로그램명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:프로그램명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      198,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      523
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        50,
+        62
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "기간",
+       "depth": 0,
+       "box": [
+        76,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/기간"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        204,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/프로그램명"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        332,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        461,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        589,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "수강생명",
+       "depth": 0,
+       "box": [
+        717,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/수강생명"
+      },
+      {
+       "label": "최종학적변동",
+       "depth": 0,
+       "box": [
+        845,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/최종학적변동"
+      },
+      {
+       "label": "중도 추가 /삭제",
+       "depth": 0,
+       "box": [
+        973,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/중도 추가 /삭제"
+      },
+      {
+       "label": "수강료",
+       "depth": 0,
+       "box": [
+        1101,
+        239,
+        128,
+        62
+       ],
+       "id": "col:그리드/수강료"
+      },
+      {
+       "label": "지원금 사용액",
+       "depth": 0,
+       "box": [
+        1230,
+        239,
+        385,
+        31
+       ],
+       "span": 3,
+       "id": "col:그리드/지원금 사용액"
+      },
+      {
+       "label": "자유수강권 지원영역",
+       "depth": 1,
+       "box": [
+        1230,
+        270,
+        128,
+        31
+       ],
+       "id": "col:그리드/지원금 사용액>자유수강권 지원영역"
+      },
+      {
+       "label": "자유수강권",
+       "depth": 1,
+       "box": [
+        1358,
+        270,
+        128,
+        31
+       ],
+       "id": "col:그리드/지원금 사용액>자유수강권"
+      },
+      {
+       "label": "그외 지원금",
+       "depth": 1,
+       "box": [
+        1486,
+        270,
+        128,
+        31
+       ],
+       "id": "col:그리드/지원금 사용액>그외 지원금"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:수익자부담금 현황",
+   "tab": "수익자부담금 현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "수강생기준 조회",
+      "프로그램기준 조회",
+      "수익자부담금 현황"
+     ],
+     "active": "수익자부담금 현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계열/학년/학과",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:계열/학년/학과"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수강생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:수강생명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      198,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      523
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        50,
+        62
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        76,
+        239,
+        112,
+        62
+       ],
+       "id": "col:그리드/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        188,
+        239,
+        112,
+        62
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        299,
+        239,
+        112,
+        62
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "수강생명",
+       "depth": 0,
+       "box": [
+        411,
+        239,
+        112,
+        62
+       ],
+       "id": "col:그리드/수강생명"
+      },
+      {
+       "label": "최종학적변동",
+       "depth": 0,
+       "box": [
+        522,
+        239,
+        112,
+        62
+       ],
+       "id": "col:그리드/최종학적변동"
+      },
+      {
+       "label": "중도 추가 /삭제",
+       "depth": 0,
+       "box": [
+        634,
+        239,
+        112,
+        62
+       ],
+       "id": "col:그리드/중도 추가 /삭제"
+      },
+      {
+       "label": "기간",
+       "depth": 0,
+       "box": [
+        745,
+        239,
+        112,
+        62
+       ],
+       "id": "col:그리드/기간"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        857,
+        239,
+        112,
+        62
+       ],
+       "id": "col:그리드/프로그램명"
+      },
+      {
+       "label": "수강료",
+       "depth": 0,
+       "box": [
+        968,
+        239,
+        112,
+        62
+       ],
+       "id": "col:그리드/수강료"
+      },
+      {
+       "label": "수익자부담금",
+       "depth": 0,
+       "box": [
+        1080,
+        239,
+        535,
+        31
+       ],
+       "span": 5,
+       "id": "col:그리드/수익자부담금"
+      },
+      {
+       "label": "합계",
+       "depth": 1,
+       "box": [
+        1080,
+        270,
+        112,
+        31
+       ],
+       "id": "col:그리드/수익자부담금>합계"
+      },
+      {
+       "label": "강사료",
+       "depth": 1,
+       "box": [
+        1191,
+        270,
+        112,
+        31
+       ],
+       "id": "col:그리드/수익자부담금>강사료"
+      },
+      {
+       "label": "수용비",
+       "depth": 1,
+       "box": [
+        1303,
+        270,
+        112,
+        31
+       ],
+       "id": "col:그리드/수익자부담금>수용비"
+      },
+      {
+       "label": "교재비",
+       "depth": 1,
+       "box": [
+        1414,
+        270,
+        100,
+        31
+       ],
+       "id": "col:그리드/수익자부담금>교재비"
+      },
+      {
+       "label": "재료비",
+       "depth": 1,
+       "box": [
+        1514,
+        270,
+        100,
+        31
+       ],
+       "id": "col:그리드/수익자부담금>재료비"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 지원금관리 > 지원금현황조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

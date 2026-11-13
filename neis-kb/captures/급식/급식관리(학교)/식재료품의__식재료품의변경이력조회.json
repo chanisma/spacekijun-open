@@ -1,0 +1,276 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식재료품의›식재료품의변경이력조회",
+ "name": "식재료품의변경이력조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:47:19+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "변경일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:변경일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "변경일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:변경일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      82,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "변경이력명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:변경이력명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      133,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": "품의수량조정이력목록",
+     "box": [
+      25,
+      143,
+      161,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "품의수량조정이력목록",
+     "id": "heading:품의수량조정이력목록"
+    },
+    {
+     "aria": "품의수량조정 식품상세내역",
+     "box": [
+      540,
+      143,
+      198,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "품의수량조정 식품상세내역",
+     "id": "heading:품의수량조정 식품상세내역"
+    },
+    {
+     "aria": "품의수량조정이력목록",
+     "box": [
+      25,
+      173,
+      500,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "품의수량조정이력목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "검수예정시작일자",
+       "depth": 0,
+       "box": [
+        71,
+        174,
+        100,
+        36
+       ],
+       "id": "col:품의수량조정이력목록/검수예정시작일자"
+      },
+      {
+       "label": "검수예정종료일자",
+       "depth": 0,
+       "box": [
+        171,
+        174,
+        100,
+        36
+       ],
+       "id": "col:품의수량조정이력목록/검수예정종료일자"
+      },
+      {
+       "label": "품의수량조정명",
+       "depth": 0,
+       "box": [
+        271,
+        174,
+        253,
+        36
+       ],
+       "id": "col:품의수량조정이력목록/품의수량조정명"
+      }
+     ],
+     "id": "grid:품의수량조정이력목록"
+    },
+    {
+     "aria": "품의수량조정 식품상세내역",
+     "box": [
+      540,
+      173,
+      1075,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "품의수량조정 식품상세내역",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        591,
+        174,
+        100,
+        36
+       ],
+       "id": "col:품의수량조정 식품상세내역/식품명"
+      },
+      {
+       "label": "식품속성",
+       "depth": 0,
+       "box": [
+        691,
+        174,
+        158,
+        36
+       ],
+       "span": 2,
+       "id": "col:품의수량조정 식품상세내역/식품속성"
+      },
+      {
+       "label": "업체군",
+       "depth": 0,
+       "box": [
+        849,
+        174,
+        100,
+        36
+       ],
+       "id": "col:품의수량조정 식품상세내역/업체군"
+      },
+      {
+       "label": "단위",
+       "depth": 0,
+       "box": [
+        949,
+        174,
+        100,
+        36
+       ],
+       "id": "col:품의수량조정 식품상세내역/단위"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        1049,
+        174,
+        200,
+        36
+       ],
+       "span": 2,
+       "id": "col:품의수량조정 식품상세내역/구분"
+      },
+      {
+       "label": "총량",
+       "depth": 0,
+       "box": [
+        1249,
+        174,
+        100,
+        36
+       ],
+       "id": "col:품의수량조정 식품상세내역/총량"
+      }
+     ],
+     "id": "grid:품의수량조정 식품상세내역"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식재료품의 > 식재료품의변경이력조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

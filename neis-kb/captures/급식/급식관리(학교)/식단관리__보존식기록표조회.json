@@ -1,0 +1,395 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식단관리›보존식기록표조회",
+ "name": "보존식기록표조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:44:59+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:급식일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      629,
+      82,
+      67,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      696,
+      82,
+      67,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      763,
+      82,
+      67,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식단을 작성한 급식일자에 한해서 조회 및 보존식 기록표 작성이 가능합니다.",
+     "id": "note:※ 식단을 작성한 급식일자에 한해서 조회 및 보존식 기록표 작성이 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식단의 체크박스 선택 후 출력버튼을 클릭하면 하단에 선택된 급식일자를 기준으로 출력됩니다.",
+     "id": "note:※ 식단의 체크박스 선택 후 출력버튼을 클릭하면 하단에 선택된 급식일자를 기준으로 출력됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1225,
+      205,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "plain",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1297,
+      205,
+      148,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "채취자최근정보불러오기",
+     "variant": "plain",
+     "id": "button:채취자최근정보불러오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1452,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      205,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "식단목록",
+     "box": [
+      25,
+      215,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식단목록",
+     "id": "heading:식단목록"
+    },
+    {
+     "aria": "식단목록",
+     "box": [
+      25,
+      245,
+      1575,
+      515
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "식단목록",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "급식일자",
+       "depth": 0,
+       "box": [
+        76,
+        246,
+        180,
+        72
+       ],
+       "id": "col:식단목록/급식일자"
+      },
+      {
+       "label": "식사구분",
+       "depth": 0,
+       "box": [
+        256,
+        246,
+        100,
+        72
+       ],
+       "id": "col:식단목록/식사구분"
+      },
+      {
+       "label": "식단명",
+       "depth": 0,
+       "box": [
+        356,
+        246,
+        180,
+        72
+       ],
+       "id": "col:식단목록/식단명"
+      },
+      {
+       "label": "식단진행상태",
+       "depth": 0,
+       "box": [
+        536,
+        246,
+        180,
+        72
+       ],
+       "id": "col:식단목록/식단진행상태"
+      },
+      {
+       "label": "채취일시",
+       "depth": 0,
+       "box": [
+        716,
+        246,
+        181,
+        36
+       ],
+       "span": 2,
+       "id": "col:식단목록/채취일시"
+      },
+      {
+       "label": "냉동고온도",
+       "depth": 0,
+       "box": [
+        897,
+        246,
+        162,
+        72
+       ],
+       "id": "col:식단목록/냉동고온도"
+      },
+      {
+       "label": "폐기일시",
+       "depth": 0,
+       "box": [
+        1059,
+        246,
+        180,
+        36
+       ],
+       "span": 2,
+       "id": "col:식단목록/폐기일시"
+      },
+      {
+       "label": "채취자",
+       "depth": 0,
+       "box": [
+        1239,
+        246,
+        180,
+        72
+       ],
+       "id": "col:식단목록/채취자"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1419,
+        246,
+        180,
+        72
+       ],
+       "id": "col:식단목록/비고"
+      },
+      {
+       "label": "시간",
+       "depth": 1,
+       "box": [
+        716,
+        282,
+        81,
+        36
+       ],
+       "id": "col:식단목록/채취일시>시간"
+      },
+      {
+       "label": "시간",
+       "depth": 1,
+       "box": [
+        1059,
+        282,
+        80,
+        36
+       ],
+       "id": "col:식단목록/폐기일시>시간"
+      }
+     ],
+     "id": "grid:식단목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식단관리 > 보존식기록표조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

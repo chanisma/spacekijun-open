@@ -1,0 +1,445 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›수행평가›수행평가성적관리",
+ "name": "수행평가성적관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:30:51+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "영역",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      1375,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:강의실"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "일괄파일업로드",
+     "box": [
+      873,
+      279,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄파일업로드",
+     "variant": "link",
+     "id": "button:일괄파일업로드"
+    },
+    {
+     "aria": "현장실습인정점부여",
+     "box": [
+      1012,
+      279,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "현장실습인정점부여",
+     "variant": "link",
+     "id": "button:현장실습인정점부여"
+    },
+    {
+     "aria": "전체영역마감",
+     "box": [
+      1144,
+      279,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전체영역마감",
+     "variant": "primary",
+     "id": "button:전체영역마감"
+    },
+    {
+     "aria": "전체영역마감취소",
+     "box": [
+      1240,
+      279,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전체영역마감취소",
+     "variant": "primary",
+     "id": "button:전체영역마감취소"
+    },
+    {
+     "aria": "마감",
+     "box": [
+      1359,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감",
+     "variant": "primary",
+     "id": "button:마감"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1407,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1455,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1503,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "마감취소",
+     "box": [
+      1551,
+      279,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감취소",
+     "variant": "primary",
+     "id": "button:마감취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      389,
+      1590,
+      368
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        76,
+        390,
+        97,
+        75
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        173,
+        390,
+        97,
+        75
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        270,
+        390,
+        194,
+        75
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "( 영역만점 : 미등록 )",
+       "depth": 0,
+       "box": [
+        464,
+        390,
+        750,
+        30
+       ],
+       "span": 6,
+       "id": "col:그리드/( 영역만점 : 미등록 )"
+      },
+      {
+       "label": "결시명칭",
+       "depth": 0,
+       "box": [
+        1214,
+        390,
+        100,
+        75
+       ],
+       "id": "col:그리드/결시명칭"
+      },
+      {
+       "label": "영역별 학적변동",
+       "depth": 0,
+       "box": [
+        1314,
+        390,
+        100,
+        75
+       ],
+       "id": "col:그리드/영역별 학적변동"
+      },
+      {
+       "label": "현장실습 인정점",
+       "depth": 0,
+       "box": [
+        1414,
+        390,
+        100,
+        75
+       ],
+       "id": "col:그리드/현장실습 인정점"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1514,
+        390,
+        100,
+        75
+       ],
+       "id": "col:그리드/비고"
+      },
+      {
+       "label": "선택형 (미등록)",
+       "depth": 1,
+       "box": [
+        464,
+        420,
+        136,
+        45
+       ],
+       "id": "col:그리드/( 영역만점 : 미등록 )>선택형 (미등록)"
+      },
+      {
+       "label": "서답형 (미등록)",
+       "depth": 1,
+       "box": [
+        600,
+        420,
+        136,
+        45
+       ],
+       "id": "col:그리드/( 영역만점 : 미등록 )>서답형 (미등록)"
+      },
+      {
+       "label": "기타 (미등록)",
+       "depth": 1,
+       "box": [
+        736,
+        420,
+        136,
+        45
+       ],
+       "id": "col:그리드/( 영역만점 : 미등록 )>기타 (미등록)"
+      },
+      {
+       "label": "기타2 (미등록)",
+       "depth": 1,
+       "box": [
+        872,
+        420,
+        136,
+        45
+       ],
+       "id": "col:그리드/( 영역만점 : 미등록 )>기타2 (미등록)"
+      },
+      {
+       "label": "기준값",
+       "depth": 1,
+       "box": [
+        1008,
+        420,
+        70,
+        45
+       ],
+       "id": "col:그리드/( 영역만점 : 미등록 )>기준값"
+      },
+      {
+       "label": "합계",
+       "depth": 1,
+       "box": [
+        1078,
+        420,
+        136,
+        45
+       ],
+       "id": "col:그리드/( 영역만점 : 미등록 )>합계"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 수행평가 > 수행평가성적관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

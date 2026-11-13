@@ -1,0 +1,203 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›사용자›2차인증관리›2차인증사용자조회",
+ "name": "2차인증사용자조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:51:07+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "사용자이름 및 사용자ID 선택",
+     "box": [
+      45,
+      82,
+      178,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "사용자이름 및 사용자ID 선택",
+     "options": [
+      "사용자이름",
+      "사용자ID"
+     ],
+     "id": "radio:사용자이름 및 사용자ID 선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가"
+    },
+    {
+     "aria": "2차인증사용자목록",
+     "box": [
+      25,
+      143,
+      139,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "2차인증사용자목록",
+     "id": "heading:2차인증사용자목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        220,
+        36
+       ],
+       "id": "col:그리드/사용자ID"
+      },
+      {
+       "label": "식별번호",
+       "depth": 0,
+       "box": [
+        296,
+        174,
+        220,
+        36
+       ],
+       "id": "col:그리드/식별번호"
+      },
+      {
+       "label": "사용자명",
+       "depth": 0,
+       "box": [
+        515,
+        174,
+        220,
+        36
+       ],
+       "id": "col:그리드/사용자명"
+      },
+      {
+       "label": "M-OTP",
+       "depth": 0,
+       "box": [
+        735,
+        174,
+        220,
+        36
+       ],
+       "id": "col:그리드/M-OTP"
+      },
+      {
+       "label": "ARS 인증",
+       "depth": 0,
+       "box": [
+        955,
+        174,
+        220,
+        36
+       ],
+       "id": "col:그리드/ARS 인증"
+      },
+      {
+       "label": "E-Mail",
+       "depth": 0,
+       "box": [
+        1175,
+        174,
+        220,
+        36
+       ],
+       "id": "col:그리드/E-Mail"
+      },
+      {
+       "label": "인증키",
+       "depth": 0,
+       "box": [
+        1394,
+        174,
+        220,
+        36
+       ],
+       "id": "col:그리드/인증키"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}사용자 > 2차인증관리 > 2차인증사용자조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

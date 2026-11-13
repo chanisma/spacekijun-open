@@ -1,0 +1,77 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›정기시험/수행평가선행작업›OMR카드리딩프로그램관리",
+ "name": "OMR카드리딩프로그램관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:27:16+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:OMR카드리딩프로그램 내려받기",
+   "tab": "OMR카드리딩프로그램 내려받기",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "OMR카드리딩프로그램 내려받기",
+     "box": [
+      360,
+      184,
+      920,
+      260
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "OMR카드리딩프로그램 내려받기",
+      "OMR카드리딩프로그램 실행"
+     ],
+     "active": "OMR카드리딩프로그램 내려받기",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    }
+   ]
+  },
+  {
+   "id": "tab:OMR카드리딩프로그램 실행",
+   "tab": "OMR카드리딩프로그램 실행",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "OMR카드리딩프로그램 내려받기",
+     "box": [
+      360,
+      184,
+      920,
+      260
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "OMR카드리딩프로그램 내려받기",
+      "OMR카드리딩프로그램 실행"
+     ],
+     "active": "OMR카드리딩프로그램 내려받기",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 정기시험/수행평가선행작업 > OMR카드리딩프로그램관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

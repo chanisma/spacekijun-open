@@ -1,0 +1,260 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›측정결과입력›입력누락학생조회",
+ "name": "입력누락학생조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:11:31+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": null,
+     "box": [
+      775,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정제외학생",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정제외학생"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "입력누락학생조회 목록",
+     "box": [
+      25,
+      163,
+      1590,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "입력누락학생조회 목록",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        216,
+        124
+       ],
+       "id": "col:입력누락학생조회 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        242,
+        164,
+        86,
+        124
+       ],
+       "id": "col:입력누락학생조회 목록/반"
+      },
+      {
+       "label": "대상인원",
+       "depth": 0,
+       "box": [
+        328,
+        164,
+        127,
+        124
+       ],
+       "id": "col:입력누락학생조회 목록/대상인원"
+      },
+      {
+       "label": "필수",
+       "depth": 0,
+       "box": [
+        455,
+        164,
+        635,
+        31
+       ],
+       "span": 5,
+       "id": "col:입력누락학생조회 목록/필수"
+      },
+      {
+       "label": "선택",
+       "depth": 0,
+       "box": [
+        1090,
+        164,
+        508,
+        31
+       ],
+       "span": 4,
+       "id": "col:입력누락학생조회 목록/선택"
+      },
+      {
+       "label": "심폐 지구력",
+       "depth": 1,
+       "box": [
+        455,
+        195,
+        127,
+        93
+       ],
+       "id": "col:입력누락학생조회 목록/필수>심폐 지구력"
+      },
+      {
+       "label": "유연성",
+       "depth": 1,
+       "box": [
+        582,
+        195,
+        127,
+        93
+       ],
+       "id": "col:입력누락학생조회 목록/필수>유연성"
+      },
+      {
+       "label": "근력· 근지구력",
+       "depth": 1,
+       "box": [
+        709,
+        195,
+        127,
+        93
+       ],
+       "id": "col:입력누락학생조회 목록/필수>근력· 근지구력"
+      },
+      {
+       "label": "순발력",
+       "depth": 1,
+       "box": [
+        836,
+        195,
+        127,
+        93
+       ],
+       "id": "col:입력누락학생조회 목록/필수>순발력"
+      },
+      {
+       "label": "비만",
+       "depth": 1,
+       "box": [
+        963,
+        195,
+        127,
+        93
+       ],
+       "id": "col:입력누락학생조회 목록/필수>비만"
+      },
+      {
+       "label": "심폐 지구력 정밀평가",
+       "depth": 1,
+       "box": [
+        1090,
+        195,
+        127,
+        93
+       ],
+       "id": "col:입력누락학생조회 목록/선택>심폐 지구력 정밀평가"
+      },
+      {
+       "label": "체지방률 평가",
+       "depth": 1,
+       "box": [
+        1217,
+        195,
+        127,
+        93
+       ],
+       "id": "col:입력누락학생조회 목록/선택>체지방률 평가"
+      },
+      {
+       "label": "자기신체 평가",
+       "depth": 1,
+       "box": [
+        1344,
+        195,
+        127,
+        93
+       ],
+       "id": "col:입력누락학생조회 목록/선택>자기신체 평가"
+      },
+      {
+       "label": "자세평가",
+       "depth": 1,
+       "box": [
+        1471,
+        195,
+        127,
+        93
+       ],
+       "id": "col:입력누락학생조회 목록/선택>자세평가"
+      }
+     ],
+     "id": "grid:입력누락학생조회 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 측정결과입력 > 입력누락학생조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,671 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›수상경력›학급별수상관리",
+ "name": "학급별수상관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:26:08+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:학급별수상관리",
+   "tab": "학급별수상관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학급별수상관리",
+      "학급별수상조회"
+     ],
+     "active": "학급별수상관리",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학급별수상관리에서는 수상대장에서 입력한 내역을 학생부에 반영할 수 없습니다.",
+     "id": "note:※ 학급별수상관리에서는 수상대장에서 입력한 내역을 학생부에 반영할 수 없습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학급별수상관리에서는 수상대장에 반영이 되지 않습니다.(자동채번 적용안됨)",
+     "id": "note:※ 학급별수상관리에서는 수상대장에 반영이 되지 않습니다.(자동채번 적용안됨)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      235,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 위탁기관 및 교환학교에서 받은 수상을 교내상으로 등록하는 경우 및 누락된 수상자료(전입학생 등)가 존재할 경우 해당메뉴에서 등록하시기 바랍니다.",
+     "id": "note:※ 위탁기관 및 교환학교에서 받은 수상을 교내상으로 등록하는 경우 및 누락된 수상자료(전입학생 등)가 존재할 경우 해당메뉴에서 등록하시기 바랍니다."
+    },
+    {
+     "aria": "학생부반영여부수정",
+     "box": [
+      1396,
+      299,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학생부반영여부수정",
+     "variant": "primary",
+     "id": "button:학생부반영여부수정"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1527,
+      299,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      299,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      339,
+      393,
+      475
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        340,
+        130,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        156,
+        340,
+        261,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "학생별 수상 목록",
+     "box": [
+      438,
+      339,
+      1178,
+      475
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생별 수상 목록",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "교내외 구분",
+       "depth": 0,
+       "box": [
+        489,
+        340,
+        63,
+        62
+       ],
+       "id": "col:학생별 수상 목록/교내외 구분"
+      },
+      {
+       "label": "수상명",
+       "depth": 0,
+       "box": [
+        551,
+        340,
+        157,
+        62
+       ],
+       "id": "col:학생별 수상 목록/수상명"
+      },
+      {
+       "label": "등급(위)",
+       "depth": 0,
+       "box": [
+        708,
+        340,
+        84,
+        62
+       ],
+       "id": "col:학생별 수상 목록/등급(위)"
+      },
+      {
+       "label": "상장번호",
+       "depth": 0,
+       "box": [
+        792,
+        340,
+        105,
+        62
+       ],
+       "id": "col:학생별 수상 목록/상장번호"
+      },
+      {
+       "label": "수상일자",
+       "depth": 0,
+       "box": [
+        897,
+        340,
+        105,
+        62
+       ],
+       "id": "col:학생별 수상 목록/수상일자"
+      },
+      {
+       "label": "수여기관",
+       "depth": 0,
+       "box": [
+        1002,
+        340,
+        157,
+        62
+       ],
+       "id": "col:학생별 수상 목록/수여기관"
+      },
+      {
+       "label": "참가대상 (참가인원)",
+       "depth": 0,
+       "box": [
+        1159,
+        340,
+        105,
+        62
+       ],
+       "id": "col:학생별 수상 목록/참가대상 (참가인원)"
+      },
+      {
+       "label": "개인/단체 구분",
+       "depth": 0,
+       "box": [
+        1263,
+        340,
+        84,
+        62
+       ],
+       "id": "col:학생별 수상 목록/개인/단체 구분"
+      },
+      {
+       "label": "반영여부",
+       "depth": 0,
+       "box": [
+        1347,
+        340,
+        168,
+        31
+       ],
+       "span": 2,
+       "id": "col:학생별 수상 목록/반영여부"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1515,
+        340,
+        100,
+        62
+       ],
+       "id": "col:학생별 수상 목록/결재상태"
+      },
+      {
+       "label": "학생부",
+       "depth": 1,
+       "box": [
+        1347,
+        371,
+        84,
+        31
+       ],
+       "id": "col:학생별 수상 목록/반영여부>학생부"
+      },
+      {
+       "label": "수상대장",
+       "depth": 1,
+       "box": [
+        1431,
+        371,
+        84,
+        31
+       ],
+       "id": "col:학생별 수상 목록/반영여부>수상대장"
+      }
+     ],
+     "id": "grid:학생별 수상 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:학급별수상조회",
+   "tab": "학급별수상조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학급별수상관리",
+      "학급별수상조회"
+     ],
+     "active": "학급별수상조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1447,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "학급별수상 목록",
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학급별수상 목록",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        58,
+        62
+       ],
+       "id": "col:학급별수상 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        84,
+        239,
+        117,
+        62
+       ],
+       "id": "col:학급별수상 목록/성명"
+      },
+      {
+       "label": "교내외 구분",
+       "depth": 0,
+       "box": [
+        201,
+        239,
+        70,
+        62
+       ],
+       "id": "col:학급별수상 목록/교내외 구분"
+      },
+      {
+       "label": "수상명",
+       "depth": 0,
+       "box": [
+        271,
+        239,
+        234,
+        62
+       ],
+       "id": "col:학급별수상 목록/수상명"
+      },
+      {
+       "label": "등급(위)",
+       "depth": 0,
+       "box": [
+        505,
+        239,
+        82,
+        62
+       ],
+       "id": "col:학급별수상 목록/등급(위)"
+      },
+      {
+       "label": "상장번호",
+       "depth": 0,
+       "box": [
+        586,
+        239,
+        140,
+        62
+       ],
+       "id": "col:학급별수상 목록/상장번호"
+      },
+      {
+       "label": "수상일자",
+       "depth": 0,
+       "box": [
+        727,
+        239,
+        117,
+        62
+       ],
+       "id": "col:학급별수상 목록/수상일자"
+      },
+      {
+       "label": "수여기관",
+       "depth": 0,
+       "box": [
+        843,
+        239,
+        175,
+        62
+       ],
+       "id": "col:학급별수상 목록/수여기관"
+      },
+      {
+       "label": "참가대상 (참가인원)",
+       "depth": 0,
+       "box": [
+        1019,
+        239,
+        175,
+        62
+       ],
+       "id": "col:학급별수상 목록/참가대상 (참가인원)"
+      },
+      {
+       "label": "개인/단체 구분",
+       "depth": 0,
+       "box": [
+        1194,
+        239,
+        93,
+        62
+       ],
+       "id": "col:학급별수상 목록/개인/단체 구분"
+      },
+      {
+       "label": "반영여부",
+       "depth": 0,
+       "box": [
+        1287,
+        239,
+        187,
+        31
+       ],
+       "span": 2,
+       "id": "col:학급별수상 목록/반영여부"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1474,
+        239,
+        140,
+        62
+       ],
+       "id": "col:학급별수상 목록/결재상태"
+      },
+      {
+       "label": "학생부",
+       "depth": 1,
+       "box": [
+        1287,
+        270,
+        93,
+        31
+       ],
+       "id": "col:학급별수상 목록/반영여부>학생부"
+      },
+      {
+       "label": "수상대장",
+       "depth": 1,
+       "box": [
+        1380,
+        270,
+        93,
+        31
+       ],
+       "id": "col:학급별수상 목록/반영여부>수상대장"
+      }
+     ],
+     "id": "grid:학급별수상 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 수상경력 > 학급별수상관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

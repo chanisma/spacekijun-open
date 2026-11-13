@@ -1,0 +1,151 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›학생건강검사관리›반별건강검사등록",
+ "name": "반별건강검사등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:46:21+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      133,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생목록",
+     "id": "heading:학생목록"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      163,
+      315,
+      636
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "학생식별번호",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        297,
+        31
+       ],
+       "span": 2,
+       "id": "col:학생목록/학생식별번호"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        26,
+        195,
+        149,
+        31
+       ],
+       "id": "col:학생목록/학생식별번호>반"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        175,
+        195,
+        149,
+        31
+       ],
+       "id": "col:학생목록/학생식별번호>순번"
+      }
+     ],
+     "id": "grid:학생목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 학생건강검사관리 > 반별건강검사등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

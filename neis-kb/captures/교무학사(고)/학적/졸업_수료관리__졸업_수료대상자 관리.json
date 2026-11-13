@@ -1,0 +1,201 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업/수료관리›졸업/수료대상자 관리",
+ "name": "졸업/수료대상자 관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:18:08+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      113,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:졸업구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "졸업/수료 대상자 리스트",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "졸업/수료 대상자 리스트",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:졸업/수료 대상자 리스트/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        88,
+        36
+       ],
+       "id": "col:졸업/수료 대상자 리스트/학년"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        164,
+        174,
+        177,
+        36
+       ],
+       "id": "col:졸업/수료 대상자 리스트/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        341,
+        174,
+        88,
+        36
+       ],
+       "id": "col:졸업/수료 대상자 리스트/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        430,
+        174,
+        88,
+        36
+       ],
+       "id": "col:졸업/수료 대상자 리스트/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        518,
+        174,
+        212,
+        36
+       ],
+       "id": "col:졸업/수료 대상자 리스트/성명"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        730,
+        174,
+        88,
+        36
+       ],
+       "id": "col:졸업/수료 대상자 리스트/구분"
+      },
+      {
+       "label": "진학학교",
+       "depth": 0,
+       "box": [
+        818,
+        174,
+        265,
+        36
+       ],
+       "id": "col:졸업/수료 대상자 리스트/진학학교"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1084,
+        174,
+        530,
+        36
+       ],
+       "id": "col:졸업/수료 대상자 리스트/비고"
+      }
+     ],
+     "id": "grid:졸업/수료 대상자 리스트"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업/수료관리 > 졸업/수료대상자 관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

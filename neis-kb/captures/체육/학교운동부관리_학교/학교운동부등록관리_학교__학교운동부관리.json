@@ -1,0 +1,230 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교운동부관리#학교›학교운동부등록관리#학교›학교운동부관리",
+ "name": "학교운동부관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:06:18+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "종목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:종목"
+    },
+    {
+     "aria": null,
+     "box": [
+      725,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "활동상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:활동상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "창단",
+     "variant": "link",
+     "id": "button:창단"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "해체",
+     "variant": "secondary",
+     "id": "button:해체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "학교운동부 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      584
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교운동부 목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "종목",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        192,
+        62
+       ],
+       "id": "col:학교운동부 목록/종목"
+      },
+      {
+       "label": "선수인원",
+       "depth": 0,
+       "box": [
+        268,
+        174,
+        577,
+        31
+       ],
+       "span": 3,
+       "id": "col:학교운동부 목록/선수인원"
+      },
+      {
+       "label": "지도교사",
+       "depth": 0,
+       "box": [
+        845,
+        174,
+        192,
+        62
+       ],
+       "id": "col:학교운동부 목록/지도교사"
+      },
+      {
+       "label": "학교운동부지도자",
+       "depth": 0,
+       "box": [
+        1037,
+        174,
+        192,
+        62
+       ],
+       "id": "col:학교운동부 목록/학교운동부지도자"
+      },
+      {
+       "label": "창단일자",
+       "depth": 0,
+       "box": [
+        1230,
+        174,
+        192,
+        62
+       ],
+       "id": "col:학교운동부 목록/창단일자"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        1422,
+        174,
+        192,
+        62
+       ],
+       "id": "col:학교운동부 목록/상태"
+      },
+      {
+       "label": "남성",
+       "depth": 1,
+       "box": [
+        268,
+        205,
+        192,
+        31
+       ],
+       "id": "col:학교운동부 목록/선수인원>남성"
+      },
+      {
+       "label": "여성",
+       "depth": 1,
+       "box": [
+        461,
+        205,
+        192,
+        31
+       ],
+       "id": "col:학교운동부 목록/선수인원>여성"
+      },
+      {
+       "label": "계",
+       "depth": 1,
+       "box": [
+        653,
+        205,
+        192,
+        31
+       ],
+       "id": "col:학교운동부 목록/선수인원>계"
+      }
+     ],
+     "id": "grid:학교운동부 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교운동부관리 > 학교운동부등록관리 > 학교운동부관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

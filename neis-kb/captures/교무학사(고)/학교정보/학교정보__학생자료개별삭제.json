@@ -1,0 +1,333 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학교정보›학교정보›학생자료개별삭제",
+ "name": "학생자료개별삭제",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:59:09+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주민등록번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:주민등록번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      630,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주민등록번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:주민등록번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1373,
+      229,
+      143,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학생자료 삭제 승인요청",
+     "variant": "primary",
+     "id": "button:학생자료 삭제 승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1524,
+      229,
+      91,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학생자료 삭제",
+     "variant": "primary",
+     "id": "button:학생자료 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      269,
+      1590,
+      149
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "재학구분",
+       "depth": 0,
+       "box": [
+        26,
+        270,
+        176,
+        36
+       ],
+       "id": "col:그리드/재학구분"
+      },
+      {
+       "label": "학적변동구분",
+       "depth": 0,
+       "box": [
+        202,
+        270,
+        176,
+        36
+       ],
+       "id": "col:그리드/학적변동구분"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        379,
+        270,
+        176,
+        36
+       ],
+       "id": "col:그리드/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        555,
+        270,
+        176,
+        36
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        732,
+        270,
+        176,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        908,
+        270,
+        176,
+        36
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "주민등록번호",
+       "depth": 0,
+       "box": [
+        1085,
+        270,
+        176,
+        36
+       ],
+       "id": "col:그리드/주민등록번호"
+      },
+      {
+       "label": "학생개인번호",
+       "depth": 0,
+       "box": [
+        1261,
+        270,
+        176,
+        36
+       ],
+       "id": "col:그리드/학생개인번호"
+      },
+      {
+       "label": "승인상태",
+       "depth": 0,
+       "box": [
+        1438,
+        270,
+        176,
+        36
+       ],
+       "id": "col:그리드/승인상태"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1467,
+      433,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생자료 삭제 LOG 조회",
+     "variant": "primary",
+     "id": "button:학생자료 삭제 LOG 조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      473,
+      1590,
+      341
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "학적변동 구 분",
+       "depth": 0,
+       "box": [
+        26,
+        474,
+        206,
+        62
+       ],
+       "id": "col:그리드/학적변동 구 분"
+      },
+      {
+       "label": "계열/학년/학과/반/번호",
+       "depth": 0,
+       "box": [
+        232,
+        474,
+        412,
+        62
+       ],
+       "id": "col:그리드/계열/학년/학과/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        645,
+        474,
+        206,
+        62
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "주민등록번호",
+       "depth": 0,
+       "box": [
+        851,
+        474,
+        351,
+        62
+       ],
+       "id": "col:그리드/주민등록번호"
+      },
+      {
+       "label": "처리일시",
+       "depth": 0,
+       "box": [
+        1202,
+        474,
+        206,
+        62
+       ],
+       "id": "col:그리드/처리일시"
+      },
+      {
+       "label": "처리자",
+       "depth": 0,
+       "box": [
+        1408,
+        474,
+        206,
+        62
+       ],
+       "id": "col:그리드/처리자"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교정보 > 학교정보 > 학생자료개별삭제",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

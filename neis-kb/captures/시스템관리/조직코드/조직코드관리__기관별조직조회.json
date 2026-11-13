@@ -1,0 +1,565 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›조직코드›조직코드관리›기관별조직조회",
+ "name": "기관별조직조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:49:16+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "시도교육청",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:시도교육청"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관분류",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기관분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "관할조직명",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:관할조직명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조직명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:조직명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1516,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1408,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1456,
+      133,
+      144,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기관(부서)기본정보관리",
+     "variant": "plain",
+     "id": "button:기관(부서)기본정보관리"
+    },
+    {
+     "aria": "기관별조직목록",
+     "box": [
+      25,
+      143,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "기관별조직목록",
+     "id": "heading:기관별조직목록"
+    },
+    {
+     "aria": "기관별조직목록",
+     "box": [
+      25,
+      173,
+      1575,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기관별조직목록",
+     "selectable": false,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:기관별조직목록/순번"
+      },
+      {
+       "label": "조직코드",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/조직코드"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        185,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/조직명"
+      },
+      {
+       "label": "조직명약칭",
+       "depth": 0,
+       "box": [
+        294,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/조직명약칭"
+      },
+      {
+       "label": "관할조직명",
+       "depth": 0,
+       "box": [
+        402,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/관할조직명"
+      },
+      {
+       "label": "우편번호",
+       "depth": 0,
+       "box": [
+        511,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/우편번호"
+      },
+      {
+       "label": "주소",
+       "depth": 0,
+       "box": [
+        620,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/주소"
+      },
+      {
+       "label": "전화번호",
+       "depth": 0,
+       "box": [
+        729,
+        174,
+        131,
+        36
+       ],
+       "id": "col:기관별조직목록/전화번호"
+      },
+      {
+       "label": "행정표준기관명",
+       "depth": 0,
+       "box": [
+        859,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/행정표준기관명"
+      },
+      {
+       "label": "지역명",
+       "depth": 0,
+       "box": [
+        968,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/지역명"
+      },
+      {
+       "label": "인사전보구역",
+       "depth": 0,
+       "box": [
+        1077,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/인사전보구역"
+      },
+      {
+       "label": "인사급지구분",
+       "depth": 0,
+       "box": [
+        1186,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/인사급지구분"
+      },
+      {
+       "label": "특수지등급",
+       "depth": 0,
+       "box": [
+        1294,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/특수지등급"
+      },
+      {
+       "label": "특수부서",
+       "depth": 0,
+       "box": [
+        1403,
+        174,
+        109,
+        36
+       ],
+       "id": "col:기관별조직목록/특수부서"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1512,
+        174,
+        87,
+        36
+       ],
+       "id": "col:기관별조직목록/사용여부"
+      }
+     ],
+     "id": "grid:기관별조직목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      624,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      697,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조직코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:조직코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      697,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조직명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:조직명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      697,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조직명약칭",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:조직명약칭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1331,
+      697,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "관할조직명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:관할조직명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      737,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "우편번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:우편번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      737,
+      326,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:주소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1331,
+      737,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1410,
+      737,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전화번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      777,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "행정표준기관코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:행정표준기관코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      777,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "지역코드",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:지역코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      777,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "인사전보구역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:인사전보구역"
+    },
+    {
+     "aria": null,
+     "box": [
+      1331,
+      777,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "인사급지구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:인사급지구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      817,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "특수지등급",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:특수지등급"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      817,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "특수부서",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:특수부서"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}조직코드 > 조직코드관리 > 기관별조직조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,634 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›평가결과조회›종목별조회",
+ "name": "종목별조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:12:47+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      420,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      665,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      915,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": null,
+     "box": [
+      45,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": true,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      265,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "심폐지구력",
+     "checked": true,
+     "id": "check:심폐지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      371,
+      122,
+      82,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "유연성",
+     "checked": true,
+     "id": "check:유연성"
+    },
+    {
+     "aria": null,
+     "box": [
+      459,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "근력·근지구력",
+     "checked": true,
+     "id": "check:근력·근지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      584,
+      122,
+      82,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "순발력",
+     "checked": true,
+     "id": "check:순발력"
+    },
+    {
+     "aria": null,
+     "box": [
+      672,
+      122,
+      52,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "비만",
+     "checked": true,
+     "id": "check:비만"
+    },
+    {
+     "aria": null,
+     "box": [
+      840,
+      122,
+      85,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "체지방률",
+     "checked": true,
+     "id": "check:체지방률"
+    },
+    {
+     "aria": null,
+     "box": [
+      931,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "자기신체평가",
+     "checked": true,
+     "id": "check:자기신체평가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1037,
+      122,
+      77,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "자세평가",
+     "checked": true,
+     "id": "check:자세평가"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1467,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      173,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그래프",
+     "variant": "primary",
+     "id": "button:그래프"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계",
+     "variant": "link",
+     "id": "button:통계"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      243,
+      1590,
+      570
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 31,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        244,
+        50,
+        124
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        76,
+        244,
+        100,
+        124
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "심폐지구력",
+       "depth": 0,
+       "box": [
+        176,
+        244,
+        400,
+        31
+       ],
+       "span": 5,
+       "id": "col:그리드/심폐지구력"
+      },
+      {
+       "label": "유연성",
+       "depth": 0,
+       "box": [
+        576,
+        244,
+        300,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/유연성"
+      },
+      {
+       "label": "근력ㆍ근지구력",
+       "depth": 0,
+       "box": [
+        876,
+        244,
+        400,
+        31
+       ],
+       "span": 5,
+       "id": "col:그리드/근력ㆍ근지구력"
+      },
+      {
+       "label": "순발력",
+       "depth": 0,
+       "box": [
+        1276,
+        244,
+        300,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/순발력"
+      },
+      {
+       "label": "비만",
+       "depth": 0,
+       "box": [
+        1576,
+        244,
+        250,
+        31
+       ],
+       "span": 3,
+       "id": "col:그리드/비만"
+      },
+      {
+       "label": "체지방률 (%FAT)",
+       "depth": 0,
+       "box": [
+        1826,
+        244,
+        100,
+        124
+       ],
+       "id": "col:그리드/체지방률 (%FAT)"
+      },
+      {
+       "label": "자기신체평가 (점)",
+       "depth": 0,
+       "box": [
+        1926,
+        244,
+        100,
+        124
+       ],
+       "id": "col:그리드/자기신체평가 (점)"
+      },
+      {
+       "label": "자세 평가",
+       "depth": 0,
+       "box": [
+        2026,
+        244,
+        100,
+        124
+       ],
+       "id": "col:그리드/자세 평가"
+      },
+      {
+       "label": "왕복오래 달리기 (회)",
+       "depth": 1,
+       "box": [
+        176,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/심폐지구력>왕복오래 달리기 (회)"
+      },
+      {
+       "label": "오래달리기 걷기 (분,초)",
+       "depth": 1,
+       "box": [
+        276,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/심폐지구력>오래달리기 걷기 (분,초)"
+      },
+      {
+       "label": "스텝검사 (PEI)",
+       "depth": 1,
+       "box": [
+        376,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/심폐지구력>스텝검사 (PEI)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        476,
+        275,
+        50,
+        93
+       ],
+       "id": "col:그리드/심폐지구력>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        526,
+        275,
+        50,
+        93
+       ],
+       "id": "col:그리드/심폐지구력>등급"
+      },
+      {
+       "label": "앉아윗몸 앞으로굽히기 (cm)",
+       "depth": 1,
+       "box": [
+        576,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/유연성>앉아윗몸 앞으로굽히기 (cm)"
+      },
+      {
+       "label": "종합 유연성 (점)",
+       "depth": 1,
+       "box": [
+        676,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/유연성>종합 유연성 (점)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        776,
+        275,
+        50,
+        93
+       ],
+       "id": "col:그리드/유연성>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        826,
+        275,
+        50,
+        93
+       ],
+       "id": "col:그리드/유연성>등급"
+      },
+      {
+       "label": "(무릎대고) 팔굽혀펴기 (회)",
+       "depth": 1,
+       "box": [
+        876,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/근력ㆍ근지구력>(무릎대고) 팔굽혀펴기 (회)"
+      },
+      {
+       "label": "윗몸말아 올리기 (회)",
+       "depth": 1,
+       "box": [
+        976,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/근력ㆍ근지구력>윗몸말아 올리기 (회)"
+      },
+      {
+       "label": "악력 (Kg)",
+       "depth": 1,
+       "box": [
+        1076,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/근력ㆍ근지구력>악력 (Kg)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1176,
+        275,
+        50,
+        93
+       ],
+       "id": "col:그리드/근력ㆍ근지구력>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1226,
+        275,
+        50,
+        93
+       ],
+       "id": "col:그리드/근력ㆍ근지구력>등급"
+      },
+      {
+       "label": "50m달리기 (초)",
+       "depth": 1,
+       "box": [
+        1276,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/순발력>50m달리기 (초)"
+      },
+      {
+       "label": "제자리 멀리뛰기 (cm)",
+       "depth": 1,
+       "box": [
+        1376,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/순발력>제자리 멀리뛰기 (cm)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1476,
+        275,
+        50,
+        93
+       ],
+       "id": "col:그리드/순발력>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1526,
+        275,
+        50,
+        93
+       ],
+       "id": "col:그리드/순발력>등급"
+      },
+      {
+       "label": "BMI (kg/㎡)",
+       "depth": 1,
+       "box": [
+        1576,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/비만>BMI (kg/㎡)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1676,
+        275,
+        50,
+        93
+       ],
+       "id": "col:그리드/비만>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1726,
+        275,
+        100,
+        93
+       ],
+       "id": "col:그리드/비만>등급"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 평가결과조회 > 종목별조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

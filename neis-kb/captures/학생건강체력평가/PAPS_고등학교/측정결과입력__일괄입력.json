@@ -1,0 +1,346 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›측정결과입력›일괄입력",
+ "name": "일괄입력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:10:56+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 파일양식의 첫라인은 삭제하지말고 작성해야합니다.",
+     "id": "note:※ 파일양식의 첫라인은 삭제하지말고 작성해야합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생 기본정보(학년도,계열,학년,학과,반,반코드,번호,성명)는 절대로 삭제 및 수정하지 마십시오.",
+     "id": "note:※ 학생 기본정보(학년도,계열,학년,학과,반,반코드,번호,성명)는 절대로 삭제 및 수정하지 마십시오."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 필수평가의 [스텝검사] 측정값은 선택평가의 [심폐지구력 정밀평가] 측정값을 선택 하였다면 자동 입력됩니다.",
+     "id": "note:※ 필수평가의 [스텝검사] 측정값은 선택평가의 [심폐지구력 정밀평가] 측정값을 선택 하였다면 자동 입력됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      189,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다.",
+     "id": "note:※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1120,
+      242,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수시자료정시로취합",
+     "variant": "primary",
+     "id": "button:수시자료정시로취합"
+    },
+    {
+     "aria": null,
+     "box": [
+      1252,
+      242,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료올리기",
+     "variant": "plain",
+     "id": "button:자료올리기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1360,
+      242,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "양식내려받기",
+     "variant": "plain",
+     "id": "button:양식내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      242,
+      136,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생명렬내려받기",
+     "variant": "plain",
+     "id": "button:학생명렬내려받기"
+    },
+    {
+     "aria": "일괄입력 목록",
+     "box": [
+      25,
+      282,
+      1590,
+      175
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "일괄입력 목록",
+     "selectable": false,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "필수",
+       "depth": 0,
+       "box": [
+        26,
+        283,
+        953,
+        31
+       ],
+       "span": 6,
+       "id": "col:일괄입력 목록/필수"
+      },
+      {
+       "label": "선택",
+       "depth": 0,
+       "box": [
+        979,
+        283,
+        635,
+        31
+       ],
+       "span": 4,
+       "id": "col:일괄입력 목록/선택"
+      },
+      {
+       "label": "종합",
+       "depth": 1,
+       "box": [
+        26,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/필수>종합"
+      },
+      {
+       "label": "심폐지구력",
+       "depth": 1,
+       "box": [
+        185,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/필수>심폐지구력"
+      },
+      {
+       "label": "유연성",
+       "depth": 1,
+       "box": [
+        344,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/필수>유연성"
+      },
+      {
+       "label": "근력·근지구력",
+       "depth": 1,
+       "box": [
+        502,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/필수>근력·근지구력"
+      },
+      {
+       "label": "순발력",
+       "depth": 1,
+       "box": [
+        661,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/필수>순발력"
+      },
+      {
+       "label": "비만",
+       "depth": 1,
+       "box": [
+        820,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/필수>비만"
+      },
+      {
+       "label": "심폐지구력 정밀평가",
+       "depth": 1,
+       "box": [
+        979,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/선택>심폐지구력 정밀평가"
+      },
+      {
+       "label": "체지방률 평가",
+       "depth": 1,
+       "box": [
+        1138,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/선택>체지방률 평가"
+      },
+      {
+       "label": "자세평가",
+       "depth": 1,
+       "box": [
+        1296,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/선택>자세평가"
+      },
+      {
+       "label": "자기신체 평가",
+       "depth": 1,
+       "box": [
+        1455,
+        314,
+        159,
+        62
+       ],
+       "id": "col:일괄입력 목록/선택>자기신체 평가"
+      }
+     ],
+     "id": "grid:일괄입력 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 측정결과입력 > 일괄입력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

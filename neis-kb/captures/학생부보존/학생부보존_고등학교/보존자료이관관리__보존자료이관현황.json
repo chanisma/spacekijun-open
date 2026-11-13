@@ -1,0 +1,187 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생부보존›학생부보존#고등학교›보존자료이관관리›보존자료이관현황",
+ "name": "보존자료이관현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:22:08+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "보존자료",
+     "box": [
+      25,
+      143,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "보존자료",
+     "id": "heading:보존자료"
+    },
+    {
+     "aria": "보존자료이관현황그리드",
+     "box": [
+      25,
+      173,
+      1590,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "보존자료이관현황그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:보존자료이관현황그리드/순번"
+      },
+      {
+       "label": "졸업학년도",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        149,
+        36
+       ],
+       "id": "col:보존자료이관현황그리드/졸업학년도"
+      },
+      {
+       "label": "목록명",
+       "depth": 0,
+       "box": [
+        225,
+        174,
+        597,
+        36
+       ],
+       "id": "col:보존자료이관현황그리드/목록명"
+      },
+      {
+       "label": "학생부건수",
+       "depth": 0,
+       "box": [
+        823,
+        174,
+        149,
+        36
+       ],
+       "id": "col:보존자료이관현황그리드/학생부건수"
+      },
+      {
+       "label": "정정대장건수",
+       "depth": 0,
+       "box": [
+        972,
+        174,
+        149,
+        36
+       ],
+       "id": "col:보존자료이관현황그리드/정정대장건수"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1121,
+        174,
+        194,
+        36
+       ],
+       "id": "col:보존자료이관현황그리드/결재상태"
+      },
+      {
+       "label": "이관상태",
+       "depth": 0,
+       "box": [
+        1315,
+        174,
+        149,
+        36
+       ],
+       "id": "col:보존자료이관현황그리드/이관상태"
+      },
+      {
+       "label": "이관처리자",
+       "depth": 0,
+       "box": [
+        1465,
+        174,
+        149,
+        36
+       ],
+       "id": "col:보존자료이관현황그리드/이관처리자"
+      }
+     ],
+     "id": "grid:보존자료이관현황그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부보존 > 보존자료이관관리 > 보존자료이관현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

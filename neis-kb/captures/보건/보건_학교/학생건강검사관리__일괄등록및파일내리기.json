@@ -1,0 +1,301 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›학생건강검사관리›일괄등록및파일내리기",
+ "name": "일괄등록및파일내리기",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:19:41+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": true
+   }
+  },
+  {
+   "id": "main+조회",
+   "after": "query",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "건강검사항목",
+     "box": [
+      150,
+      139,
+      1460,
+      150
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "건강검사항목",
+     "options": [
+      "종합(신체발달,",
+      "건강검진,",
+      "구강검진)",
+      "신체발달",
+      "건강검진",
+      "구강검진",
+      "건강조사"
+     ],
+     "id": "radio:건강검사항목"
+    },
+    {
+     "aria": "파일내리기버튼",
+     "box": [
+      150,
+      299,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "내리기",
+     "variant": "primary",
+     "id": "button:내리기"
+    },
+    {
+     "aria": "엑셀업로드",
+     "box": [
+      1388,
+      339,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "찾아보기",
+     "variant": "link",
+     "id": "button:찾아보기"
+    },
+    {
+     "aria": "올리기",
+     "box": [
+      1468,
+      339,
+      62,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "올리기",
+     "variant": "link",
+     "id": "button:올리기"
+    },
+    {
+     "aria": "코드목록내려받기",
+     "box": [
+      1536,
+      339,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "코드목록",
+     "variant": "link",
+     "id": "button:코드목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      385,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 코드목록 파일은 보고양식이 아닌 코드안내파일입니다. 병원에 양식을 제공할 경우에는 내리기 기능을 이용하여 사용하시기 바랍니다.",
+     "id": "note:※ 코드목록 파일은 보고양식이 아닌 코드안내파일입니다. 병원에 양식을 제공할 경우에는 내리기 기능을 이용하여 사용하시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      404,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 파일양식의 첫라인은 삭제하지말고 작성해야합니다.",
+     "id": "note:※ 파일양식의 첫라인은 삭제하지말고 작성해야합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      422,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ \"흉부X선검사\"는 중학교 1학년 및 고등학교 1학년 학생에 한하여 실시합니다.",
+     "id": "note:※ \"흉부X선검사\"는 중학교 1학년 및 고등학교 1학년 학생에 한하여 실시합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      441,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 시력검사 결과 0.0이하의 시력은 0.0으로 일괄 기입",
+     "id": "note:※ 시력검사 결과 0.0이하의 시력은 0.0으로 일괄 기입"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      459,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※\"요단백\",\"요잠혈\" 입력이 올바르게 되지 않을 경우는 아래 제시된 값을 복사하여 입력하시기 바랍니다. (음성, 약양성(+-),양성(+1),양성(+2),양성(+3),양성(+4))",
+     "id": "note:※\"요단백\",\"요잠혈\" 입력이 올바르게 되지 않을 경우는 아래 제시된 값을 복사하여 입력하시기 바랍니다. (음성, 약양성(+-),양성(+1),양성(+2),양성(+3),양성(+4))"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      496,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 건강조사는 코드값이 아닌 코드로 입력 하셔야 합니다.",
+     "id": "note:※ 건강조사는 코드값이 아닌 코드로 입력 하셔야 합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      515,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 다이어트 항목은 해당란에 다이어트 코드중 해당칸의 코드값을 넣으셔야 합니다. (다이어트1-1 입력, 다이어트2-2 입력, 다이어트3-3 입력, 다이어트4-4 입력)",
+     "id": "note:※ 다이어트 항목은 해당란에 다이어트 코드중 해당칸의 코드값을 넣으셔야 합니다. (다이어트1-1 입력, 다이어트2-2 입력, 다이어트3-3 입력, 다이어트4-4 입력)"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 학생건강검사관리 > 일괄등록및파일내리기",
+ "viewport": [
+  1920,
+  945
+ ]
+}

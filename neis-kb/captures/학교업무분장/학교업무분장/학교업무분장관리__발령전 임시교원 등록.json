@@ -1,0 +1,273 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교업무분장›학교업무분장›학교업무분장관리›발령전 임시교원 등록",
+ "name": "발령전 임시교원 등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:57:33+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사용자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      385,
+      82,
+      97,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "임시교사제외",
+     "checked": false,
+     "id": "check:임시교사제외"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 임시교원 등록 : (내정된)신규교사나 타시도 전입교사일 경우 ※ 사용자가져오기 : 동일시도 내 (원소속이) 타학교인 선생님일 경우",
+     "id": "note:※ 임시교원 등록 : (내정된)신규교사나 타시도 전입교사일 경우 ※ 사용자가져오기 : 동일시도 내 (원소속이) 타학교인 선생님일 경우"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1150,
+      205,
+      158,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "사용자가져오기",
+     "box": [
+      1324,
+      205,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "사용자가져오기",
+     "variant": "primary",
+     "id": "button:사용자가져오기"
+    },
+    {
+     "aria": "임시교원등록",
+     "box": [
+      1431,
+      205,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "임시교원등록",
+     "variant": "primary",
+     "id": "button:임시교원등록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "등록현황",
+     "box": [
+      25,
+      215,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "등록현황",
+     "id": "heading:등록현황"
+    },
+    {
+     "aria": "등록현황",
+     "box": [
+      25,
+      245,
+      1590,
+      568
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "등록현황",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "권한조직",
+       "depth": 0,
+       "box": [
+        76,
+        246,
+        259,
+        36
+       ],
+       "id": "col:등록현황/권한조직"
+      },
+      {
+       "label": "사용자고유번호",
+       "depth": 0,
+       "box": [
+        335,
+        246,
+        190,
+        36
+       ],
+       "id": "col:등록현황/사용자고유번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        525,
+        246,
+        190,
+        36
+       ],
+       "id": "col:등록현황/성명"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        715,
+        246,
+        173,
+        36
+       ],
+       "id": "col:등록현황/사용자ID"
+      },
+      {
+       "label": "소속",
+       "depth": 0,
+       "box": [
+        888,
+        246,
+        259,
+        36
+       ],
+       "id": "col:등록현황/소속"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        1147,
+        246,
+        173,
+        36
+       ],
+       "id": "col:등록현황/구분"
+      },
+      {
+       "label": "등록일",
+       "depth": 0,
+       "box": [
+        1320,
+        246,
+        190,
+        36
+       ],
+       "id": "col:등록현황/등록일"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1510,
+        246,
+        104,
+        36
+       ],
+       "id": "col:등록현황/사용여부"
+      }
+     ],
+     "id": "grid:등록현황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교업무분장 > 학교업무분장관리 > 발령전 임시교원 등록",
+ "alsoVia": [
+  "업무분장설정업무"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

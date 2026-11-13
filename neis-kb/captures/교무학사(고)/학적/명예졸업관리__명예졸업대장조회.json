@@ -1,0 +1,469 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›명예졸업관리›명예졸업대장조회",
+ "name": "명예졸업대장조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:20:53+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "정렬순",
+     "box": [
+      675,
+      82,
+      228,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "정렬순",
+     "options": [
+      "졸업번호순",
+      "학년반번호순"
+     ],
+     "id": "radio:정렬순"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      74
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 졸업/수료생학적반영 메뉴에서 졸업생 학적반영이 완료되어야 명예졸업대장이 조회됩니다. ※ 졸업생학생부가 있는 학생의 경우는 [졸업생학생부정정대장작성]에서 정정대장을 작성해 주시기 바랍니다. 정정대장 작성 후 자료반영시 명예졸업대장 자료까지 수정됩니다. ※ 명예졸업대장의 경우 당해학년도 졸업처리가 완료된 이후 조회가 됩니다.",
+     "id": "note:※ 졸업/수료생학적반영 메뉴에서 졸업생 학적반영이 완료되어야 명예졸업대장이 조회됩니다. ※ 졸업생학생부가 있는 학생의 경우는 [졸업생학생부정정대장작성]에서 정정대장을 작성해 주시기 바랍니다. 정정대장 작성 후 자료반영시 명예졸업대장 자료까지 수정됩니다. ※ 명예졸업대장의 경우 당해학년도 졸업처리가 완료된 이후 조회가 됩니다."
+    },
+    {
+     "aria": "졸업현황조회",
+     "box": [
+      1384,
+      227,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "졸업현황조회",
+     "variant": "primary",
+     "id": "button:졸업현황조회"
+    },
+    {
+     "aria": "오류자료조회",
+     "box": [
+      1479,
+      227,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "오류자료조회",
+     "variant": "primary",
+     "id": "button:오류자료조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      227,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "명예졸업대장목록",
+     "box": [
+      25,
+      267,
+      1590,
+      371
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "명예졸업대장목록",
+     "selectable": false,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        268,
+        50,
+        62
+       ],
+       "id": "col:명예졸업대장목록/순번"
+      },
+      {
+       "label": "명예졸업대장번호",
+       "depth": 0,
+       "box": [
+        76,
+        268,
+        183,
+        62
+       ],
+       "id": "col:명예졸업대장목록/명예졸업대장번호"
+      },
+      {
+       "label": "졸업회차",
+       "depth": 0,
+       "box": [
+        259,
+        268,
+        146,
+        62
+       ],
+       "id": "col:명예졸업대장목록/졸업회차"
+      },
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        406,
+        268,
+        110,
+        62
+       ],
+       "id": "col:명예졸업대장목록/과정"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        515,
+        268,
+        183,
+        62
+       ],
+       "id": "col:명예졸업대장목록/학과"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        699,
+        268,
+        92,
+        62
+       ],
+       "id": "col:명예졸업대장목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        790,
+        268,
+        92,
+        62
+       ],
+       "id": "col:명예졸업대장목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        882,
+        268,
+        92,
+        62
+       ],
+       "id": "col:명예졸업대장목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        973,
+        268,
+        183,
+        62
+       ],
+       "id": "col:명예졸업대장목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        1156,
+        268,
+        92,
+        62
+       ],
+       "id": "col:명예졸업대장목록/성별"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        1248,
+        268,
+        183,
+        62
+       ],
+       "id": "col:명예졸업대장목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "졸업일자",
+       "depth": 0,
+       "box": [
+        1431,
+        268,
+        183,
+        62
+       ],
+       "id": "col:명예졸업대장목록/졸업일자"
+      }
+     ],
+     "id": "grid:명예졸업대장목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      654,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:졸업학년도#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      654,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "과정",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      654,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업회차",
+     "control": "number",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:졸업회차"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      694,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:졸업일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      694,
+      193,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "명예졸업대장번호",
+     "control": "mask",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:명예졸업대장번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      694,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학과명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학과명"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      734,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      734,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "생년월일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:생년월일"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      734,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "mask",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:주민등록번호 (외국인등록번호)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1328,
+      734,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "mask",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:주민등록번호 (외국인등록번호)#2"
+    },
+    {
+     "aria": "성별",
+     "box": [
+      150,
+      774,
+      350,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "성별",
+     "options": [
+      "남성",
+      "여성"
+     ],
+     "id": "radio:성별"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 명예졸업관리 > 명예졸업대장조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

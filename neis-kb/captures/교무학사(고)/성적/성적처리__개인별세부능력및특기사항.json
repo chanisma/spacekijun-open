@@ -1,0 +1,940 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적처리›개인별세부능력및특기사항",
+ "name": "개인별세부능력및특기사항",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:19:53+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:보통교과및전문교과",
+   "tab": "보통교과및전문교과",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      765,
+      82,
+      89,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "영재 미표시",
+     "checked": true,
+     "id": "check:영재 미표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 개인별 세부능력 및 특기사항은 과목단위로 입력할 수 없는 내용을 학생부 교과학습발달상황의 각 항목에 직접 등록하는 기능입니다.",
+     "id": "note:※ 개인별 세부능력 및 특기사항은 과목단위로 입력할 수 없는 내용을 학생부 교과학습발달상황의 각 항목에 직접 등록하는 기능입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 입력/수정/삭제한 내용은 결제 및 학생부 반영된 후 분석을 통해 유의어 통계에 반영이 됩니다.",
+     "id": "note:※ 입력/수정/삭제한 내용은 결제 및 학생부 반영된 후 분석을 통해 유의어 통계에 반영이 됩니다."
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      224,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "보통교과및전문교과",
+      "체육·예술/과학탐구실험",
+      "교양교과"
+     ],
+     "active": "보통교과및전문교과",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "그리드 확대",
+     "box": [
+      1228,
+      279,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "그리드 확대",
+     "variant": "plain",
+     "id": "button:그리드 확대"
+    },
+    {
+     "aria": "그리드 축소",
+     "box": [
+      1266,
+      279,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "그리드 축소",
+     "variant": "plain",
+     "id": "button:그리드 축소"
+    },
+    {
+     "aria": "문자열바꾸기",
+     "box": [
+      1312,
+      279,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "문자열바꾸기",
+     "variant": "link",
+     "id": "button:문자열바꾸기"
+    },
+    {
+     "aria": "일괄복사",
+     "box": [
+      1407,
+      279,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄복사",
+     "variant": "link",
+     "id": "button:일괄복사"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      319,
+      1590,
+      495
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        320,
+        118,
+        62
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        194,
+        320,
+        237,
+        62
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "학적변동구분",
+       "depth": 0,
+       "box": [
+        431,
+        320,
+        237,
+        62
+       ],
+       "id": "col:그리드/학적변동구분"
+      },
+      {
+       "label": "입력가능글자 (Byte)",
+       "depth": 0,
+       "box": [
+        668,
+        320,
+        237,
+        62
+       ],
+       "id": "col:그리드/입력가능글자 (Byte)"
+      },
+      {
+       "label": "세부능력 및 특기사항",
+       "depth": 0,
+       "box": [
+        904,
+        320,
+        710,
+        62
+       ],
+       "id": "col:그리드/세부능력 및 특기사항"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:체육·예술/과학탐구실험",
+   "tab": "체육·예술/과학탐구실험",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      765,
+      82,
+      89,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "영재 미표시",
+     "checked": true,
+     "id": "check:영재 미표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 개인별 세부능력 및 특기사항은 과목단위로 입력할 수 없는 내용을 학생부 교과학습발달상황의 각 항목에 직접 등록하는 기능입니다.",
+     "id": "note:※ 개인별 세부능력 및 특기사항은 과목단위로 입력할 수 없는 내용을 학생부 교과학습발달상황의 각 항목에 직접 등록하는 기능입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 입력/수정/삭제한 내용은 결제 및 학생부 반영된 후 분석을 통해 유의어 통계에 반영이 됩니다.",
+     "id": "note:※ 입력/수정/삭제한 내용은 결제 및 학생부 반영된 후 분석을 통해 유의어 통계에 반영이 됩니다."
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      224,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "보통교과및전문교과",
+      "체육·예술/과학탐구실험",
+      "교양교과"
+     ],
+     "active": "체육·예술/과학탐구실험",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "그리드 확대",
+     "box": [
+      1228,
+      279,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "그리드 확대",
+     "variant": "plain",
+     "id": "button:그리드 확대"
+    },
+    {
+     "aria": "그리드 축소",
+     "box": [
+      1266,
+      279,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "그리드 축소",
+     "variant": "plain",
+     "id": "button:그리드 축소"
+    },
+    {
+     "aria": "문자열바꾸기",
+     "box": [
+      1312,
+      279,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "문자열바꾸기",
+     "variant": "link",
+     "id": "button:문자열바꾸기"
+    },
+    {
+     "aria": "일괄복사",
+     "box": [
+      1407,
+      279,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄복사",
+     "variant": "link",
+     "id": "button:일괄복사"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      319,
+      1590,
+      495
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        320,
+        118,
+        62
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        194,
+        320,
+        237,
+        62
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "학적변동구분",
+       "depth": 0,
+       "box": [
+        431,
+        320,
+        237,
+        62
+       ],
+       "id": "col:그리드/학적변동구분"
+      },
+      {
+       "label": "입력가능글자 (Byte)",
+       "depth": 0,
+       "box": [
+        668,
+        320,
+        237,
+        62
+       ],
+       "id": "col:그리드/입력가능글자 (Byte)"
+      },
+      {
+       "label": "세부능력 및 특기사항",
+       "depth": 0,
+       "box": [
+        904,
+        320,
+        710,
+        62
+       ],
+       "id": "col:그리드/세부능력 및 특기사항"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:교양교과",
+   "tab": "교양교과",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      765,
+      82,
+      89,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "영재 미표시",
+     "checked": true,
+     "id": "check:영재 미표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 개인별 세부능력 및 특기사항은 과목단위로 입력할 수 없는 내용을 학생부 교과학습발달상황의 각 항목에 직접 등록하는 기능입니다.",
+     "id": "note:※ 개인별 세부능력 및 특기사항은 과목단위로 입력할 수 없는 내용을 학생부 교과학습발달상황의 각 항목에 직접 등록하는 기능입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 입력/수정/삭제한 내용은 결제 및 학생부 반영된 후 분석을 통해 유의어 통계에 반영이 됩니다.",
+     "id": "note:※ 입력/수정/삭제한 내용은 결제 및 학생부 반영된 후 분석을 통해 유의어 통계에 반영이 됩니다."
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      224,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "보통교과및전문교과",
+      "체육·예술/과학탐구실험",
+      "교양교과"
+     ],
+     "active": "교양교과",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "그리드 확대",
+     "box": [
+      1228,
+      279,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "그리드 확대",
+     "variant": "plain",
+     "id": "button:그리드 확대"
+    },
+    {
+     "aria": "그리드 축소",
+     "box": [
+      1266,
+      279,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "그리드 축소",
+     "variant": "plain",
+     "id": "button:그리드 축소"
+    },
+    {
+     "aria": "문자열바꾸기",
+     "box": [
+      1312,
+      279,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "문자열바꾸기",
+     "variant": "link",
+     "id": "button:문자열바꾸기"
+    },
+    {
+     "aria": "일괄복사",
+     "box": [
+      1407,
+      279,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄복사",
+     "variant": "link",
+     "id": "button:일괄복사"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      279,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      319,
+      1590,
+      495
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        320,
+        118,
+        62
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        194,
+        320,
+        237,
+        62
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "학적변동구분",
+       "depth": 0,
+       "box": [
+        431,
+        320,
+        237,
+        62
+       ],
+       "id": "col:그리드/학적변동구분"
+      },
+      {
+       "label": "입력가능글자 (Byte)",
+       "depth": 0,
+       "box": [
+        668,
+        320,
+        237,
+        62
+       ],
+       "id": "col:그리드/입력가능글자 (Byte)"
+      },
+      {
+       "label": "세부능력 및 특기사항",
+       "depth": 0,
+       "box": [
+        904,
+        320,
+        710,
+        62
+       ],
+       "id": "col:그리드/세부능력 및 특기사항"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적처리 > 개인별세부능력및특기사항",
+ "viewport": [
+  1920,
+  945
+ ]
+}

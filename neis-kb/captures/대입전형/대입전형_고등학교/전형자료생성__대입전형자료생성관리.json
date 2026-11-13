@@ -1,0 +1,1658 @@
+{
+ "schema": "neis-capture/1",
+ "key": "대입전형›대입전형#고등학교›전형자료생성›대입전형자료생성관리",
+ "name": "대입전형자료생성관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:44:15+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:대입전형자료 사전작업",
+   "tab": "대입전형자료 사전작업",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "대입전형자료사전작업",
+     "box": [
+      25,
+      71,
+      946,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대입전형자료 사전작업",
+      "대입전형자료생성",
+      "대입전형자료검증",
+      "대입전형자료 암호화",
+      "대입전형자료 업무마감",
+      "검증결과조회"
+     ],
+     "active": "대입전형자료 사전작업",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      152,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      152,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전형자료 사전작업기간 : 2026.08.24. 08시(부터) ~ 2026.09.04. 14시(까지)",
+     "id": "note:※ 전형자료 사전작업기간 : 2026.08.24. 08시(부터) ~ 2026.09.04. 14시(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      232,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료생성관리기간(생성/검증/암호화/업무마감) : (재학생)2026.09.01. 08시(부터) ~ 2026.09.04. 14시(까지), (졸업생)2026.08.24. 08시(부터) ~ 2026.09.04. 14시(까지)",
+     "id": "note:※ 대입전형자료생성관리기간(생성/검증/암호화/업무마감) : (재학생)2026.09.01. 08시(부터) ~ 2026.09.04. 14시(까지), (졸업생)2026.08.24. 08시(부터) ~ 2026.09.04. 14시(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      250,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 재생성요청기간 : 2026.09.04. 14시(부터) ~ 2026.09.07. 18시(까지)",
+     "id": "note:※ 재생성요청기간 : 2026.09.04. 14시(부터) ~ 2026.09.07. 18시(까지)"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      316,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "온라인제공관리",
+     "box": [
+      25,
+      326,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "온라인제공관리",
+     "id": "heading:온라인제공관리"
+    },
+    {
+     "aria": "온라인제공관리",
+     "box": [
+      25,
+      356,
+      1590,
+      252
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "온라인제공관리",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "지원자구분",
+       "depth": 0,
+       "box": [
+        26,
+        357,
+        433,
+        62
+       ],
+       "span": 2,
+       "id": "col:온라인제공관리/지원자구분"
+      },
+      {
+       "label": "재학생",
+       "depth": 0,
+       "box": [
+        459,
+        357,
+        289,
+        62
+       ],
+       "id": "col:온라인제공관리/재학생"
+      },
+      {
+       "label": "2025학년도 졸업생",
+       "depth": 0,
+       "box": [
+        748,
+        357,
+        289,
+        62
+       ],
+       "id": "col:온라인제공관리/2025학년도 졸업생"
+      },
+      {
+       "label": "2024학년도 졸업생",
+       "depth": 0,
+       "box": [
+        1037,
+        357,
+        289,
+        62
+       ],
+       "id": "col:온라인제공관리/2024학년도 졸업생"
+      },
+      {
+       "label": "2023학년도 졸업생",
+       "depth": 0,
+       "box": [
+        1325,
+        357,
+        289,
+        62
+       ],
+       "id": "col:온라인제공관리/2023학년도 졸업생"
+      },
+      {
+       "label": "온라인제공",
+       "depth": 1,
+       "box": [
+        26,
+        419,
+        144,
+        36
+       ],
+       "id": "col:온라인제공관리/지원자구분>온라인제공"
+      },
+      {
+       "label": "미제공",
+       "depth": 1,
+       "box": [
+        170,
+        419,
+        289,
+        36
+       ],
+       "id": "col:온라인제공관리/지원자구분>미제공"
+      },
+      {
+       "label": "제공",
+       "depth": 1,
+       "box": [
+        459,
+        419,
+        289,
+        36
+       ],
+       "id": "col:온라인제공관리/재학생>제공"
+      },
+      {
+       "label": "제공",
+       "depth": 1,
+       "box": [
+        748,
+        419,
+        289,
+        36
+       ],
+       "id": "col:온라인제공관리/2025학년도 졸업생>제공"
+      },
+      {
+       "label": "제공",
+       "depth": 1,
+       "box": [
+        1037,
+        419,
+        289,
+        36
+       ],
+       "id": "col:온라인제공관리/2024학년도 졸업생>제공"
+      },
+      {
+       "label": "제공",
+       "depth": 1,
+       "box": [
+        1325,
+        419,
+        289,
+        36
+       ],
+       "id": "col:온라인제공관리/2023학년도 졸업생>제공"
+      }
+     ],
+     "id": "grid:온라인제공관리"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      628,
+      450,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "담당자정보등록",
+     "id": "heading:담당자정보등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      664,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "시도교육청",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:시도교육청"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      664,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학교코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      664,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학교명"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      704,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당자성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:담당자성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      704,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교전화번호",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      704,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "고등학교구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고등학교구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      744,
+      1334,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교주소",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교주소"
+    },
+    {
+     "aria": "기본주소가져오기",
+     "box": [
+      1490,
+      744,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "기본주소가져오기",
+     "variant": "link",
+     "id": "button:기본주소가져오기"
+    }
+   ]
+  },
+  {
+   "id": "tab:대입전형자료생성",
+   "tab": "대입전형자료생성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "대입전형자료사전작업",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대입전형자료 사전작업",
+      "대입전형자료생성",
+      "대입전형자료검증",
+      "대입전형자료 암호화",
+      "대입전형자료 업무마감",
+      "검증결과조회",
+      "자료생성"
+     ],
+     "active": "대입전형자료생성",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      152,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1521,
+      152,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "대입전형자료대상자조회",
+     "box": [
+      977,
+      213,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "대입전형자료대상자조회",
+     "variant": "link",
+     "id": "button:대입전형자료대상자조회"
+    },
+    {
+     "aria": "오류내역조회",
+     "box": [
+      1132,
+      213,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "오류내역조회",
+     "variant": "link",
+     "id": "button:오류내역조회"
+    },
+    {
+     "aria": "조기졸업예정자관리",
+     "box": [
+      1228,
+      213,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조기졸업예정자관리",
+     "variant": "link",
+     "id": "button:조기졸업예정자관리"
+    },
+    {
+     "aria": "미제공자관리",
+     "box": [
+      1360,
+      213,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "미제공자관리",
+     "variant": "link",
+     "id": "button:미제공자관리"
+    },
+    {
+     "aria": "진행상태조회",
+     "box": [
+      1455,
+      213,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "진행상태조회",
+     "variant": "link",
+     "id": "button:진행상태조회"
+    },
+    {
+     "aria": "대입전형자료생성",
+     "box": [
+      25,
+      223,
+      129,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대입전형자료생성",
+     "id": "heading:대입전형자료생성"
+    },
+    {
+     "aria": "온라인제공관리",
+     "box": [
+      25,
+      253,
+      1590,
+      444
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "온라인제공관리",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "지원자구분",
+       "depth": 0,
+       "box": [
+        26,
+        254,
+        366,
+        62
+       ],
+       "span": 2,
+       "id": "col:온라인제공관리/지원자구분"
+      },
+      {
+       "label": "재학생",
+       "depth": 0,
+       "box": [
+        392,
+        254,
+        306,
+        62
+       ],
+       "id": "col:온라인제공관리/재학생"
+      },
+      {
+       "label": "2025학년도 졸업생",
+       "depth": 0,
+       "box": [
+        697,
+        254,
+        306,
+        62
+       ],
+       "id": "col:온라인제공관리/2025학년도 졸업생"
+      },
+      {
+       "label": "2024학년도 졸업생",
+       "depth": 0,
+       "box": [
+        1003,
+        254,
+        306,
+        62
+       ],
+       "id": "col:온라인제공관리/2024학년도 졸업생"
+      },
+      {
+       "label": "2023학년도 졸업생",
+       "depth": 0,
+       "box": [
+        1308,
+        254,
+        306,
+        62
+       ],
+       "id": "col:온라인제공관리/2023학년도 졸업생"
+      },
+      {
+       "label": "자료생성 대상선택",
+       "depth": 1,
+       "box": [
+        26,
+        316,
+        60,
+        48
+       ],
+       "id": "col:온라인제공관리/지원자구분>자료생성 대상선택"
+      }
+     ],
+     "id": "grid:온라인제공관리"
+    }
+   ]
+  },
+  {
+   "id": "tab:대입전형자료검증",
+   "tab": "대입전형자료검증",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "대입전형자료사전작업",
+     "box": [
+      25,
+      71,
+      1575,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대입전형자료 사전작업",
+      "대입전형자료생성",
+      "대입전형자료검증",
+      "대입전형자료 암호화",
+      "대입전형자료 업무마감",
+      "검증결과조회",
+      "자료검증"
+     ],
+     "active": "대입전형자료검증",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      152,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1516,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 검증상태",
+     "id": "note:※ 검증상태"
+    },
+    {
+     "aria": "진행상태조회",
+     "box": [
+      1440,
+      334,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "진행상태조회",
+     "variant": "link",
+     "id": "button:진행상태조회"
+    },
+    {
+     "aria": "대입전형자료검증",
+     "box": [
+      25,
+      344,
+      129,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대입전형자료검증",
+     "id": "heading:대입전형자료검증"
+    },
+    {
+     "aria": "온라인제공관리",
+     "box": [
+      25,
+      374,
+      1575,
+      583
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "온라인제공관리",
+     "selectable": true,
+     "declaredColumns": 18,
+     "columns": [
+      {
+       "label": "지원자구분",
+       "depth": 0,
+       "box": [
+        86,
+        375,
+        326,
+        62
+       ],
+       "id": "col:온라인제공관리/지원자구분"
+      },
+      {
+       "label": "재학생",
+       "depth": 0,
+       "box": [
+        412,
+        375,
+        297,
+        62
+       ],
+       "id": "col:온라인제공관리/재학생"
+      },
+      {
+       "label": "2025학년도 졸업생",
+       "depth": 0,
+       "box": [
+        709,
+        375,
+        297,
+        62
+       ],
+       "id": "col:온라인제공관리/2025학년도 졸업생"
+      },
+      {
+       "label": "2024학년도 졸업생",
+       "depth": 0,
+       "box": [
+        1006,
+        375,
+        297,
+        62
+       ],
+       "id": "col:온라인제공관리/2024학년도 졸업생"
+      },
+      {
+       "label": "2023학년도 졸업생",
+       "depth": 0,
+       "box": [
+        1302,
+        375,
+        297,
+        62
+       ],
+       "id": "col:온라인제공관리/2023학년도 졸업생"
+      },
+      {
+       "label": "자료검증 대상선택",
+       "depth": 1,
+       "box": [
+        26,
+        437,
+        60,
+        48
+       ],
+       "id": "col:온라인제공관리/자료검증 대상선택"
+      },
+      {
+       "label": "검증항목",
+       "depth": 2,
+       "box": [
+        86,
+        485,
+        326,
+        31
+       ],
+       "id": "col:온라인제공관리/지원자구분>검증항목"
+      },
+      {
+       "label": "검증상태",
+       "depth": 2,
+       "box": [
+        412,
+        485,
+        297,
+        31
+       ],
+       "id": "col:온라인제공관리/재학생>검증상태"
+      },
+      {
+       "label": "검증상태",
+       "depth": 2,
+       "box": [
+        709,
+        485,
+        297,
+        31
+       ],
+       "id": "col:온라인제공관리/2025학년도 졸업생>검증상태"
+      },
+      {
+       "label": "검증상태",
+       "depth": 2,
+       "box": [
+        1006,
+        485,
+        297,
+        31
+       ],
+       "id": "col:온라인제공관리/2024학년도 졸업생>검증상태"
+      },
+      {
+       "label": "검증상태",
+       "depth": 2,
+       "box": [
+        1302,
+        485,
+        297,
+        31
+       ],
+       "id": "col:온라인제공관리/2023학년도 졸업생>검증상태"
+      }
+     ],
+     "id": "grid:온라인제공관리"
+    }
+   ]
+  },
+  {
+   "id": "tab:대입전형자료 암호화",
+   "tab": "대입전형자료 암호화",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "대입전형자료사전작업",
+     "box": [
+      25,
+      71,
+      1575,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대입전형자료 사전작업",
+      "대입전형자료생성",
+      "대입전형자료검증",
+      "대입전형자료 암호화",
+      "대입전형자료 업무마감",
+      "검증결과조회",
+      "자료암호화"
+     ],
+     "active": "대입전형자료 암호화",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      152,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1516,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "진행상태조회",
+     "box": [
+      1418,
+      213,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "진행상태조회",
+     "variant": "link",
+     "id": "button:진행상태조회"
+    },
+    {
+     "aria": "대입전형자료암호화",
+     "box": [
+      25,
+      223,
+      145,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대입전형자료암호화",
+     "id": "heading:대입전형자료암호화"
+    },
+    {
+     "aria": "대입전형자료암호화",
+     "box": [
+      25,
+      253,
+      1575,
+      588
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "대입전형자료암호화",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "지원자구분",
+       "depth": 0,
+       "box": [
+        26,
+        254,
+        363,
+        62
+       ],
+       "span": 2,
+       "id": "col:대입전형자료암호화/지원자구분"
+      },
+      {
+       "label": "재학생",
+       "depth": 0,
+       "box": [
+        389,
+        254,
+        303,
+        62
+       ],
+       "id": "col:대입전형자료암호화/재학생"
+      },
+      {
+       "label": "2025학년도 졸업생",
+       "depth": 0,
+       "box": [
+        691,
+        254,
+        303,
+        62
+       ],
+       "id": "col:대입전형자료암호화/2025학년도 졸업생"
+      },
+      {
+       "label": "2024학년도 졸업생",
+       "depth": 0,
+       "box": [
+        994,
+        254,
+        303,
+        62
+       ],
+       "id": "col:대입전형자료암호화/2024학년도 졸업생"
+      },
+      {
+       "label": "2023학년도 졸업생",
+       "depth": 0,
+       "box": [
+        1296,
+        254,
+        303,
+        62
+       ],
+       "id": "col:대입전형자료암호화/2023학년도 졸업생"
+      },
+      {
+       "label": "암호화 대상선택",
+       "depth": 1,
+       "box": [
+        26,
+        316,
+        60,
+        48
+       ],
+       "id": "col:대입전형자료암호화/지원자구분>암호화 대상선택"
+      }
+     ],
+     "id": "grid:대입전형자료암호화"
+    }
+   ]
+  },
+  {
+   "id": "tab:대입전형자료 업무마감",
+   "tab": "대입전형자료 업무마감",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "대입전형자료사전작업",
+     "box": [
+      25,
+      71,
+      937,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대입전형자료 사전작업",
+      "대입전형자료생성",
+      "대입전형자료검증",
+      "대입전형자료 암호화",
+      "대입전형자료 업무마감",
+      "검증결과조회"
+     ],
+     "active": "대입전형자료 업무마감",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      152,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1516,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료생성관리기간(생성/검증/암호화/업무마감) : (재학생)2026.09.01. 08시(부터) ~ 2026.09.04. 14시(까지), (졸업생)2026.08.24. 08시(부터) ~ 2026.09.04. 14시(까지)",
+     "id": "note:※ 대입전형자료생성관리기간(생성/검증/암호화/업무마감) : (재학생)2026.09.01. 08시(부터) ~ 2026.09.04. 14시(까지), (졸업생)2026.08.24. 08시(부터) ~ 2026.09.04. 14시(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      232,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 재생성요청기간 : 2026.09.04. 14시(부터) ~ 2026.09.07. 18시(까지)",
+     "id": "note:※ 재생성요청기간 : 2026.09.04. 14시(부터) ~ 2026.09.07. 18시(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      250,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료 업무마감 진행 순서",
+     "id": "note:※ 대입전형자료 업무마감 진행 순서"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      306,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료 업무마감 안내사항",
+     "id": "note:※ 대입전형자료 업무마감 안내사항"
+    },
+    {
+     "aria": "업무마감점검",
+     "box": [
+      1440,
+      464,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "업무마감점검",
+     "variant": "primary",
+     "id": "button:업무마감점검"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1536,
+      464,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "대입전형자료업무마감",
+     "box": [
+      25,
+      474,
+      161,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대입전형자료업무마감",
+     "id": "heading:대입전형자료업무마감"
+    },
+    {
+     "aria": "대입전형자료암호화",
+     "box": [
+      25,
+      504,
+      1575,
+      504
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "대입전형자료암호화",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "지원자구분",
+       "depth": 0,
+       "box": [
+        26,
+        505,
+        363,
+        62
+       ],
+       "span": 2,
+       "id": "col:대입전형자료암호화/지원자구분"
+      },
+      {
+       "label": "재학생",
+       "depth": 0,
+       "box": [
+        389,
+        505,
+        303,
+        62
+       ],
+       "id": "col:대입전형자료암호화/재학생"
+      },
+      {
+       "label": "2025학년도 졸업생",
+       "depth": 0,
+       "box": [
+        691,
+        505,
+        303,
+        62
+       ],
+       "id": "col:대입전형자료암호화/2025학년도 졸업생"
+      },
+      {
+       "label": "2024학년도 졸업생",
+       "depth": 0,
+       "box": [
+        994,
+        505,
+        303,
+        62
+       ],
+       "id": "col:대입전형자료암호화/2024학년도 졸업생"
+      },
+      {
+       "label": "2023학년도 졸업생",
+       "depth": 0,
+       "box": [
+        1296,
+        505,
+        303,
+        62
+       ],
+       "id": "col:대입전형자료암호화/2023학년도 졸업생"
+      }
+     ],
+     "id": "grid:대입전형자료암호화"
+    }
+   ]
+  },
+  {
+   "id": "tab:검증결과조회",
+   "tab": "검증결과조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "대입전형자료사전작업",
+     "box": [
+      25,
+      71,
+      946,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대입전형자료 사전작업",
+      "대입전형자료생성",
+      "대입전형자료검증",
+      "대입전형자료 암호화",
+      "대입전형자료 업무마감",
+      "검증결과조회"
+     ],
+     "active": "검증결과조회",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      152,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지원자구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:지원자구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      152,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업(예정)학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업(예정)학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "대입자료항목 그리드",
+     "box": [
+      25,
+      213,
+      280,
+      520
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "대입자료항목 그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [],
+     "id": "grid:대입자료항목 그리드"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1503,
+      213,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "검증결과(재학생)",
+     "box": [
+      320,
+      223,
+      125,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "검증결과(재학생)",
+     "id": "heading:검증결과(재학생)"
+    },
+    {
+     "aria": "검증결과조회",
+     "box": [
+      320,
+      253,
+      1295,
+      440
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "검증결과조회",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "지원자구분",
+       "depth": 0,
+       "box": [
+        321,
+        254,
+        116,
+        36
+       ],
+       "id": "col:검증결과조회/지원자구분"
+      },
+      {
+       "label": "졸업(예정)학년도",
+       "depth": 0,
+       "box": [
+        437,
+        254,
+        131,
+        36
+       ],
+       "id": "col:검증결과조회/졸업(예정)학년도"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        568,
+        254,
+        87,
+        36
+       ],
+       "id": "col:검증결과조회/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        655,
+        254,
+        87,
+        36
+       ],
+       "id": "col:검증결과조회/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        742,
+        254,
+        87,
+        36
+       ],
+       "id": "col:검증결과조회/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        829,
+        254,
+        116,
+        36
+       ],
+       "id": "col:검증결과조회/성명"
+      },
+      {
+       "label": "검증항목",
+       "depth": 0,
+       "box": [
+        946,
+        254,
+        203,
+        36
+       ],
+       "id": "col:검증결과조회/검증항목"
+      },
+      {
+       "label": "검증오류",
+       "depth": 0,
+       "box": [
+        1149,
+        254,
+        465,
+        36
+       ],
+       "id": "col:검증결과조회/검증오류"
+      }
+     ],
+     "id": "grid:검증결과조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      506,
+      706,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 대입전형 > 전형자료생성 > 대입전형자료생성관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,303 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›반편성고사/기타성적산출›반편성/기타성적산출대상학생생성",
+ "name": "반편성/기타성적산출대상학생생성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:37:37+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진급 학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:진급 학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "대상자생성",
+     "box": [
+      1216,
+      187,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "대상자생성",
+     "variant": "primary",
+     "id": "button:대상자생성"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1300,
+      187,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "엑셀업로드",
+     "box": [
+      1419,
+      187,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀업로드",
+     "variant": "plain",
+     "id": "button:엑셀업로드"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      187,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      187,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "반편성 기준",
+     "box": [
+      160,
+      225,
+      240,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "반편성 기준",
+     "options": [
+      "성명",
+      "생년월일",
+      "수험번호"
+     ],
+     "id": "radio:반편성 기준"
+    },
+    {
+     "aria": null,
+     "box": [
+      408,
+      225,
+      84,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "남녀구분",
+     "checked": false,
+     "id": "check:남녀구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      560,
+      225,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반 학생수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:반 학생수"
+    },
+    {
+     "aria": "처리",
+     "box": [
+      688,
+      225,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "처리",
+     "variant": "primary",
+     "id": "button:처리"
+    },
+    {
+     "aria": "대상학생 목록",
+     "box": [
+      25,
+      265,
+      1590,
+      549
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "대상학생 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "수험번호",
+       "depth": 0,
+       "box": [
+        76,
+        266,
+        287,
+        36
+       ],
+       "id": "col:대상학생 목록/수험번호"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        363,
+        266,
+        191,
+        36
+       ],
+       "id": "col:대상학생 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        554,
+        266,
+        191,
+        36
+       ],
+       "id": "col:대상학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        745,
+        266,
+        170,
+        36
+       ],
+       "id": "col:대상학생 목록/성명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        915,
+        266,
+        217,
+        36
+       ],
+       "id": "col:대상학생 목록/생년월일"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        1132,
+        266,
+        100,
+        36
+       ],
+       "id": "col:대상학생 목록/성별"
+      },
+      {
+       "label": "출신학교/반/번호",
+       "depth": 0,
+       "box": [
+        1232,
+        266,
+        382,
+        36
+       ],
+       "id": "col:대상학생 목록/출신학교/반/번호"
+      }
+     ],
+     "id": "grid:대상학생 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 반편성고사/기타성적산출 > 반편성/기타성적산출대상학생생성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,32 @@
+.scene { background:linear-gradient(#21182780,#130e22bb),url('/images/academy-game/library.png') center/cover; padding:64px 5% 4%; display:flex; align-items:stretch; }
+.ledger { display:grid; grid-template-columns:minmax(220px,28%) minmax(0,1fr); width:100%; min-height:0; color:#4b3529; background:#f3e7c9; border:8px solid #604738; border-radius:8px 15px 15px 8px; box-shadow:0 22px 65px #08050dcc,inset 0 0 25px #96754e40; overflow:hidden; font-family:Georgia,'Noto Serif KR',serif; }
+.index,.page { overflow:auto; overscroll-behavior:contain; scrollbar-width:none; }
+.index::-webkit-scrollbar,.page::-webkit-scrollbar { display:none; }
+.index { padding:30px 24px; background:linear-gradient(90deg,#dfcda8,#efdfbfff); border-right:1px solid #97765266; box-shadow:inset -10px 0 18px #7e5e3020; }
+.index>small { display:block; margin:12px 0; line-height:1.8; }.index h2 { margin:14px 0; font-size:25px; }.index p { margin:20px 0; line-height:1.9; font-size:14px; }.index p span { font-size:12px; color:#775a43; }
+.index label { display:grid; gap:10px; font-size:13px; }.index select { width:100%; padding:10px 4px; color:#4b3529; background:#fff7e3; border:1px solid #a18050; border-radius:3px; }.index nav { display:flex; justify-content:space-between; gap:6px; margin-top:12px; }
+.ledger button { font-size:13px; padding:8px 10px; border:1px solid #a48557; border-radius:4px; background:#f6e9c8; color:#593e2d; cursor:pointer; }.ledger button:disabled { opacity:.5; cursor:default; }.ledger button:focus-visible,.ledger select:focus-visible { outline:3px solid #967140; outline-offset:3px; }
+.index .wallet { display:flex; gap:8px; align-items:center; color:#78511b; }.preview { padding:10px; border:1px dashed #9a7345; }
+.page { padding:32px 36px; background:linear-gradient(90deg,#cab38e35,transparent 6%,#ffffff22); }.page header { border-bottom:1px solid #ae9064; padding-bottom:16px; }.page h3 { margin:8px 0 12px; font-size:24px; }
+.summary { display:flex; flex-wrap:wrap; gap:20px; padding:20px 0 10px; }.summary span { display:grid; gap:6px; font-size:12px; }.summary strong { font-size:19px; }
+.note { font-size:12px; line-height:1.8; color:#755d45; margin:10px 0; }.ledger .claim { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; background:#744448; color:#fff1d5; border-color:#4e252f; margin-top:18px; padding:13px; }
+.entries { list-style:none; padding:0; margin:25px 0 0; }.entries li { display:flex; justify-content:space-between; gap:16px; padding:18px 0; border-bottom:1px solid #a7875140; }.entries time { font-size:12px; }.entries h4 { margin:7px 0; font-size:16px; }.entries p { margin:0; font-size:13px; }
+.stamps { display:flex; flex-direction:column; align-items:flex-end; justify-content:center; gap:8px; flex-shrink:0; }.stamps span { border:1px solid #9a8264; padding:4px 10px; border-radius:3px; font-size:12px; }.stamps span[data-attended=true] { color:#42654c; border-color:#42654c; transform:rotate(-3deg); }.stamps small { font-size:11px; }
+.feedback { color:#355844; font-size:14px; line-height:1.8; }.error { color:#9a3434; }.empty { text-align:center; padding:45px 12px; line-height:2; color:#81664d; }
+@media(max-width:650px) { .scene { padding:58px 10px 12px; }.ledger { grid-template-columns:1fr; grid-template-rows:auto minmax(0,1fr); border-width:4px; }.index { padding:12px 16px; max-height:210px; border-right:0; border-bottom:1px solid #97765266; }.index>svg,.index>p:not(.preview),.index>small { display:none; }.index h2 { font-size:20px; margin:0 0 8px; }.index nav { margin-top:6px; }.page { padding:20px 16px; }.page h3 { font-size:20px; }.summary { gap:14px; }.summary strong { font-size:16px; }.entries li { gap:8px; }.entries h4 { font-size:14px; }.entries p { font-size:12px; } }
+/* UI 선명도 정리 (2026-10-03): 종이 위 글자 4.5:1 이상 · 보상이 없을 때의 단추는 «누를 수 없음»이 보이게. */
+.index p span { color:#5f4630; }
+.index nav button:disabled { opacity:1; color:#8a735e; border-style:dashed; cursor:not-allowed; }
+.ledger .claim:disabled { opacity:1; background:transparent; color:#6b4f3a; border:1px dashed #a08562; box-shadow:none; cursor:not-allowed; }
+.empty { color:#6b5240; }
+
+/* 휴대폰 가로 화면 (2026-10-03) — 왼쪽 쪽의 제목·엘리안의 한마디가 높이를 다 먹어 «기록을 펼칠 주» 고르기가 화면 아래로 밀렸다.
+   한마디는 감추고 여백을 줄여 주 고르기가 첫 화면에 보이게 한다. */
+@media (orientation: landscape) and (max-height: 520px) {
+  .index { padding: 14px 16px; }
+  .index > small { margin: 4px 0; line-height: 1.5; }
+  .index h2 { margin: 4px 0 8px; font-size: 19px; }
+  .index p { display: none; }
+  .index label { gap: 6px; }
+  .index select { padding: 6px 4px; }
+}

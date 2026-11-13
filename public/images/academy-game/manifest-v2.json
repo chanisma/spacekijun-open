@@ -1,0 +1,49 @@
+{
+  "mode": "built-in imagegen",
+  "protagonist": "리아 · 학생 플레이어",
+  "reference": "/images/world-today/academy-observers.png",
+  "assets": [
+    {
+      "key": "ria-player",
+      "prompt": "Transparent-background PNG asset. Young adult heroine Ria, female, long wavy chestnut brown hair, violet eyes, flowing plum purple and ivory fantasy academy dress, brass star brooch, leather book satchel, ankle boots, gentle curious expression. Single full body character sprite in detailed romantic fantasy Korean manhwa style, smooth clean outlines. Isolated cutout only. All pixels outside character are transparent, alpha zero. Do not render a background color, checkerboard or ground. Output PNG RGBA.",
+      "supersededPrompt": "Production 2D romance fantasy adventure game full-body character cutout. Deliver a PNG with a REAL alpha channel: all pixels outside the character must have alpha=0, actual invisible background. One figure only. No shadow, glow, scenery, colored backdrop, floor, text, border or grid. Full head and feet visible, generous empty alpha margin, portrait 1024x1536. Elegant painterly Korean romance fantasy anime, clear silhouette, 5-head-tall stylized game proportions, gentle three-quarter front view. Reference is visual style and identity guide only, never recreate its collage. The playable protagonist RIA, FEMALE, preserve the brown-haired woman's identity from reference: long chestnut hair, violet eyes, plum ribbon gold hairpin, ivory ruffle blouse, plum gold-trim waistcoat and long plum skirt, practical brown ankle boots, small book satchel. Friendly determined expression, relaxed standing pose facing slightly right.",
+      "finalGeneration": "exec-50cc329c-166e-47d1-a4de-a0f51e58a1ca.png",
+      "validation": "1024x1536 RGBA; sampled both fully transparent and solid pixels; composited in game scene."
+    },
+    {
+      "key": "luon",
+      "prompt": "Create one 1024x1536 full-body isolated game character sprite of LUON matching the SILVER-HAIRED, BLUE-EYED MALE in the FIRST reference collage EXACTLY. His original identity is a handsome young adult male with soft wavy layered SILVER WHITE hair with center-parted bangs, clear pale BLUE eyes, refined gentle face and fair skin. The second reference is only for exact full-body pose and framing: one hand politely extended toward viewer, other hand at chest, tall slim adult male, whole head and feet inside canvas. REPLACE the wrong brown-haired identity completely with the original silver-haired man's likeness. Keep the navy and antique gold high-collared academy jacket design from FIRST reference with cream shirt, ivory fitted trousers and tall dark boots. Exquisite detailed Korean romantic fantasy manhwa illustration, elegant painterly rendering matching first reference, gentle assured expression. ONE man only, NOT a collage, no woman. His face should look exactly like the silver-haired young man in first reference, not the brown-haired man. Transparent PNG RGBA, completely empty transparent alpha outside the figure, no background, no checkerboard pattern, no ground, no halo or shadow. All hair and fingertips and soles fully inside canvas with a small margin.",
+      "supersededPrompt": "Transparent-background PNG asset. Young adult male romantic fantasy academy guide Luon, handsome clean-shaven man, short dark brown hair, violet gold academy jacket, white shirt, leather boots, gentle smile. Single full body character sprite in detailed romantic fantasy Korean manhwa style, smooth clean outlines. Isolated cutout only. All pixels outside character are transparent, alpha zero. Do not render a background color, checkerboard or ground. Output PNG RGBA.",
+      "finalGeneration": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-97edadac-6b5e-46f6-bf09-2fa4eb9ee33b.png",
+      "validation": "1024x1536 RGBA; sampled both fully transparent and solid pixels; composited in game scene.",
+      "correction": "Canonical silver hair / blue eyes restored from academy-observers.png; see manifest-luon-identity.json."
+    },
+    {
+      "key": "librarian-male",
+      "prompt": "Production 2D romance fantasy adventure game full-body character cutout. Deliver a PNG with a REAL alpha channel: all pixels outside the character must have alpha=0, actual invisible background. One figure only. No shadow, glow, scenery, colored backdrop, floor, text, border or grid. Full head and feet visible, generous empty alpha margin, portrait 1024x1536. Elegant painterly Korean romance fantasy anime, clear silhouette, 5-head-tall stylized game proportions, gentle three-quarter front view. Reference is visual style and identity guide only, never recreate its collage. MALE librarian ELIAN, adult man age30, forest-teal wavy short hair, fine gold glasses, ivory shirt, deep emerald waistcoat and dark trousers, long dark-teal academic coat with gold trim, leather shoes. Holds a CLOSED book against chest. Handsome intelligent male face, calm smile. Clearly masculine male figure.",
+      "editPrompt": "Remove the background completely. Return only the character as a transparent PNG cutout. Keep the entire character unchanged.",
+      "finalGeneration": "exec-f0689d80-bf9e-42e1-907e-ac08287d2797.png",
+      "validation": "1024x1536 RGBA; sampled both fully transparent and solid pixels; composited in game scene."
+    },
+    {
+      "key": "professor",
+      "prompt": "Transparent-background PNG asset. Adult male romantic fantasy academy professor Cassian, handsome clean-shaven man, tousled black hair, scholarly long dark plum coat with brass astronomical embroidery, white shirt, black boots, thoughtful expression. Single full body character sprite in detailed romantic fantasy Korean manhwa style, smooth clean outlines. Isolated cutout only. All pixels outside character are transparent, alpha zero. Do not render a background color, checkerboard or ground. Output PNG RGBA.",
+      "supersededPrompt": "Production 2D romance fantasy adventure game full-body character cutout. Deliver a PNG with a REAL alpha channel: all pixels outside the character must have alpha=0, actual invisible background. One figure only. No shadow, glow, scenery, colored backdrop, floor, text, border or grid. Full head and feet visible, generous empty alpha margin, portrait 1024x1536. Elegant painterly Korean romance fantasy anime, clear silhouette, 5-head-tall stylized game proportions, gentle three-quarter front view. Reference is visual style and identity guide only, never recreate its collage. MALE professor CASSIAN, adult man age35, longish raven-black hair tied low, amethyst eyes, thoughtful handsome masculine face, ivory high collar, rich plum long academic coat embroidered with gold constellations, charcoal trousers, polished black boots, brass small telescope held at waist. Patient smile. Clearly male.",
+      "finalGeneration": "exec-b7eee9c8-938b-4312-a682-b39ed7ce4812.png",
+      "validation": "1024x1536 RGBA; sampled both fully transparent and solid pixels; composited in game scene."
+    },
+    {
+      "key": "postmaster",
+      "prompt": "Production 2D romance fantasy adventure game full-body character cutout. Deliver a PNG with a REAL alpha channel: all pixels outside the character must have alpha=0, actual invisible background. One figure only. No shadow, glow, scenery, colored backdrop, floor, text, border or grid. Full head and feet visible, generous empty alpha margin, portrait 1024x1536. Elegant painterly Korean romance fantasy anime, clear silhouette, 5-head-tall stylized game proportions, gentle three-quarter front view. Reference is visual style and identity guide only, never recreate its collage. MALE royal courier NOEL, young adult man, short warm auburn hair, amber eyes, jaunty navy-gold cap, burgundy short courier coat over ivory shirt, dark trousers, knee boots, leather mail satchel, sealed cream envelope in one hand. Friendly energetic masculine face. Clearly male.",
+      "validation": "1024x1536 RGBA; sampled both fully transparent and solid pixels; composited in game scene."
+    },
+    {
+      "key": "observatory",
+      "prompt": "Use reference for visual style only. Single full-bleed 1536x1024 landscape handpainted Korean romance-fantasy magical RESEARCH OBSERVATORY interior, no people or UI or text. Ivory stone, walnut, antique gold and violet dusk palette matching academy library. Giant brass telescope in LEFT midground x32%,y43% pointing to open domed night sky. Research desk at center x55%,y52%, neatly laid parchment and lenses. Professor's elegant chair at right x79%,y50%. Arched exit doorway back-left x10%,y42%. Bottom35% is broad uncluttered walkable wooden floor for character sprites. Visible large starfield through open dome at top. Beautiful warm lamps and subtle celestial motifs. Do not paint characters."
+    },
+    {
+      "key": "post",
+      "prompt": "Use reference for visual style only. Single full-bleed 1536x1024 landscape handpainted Korean romance-fantasy royal PIGEON POST OFFICE interior, no people or UI or text. Antique gold, plum, cream stone, walnut. Wall of elegant letter cubbies LEFT midground x35%,y40%; mail counter at right x75%,y53%; arched open aviary window center x56%,y30% with distant sunset sky and two tiny resting white pigeons. Writing desk at center x53%,y58%, envelopes and wax. Open arched exit door left x10%,y43%. Bottom35% uncluttered wide walkable wooden floor. Lush violet twilight warmth and magical academy atmosphere. No characters, readable labels, panels or UI."
+    }
+  ]
+}

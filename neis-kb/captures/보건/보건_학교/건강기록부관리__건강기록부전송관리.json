@@ -1,0 +1,928 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›건강기록부관리›건강기록부전송관리",
+ "name": "건강기록부전송관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:53:48+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:건강기록부전송승인",
+   "tab": "건강기록부전송승인",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭이 4개 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "건강기록부전송승인",
+      "건강기록부전송요청",
+      "건강기록부요청현황",
+      "건강기록부전송현황"
+     ],
+     "active": "건강기록부전송승인",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      126,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "사전승인",
+     "box": [
+      150,
+      172,
+      1460,
+      60
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "사전승인",
+     "options": [
+      "승인",
+      "불가"
+     ],
+     "id": "radio:사전승인"
+    }
+   ]
+  },
+  {
+   "id": "tab:건강기록부전송요청",
+   "tab": "건강기록부전송요청",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭이 4개 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "건강기록부전송승인",
+      "건강기록부전송요청",
+      "건강기록부요청현황",
+      "건강기록부전송현황"
+     ],
+     "active": "건강기록부전송요청",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "재학여부",
+     "box": [
+      135,
+      137,
+      142,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "재학여부",
+     "options": [
+      "재학",
+      "재학아님"
+     ],
+     "id": "radio:재학여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      417,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      657,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      897,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1097,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록일"
+    },
+    {
+     "aria": null,
+     "box": [
+      1232,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록일~"
+    },
+    {
+     "aria": null,
+     "box": [
+      135,
+      177,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전송상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전송상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      335,
+      177,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신교",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:출신교"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      177,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      177,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "건강기록부전송요청",
+     "box": [
+      1240,
+      238,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "건강기록부전송요청",
+     "variant": "primary",
+     "id": "button:건강기록부전송요청"
+    },
+    {
+     "aria": "이전건강기록부자료반영",
+     "box": [
+      1372,
+      238,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이전건강기록부자료반영",
+     "variant": "primary",
+     "id": "button:이전건강기록부자료반영"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1527,
+      238,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      238,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "건강기록부전송 요청목록",
+     "box": [
+      25,
+      248,
+      182,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "건강기록부전송 요청목록",
+     "id": "heading:건강기록부전송 요청목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      115,
+      286,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요청자성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요청자성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      381,
+      286,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "연락처",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:연락처"
+    },
+    {
+     "aria": null,
+     "box": [
+      166,
+      326,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "출신학교명 일괄수정",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:출신학교명 일괄수정"
+    },
+    {
+     "aria": "학교선택",
+     "box": [
+      478,
+      326,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교선택",
+     "variant": "primary",
+     "id": "button:학교선택"
+    },
+    {
+     "aria": "학교저장",
+     "box": [
+      558,
+      326,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교저장",
+     "variant": "primary",
+     "id": "button:학교저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      774,
+      326,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업학년도 일괄수정",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:졸업학년도 일괄수정"
+    },
+    {
+     "aria": "졸업학년도선택",
+     "box": [
+      980,
+      326,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택",
+     "variant": "primary",
+     "id": "button:선택"
+    },
+    {
+     "aria": "졸업학년도저장",
+     "box": [
+      1036,
+      326,
+      110,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "졸업학년도저장",
+     "variant": "primary",
+     "id": "button:졸업학년도저장"
+    },
+    {
+     "aria": "건강기록부전송요청목록",
+     "box": [
+      25,
+      376,
+      1590,
+      430
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "건강기록부전송요청목록",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "등록일",
+       "depth": 0,
+       "box": [
+        85,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/등록일"
+      },
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        202,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/과정"
+      },
+      {
+       "label": "계열",
+       "depth": 0,
+       "box": [
+        320,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/계열"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        438,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/학과"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        555,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        673,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        791,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        908,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/성명"
+      },
+      {
+       "label": "출신학교명",
+       "depth": 0,
+       "box": [
+        1026,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/출신학교명"
+      },
+      {
+       "label": "졸업",
+       "depth": 0,
+       "box": [
+        1143,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/졸업"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        1261,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/전송상태"
+      },
+      {
+       "label": "요청일시",
+       "depth": 0,
+       "box": [
+        1379,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/요청일시"
+      },
+      {
+       "label": "도착일시",
+       "depth": 0,
+       "box": [
+        1496,
+        377,
+        118,
+        36
+       ],
+       "id": "col:건강기록부전송요청목록/도착일시"
+      }
+     ],
+     "id": "grid:건강기록부전송요청목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:건강기록부요청현황",
+   "tab": "건강기록부요청현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭이 4개 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "건강기록부전송승인",
+      "건강기록부전송요청",
+      "건강기록부요청현황",
+      "건강기록부전송현황"
+     ],
+     "active": "건강기록부요청현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "재학여부",
+     "box": [
+      135,
+      137,
+      142,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "재학여부",
+     "options": [
+      "재학",
+      "재학아님"
+     ],
+     "id": "radio:재학여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      417,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      657,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      897,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1097,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록일"
+    },
+    {
+     "aria": null,
+     "box": [
+      1232,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록일~"
+    },
+    {
+     "aria": null,
+     "box": [
+      135,
+      177,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전송상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전송상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      335,
+      177,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신교",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:출신교"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      177,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      177,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ]
+  },
+  {
+   "id": "tab:건강기록부전송현황",
+   "tab": "건강기록부전송현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭이 4개 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "건강기록부전송승인",
+      "건강기록부전송요청",
+      "건강기록부요청현황",
+      "건강기록부전송현황"
+     ],
+     "active": "건강기록부전송현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "input",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      375,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요청일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:요청일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      510,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요청일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:요청일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      730,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요청교",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요청교"
+    },
+    {
+     "aria": null,
+     "box": [
+      1030,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      137,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 건강기록부관리 > 건강기록부전송관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

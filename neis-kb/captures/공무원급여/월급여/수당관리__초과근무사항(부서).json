@@ -1,0 +1,11 @@
+{
+ "schema": "neis-capture/1",
+ "key": "공무원급여›월급여›수당관리›초과근무사항(부서)",
+ "name": "초과근무사항(부서)",
+ "status": "not_found",
+ "capturedAt": "2026-10-05T06:44:54+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [],
+ "error": "메뉴 검색 결과 0건 중 경로가 맞는 것이 없습니다"
+}

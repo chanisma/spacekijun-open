@@ -1,0 +1,519 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›지급관리›교육비 수혜이력관리",
+ "name": "교육비 수혜이력관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:19:58+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대상학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대상학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "생성년월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:생성년월"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "담당업무",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:담당업무"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1521,
+      122,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      759,
+      173,
+      139,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "생성내역 자료받기",
+     "variant": "plain",
+     "id": "button:생성내역 자료받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      907,
+      173,
+      127,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수정내역 올리기",
+     "variant": "plain",
+     "id": "button:수정내역 올리기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1042,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "secondary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1090,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1146,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "마감",
+     "variant": "primary",
+     "id": "button:마감"
+    },
+    {
+     "aria": null,
+     "box": [
+      1194,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감취소",
+     "variant": "secondary",
+     "id": "button:마감취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1266,
+      173,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "에듀파인전송",
+     "variant": "primary",
+     "id": "button:에듀파인전송"
+    },
+    {
+     "aria": null,
+     "box": [
+      1361,
+      173,
+      134,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "에듀파인전송초기화",
+     "variant": "primary",
+     "id": "button:에듀파인전송초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      173,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "에듀파인전송이력",
+     "variant": "primary",
+     "id": "button:에듀파인전송이력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      510
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 20,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        66,
+        214,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        116,
+        214,
+        62,
+        36
+       ],
+       "id": "col:그리드/학년도"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        178,
+        214,
+        103,
+        36
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "학생주민등록번호",
+       "depth": 0,
+       "box": [
+        281,
+        214,
+        128,
+        36
+       ],
+       "id": "col:그리드/학생주민등록번호"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        409,
+        214,
+        103,
+        36
+       ],
+       "id": "col:그리드/계열/학년/학과"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        513,
+        214,
+        40,
+        36
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        553,
+        214,
+        41,
+        36
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        594,
+        214,
+        41,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "지원항목",
+       "depth": 0,
+       "box": [
+        635,
+        214,
+        103,
+        36
+       ],
+       "id": "col:그리드/지원항목"
+      },
+      {
+       "label": "분기구분",
+       "depth": 0,
+       "box": [
+        739,
+        214,
+        62,
+        36
+       ],
+       "id": "col:그리드/분기구분"
+      },
+      {
+       "label": "지급월",
+       "depth": 0,
+       "box": [
+        801,
+        214,
+        62,
+        36
+       ],
+       "id": "col:그리드/지급월"
+      },
+      {
+       "label": "지원금액",
+       "depth": 0,
+       "box": [
+        863,
+        214,
+        103,
+        36
+       ],
+       "id": "col:그리드/지원금액"
+      },
+      {
+       "label": "감면여부",
+       "depth": 0,
+       "box": [
+        966,
+        214,
+        103,
+        36
+       ],
+       "id": "col:그리드/감면여부"
+      },
+      {
+       "label": "지급/환수",
+       "depth": 0,
+       "box": [
+        1070,
+        214,
+        103,
+        36
+       ],
+       "id": "col:그리드/지급/환수"
+      },
+      {
+       "label": "학교마감",
+       "depth": 0,
+       "box": [
+        1173,
+        214,
+        62,
+        36
+       ],
+       "id": "col:그리드/학교마감"
+      },
+      {
+       "label": "교육청마감",
+       "depth": 0,
+       "box": [
+        1235,
+        214,
+        62,
+        36
+       ],
+       "id": "col:그리드/교육청마감"
+      },
+      {
+       "label": "에듀파인전송일",
+       "depth": 0,
+       "box": [
+        1297,
+        214,
+        103,
+        36
+       ],
+       "id": "col:그리드/에듀파인전송일"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1400,
+        214,
+        114,
+        36
+       ],
+       "id": "col:그리드/비고"
+      },
+      {
+       "label": "생성일자",
+       "depth": 0,
+       "box": [
+        1514,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/생성일자"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      733,
+      1590,
+      80
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 지원항목코드 : 입학금(01), 수업료(02), 학교운영지원비(03), 급식비(04), 방과후자유수강권(05) ※ 학생상세보기는 학적존재자만 가능합니다.",
+     "id": "note:※ 지원항목코드 : 입학금(01), 수업료(02), 학교운영지원비(03), 급식비(04), 방과후자유수강권(05) ※ 학생상세보기는 학적존재자만 가능합니다."
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 지급관리 > 교육비 수혜이력관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

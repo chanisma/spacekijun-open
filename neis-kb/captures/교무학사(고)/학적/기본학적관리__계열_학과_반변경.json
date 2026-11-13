@@ -1,0 +1,404 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›기본학적관리›계열/학과/반변경",
+ "name": "계열/학과/반변경",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:09:06+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      550,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "미반영된자료/학적반영된자료",
+     "box": [
+      680,
+      82,
+      225,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "미반영된자료/학적반영된자료",
+     "options": [
+      "미반영된자료",
+      "학적반영된자료"
+     ],
+     "id": "radio:미반영된자료/학적반영된자료"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      180,
+      87,
+      90,
+      25
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1336,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "학적반영",
+     "box": [
+      1407,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학적반영",
+     "variant": "primary",
+     "id": "button:학적반영"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "계열/학과/반변경",
+     "box": [
+      25,
+      173,
+      1590,
+      360
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "계열/학과/반변경",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "선택",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        62
+       ],
+       "id": "col:계열/학과/반변경/선택"
+      },
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        62
+       ],
+       "id": "col:계열/학과/반변경/순번"
+      },
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        248,
+        62
+       ],
+       "id": "col:계열/학과/반변경/일자"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        374,
+        174,
+        248,
+        62
+       ],
+       "id": "col:계열/학과/반변경/성명"
+      },
+      {
+       "label": "변경전",
+       "depth": 0,
+       "box": [
+        622,
+        174,
+        372,
+        31
+       ],
+       "span": 5,
+       "id": "col:계열/학과/반변경/변경전"
+      },
+      {
+       "label": "변경후",
+       "depth": 0,
+       "box": [
+        994,
+        174,
+        372,
+        31
+       ],
+       "span": 5,
+       "id": "col:계열/학과/반변경/변경후"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1366,
+        174,
+        248,
+        62
+       ],
+       "id": "col:계열/학과/반변경/결재상태"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        622,
+        205,
+        124,
+        31
+       ],
+       "id": "col:계열/학과/반변경/변경전>학년"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        746,
+        205,
+        124,
+        31
+       ],
+       "id": "col:계열/학과/반변경/변경전>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        870,
+        205,
+        124,
+        31
+       ],
+       "id": "col:계열/학과/반변경/변경전>번호"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        994,
+        205,
+        124,
+        31
+       ],
+       "id": "col:계열/학과/반변경/변경후>학년"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        1118,
+        205,
+        124,
+        31
+       ],
+       "id": "col:계열/학과/반변경/변경후>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        1242,
+        205,
+        124,
+        31
+       ],
+       "id": "col:계열/학과/반변경/변경후>번호"
+      }
+     ],
+     "id": "grid:계열/학과/반변경"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      543,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "변경 후 학적내역",
+     "id": "heading:변경 후 학적내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      579,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학적반영일",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학적반영일"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      659,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      659,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "번호",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:번호"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 기본학적관리 > 계열/학과/반변경",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

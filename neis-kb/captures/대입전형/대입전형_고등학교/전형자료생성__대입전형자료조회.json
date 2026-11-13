@@ -1,0 +1,534 @@
+{
+ "schema": "neis-capture/1",
+ "key": "대입전형›대입전형#고등학교›전형자료생성›대입전형자료조회",
+ "name": "대입전형자료조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:27:36+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:반별",
+   "tab": "반별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반별",
+      "항목별"
+     ],
+     "active": "반별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지원자구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:지원자구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업(예정)학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업(예정)학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1115,
+      137,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "선택출력",
+     "box": [
+      1479,
+      198,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택출력",
+     "variant": "primary",
+     "id": "button:선택출력"
+    },
+    {
+     "aria": "전체출력",
+     "box": [
+      1551,
+      198,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체출력",
+     "variant": "primary",
+     "id": "button:전체출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      315,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        239,
+        88,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        164,
+        239,
+        175,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      485,
+      249,
+      241,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "양면출력",
+     "checked": false,
+     "id": "check:양면출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      734,
+      249,
+      241,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "단면출력",
+     "checked": true,
+     "id": "check:단면출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1113,
+      247,
+      160,
+      32
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "편제및시간배당 포함",
+     "checked": false,
+     "id": "check:편제및시간배당 포함"
+    },
+    {
+     "aria": null,
+     "box": [
+      355,
+      317,
+      1260,
+      496
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ]
+  },
+  {
+   "id": "tab:항목별",
+   "tab": "항목별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반별",
+      "항목별"
+     ],
+     "active": "항목별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지원자구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:지원자구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업(예정)학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업(예정)학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1115,
+      137,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1275,
+      137,
+      121,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "자료없는학생제외",
+     "checked": false,
+     "id": "check:자료없는학생제외"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "대입자료항목 그리드",
+     "box": [
+      25,
+      198,
+      315,
+      615
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "대입자료항목 그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [],
+     "id": "grid:대입자료항목 그리드"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1503,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "인적사항",
+     "box": [
+      355,
+      208,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "인적사항",
+     "id": "heading:인적사항"
+    },
+    {
+     "aria": "검증결과조회",
+     "box": [
+      355,
+      238,
+      1260,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "검증결과조회",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        356,
+        239,
+        60,
+        62
+       ],
+       "id": "col:검증결과조회/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        416,
+        239,
+        100,
+        62
+       ],
+       "id": "col:검증결과조회/성명"
+      },
+      {
+       "label": "주민등록번호",
+       "depth": 0,
+       "box": [
+        516,
+        239,
+        120,
+        62
+       ],
+       "id": "col:검증결과조회/주민등록번호"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        636,
+        239,
+        60,
+        62
+       ],
+       "id": "col:검증결과조회/학년"
+      },
+      {
+       "label": "전공·과정",
+       "depth": 0,
+       "box": [
+        696,
+        239,
+        918,
+        31
+       ],
+       "span": 2,
+       "id": "col:검증결과조회/전공·과정"
+      },
+      {
+       "label": "1학기",
+       "depth": 1,
+       "box": [
+        696,
+        270,
+        459,
+        31
+       ],
+       "id": "col:검증결과조회/전공·과정>1학기"
+      },
+      {
+       "label": "2학기",
+       "depth": 1,
+       "box": [
+        1155,
+        270,
+        459,
+        31
+       ],
+       "id": "col:검증결과조회/전공·과정>2학기"
+      }
+     ],
+     "id": "grid:검증결과조회"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 대입전형 > 전형자료생성 > 대입전형자료조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

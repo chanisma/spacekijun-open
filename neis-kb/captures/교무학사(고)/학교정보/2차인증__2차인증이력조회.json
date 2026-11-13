@@ -1,0 +1,241 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학교정보›2차인증›2차인증이력조회",
+ "name": "2차인증이력조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:01:43+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "2차인증구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:2차인증구분"
+    },
+    {
+     "aria": "사용자이름 및 사용자ID 선택",
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "구분",
+     "options": [
+      "사용자이름",
+      "사용자ID"
+     ],
+     "id": "radio:구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      961,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      1106,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1521,
+      82,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1570,
+      138,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "2차인증사용이력 목록 그리드",
+     "box": [
+      30,
+      178,
+      1580,
+      590
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "2차인증사용이력 목록 그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        31,
+        179,
+        50,
+        36
+       ],
+       "id": "col:2차인증사용이력 목록 그리드/순번"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        81,
+        179,
+        201,
+        36
+       ],
+       "id": "col:2차인증사용이력 목록 그리드/성명"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        282,
+        179,
+        221,
+        36
+       ],
+       "id": "col:2차인증사용이력 목록 그리드/사용자ID"
+      },
+      {
+       "label": "2차인증구분",
+       "depth": 0,
+       "box": [
+        503,
+        179,
+        181,
+        36
+       ],
+       "id": "col:2차인증사용이력 목록 그리드/2차인증구분"
+      },
+      {
+       "label": "인증정보",
+       "depth": 0,
+       "box": [
+        684,
+        179,
+        295,
+        36
+       ],
+       "id": "col:2차인증사용이력 목록 그리드/인증정보"
+      },
+      {
+       "label": "일시",
+       "depth": 0,
+       "box": [
+        979,
+        179,
+        235,
+        36
+       ],
+       "id": "col:2차인증사용이력 목록 그리드/일시"
+      },
+      {
+       "label": "인증결과",
+       "depth": 0,
+       "box": [
+        1214,
+        179,
+        93,
+        36
+       ],
+       "id": "col:2차인증사용이력 목록 그리드/인증결과"
+      },
+      {
+       "label": "인증메세지",
+       "depth": 0,
+       "box": [
+        1307,
+        179,
+        302,
+        36
+       ],
+       "id": "col:2차인증사용이력 목록 그리드/인증메세지"
+      }
+     ],
+     "id": "grid:2차인증사용이력 목록 그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      216,
+      781,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교정보 > 2차인증 > 2차인증이력조회",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

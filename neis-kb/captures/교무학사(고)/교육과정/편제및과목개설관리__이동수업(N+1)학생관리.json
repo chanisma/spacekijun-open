@@ -1,0 +1,1946 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›편제및과목개설관리›이동수업(N+1)학생관리",
+ "name": "이동수업(N+1)학생관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:03:23+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:1. 과목 선택",
+   "tab": "1. 과목 선택",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학기",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      271,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      331,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      379,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "1. 과목 선택",
+     "box": [
+      434,
+      133,
+      1181,
+      40
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1. 과목 선택",
+      "2. 해당반 선택",
+      "3. 차수등록",
+      "4. 이동반 편성",
+      "5. 수강학생 편성"
+     ],
+     "active": "1. 과목 선택",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "과목군명",
+     "box": [
+      109,
+      181,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "과목군명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:과목군명"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      193,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": "과목군",
+     "box": [
+      25,
+      231,
+      394,
+      582
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "과목군",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        232,
+        50,
+        36
+       ],
+       "id": "col:과목군/순번"
+      },
+      {
+       "label": "과목군명",
+       "depth": 0,
+       "box": [
+        126,
+        232,
+        292,
+        36
+       ],
+       "id": "col:과목군/과목군명"
+      }
+     ],
+     "id": "grid:과목군"
+    },
+    {
+     "aria": "미적용과목",
+     "box": [
+      434,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "미적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "미적용과목",
+       "depth": 0,
+       "box": [
+        435,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:미적용과목/미적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        435,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        655,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        875,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:미적용과목/미적용과목>학점"
+      }
+     ],
+     "id": "grid:미적용과목"
+    },
+    {
+     "aria": "적용과목",
+     "box": [
+      1073,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "적용과목",
+       "depth": 0,
+       "box": [
+        1074,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:적용과목/적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        1074,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        1294,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        1514,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:적용과목/적용과목>학점"
+      }
+     ],
+     "id": "grid:적용과목"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      999,
+      436,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      999,
+      506,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "plain",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      769,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다.",
+     "id": "note:※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다."
+    },
+    {
+     "aria": "설명2",
+     "box": [
+      434,
+      788,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다.",
+     "id": "note:※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다."
+    }
+   ]
+  },
+  {
+   "id": "tab:2. 해당반 선택",
+   "tab": "2. 해당반 선택",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학기",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      271,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      331,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      379,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "1. 과목 선택",
+     "box": [
+      434,
+      133,
+      1181,
+      40
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1. 과목 선택",
+      "2. 해당반 선택",
+      "3. 차수등록",
+      "4. 이동반 편성",
+      "5. 수강학생 편성"
+     ],
+     "active": "1. 과목 선택",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "과목군명",
+     "box": [
+      109,
+      181,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "과목군명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:과목군명"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      193,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": "과목군",
+     "box": [
+      25,
+      231,
+      394,
+      582
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "과목군",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        232,
+        50,
+        36
+       ],
+       "id": "col:과목군/순번"
+      },
+      {
+       "label": "과목군명",
+       "depth": 0,
+       "box": [
+        126,
+        232,
+        292,
+        36
+       ],
+       "id": "col:과목군/과목군명"
+      }
+     ],
+     "id": "grid:과목군"
+    },
+    {
+     "aria": "미적용과목",
+     "box": [
+      434,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "미적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "미적용과목",
+       "depth": 0,
+       "box": [
+        435,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:미적용과목/미적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        435,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        655,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        875,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:미적용과목/미적용과목>학점"
+      }
+     ],
+     "id": "grid:미적용과목"
+    },
+    {
+     "aria": "적용과목",
+     "box": [
+      1073,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "적용과목",
+       "depth": 0,
+       "box": [
+        1074,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:적용과목/적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        1074,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        1294,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        1514,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:적용과목/적용과목>학점"
+      }
+     ],
+     "id": "grid:적용과목"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      999,
+      436,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      999,
+      506,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "plain",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      769,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다.",
+     "id": "note:※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다."
+    },
+    {
+     "aria": "설명2",
+     "box": [
+      434,
+      788,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다.",
+     "id": "note:※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다."
+    }
+   ]
+  },
+  {
+   "id": "tab:3. 차수등록",
+   "tab": "3. 차수등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학기",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      271,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      331,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      379,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "1. 과목 선택",
+     "box": [
+      434,
+      133,
+      1181,
+      40
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1. 과목 선택",
+      "2. 해당반 선택",
+      "3. 차수등록",
+      "4. 이동반 편성",
+      "5. 수강학생 편성"
+     ],
+     "active": "1. 과목 선택",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "과목군명",
+     "box": [
+      109,
+      181,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "과목군명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:과목군명"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      193,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": "과목군",
+     "box": [
+      25,
+      231,
+      394,
+      582
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "과목군",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        232,
+        50,
+        36
+       ],
+       "id": "col:과목군/순번"
+      },
+      {
+       "label": "과목군명",
+       "depth": 0,
+       "box": [
+        126,
+        232,
+        292,
+        36
+       ],
+       "id": "col:과목군/과목군명"
+      }
+     ],
+     "id": "grid:과목군"
+    },
+    {
+     "aria": "미적용과목",
+     "box": [
+      434,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "미적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "미적용과목",
+       "depth": 0,
+       "box": [
+        435,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:미적용과목/미적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        435,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        655,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        875,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:미적용과목/미적용과목>학점"
+      }
+     ],
+     "id": "grid:미적용과목"
+    },
+    {
+     "aria": "적용과목",
+     "box": [
+      1073,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "적용과목",
+       "depth": 0,
+       "box": [
+        1074,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:적용과목/적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        1074,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        1294,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        1514,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:적용과목/적용과목>학점"
+      }
+     ],
+     "id": "grid:적용과목"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      999,
+      436,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      999,
+      506,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "plain",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      769,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다.",
+     "id": "note:※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다."
+    },
+    {
+     "aria": "설명2",
+     "box": [
+      434,
+      788,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다.",
+     "id": "note:※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다."
+    }
+   ]
+  },
+  {
+   "id": "tab:4. 이동반 편성",
+   "tab": "4. 이동반 편성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학기",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      271,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      331,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      379,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "1. 과목 선택",
+     "box": [
+      434,
+      133,
+      1181,
+      40
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1. 과목 선택",
+      "2. 해당반 선택",
+      "3. 차수등록",
+      "4. 이동반 편성",
+      "5. 수강학생 편성"
+     ],
+     "active": "1. 과목 선택",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "과목군명",
+     "box": [
+      109,
+      181,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "과목군명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:과목군명"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      193,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": "과목군",
+     "box": [
+      25,
+      231,
+      394,
+      582
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "과목군",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        232,
+        50,
+        36
+       ],
+       "id": "col:과목군/순번"
+      },
+      {
+       "label": "과목군명",
+       "depth": 0,
+       "box": [
+        126,
+        232,
+        292,
+        36
+       ],
+       "id": "col:과목군/과목군명"
+      }
+     ],
+     "id": "grid:과목군"
+    },
+    {
+     "aria": "미적용과목",
+     "box": [
+      434,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "미적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "미적용과목",
+       "depth": 0,
+       "box": [
+        435,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:미적용과목/미적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        435,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        655,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        875,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:미적용과목/미적용과목>학점"
+      }
+     ],
+     "id": "grid:미적용과목"
+    },
+    {
+     "aria": "적용과목",
+     "box": [
+      1073,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "적용과목",
+       "depth": 0,
+       "box": [
+        1074,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:적용과목/적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        1074,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        1294,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        1514,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:적용과목/적용과목>학점"
+      }
+     ],
+     "id": "grid:적용과목"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      999,
+      436,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      999,
+      506,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "plain",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      769,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다.",
+     "id": "note:※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다."
+    },
+    {
+     "aria": "설명2",
+     "box": [
+      434,
+      788,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다.",
+     "id": "note:※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다."
+    }
+   ]
+  },
+  {
+   "id": "tab:5. 수강학생 편성",
+   "tab": "5. 수강학생 편성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학기",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      271,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      331,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      379,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "1. 과목 선택",
+     "box": [
+      434,
+      133,
+      1181,
+      40
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1. 과목 선택",
+      "2. 해당반 선택",
+      "3. 차수등록",
+      "4. 이동반 편성",
+      "5. 수강학생 편성"
+     ],
+     "active": "1. 과목 선택",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "과목군명",
+     "box": [
+      109,
+      181,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "과목군명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:과목군명"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      193,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": "과목군",
+     "box": [
+      25,
+      231,
+      394,
+      582
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "과목군",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        232,
+        50,
+        36
+       ],
+       "id": "col:과목군/순번"
+      },
+      {
+       "label": "과목군명",
+       "depth": 0,
+       "box": [
+        126,
+        232,
+        292,
+        36
+       ],
+       "id": "col:과목군/과목군명"
+      }
+     ],
+     "id": "grid:과목군"
+    },
+    {
+     "aria": "미적용과목",
+     "box": [
+      434,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "미적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "미적용과목",
+       "depth": 0,
+       "box": [
+        435,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:미적용과목/미적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        435,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        655,
+        265,
+        220,
+        31
+       ],
+       "id": "col:미적용과목/미적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        875,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:미적용과목/미적용과목>학점"
+      }
+     ],
+     "id": "grid:미적용과목"
+    },
+    {
+     "aria": "적용과목",
+     "box": [
+      1073,
+      233,
+      542,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "적용과목",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "적용과목",
+       "depth": 0,
+       "box": [
+        1074,
+        234,
+        540,
+        31
+       ],
+       "span": 4,
+       "id": "col:적용과목/적용과목"
+      },
+      {
+       "label": "편제명",
+       "depth": 1,
+       "box": [
+        1074,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>편제명"
+      },
+      {
+       "label": "과목명",
+       "depth": 1,
+       "box": [
+        1294,
+        265,
+        220,
+        31
+       ],
+       "id": "col:적용과목/적용과목>과목명"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        1514,
+        265,
+        100,
+        31
+       ],
+       "span": 2,
+       "id": "col:적용과목/적용과목>학점"
+      }
+     ],
+     "id": "grid:적용과목"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      999,
+      436,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      999,
+      506,
+      50,
+      50
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "plain",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      769,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다.",
+     "id": "note:※ 적용과목이 노란색으로 표시된 과목은 해당반 편성이 완료되어 미적용 과목으로 이동시킬 수 없습니다."
+    },
+    {
+     "aria": "설명2",
+     "box": [
+      434,
+      788,
+      1181,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다.",
+     "id": "note:※ 학점을(를) 수정하여 과목 편성할 경우 시간표에서 일반과목과 수준별 이동수업으로 동시에 사용할 수 있습니다."
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 편제및과목개설관리 > 이동수업(N+1)학생관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

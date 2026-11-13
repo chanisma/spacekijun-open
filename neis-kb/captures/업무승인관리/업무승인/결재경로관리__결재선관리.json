@@ -1,0 +1,408 @@
+{
+ "schema": "neis-capture/1",
+ "key": "업무승인관리›업무승인›결재경로관리›결재선관리",
+ "name": "결재선관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:52:50+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      155,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "권한조직",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:권한조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      475,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업무영역",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:업무영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      155,
+      122,
+      470,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재문서명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:결재문서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      124,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      283,
+      220,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "목록관리",
+     "variant": "primary",
+     "id": "button:목록관리"
+    },
+    {
+     "aria": null,
+     "box": [
+      355,
+      220,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "내보내기",
+     "variant": "primary",
+     "id": "button:내보내기"
+    },
+    {
+     "aria": null,
+     "box": [
+      427,
+      220,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      475,
+      220,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1529,
+      220,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "결재선지정",
+     "variant": "primary",
+     "id": "button:결재선지정"
+    },
+    {
+     "aria": "결재선 목록",
+     "box": [
+      35,
+      230,
+      85,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "결재선 목록",
+     "id": "heading:결재선 목록"
+    },
+    {
+     "aria": "결재선",
+     "box": [
+      550,
+      230,
+      48,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "결재선",
+     "id": "heading:결재선"
+    },
+    {
+     "aria": "결재선",
+     "box": [
+      30,
+      265,
+      490,
+      522
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "결재선",
+     "selectable": true,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "결재선명",
+       "depth": 0,
+       "box": [
+        71,
+        266,
+        448,
+        36
+       ],
+       "span": 2,
+       "id": "col:결재선/결재선명"
+      }
+     ],
+     "id": "grid:결재선"
+    },
+    {
+     "aria": "결재선",
+     "box": [
+      545,
+      265,
+      1065,
+      231
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "결재선",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "결재순서",
+       "depth": 0,
+       "box": [
+        546,
+        266,
+        98,
+        36
+       ],
+       "id": "col:결재선/결재순서"
+      },
+      {
+       "label": "결재구분",
+       "depth": 0,
+       "box": [
+        644,
+        266,
+        114,
+        36
+       ],
+       "id": "col:결재선/결재구분"
+      },
+      {
+       "label": "결재자ID",
+       "depth": 0,
+       "box": [
+        757,
+        266,
+        177,
+        36
+       ],
+       "id": "col:결재선/결재자ID"
+      },
+      {
+       "label": "결재자명",
+       "depth": 0,
+       "box": [
+        935,
+        266,
+        177,
+        36
+       ],
+       "id": "col:결재선/결재자명"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        1112,
+        266,
+        177,
+        36
+       ],
+       "id": "col:결재선/직위"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        1290,
+        266,
+        319,
+        36
+       ],
+       "id": "col:결재선/조직명"
+      }
+     ],
+     "id": "grid:결재선#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1517,
+      511,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1565,
+      511,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": "적용 대상자 목록",
+     "box": [
+      550,
+      521,
+      122,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "적용 대상자 목록",
+     "id": "heading:적용 대상자 목록"
+    },
+    {
+     "aria": "적용대상자목록",
+     "box": [
+      545,
+      556,
+      1065,
+      231
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "적용대상자목록",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        586,
+        557,
+        40,
+        36
+       ],
+       "id": "col:적용대상자목록/순번"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        626,
+        557,
+        216,
+        36
+       ],
+       "id": "col:적용대상자목록/사용자ID"
+      },
+      {
+       "label": "사용자명",
+       "depth": 0,
+       "box": [
+        842,
+        557,
+        216,
+        36
+       ],
+       "id": "col:적용대상자목록/사용자명"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        1058,
+        557,
+        162,
+        36
+       ],
+       "id": "col:적용대상자목록/직위"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        1220,
+        557,
+        389,
+        36
+       ],
+       "id": "col:적용대상자목록/조직명"
+      }
+     ],
+     "id": "grid:적용대상자목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {업무승인관리}업무승인 > 결재경로관리 > 결재선관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

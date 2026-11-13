@@ -1,0 +1,653 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›학생건강검사관리›표본학생등록",
+ "name": "표본학생등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:45:45+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:신체발달",
+   "tab": "신체발달",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      577,
+      82,
+      148,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성별",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:성별"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검사"
+     ],
+     "active": "신체발달",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "표본학생출력",
+     "box": [
+      1431,
+      188,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "표본학생출력",
+     "variant": "link",
+     "id": "button:표본학생출력"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1527,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "신체발달 표본학생",
+     "box": [
+      25,
+      198,
+      133,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "신체발달 표본학생",
+     "id": "heading:신체발달 표본학생"
+    },
+    {
+     "aria": "표본학생목록",
+     "box": [
+      25,
+      228,
+      1590,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "표본학생목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        76,
+        229,
+        197,
+        36
+       ],
+       "id": "col:표본학생목록/과정"
+      },
+      {
+       "label": "계열명",
+       "depth": 0,
+       "box": [
+        273,
+        229,
+        197,
+        36
+       ],
+       "id": "col:표본학생목록/계열명"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        470,
+        229,
+        138,
+        36
+       ],
+       "id": "col:표본학생목록/학년"
+      },
+      {
+       "label": "학과명",
+       "depth": 0,
+       "box": [
+        608,
+        229,
+        197,
+        36
+       ],
+       "id": "col:표본학생목록/학과명"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        806,
+        229,
+        138,
+        36
+       ],
+       "id": "col:표본학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        944,
+        229,
+        138,
+        36
+       ],
+       "id": "col:표본학생목록/번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        1082,
+        229,
+        138,
+        36
+       ],
+       "id": "col:표본학생목록/성별"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1220,
+        229,
+        197,
+        36
+       ],
+       "id": "col:표본학생목록/성명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        1417,
+        229,
+        197,
+        36
+       ],
+       "id": "col:표본학생목록/생년월일"
+      }
+     ],
+     "id": "grid:표본학생목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:건강검사",
+   "tab": "건강검사",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달",
+      "건강검사"
+     ],
+     "active": "건강검사",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      539,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      587,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": "반목록",
+     "box": [
+      25,
+      198,
+      48,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "반목록",
+     "id": "heading:반목록"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      642,
+      198,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생목록",
+     "id": "heading:학생목록"
+    },
+    {
+     "aria": "반목록",
+     "box": [
+      25,
+      228,
+      602,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "반명",
+       "depth": 0,
+       "box": [
+        66,
+        229,
+        50,
+        62
+       ],
+       "id": "col:반목록/반명"
+      },
+      {
+       "label": "반코드",
+       "depth": 0,
+       "box": [
+        116,
+        229,
+        50,
+        62
+       ],
+       "id": "col:반목록/반코드"
+      },
+      {
+       "label": "건강검사 대상반여부",
+       "depth": 0,
+       "box": [
+        166,
+        229,
+        90,
+        62
+       ],
+       "id": "col:반목록/건강검사 대상반여부"
+      },
+      {
+       "label": "학적학생수",
+       "depth": 0,
+       "box": [
+        256,
+        229,
+        140,
+        31
+       ],
+       "span": 2,
+       "id": "col:반목록/학적학생수"
+      },
+      {
+       "label": "건강검사 표본반여부",
+       "depth": 0,
+       "box": [
+        396,
+        229,
+        90,
+        62
+       ],
+       "id": "col:반목록/건강검사 표본반여부"
+      },
+      {
+       "label": "대상학생수",
+       "depth": 0,
+       "box": [
+        486,
+        229,
+        140,
+        31
+       ],
+       "span": 2,
+       "id": "col:반목록/대상학생수"
+      },
+      {
+       "label": "남자",
+       "depth": 1,
+       "box": [
+        256,
+        260,
+        70,
+        31
+       ],
+       "id": "col:반목록/학적학생수>남자"
+      },
+      {
+       "label": "여자",
+       "depth": 1,
+       "box": [
+        326,
+        260,
+        70,
+        31
+       ],
+       "id": "col:반목록/학적학생수>여자"
+      },
+      {
+       "label": "남자",
+       "depth": 1,
+       "box": [
+        486,
+        260,
+        70,
+        31
+       ],
+       "id": "col:반목록/대상학생수>남자"
+      },
+      {
+       "label": "여자",
+       "depth": 1,
+       "box": [
+        556,
+        260,
+        70,
+        31
+       ],
+       "id": "col:반목록/대상학생수>여자"
+      }
+     ],
+     "id": "grid:반목록"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      642,
+      228,
+      973,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        643,
+        229,
+        68,
+        46
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        711,
+        229,
+        135,
+        46
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        846,
+        229,
+        112,
+        46
+       ],
+       "id": "col:학생목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        958,
+        229,
+        130,
+        46
+       ],
+       "id": "col:학생목록/생년월일"
+      },
+      {
+       "label": "대상학생여부",
+       "depth": 0,
+       "box": [
+        1087,
+        229,
+        124,
+        46
+       ],
+       "id": "col:학생목록/대상학생여부"
+      },
+      {
+       "label": "재학여부",
+       "depth": 0,
+       "box": [
+        1212,
+        229,
+        116,
+        46
+       ],
+       "id": "col:학생목록/재학여부"
+      },
+      {
+       "label": "건강검사 데이터존재여부",
+       "depth": 0,
+       "box": [
+        1328,
+        229,
+        135,
+        46
+       ],
+       "id": "col:학생목록/건강검사 데이터존재여부"
+      },
+      {
+       "label": "반변경상태",
+       "depth": 0,
+       "box": [
+        1463,
+        229,
+        135,
+        46
+       ],
+       "id": "col:학생목록/반변경상태"
+      }
+     ],
+     "id": "grid:학생목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 학생건강검사관리 > 표본학생등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

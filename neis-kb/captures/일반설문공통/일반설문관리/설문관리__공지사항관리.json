@@ -1,0 +1,207 @@
+{
+ "schema": "neis-capture/1",
+ "key": "일반설문공통›일반설문관리›설문관리›공지사항관리",
+ "name": "공지사항관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:47:31+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      82,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "제목",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:제목"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "내용",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      168,
+      1590,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        169,
+        100,
+        31
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "제목",
+       "depth": 0,
+       "box": [
+        176,
+        169,
+        988,
+        31
+       ],
+       "id": "col:그리드/제목"
+      },
+      {
+       "label": "등록자",
+       "depth": 0,
+       "box": [
+        1164,
+        169,
+        200,
+        31
+       ],
+       "id": "col:그리드/등록자"
+      },
+      {
+       "label": "등록일시",
+       "depth": 0,
+       "box": [
+        1364,
+        169,
+        250,
+        31
+       ],
+       "id": "col:그리드/등록일시"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      614,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {일반설문공통}일반설문관리 > 설문관리 > 공지사항관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

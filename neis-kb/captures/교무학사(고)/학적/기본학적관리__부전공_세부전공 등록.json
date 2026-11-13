@@ -1,0 +1,356 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›기본학적관리›부전공/세부전공 등록",
+ "name": "부전공/세부전공 등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:01:38+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      25
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      25
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      25
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      25
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "2학기로복사",
+     "box": [
+      1484,
+      133,
+      83,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "2학기로복사",
+     "variant": "primary",
+     "id": "button:2학기로복사"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "부전공/세부전공학생목록",
+     "box": [
+      25,
+      173,
+      1590,
+      290
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "부전공/세부전공학생목록",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        145,
+        36
+       ],
+       "id": "col:부전공/세부전공학생목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        221,
+        174,
+        145,
+        36
+       ],
+       "id": "col:부전공/세부전공학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        366,
+        174,
+        145,
+        36
+       ],
+       "id": "col:부전공/세부전공학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        511,
+        174,
+        232,
+        36
+       ],
+       "id": "col:부전공/세부전공학생목록/성명"
+      },
+      {
+       "label": "부전공",
+       "depth": 0,
+       "box": [
+        743,
+        174,
+        435,
+        36
+       ],
+       "id": "col:부전공/세부전공학생목록/부전공"
+      },
+      {
+       "label": "세부전공",
+       "depth": 0,
+       "box": [
+        1179,
+        174,
+        435,
+        36
+       ],
+       "id": "col:부전공/세부전공학생목록/세부전공"
+      }
+     ],
+     "id": "grid:부전공/세부전공학생목록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      473,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1527,
+      473,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      473,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      519,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학년#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      519,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학기#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      559,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:반#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      559,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "번호",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      599,
+      1460,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "부전공",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:부전공"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      639,
+      1460,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "세부전공",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:세부전공"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 기본학적관리 > 부전공/세부전공 등록",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

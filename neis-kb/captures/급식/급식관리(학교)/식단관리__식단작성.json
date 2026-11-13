@@ -1,0 +1,5848 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식단관리›식단작성",
+ "name": "식단작성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:23:39+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:식단작성",
+   "tab": "식단작성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식단작성",
+      "식단작성상세",
+      "재료별식단작성",
+      "영양성분별식단작성(함량율)",
+      "영양성분별식단작성(성분)",
+      "알레르기별식단작성",
+      "식단작성현황",
+      "식단가현황"
+     ],
+     "active": "식단작성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "주/월간구분",
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주/월간구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주/월간구분"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      415,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": "급식년월",
+     "box": [
+      445,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식년월"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      571,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      601,
+      137,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "(월~금 5일간만 출력)",
+     "checked": false,
+     "id": "check:(월~금 5일간만 출력)"
+    },
+    {
+     "aria": null,
+     "box": [
+      881,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      940,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1008,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1075,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 캘린더 일자의 □ 선택 후 식단삭제버튼 클릭 시 체크된 일자의 식단이 삭제됩니다. ( 단, 확정된 식단은 삭제가 불가능 합니다. )",
+     "id": "note:※ 캘린더 일자의 □ 선택 후 식단삭제버튼 클릭 시 체크된 일자의 식단이 삭제됩니다. ( 단, 확정된 식단은 삭제가 불가능 합니다. )"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 우측의 내요리/내식단/기존식단의 요리 또는 식단을 선택하고 등록하고자 하는 급식일자에 드래그앤드롭을 하시면 요리가 등록됩니다.",
+     "id": "note:※ 우측의 내요리/내식단/기존식단의 요리 또는 식단을 선택하고 등록하고자 하는 급식일자에 드래그앤드롭을 하시면 요리가 등록됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      235,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 캘린더 일자의 □ 선택 후 내식단의 식단적용 또는 내요리의 요리적용버튼 클릭 시 체크된 일자에 식단 또는 요리가 적용됩니다.(이미 적용된 요리 존재 시 제외)",
+     "id": "note:※ 캘린더 일자의 □ 선택 후 내식단의 식단적용 또는 내요리의 요리적용버튼 클릭 시 체크된 일자에 식단 또는 요리가 적용됩니다.(이미 적용된 요리 존재 시 제외)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      254,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 일자별 요리의 □ 선택 후 요리삭제버튼 클릭 시 선택된 요리가 삭제됩니다.(식단저장 시 반영)",
+     "id": "note:※ 일자별 요리의 □ 선택 후 요리삭제버튼 클릭 시 선택된 요리가 삭제됩니다.(식단저장 시 반영)"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      323,
+      80,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "급식인원일괄적용",
+     "control": "date",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:급식인원일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      236,
+      323,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "재적인원적용",
+     "variant": "primary",
+     "id": "button:재적인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      330,
+      323,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학년별인원적용",
+     "variant": "plain",
+     "id": "button:학년별인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      435,
+      323,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "최근인원적용",
+     "variant": "primary",
+     "id": "button:최근인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      529,
+      323,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전월인원적용",
+     "variant": "primary",
+     "id": "button:전월인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      623,
+      323,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "급식인원적용",
+     "variant": "primary",
+     "id": "button:급식인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1069,
+      323,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단출력",
+     "variant": "secondary",
+     "id": "button:식단출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      363,
+      160,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "최근식재료원산지일괄적용",
+     "variant": "primary",
+     "id": "button:최근식재료원산지일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      316,
+      363,
+      171,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "내식재료원산지정보일괄적용",
+     "variant": "primary",
+     "id": "button:내식재료원산지정보일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1069,
+      363,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "내식단으로가져가기",
+     "variant": "primary",
+     "id": "button:내식단으로가져가기"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      403,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "급식미실시",
+     "variant": "primary",
+     "id": "button:급식미실시"
+    },
+    {
+     "aria": null,
+     "box": [
+      232,
+      403,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "급식미실시취소",
+     "variant": "primary",
+     "id": "button:급식미실시취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      338,
+      403,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단공개확정",
+     "variant": "primary",
+     "id": "button:식단공개확정"
+    },
+    {
+     "aria": null,
+     "box": [
+      431,
+      403,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단진행이력",
+     "variant": "plain",
+     "id": "button:식단진행이력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1069,
+      403,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "품의내역재계산",
+     "variant": "primary",
+     "id": "button:품의내역재계산"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      403,
+      350,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 품의내역에 반영하고자 할 경우 클릭하세요.",
+     "id": "note:※ 품의내역에 반영하고자 할 경우 클릭하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      459,
+      110,
+      32
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "급식일자전체",
+     "checked": false,
+     "id": "check:급식일자전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      629,
+      459,
+      109,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "품의내역재계산",
+     "checked": false,
+     "id": "check:품의내역재계산"
+    },
+    {
+     "aria": null,
+     "box": [
+      746,
+      459,
+      122,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "(전체) 내요리적용",
+     "checked": false,
+     "id": "check:(전체) 내요리적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      876,
+      459,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단교환",
+     "variant": "plain",
+     "id": "button:식단교환"
+    },
+    {
+     "aria": null,
+     "box": [
+      948,
+      459,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "요리삭제",
+     "variant": "plain",
+     "id": "button:요리삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1019,
+      459,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단저장",
+     "variant": "primary",
+     "id": "button:식단저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1091,
+      459,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단삭제",
+     "variant": "secondary",
+     "id": "button:식단삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1163,
+      459,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      501,
+      1190,
+      715
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "[-접기]",
+       "depth": 0,
+       "box": [
+        26,
+        502,
+        90,
+        32
+       ],
+       "span": 2,
+       "id": "col:그리드/[-접기]"
+      },
+      {
+       "label": "일",
+       "depth": 0,
+       "box": [
+        116,
+        502,
+        157,
+        32
+       ],
+       "span": 2,
+       "id": "col:그리드/일"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        273,
+        502,
+        157,
+        32
+       ],
+       "span": 2,
+       "id": "col:그리드/월"
+      },
+      {
+       "label": "화",
+       "depth": 0,
+       "box": [
+        430,
+        502,
+        157,
+        32
+       ],
+       "span": 2,
+       "id": "col:그리드/화"
+      },
+      {
+       "label": "수",
+       "depth": 0,
+       "box": [
+        587,
+        502,
+        157,
+        32
+       ],
+       "span": 2,
+       "id": "col:그리드/수"
+      },
+      {
+       "label": "목",
+       "depth": 0,
+       "box": [
+        743,
+        502,
+        157,
+        32
+       ],
+       "span": 2,
+       "id": "col:그리드/목"
+      },
+      {
+       "label": "금",
+       "depth": 0,
+       "box": [
+        900,
+        502,
+        157,
+        32
+       ],
+       "span": 2,
+       "id": "col:그리드/금"
+      },
+      {
+       "label": "토",
+       "depth": 0,
+       "box": [
+        1057,
+        502,
+        157,
+        32
+       ],
+       "span": 2,
+       "id": "col:그리드/토"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": "내요리+공통활용요리",
+     "box": [
+      1230,
+      504,
+      155,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "내요리+공통활용요리",
+     "id": "heading:내요리+공통활용요리"
+    },
+    {
+     "aria": null,
+     "box": [
+      1336,
+      544,
+      198,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요리그룹",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요리그룹"
+    },
+    {
+     "aria": null,
+     "box": [
+      1336,
+      580,
+      198,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요리군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요리군"
+    },
+    {
+     "aria": null,
+     "box": [
+      1540,
+      616,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검색",
+     "variant": "primary",
+     "id": "button:검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      1230,
+      664,
+      370,
+      220
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        1231,
+        665,
+        30,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "ID",
+       "depth": 0,
+       "box": [
+        1261,
+        665,
+        62,
+        36
+       ],
+       "id": "col:그리드/ID"
+      },
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        1323,
+        665,
+        226,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/요리명"
+      },
+      {
+       "label": "사용",
+       "depth": 0,
+       "box": [
+        1549,
+        665,
+        50,
+        36
+       ],
+       "id": "col:그리드/사용"
+      }
+     ],
+     "id": "grid:그리드#2"
+    },
+    {
+     "aria": "요리식품구성",
+     "box": [
+      1230,
+      944,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요리식품구성",
+     "id": "heading:요리식품구성"
+    },
+    {
+     "aria": null,
+     "box": [
+      1230,
+      974,
+      370,
+      242
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        1231,
+        975,
+        74,
+        36
+       ],
+       "id": "col:그리드/요리명"
+      },
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        1305,
+        975,
+        174,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/식품명"
+      },
+      {
+       "label": "식품속성",
+       "depth": 0,
+       "box": [
+        1479,
+        975,
+        60,
+        36
+       ],
+       "id": "col:그리드/식품속성"
+      },
+      {
+       "label": "1인량",
+       "depth": 0,
+       "box": [
+        1539,
+        975,
+        60,
+        36
+       ],
+       "id": "col:그리드/1인량"
+      }
+     ],
+     "id": "grid:그리드#3"
+    }
+   ]
+  },
+  {
+   "id": "tab:식단작성상세",
+   "tab": "식단작성상세",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식단작성",
+      "식단작성상세",
+      "재료별식단작성",
+      "영양성분별식단작성(함량율)",
+      "영양성분별식단작성(성분)",
+      "알레르기별식단작성",
+      "식단작성현황",
+      "식단가현황"
+     ],
+     "active": "식단작성상세",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      175,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식일자"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      331,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식사구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:식사구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 남여구분에 따른 영양기준값이 상이하여 남여구분별 인원관리",
+     "id": "note:※ 남여구분에 따른 영양기준값이 상이하여 남여구분별 인원관리"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식단저장 : 식단작성 시점에 '예정단가등록'에 등록된 식품의 최신 단가를 기준으로 1인식단가 산정 및 저장",
+     "id": "note:※ 식단저장 : 식단작성 시점에 '예정단가등록'에 등록된 식품의 최신 단가를 기준으로 1인식단가 산정 및 저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      235,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 예정단가등록된 식품의 최신 단가를 기준으로 산정 - 동일식품을 합하여 계산하기 때문에 식단가 조회 시 1인 단가와 미세한 차이 발생",
+     "id": "note:※ 예정단가등록된 식품의 최신 단가를 기준으로 산정 - 동일식품을 합하여 계산하기 때문에 식단가 조회 시 1인 단가와 미세한 차이 발생"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      272,
+      1575,
+      111
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 저장 시 - 식단내역 저장시 품의내역에 반영해야할 경우 품의내역 재계산 버튼을 클릭하시고, 품의내역에 반영되지 않아야 할 경우 저장 버튼을 클릭하세요. - 에듀파인 품의 전이라면 식재료 품의 목록 작성에서 에듀파인으로 재전송을 반드시 하시기 바랍니다. - (체크박스) 공동관리교 적용 : 학교기본에서 급식형태 구분을 공동조리(조리교)로 선택하고 공동관리구분을 설정했을 경우 표시 - (품의내역재계산) : 이후 단계인 품의 및 검수를 진행한 경우에 품의내역재계산 버튼 클릭 시 품의 및 검수내역이 초기화됩니다.",
+     "id": "note:※ 저장 시 - 식단내역 저장시 품의내역에 반영해야할 경우 품의내역 재계산 버튼을 클릭하시고, 품의내역에 반영되지 않아야 할 경우 저장 버튼을 클릭하세요. - 에듀파인 품의 전이라면 식재료 품의 목록 작성에서 에듀파인으로 재전송을 반드시 하시기 바랍니다. - (체크박스) 공동관리교 적용 : 학교기본에서 급식형태 구분을 공동조리(조리교)로 선택하고 공동관리구분을 설정했을 경우 표시 - (품의내역재계산) : 이후 단계인 품의 및 검수를 진행한 경우에 품의내역재계산 버튼 클릭 시 품의 및 검수내역이 초기화됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      442,
+      80,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "급식인원일괄적용",
+     "control": "date",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:급식인원일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      236,
+      442,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "재적인원적용",
+     "variant": "primary",
+     "id": "button:재적인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      330,
+      442,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학년별인원적용",
+     "variant": "plain",
+     "id": "button:학년별인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      435,
+      442,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "최근인원적용",
+     "variant": "primary",
+     "id": "button:최근인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      529,
+      442,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전월인원적용",
+     "variant": "primary",
+     "id": "button:전월인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      623,
+      442,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "급식인원적용",
+     "variant": "primary",
+     "id": "button:급식인원적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1009,
+      442,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단출력",
+     "variant": "secondary",
+     "id": "button:식단출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1079,
+      442,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단가현황출력",
+     "variant": "secondary",
+     "id": "button:식단가현황출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1185,
+      442,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식품구성출력",
+     "variant": "secondary",
+     "id": "button:식품구성출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      482,
+      136,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "최근식재료원산지적용",
+     "variant": "primary",
+     "id": "button:최근식재료원산지적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      292,
+      482,
+      148,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "내식재료원산지정보적용",
+     "variant": "primary",
+     "id": "button:내식재료원산지정보적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1009,
+      482,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "내식단으로가져가기",
+     "variant": "primary",
+     "id": "button:내식단으로가져가기"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      522,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "급식미실시",
+     "variant": "primary",
+     "id": "button:급식미실시"
+    },
+    {
+     "aria": null,
+     "box": [
+      232,
+      522,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "급식미실시취소",
+     "variant": "primary",
+     "id": "button:급식미실시취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      338,
+      522,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단공개확정",
+     "variant": "primary",
+     "id": "button:식단공개확정"
+    },
+    {
+     "aria": null,
+     "box": [
+      431,
+      522,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단진행이력",
+     "variant": "plain",
+     "id": "button:식단진행이력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1009,
+      522,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "품의내역재계산",
+     "variant": "primary",
+     "id": "button:품의내역재계산"
+    },
+    {
+     "aria": null,
+     "box": [
+      1115,
+      522,
+      350,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 품의내역에 반영하고자 할 경우 클릭하세요.",
+     "id": "note:※ 품의내역에 반영하고자 할 경우 클릭하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      578,
+      225,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "(입력영역) 스크롤적용",
+     "checked": true,
+     "id": "check:(입력영역) 스크롤적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1158,
+      578,
+      109,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "품의내역재계산",
+     "checked": false,
+     "id": "check:품의내역재계산"
+    },
+    {
+     "aria": null,
+     "box": [
+      1275,
+      578,
+      122,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "(전체) 내요리적용",
+     "checked": false,
+     "id": "check:(전체) 내요리적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1404,
+      578,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단저장",
+     "variant": "primary",
+     "id": "button:식단저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1476,
+      578,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단삭제",
+     "variant": "secondary",
+     "id": "button:식단삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      578,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      200,
+      634,
+      171,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:급식일자#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      551,
+      634,
+      342,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식단명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식단명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1073,
+      634,
+      171,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "1인식단가",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:1인식단가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1424,
+      634,
+      171,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "작성상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:작성상태"
+    },
+    {
+     "aria": "급식인원",
+     "box": [
+      25,
+      712,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "급식인원",
+     "id": "heading:급식인원"
+    },
+    {
+     "aria": "급식인원목록",
+     "box": [
+      25,
+      742,
+      1555,
+      105
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "급식인원목록",
+     "selectable": false,
+     "declaredColumns": 25,
+     "columns": [
+      {
+       "label": "학교명",
+       "depth": 0,
+       "box": [
+        26,
+        743,
+        137,
+        62
+       ],
+       "id": "col:급식인원목록/학교명"
+      },
+      {
+       "label": "학교 과정구분",
+       "depth": 0,
+       "box": [
+        163,
+        743,
+        68,
+        62
+       ],
+       "id": "col:급식인원목록/학교 과정구분"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        231,
+        743,
+        47,
+        62
+       ],
+       "id": "col:급식인원목록/성별"
+      },
+      {
+       "label": "유치원",
+       "depth": 0,
+       "box": [
+        279,
+        743,
+        411,
+        31
+       ],
+       "span": 6,
+       "id": "col:급식인원목록/유치원"
+      },
+      {
+       "label": "학생",
+       "depth": 0,
+       "box": [
+        689,
+        743,
+        547,
+        31
+       ],
+       "span": 8,
+       "id": "col:급식인원목록/학생"
+      },
+      {
+       "label": "학생외",
+       "depth": 0,
+       "box": [
+        1237,
+        743,
+        205,
+        31
+       ],
+       "span": 3,
+       "id": "col:급식인원목록/학생외"
+      },
+      {
+       "label": "총원",
+       "depth": 0,
+       "box": [
+        1442,
+        743,
+        68,
+        62
+       ],
+       "id": "col:급식인원목록/총원"
+      },
+      {
+       "label": "학부모 참여",
+       "depth": 0,
+       "box": [
+        1511,
+        743,
+        68,
+        62
+       ],
+       "id": "col:급식인원목록/학부모 참여"
+      },
+      {
+       "label": "3세",
+       "depth": 1,
+       "box": [
+        279,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/유치원>3세"
+      },
+      {
+       "label": "4세",
+       "depth": 1,
+       "box": [
+        347,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/유치원>4세"
+      },
+      {
+       "label": "5세",
+       "depth": 1,
+       "box": [
+        416,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/유치원>5세"
+      },
+      {
+       "label": "3~4세",
+       "depth": 1,
+       "box": [
+        484,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/유치원>3~4세"
+      },
+      {
+       "label": "4~5세",
+       "depth": 1,
+       "box": [
+        552,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/유치원>4~5세"
+      },
+      {
+       "label": "3~5세",
+       "depth": 1,
+       "box": [
+        621,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/유치원>3~5세"
+      },
+      {
+       "label": "유치원",
+       "depth": 1,
+       "box": [
+        689,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생>유치원"
+      },
+      {
+       "label": "1학년",
+       "depth": 1,
+       "box": [
+        758,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생>1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 1,
+       "box": [
+        826,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생>2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 1,
+       "box": [
+        895,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생>3학년"
+      },
+      {
+       "label": "4학년",
+       "depth": 1,
+       "box": [
+        963,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생>4학년"
+      },
+      {
+       "label": "5학년",
+       "depth": 1,
+       "box": [
+        1032,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생>5학년"
+      },
+      {
+       "label": "6학년",
+       "depth": 1,
+       "box": [
+        1100,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생>6학년"
+      },
+      {
+       "label": "총원",
+       "depth": 1,
+       "box": [
+        1168,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생>총원"
+      },
+      {
+       "label": "교직",
+       "depth": 1,
+       "box": [
+        1237,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생외>교직"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1305,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생외>기타"
+      },
+      {
+       "label": "총원",
+       "depth": 1,
+       "box": [
+        1374,
+        774,
+        68,
+        31
+       ],
+       "id": "col:급식인원목록/학생외>총원"
+      }
+     ],
+     "id": "grid:급식인원목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      867,
+      450,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식단영양량",
+     "id": "heading:식단영양량"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      897,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 평균/권장영양량 : 학교 영양기준량 등록 정보 / 식단영양량 : 요리 등록 정보 영양량 산출",
+     "id": "note:※ 평균/권장영양량 : 학교 영양기준량 등록 정보 / 식단영양량 : 요리 등록 정보 영양량 산출"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      916,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 에너지비율 : ((식단에너지량-권장에너지섭취량)/권장에너지섭취량)*100 / 탄수화물비율 : ((탄수화물*4)/((탄수화물*4)+(단백질*4)+(지방*9)))*100",
+     "id": "note:※ 에너지비율 : ((식단에너지량-권장에너지섭취량)/권장에너지섭취량)*100 / 탄수화물비율 : ((탄수화물*4)/((탄수화물*4)+(단백질*4)+(지방*9)))*100"
+    },
+    {
+     "aria": null,
+     "box": [
+      348,
+      1039,
+      103,
+      70
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "에너지",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:에너지"
+    },
+    {
+     "aria": null,
+     "box": [
+      460,
+      1039,
+      103,
+      70
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "탄수화물",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:탄수화물"
+    },
+    {
+     "aria": null,
+     "box": [
+      573,
+      1039,
+      103,
+      70
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "단백질",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:단백질"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      1039,
+      103,
+      70
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "지방",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:지방"
+    },
+    {
+     "aria": null,
+     "box": [
+      798,
+      1039,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비타민A",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:비타민A"
+    },
+    {
+     "aria": null,
+     "box": [
+      910,
+      1039,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "티아민",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:티아민"
+    },
+    {
+     "aria": null,
+     "box": [
+      1023,
+      1039,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "리보 플라빈",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:리보 플라빈"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      1039,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비타민C",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:비타민C"
+    },
+    {
+     "aria": null,
+     "box": [
+      1248,
+      1039,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "칼슘",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:칼슘"
+    },
+    {
+     "aria": null,
+     "box": [
+      1360,
+      1039,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "철",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:철"
+    },
+    {
+     "aria": null,
+     "box": [
+      1473,
+      1039,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "나트륨",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:나트륨"
+    },
+    {
+     "aria": null,
+     "box": [
+      348,
+      1119,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식단영양량",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:식단영양량"
+    },
+    {
+     "aria": null,
+     "box": [
+      460,
+      1119,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식단영양량",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:식단영양량#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      348,
+      1159,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "탄수화물:단백질:지방(%)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:탄수화물:단백질:지방(%)"
+    },
+    {
+     "aria": null,
+     "box": [
+      460,
+      1159,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "탄수화물:단백질:지방(%)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:탄수화물:단백질:지방(%)#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      348,
+      1199,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주평균섭취량(월~금)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:주평균섭취량(월~금)"
+    },
+    {
+     "aria": null,
+     "box": [
+      460,
+      1199,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주평균섭취량(월~금)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:주평균섭취량(월~금)#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1286,
+      1255,
+      109,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(선택)내요리적용",
+     "variant": "primary",
+     "id": "button:(선택)내요리적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1403,
+      1255,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(요리)행추가",
+     "variant": "plain",
+     "id": "button:(요리)행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1495,
+      1255,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(요리)행삭제",
+     "variant": "plain",
+     "id": "button:(요리)행삭제"
+    },
+    {
+     "aria": "요리내역",
+     "box": [
+      25,
+      1265,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요리내역",
+     "id": "heading:요리내역"
+    },
+    {
+     "aria": "요리내역",
+     "box": [
+      25,
+      1295,
+      1555,
+      79
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "요리내역",
+     "selectable": true,
+     "declaredColumns": 19,
+     "columns": [
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        76,
+        1296,
+        130,
+        36
+       ],
+       "id": "col:요리내역/요리명"
+      },
+      {
+       "label": "식단검토",
+       "depth": 0,
+       "box": [
+        206,
+        1296,
+        123,
+        36
+       ],
+       "span": 2,
+       "id": "col:요리내역/식단검토"
+      },
+      {
+       "label": "에너지",
+       "depth": 0,
+       "box": [
+        329,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/에너지"
+      },
+      {
+       "label": "탄수화물",
+       "depth": 0,
+       "box": [
+        407,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/탄수화물"
+      },
+      {
+       "label": "단백질",
+       "depth": 0,
+       "box": [
+        484,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/단백질"
+      },
+      {
+       "label": "지방",
+       "depth": 0,
+       "box": [
+        562,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/지방"
+      },
+      {
+       "label": "비타민A",
+       "depth": 0,
+       "box": [
+        640,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/비타민A"
+      },
+      {
+       "label": "티아민",
+       "depth": 0,
+       "box": [
+        718,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/티아민"
+      },
+      {
+       "label": "리보플라빈",
+       "depth": 0,
+       "box": [
+        796,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/리보플라빈"
+      },
+      {
+       "label": "나이아신",
+       "depth": 0,
+       "box": [
+        874,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/나이아신"
+      },
+      {
+       "label": "비타민C",
+       "depth": 0,
+       "box": [
+        952,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/비타민C"
+      },
+      {
+       "label": "비타민D",
+       "depth": 0,
+       "box": [
+        1030,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/비타민D"
+      },
+      {
+       "label": "칼슘",
+       "depth": 0,
+       "box": [
+        1107,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/칼슘"
+      },
+      {
+       "label": "철",
+       "depth": 0,
+       "box": [
+        1185,
+        1296,
+        78,
+        36
+       ],
+       "id": "col:요리내역/철"
+      },
+      {
+       "label": "완료시간1",
+       "depth": 0,
+       "box": [
+        1263,
+        1296,
+        75,
+        36
+       ],
+       "id": "col:요리내역/완료시간1"
+      },
+      {
+       "label": "완료시간2",
+       "depth": 0,
+       "box": [
+        1338,
+        1296,
+        75,
+        36
+       ],
+       "id": "col:요리내역/완료시간2"
+      },
+      {
+       "label": "완료시간3",
+       "depth": 0,
+       "box": [
+        1413,
+        1296,
+        75,
+        36
+       ],
+       "id": "col:요리내역/완료시간3"
+      },
+      {
+       "label": "영양교사‧ 영양사ID",
+       "depth": 0,
+       "box": [
+        1488,
+        1296,
+        91,
+        36
+       ],
+       "id": "col:요리내역/영양교사‧ 영양사ID"
+      }
+     ],
+     "id": "grid:요리내역"
+    },
+    {
+     "aria": "자리수 조정 항목",
+     "box": [
+      780,
+      1394,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "자리수 조정 항목",
+     "options": [
+      "반올림",
+      "내림",
+      "올림"
+     ],
+     "id": "radio:자리수 조정 항목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1072,
+      1394,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "총량자리수조정",
+     "variant": "plain",
+     "id": "button:총량자리수조정"
+    },
+    {
+     "aria": null,
+     "box": [
+      1187,
+      1394,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "총량재계산",
+     "variant": "plain",
+     "id": "button:총량재계산"
+    },
+    {
+     "aria": null,
+     "box": [
+      1271,
+      1394,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "내식품속성가져오기",
+     "variant": "plain",
+     "id": "button:내식품속성가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1403,
+      1394,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(식품)행추가",
+     "variant": "plain",
+     "id": "button:(식품)행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1495,
+      1394,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(식품)행삭제",
+     "variant": "plain",
+     "id": "button:(식품)행삭제"
+    },
+    {
+     "aria": "요리식품구성",
+     "box": [
+      25,
+      1404,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요리식품구성",
+     "id": "heading:요리식품구성"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1434,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 총량을 기준으로 급식일지 및 품의수량이 결정됩니다.",
+     "id": "note:※ 총량을 기준으로 급식일지 및 품의수량이 결정됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1453,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 추가/삭제한 식재료의 알레르기 정보는 자동으로 반영되지 않으니 유의하시기 바랍니다.",
+     "id": "note:※ 추가/삭제한 식재료의 알레르기 정보는 자동으로 반영되지 않으니 유의하시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1471,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식품을 변경하시고자 할 경우에는 기존 식품을 삭제하고 새로운 식품을 추가하여 주시기 바랍니다.",
+     "id": "note:※ 식품을 변경하시고자 할 경우에는 기존 식품을 삭제하고 새로운 식품을 추가하여 주시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1490,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식품명을 저장 또는 삭제하는 경우 '내요리'에 반영되도록 하기위해서는 식단 저장 또는 삭제 시 '내요리적용' 체크박스를 선택하시기 바랍니다.",
+     "id": "note:※ 식품명을 저장 또는 삭제하는 경우 '내요리'에 반영되도록 하기위해서는 식단 저장 또는 삭제 시 '내요리적용' 체크박스를 선택하시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1508,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 총량자리수(자리수조정) : 반올림, 올림, 내림 선택에 따라 총량에 대한 소수점 자리수를 처리합니다.",
+     "id": "note:※ 총량자리수(자리수조정) : 반올림, 올림, 내림 선택에 따라 총량에 대한 소수점 자리수를 처리합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1527,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 저장 시 식품 추가 및 총량 입력 후 저장하면 자동으로 1인량 계산이 됩니다.",
+     "id": "note:※ 저장 시 식품 추가 및 총량 입력 후 저장하면 자동으로 1인량 계산이 됩니다."
+    },
+    {
+     "aria": "요릭식품구성",
+     "box": [
+      25,
+      1580,
+      1555,
+      55
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "요릭식품구성",
+     "selectable": true,
+     "declaredColumns": 24,
+     "columns": [
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        76,
+        1581,
+        100,
+        36
+       ],
+       "id": "col:요릭식품구성/요리명"
+      },
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        176,
+        1581,
+        150,
+        36
+       ],
+       "id": "col:요릭식품구성/식품명"
+      },
+      {
+       "label": "식품속성",
+       "depth": 0,
+       "box": [
+        326,
+        1581,
+        210,
+        36
+       ],
+       "span": 2,
+       "id": "col:요릭식품구성/식품속성"
+      },
+      {
+       "label": "규격수",
+       "depth": 0,
+       "box": [
+        537,
+        1581,
+        80,
+        36
+       ],
+       "id": "col:요릭식품구성/규격수"
+      },
+      {
+       "label": "규격",
+       "depth": 0,
+       "box": [
+        617,
+        1581,
+        60,
+        36
+       ],
+       "id": "col:요릭식품구성/규격"
+      },
+      {
+       "label": "단위",
+       "depth": 0,
+       "box": [
+        677,
+        1581,
+        60,
+        36
+       ],
+       "id": "col:요릭식품구성/단위"
+      },
+      {
+       "label": "총량 (kg/I)",
+       "depth": 0,
+       "box": [
+        737,
+        1581,
+        100,
+        36
+       ],
+       "id": "col:요릭식품구성/총량 (kg/I)"
+      },
+      {
+       "label": "폐기율 (%)",
+       "depth": 0,
+       "box": [
+        837,
+        1581,
+        80,
+        36
+       ],
+       "id": "col:요릭식품구성/폐기율 (%)"
+      },
+      {
+       "label": "가식량 (kg/I)",
+       "depth": 0,
+       "box": [
+        917,
+        1581,
+        80,
+        36
+       ],
+       "id": "col:요릭식품구성/가식량 (kg/I)"
+      },
+      {
+       "label": "1인량 (g/ml)",
+       "depth": 0,
+       "box": [
+        997,
+        1581,
+        100,
+        36
+       ],
+       "id": "col:요릭식품구성/1인량 (g/ml)"
+      },
+      {
+       "label": "단가",
+       "depth": 0,
+       "box": [
+        1097,
+        1581,
+        100,
+        36
+       ],
+       "id": "col:요릭식품구성/단가"
+      },
+      {
+       "label": "단가",
+       "depth": 0,
+       "box": [
+        1197,
+        1581,
+        100,
+        36
+       ],
+       "id": "col:요릭식품구성/단가#2"
+      },
+      {
+       "label": "1인단가",
+       "depth": 0,
+       "box": [
+        1297,
+        1581,
+        100,
+        36
+       ],
+       "id": "col:요릭식품구성/1인단가"
+      },
+      {
+       "label": "에너지",
+       "depth": 0,
+       "box": [
+        1397,
+        1581,
+        60,
+        36
+       ],
+       "id": "col:요릭식품구성/에너지"
+      },
+      {
+       "label": "탄수화물",
+       "depth": 0,
+       "box": [
+        1457,
+        1581,
+        60,
+        36
+       ],
+       "id": "col:요릭식품구성/탄수화물"
+      },
+      {
+       "label": "단백질",
+       "depth": 0,
+       "box": [
+        1517,
+        1581,
+        60,
+        36
+       ],
+       "id": "col:요릭식품구성/단백질"
+      },
+      {
+       "label": "지방",
+       "depth": 0,
+       "box": [
+        1577,
+        1581,
+        60,
+        36
+       ],
+       "id": "col:요릭식품구성/지방"
+      }
+     ],
+     "id": "grid:요릭식품구성"
+    },
+    {
+     "aria": "요리방법",
+     "box": [
+      25,
+      1655,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요리방법",
+     "id": "heading:요리방법"
+    },
+    {
+     "aria": "요리방법 및 중점관리사항",
+     "box": [
+      25,
+      1685,
+      1555,
+      39
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "요리방법 및 중점관리사항",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        1686,
+        50,
+        36
+       ],
+       "id": "col:요리방법 및 중점관리사항/순번"
+      },
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        76,
+        1686,
+        115,
+        36
+       ],
+       "id": "col:요리방법 및 중점관리사항/요리명"
+      },
+      {
+       "label": "식단출력명",
+       "depth": 0,
+       "box": [
+        191,
+        1686,
+        115,
+        36
+       ],
+       "id": "col:요리방법 및 중점관리사항/식단출력명"
+      },
+      {
+       "label": "레시피(요리방법)",
+       "depth": 0,
+       "box": [
+        307,
+        1686,
+        519,
+        36
+       ],
+       "id": "col:요리방법 및 중점관리사항/레시피(요리방법)"
+      },
+      {
+       "label": "중점관리사항(특이사항)",
+       "depth": 0,
+       "box": [
+        826,
+        1686,
+        300,
+        36
+       ],
+       "id": "col:요리방법 및 중점관리사항/중점관리사항(특이사항)"
+      },
+      {
+       "label": "알레르기정보",
+       "depth": 0,
+       "box": [
+        1125,
+        1686,
+        454,
+        36
+       ],
+       "span": 2,
+       "id": "col:요리방법 및 중점관리사항/알레르기정보"
+      }
+     ],
+     "id": "grid:요리방법 및 중점관리사항"
+    },
+    {
+     "aria": "원산지표시제",
+     "box": [
+      25,
+      1754,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "원산지표시제",
+     "id": "heading:원산지표시제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1784,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 원산지가 아래 코드에 해당하지 않거나 국내산과 수입산이 혼합된 경우 직접 입력을 통해 원산지 내용을 기록해 주세요.",
+     "id": "note:※ 원산지가 아래 코드에 해당하지 않거나 국내산과 수입산이 혼합된 경우 직접 입력을 통해 원산지 내용을 기록해 주세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1803,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 모든 식재료에 대하여 원산지를 등록해 주세요.",
+     "id": "note:※ 모든 식재료에 대하여 원산지를 등록해 주세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1821,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 현재 식단에서는 사용하지 않는 식재료라도 차후에 사용할 때에는 설정된 원산지의 식재료를 사용합니다.",
+     "id": "note:※ 현재 식단에서는 사용하지 않는 식재료라도 차후에 사용할 때에는 설정된 원산지의 식재료를 사용합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1951,
+      1555,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 2023.7.1.부터 25~29번 추가(「원산지표시법 시행령」제3조)",
+     "id": "note:※ 2023.7.1.부터 25~29번 추가(「원산지표시법 시행령」제3조)"
+    },
+    {
+     "aria": "원산지표시제",
+     "box": [
+      25,
+      2004,
+      1555,
+      118
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "원산지표시제",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        2005,
+        50,
+        36
+       ],
+       "id": "col:원산지표시제/순번"
+      },
+      {
+       "label": "식재료",
+       "depth": 0,
+       "box": [
+        76,
+        2005,
+        301,
+        36
+       ],
+       "id": "col:원산지표시제/식재료"
+      },
+      {
+       "label": "원산지",
+       "depth": 0,
+       "box": [
+        377,
+        2005,
+        601,
+        36
+       ],
+       "span": 2,
+       "id": "col:원산지표시제/원산지"
+      },
+      {
+       "label": "원산지(가공품)",
+       "depth": 0,
+       "box": [
+        978,
+        2005,
+        601,
+        36
+       ],
+       "span": 2,
+       "id": "col:원산지표시제/원산지(가공품)"
+      }
+     ],
+     "id": "grid:원산지표시제"
+    }
+   ]
+  },
+  {
+   "id": "tab:재료별식단작성",
+   "tab": "재료별식단작성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식단작성",
+      "식단작성상세",
+      "재료별식단작성",
+      "영양성분별식단작성(함량율)",
+      "영양성분별식단작성(성분)",
+      "알레르기별식단작성",
+      "식단작성현황",
+      "식단가현황"
+     ],
+     "active": "재료별식단작성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주/월간구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주/월간구분"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      415,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식년월"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      571,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      601,
+      137,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "(월~금 5일간만 출력)",
+     "checked": false,
+     "id": "check:(월~금 5일간만 출력)"
+    },
+    {
+     "aria": null,
+     "box": [
+      881,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      940,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1008,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1075,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※조회 조건에 해당하는 식단>요리>공통식품정보가 조회됩니다.",
+     "id": "note:※조회 조건에 해당하는 식단>요리>공통식품정보가 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※우측 식품내역 목록의 식품공통코드 □선택 후 조회하시면 선택된 재료만 조회됩니다.",
+     "id": "note:※우측 식품내역 목록의 식품공통코드 □선택 후 조회하시면 선택된 재료만 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      235,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※변경전/후 식품코드 등록 시 변경전의 식품코드가 변경후 식품코드로 변경되며, 변경전 식품코드 등록 후 변경후 식품코드 미 등록 시 선택된 급식일자의 요리에 포함된 변경전 식품코드가 삭제됩니다.",
+     "id": "note:※변경전/후 식품코드 등록 시 변경전의 식품코드가 변경후 식품코드로 변경되며, 변경전 식품코드 등록 후 변경후 식품코드 미 등록 시 선택된 급식일자의 요리에 포함된 변경전 식품코드가 삭제됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      90,
+      270,
+      213,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "변경전",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:변경전"
+    },
+    {
+     "aria": null,
+     "box": [
+      313,
+      270,
+      160,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 우측 식품내역과 동일",
+     "id": "note:※ 우측 식품내역과 동일"
+    },
+    {
+     "aria": null,
+     "box": [
+      543,
+      270,
+      139,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "변경후",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:변경후"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      902,
+      270,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      938,
+      270,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "(변경전/후)식품코드일괄변경",
+     "box": [
+      978,
+      270,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "(변경전/후)식품코드일괄변경",
+     "variant": "primary",
+     "id": "button:(변경전/후)식품코드일괄변경"
+    },
+    {
+     "aria": null,
+     "box": [
+      1356,
+      270,
+      109,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "품의내역재계산",
+     "checked": false,
+     "id": "check:품의내역재계산"
+    },
+    {
+     "aria": null,
+     "box": [
+      1473,
+      270,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "(전체) 내요리적용",
+     "checked": false,
+     "id": "check:(전체) 내요리적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      351,
+      110,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "급식일자전체",
+     "checked": false,
+     "id": "check:급식일자전체"
+    },
+    {
+     "aria": "식품내역",
+     "box": [
+      1300,
+      361,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식품내역",
+     "id": "heading:식품내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      26,
+      392,
+      1258,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "[-접기]",
+       "depth": 0,
+       "box": [
+        27,
+        393,
+        90,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/[-접기]"
+      },
+      {
+       "label": "일",
+       "depth": 0,
+       "box": [
+        117,
+        393,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/일"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        284,
+        393,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/월"
+      },
+      {
+       "label": "화",
+       "depth": 0,
+       "box": [
+        450,
+        393,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/화"
+      },
+      {
+       "label": "수",
+       "depth": 0,
+       "box": [
+        617,
+        393,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/수"
+      },
+      {
+       "label": "목",
+       "depth": 0,
+       "box": [
+        783,
+        393,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/목"
+      },
+      {
+       "label": "금",
+       "depth": 0,
+       "box": [
+        950,
+        393,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/금"
+      },
+      {
+       "label": "토",
+       "depth": 0,
+       "box": [
+        1116,
+        393,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/토"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1426,
+      401,
+      164,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식품그룹",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품그룹"
+    },
+    {
+     "aria": null,
+     "box": [
+      1426,
+      437,
+      164,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식품대분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품대분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1426,
+      473,
+      164,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식품중분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식품중분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1426,
+      509,
+      164,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식품소분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식품소분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1540,
+      545,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검색",
+     "variant": "primary",
+     "id": "button:검색#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1300,
+      591,
+      300,
+      526
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "식품공통코드",
+       "depth": 0,
+       "box": [
+        1329,
+        592,
+        52,
+        36
+       ],
+       "id": "col:그리드/식품공통코드"
+      },
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        1381,
+        592,
+        173,
+        36
+       ],
+       "id": "col:그리드/식품명"
+      },
+      {
+       "label": "적용 식품수",
+       "depth": 0,
+       "box": [
+        1554,
+        592,
+        45,
+        36
+       ],
+       "id": "col:그리드/적용 식품수"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  },
+  {
+   "id": "tab:영양성분별식단작성(함량율)",
+   "tab": "영양성분별식단작성(함량율)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식단작성",
+      "식단작성상세",
+      "재료별식단작성",
+      "영양성분별식단작성(함량율)",
+      "영양성분별식단작성(성분)",
+      "알레르기별식단작성",
+      "식단작성현황",
+      "식단가현황"
+     ],
+     "active": "영양성분별식단작성(함량율)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주/월간구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주/월간구분"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      415,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식년월"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      571,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      601,
+      137,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "(월~금 5일간만 출력)",
+     "checked": false,
+     "id": "check:(월~금 5일간만 출력)"
+    },
+    {
+     "aria": null,
+     "box": [
+      881,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      940,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1008,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1075,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※탄수화물(g), 단백질(g), 지방(g), 에너지(g) 함량율",
+     "id": "note:※탄수화물(g), 단백질(g), 지방(g), 에너지(g) 함량율"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※탄수화물:단백질:지방=55~65%:7~20%:15~30%",
+     "id": "note:※탄수화물:단백질:지방=55~65%:7~20%:15~30%"
+    },
+    {
+     "aria": null,
+     "box": [
+      26,
+      691,
+      1573,
+      39
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "[-접기]",
+       "depth": 0,
+       "box": [
+        27,
+        692,
+        160,
+        36
+       ],
+       "span": 3,
+       "id": "col:그리드/[-접기]"
+      },
+      {
+       "label": "일",
+       "depth": 0,
+       "box": [
+        187,
+        692,
+        202,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/일"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        389,
+        692,
+        202,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/월"
+      },
+      {
+       "label": "화",
+       "depth": 0,
+       "box": [
+        590,
+        692,
+        202,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/화"
+      },
+      {
+       "label": "수",
+       "depth": 0,
+       "box": [
+        792,
+        692,
+        202,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/수"
+      },
+      {
+       "label": "목",
+       "depth": 0,
+       "box": [
+        993,
+        692,
+        202,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/목"
+      },
+      {
+       "label": "금",
+       "depth": 0,
+       "box": [
+        1195,
+        692,
+        202,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/금"
+      },
+      {
+       "label": "토",
+       "depth": 0,
+       "box": [
+        1396,
+        692,
+        202,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/토"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:영양성분별식단작성(성분)",
+   "tab": "영양성분별식단작성(성분)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식단작성",
+      "식단작성상세",
+      "재료별식단작성",
+      "영양성분별식단작성(함량율)",
+      "영양성분별식단작성(성분)",
+      "알레르기별식단작성",
+      "식단작성현황",
+      "식단가현황"
+     ],
+     "active": "영양성분별식단작성(성분)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주/월간구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주/월간구분"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      415,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식년월"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      571,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      601,
+      137,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "(월~금 5일간만 출력)",
+     "checked": false,
+     "id": "check:(월~금 5일간만 출력)"
+    },
+    {
+     "aria": null,
+     "box": [
+      881,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      940,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1008,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1075,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 평균/권장영양량:학교영양기준량 등록 정보/식단영양량:요리 등록 정보 영양량 산출",
+     "id": "note:※ 평균/권장영양량:학교영양기준량 등록 정보/식단영양량:요리 등록 정보 영양량 산출"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 에너지비율:((식단에너지량ㆍ권장에너지섭취량)/권장에너지섭취량*100 / 탄수화물비율 : (탄수화물*4)/((탄수화물*4)+(단백질*4)+(지방*9))*100",
+     "id": "note:※ 에너지비율:((식단에너지량ㆍ권장에너지섭취량)/권장에너지섭취량*100 / 탄수화물비율 : (탄수화물*4)/((탄수화물*4)+(단백질*4)+(지방*9))*100"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      235,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식단진행상태가 미작성이 아닌 식단에서 각 영양성분별로 식단영양량이 권장섭취량보다 적으면 빨간색으로 표시",
+     "id": "note:※ 식단진행상태가 미작성이 아닌 식단에서 각 영양성분별로 식단영양량이 권장섭취량보다 적으면 빨간색으로 표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      254,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 주평균섭취량은 주말포함 계산되어 식단작성, 식단작성상세의 주평균섭취량(월~금)과 상이할 수 있습니다.",
+     "id": "note:※ 주평균섭취량은 주말포함 계산되어 식단작성, 식단작성상세의 주평균섭취량(월~금)과 상이할 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      250,
+      288,
+      150,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "차트타입",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:차트타입"
+    },
+    {
+     "aria": null,
+     "box": [
+      520,
+      288,
+      150,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "영양성분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:영양성분"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      288,
+      60,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "적용",
+     "variant": "plain",
+     "id": "button:적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      26,
+      780,
+      1573,
+      109
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "[-접기]",
+       "depth": 0,
+       "box": [
+        27,
+        781,
+        130,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/[-접기]"
+      },
+      {
+       "label": "기준영양량",
+       "depth": 0,
+       "box": [
+        157,
+        781,
+        320,
+        36
+       ],
+       "span": 3,
+       "id": "col:그리드/기준영양량"
+      },
+      {
+       "label": "일",
+       "depth": 0,
+       "box": [
+        477,
+        781,
+        160,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/일"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        637,
+        781,
+        160,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/월"
+      },
+      {
+       "label": "화",
+       "depth": 0,
+       "box": [
+        797,
+        781,
+        160,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/화"
+      },
+      {
+       "label": "수",
+       "depth": 0,
+       "box": [
+        958,
+        781,
+        160,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/수"
+      },
+      {
+       "label": "목",
+       "depth": 0,
+       "box": [
+        1118,
+        781,
+        160,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/목"
+      },
+      {
+       "label": "금",
+       "depth": 0,
+       "box": [
+        1278,
+        781,
+        160,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/금"
+      },
+      {
+       "label": "토",
+       "depth": 0,
+       "box": [
+        1438,
+        781,
+        160,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/토"
+      },
+      {
+       "label": "구분",
+       "depth": 1,
+       "box": [
+        27,
+        817,
+        130,
+        70
+       ],
+       "span": 2,
+       "id": "col:그리드/[-접기]>구분"
+      },
+      {
+       "label": "평균 필요량",
+       "depth": 1,
+       "box": [
+        157,
+        817,
+        107,
+        70
+       ],
+       "id": "col:그리드/기준영양량>평균 필요량"
+      },
+      {
+       "label": "권장 섭취량",
+       "depth": 1,
+       "box": [
+        264,
+        817,
+        107,
+        70
+       ],
+       "id": "col:그리드/기준영양량>권장 섭취량"
+      },
+      {
+       "label": "주평균 섭취량",
+       "depth": 1,
+       "box": [
+        370,
+        817,
+        107,
+        70
+       ],
+       "id": "col:그리드/기준영양량>주평균 섭취량"
+      },
+      {
+       "label": "식단 영양량",
+       "depth": 1,
+       "box": [
+        477,
+        817,
+        1121,
+        70
+       ],
+       "span": 14,
+       "id": "col:그리드/수>식단 영양량"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:알레르기별식단작성",
+   "tab": "알레르기별식단작성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식단작성",
+      "식단작성상세",
+      "재료별식단작성",
+      "영양성분별식단작성(함량율)",
+      "영양성분별식단작성(성분)",
+      "알레르기별식단작성",
+      "식단작성현황",
+      "식단가현황"
+     ],
+     "active": "알레르기별식단작성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주/월간구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주/월간구분"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      415,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식년월"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      571,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      601,
+      137,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "(월~금 5일간만 출력)",
+     "checked": false,
+     "id": "check:(월~금 5일간만 출력)"
+    },
+    {
+     "aria": null,
+     "box": [
+      881,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      940,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1008,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1075,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 조회 조건에 해당하는 식단>요리>공통식품정보가 조회됩니다.",
+     "id": "note:※ 조회 조건에 해당하는 식단>요리>공통식품정보가 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 우측 식품내역 목록의 식품공통코드 □선택 후 조회하시면 선택된 재료만 조회됩니다.",
+     "id": "note:※ 우측 식품내역 목록의 식품공통코드 □선택 후 조회하시면 선택된 재료만 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      280,
+      110,
+      32
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "급식일자전체",
+     "checked": false,
+     "id": "check:급식일자전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1080,
+      280,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "식단출력명",
+     "checked": false,
+     "id": "check:식단출력명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1173,
+      280,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": "알레르기내역",
+     "box": [
+      1300,
+      290,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "알레르기내역",
+     "id": "heading:알레르기내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      322,
+      1260,
+      706
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "[-접기]",
+       "depth": 0,
+       "box": [
+        26,
+        323,
+        90,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/[-접기]"
+      },
+      {
+       "label": "일",
+       "depth": 0,
+       "box": [
+        116,
+        323,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/일"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        283,
+        323,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/월"
+      },
+      {
+       "label": "화",
+       "depth": 0,
+       "box": [
+        450,
+        323,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/화"
+      },
+      {
+       "label": "수",
+       "depth": 0,
+       "box": [
+        617,
+        323,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/수"
+      },
+      {
+       "label": "목",
+       "depth": 0,
+       "box": [
+        783,
+        323,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/목"
+      },
+      {
+       "label": "금",
+       "depth": 0,
+       "box": [
+        950,
+        323,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/금"
+      },
+      {
+       "label": "토",
+       "depth": 0,
+       "box": [
+        1117,
+        323,
+        167,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/토"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1426,
+      330,
+      164,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "알레르기발생구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:알레르기발생구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1426,
+      366,
+      164,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "알레르기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:알레르기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1540,
+      402,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검색",
+     "variant": "primary",
+     "id": "button:검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      1300,
+      450,
+      300,
+      578
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "알레르기",
+       "depth": 0,
+       "box": [
+        1331,
+        451,
+        60,
+        36
+       ],
+       "id": "col:그리드/알레르기"
+      },
+      {
+       "label": "알레르기명",
+       "depth": 0,
+       "box": [
+        1391,
+        451,
+        149,
+        36
+       ],
+       "id": "col:그리드/알레르기명"
+      },
+      {
+       "label": "적용 요리수",
+       "depth": 0,
+       "box": [
+        1539,
+        451,
+        60,
+        36
+       ],
+       "id": "col:그리드/적용 요리수"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  },
+  {
+   "id": "tab:식단작성현황",
+   "tab": "식단작성현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식단작성",
+      "식단작성상세",
+      "재료별식단작성",
+      "영양성분별식단작성(함량율)",
+      "영양성분별식단작성(성분)",
+      "알레르기별식단작성",
+      "식단작성현황",
+      "식단가현황"
+     ],
+     "active": "식단작성현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      175,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식년월"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      331,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      554,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      622,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      689,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      880,
+      137,
+      279,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 캘린더 작성상태에 따른 색상 - 작성중: 파란색, 수정/식단공개확정/주월간식단확정: 주황색, 식단취소(급식미실시): 회색, 급식일지작성: 분홍색, 급식일지확정: 녹색",
+     "id": "note:※ 캘린더 작성상태에 따른 색상 - 작성중: 파란색, 수정/식단공개확정/주월간식단확정: 주황색, 식단취소(급식미실시): 회색, 급식일지작성: 분홍색, 급식일지확정: 녹색"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 적용일자 및 적용식사구분을 입력하신 후 식단저장을 클릭하시면, 기존 식단의 정보가 적용일자에 등록됩니다.(적용일자 및 적용식사구분이 등록된 데이터가 저장됩니다.)",
+     "id": "note:※ 적용일자 및 적용식사구분을 입력하신 후 식단저장을 클릭하시면, 기존 식단의 정보가 적용일자에 등록됩니다.(적용일자 및 적용식사구분이 등록된 데이터가 저장됩니다.)"
+    },
+    {
+     "aria": null,
+     "box": [
+      676,
+      280,
+      166,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "최근인원/급식인원",
+     "options": [
+      "최근인원",
+      "급식인원"
+     ],
+     "id": "radio:최근인원/급식인원"
+    },
+    {
+     "aria": null,
+     "box": [
+      874,
+      280,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단저장",
+     "variant": "primary",
+     "id": "button:식단저장"
+    },
+    {
+     "aria": "식단현황",
+     "box": [
+      25,
+      292,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식단현황",
+     "id": "heading:식단현황"
+    },
+    {
+     "aria": "요리식품구성",
+     "box": [
+      953,
+      292,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요리식품구성",
+     "id": "heading:요리식품구성"
+    },
+    {
+     "aria": null,
+     "box": [
+      1143,
+      290,
+      457,
+      20
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 체크박스 선택 시 내요리 기준으로 식단에 반영됩니다.",
+     "id": "note:※ 체크박스 선택 시 내요리 기준으로 식단에 반영됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      340,
+      322,
+      598,
+      620
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        341,
+        323,
+        90,
+        36
+       ],
+       "id": "col:그리드/일자"
+      },
+      {
+       "label": "식사 구분",
+       "depth": 0,
+       "box": [
+        431,
+        323,
+        48,
+        36
+       ],
+       "id": "col:그리드/식사 구분"
+      },
+      {
+       "label": "식단명",
+       "depth": 0,
+       "box": [
+        479,
+        323,
+        120,
+        36
+       ],
+       "id": "col:그리드/식단명"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        599,
+        323,
+        96,
+        36
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "적용일자",
+       "depth": 0,
+       "box": [
+        695,
+        323,
+        126,
+        36
+       ],
+       "id": "col:그리드/적용일자"
+      },
+      {
+       "label": "적용구분",
+       "depth": 0,
+       "box": [
+        821,
+        323,
+        78,
+        36
+       ],
+       "id": "col:그리드/적용구분"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      953,
+      322,
+      647,
+      620
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        986,
+        323,
+        93,
+        36
+       ],
+       "id": "col:그리드/요리명"
+      },
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        1078,
+        323,
+        93,
+        36
+       ],
+       "id": "col:그리드/식품명"
+      },
+      {
+       "label": "식품속성",
+       "depth": 0,
+       "box": [
+        1171,
+        323,
+        138,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/식품속성"
+      },
+      {
+       "label": "총량",
+       "depth": 0,
+       "box": [
+        1309,
+        323,
+        58,
+        36
+       ],
+       "id": "col:그리드/총량"
+      },
+      {
+       "label": "1인량",
+       "depth": 0,
+       "box": [
+        1367,
+        323,
+        81,
+        36
+       ],
+       "id": "col:그리드/1인량"
+      },
+      {
+       "label": "급식 단가",
+       "depth": 0,
+       "box": [
+        1448,
+        323,
+        81,
+        36
+       ],
+       "id": "col:그리드/급식 단가"
+      },
+      {
+       "label": "영양교사‧ 영양사ID",
+       "depth": 0,
+       "box": [
+        1529,
+        323,
+        70,
+        36
+       ],
+       "id": "col:그리드/영양교사‧ 영양사ID"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  },
+  {
+   "id": "tab:식단가현황",
+   "tab": "식단가현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식단작성",
+      "식단작성상세",
+      "재료별식단작성",
+      "영양성분별식단작성(함량율)",
+      "영양성분별식단작성(성분)",
+      "알레르기별식단작성",
+      "식단작성현황",
+      "식단가현황"
+     ],
+     "active": "식단작성현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      175,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식년월"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      331,
+      137,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      554,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      622,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      689,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      880,
+      137,
+      279,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 캘린더 작성상태에 따른 색상 - 작성중: 파란색, 수정/식단공개확정/주월간식단확정: 주황색, 식단취소(급식미실시): 회색, 급식일지작성: 분홍색, 급식일지확정: 녹색",
+     "id": "note:※ 캘린더 작성상태에 따른 색상 - 작성중: 파란색, 수정/식단공개확정/주월간식단확정: 주황색, 식단취소(급식미실시): 회색, 급식일지작성: 분홍색, 급식일지확정: 녹색"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 적용일자 및 적용식사구분을 입력하신 후 식단저장을 클릭하시면, 기존 식단의 정보가 적용일자에 등록됩니다.(적용일자 및 적용식사구분이 등록된 데이터가 저장됩니다.)",
+     "id": "note:※ 적용일자 및 적용식사구분을 입력하신 후 식단저장을 클릭하시면, 기존 식단의 정보가 적용일자에 등록됩니다.(적용일자 및 적용식사구분이 등록된 데이터가 저장됩니다.)"
+    },
+    {
+     "aria": null,
+     "box": [
+      676,
+      280,
+      166,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "최근인원/급식인원",
+     "options": [
+      "최근인원",
+      "급식인원"
+     ],
+     "id": "radio:최근인원/급식인원"
+    },
+    {
+     "aria": null,
+     "box": [
+      874,
+      280,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "식단저장",
+     "variant": "primary",
+     "id": "button:식단저장"
+    },
+    {
+     "aria": "식단현황",
+     "box": [
+      25,
+      292,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식단현황",
+     "id": "heading:식단현황"
+    },
+    {
+     "aria": "요리식품구성",
+     "box": [
+      953,
+      292,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요리식품구성",
+     "id": "heading:요리식품구성"
+    },
+    {
+     "aria": null,
+     "box": [
+      1151,
+      290,
+      449,
+      20
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 체크박스 선택 시 내요리 기준으로 식단에 반영됩니다.",
+     "id": "note:※ 체크박스 선택 시 내요리 기준으로 식단에 반영됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      340,
+      322,
+      598,
+      620
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        341,
+        323,
+        88,
+        36
+       ],
+       "id": "col:그리드/일자"
+      },
+      {
+       "label": "식사 구분",
+       "depth": 0,
+       "box": [
+        429,
+        323,
+        47,
+        36
+       ],
+       "id": "col:그리드/식사 구분"
+      },
+      {
+       "label": "식단명",
+       "depth": 0,
+       "box": [
+        475,
+        323,
+        117,
+        36
+       ],
+       "id": "col:그리드/식단명"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        592,
+        323,
+        93,
+        36
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "적용일자",
+       "depth": 0,
+       "box": [
+        685,
+        323,
+        123,
+        36
+       ],
+       "id": "col:그리드/적용일자"
+      },
+      {
+       "label": "적용구분",
+       "depth": 0,
+       "box": [
+        808,
+        323,
+        76,
+        36
+       ],
+       "id": "col:그리드/적용구분"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      953,
+      322,
+      647,
+      620
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        986,
+        323,
+        90,
+        36
+       ],
+       "id": "col:그리드/요리명"
+      },
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        1076,
+        323,
+        90,
+        36
+       ],
+       "id": "col:그리드/식품명"
+      },
+      {
+       "label": "식품속성",
+       "depth": 0,
+       "box": [
+        1166,
+        323,
+        135,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/식품속성"
+      },
+      {
+       "label": "총량",
+       "depth": 0,
+       "box": [
+        1301,
+        323,
+        56,
+        36
+       ],
+       "id": "col:그리드/총량"
+      },
+      {
+       "label": "1인량",
+       "depth": 0,
+       "box": [
+        1357,
+        323,
+        79,
+        36
+       ],
+       "id": "col:그리드/1인량"
+      },
+      {
+       "label": "급식 단가",
+       "depth": 0,
+       "box": [
+        1436,
+        323,
+        79,
+        36
+       ],
+       "id": "col:그리드/급식 단가"
+      },
+      {
+       "label": "영양교사‧ 영양사ID",
+       "depth": 0,
+       "box": [
+        1515,
+        323,
+        68,
+        36
+       ],
+       "id": "col:그리드/영양교사‧ 영양사ID"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식단관리 > 식단작성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

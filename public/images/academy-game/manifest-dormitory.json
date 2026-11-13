@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-13",
+  "generator": "built-in imagegen",
+  "assets": [
+    {
+      "file": "dorm.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-498ee4c6-0019-46af-8faf-c672a92dace4.png",
+      "status": "ready",
+      "key": "dorm",
+      "refs": [
+        "D:/spacekijun/public/images/academy-game/library.png"
+      ],
+      "prompt": "Create ONE1536x1024 landscape background for point and click Korean romance fantasy academy game. Match library reference painterly architecture, purple twilight and gold detailing but a COZY PRIVATE STUDENT DORMITORY ROOM human-scale. No characters. Camera from near front doorway looking into room, broad clear parquet floor lower35% for full-body sprites. On LEFT at x25% y50% an ornate walnut writing desk with clearly visible open cream planner book and quill, a chair tucked under. On RIGHT x78% y45% a tall ivory-gold wardrobe with open doors showing purple cloaks and clothes, with full length mirror. CENTER BACK x55% a modest single four-poster bed lavender covers, small arched window above with violet academy towers. On desk at x40% y55% a sealed gold-edged illustrated goods catalog. Warm bedside lamps, books, tasteful roses and star embroidery, detailed but readable large objects, intimate believable room-scale not giant hall. Eye-level wide game environment, realistic coherent furniture perspective, no text/no labels/no UI/no watermark. Full opaque background."
+    },
+    {
+      "file": "dorm-rose.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-c25e1de2-a276-4670-b39a-4e7fd73ec71d.png",
+      "status": "ready",
+      "key": "dorm-rose",
+      "refs": [
+        "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-498ee4c6-0019-46af-8faf-c672a92dace4.png"
+      ],
+      "prompt": "Edit this exact1536x1024 rofan dormitory background for a purchasable ROSE DECOR room theme. Preserve every wall, furniture shape and position, perspective and floor area, open planner on left desk and wardrobe on right, same lighting/art. Change lavender bed cover/canopy/cushions to blush rose pink and cream lace with rose embroidery. Add tasteful pink climbing roses around bed posts and pink bouquets on left desk and small bedside table, rose-gold accents. Keep surfaces functional and window view unchanged. No people no text no UI no watermark. This must be exactly the same room with new decoration, not a different layout."
+    },
+    {
+      "file": "dorm-stars.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-38933b9e-de96-4bec-8935-ddd4b9f725d6.png",
+      "status": "ready",
+      "key": "dorm-stars",
+      "refs": [
+        "D:/spacekijun/public/images/academy-game/dorm.png"
+      ],
+      "prompt": "Edit this exact1536x1024 rofan dormitory background for a purchasable STAR DECOR room theme. Preserve every wall, furniture shape and position, perspective and floor area, open planner on left desk and wardrobe on right, same painterly art. Change bed cover/canopy/cushions to deep midnight blue velvet with rich gold constellations embroidery. Add a few tiny golden star string-lights around bed posts, small brass armillary sphere on bedside table, a tasteful star mobile by arched window. A cooler blue twilight window with bright small stars, warm gold desk lamps for contrast. No people no text no UI no watermark. Exactly the same room with different furnishing textiles and star decorations, not a new layout."
+    },
+    {
+      "file": "ria-rose.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-e0f9c212-51bb-42b4-a560-31a73b6d87d5.png",
+      "status": "ready",
+      "key": "ria-rose",
+      "refs": [
+        "D:/spacekijun/public/images/academy-game/ria-player.png"
+      ],
+      "prompt": "EDIT THE REFERENCE CHARACTER SPRITE, keep Ria EXACTLY recognizable: preserve face geometry, expression, violet eyes, brown long wavy hair, purple hair bow, identical pose/body/placement/camera/canvas1024x1536 with whole feet and all hair inside frame. Change CLOTHING ONLY into romantic-fantasy rose walking dress: dusty rose-pink long skirt with cream lace underskirt, fitted ivory corset-waist bodice with pink floral embroidery, delicate rose-pink short shoulder capelet, white modest puff sleeves, gold rose brooch and laced brown ankle boots. Same brown satchel can remain. Face and hairstyle must be unchanged, do not redraw into another person or chibi. She holds skirt in same hand and satchel strap in same hand. Full body vertical standing character sprite, same lovely detailed painterly Korean rofan game style. Background MUST be genuinely TRANSPARENT RGBA alpha with no painted checkerboard no gradient no shadow no glow backdrop. Isolated cutout character only. No text watermark UI.",
+      "postprocess": {
+        "authorization": "User approved local background removal with 진행 after explicit request.",
+        "tool": "Local Transformers.js 3.7.1 + Sharp",
+        "model": "Xenova/modnet",
+        "model_reference": "https://huggingface.co/Xenova/modnet",
+        "license": "Apache-2.0",
+        "method": "Infer alpha locally, one-pixel matte contraction, snap below 8 to 0 and above 247 to 255. Original RGB preserved exactly.",
+        "format": "1024x1536 RGBA PNG",
+        "script": "scripts/academy-test/prepare-outfit-alpha.mjs",
+        "verification": "scripts/academy-test/verify-outfit-alpha.mjs: RGB identical; face interior opaque; corners transparent; browser composites checked."
+      }
+    },
+    {
+      "file": "luon-blue.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-56c60d1a-b842-419b-89ee-84efe0007a67.png",
+      "status": "ready",
+      "key": "luon-blue",
+      "refs": [
+        "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-97edadac-6b5e-46f6-bf09-2fa4eb9ee33b.png"
+      ],
+      "prompt": "Edit FIRST reference character into his blue ceremonial outfit. Preserve EXACT same silver-white layered wavy hair, blue eyes, face anatomy and expression from FIRST image, same full body hand extended pose, same tall adult male proportions and 1024x1536 canvas. FIRST reference is canonical LUON identity. SECOND reference is CLOTHING inspiration ONLY: replace his dark navy jacket with royal cobalt blue velvet long jacket with antique gold constellation embroidery and ivory damask waistcoat, charcoal trousers, black boots. Never adopt the brown hair or purple eyes of second reference; character MUST have the first reference's silver-white hair and pale BLUE eyes. Korean romance fantasy manhwa elegant detailed painterly style. Full head, hands, feet inside frame. One character cutout. PNG with genuinely transparent alpha outside the person. No checkerboard no cloth texture no pattern no background no halo no ground no text.",
+      "postprocess": "User-authorized local MODNet alpha matting; RGB preserved. See prepare-outfit-alpha.mjs.",
+      "previous_source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-ddb070a6-dcf0-4564-acd7-d144febdae03.png"
+    }
+  ],
+  "excluded": [
+    "ria-rose-transparent: painted checkerboard remained",
+    "ria-rose-cutout: alpha output but changed character face; excluded to preserve identity"
+  ]
+}

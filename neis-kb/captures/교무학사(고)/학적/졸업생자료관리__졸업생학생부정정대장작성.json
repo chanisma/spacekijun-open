@@ -1,0 +1,361 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업생자료관리›졸업생학생부정정대장작성",
+ "name": "졸업생학생부정정대장작성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:19:41+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "변경년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:변경년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 결재 진행중인 정정대장은 수정, 삭제를 할 수 없으며 '정정내역확인'을 이용한 상세조회만 됩니다.",
+     "id": "note:※ 결재 진행중인 정정대장은 수정, 삭제를 할 수 없으며 '정정내역확인'을 이용한 상세조회만 됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정정대장 결재 완료하면 학교생활기록부에 정정한 자료가 반영됩니다.",
+     "id": "note:※ 정정대장 결재 완료하면 학교생활기록부에 정정한 자료가 반영됩니다."
+    },
+    {
+     "aria": "1. 정정대장목록",
+     "box": [
+      434,
+      205,
+      262,
+      29
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "1. 정정대장목록",
+     "variant": "link",
+     "id": "button:1. 정정대장목록"
+    },
+    {
+     "aria": "2. 정정대장등록",
+     "box": [
+      740,
+      205,
+      262,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "2. 정정대장등록",
+     "variant": "link",
+     "id": "button:2. 정정대장등록"
+    },
+    {
+     "aria": "3. 항목별정정",
+     "box": [
+      1047,
+      205,
+      262,
+      29
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "3. 항목별정정",
+     "variant": "link",
+     "id": "button:3. 항목별정정"
+    },
+    {
+     "aria": "4. 승인요청",
+     "box": [
+      1353,
+      205,
+      262,
+      29
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "4. 승인요청",
+     "variant": "link",
+     "id": "button:4. 승인요청"
+    },
+    {
+     "aria": "학생 목록",
+     "box": [
+      25,
+      235,
+      394,
+      578
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "졸업일자",
+       "depth": 0,
+       "box": [
+        26,
+        236,
+        88,
+        62
+       ],
+       "id": "col:학생 목록/졸업일자"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        114,
+        236,
+        119,
+        62
+       ],
+       "id": "col:학생 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        232,
+        236,
+        103,
+        62
+       ],
+       "id": "col:학생 목록/성명"
+      },
+      {
+       "label": "확인",
+       "depth": 0,
+       "box": [
+        335,
+        236,
+        83,
+        62
+       ],
+       "id": "col:학생 목록/확인"
+      }
+     ],
+     "id": "grid:학생 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      265,
+      651,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ '정정대장등록'화면에서 정정대장을 등록하면 '항목별정정'이 활성화 됩니다.",
+     "id": "note:※ '정정대장등록'화면에서 정정대장을 등록하면 '항목별정정'이 활성화 됩니다."
+    },
+    {
+     "aria": "정정내역확인",
+     "box": [
+      1384,
+      265,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "link",
+     "id": "button:정정내역확인"
+    },
+    {
+     "aria": "정정대장수정",
+     "box": [
+      1479,
+      265,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "정정대장수정",
+     "variant": "link",
+     "id": "button:정정대장수정"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      265,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "정정대장목록 그리드",
+     "box": [
+      434,
+      305,
+      1181,
+      508
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "정정대장목록 그리드",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "졸업년도",
+       "depth": 0,
+       "box": [
+        485,
+        306,
+        100,
+        46
+       ],
+       "id": "col:정정대장목록 그리드/졸업년도"
+      },
+      {
+       "label": "심의일자",
+       "depth": 0,
+       "box": [
+        585,
+        306,
+        197,
+        46
+       ],
+       "id": "col:정정대장목록 그리드/심의일자"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        782,
+        306,
+        197,
+        46
+       ],
+       "id": "col:정정대장목록 그리드/성명"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        979,
+        306,
+        493,
+        46
+       ],
+       "id": "col:정정대장목록 그리드/항목"
+      },
+      {
+       "label": "상신상태",
+       "depth": 0,
+       "box": [
+        1472,
+        306,
+        142,
+        46
+       ],
+       "id": "col:정정대장목록 그리드/상신상태"
+      }
+     ],
+     "id": "grid:정정대장목록 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업생자료관리 > 졸업생학생부정정대장작성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

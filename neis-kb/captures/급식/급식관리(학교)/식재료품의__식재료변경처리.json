@@ -1,0 +1,494 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식재료품의›식재료변경처리",
+ "name": "식재료변경처리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:46:30+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수예정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수예정일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      82,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1024,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1092,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1159,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진행상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:진행상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공통식품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      122,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식재료품의변경 가능 조건 : 품의 처리후 식재료품의변경이 가능합니다.",
+     "id": "note:※ 식재료품의변경 가능 조건 : 품의 처리후 식재료품의변경이 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      192,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 품의 변경 중 에듀파인 취소 및 품의 취소가 발생될 경우 식재료품의목록작성에서 품의내역 조회가 가능합니다.",
+     "id": "note:※ 품의 변경 중 에듀파인 취소 및 품의 취소가 발생될 경우 식재료품의목록작성에서 품의내역 조회가 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      245,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1315,
+      245,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(식품)행추가",
+     "variant": "plain",
+     "id": "button:(식품)행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1408,
+      245,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(식품)행삭제",
+     "variant": "plain",
+     "id": "button:(식품)행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      245,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      245,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "식재료품의목록",
+     "box": [
+      25,
+      255,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식재료품의목록",
+     "id": "heading:식재료품의목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      153,
+      286,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "예정단가반영",
+     "variant": "primary",
+     "id": "button:예정단가반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      286,
+      165,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "업체군별/단위기준총량조회",
+     "variant": "plain",
+     "id": "button:업체군별/단위기준총량조회"
+    },
+    {
+     "aria": "식재료품의처리목록",
+     "box": [
+      25,
+      327,
+      1575,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "식재료품의처리목록",
+     "selectable": true,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        76,
+        328,
+        120,
+        38
+       ],
+       "id": "col:식재료품의처리목록/진행상태"
+      },
+      {
+       "label": "검수예정일자",
+       "depth": 0,
+       "box": [
+        196,
+        328,
+        115,
+        38
+       ],
+       "id": "col:식재료품의처리목록/검수예정일자"
+      },
+      {
+       "label": "품의일자",
+       "depth": 0,
+       "box": [
+        311,
+        328,
+        90,
+        38
+       ],
+       "id": "col:식재료품의처리목록/품의일자"
+      },
+      {
+       "label": "급식일자",
+       "depth": 0,
+       "box": [
+        401,
+        328,
+        90,
+        38
+       ],
+       "id": "col:식재료품의처리목록/급식일자"
+      },
+      {
+       "label": "식사구분",
+       "depth": 0,
+       "box": [
+        491,
+        328,
+        60,
+        38
+       ],
+       "id": "col:식재료품의처리목록/식사구분"
+      },
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        551,
+        328,
+        256,
+        38
+       ],
+       "span": 3,
+       "id": "col:식재료품의처리목록/식품명"
+      },
+      {
+       "label": "식품속성",
+       "depth": 0,
+       "box": [
+        807,
+        328,
+        180,
+        38
+       ],
+       "id": "col:식재료품의처리목록/식품속성"
+      },
+      {
+       "label": "업체군",
+       "depth": 0,
+       "box": [
+        987,
+        328,
+        100,
+        38
+       ],
+       "id": "col:식재료품의처리목록/업체군"
+      },
+      {
+       "label": "검수수량",
+       "depth": 0,
+       "box": [
+        1087,
+        328,
+        100,
+        38
+       ],
+       "id": "col:식재료품의처리목록/검수수량"
+      },
+      {
+       "label": "단가",
+       "depth": 0,
+       "box": [
+        1187,
+        328,
+        120,
+        38
+       ],
+       "id": "col:식재료품의처리목록/단가"
+      },
+      {
+       "label": "계약금액",
+       "depth": 0,
+       "box": [
+        1307,
+        328,
+        100,
+        38
+       ],
+       "id": "col:식재료품의처리목록/계약금액"
+      },
+      {
+       "label": "변경전 검수수량",
+       "depth": 0,
+       "box": [
+        1407,
+        328,
+        100,
+        38
+       ],
+       "id": "col:식재료품의처리목록/변경전 검수수량"
+      },
+      {
+       "label": "변경전 단가",
+       "depth": 0,
+       "box": [
+        1507,
+        328,
+        100,
+        38
+       ],
+       "id": "col:식재료품의처리목록/변경전 단가"
+      }
+     ],
+     "id": "grid:식재료품의처리목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식재료품의 > 식재료변경처리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

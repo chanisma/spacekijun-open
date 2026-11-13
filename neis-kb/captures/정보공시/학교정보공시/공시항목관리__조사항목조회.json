@@ -1,0 +1,201 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시항목관리›조사항목조회",
+ "name": "조사항목조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:50:59+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "분류항목",
+     "box": [
+      25,
+      163,
+      630,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "분류항목",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        50,
+        36
+       ],
+       "id": "col:분류항목/순번"
+      },
+      {
+       "label": "분류코드",
+       "depth": 0,
+       "box": [
+        76,
+        164,
+        165,
+        36
+       ],
+       "id": "col:분류항목/분류코드"
+      },
+      {
+       "label": "분류명",
+       "depth": 0,
+       "box": [
+        241,
+        164,
+        413,
+        36
+       ],
+       "id": "col:분류항목/분류명"
+      }
+     ],
+     "id": "grid:분류항목"
+    },
+    {
+     "aria": "조사항목",
+     "box": [
+      670,
+      163,
+      945,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "조사항목",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        671,
+        164,
+        50,
+        36
+       ],
+       "id": "col:조사항목/순번"
+      },
+      {
+       "label": "공시항목",
+       "depth": 0,
+       "box": [
+        721,
+        164,
+        319,
+        36
+       ],
+       "id": "col:조사항목/공시항목"
+      },
+      {
+       "label": "공시구분",
+       "depth": 0,
+       "box": [
+        1040,
+        164,
+        191,
+        36
+       ],
+       "id": "col:조사항목/공시구분"
+      },
+      {
+       "label": "공시시기(월)",
+       "depth": 0,
+       "box": [
+        1231,
+        164,
+        191,
+        36
+       ],
+       "id": "col:조사항목/공시시기(월)"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1423,
+        164,
+        191,
+        36
+       ],
+       "id": "col:조사항목/사용여부"
+      }
+     ],
+     "id": "grid:조사항목"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시항목관리 > 기준정보조회 > 조사항목조회",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

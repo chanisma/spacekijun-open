@@ -1,0 +1,236 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›건강기록부관리›반별출력",
+ "name": "반별출력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:48:01+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1359,
+      133,
+      96,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "양면출력",
+     "checked": false,
+     "id": "check:양면출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1463,
+      133,
+      96,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "단면출력",
+     "checked": false,
+     "id": "check:단면출력"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "반별출력",
+     "box": [
+      25,
+      144,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "반별출력",
+     "id": "heading:반별출력"
+    },
+    {
+     "aria": "반별출력 목록",
+     "box": [
+      25,
+      174,
+      1590,
+      639
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반별출력 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        175,
+        118,
+        36
+       ],
+       "id": "col:반별출력 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        194,
+        175,
+        118,
+        36
+       ],
+       "id": "col:반별출력 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        313,
+        175,
+        118,
+        36
+       ],
+       "id": "col:반별출력 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        431,
+        175,
+        355,
+        36
+       ],
+       "id": "col:반별출력 목록/성명"
+      },
+      {
+       "label": "주민등록번호",
+       "depth": 0,
+       "box": [
+        786,
+        175,
+        355,
+        36
+       ],
+       "id": "col:반별출력 목록/주민등록번호"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        1141,
+        175,
+        237,
+        36
+       ],
+       "id": "col:반별출력 목록/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        1377,
+        175,
+        237,
+        36
+       ],
+       "id": "col:반별출력 목록/생년월일"
+      }
+     ],
+     "id": "grid:반별출력 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 건강기록부관리 > 반별출력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

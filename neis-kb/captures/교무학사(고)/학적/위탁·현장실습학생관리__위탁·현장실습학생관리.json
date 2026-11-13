@@ -1,0 +1,1269 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›위탁·현장실습학생관리›위탁·현장실습학생관리",
+ "name": "위탁·현장실습학생관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:15:05+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:확인요청 접수 및 전송",
+   "tab": "확인요청 접수 및 전송",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "확인요청 접수 및 전송",
+     "box": [
+      25,
+      71,
+      1590,
+      64
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "확인요청 접수 및 전송",
+      "위탁·현장실습 학생등록",
+      "타학교 자료전송확인",
+      "자료관리"
+     ],
+     "active": "확인요청 접수 및 전송",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      335,
+      191,
+      149,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      534,
+      191,
+      149,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      843,
+      191,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관명(타학교)",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관명(타학교)"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      191,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      252,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 요청확인 시 현재 설정되어있는 기준 학기를 포함하여 거점교(개설교)로 전송됩니다. 해당학기는 거점교(개설교)에서 자료전송 시 출결, 성적, 세부능력및특기사항, 학생생활 자료등의 입력기준으로 활용됩니다.",
+     "id": "note:※ 요청확인 시 현재 설정되어있는 기준 학기를 포함하여 거점교(개설교)로 전송됩니다. 해당학기는 거점교(개설교)에서 자료전송 시 출결, 성적, 세부능력및특기사항, 학생생활 자료등의 입력기준으로 활용됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      271,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 본교에서 등록한 위탁,현장실습학생을 삭제하기 위해서는 [자료관리]에서 성적자료, [출결관리]에서 출결자료를 먼저 삭제해야 합니다.",
+     "id": "note:※ 본교에서 등록한 위탁,현장실습학생을 삭제하기 위해서는 [자료관리]에서 성적자료, [출결관리]에서 출결자료를 먼저 삭제해야 합니다."
+    },
+    {
+     "aria": "요청확인",
+     "box": [
+      1479,
+      318,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "요청확인",
+     "variant": "primary",
+     "id": "button:요청확인"
+    },
+    {
+     "aria": "확인취소",
+     "box": [
+      1551,
+      318,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인취소",
+     "variant": "primary",
+     "id": "button:확인취소"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      358,
+      1590,
+      455
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        76,
+        359,
+        106,
+        36
+       ],
+       "id": "col:학생목록/학기"
+      },
+      {
+       "label": "요청일시",
+       "depth": 0,
+       "box": [
+        182,
+        359,
+        133,
+        36
+       ],
+       "id": "col:학생목록/요청일시"
+      },
+      {
+       "label": "기관명(타학교)",
+       "depth": 0,
+       "box": [
+        315,
+        359,
+        133,
+        36
+       ],
+       "id": "col:학생목록/기관명(타학교)"
+      },
+      {
+       "label": "교육구분",
+       "depth": 0,
+       "box": [
+        447,
+        359,
+        199,
+        36
+       ],
+       "id": "col:학생목록/교육구분"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        646,
+        359,
+        106,
+        36
+       ],
+       "id": "col:학생목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        752,
+        359,
+        106,
+        36
+       ],
+       "id": "col:학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        858,
+        359,
+        106,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        964,
+        359,
+        120,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "교육시작일자",
+       "depth": 0,
+       "box": [
+        1084,
+        359,
+        133,
+        36
+       ],
+       "id": "col:학생목록/교육시작일자"
+      },
+      {
+       "label": "교육종료일자",
+       "depth": 0,
+       "box": [
+        1216,
+        359,
+        133,
+        36
+       ],
+       "id": "col:학생목록/교육종료일자"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        1349,
+        359,
+        133,
+        36
+       ],
+       "id": "col:학생목록/상태"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        1481,
+        359,
+        133,
+        36
+       ],
+       "id": "col:학생목록/전송상태"
+      }
+     ],
+     "id": "grid:학생목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:위탁·현장실습 학생등록",
+   "tab": "위탁·현장실습 학생등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "확인요청 접수 및 전송",
+     "box": [
+      25,
+      71,
+      1590,
+      64
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "확인요청 접수 및 전송",
+      "위탁·현장실습 학생등록",
+      "타학교 자료전송확인",
+      "자료관리"
+     ],
+     "active": "위탁·현장실습 학생등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      191,
+      149,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관명(타학교)",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관명(타학교)"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      191,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      242,
+      1590,
+      40
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 성적입력여부는 타학교에서 전송된 성적에 대해 반영 또는 등록한 경우 입력으로 표시됩니다. ※ 출결입력여부는 위탁기간내에 등록된 월출결이 있는 경우 입력으로 표시됩니다.",
+     "id": "note:※ 성적입력여부는 타학교에서 전송된 성적에 대해 반영 또는 등록한 경우 입력으로 표시됩니다. ※ 출결입력여부는 위탁기간내에 등록된 월출결이 있는 경우 입력으로 표시됩니다."
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1431,
+      292,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      292,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      292,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "link",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      292,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "학생 목록",
+     "box": [
+      25,
+      332,
+      1590,
+      349
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록",
+     "selectable": true,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        333,
+        50,
+        36
+       ],
+       "id": "col:학생 목록/순번"
+      },
+      {
+       "label": "등록구분",
+       "depth": 0,
+       "box": [
+        126,
+        333,
+        60,
+        36
+       ],
+       "id": "col:학생 목록/등록구분"
+      },
+      {
+       "label": "교육구분",
+       "depth": 0,
+       "box": [
+        186,
+        333,
+        182,
+        36
+       ],
+       "id": "col:학생 목록/교육구분"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        368,
+        333,
+        76,
+        36
+       ],
+       "id": "col:학생 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        443,
+        333,
+        76,
+        36
+       ],
+       "id": "col:학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        519,
+        333,
+        120,
+        36
+       ],
+       "id": "col:학생 목록/성명"
+      },
+      {
+       "label": "위탁상태",
+       "depth": 0,
+       "box": [
+        639,
+        333,
+        100,
+        36
+       ],
+       "id": "col:학생 목록/위탁상태"
+      },
+      {
+       "label": "시작일자",
+       "depth": 0,
+       "box": [
+        739,
+        333,
+        100,
+        36
+       ],
+       "id": "col:학생 목록/시작일자"
+      },
+      {
+       "label": "종료일자",
+       "depth": 0,
+       "box": [
+        839,
+        333,
+        100,
+        36
+       ],
+       "id": "col:학생 목록/종료일자"
+      },
+      {
+       "label": "위탁기관구분",
+       "depth": 0,
+       "box": [
+        939,
+        333,
+        182,
+        36
+       ],
+       "id": "col:학생 목록/위탁기관구분"
+      },
+      {
+       "label": "기관명",
+       "depth": 0,
+       "box": [
+        1121,
+        333,
+        182,
+        36
+       ],
+       "id": "col:학생 목록/기관명"
+      },
+      {
+       "label": "전공",
+       "depth": 0,
+       "box": [
+        1303,
+        333,
+        151,
+        36
+       ],
+       "id": "col:학생 목록/전공"
+      },
+      {
+       "label": "성적입력여부",
+       "depth": 0,
+       "box": [
+        1454,
+        333,
+        80,
+        36
+       ],
+       "id": "col:학생 목록/성적입력여부"
+      },
+      {
+       "label": "출결입력여부",
+       "depth": 0,
+       "box": [
+        1534,
+        333,
+        80,
+        36
+       ],
+       "id": "col:학생 목록/출결입력여부"
+      }
+     ],
+     "id": "grid:학생 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      697,
+      268,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "시작일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:시작일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1343,
+      697,
+      268,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "종료일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:종료일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      737,
+      268,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "교육구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:교육구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      737,
+      585,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "기관명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:기관명"
+    },
+    {
+     "aria": "기관찾기",
+     "box": [
+      1536,
+      737,
+      74,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "기관찾기",
+     "variant": "primary",
+     "id": "button:기관찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      777,
+      268,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "전공",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전공"
+    },
+    {
+     "aria": null,
+     "box": [
+      548,
+      777,
+      268,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "위탁상태",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:위탁상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      777,
+      665,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비고",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비고"
+    }
+   ]
+  },
+  {
+   "id": "tab:타학교 자료전송확인",
+   "tab": "타학교 자료전송확인",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "확인요청 접수 및 전송",
+     "box": [
+      25,
+      71,
+      1590,
+      64
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "확인요청 접수 및 전송",
+      "위탁·현장실습 학생등록",
+      "타학교 자료전송확인",
+      "자료관리"
+     ],
+     "active": "타학교 자료전송확인",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      191,
+      149,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관명(타학교)",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관명(타학교)"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      191,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      252,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      302,
+      1590,
+      511
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "기관명(타학교)",
+       "depth": 0,
+       "box": [
+        26,
+        303,
+        163,
+        36
+       ],
+       "id": "col:학생목록/기관명(타학교)"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        189,
+        303,
+        163,
+        36
+       ],
+       "id": "col:학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        352,
+        303,
+        163,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        515,
+        303,
+        120,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "교육시작일자",
+       "depth": 0,
+       "box": [
+        635,
+        303,
+        163,
+        36
+       ],
+       "id": "col:학생목록/교육시작일자"
+      },
+      {
+       "label": "교육종료일자",
+       "depth": 0,
+       "box": [
+        798,
+        303,
+        163,
+        36
+       ],
+       "id": "col:학생목록/교육종료일자"
+      },
+      {
+       "label": "교육구분",
+       "depth": 0,
+       "box": [
+        962,
+        303,
+        163,
+        36
+       ],
+       "id": "col:학생목록/교육구분"
+      },
+      {
+       "label": "위탁기관구분",
+       "depth": 0,
+       "box": [
+        1125,
+        303,
+        163,
+        36
+       ],
+       "id": "col:학생목록/위탁기관구분"
+      },
+      {
+       "label": "위탁상태",
+       "depth": 0,
+       "box": [
+        1288,
+        303,
+        163,
+        36
+       ],
+       "id": "col:학생목록/위탁상태"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        1451,
+        303,
+        163,
+        36
+       ],
+       "id": "col:학생목록/상태"
+      }
+     ],
+     "id": "grid:학생목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:자료관리",
+   "tab": "자료관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "확인요청 접수 및 전송",
+     "box": [
+      25,
+      71,
+      1590,
+      64
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "확인요청 접수 및 전송",
+      "위탁·현장실습 학생등록",
+      "타학교 자료전송확인",
+      "자료관리"
+     ],
+     "active": "자료관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      191,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      191,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      292,
+      260,
+      521
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        26,
+        293,
+        65,
+        36
+       ],
+       "id": "col:학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        91,
+        293,
+        65,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        155,
+        293,
+        129,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "메뉴목록",
+     "box": [
+      295,
+      292,
+      248,
+      521
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "메뉴목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [],
+     "id": "grid:메뉴목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 위탁·현장실습학생관리 > 위탁·현장실습학생관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

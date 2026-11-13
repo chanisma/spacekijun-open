@@ -1,0 +1,244 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육통계›교육통계(상반기)›원자료취합›원자료취합",
+ "name": "원자료취합",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:41:33+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      142,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "통계년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:통계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      457,
+      82,
+      193,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "취합상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:취합상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 재취합시 통계자료작성에서 입력하신 데이터는 모두 삭제됩니다. ※ 오류 혹은 부하발생시를 고려해 항목별로 취합해주시기 바랍니다.",
+     "id": "note:※ 재취합시 통계자료작성에서 입력하신 데이터는 모두 삭제됩니다. ※ 오류 혹은 부하발생시를 고려해 항목별로 취합해주시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1045,
+      225,
+      155,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학업중단학생 재집계 요청",
+     "variant": "primary",
+     "id": "button:학업중단학생 재집계 요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1208,
+      225,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "통계자료초기화",
+     "variant": "primary",
+     "id": "button:통계자료초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1316,
+      225,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "취합",
+     "variant": "primary",
+     "id": "button:취합"
+    },
+    {
+     "aria": null,
+     "box": [
+      1364,
+      225,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "취합완료",
+     "variant": "primary",
+     "id": "button:취합완료"
+    },
+    {
+     "aria": null,
+     "box": [
+      1443,
+      225,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "취합완료취소",
+     "variant": "secondary",
+     "id": "button:취합완료취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      225,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "원자료확인",
+     "variant": "secondary",
+     "id": "button:원자료확인"
+    },
+    {
+     "aria": "교육청 통계항목별 마감정보",
+     "box": [
+      25,
+      265,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "교육청 통계항목별 마감정보",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "통계분류",
+       "depth": 0,
+       "box": [
+        76,
+        266,
+        308,
+        36
+       ],
+       "id": "col:교육청 통계항목별 마감정보/통계분류"
+      },
+      {
+       "label": "통계항목",
+       "depth": 0,
+       "box": [
+        384,
+        266,
+        615,
+        36
+       ],
+       "id": "col:교육청 통계항목별 마감정보/통계항목"
+      },
+      {
+       "label": "취합상태",
+       "depth": 0,
+       "box": [
+        999,
+        266,
+        308,
+        36
+       ],
+       "id": "col:교육청 통계항목별 마감정보/취합상태"
+      },
+      {
+       "label": "취합일자",
+       "depth": 0,
+       "box": [
+        1306,
+        266,
+        308,
+        36
+       ],
+       "id": "col:교육청 통계항목별 마감정보/취합일자"
+      }
+     ],
+     "id": "grid:교육청 통계항목별 마감정보"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "교육통계 > {교육통계}교육통계(상반기) > 원자료취합",
+ "alsoVia": [
+  "교육통계",
+  "부서장(나이스부)",
+  "부서장(나이스부)",
+  "부서장(나이스부)",
+  "부서장(정보화부)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

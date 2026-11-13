@@ -1,0 +1,289 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학교폭력실태조사#학교›설문조사현황›문항별응답률통계",
+ "name": "문항별응답률통계",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:13:26+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "설문연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:설문연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "설문연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:설문연도#2"
+    },
+    {
+     "aria": "조회구분 원자료조회/응답오류처리",
+     "box": [
+      525,
+      82,
+      202,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "radio",
+     "label": "조회구분",
+     "options": [
+      "원자료조회",
+      "응답오류처리"
+     ],
+     "id": "radio:조회구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      143,
+      1590,
+      144
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        26,
+        144,
+        227,
+        62
+       ],
+       "id": "col:그리드/구분"
+      },
+      {
+       "label": "피해응답",
+       "depth": 0,
+       "box": [
+        253,
+        144,
+        454,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/피해응답"
+      },
+      {
+       "label": "가해응답",
+       "depth": 0,
+       "box": [
+        707,
+        144,
+        454,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/가해응답"
+      },
+      {
+       "label": "목격응답",
+       "depth": 0,
+       "box": [
+        1160,
+        144,
+        454,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/목격응답"
+      },
+      {
+       "label": "있다",
+       "depth": 1,
+       "box": [
+        253,
+        175,
+        227,
+        31
+       ],
+       "id": "col:그리드/피해응답>있다"
+      },
+      {
+       "label": "없다",
+       "depth": 1,
+       "box": [
+        480,
+        175,
+        227,
+        31
+       ],
+       "id": "col:그리드/피해응답>없다"
+      },
+      {
+       "label": "있다",
+       "depth": 1,
+       "box": [
+        707,
+        175,
+        227,
+        31
+       ],
+       "id": "col:그리드/가해응답>있다"
+      },
+      {
+       "label": "없다",
+       "depth": 1,
+       "box": [
+        933,
+        175,
+        227,
+        31
+       ],
+       "id": "col:그리드/가해응답>없다"
+      },
+      {
+       "label": "있다",
+       "depth": 1,
+       "box": [
+        1160,
+        175,
+        227,
+        31
+       ],
+       "id": "col:그리드/목격응답>있다"
+      },
+      {
+       "label": "없다",
+       "depth": 1,
+       "box": [
+        1387,
+        175,
+        227,
+        31
+       ],
+       "id": "col:그리드/목격응답>없다"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1493,
+      307,
+      122,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": "문항별 응답률 통계",
+     "box": [
+      25,
+      347,
+      1590,
+      415
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "문항별 응답률 통계",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        26,
+        348,
+        1116,
+        36
+       ],
+       "id": "col:문항별 응답률 통계/문항"
+      },
+      {
+       "label": "응답자수",
+       "depth": 0,
+       "box": [
+        1142,
+        348,
+        236,
+        36
+       ],
+       "id": "col:문항별 응답률 통계/응답자수"
+      },
+      {
+       "label": "응답률(%)",
+       "depth": 0,
+       "box": [
+        1378,
+        348,
+        236,
+        36
+       ],
+       "id": "col:문항별 응답률 통계/응답률(%)"
+      }
+     ],
+     "id": "grid:문항별 응답률 통계"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교폭력실태조사 > 설문조사현황 > 문항별응답률통계",
+ "viewport": [
+  1920,
+  945
+ ]
+}

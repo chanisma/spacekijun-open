@@ -1,0 +1,147 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육통계›교육통계(상반기)›출력물›학교일람표",
+ "name": "학교일람표",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:56:30+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      195,
+      93,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:통계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1427,
+      93,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1501,
+      93,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "상세출력",
+     "variant": "secondary",
+     "id": "button:상세출력"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": true
+   }
+  },
+  {
+   "id": "main+조회",
+   "after": "query",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      195,
+      93,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:통계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1427,
+      93,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1501,
+      93,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "상세출력",
+     "variant": "secondary",
+     "id": "button:상세출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      185,
+      1530,
+      598
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "교육통계 > {교육통계}교육통계(상반기) > 출력물 > 학교일람표",
+ "alsoVia": [
+  "교육통계",
+  "부서장(나이스부)",
+  "부서장(나이스부)",
+  "부서장(정보화부)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

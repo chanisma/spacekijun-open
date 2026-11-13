@@ -1,0 +1,259 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적처리›편입/복학생세부능력및특기사항관리",
+ "name": "편입/복학생세부능력및특기사항관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:20:08+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 편입/복학생,재입학(재취학)생만 학생리스트에 조회됩니다.",
+     "id": "note:※ 편입/복학생,재입학(재취학)생만 학생리스트에 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 입력/수정/삭제한 내용은 결재 및 학생부 반영된 후 분석을 통해 금지어 통계에 반영이 됩니다.",
+     "id": "note:※ 입력/수정/삭제한 내용은 결재 및 학생부 반영된 후 분석을 통해 금지어 통계에 반영이 됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전문교과 및 NCS의 경우 성적처리유형이 성취도(5단계) + 석차등급(5등급)으로 고정됩니다.",
+     "id": "note:※ 전문교과 및 NCS의 경우 성적처리유형이 성취도(5단계) + 석차등급(5등급)으로 고정됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      248,
+      315,
+      566
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        26,
+        249,
+        78,
+        36
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        104,
+        249,
+        78,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        183,
+        249,
+        157,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      355,
+      248,
+      1260,
+      566
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        406,
+        249,
+        131,
+        36
+       ],
+       "id": "col:그리드/과목명"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        537,
+        249,
+        131,
+        36
+       ],
+       "id": "col:그리드/학기"
+      },
+      {
+       "label": "입력가능글자 (Byte)",
+       "depth": 0,
+       "box": [
+        667,
+        249,
+        120,
+        36
+       ],
+       "id": "col:그리드/입력가능글자 (Byte)"
+      },
+      {
+       "label": "세부능력 및 특기사항",
+       "depth": 0,
+       "box": [
+        787,
+        249,
+        392,
+        36
+       ],
+       "id": "col:그리드/세부능력 및 특기사항"
+      },
+      {
+       "label": "영재·발명교육 기록사항",
+       "depth": 0,
+       "box": [
+        1179,
+        249,
+        287,
+        36
+       ],
+       "id": "col:그리드/영재·발명교육 기록사항"
+      },
+      {
+       "label": "성적처리유형",
+       "depth": 0,
+       "box": [
+        1466,
+        249,
+        148,
+        36
+       ],
+       "id": "col:그리드/성적처리유형"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적처리 > 편입/복학생세부능력및특기사항관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

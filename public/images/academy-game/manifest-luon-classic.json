@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-13",
+  "sourceCommit": "5d76150d11a3d082c90337ab25fa2d0a8c6b3d0e",
+  "sourcePath": "public/images/academy-game/luon.png",
+  "assets": [
+    {
+      "key": "luon-classic",
+      "file": "luon-classic.png",
+      "source": "C:\\Users\\chani\\AppData\\Local\\Temp\\academy-luon-classic-original.png",
+      "description": "Restored original brown-haired Luon as a purchasable alternate appearance.",
+      "postprocess": "User-authorized local MODNet alpha matting; original RGB preserved."
+    }
+  ]
+}

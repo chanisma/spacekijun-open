@@ -1,0 +1,695 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생부›학교생활기록부›학교생활기록부",
+ "name": "학교생활기록부",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:30:21+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:학생부반영",
+   "tab": "학생부반영",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학생부반영 선택됨",
+     "box": [
+      25,
+      71,
+      1188,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생부반영",
+      "자료검증 및 반마감",
+      "학생부 조회 및 출력",
+      "학생부 마감",
+      "검증결과조회",
+      "학생부 항목별 조회"
+     ],
+     "active": "학생부반영",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      152,
+      100,
+      34
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      156,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      257,
+      525,
+      556
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        258,
+        139,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        215,
+        258,
+        334,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      695,
+      268,
+      300,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "전체",
+     "checked": true,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      695,
+      313,
+      305,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "학년반이력",
+     "checked": false,
+     "id": "check:학년반이력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1008,
+      313,
+      283,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "전공과정",
+     "checked": false,
+     "id": "check:전공과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      1300,
+      313,
+      305,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "인적·학적사항",
+     "checked": false,
+     "id": "check:인적·학적사항"
+    },
+    {
+     "aria": null,
+     "box": [
+      695,
+      352,
+      305,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "출결상황",
+     "checked": false,
+     "id": "check:출결상황"
+    },
+    {
+     "aria": null,
+     "box": [
+      1008,
+      352,
+      283,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "수상경력",
+     "checked": false,
+     "id": "check:수상경력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1300,
+      352,
+      305,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "자격증및인증취득상황",
+     "checked": false,
+     "id": "check:자격증및인증취득상황"
+    },
+    {
+     "aria": null,
+     "box": [
+      695,
+      392,
+      305,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "학교폭력조치상황관리",
+     "checked": false,
+     "id": "check:학교폭력조치상황관리"
+    },
+    {
+     "aria": null,
+     "box": [
+      1008,
+      392,
+      283,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "창의적체험활동",
+     "checked": false,
+     "id": "check:창의적체험활동"
+    },
+    {
+     "aria": null,
+     "box": [
+      1300,
+      392,
+      305,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "교과학습발달상황",
+     "checked": false,
+     "id": "check:교과학습발달상황"
+    },
+    {
+     "aria": null,
+     "box": [
+      695,
+      431,
+      305,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "독서활동상황",
+     "checked": false,
+     "id": "check:독서활동상황"
+    },
+    {
+     "aria": null,
+     "box": [
+      1008,
+      431,
+      283,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "행동특성및종합의견",
+     "checked": false,
+     "id": "check:행동특성및종합의견"
+    },
+    {
+     "aria": null,
+     "box": [
+      1300,
+      431,
+      305,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "세부능력및특기사항",
+     "checked": false,
+     "id": "check:세부능력및특기사항"
+    },
+    {
+     "aria": null,
+     "box": [
+      565,
+      569,
+      1050,
+      244
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        566,
+        570,
+        349,
+        36
+       ],
+       "id": "col:그리드/항목"
+      },
+      {
+       "label": "반영일시",
+       "depth": 0,
+       "box": [
+        915,
+        570,
+        699,
+        36
+       ],
+       "id": "col:그리드/반영일시"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  },
+  {
+   "id": "tab:자료검증 및 반마감",
+   "tab": "자료검증 및 반마감",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학생부반영",
+     "box": [
+      25,
+      71,
+      383,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생부반영",
+     "variant": "link",
+     "id": "button:학생부반영"
+    },
+    {
+     "aria": "자료검증 및 반마감 선택됨",
+     "box": [
+      428,
+      71,
+      383,
+      29
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료검증 및 반마감",
+     "variant": "link",
+     "id": "button:자료검증 및 반마감"
+    },
+    {
+     "aria": "학생부 조회 및 출력",
+     "box": [
+      830,
+      71,
+      383,
+      29
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생부 조회 및 출력",
+     "variant": "link",
+     "id": "button:학생부 조회 및 출력"
+    },
+    {
+     "aria": "학생부 마감",
+     "box": [
+      1233,
+      71,
+      383,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생부 마감",
+     "variant": "link",
+     "id": "button:학생부 마감"
+    },
+    {
+     "aria": "검증결과조회",
+     "box": [
+      428,
+      102,
+      383,
+      29
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "검증결과조회",
+     "variant": "link",
+     "id": "button:검증결과조회"
+    },
+    {
+     "aria": "학생부 항목별 조회",
+     "box": [
+      830,
+      102,
+      383,
+      29
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생부 항목별 조회",
+     "variant": "link",
+     "id": "button:학생부 항목별 조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      170,
+      152,
+      105,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      410,
+      152,
+      105,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      650,
+      152,
+      105,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      152,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "자료검증",
+      "맞춤법검사"
+     ],
+     "active": "자료검증",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "검증항목설명",
+     "box": [
+      1527,
+      253,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "검증항목설명",
+     "variant": "link",
+     "id": "button:검증항목설명"
+    },
+    {
+     "aria": "검증항목 목록 ",
+     "box": [
+      25,
+      293,
+      473,
+      520
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "검증항목 목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        76,
+        294,
+        261,
+        36
+       ],
+       "id": "col:검증항목 목록/항목"
+      },
+      {
+       "label": "최종검증일",
+       "depth": 0,
+       "box": [
+        337,
+        294,
+        90,
+        36
+       ],
+       "id": "col:검증항목 목록/최종검증일"
+      },
+      {
+       "label": "확인여부",
+       "depth": 0,
+       "box": [
+        427,
+        294,
+        70,
+        36
+       ],
+       "id": "col:검증항목 목록/확인여부"
+      }
+     ],
+     "id": "grid:검증항목 목록"
+    },
+    {
+     "aria": "검증오류내역 목록",
+     "box": [
+      513,
+      293,
+      1103,
+      520
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "검증오류내역 목록",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "검증항목",
+       "depth": 0,
+       "box": [
+        514,
+        294,
+        100,
+        36
+       ],
+       "id": "col:검증오류내역 목록/검증항목"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        614,
+        294,
+        45,
+        36
+       ],
+       "id": "col:검증오류내역 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        659,
+        294,
+        80,
+        36
+       ],
+       "id": "col:검증오류내역 목록/성명"
+      },
+      {
+       "label": "검증내역",
+       "depth": 0,
+       "box": [
+        739,
+        294,
+        357,
+        36
+       ],
+       "id": "col:검증오류내역 목록/검증내역"
+      },
+      {
+       "label": "예외처리사유",
+       "depth": 0,
+       "box": [
+        1096,
+        294,
+        442,
+        36
+       ],
+       "id": "col:검증오류내역 목록/예외처리사유"
+      },
+      {
+       "label": "입력자",
+       "depth": 0,
+       "box": [
+        1538,
+        294,
+        77,
+        36
+       ],
+       "id": "col:검증오류내역 목록/입력자"
+      }
+     ],
+     "id": "grid:검증오류내역 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부 > 학교생활기록부 > 학교생활기록부",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

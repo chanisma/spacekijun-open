@@ -1,0 +1,408 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학교정보›학교정보›학교정보관리",
+ "name": "학교정보관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T03:59:15+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학교기본정보 변경이력(새창열기) 버튼",
+     "box": [
+      1455,
+      71,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "변경이력",
+     "variant": "link",
+     "id": "button:변경이력"
+    },
+    {
+     "aria": "학교 기본정보 저장 버튼",
+     "box": [
+      1527,
+      71,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "학교 기본정보 리셋 버튼",
+     "box": [
+      1575,
+      71,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      81,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학교 기본정보",
+     "id": "heading:학교 기본정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      1247,
+      117,
+      307,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교명(영문)",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학교명(영문)"
+    },
+    {
+     "aria": "학교명(영문) 저장 버튼",
+     "box": [
+      1560,
+      117,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      317,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "도로명우편번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:도로명우편번호"
+    },
+    {
+     "aria": "도로명우편번호 찾기(새 창열기)",
+     "box": [
+      386,
+      317,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "도로명우편번호 찾기(새 창열기)",
+     "variant": "secondary",
+     "id": "button:도로명우편번호 찾기(새 창열기)"
+    },
+    {
+     "aria": null,
+     "box": [
+      753,
+      317,
+      425,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "도로명주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:도로명주소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1185,
+      317,
+      425,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "거점학교",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:거점학교"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      357,
+      1350,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "영문주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:영문주소"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      397,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      753,
+      397,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "팩스번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:팩스번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1247,
+      397,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "홈페이지주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:홈페이지주소"
+    },
+    {
+     "aria": "학교 운영정보 변경이력(새 창열기) 버튼",
+     "box": [
+      1455,
+      441,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "변경이력",
+     "variant": "link",
+     "id": "button:변경이력#2"
+    },
+    {
+     "aria": "학교 운영정보 저장 버튼",
+     "box": [
+      1527,
+      441,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#3"
+    },
+    {
+     "aria": "학교 운영정보 리셋 버튼",
+     "box": [
+      1575,
+      441,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      451,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학교 운영정보",
+     "id": "heading:학교 운영정보"
+    },
+    {
+     "aria": "특수학급 운영",
+     "box": [
+      260,
+      487,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "특수학급 운영",
+     "options": [
+      "예",
+      "아니오"
+     ],
+     "id": "radio:특수학급 운영"
+    },
+    {
+     "aria": "개별화교육 운영",
+     "box": [
+      753,
+      487,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "개별화교육 운영",
+     "options": [
+      "예",
+      "아니오"
+     ],
+     "id": "radio:개별화교육 운영"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      527,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "최대 운영 교시",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:최대 운영 교시"
+    },
+    {
+     "aria": null,
+     "box": [
+      753,
+      527,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "출결관리 형태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:출결관리 형태"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      567,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "1학년 최소진급학점",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:1학년 최소진급학점"
+    },
+    {
+     "aria": null,
+     "box": [
+      753,
+      567,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "2학년 최소진급학점",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:2학년 최소진급학점"
+    },
+    {
+     "aria": null,
+     "box": [
+      1247,
+      567,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업학점",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:졸업학점"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교정보 > 학교정보 > 학교정보관리",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

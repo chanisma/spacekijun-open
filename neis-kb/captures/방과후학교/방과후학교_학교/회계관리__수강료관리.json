@@ -1,0 +1,655 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›회계관리›수강료관리",
+ "name": "수강료관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:03:40+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "운영학교",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:운영학교"
+    },
+    {
+     "aria": null,
+     "box": [
+      435,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      915,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "년월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:년월"
+    },
+    {
+     "aria": "중소취소학생",
+     "box": [
+      1155,
+      82,
+      118,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "중도취소학생",
+     "options": [
+      "포함",
+      "제외"
+     ],
+     "id": "radio:중도취소학생"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "유형분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:유형분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "내용분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:내용분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "프로그램명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:프로그램명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "※ 환불금 입력은 회계관리-수강료환불금관리 메뉴에서 입력하실 수 있습니다.",
+     "box": [
+      25,
+      173,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 환불금 입력은 [회계관리-수강료환불금관리] 메뉴에서 입력하실 수 있습니다.",
+     "id": "note:※ 환불금 입력은 [회계관리-수강료환불금관리] 메뉴에서 입력하실 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      934,
+      211,
+      125,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1067,
+      211,
+      125,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "양식 내려받기",
+     "variant": "plain",
+     "id": "button:양식 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      211,
+      115,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "수강료 올리기",
+     "variant": "plain",
+     "id": "button:수강료 올리기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1324,
+      211,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "결재요청",
+     "variant": "link",
+     "id": "button:결재요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1395,
+      211,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "연계전송",
+     "variant": "primary",
+     "id": "button:연계전송"
+    },
+    {
+     "aria": null,
+     "box": [
+      1467,
+      211,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "link",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      211,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      211,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      58,
+      254,
+      136,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "수익자부담금전액입력",
+     "variant": "plain",
+     "id": "button:수익자부담금전액입력"
+    },
+    {
+     "aria": null,
+     "box": [
+      201,
+      254,
+      136,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "수익자부담금자동입력",
+     "variant": "plain",
+     "id": "button:수익자부담금자동입력"
+    },
+    {
+     "aria": "수익자부담금/지원금 보기",
+     "box": [
+      606,
+      254,
+      370,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "수익자부담금/지원금 보기",
+     "options": [
+      "수익자부담금",
+      "지원금",
+      "전체"
+     ],
+     "id": "radio:수익자부담금/지원금 보기"
+    },
+    {
+     "aria": "수강료관리 목록 정보",
+     "box": [
+      25,
+      299,
+      1590,
+      515
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수강료관리 목록 정보",
+     "selectable": true,
+     "declaredColumns": 102,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        300,
+        50,
+        110
+       ],
+       "id": "col:수강료관리 목록 정보/순번"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        126,
+        300,
+        200,
+        110
+       ],
+       "span": 2,
+       "id": "col:수강료관리 목록 정보/프로그램명"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        326,
+        300,
+        100,
+        110
+       ],
+       "id": "col:수강료관리 목록 정보/성명"
+      },
+      {
+       "label": "수강생정보",
+       "depth": 0,
+       "box": [
+        426,
+        300,
+        180,
+        25
+       ],
+       "span": 7,
+       "id": "col:수강료관리 목록 정보/수강생정보"
+      },
+      {
+       "label": "총수강료",
+       "depth": 0,
+       "box": [
+        607,
+        300,
+        100,
+        25
+       ],
+       "span": 5,
+       "id": "col:수강료관리 목록 정보/총수강료"
+      },
+      {
+       "label": "전월수강료",
+       "depth": 0,
+       "box": [
+        707,
+        300,
+        100,
+        25
+       ],
+       "span": 8,
+       "id": "col:수강료관리 목록 정보/전월수강료"
+      },
+      {
+       "label": "당월수강료(수익자부담금 + 사용지원금)",
+       "depth": 0,
+       "box": [
+        807,
+        300,
+        3100,
+        25
+       ],
+       "span": 31,
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        426,
+        325,
+        60,
+        85
+       ],
+       "id": "col:수강료관리 목록 정보/수강생정보>학년"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        486,
+        325,
+        60,
+        85
+       ],
+       "id": "col:수강료관리 목록 정보/수강생정보>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        546,
+        325,
+        60,
+        85
+       ],
+       "id": "col:수강료관리 목록 정보/수강생정보>번호"
+      },
+      {
+       "label": "수강료 총액",
+       "depth": 1,
+       "box": [
+        607,
+        325,
+        100,
+        85
+       ],
+       "id": "col:수강료관리 목록 정보/총수강료>수강료 총액"
+      },
+      {
+       "label": "전월 총액",
+       "depth": 1,
+       "box": [
+        707,
+        325,
+        100,
+        85
+       ],
+       "id": "col:수강료관리 목록 정보/전월수강료>전월 총액"
+      },
+      {
+       "label": "당월 총액",
+       "depth": 1,
+       "box": [
+        807,
+        325,
+        100,
+        60
+       ],
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>당월 총액"
+      },
+      {
+       "label": "수익자부담금",
+       "depth": 1,
+       "box": [
+        907,
+        325,
+        500,
+        40
+       ],
+       "span": 5,
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>수익자부담금"
+      },
+      {
+       "label": "지원금(사용)",
+       "depth": 1,
+       "box": [
+        1407,
+        325,
+        2500,
+        20
+       ],
+       "span": 25,
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>지원금(사용)"
+      },
+      {
+       "label": "자유수강권",
+       "depth": 2,
+       "box": [
+        1407,
+        345,
+        500,
+        20
+       ],
+       "span": 5,
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>지원금(사용)>자유수강권"
+      },
+      {
+       "label": "총액",
+       "depth": 3,
+       "box": [
+        907,
+        365,
+        100,
+        45
+       ],
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>수익자부담금>총액"
+      },
+      {
+       "label": "강사료",
+       "depth": 3,
+       "box": [
+        1007,
+        365,
+        100,
+        20
+       ],
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>수익자부담금>강사료"
+      },
+      {
+       "label": "수용비",
+       "depth": 3,
+       "box": [
+        1107,
+        365,
+        100,
+        20
+       ],
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>수익자부담금>수용비"
+      },
+      {
+       "label": "교재비",
+       "depth": 3,
+       "box": [
+        1207,
+        365,
+        100,
+        20
+       ],
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>수익자부담금>교재비"
+      },
+      {
+       "label": "재료비",
+       "depth": 3,
+       "box": [
+        1307,
+        365,
+        100,
+        20
+       ],
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>수익자부담금>재료비"
+      },
+      {
+       "label": "총액",
+       "depth": 3,
+       "box": [
+        1407,
+        365,
+        100,
+        45
+       ],
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>지원금(사용)>자유수강권>총액"
+      },
+      {
+       "label": "강사료",
+       "depth": 3,
+       "box": [
+        1507,
+        365,
+        100,
+        20
+       ],
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>지원금(사용)>자유수강권>강사료"
+      },
+      {
+       "label": "수용비",
+       "depth": 3,
+       "box": [
+        1607,
+        365,
+        100,
+        20
+       ],
+       "id": "col:수강료관리 목록 정보/당월수강료(수익자부담금 + 사용지원금)>지원금(사용)>자유수강권>수용비"
+      }
+     ],
+     "id": "grid:수강료관리 목록 정보"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 회계관리 > 수강료관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,454 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›편제및과목개설관리›학생별수강과목편성",
+ "name": "학생별수강과목편성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:03:55+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학기",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "반",
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "성명",
+     "box": [
+      1105,
+      82,
+      105,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "반별출력",
+     "box": [
+      355,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반별출력",
+     "variant": "link",
+     "id": "button:반별출력"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "편성 과목",
+     "box": [
+      434,
+      143,
+      69,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "편성 과목",
+     "id": "heading:편성 과목"
+    },
+    {
+     "aria": "학생",
+     "box": [
+      25,
+      173,
+      394,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        115,
+        36
+       ],
+       "id": "col:학생/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        141,
+        174,
+        277,
+        36
+       ],
+       "id": "col:학생/성명"
+      }
+     ],
+     "id": "grid:학생"
+    },
+    {
+     "aria": "편성 과목",
+     "box": [
+      434,
+      173,
+      1181,
+      293
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "편성 과목",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "과목군",
+       "depth": 0,
+       "box": [
+        435,
+        174,
+        152,
+        56
+       ],
+       "id": "col:편성 과목/과목군"
+      },
+      {
+       "label": "과목구분",
+       "depth": 0,
+       "box": [
+        587,
+        174,
+        183,
+        56
+       ],
+       "id": "col:편성 과목/과목구분"
+      },
+      {
+       "label": "과목",
+       "depth": 0,
+       "box": [
+        770,
+        174,
+        229,
+        56
+       ],
+       "id": "col:편성 과목/과목"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        999,
+        174,
+        100,
+        56
+       ],
+       "id": "col:편성 과목/학년"
+      },
+      {
+       "label": "강의실/편성반",
+       "depth": 0,
+       "box": [
+        1099,
+        174,
+        152,
+        56
+       ],
+       "id": "col:편성 과목/강의실/편성반"
+      },
+      {
+       "label": "담당교사",
+       "depth": 0,
+       "box": [
+        1251,
+        174,
+        183,
+        56
+       ],
+       "id": "col:편성 과목/담당교사"
+      },
+      {
+       "label": "성적편성",
+       "depth": 0,
+       "box": [
+        1434,
+        174,
+        90,
+        28
+       ],
+       "id": "col:편성 과목/성적편성"
+      },
+      {
+       "label": "출결편성",
+       "depth": 0,
+       "box": [
+        1524,
+        174,
+        90,
+        28
+       ],
+       "id": "col:편성 과목/출결편성"
+      }
+     ],
+     "id": "grid:편성 과목"
+    },
+    {
+     "aria": "미편성 과목",
+     "box": [
+      434,
+      491,
+      85,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "미편성 과목",
+     "id": "heading:미편성 과목"
+    },
+    {
+     "aria": "타반 개설과목 라디오버튼(미포함, 포함)",
+     "box": [
+      559,
+      524,
+      250,
+      40
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "타반 개설과목",
+     "options": [
+      "미포함",
+      "포함",
+      "타학년포함"
+     ],
+     "id": "radio:타반 개설과목"
+    },
+    {
+     "aria": "미편성 과목",
+     "box": [
+      434,
+      579,
+      1181,
+      235
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "미편성 과목",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "과목군",
+       "depth": 0,
+       "box": [
+        435,
+        580,
+        152,
+        56
+       ],
+       "id": "col:미편성 과목/과목군"
+      },
+      {
+       "label": "과목구분",
+       "depth": 0,
+       "box": [
+        587,
+        580,
+        183,
+        56
+       ],
+       "id": "col:미편성 과목/과목구분"
+      },
+      {
+       "label": "과목",
+       "depth": 0,
+       "box": [
+        770,
+        580,
+        229,
+        56
+       ],
+       "id": "col:미편성 과목/과목"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        999,
+        580,
+        100,
+        56
+       ],
+       "id": "col:미편성 과목/학년"
+      },
+      {
+       "label": "강의실/편성반",
+       "depth": 0,
+       "box": [
+        1099,
+        580,
+        152,
+        56
+       ],
+       "id": "col:미편성 과목/강의실/편성반"
+      },
+      {
+       "label": "담당교사",
+       "depth": 0,
+       "box": [
+        1251,
+        580,
+        183,
+        56
+       ],
+       "id": "col:미편성 과목/담당교사"
+      },
+      {
+       "label": "성적편성",
+       "depth": 0,
+       "box": [
+        1434,
+        580,
+        90,
+        28
+       ],
+       "id": "col:미편성 과목/성적편성"
+      },
+      {
+       "label": "출결편성",
+       "depth": 0,
+       "box": [
+        1524,
+        580,
+        90,
+        28
+       ],
+       "id": "col:미편성 과목/출결편성"
+      }
+     ],
+     "id": "grid:미편성 과목"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 편제및과목개설관리 > 학생별수강과목편성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,1074 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›창의적체험활동›동아리활동관리(담임용)",
+ "name": "동아리활동관리(담임용)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:22:17+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:학생부자료",
+   "tab": "학생부자료",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      340,
+      133,
+      968,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생부자료",
+      "이수시간계산내역",
+      "누가기록"
+     ],
+     "active": "학생부자료",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "스포츠클럽정보가져오기",
+     "box": [
+      1454,
+      136,
+      158,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "스포츠클럽정보가져오기",
+     "variant": "link",
+     "id": "button:스포츠클럽정보가져오기"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      163,
+      282,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        66,
+        164,
+        40,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        106,
+        164,
+        100,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "학적변동",
+       "depth": 0,
+       "box": [
+        206,
+        164,
+        100,
+        36
+       ],
+       "id": "col:학생목록/학적변동"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "그리드 축소",
+     "box": [
+      1047,
+      188,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그리드 축소",
+     "variant": "plain",
+     "id": "button:그리드 축소"
+    },
+    {
+     "aria": "그리드 확대",
+     "box": [
+      1085,
+      188,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그리드 확대",
+     "variant": "plain",
+     "id": "button:그리드 확대"
+    },
+    {
+     "aria": "학교스포츠클럽자료입력",
+     "box": [
+      1123,
+      188,
+      148,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학교스포츠클럽자료입력",
+     "variant": "link",
+     "id": "button:학교스포츠클럽자료입력"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      1279,
+      188,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "행삭제",
+     "box": [
+      1339,
+      188,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1399,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1447,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "위탁/공동",
+     "box": [
+      1495,
+      188,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "위탁/공동 가져오기",
+     "variant": "primary",
+     "id": "button:위탁/공동 가져오기"
+    },
+    {
+     "aria": "학생부자료 - 번 ",
+     "box": [
+      340,
+      198,
+      117,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생부자료 - 번",
+     "id": "heading:학생부자료 - 번"
+    },
+    {
+     "aria": "학생부자료기록 목록",
+     "box": [
+      340,
+      228,
+      1275,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생부자료기록 목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "동아리 부서구분",
+       "depth": 0,
+       "box": [
+        381,
+        229,
+        158,
+        62
+       ],
+       "id": "col:학생부자료기록 목록/동아리 부서구분"
+      },
+      {
+       "label": "부서명",
+       "depth": 0,
+       "box": [
+        539,
+        229,
+        150,
+        62
+       ],
+       "id": "col:학생부자료기록 목록/부서명"
+      },
+      {
+       "label": "이수시간",
+       "depth": 0,
+       "box": [
+        689,
+        229,
+        78,
+        62
+       ],
+       "id": "col:학생부자료기록 목록/이수시간"
+      },
+      {
+       "label": "특기사항",
+       "depth": 0,
+       "box": [
+        767,
+        229,
+        477,
+        62
+       ],
+       "id": "col:학생부자료기록 목록/특기사항"
+      },
+      {
+       "label": "글자수",
+       "depth": 0,
+       "box": [
+        1244,
+        229,
+        100,
+        62
+       ],
+       "id": "col:학생부자료기록 목록/글자수"
+      },
+      {
+       "label": "학생부 반영여부",
+       "depth": 0,
+       "box": [
+        1344,
+        229,
+        70,
+        62
+       ],
+       "id": "col:학생부자료기록 목록/학생부 반영여부"
+      },
+      {
+       "label": "스포츠클럽 정보변경여부",
+       "depth": 0,
+       "box": [
+        1414,
+        229,
+        100,
+        62
+       ],
+       "id": "col:학생부자료기록 목록/스포츠클럽 정보변경여부"
+      },
+      {
+       "label": "스포츠클럽 삭제",
+       "depth": 0,
+       "box": [
+        1514,
+        229,
+        100,
+        62
+       ],
+       "id": "col:학생부자료기록 목록/스포츠클럽 삭제"
+      }
+     ],
+     "id": "grid:학생부자료기록 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:이수시간계산내역",
+   "tab": "이수시간계산내역",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      340,
+      133,
+      968,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생부자료",
+      "이수시간계산내역",
+      "누가기록"
+     ],
+     "active": "이수시간계산내역",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "스포츠클럽정보가져오기",
+     "box": [
+      1454,
+      136,
+      158,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "스포츠클럽정보가져오기",
+     "variant": "link",
+     "id": "button:스포츠클럽정보가져오기"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      163,
+      282,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        66,
+        164,
+        40,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        106,
+        164,
+        100,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "학적변동",
+       "depth": 0,
+       "box": [
+        206,
+        164,
+        100,
+        36
+       ],
+       "id": "col:학생목록/학적변동"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1391,
+      199,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "기준일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기준일자"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      199,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회#2"
+    },
+    {
+     "aria": "이수시간 계산내역 - 번 ",
+     "box": [
+      360,
+      209,
+      170,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "이수시간 계산내역 - 번",
+     "id": "heading:이수시간 계산내역 - 번"
+    },
+    {
+     "aria": "전체시간표 목록",
+     "box": [
+      340,
+      290,
+      630,
+      523
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전체시간표 목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "전체시간표",
+       "depth": 0,
+       "box": [
+        341,
+        291,
+        628,
+        31
+       ],
+       "span": 2,
+       "id": "col:전체시간표 목록/전체시간표"
+      },
+      {
+       "label": "일자",
+       "depth": 1,
+       "box": [
+        341,
+        322,
+        314,
+        31
+       ],
+       "id": "col:전체시간표 목록/전체시간표>일자"
+      },
+      {
+       "label": "교시",
+       "depth": 1,
+       "box": [
+        655,
+        322,
+        314,
+        31
+       ],
+       "id": "col:전체시간표 목록/전체시간표>교시"
+      }
+     ],
+     "id": "grid:전체시간표 목록"
+    },
+    {
+     "aria": "이수시간기준등록 목록",
+     "box": [
+      985,
+      290,
+      630,
+      523
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "이수시간기준등록 목록",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "이수시간기준등록",
+       "depth": 0,
+       "box": [
+        986,
+        291,
+        628,
+        31
+       ],
+       "span": 3,
+       "id": "col:이수시간기준등록 목록/이수시간기준등록"
+      },
+      {
+       "label": "일자",
+       "depth": 1,
+       "box": [
+        986,
+        322,
+        209,
+        31
+       ],
+       "id": "col:이수시간기준등록 목록/이수시간기준등록>일자"
+      },
+      {
+       "label": "교시",
+       "depth": 1,
+       "box": [
+        1195,
+        322,
+        209,
+        31
+       ],
+       "id": "col:이수시간기준등록 목록/이수시간기준등록>교시"
+      },
+      {
+       "label": "부서명",
+       "depth": 1,
+       "box": [
+        1405,
+        322,
+        209,
+        31
+       ],
+       "id": "col:이수시간기준등록 목록/이수시간기준등록>부서명"
+      }
+     ],
+     "id": "grid:이수시간기준등록 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:누가기록",
+   "tab": "누가기록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      340,
+      133,
+      968,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생부자료",
+      "이수시간계산내역",
+      "누가기록"
+     ],
+     "active": "누가기록",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "스포츠클럽정보가져오기",
+     "box": [
+      1454,
+      136,
+      158,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "스포츠클럽정보가져오기",
+     "variant": "link",
+     "id": "button:스포츠클럽정보가져오기"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      163,
+      282,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        66,
+        164,
+        40,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        106,
+        164,
+        100,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      },
+      {
+       "label": "학적변동",
+       "depth": 0,
+       "box": [
+        206,
+        164,
+        100,
+        36
+       ],
+       "id": "col:학생목록/학적변동"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "입력창축소",
+     "box": [
+      1427,
+      188,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창축소",
+     "variant": "plain",
+     "id": "button:입력창축소"
+    },
+    {
+     "aria": "입력창확대",
+     "box": [
+      1453,
+      188,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창확대",
+     "variant": "plain",
+     "id": "button:입력창확대"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1479,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "누가기록",
+     "box": [
+      340,
+      198,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "누가기록",
+     "id": "heading:누가기록"
+    },
+    {
+     "aria": "창의적체험활동 누가기록 목록",
+     "box": [
+      340,
+      228,
+      1275,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "창의적체험활동 누가기록 목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "부서명",
+       "depth": 0,
+       "box": [
+        391,
+        229,
+        160,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/부서명"
+      },
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        551,
+        229,
+        120,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/일자"
+      },
+      {
+       "label": "학적변동사항 (출결결시내역)",
+       "depth": 0,
+       "box": [
+        671,
+        229,
+        160,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/학적변동사항 (출결결시내역)"
+      },
+      {
+       "label": "이수시간",
+       "depth": 0,
+       "box": [
+        831,
+        229,
+        65,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/이수시간"
+      },
+      {
+       "label": "정규외",
+       "depth": 0,
+       "box": [
+        896,
+        229,
+        60,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/정규외"
+      },
+      {
+       "label": "미이수 보충활동",
+       "depth": 0,
+       "box": [
+        956,
+        229,
+        70,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/미이수 보충활동"
+      },
+      {
+       "label": "활동내용",
+       "depth": 0,
+       "box": [
+        1026,
+        229,
+        361,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/활동내용"
+      },
+      {
+       "label": "봉사활동 실적입력",
+       "depth": 0,
+       "box": [
+        1387,
+        229,
+        70,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/봉사활동 실적입력"
+      },
+      {
+       "label": "장소 또는 주관기관명",
+       "depth": 0,
+       "box": [
+        1457,
+        229,
+        157,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/장소 또는 주관기관명"
+      }
+     ],
+     "id": "grid:창의적체험활동 누가기록 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 창의적체험활동 > 동아리활동관리(담임용)",
+ "viewport": [
+  1920,
+  945
+ ]
+}

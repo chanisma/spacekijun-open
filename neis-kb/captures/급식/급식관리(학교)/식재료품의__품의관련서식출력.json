@@ -1,0 +1,822 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식재료품의›품의관련서식출력",
+ "name": "품의관련서식출력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:57:14+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:식재료품의요구서출력",
+   "tab": "식재료품의요구서출력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식재료품의요구서출력",
+      "현품설명서(입찰용)",
+      "식재료발주서출력"
+     ],
+     "active": "식재료품의요구서출력",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수예정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "검수예정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수예정일자~"
+    },
+    {
+     "aria": "조회기간구분",
+     "box": [
+      436,
+      137,
+      260,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "조회기간구분",
+     "options": [
+      "주간",
+      "2주간",
+      "월간",
+      "일일"
+     ],
+     "id": "radio:조회기간구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      845,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      904,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      972,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1039,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1244,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "금액포함여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:금액포함여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "품의일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:품의일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      845,
+      177,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": null,
+     "box": [
+      951,
+      177,
+      85,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "업체군제외",
+     "checked": false,
+     "id": "check:업체군제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재란",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결재란"
+    },
+    {
+     "aria": null,
+     "box": [
+      277,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/"
+    },
+    {
+     "aria": null,
+     "box": [
+      379,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      481,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      565,
+      217,
+      85,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "결재란표시",
+     "checked": false,
+     "id": "check:결재란표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      845,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "협조자결재란",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:협조자결재란"
+    },
+    {
+     "aria": null,
+     "box": [
+      947,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      1049,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#5"
+    },
+    {
+     "aria": null,
+     "box": [
+      1151,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#6"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      217,
+      121,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "협조자결재란표시",
+     "checked": false,
+     "id": "check:협조자결재란표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      217,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      217,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      278,
+      1590,
+      535
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:현품설명서(입찰용)",
+   "tab": "현품설명서(입찰용)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식재료품의요구서출력",
+      "현품설명서(입찰용)",
+      "식재료발주서출력"
+     ],
+     "active": "현품설명서(입찰용)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수예정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수예정일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      629,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      697,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      764,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      137,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1590,
+      615
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:식재료발주서출력",
+   "tab": "식재료발주서출력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식재료품의요구서출력",
+      "현품설명서(입찰용)",
+      "식재료발주서출력"
+     ],
+     "active": "식재료발주서출력",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수예정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "검수예정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수예정일자~"
+    },
+    {
+     "aria": "검수예정/간",
+     "box": [
+      436,
+      137,
+      267,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "검수예정/간",
+     "options": [
+      "주간",
+      "2주간",
+      "3주간",
+      "월간"
+     ],
+     "id": "radio:검수예정/간"
+    },
+    {
+     "aria": null,
+     "box": [
+      727,
+      137,
+      65,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "월구분",
+     "checked": false,
+     "id": "check:월구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      932,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      991,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1059,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1126,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "납품기한",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:납품기한"
+    },
+    {
+     "aria": null,
+     "box": [
+      932,
+      177,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      177,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      177,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식재료품의 > 품의관련서식출력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

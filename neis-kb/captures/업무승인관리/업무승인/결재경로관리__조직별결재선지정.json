@@ -1,0 +1,230 @@
+{
+ "schema": "neis-capture/1",
+ "key": "업무승인관리›업무승인›결재경로관리›조직별결재선지정",
+ "name": "조직별결재선지정",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:54:12+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      300,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "권한조직",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:권한조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1306,
+      143,
+      68,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "최상단",
+     "variant": "plain",
+     "id": "button:최상단"
+    },
+    {
+     "aria": null,
+     "box": [
+      1382,
+      143,
+      45,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "▲ 위",
+     "variant": "plain",
+     "id": "button:▲ 위"
+    },
+    {
+     "aria": null,
+     "box": [
+      1435,
+      143,
+      57,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "▼ 아래",
+     "variant": "plain",
+     "id": "button:▼ 아래"
+    },
+    {
+     "aria": null,
+     "box": [
+      1499,
+      143,
+      68,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "최하단",
+     "variant": "plain",
+     "id": "button:최하단"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      183,
+      1590,
+      476
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        184,
+        80,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        156,
+        184,
+        210,
+        36
+       ],
+       "id": "col:그리드/사용자ID"
+      },
+      {
+       "label": "사용자명",
+       "depth": 0,
+       "box": [
+        366,
+        184,
+        210,
+        36
+       ],
+       "id": "col:그리드/사용자명"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        576,
+        184,
+        280,
+        36
+       ],
+       "id": "col:그리드/직위"
+      },
+      {
+       "label": "조직코드",
+       "depth": 0,
+       "box": [
+        857,
+        184,
+        234,
+        36
+       ],
+       "id": "col:그리드/조직코드"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        1090,
+        184,
+        280,
+        36
+       ],
+       "id": "col:그리드/조직명"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1371,
+        184,
+        163,
+        36
+       ],
+       "id": "col:그리드/비고"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1534,
+        184,
+        80,
+        36
+       ],
+       "id": "col:그리드/사용여부"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {업무승인관리}업무승인 > 결재경로관리 > 조직별결재선지정",
+ "viewport": [
+  1920,
+  945
+ ]
+}

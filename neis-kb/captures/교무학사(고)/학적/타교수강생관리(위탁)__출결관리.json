@@ -1,0 +1,636 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›타교수강생관리(위탁)›출결관리",
+ "name": "출결관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:16:27+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "마감",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:마감"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "수신정보갱신",
+     "box": [
+      1144,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수신정보갱신",
+     "variant": "primary",
+     "id": "button:수신정보갱신"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1240,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "마감",
+     "box": [
+      1288,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "마감",
+     "variant": "primary",
+     "id": "button:마감"
+    },
+    {
+     "aria": "마감취소",
+     "box": [
+      1336,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "마감취소",
+     "variant": "secondary",
+     "id": "button:마감취소"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1407,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "전송",
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전송",
+     "variant": "primary",
+     "id": "button:전송"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "월목록",
+     "box": [
+      25,
+      143,
+      48,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "월목록",
+     "id": "heading:월목록"
+    },
+    {
+     "aria": "학생별 월출결목록",
+     "box": [
+      303,
+      143,
+      133,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생별 월출결목록",
+     "id": "heading:학생별 월출결목록"
+    },
+    {
+     "aria": "월목록",
+     "box": [
+      25,
+      173,
+      263,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "월목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        131,
+        36
+       ],
+       "id": "col:월목록/학기"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        157,
+        174,
+        131,
+        36
+       ],
+       "id": "col:월목록/월"
+      }
+     ],
+     "id": "grid:월목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      356,
+      171,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수업일수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:수업일수"
+    },
+    {
+     "aria": "적용",
+     "box": [
+      462,
+      171,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "적용",
+     "variant": "primary",
+     "id": "button:적용"
+    },
+    {
+     "aria": "적용취소",
+     "box": [
+      518,
+      171,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "적용취소",
+     "variant": "secondary",
+     "id": "button:적용취소"
+    },
+    {
+     "aria": "학생별 월출결목록 그리드",
+     "box": [
+      303,
+      211,
+      1313,
+      602
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생별 월출결목록 그리드",
+     "selectable": true,
+     "declaredColumns": 26,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        354,
+        212,
+        50,
+        62
+       ],
+       "id": "col:학생별 월출결목록 그리드/순번"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        404,
+        212,
+        56,
+        62
+       ],
+       "id": "col:학생별 월출결목록 그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        459,
+        212,
+        56,
+        62
+       ],
+       "id": "col:학생별 월출결목록 그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        515,
+        212,
+        111,
+        62
+       ],
+       "id": "col:학생별 월출결목록 그리드/성명"
+      },
+      {
+       "label": "마감 여부",
+       "depth": 0,
+       "box": [
+        626,
+        212,
+        56,
+        62
+       ],
+       "id": "col:학생별 월출결목록 그리드/마감 여부"
+      },
+      {
+       "label": "승인 상태",
+       "depth": 0,
+       "box": [
+        681,
+        212,
+        78,
+        62
+       ],
+       "id": "col:학생별 월출결목록 그리드/승인 상태"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        759,
+        212,
+        78,
+        62
+       ],
+       "id": "col:학생별 월출결목록 그리드/전송상태"
+      },
+      {
+       "label": "자료 마감",
+       "depth": 0,
+       "box": [
+        837,
+        212,
+        56,
+        62
+       ],
+       "id": "col:학생별 월출결목록 그리드/자료 마감"
+      },
+      {
+       "label": "수업 일수",
+       "depth": 0,
+       "box": [
+        892,
+        212,
+        56,
+        62
+       ],
+       "id": "col:학생별 월출결목록 그리드/수업 일수"
+      },
+      {
+       "label": "결석일수",
+       "depth": 0,
+       "box": [
+        948,
+        212,
+        167,
+        31
+       ],
+       "span": 3,
+       "id": "col:학생별 월출결목록 그리드/결석일수"
+      },
+      {
+       "label": "지각",
+       "depth": 0,
+       "box": [
+        1115,
+        212,
+        167,
+        31
+       ],
+       "span": 3,
+       "id": "col:학생별 월출결목록 그리드/지각"
+      },
+      {
+       "label": "조퇴",
+       "depth": 0,
+       "box": [
+        1281,
+        212,
+        167,
+        31
+       ],
+       "span": 3,
+       "id": "col:학생별 월출결목록 그리드/조퇴"
+      },
+      {
+       "label": "결과",
+       "depth": 0,
+       "box": [
+        1448,
+        212,
+        167,
+        31
+       ],
+       "span": 3,
+       "id": "col:학생별 월출결목록 그리드/결과"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        948,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/결석일수>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1003,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/결석일수>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1059,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/결석일수>기타"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1115,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/지각>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1170,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/지각>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1226,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/지각>기타"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1281,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/조퇴>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1337,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/조퇴>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1392,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/조퇴>기타"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1448,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/결과>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1503,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/결과>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1559,
+        243,
+        56,
+        31
+       ],
+       "id": "col:학생별 월출결목록 그리드/결과>기타"
+      }
+     ],
+     "id": "grid:학생별 월출결목록 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 타교수강생관리(위탁) > 출결관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

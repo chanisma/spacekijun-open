@@ -1,0 +1,261 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›명예졸업관리›명예졸업장 출력",
+ "name": "명예졸업장 출력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:17:22+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "정렬순",
+     "box": [
+      675,
+      82,
+      249,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "정렬순",
+     "options": [
+      "졸업번호순",
+      "학년반번호순"
+     ],
+     "id": "radio:정렬순"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학년/반/번호는 재학 당시의 최종학년 정보이므로 재학생 자료가 없는 학년도는 조회되지 않습니다. ※ 명예졸업장의 경우 당해학년도 졸업처리가 완료된 이후 조회가 됩니다.",
+     "id": "note:※ 학년/반/번호는 재학 당시의 최종학년 정보이므로 재학생 자료가 없는 학년도는 조회되지 않습니다. ※ 명예졸업장의 경우 당해학년도 졸업처리가 완료된 이후 조회가 됩니다."
+    },
+    {
+     "aria": "선택출력",
+     "box": [
+      1479,
+      189,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택출력",
+     "variant": "link",
+     "id": "button:선택출력"
+    },
+    {
+     "aria": "전체출력",
+     "box": [
+      1551,
+      189,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체출력",
+     "variant": "link",
+     "id": "button:전체출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      247,
+      227,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교장명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학교장명"
+    },
+    {
+     "aria": "명예졸업장출력목록",
+     "box": [
+      25,
+      267,
+      1590,
+      546
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "명예졸업장출력목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "명예대장졸업번호",
+       "depth": 0,
+       "box": [
+        76,
+        268,
+        204,
+        72
+       ],
+       "id": "col:명예졸업장출력목록/명예대장졸업번호"
+      },
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        280,
+        268,
+        148,
+        72
+       ],
+       "id": "col:명예졸업장출력목록/과정"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        428,
+        268,
+        185,
+        72
+       ],
+       "id": "col:명예졸업장출력목록/학과"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        613,
+        268,
+        148,
+        72
+       ],
+       "id": "col:명예졸업장출력목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        762,
+        268,
+        148,
+        72
+       ],
+       "id": "col:명예졸업장출력목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        910,
+        268,
+        148,
+        72
+       ],
+       "id": "col:명예졸업장출력목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1058,
+        268,
+        185,
+        72
+       ],
+       "id": "col:명예졸업장출력목록/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        1243,
+        268,
+        185,
+        72
+       ],
+       "id": "col:명예졸업장출력목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "졸업년월",
+       "depth": 0,
+       "box": [
+        1429,
+        268,
+        185,
+        72
+       ],
+       "id": "col:명예졸업장출력목록/졸업년월"
+      }
+     ],
+     "id": "grid:명예졸업장출력목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 명예졸업관리 > 명예졸업장 출력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

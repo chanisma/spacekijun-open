@@ -1,0 +1,476 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›사용자›사용자관리›전체사용자관리",
+ "name": "전체사용자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:24:48+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      160,
+      87,
+      240,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "소속조직",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:소속조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      410,
+      87,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "부서포함",
+     "checked": false,
+     "id": "check:부서포함"
+    },
+    {
+     "aria": "사용자이름 및 사용자ID 선택",
+     "box": [
+      520,
+      87,
+      220,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "사용자이름 및 사용자ID 선택",
+     "options": [
+      "사용자이름",
+      "사용자ID"
+     ],
+     "id": "radio:사용자이름 및 사용자ID 선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      1160,
+      87,
+      170,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사용자구분"
+    },
+    {
+     "aria": "전체기간 및 등록기간 선택",
+     "box": [
+      50,
+      127,
+      210,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "전체기간 및 등록기간 선택",
+     "options": [
+      "전체기간",
+      "등록기간"
+     ],
+     "id": "radio:전체기간 및 등록기간 선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      127,
+      113,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      398,
+      127,
+      113,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자#2"
+    },
+    {
+     "aria": "사용여부",
+     "box": [
+      820,
+      127,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "사용여부",
+     "options": [
+      "전체",
+      "가능",
+      "불가능"
+     ],
+     "id": "radio:사용여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      132,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      237,
+      203,
+      870,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 파란색 성명 : 인사정보 미존재 또는 인사정보와 사용자정보가 상이(재직상태 등)한 경우입니다.",
+     "id": "note:※ 파란색 성명 : 인사정보 미존재 또는 인사정보와 사용자정보가 상이(재직상태 등)한 경우입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1395,
+      203,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이력조회",
+     "variant": "plain",
+     "id": "button:이력조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1467,
+      203,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일람표",
+     "variant": "plain",
+     "id": "button:일람표"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      203,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "plain",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      203,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "plain",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전체사용자 목록",
+     "box": [
+      25,
+      213,
+      117,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "전체사용자 목록",
+     "id": "heading:전체사용자 목록"
+    },
+    {
+     "aria": "SCH",
+     "box": [
+      25,
+      243,
+      1590,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "SCH",
+     "selectable": true,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        78,
+        244,
+        52,
+        36
+       ],
+       "id": "col:SCH/순번"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        130,
+        244,
+        125,
+        36
+       ],
+       "id": "col:SCH/사용자ID"
+      },
+      {
+       "label": "사용자명",
+       "depth": 0,
+       "box": [
+        256,
+        244,
+        104,
+        36
+       ],
+       "id": "col:SCH/사용자명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        360,
+        244,
+        94,
+        36
+       ],
+       "id": "col:SCH/생년월일"
+      },
+      {
+       "label": "사용자구분",
+       "depth": 0,
+       "box": [
+        454,
+        244,
+        104,
+        36
+       ],
+       "id": "col:SCH/사용자구분"
+      },
+      {
+       "label": "소속조직명",
+       "depth": 0,
+       "box": [
+        559,
+        244,
+        209,
+        36
+       ],
+       "id": "col:SCH/소속조직명"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        768,
+        244,
+        73,
+        36
+       ],
+       "id": "col:SCH/사용여부"
+      },
+      {
+       "label": "사용시작일자",
+       "depth": 0,
+       "box": [
+        841,
+        244,
+        104,
+        36
+       ],
+       "id": "col:SCH/사용시작일자"
+      },
+      {
+       "label": "사용종료일자",
+       "depth": 0,
+       "box": [
+        945,
+        244,
+        104,
+        36
+       ],
+       "id": "col:SCH/사용종료일자"
+      },
+      {
+       "label": "사용중지사유",
+       "depth": 0,
+       "box": [
+        1050,
+        244,
+        136,
+        36
+       ],
+       "id": "col:SCH/사용중지사유"
+      },
+      {
+       "label": "삭제사유",
+       "depth": 0,
+       "box": [
+        1186,
+        244,
+        136,
+        36
+       ],
+       "id": "col:SCH/삭제사유"
+      },
+      {
+       "label": "사용자정보",
+       "depth": 0,
+       "box": [
+        1321,
+        244,
+        84,
+        36
+       ],
+       "id": "col:SCH/사용자정보"
+      },
+      {
+       "label": "행공",
+       "depth": 0,
+       "box": [
+        1405,
+        244,
+        63,
+        36
+       ],
+       "id": "col:SCH/행공"
+      },
+      {
+       "label": "G4C",
+       "depth": 0,
+       "box": [
+        1468,
+        244,
+        63,
+        36
+       ],
+       "id": "col:SCH/G4C"
+      },
+      {
+       "label": "계정상태관리",
+       "depth": 0,
+       "box": [
+        1530,
+        244,
+        84,
+        36
+       ],
+       "id": "col:SCH/계정상태관리"
+      }
+     ],
+     "id": "grid:SCH"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      694,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      45,
+      743,
+      792,
+      50
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교원/지방공무원/비공무원 사용자는 시도(본청) 마스터만 삭제 가능하며, 삭제 시 인사정보는 삭제되지 않습니다. ※ 전근간 선생님을 사용중지시키거나 사용종료일을 수정하여 종료일이 경과되면 해당 선생님은 나이스에 로그인할 수 없습니다.",
+     "id": "note:※ 교원/지방공무원/비공무원 사용자는 시도(본청) 마스터만 삭제 가능하며, 삭제 시 인사정보는 삭제되지 않습니다. ※ 전근간 선생님을 사용중지시키거나 사용종료일을 수정하여 종료일이 경과되면 해당 선생님은 나이스에 로그인할 수 없습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      743,
+      690,
+      50
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 타기관 사용자(겸임/파견)는 원적지 또는 원적지 관할 교육지원청 또는 본청에서 수정 가능합니다. ※ 행공 : 행정정보공동이용센터 서비스 이용 ※ G4C : 정부민원포털 민원24 서비스 이용",
+     "id": "note:※ 타기관 사용자(겸임/파견)는 원적지 또는 원적지 관할 교육지원청 또는 본청에서 수정 가능합니다. ※ 행공 : 행정정보공동이용센터 서비스 이용 ※ G4C : 정부민원포털 민원24 서비스 이용"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}사용자 > 사용자관리 > 전체사용자관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

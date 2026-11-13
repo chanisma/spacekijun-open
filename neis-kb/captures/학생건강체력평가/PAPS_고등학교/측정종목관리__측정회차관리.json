@@ -1,0 +1,184 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›측정종목관리›측정회차관리",
+ "name": "측정회차관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:09:56+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:측정구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      74
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정시는 학년도에 한번만 입력 가능합니다. ※ 측정일자는 해당 학년도(해당년도.03월~다음년도.02월) 기간만을 입력 가능합니다. ※ 측정회차 측정구분은 정시는 1차, 수시는 2차부터 자동입력됩니다. ※ 측정회차를 삭제할 경우 해당회차에 입력된 모든 측정결과도 삭제됩니다.",
+     "id": "note:※ 정시는 학년도에 한번만 입력 가능합니다. ※ 측정일자는 해당 학년도(해당년도.03월~다음년도.02월) 기간만을 입력 가능합니다. ※ 측정회차 측정구분은 정시는 1차, 수시는 2차부터 자동입력됩니다. ※ 측정회차를 삭제할 경우 해당회차에 입력된 모든 측정결과도 삭제됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      242,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      242,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "측정회차 목록",
+     "box": [
+      25,
+      282,
+      1590,
+      205
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "측정회차 목록",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "측정구분",
+       "depth": 0,
+       "box": [
+        76,
+        283,
+        308,
+        36
+       ],
+       "id": "col:측정회차 목록/측정구분"
+      },
+      {
+       "label": "측정회차",
+       "depth": 0,
+       "box": [
+        384,
+        283,
+        308,
+        36
+       ],
+       "id": "col:측정회차 목록/측정회차"
+      },
+      {
+       "label": "측정이름",
+       "depth": 0,
+       "box": [
+        691,
+        283,
+        308,
+        36
+       ],
+       "id": "col:측정회차 목록/측정이름"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        999,
+        283,
+        308,
+        36
+       ],
+       "id": "col:측정회차 목록/진행상태"
+      },
+      {
+       "label": "측정일자",
+       "depth": 0,
+       "box": [
+        1306,
+        283,
+        308,
+        36
+       ],
+       "id": "col:측정회차 목록/측정일자"
+      }
+     ],
+     "id": "grid:측정회차 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 측정종목관리 > 측정회차관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

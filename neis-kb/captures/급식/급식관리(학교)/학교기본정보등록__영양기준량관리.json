@@ -1,0 +1,761 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›학교기본정보등록›영양기준량관리",
+ "name": "영양기준량관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:09:38+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 특수학교는 초등학교 급식인원이 저학년과 고학년으로 구분되어 있지않아서, 영양기준량 산출이 불가능하므로 영양기준량을 직접 산출하시기 바랍니다.",
+     "id": "note:※ 특수학교는 초등학교 급식인원이 저학년과 고학년으로 구분되어 있지않아서, 영양기준량 산출이 불가능하므로 영양기준량을 직접 산출하시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 조리교가 초등학교이고, 비조리교가 고등학교일 경우 고등학교를 기준으로 평균영양량을 작성해 주세요.",
+     "id": "note:※ 조리교가 초등학교이고, 비조리교가 고등학교일 경우 고등학교를 기준으로 평균영양량을 작성해 주세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 급식기준년월 등록 후 영양기준량산출처리 버튼 클릭 시 영양량 자동 산출됩니다.",
+     "id": "note:※ 급식기준년월 등록 후 영양기준량산출처리 버튼 클릭 시 영양량 자동 산출됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1380,
+      224,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      224,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      224,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      234,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "영양기준량관리",
+     "id": "heading:영양기준량관리"
+    },
+    {
+     "aria": null,
+     "box": [
+      180,
+      276,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급식인원 기준년월",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식인원 기준년월"
+    },
+    {
+     "aria": null,
+     "box": [
+      285,
+      276,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "영양기준량산출처리",
+     "variant": "primary",
+     "id": "button:영양기준량산출처리"
+    },
+    {
+     "aria": null,
+     "box": [
+      818,
+      375,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "고등학교",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:고등학교"
+    },
+    {
+     "aria": null,
+     "box": [
+      1211,
+      375,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "단백질",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:단백질"
+    },
+    {
+     "aria": null,
+     "box": [
+      293,
+      468,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비타민A",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:비타민A"
+    },
+    {
+     "aria": null,
+     "box": [
+      555,
+      468,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(㎍ RAE)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:(㎍ RAE)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1080,
+      468,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비타민C",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:비타민C"
+    },
+    {
+     "aria": null,
+     "box": [
+      1342,
+      468,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(mg)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:(mg)"
+    },
+    {
+     "aria": null,
+     "box": [
+      293,
+      508,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "티아민",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:티아민"
+    },
+    {
+     "aria": null,
+     "box": [
+      555,
+      508,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(mg)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:(mg)#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1080,
+      508,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "칼슘",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:칼슘"
+    },
+    {
+     "aria": null,
+     "box": [
+      1342,
+      508,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(mg)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:(mg)#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      293,
+      548,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "리보플라빈",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:리보플라빈"
+    },
+    {
+     "aria": null,
+     "box": [
+      555,
+      548,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(mg)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:(mg)#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      1080,
+      548,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "철",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:철"
+    },
+    {
+     "aria": null,
+     "box": [
+      1342,
+      548,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(mg)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:(mg)#5"
+    },
+    {
+     "aria": null,
+     "box": [
+      293,
+      588,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "나트륨",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:나트륨"
+    },
+    {
+     "aria": null,
+     "box": [
+      555,
+      588,
+      190,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(mg)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:(mg)#6"
+    },
+    {
+     "aria": "영양기준표",
+     "box": [
+      25,
+      644,
+      81,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "영양기준표",
+     "id": "heading:영양기준표"
+    },
+    {
+     "aria": "영양기준표",
+     "box": [
+      25,
+      669,
+      1575,
+      514
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "영양기준표",
+     "selectable": false,
+     "declaredColumns": 25,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        26,
+        670,
+        109,
+        62
+       ],
+       "id": "col:영양기준표/구분"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        135,
+        670,
+        66,
+        62
+       ],
+       "id": "col:영양기준표/성별"
+      },
+      {
+       "label": "에너지(kcal)",
+       "depth": 0,
+       "box": [
+        201,
+        670,
+        87,
+        62
+       ],
+       "id": "col:영양기준표/에너지(kcal)"
+      },
+      {
+       "label": "단백질(g)",
+       "depth": 0,
+       "box": [
+        288,
+        670,
+        87,
+        62
+       ],
+       "id": "col:영양기준표/단백질(g)"
+      },
+      {
+       "label": "비타민A(㎍ RAE)",
+       "depth": 0,
+       "box": [
+        376,
+        670,
+        175,
+        31
+       ],
+       "span": 2,
+       "id": "col:영양기준표/비타민A(㎍ RAE)"
+      },
+      {
+       "label": "티아민(mg)",
+       "depth": 0,
+       "box": [
+        550,
+        670,
+        175,
+        31
+       ],
+       "span": 2,
+       "id": "col:영양기준표/티아민(mg)"
+      },
+      {
+       "label": "리포플라빈(mg)",
+       "depth": 0,
+       "box": [
+        725,
+        670,
+        175,
+        31
+       ],
+       "span": 2,
+       "id": "col:영양기준표/리포플라빈(mg)"
+      },
+      {
+       "label": "나트륨(mg)",
+       "depth": 0,
+       "box": [
+        900,
+        670,
+        175,
+        31
+       ],
+       "span": 2,
+       "id": "col:영양기준표/나트륨(mg)"
+      },
+      {
+       "label": "비타민C(mg)",
+       "depth": 0,
+       "box": [
+        1075,
+        670,
+        175,
+        31
+       ],
+       "span": 2,
+       "id": "col:영양기준표/비타민C(mg)"
+      },
+      {
+       "label": "칼슘(mg)",
+       "depth": 0,
+       "box": [
+        1249,
+        670,
+        175,
+        31
+       ],
+       "span": 2,
+       "id": "col:영양기준표/칼슘(mg)"
+      },
+      {
+       "label": "철(mg)",
+       "depth": 0,
+       "box": [
+        1424,
+        670,
+        175,
+        31
+       ],
+       "span": 2,
+       "id": "col:영양기준표/철(mg)"
+      },
+      {
+       "label": "평균",
+       "depth": 1,
+       "box": [
+        376,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/비타민A(㎍ RAE)>평균"
+      },
+      {
+       "label": "권장",
+       "depth": 1,
+       "box": [
+        463,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/비타민A(㎍ RAE)>권장"
+      },
+      {
+       "label": "평균",
+       "depth": 1,
+       "box": [
+        550,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/티아민(mg)>평균"
+      },
+      {
+       "label": "권장",
+       "depth": 1,
+       "box": [
+        638,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/티아민(mg)>권장"
+      },
+      {
+       "label": "평균",
+       "depth": 1,
+       "box": [
+        725,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/리포플라빈(mg)>평균"
+      },
+      {
+       "label": "권장",
+       "depth": 1,
+       "box": [
+        813,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/리포플라빈(mg)>권장"
+      },
+      {
+       "label": "평균",
+       "depth": 1,
+       "box": [
+        900,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/나트륨(mg)>평균"
+      },
+      {
+       "label": "권장",
+       "depth": 1,
+       "box": [
+        987,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/나트륨(mg)>권장"
+      },
+      {
+       "label": "평균",
+       "depth": 1,
+       "box": [
+        1075,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/비타민C(mg)>평균"
+      },
+      {
+       "label": "권장",
+       "depth": 1,
+       "box": [
+        1162,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/비타민C(mg)>권장"
+      },
+      {
+       "label": "평균",
+       "depth": 1,
+       "box": [
+        1249,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/칼슘(mg)>평균"
+      },
+      {
+       "label": "권장",
+       "depth": 1,
+       "box": [
+        1337,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/칼슘(mg)>권장"
+      },
+      {
+       "label": "평균",
+       "depth": 1,
+       "box": [
+        1424,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/철(mg)>평균"
+      },
+      {
+       "label": "권장",
+       "depth": 1,
+       "box": [
+        1512,
+        701,
+        87,
+        31
+       ],
+       "id": "col:영양기준표/철(mg)>권장"
+      }
+     ],
+     "id": "grid:영양기준표"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 학교기본정보등록 > 영양기준량관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

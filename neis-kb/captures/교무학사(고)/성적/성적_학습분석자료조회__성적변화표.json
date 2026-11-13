@@ -1,0 +1,174 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적/학습분석자료조회›성적변화표",
+ "name": "성적변화표",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:36:27+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      584,
+      144,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:과목"
+    },
+    {
+     "aria": "상세조회",
+     "box": [
+      1459,
+      144,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "상세조회",
+     "variant": "link",
+     "id": "button:상세조회"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      144,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      394,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        78,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        104,
+        174,
+        314,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적/학습분석자료조회 > 성적변화표",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,274 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교스포츠클럽관리#학교›학교스포츠클럽관리#학교›학교스포츠클럽특기사항관리",
+ "name": "학교스포츠클럽특기사항관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:09:45+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "활동상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:활동상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교스포츠클럽명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교스포츠클럽명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교육부훈령 제280호 적용 학년의 경우 특기사항은 학생부에 반영되지 않습니다. ※ 특기사항은 관리자가 사용하는 기능입니다.",
+     "id": "note:※ 교육부훈령 제280호 적용 학년의 경우 특기사항은 학생부에 반영되지 않습니다. ※ 특기사항은 관리자가 사용하는 기능입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1360,
+      183,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창확대",
+     "variant": "primary",
+     "id": "button:입력창확대"
+    },
+    {
+     "aria": null,
+     "box": [
+      1443,
+      183,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창축소",
+     "variant": "primary",
+     "id": "button:입력창축소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "학년도 : 2026",
+     "box": [
+      25,
+      193,
+      104,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학년도 : 2026",
+     "id": "heading:학년도 : 2026"
+    },
+    {
+     "aria": "특기사항 목록",
+     "box": [
+      25,
+      223,
+      1590,
+      590
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "특기사항 목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        224,
+        50,
+        36
+       ],
+       "id": "col:특기사항 목록/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        126,
+        224,
+        178,
+        36
+       ],
+       "id": "col:특기사항 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        304,
+        224,
+        187,
+        36
+       ],
+       "id": "col:특기사항 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        491,
+        224,
+        173,
+        36
+       ],
+       "id": "col:특기사항 목록/번호"
+      },
+      {
+       "label": "이름",
+       "depth": 0,
+       "box": [
+        665,
+        224,
+        199,
+        36
+       ],
+       "id": "col:특기사항 목록/이름"
+      },
+      {
+       "label": "활동분",
+       "depth": 0,
+       "box": [
+        863,
+        224,
+        155,
+        36
+       ],
+       "id": "col:특기사항 목록/활동분"
+      },
+      {
+       "label": "특기사항",
+       "depth": 0,
+       "box": [
+        1018,
+        224,
+        367,
+        36
+       ],
+       "id": "col:특기사항 목록/특기사항"
+      },
+      {
+       "label": "글자수(동아리 활동 미포함)",
+       "depth": 0,
+       "box": [
+        1386,
+        224,
+        228,
+        36
+       ],
+       "id": "col:특기사항 목록/글자수(동아리 활동 미포함)"
+      }
+     ],
+     "id": "grid:특기사항 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교스포츠클럽관리 > 학교스포츠클럽관리 > 학교스포츠클럽특기사항관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,261 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›시간표관리›기초시간표관리",
+ "name": "기초시간표관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:05:21+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      82,
+      110,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "시간표작성정보설정 ",
+     "box": [
+      1420,
+      133,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "시간표작성정보설정",
+     "variant": "primary",
+     "id": "button:시간표작성정보설정"
+    },
+    {
+     "aria": "가져오기",
+     "box": [
+      1551,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "가져오기",
+     "variant": "secondary",
+     "id": "button:가져오기"
+    },
+    {
+     "aria": "강의실",
+     "box": [
+      25,
+      203,
+      260,
+      610
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "강의실",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "강의실명",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        200,
+        62
+       ],
+       "id": "col:강의실/강의실명"
+      },
+      {
+       "label": "완료 여부",
+       "depth": 0,
+       "box": [
+        226,
+        204,
+        58,
+        62
+       ],
+       "id": "col:강의실/완료 여부"
+      }
+     ],
+     "id": "grid:강의실"
+    },
+    {
+     "aria": "개설과목",
+     "box": [
+      300,
+      203,
+      520,
+      610
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "개설과목",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        301,
+        204,
+        78,
+        80
+       ],
+       "id": "col:개설과목/구분"
+      },
+      {
+       "label": "과목",
+       "depth": 0,
+       "box": [
+        379,
+        204,
+        156,
+        80
+       ],
+       "id": "col:개설과목/과목"
+      },
+      {
+       "label": "학점",
+       "depth": 0,
+       "box": [
+        535,
+        204,
+        55,
+        80
+       ],
+       "id": "col:개설과목/학점"
+      },
+      {
+       "label": "적용",
+       "depth": 0,
+       "box": [
+        589,
+        204,
+        55,
+        80
+       ],
+       "id": "col:개설과목/적용"
+      },
+      {
+       "label": "적용합",
+       "depth": 0,
+       "box": [
+        644,
+        204,
+        48,
+        80
+       ],
+       "id": "col:개설과목/적용합"
+      },
+      {
+       "label": "동일교시수업",
+       "depth": 0,
+       "box": [
+        692,
+        204,
+        127,
+        37
+       ],
+       "span": 2,
+       "id": "col:개설과목/동일교시수업"
+      },
+      {
+       "label": "그룹 번호",
+       "depth": 1,
+       "box": [
+        692,
+        241,
+        56,
+        43
+       ],
+       "id": "col:개설과목/동일교시수업>그룹 번호"
+      },
+      {
+       "label": "그룹 설정",
+       "depth": 1,
+       "box": [
+        748,
+        241,
+        71,
+        43
+       ],
+       "id": "col:개설과목/동일교시수업>그룹 설정"
+      }
+     ],
+     "id": "grid:개설과목"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 시간표관리 > 기초시간표관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

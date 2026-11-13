@@ -1,0 +1,167 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›관심학생조회›체력향상우수학생조회",
+ "name": "체력향상우수학생조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:22:25+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "평가요인",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:평가요인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "체력향상",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:체력향상"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      122,
+      210,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "비교측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:비교측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 기준회차를 정시회차로 하시면 이전년도 정시회차와 비교합니다. 기준회차를 수시회차로 하시면 해당 학년도의 기준회차 이전 날짜의 측정회차와 비교합니다. ※ 비교가 가능한 측정회차는 정시회차와 모든 필수종목을 실시하는 수시회차입니다.",
+     "id": "note:※ 기준회차를 정시회차로 하시면 이전년도 정시회차와 비교합니다. 기준회차를 수시회차로 하시면 해당 학년도의 기준회차 이전 날짜의 측정회차와 비교합니다. ※ 비교가 가능한 측정회차는 정시회차와 모든 필수종목을 실시하는 수시회차입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      229,
+      1590,
+      584
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [
+     "기준측정회차은(는) 필수입력 항목입니다."
+    ],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 관심학생조회 > 체력향상우수학생조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

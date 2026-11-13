@@ -1,0 +1,413 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학교정보›성적/학생부수정이력›학생부조회이력조회",
+ "name": "학생부조회이력조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:00:43+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:재학생",
+   "tab": "재학생",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "재학생",
+      "졸업생"
+     ],
+     "active": "재학생",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1503,
+      280,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "학생부 조회 이력 학생 그리드",
+     "box": [
+      25,
+      320,
+      394,
+      493
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생부 조회 이력 학생 그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        321,
+        131,
+        36
+       ],
+       "id": "col:학생부 조회 이력 학생 그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        157,
+        321,
+        261,
+        36
+       ],
+       "id": "col:학생부 조회 이력 학생 그리드/성명"
+      }
+     ],
+     "id": "grid:학생부 조회 이력 학생 그리드"
+    },
+    {
+     "aria": "학생부 조회 이력 그리드",
+     "box": [
+      434,
+      320,
+      1181,
+      493
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생부 조회 이력 그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        435,
+        321,
+        50,
+        36
+       ],
+       "id": "col:학생부 조회 이력 그리드/순번"
+      },
+      {
+       "label": "열람자ID",
+       "depth": 0,
+       "box": [
+        485,
+        321,
+        396,
+        36
+       ],
+       "id": "col:학생부 조회 이력 그리드/열람자ID"
+      },
+      {
+       "label": "열람자명",
+       "depth": 0,
+       "box": [
+        881,
+        321,
+        396,
+        36
+       ],
+       "id": "col:학생부 조회 이력 그리드/열람자명"
+      },
+      {
+       "label": "열람 일시",
+       "depth": 0,
+       "box": [
+        1277,
+        321,
+        337,
+        36
+       ],
+       "id": "col:학생부 조회 이력 그리드/열람 일시"
+      }
+     ],
+     "id": "grid:학생부 조회 이력 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:졸업생",
+   "tab": "졸업생",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "재학생",
+      "졸업생"
+     ],
+     "active": "졸업생",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      109,
+      137,
+      96,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      345,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "학생찾기(새 창열기) 버튼",
+     "box": [
+      551,
+      137,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "학생찾기",
+     "variant": "link",
+     "id": "button:학생찾기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "졸업생 학생부 조회 이력 조회 엑셀다운로드",
+     "box": [
+      1503,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "졸업생 학생부 조회 이력 그리드",
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "졸업생 학생부 조회 이력 그리드",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        50,
+        36
+       ],
+       "id": "col:졸업생 학생부 조회 이력 그리드/순번"
+      },
+      {
+       "label": "열람자ID",
+       "depth": 0,
+       "box": [
+        76,
+        239,
+        331,
+        36
+       ],
+       "id": "col:졸업생 학생부 조회 이력 그리드/열람자ID"
+      },
+      {
+       "label": "열람자명",
+       "depth": 0,
+       "box": [
+        407,
+        239,
+        331,
+        36
+       ],
+       "id": "col:졸업생 학생부 조회 이력 그리드/열람자명"
+      },
+      {
+       "label": "열람 일시",
+       "depth": 0,
+       "box": [
+        739,
+        239,
+        402,
+        36
+       ],
+       "id": "col:졸업생 학생부 조회 이력 그리드/열람 일시"
+      },
+      {
+       "label": "열람사유",
+       "depth": 0,
+       "box": [
+        1141,
+        239,
+        473,
+        36
+       ],
+       "id": "col:졸업생 학생부 조회 이력 그리드/열람사유"
+      }
+     ],
+     "id": "grid:졸업생 학생부 조회 이력 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교정보 > 성적/학생부수정이력 > 학생부조회이력조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,408 @@
+{
+ "schema": "neis-capture/1",
+ "key": "업무승인관리›업무승인›결재현황관리›위임결재관리",
+ "name": "위임결재관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:54:36+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "권한조직",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:권한조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업무영역",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:업무영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재문서명",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:결재문서명"
+    },
+    {
+     "aria": "결재구분",
+     "box": [
+      1095,
+      82,
+      185,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "위임구분",
+     "options": [
+      "전체",
+      "대결",
+      "전결"
+     ],
+     "id": "radio:위임구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상신기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:상신기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상신기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:상신기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      566,
+      122,
+      138,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기안자",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기안자"
+    },
+    {
+     "aria": null,
+     "box": [
+      710,
+      122,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      896,
+      122,
+      138,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "위임결재자",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:위임결재자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1040,
+      122,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1226,
+      122,
+      132,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "원결재자",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:원결재자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1364,
+      122,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1408,
+      173,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전결결재자지정",
+     "variant": "primary",
+     "id": "button:전결결재자지정"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      173,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "대리결재자지정",
+     "variant": "primary",
+     "id": "button:대리결재자지정"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      218,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        219,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "결재문서명",
+       "depth": 0,
+       "box": [
+        76,
+        219,
+        342,
+        36
+       ],
+       "id": "col:그리드/결재문서명"
+      },
+      {
+       "label": "기안자",
+       "depth": 0,
+       "box": [
+        418,
+        219,
+        100,
+        36
+       ],
+       "id": "col:그리드/기안자"
+      },
+      {
+       "label": "기안자직위",
+       "depth": 0,
+       "box": [
+        518,
+        219,
+        100,
+        36
+       ],
+       "id": "col:그리드/기안자직위"
+      },
+      {
+       "label": "상신일시",
+       "depth": 0,
+       "box": [
+        618,
+        219,
+        170,
+        36
+       ],
+       "id": "col:그리드/상신일시"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        788,
+        219,
+        100,
+        36
+       ],
+       "id": "col:그리드/결재상태"
+      },
+      {
+       "label": "위임구분",
+       "depth": 0,
+       "box": [
+        888,
+        219,
+        100,
+        36
+       ],
+       "id": "col:그리드/위임구분"
+      },
+      {
+       "label": "위임결재자",
+       "depth": 0,
+       "box": [
+        988,
+        219,
+        100,
+        36
+       ],
+       "id": "col:그리드/위임결재자"
+      },
+      {
+       "label": "원결재자",
+       "depth": 0,
+       "box": [
+        1088,
+        219,
+        100,
+        36
+       ],
+       "id": "col:그리드/원결재자"
+      },
+      {
+       "label": "위임결재신청기간",
+       "depth": 0,
+       "box": [
+        1188,
+        219,
+        240,
+        36
+       ],
+       "id": "col:그리드/위임결재신청기간"
+      },
+      {
+       "label": "인원",
+       "depth": 0,
+       "box": [
+        1428,
+        219,
+        240,
+        36
+       ],
+       "id": "col:그리드/인원"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      785,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {업무승인관리}업무승인 > 결재현황관리 > 위임결재관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

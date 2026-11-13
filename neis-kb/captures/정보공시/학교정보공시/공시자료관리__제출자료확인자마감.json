@@ -1,0 +1,94 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시자료관리›제출자료확인자마감",
+ "name": "제출자료확인자마감",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:54:08+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 공시제출마감 후에는 작성자 마감을 할 수 없습니다. ※ 비활성화 된 항목은 작성되지 않았거나 작성자 마감되지 않은 항목입니다. ※ 제외처리한 항목도 마감되어야 하므로, 먼저 작성자가 자료등록 메뉴에서 {제외확인} 버튼을 클릭하여 주시기 바랍니다.",
+     "id": "note:※ 공시제출마감 후에는 작성자 마감을 할 수 없습니다. ※ 비활성화 된 항목은 작성되지 않았거나 작성자 마감되지 않은 항목입니다. ※ 제외처리한 항목도 마감되어야 하므로, 먼저 작성자가 자료등록 메뉴에서 {제외확인} 버튼을 클릭하여 주시기 바랍니다."
+    }
+   ],
+   "query": {
+    "alerts": [
+     "현재 공시차수 현재 공시차수 3차는 조사가능일이 아닙니다. 차는 조사가능일이 아닙니다. [GA-SID-0009]"
+    ],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시자료관리 > 공시자료마감 > 제출자료확인자마감",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

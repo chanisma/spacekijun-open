@@ -1,0 +1,407 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›개별화교육계획›개별화교육계획전송관리›개별화교육계획전송요청",
+ "name": "개별화교육계획전송요청",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:43:28+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      115,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:등록일"
+    },
+    {
+     "aria": null,
+     "box": [
+      1030,
+      82,
+      115,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록일~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1285,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전송상태",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:전송상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신교",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:출신교"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1312,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": "전송요청",
+     "box": [
+      1360,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전송요청",
+     "variant": "primary",
+     "id": "button:전송요청"
+    },
+    {
+     "aria": "요청취소",
+     "box": [
+      1431,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "요청취소",
+     "variant": "secondary",
+     "id": "button:요청취소"
+    },
+    {
+     "aria": "자료반영",
+     "box": [
+      1503,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료반영",
+     "variant": "primary",
+     "id": "button:자료반영"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      151,
+      211,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요청자성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요청자성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      383,
+      211,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "연락처",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:연락처"
+    },
+    {
+     "aria": "개별화교육전송요청 테이블",
+     "box": [
+      25,
+      251,
+      1590,
+      490
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "개별화교육전송요청 테이블",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "등록일",
+       "depth": 0,
+       "box": [
+        76,
+        252,
+        136,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/등록일"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        212,
+        252,
+        136,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        348,
+        252,
+        136,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        484,
+        252,
+        136,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        620,
+        252,
+        136,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/성명"
+      },
+      {
+       "label": "출신학교코드",
+       "depth": 0,
+       "box": [
+        757,
+        252,
+        136,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/출신학교코드"
+      },
+      {
+       "label": "출신학교명",
+       "depth": 0,
+       "box": [
+        893,
+        252,
+        136,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/출신학교명"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        1029,
+        252,
+        136,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/전송상태"
+      },
+      {
+       "label": "요청일시",
+       "depth": 0,
+       "box": [
+        1165,
+        252,
+        157,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/요청일시"
+      },
+      {
+       "label": "자료반영일시",
+       "depth": 0,
+       "box": [
+        1321,
+        252,
+        157,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/자료반영일시"
+      },
+      {
+       "label": "연락처",
+       "depth": 0,
+       "box": [
+        1478,
+        252,
+        136,
+        36
+       ],
+       "id": "col:개별화교육전송요청 테이블/연락처"
+      }
+     ],
+     "id": "grid:개별화교육전송요청 테이블"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 개별화교육계획 > 개별화교육계획전송관리 > 개별화교육계획전송요청",
+ "viewport": [
+  1920,
+  945
+ ]
+}

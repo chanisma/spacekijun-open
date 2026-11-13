@@ -1,0 +1,91 @@
+/* 다마고찌 — 전체 화면 앱. 기기 모양마다 배경과 머리줄 색이 다르다. */
+@keyframes tama-hold {
+  from { stroke-dashoffset: var(--tama-c); }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes tama-twinkle {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.9; }
+}
+@keyframes tama-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes tama-pop {
+  from { opacity: 0; transform: translateY(8px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes tama-print {
+  from { clip-path: inset(0 0 100% 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+.tama-app {
+  font-family: 'TamaGalmuri11', 'Pretendard', system-ui, sans-serif;
+  -webkit-font-smoothing: none;
+}
+.tama-app.is-classic {
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(124, 116, 255, 0.28), transparent 60%),
+    radial-gradient(90% 60% at 80% 100%, rgba(70, 190, 255, 0.16), transparent 60%),
+    linear-gradient(180deg, #171a46 0%, #11143a 55%, #0c0e2c 100%);
+  color: #eef0ff;
+}
+.tama-app.is-color {
+  background:
+    radial-gradient(70% 55% at 15% 10%, rgba(255, 255, 255, 0.75), transparent 60%),
+    radial-gradient(60% 50% at 90% 85%, rgba(255, 196, 225, 0.85), transparent 65%),
+    linear-gradient(160deg, #e7dcff 0%, #f7dcf3 45%, #ffe1d6 100%);
+  color: #3b2470;
+}
+/* 첫 로딩(2026-10-09) — 앱 배경을 그대로 이어받아 기기 자리를 덮는다 */
+.tama-loading { background: inherit; }
+@keyframes tama-wobble {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(7deg); }
+  60% { transform: rotate(-4deg); }
+  80% { transform: rotate(2deg); }
+}
+.tama-loading-egg { animation: tama-wobble 1.6s ease-in-out infinite; transform-origin: 50% 90%; }
+@media (prefers-reduced-motion: reduce) { .tama-loading-egg { animation: none; } }
+.tama-star {
+  position: absolute;
+  border-radius: 9999px;
+  background: #fff6d8;
+  animation: tama-twinkle 3.6s ease-in-out infinite;
+}
+.tama-bokeh {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(2px);
+  animation: tama-float 9s ease-in-out infinite;
+}
+.tama-chip {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.is-classic .tama-chip { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.18); }
+.is-color .tama-chip { background: rgba(255, 255, 255, 0.62); border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: 0 6px 18px -10px rgba(110, 60, 170, 0.45); }
+.tama-pop { animation: tama-pop 220ms ease-out; }
+
+/* 클래식 쪽지 — 감열지 영수증: 톱니 가장자리, 아래로 인쇄되며 나온다 */
+.tama-slip {
+  background: #fbf8ef;
+  color: #23201c;
+  box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.55);
+  --tooth: 7px;
+  clip-path: polygon(
+    0 var(--tooth), 5% 0, 10% var(--tooth), 15% 0, 20% var(--tooth), 25% 0, 30% var(--tooth), 35% 0, 40% var(--tooth), 45% 0, 50% var(--tooth),
+    55% 0, 60% var(--tooth), 65% 0, 70% var(--tooth), 75% 0, 80% var(--tooth), 85% 0, 90% var(--tooth), 95% 0, 100% var(--tooth),
+    100% calc(100% - var(--tooth)), 95% 100%, 90% calc(100% - var(--tooth)), 85% 100%, 80% calc(100% - var(--tooth)), 75% 100%,
+    70% calc(100% - var(--tooth)), 65% 100%, 60% calc(100% - var(--tooth)), 55% 100%, 50% calc(100% - var(--tooth)), 45% 100%,
+    40% calc(100% - var(--tooth)), 35% 100%, 30% calc(100% - var(--tooth)), 25% 100%, 20% calc(100% - var(--tooth)), 15% 100%,
+    10% calc(100% - var(--tooth)), 5% 100%, 0 calc(100% - var(--tooth))
+  );
+}
+.tama-slip-print { animation: tama-print 380ms steps(10, end); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tama-star, .tama-bokeh, .tama-pop, .tama-slip-print { animation: none; }
+}

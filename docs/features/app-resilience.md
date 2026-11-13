@@ -1,0 +1,28 @@
+# 앱 복원력 — 오류 경계 · 저장값 · 인증 잠금 · 빈 화면
+
+---
+
+## CLAUDE.md 에서 옮긴 원문 (2026-10-23)
+
+> 2026-10-23 CLAUDE.md 정리 때 **한 줄도 고치지 않고** 옮긴 원문이다. 요약·포인터는 CLAUDE.md 에 남아 있다.
+
+### Error Handling
+- Toast notifications for user feedback
+- **전역 렌더 오류 차단막 = `src/components/common/AppErrorBoundary.tsx`** (2026-09-04 신설). **경계는 두 개다** — `label="root"`가 `App` 전체(Provider 층 포함)를, `label="routes"`가 `BrowserRouter` 안·`Routes` 바깥을 감싼다. 안쪽 하나만 있으면 `AuthProvider`·`SidebarProvider`·`TooltipProvider`·전역 핸들러에서 난 예외를 **아무도 잡지 못한다**(부팅 중 저장값을 읽다 터지는 사고가 정확히 이 층에서 난다). 종전엔 이 문서가 "Error boundaries"를 적어 두었는데 코드에는 0건이었다 — React 18은 처리되지 않은 렌더 예외에 트리 전체를 언마운트하므로 예외 하나가 **설명 없는 백색 화면**으로 끝났다. 새 경계를 만들 땐 `label`을 주어 콘솔에서 어느 구획이 죽었는지 구분할 것
+- **부팅 경로에서 `localStorage`를 직접 읽지 말 것 — 단일 출처 `src/lib/safeLocalStorage.ts` (2026-09-04)**: 저장값은 백색 화면을 **영구화**한다. ①시크릿 창·사이트 데이터 차단에서는 `window.localStorage` **접근만으로** `SecurityError`가 나고 ②깨진 값의 `JSON.parse`는 새로고침해도 같은 자리에서 또 터진다 → 사용자가 직접 localStorage를 비우기 전에는 낫지 않는다. `readStoredJson`은 실패 시 **그 키를 스스로 지우고**(자가 치유) fallback을 준다. `validate`를 주면 타입까지 본다(옛 버전이 다른 모양으로 저장한 값은 파싱은 성공한다). `SidebarProvider`가 실제로 맨 `JSON.parse(localStorage.getItem('sidebar-expanded'))`였고 **ErrorBoundary보다 위**였다. 회귀 = `npx tsx scripts/safe-storage-test/run.mts`(25건)
+- **인증 대기 화면은 `null`로 두지 말 것 (2026-09-04)**: `RequireAuth`의 `if (loading) return null`은 스피너도 글자도 빠져나갈 링크도 없는 **완전한 백색 화면**이라, `AuthProvider`가 어떤 이유로든 `loading`을 못 내리면 "새로고침해도 흰 화면"이 되고 원인도 복구 수단도 없다. 지금은 **6초(`AUTH_STUCK_MS`)** 를 넘기면 `AuthStuckScreen`이 뜬다 — 원인을 하나씩 막는 것과 **별개로** 어떤 원인이든 화면이 말을 하게 하는 안전망이다. 핵심 버튼은 **[저장된 로그인 정보 지우고 다시 시도]**(`clearStoredAuthState()`) — 이 증상의 실제 해결책이 늘 "localStorage 비우고 새로고침"이었는데 그건 개발자 도구를 열 줄 아는 사람만 쓸 수 있었다. 로그인 관련 키만 골라 지우므로(`sb-*-auth-token`·`auth_login_timestamp`·`gdrive_*`·동의 캐시) 사이드바 상태 같은 무관한 설정은 남는다
+- **⚠️ `onAuthStateChange` 콜백 안에서 supabase 호출을 `await` 하지 말 것 (2026-09-04 실제 사고, 재현·수정 완료)**: `auth-js`는 이 콜백을 `_notifyAllSubscribers`에서 **인증 잠금을 쥔 채** `await`하는데, `supabase.from(...)`은 내부적으로 `_getAccessToken()` → `auth.getSession()` → **같은 잠금을 다시 요구**한다. 순환 대기이고 잠금 대기에 타임아웃이 없어(`acquireTimeout: -1`) **영구히 매달린다** → `setLoading(false)`가 영영 실행되지 않고 `RequireAuth`가 백색 화면을 그린다. 종전 `AuthProvider`가 정확히 이 형태였다(콜백이 `async` + `await loadProfile(...)`).
+  - **증상이 시간에 묶여 있는 이유**: 액세스 토큰이 **유효할 때는 재현되지 않는다**(그때는 `INITIAL_SESSION`만 나는데 그 경로는 콜백을 await하지 않아 잠금이 먼저 풀린다). 토큰이 만료된 뒤 부팅해야 `_recoverAndRefresh` → `TOKEN_REFRESHED`가 **잠금 안에서 await**되며 걸린다. 만료 토큰은 localStorage에 남으므로 **새로고침해도 그대로**고, **localStorage를 비우면 낫는다**(갱신할 세션이 없으므로). "한참 자리를 비웠다 돌아오면 흰 화면"이 정확히 이것이다.
+  - **수정 = 콜백을 동기로 되돌리고 무거운 작업은 `runOutsideAuthLock`(=`setTimeout(...,0)`)으로 미룬다.** **매크로태스크여야 한다** — 마이크로태스크(`Promise.then`)는 잠금이 풀리기 전에 실행될 수 있어 같은 교착에 걸린다. `setLoading(false)`를 프로필 로드 뒤에 하는 순서는 그대로 지킨다(먼저 내리면 `loading=false ∧ profile=null` 빈 화면이 돌아온다).
+  - **⚠️ Node 기본 실행으로는 절대 못 잡는다**: `navigator.locks`가 없으면 auth-js가 **`lockNoOp`**으로 떨어져 네 시나리오가 전부 통과해 버린다(실제로 그렇게 한 번 놓쳤다). 회귀 `npx tsx scripts/auth-lock-test/run.mts`(34건)는 **진짜 배타 잠금을 폴리필**해 옛 형태가 매달리는 것까지 함께 못 박고, 소스가 다시 `async` 콜백으로 돌아가면 정적 검사로 걸린다.
+- **⚠️⚠️ 인증 잠금은 탭이 아니라 **출처(origin) 단위**다 — 다른 탭이 얼어붙으면 이 탭이 멈춘다 (2026-09-10 실제 사고, 휴대폰)**: 위 ①이 *같은 탭 안의* 순환 대기였다면 이것은 *탭 사이*의 문제다. `auth-js`는 세션을 만질 때마다 `navigator.locks`로 **하나의** `lock:sb-<ref>-auth-token`을 잡는데 Web Locks는 같은 사이트의 **모든 탭이 공유**하고, `getSession()`·`initialize()`·`INITIAL_SESSION` 발행·`getUser()`가 전부 `acquireTimeout: -1`(**무한 대기**)이다. 게다가 `_recoverAndRefresh()`는 그 잠금을 **쥔 채** 토큰 갱신 네트워크 요청을 한다(실패 시 백오프로 최대 30초).
+  - **왜 데스크톱은 멀쩡하고 휴대폰만 죽나**: 데스크톱은 배경 탭도 JS를 계속 돌려(타이머만 느려진다) 잠금을 결국 놓아 준다. 모바일 브라우저는 배경 탭을 **freeze/suspend** 해 태스크 큐 자체를 멈추므로 **잠금을 해제하는 `finally`가 영영 실행되지 않는다**. 잠금은 그 문서가 살아 있는 한 유지되니, 얼어붙은 탭이 잠금을 쥔 채 멈춰 선다.
+  - **증상 판별법**: ①과 화면이 똑같지만(흰 화면 → 6초 뒤 «로그인 정보를 확인하지 못했습니다») **저장된 로그인 정보를 지워도 낫지 않고**(잠금 **이름**은 저장소 내용과 무관하다) **같은 브라우저의 다른 탭을 새로고침하면 낫는다**(그 문서가 파괴되며 잠금이 풀린다). 사용자가 우연히 발견한 이 마지막 조각이 원인을 특정했다.
+  - **왜 자동 로그인(개인기기 등록) 이후에 터졌나**: 종전엔 매일 새벽 5시 로그아웃 때문에 휴대폰의 배경 탭이 **대부분 로그아웃 상태**였다. 세션이 없으면 `_recoverAndRefresh`는 저장소만 읽고 끝나 잠금을 수 밀리초만 쥔다. 자동 로그인 뒤로는 배경 탭들이 **살아 있는 세션**을 갖고 복귀할 때마다 만료 토큰을 **잠금 안에서** 갱신한다 — 잠금을 오래 쥐는 경로가 그때 생겼다.
+  - **수정 = `src/lib/authLock.ts`(`auth.lock` 옵션)**: 무한 대기를 **유한 대기(3초) + `steal`**로 바꾼다. Web Locks의 `steal: true`가 정확히 이 상황(보유자가 응답하지 않음)을 위해 규격에 있고, 보유자의 협조 없이 브라우저가 회수해 준다. **한 번만 손해 보고 끝난다** — 빼앗고 나면 잠금이 정상으로 돌아와 이후 호출은 즉시 통과한다(호출마다 3초씩 물면 `getUser()`를 수십 번 부르는 이 앱에서는 쓸 수 없다). **잠금을 없애면 안 된다** — 여러 탭이 같은 refresh token으로 동시에 갱신해 회전에 걸린다. 정상 경합은 그대로 막고 **비정상만** 걷어낸다(3초를 넘겨 빼앗는 드문 경우도 GoTrue의 refresh token 재사용 유예 10초 안이라 같은 새 세션을 받는다).
+  - **`acquireTimeout === 0`은 절대 기다리지도 빼앗지도 말 것** — 자동 갱신 틱(30초 주기)이 쓰는 경로라, 여기서 줄을 서면 틱이 쌓여 **잠금 경합을 스스로 키운다**. `ifAvailable`로 즉시 실패하고 `isAcquireTimeout` 오류를 던져야 auth-js가 조용히 건너뛴다.
+  - **`AUTH_LOCK_MAX_WAIT_MS`(3초) < `RequireAuth`의 `AUTH_STUCK_MS`(6초)** 여야 한다. 아니면 정상 복구가 오류 화면으로 보인다(회귀가 이 부등식을 검사한다).
+  - **잠금을 쥔 채 네트워크를 타는 코드를 늘리지 말 것**: `supabase.auth.getUser()`는 편해 보이지만 **`GET /user` 네트워크 호출이고 잠금 안에서 돈다**(현재 40곳 이상). 사용자 id만 필요하면 `useAuth().user`나 `getSession()`(저장소 읽기)을 쓸 것. 보완으로 `client.ts`가 **`/auth/v1/` 요청에만** 15초 상한을 건다(`fetch`는 기본 타임아웃이 없어 모바일에서 몇 분씩 매달린다). 중단은 `AuthRetryableFetchError`로 분류되므로 **로그아웃으로 번지지 않는다**. REST·Storage에는 걸지 않는다(업로드·긴 쿼리).
+- **"빈 화면"을 만들지 말 것 — 로딩·실패·차단은 서로 다른 것을 보여준다** (2026-09-04): `ProtectedRoute`가 셋을 구분한다(로딩=스피너 / 프로필 실패=원인+다시 시도 / 역할 차단=사유를 state로 넘기고 홈이 배너). 종전엔 셋 다 `return null` 또는 무음 `<Navigate to="/">`라 사용자에게 전부 "눌렀는데 아무 일도 안 일어남"으로 보였다. **`AuthProvider`의 `loadProfile`은 반드시 await한 뒤 `setLoading(false)`** — 안 그러면 `loading=false ∧ profile=null`이 매 로드마다 지나가고, 실패 시 그 상태가 **영구히** 남는다. 실패는 `profileError`로 노출된다
+- Graceful fallbacks for missing data
+- Loading states for async operations

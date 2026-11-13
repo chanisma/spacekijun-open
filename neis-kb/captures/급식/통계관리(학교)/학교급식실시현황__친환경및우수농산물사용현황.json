@@ -1,0 +1,183 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›통계관리(학교)›학교급식실시현황›친환경및우수농산물사용현황",
+ "name": "친환경및우수농산물사용현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:57:53+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "구분",
+     "box": [
+      155,
+      82,
+      142,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "구분",
+     "options": [
+      "기간설정",
+      "반기"
+     ],
+     "id": "radio:구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      417,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      552,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      792,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "연도",
+     "control": "date",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      918,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "연도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:연도#2"
+    },
+    {
+     "aria": "구분",
+     "box": [
+      1062,
+      82,
+      199,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "구분",
+     "options": [
+      "총수량(규격)",
+      "총수량(Kg)"
+     ],
+     "id": "radio:구분#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식재료품의목록작성 메뉴에서 품의처리한 농산물의 속성 정보를 기준으로 자료를 집계합니다.",
+     "id": "note:※ 식재료품의목록작성 메뉴에서 품의처리한 농산물의 속성 정보를 기준으로 자료를 집계합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      224,
+      1590,
+      590
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}통계관리(학교) > 학교급식실시현황 > 친환경및우수농산물사용현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,194 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학교정보›성적/학생부수정이력›졸업확인이력조회",
+ "name": "졸업확인이력조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:01:07+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생명"
+    },
+    {
+     "aria": "찾기",
+     "box": [
+      621,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "link",
+     "id": "button:찾기"
+    },
+    {
+     "aria": "졸업 확인 이력 조회 버튼",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1503,
+      133,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "졸업 확인 이력 조회 그리드",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "졸업 확인 이력 조회 그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "대학교명",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        284,
+        36
+       ],
+       "id": "col:졸업 확인 이력 조회 그리드/대학교명"
+      },
+      {
+       "label": "확인일시",
+       "depth": 0,
+       "box": [
+        310,
+        174,
+        321,
+        36
+       ],
+       "id": "col:졸업 확인 이력 조회 그리드/확인일시"
+      },
+      {
+       "label": "계열명",
+       "depth": 0,
+       "box": [
+        631,
+        174,
+        189,
+        36
+       ],
+       "id": "col:졸업 확인 이력 조회 그리드/계열명"
+      },
+      {
+       "label": "학과명",
+       "depth": 0,
+       "box": [
+        820,
+        174,
+        189,
+        36
+       ],
+       "id": "col:졸업 확인 이력 조회 그리드/학과명"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1009,
+        174,
+        265,
+        36
+       ],
+       "id": "col:졸업 확인 이력 조회 그리드/성명"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        1274,
+        174,
+        189,
+        36
+       ],
+       "id": "col:졸업 확인 이력 조회 그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        1463,
+        174,
+        151,
+        36
+       ],
+       "id": "col:졸업 확인 이력 조회 그리드/번호"
+      }
+     ],
+     "id": "grid:졸업 확인 이력 조회 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교정보 > 성적/학생부수정이력 > 졸업확인이력조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

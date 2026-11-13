@@ -1,0 +1,321 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›조직코드›조직코드관리›기관(부서)기본정보관리",
+ "name": "기관(부서)기본정보관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:49:28+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조직검색",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:조직검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      381,
+      82,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "검색",
+     "variant": "primary",
+     "id": "button:검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      201,
+      1575,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "기관(부서)명",
+       "depth": 0,
+       "box": [
+        26,
+        202,
+        321,
+        36
+       ],
+       "id": "col:그리드/기관(부서)명"
+      },
+      {
+       "label": "도로명우편번호",
+       "depth": 0,
+       "box": [
+        347,
+        202,
+        241,
+        36
+       ],
+       "id": "col:그리드/도로명우편번호"
+      },
+      {
+       "label": "도로명주소",
+       "depth": 0,
+       "box": [
+        588,
+        202,
+        241,
+        36
+       ],
+       "id": "col:그리드/도로명주소"
+      },
+      {
+       "label": "전화번호",
+       "depth": 0,
+       "box": [
+        829,
+        202,
+        193,
+        36
+       ],
+       "id": "col:그리드/전화번호"
+      },
+      {
+       "label": "팩스번호",
+       "depth": 0,
+       "box": [
+        1021,
+        202,
+        193,
+        36
+       ],
+       "id": "col:그리드/팩스번호"
+      },
+      {
+       "label": "홈페이지주소",
+       "depth": 0,
+       "box": [
+        1214,
+        202,
+        193,
+        36
+       ],
+       "id": "col:그리드/홈페이지주소"
+      },
+      {
+       "label": "영문주소",
+       "depth": 0,
+       "box": [
+        1406,
+        202,
+        193,
+        36
+       ],
+       "id": "col:그리드/영문주소"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      649,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      695,
+      395,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관(부서)코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관(부서)코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      695,
+      395,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관(부서)명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관(부서)명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      695,
+      63,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1278,
+      695,
+      63,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:전화번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      735,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "우편번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:우편번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      735,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "도로명우편번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:도로명우편번호"
+    },
+    {
+     "aria": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "box": [
+      761,
+      735,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "variant": "link",
+     "id": "button:우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      735,
+      220,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "팩스번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:팩스번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      775,
+      395,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "홈페이지주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:홈페이지주소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      815,
+      395,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "영문주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:영문주소"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}조직코드 > 조직코드관리 > 기관(부서)기본정보관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

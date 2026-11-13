@@ -1,0 +1,413 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›개별화교육계획›개별화교육계획관리›마감이후수정이력조회",
+ "name": "마감이후수정이력조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:07:30+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계열/학년/학과",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:계열/학년/학과"
+    },
+    {
+     "aria": "입력구분",
+     "box": [
+      975,
+      82,
+      305,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "입력구분",
+     "options": [
+      "교과영역",
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:입력구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:강의실"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      122,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀출력",
+     "box": [
+      1527,
+      173,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀출력",
+     "variant": "plain",
+     "id": "button:엑셀출력"
+    },
+    {
+     "aria": "마감이후수정이력조회",
+     "box": [
+      25,
+      183,
+      161,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "마감이후수정이력조회",
+     "id": "heading:마감이후수정이력조회"
+    },
+    {
+     "aria": "마감이후 수정이력 테이블",
+     "box": [
+      25,
+      213,
+      1590,
+      220
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "마감이후 수정이력 테이블",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        26,
+        214,
+        151,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/학년도"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        177,
+        214,
+        95,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/학기"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        272,
+        214,
+        95,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        366,
+        214,
+        95,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        461,
+        214,
+        95,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/번호"
+      },
+      {
+       "label": "학생성명",
+       "depth": 0,
+       "box": [
+        555,
+        214,
+        151,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/학생성명"
+      },
+      {
+       "label": "과목",
+       "depth": 0,
+       "box": [
+        707,
+        214,
+        227,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/과목"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        933,
+        214,
+        227,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/구분"
+      },
+      {
+       "label": "수정자",
+       "depth": 0,
+       "box": [
+        1160,
+        214,
+        189,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/수정자"
+      },
+      {
+       "label": "수정일시",
+       "depth": 0,
+       "box": [
+        1349,
+        214,
+        265,
+        36
+       ],
+       "id": "col:마감이후 수정이력 테이블/수정일시"
+      }
+     ],
+     "id": "grid:마감이후 수정이력 테이블"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      453,
+      788,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "원 자료",
+     "id": "heading:원 자료"
+    },
+    {
+     "aria": null,
+     "box": [
+      828,
+      453,
+      788,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "수정 자료",
+     "id": "heading:수정 자료"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      494,
+      665,
+      110
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "현행수준",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:현행수준"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      494,
+      665,
+      110
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "현행수준",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:현행수준#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      614,
+      665,
+      110
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기목표",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학기목표"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      614,
+      665,
+      110
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기목표",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학기목표#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      734,
+      1460,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "마감이후 수정 사유",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:마감이후 수정 사유"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 개별화교육계획 > 개별화교육계획관리 > 마감이후수정이력조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육통계›교육통계(상반기)›통계자료작성›통계자료작성",
+ "name": "통계자료작성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:41:46+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      78,
+      100,
+      161,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "통계분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:통계분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      295,
+      101,
+      1310,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 좌측의 「통계항목」을 선택하시면 통계자료 작성을 할 수 있습니다.",
+     "id": "note:※ 좌측의 「통계항목」을 선택하시면 통계자료 작성을 할 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      10,
+      195,
+      239,
+      40
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "통계항목",
+     "id": "heading:통계항목"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "교육통계 > {교육통계}교육통계(상반기) > 통계자료작성",
+ "alsoVia": [
+  "교육통계",
+  "부서장(나이스부)",
+  "부서장(나이스부)",
+  "부서장(정보화부)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

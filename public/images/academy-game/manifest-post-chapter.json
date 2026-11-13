@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-14",
+  "tool": "built-in image_gen",
+  "mode": "reference-based generation",
+  "assets": [
+    {
+      "file": "chapter-post-morning.png",
+      "references": [
+        "ria.png",
+        "luon.png",
+        "plaza.png"
+      ],
+      "prompt": "Use case: illustration-story. Create one landscape 1536x1024 full-bleed Korean romance fantasy academy visual novel CG, finely painted anime style matching supplied character references. References are identity and world references only, never copy sprite sheet layout or checkerboard. Ria is one young woman with long wavy brown hair, violet eyes, cream blouse and plum academy dress, visibly shorter than male characters. Luon is one silver-haired blue-eyed young man in navy gold academy coat. Keep faces, hair and fashion consistent with references. No text, speech bubbles, UI, borders, watermark. Keep faces and meaningful hands above lower 30 percent dialogue overlay area, characters grouped fairly centrally for mobile crop. Scene: fresh clear MORNING sunlight in academy central plaza, not sunset. Ria and Luon standing together by fountain, warmly chatting after her first night in the dormitory; Ria smiles shyly while telling him about her roommate. Luon gently inclines his head to ask how she slept. Exactly two characters. Elegant academy buildings and morning dew in background."
+    },
+    {
+      "file": "chapter-post-arrival.png",
+      "references": [
+        "ria.png",
+        "luon.png",
+        "post.png"
+      ],
+      "prompt": "Use case: illustration-story. Create one landscape 1536x1024 full-bleed Korean romance fantasy academy visual novel CG, finely painted anime style matching supplied character references. References are identity and world references only, never copy sprite sheet layout or checkerboard. Ria is one young woman with long wavy brown hair, violet eyes, cream blouse and plum academy dress, visibly shorter than male characters. Luon is one silver-haired blue-eyed young man in navy gold academy coat. Keep faces, hair and fashion consistent with references. No text, speech bubbles, UI, borders, watermark. Keep faces and meaningful hands above lower 30 percent dialogue overlay area, characters grouped fairly centrally for mobile crop. Scene: inside ornate royal pigeon post office in MORNING sunlight. Ria, holding a small bundle of envelopes, looks up with wide astonished delighted eyes at three white carrier pigeons flying through an open arched window with tiny sealed messages, Luon standing beside her smiling fondly, helping steady an envelope. Exactly two human characters. Brass pigeon perches, wooden mail cubbies and gold purple interior."
+    },
+    {
+      "file": "chapter-post-letter.png",
+      "references": [
+        "ria.png",
+        "luon.png",
+        "postmaster.png",
+        "post.png"
+      ],
+      "prompt": "Use case: illustration-story. Create one landscape 1536x1024 full-bleed Korean romance fantasy academy visual novel CG, finely painted anime style matching supplied character references. References are identity and world references only, never copy sprite sheet layout or checkerboard. Ria is one young woman with long wavy brown hair, violet eyes, cream blouse and plum academy dress, visibly shorter than male characters. Luon is one silver-haired blue-eyed young man in navy gold academy coat. Keep faces, hair and fashion consistent with references. No text, speech bubbles, UI, borders, watermark. Keep faces and meaningful hands above lower 30 percent dialogue overlay area, characters grouped fairly centrally for mobile crop. Third character Noel: reddish auburn hair, amber eyes, jaunty dark gold-trimmed postman cap, burgundy capelet, white shirt and messenger satchel, matching reference. Scene: Noel enthusiastically hands one sealed letter to Ria across the post counter. Ria is the central protagonist actively reaching to receive it with curiosity; Luon stands close by in supportive warm smile. Exactly three humans. Airy morning light, pigeon perched on brass stand and richly detailed mail cubbies."
+    },
+    {
+      "file": "chapter-post-complete.png",
+      "references": [
+        "ria.png",
+        "luon.png",
+        "postmaster.png",
+        "post.png"
+      ],
+      "prompt": "Use case: illustration-story. Create one landscape 1536x1024 full-bleed Korean romance fantasy academy visual novel CG, finely painted anime style matching supplied character references. References are identity and world references only, never copy sprite sheet layout or checkerboard. Ria is one young woman with long wavy brown hair, violet eyes, cream blouse and plum academy dress, visibly shorter than male characters. Luon is one silver-haired blue-eyed young man in navy gold academy coat. Keep faces, hair and fashion consistent with references. No text, speech bubbles, UI, borders, watermark. Keep faces and meaningful hands above lower 30 percent dialogue overlay area, characters grouped fairly centrally for mobile crop. Third character Noel: reddish auburn hair, amber eyes, dark gold-trimmed postman cap, burgundy capelet, white shirt and messenger satchel, same reference identity. Scene: Ria centered holding up her newly written observation journal against her chest, smiling with quiet pride; Luon and Noel stand beside and slightly behind her, smiling warmly in encouragement. Exactly three humans, Ria visibly shorter. Ornate morning royal post office and a white pigeon resting near desk. Journal pages have only indistinct marks, no readable text. Celebratory soft sun sparkles, intimate genuine accomplishment."
+    }
+  ]
+}

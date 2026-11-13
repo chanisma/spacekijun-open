@@ -1,0 +1,442 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교운동부관리#학교›학생선수관리#학교›학생선수출결관리",
+ "name": "학생선수출결관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:06:53+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출결학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:출결학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "종목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:종목"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "활동구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:활동구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      995,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 32,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        58,
+        93
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "종목",
+       "depth": 0,
+       "box": [
+        84,
+        174,
+        116,
+        93
+       ],
+       "id": "col:그리드/종목"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        200,
+        174,
+        116,
+        93
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        315,
+        174,
+        58,
+        93
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        373,
+        174,
+        58,
+        93
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        431,
+        174,
+        58,
+        93
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "출석인정결석",
+       "depth": 0,
+       "box": [
+        490,
+        174,
+        270,
+        31
+       ],
+       "span": 3,
+       "id": "col:그리드/출석인정결석"
+      },
+      {
+       "label": "출석인정",
+       "depth": 0,
+       "box": [
+        760,
+        174,
+        320,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/출석인정"
+      },
+      {
+       "label": "미인정",
+       "depth": 0,
+       "box": [
+        1080,
+        174,
+        90,
+        31
+       ],
+       "id": "col:그리드/미인정"
+      },
+      {
+       "label": "미인정",
+       "depth": 0,
+       "box": [
+        1170,
+        174,
+        320,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/미인정#2"
+      },
+      {
+       "label": "국가대표",
+       "depth": 0,
+       "box": [
+        1490,
+        174,
+        60,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/국가대표"
+      },
+      {
+       "label": "타학교출석인정",
+       "depth": 0,
+       "box": [
+        1550,
+        174,
+        255,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/타학교출석인정"
+      },
+      {
+       "label": "허용일수",
+       "depth": 1,
+       "box": [
+        490,
+        205,
+        90,
+        62
+       ],
+       "id": "col:그리드/출석인정결석>허용일수"
+      },
+      {
+       "label": "사용일수",
+       "depth": 1,
+       "box": [
+        580,
+        205,
+        90,
+        62
+       ],
+       "id": "col:그리드/출석인정결석>사용일수"
+      },
+      {
+       "label": "잔여일수",
+       "depth": 1,
+       "box": [
+        670,
+        205,
+        90,
+        62
+       ],
+       "id": "col:그리드/출석인정결석>잔여일수"
+      },
+      {
+       "label": "결석일수",
+       "depth": 1,
+       "box": [
+        760,
+        205,
+        80,
+        62
+       ],
+       "id": "col:그리드/출석인정>결석일수"
+      },
+      {
+       "label": "지각시수",
+       "depth": 1,
+       "box": [
+        840,
+        205,
+        80,
+        62
+       ],
+       "id": "col:그리드/출석인정>지각시수"
+      },
+      {
+       "label": "조퇴시수",
+       "depth": 1,
+       "box": [
+        920,
+        205,
+        80,
+        62
+       ],
+       "id": "col:그리드/출석인정>조퇴시수"
+      },
+      {
+       "label": "결과시수",
+       "depth": 1,
+       "box": [
+        1000,
+        205,
+        80,
+        62
+       ],
+       "id": "col:그리드/출석인정>결과시수"
+      },
+      {
+       "label": "사용일수",
+       "depth": 1,
+       "box": [
+        1080,
+        205,
+        90,
+        62
+       ],
+       "id": "col:그리드/미인정>사용일수"
+      },
+      {
+       "label": "결석일수",
+       "depth": 1,
+       "box": [
+        1170,
+        205,
+        80,
+        62
+       ],
+       "id": "col:그리드/미인정>결석일수"
+      },
+      {
+       "label": "지각시수",
+       "depth": 1,
+       "box": [
+        1250,
+        205,
+        80,
+        62
+       ],
+       "id": "col:그리드/미인정>지각시수"
+      },
+      {
+       "label": "조퇴시수",
+       "depth": 1,
+       "box": [
+        1330,
+        205,
+        80,
+        62
+       ],
+       "id": "col:그리드/미인정>조퇴시수"
+      },
+      {
+       "label": "결과시수",
+       "depth": 1,
+       "box": [
+        1410,
+        205,
+        80,
+        62
+       ],
+       "id": "col:그리드/미인정>결과시수"
+      },
+      {
+       "label": "사용일수",
+       "depth": 1,
+       "box": [
+        1490,
+        205,
+        60,
+        62
+       ],
+       "id": "col:그리드/국가대표>사용일수"
+      },
+      {
+       "label": "결석일수",
+       "depth": 1,
+       "box": [
+        1550,
+        205,
+        65,
+        62
+       ],
+       "id": "col:그리드/타학교출석인정>결석일수"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교운동부관리 > 학생선수관리 > 학생선수출결관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

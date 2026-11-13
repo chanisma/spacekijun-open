@@ -1,0 +1,265 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›개별화교육계획›개별화교육조회›개별화교육조회(재학생)",
+ "name": "개별화교육조회(재학생)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:42:37+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계열/학년/학과",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:계열/학년/학과"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      530,
+      143,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조회학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:조회학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      824,
+      143,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "교과영역",
+     "checked": false,
+     "id": "check:교과영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      924,
+      143,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "생활지원영역",
+     "checked": false,
+     "id": "check:생활지원영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      1024,
+      143,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "기능중심영역",
+     "checked": false,
+     "id": "check:기능중심영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      1134,
+      148,
+      98,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "학기별개별화",
+     "checked": false,
+     "id": "check:학기별개별화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1249,
+      148,
+      86,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "월별개별화",
+     "checked": false,
+     "id": "check:월별개별화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1353,
+      148,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "인적사항",
+     "checked": false,
+     "id": "check:인적사항"
+    },
+    {
+     "aria": null,
+     "box": [
+      1444,
+      148,
+      98,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "특수교육관련",
+     "checked": false,
+     "id": "check:특수교육관련"
+    },
+    {
+     "aria": "학생 테이블",
+     "box": [
+      25,
+      163,
+      394,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 테이블",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        78,
+        36
+       ],
+       "id": "col:학생 테이블/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        104,
+        164,
+        78,
+        36
+       ],
+       "id": "col:학생 테이블/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        183,
+        164,
+        78,
+        36
+       ],
+       "id": "col:학생 테이블/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        261,
+        164,
+        157,
+        36
+       ],
+       "id": "col:학생 테이블/성명"
+      }
+     ],
+     "id": "grid:학생 테이블"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 개별화교육계획 > 개별화교육조회 > 개별화교육조회(재학생)",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

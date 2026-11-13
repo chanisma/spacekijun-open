@@ -1,0 +1,955 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식재료품의›식재료품의작성",
+ "name": "식재료품의작성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:46:04+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수예정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수예정일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      82,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1024,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1092,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1159,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품대분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품대분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품중분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품중분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      122,
+      270,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공통식품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      162,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "내식품그룹",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:내식품그룹"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      162,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진행상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:진행상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      162,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "품의단가",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:품의단가"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      202,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품규격",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품규격"
+    },
+    {
+     "aria": "식품규격 전체/kg/그외",
+     "box": [
+      570,
+      202,
+      177,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "식품단위",
+     "options": [
+      "전체",
+      "Kg",
+      "그외"
+     ],
+     "id": "radio:식품단위"
+    },
+    {
+     "aria": null,
+     "box": [
+      770,
+      202,
+      109,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "주사용식품여부",
+     "checked": false,
+     "id": "check:주사용식품여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      889,
+      202,
+      139,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "단가가 0인 식품 찾기",
+     "checked": false,
+     "id": "check:단가가 0인 식품 찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1039,
+      202,
+      175,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "원단위가 0이아닌 식품 찾기",
+     "checked": false,
+     "id": "check:원단위가 0이아닌 식품 찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      206,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      206,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      257,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 식품을 추가할 경우 해당 급식일자에 등록된 식품이 있으면 저장에서 제외되니 먼저 확인하시기 바랍니다.",
+     "id": "note:※ 식품을 추가할 경우 해당 급식일자에 등록된 식품이 있으면 저장에서 제외되니 먼저 확인하시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      276,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 품의수량, 단위, 품의단가, 금액 수정 시 급식일지의 식단단가 항목도 연계되어 수정됩니다.",
+     "id": "note:※ 품의수량, 단위, 품의단가, 금액 수정 시 급식일지의 식단단가 항목도 연계되어 수정됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      294,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 품의처리 후 식재료검수처리 메뉴에 검수내용이 조회됩니다.",
+     "id": "note:※ 품의처리 후 식재료검수처리 메뉴에 검수내용이 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      313,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ (에듀파인전송) : 품의처리 후 전송버튼을 클릭하면 애듀파인으로 전송됩니다.",
+     "id": "note:※ (에듀파인전송) : 품의처리 후 전송버튼을 클릭하면 애듀파인으로 전송됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      90,
+      346,
+      213,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "변경전",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:변경전"
+    },
+    {
+     "aria": null,
+     "box": [
+      313,
+      346,
+      160,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "note",
+     "label": "※ 우측 식품내역과 동일",
+     "id": "note:※ 우측 식품내역과 동일"
+    },
+    {
+     "aria": null,
+     "box": [
+      543,
+      346,
+      139,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "변경후",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:변경후"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      902,
+      346,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      938,
+      346,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "(변경전/후)식품코드일괄변경",
+     "box": [
+      978,
+      346,
+      190,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(변경전/후)식품코드일괄변경",
+     "variant": "primary",
+     "id": "button:(변경전/후)식품코드일괄변경"
+    },
+    {
+     "aria": null,
+     "box": [
+      992,
+      408,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1112,
+      408,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "내식품속성일괄저장",
+     "variant": "primary",
+     "id": "button:내식품속성일괄저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1243,
+      408,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "plain",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1315,
+      408,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(식품)행추가",
+     "variant": "plain",
+     "id": "button:(식품)행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1408,
+      408,
+      85,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(식품)행삭제",
+     "variant": "secondary",
+     "id": "button:(식품)행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      408,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      408,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#3"
+    },
+    {
+     "aria": "식재료품의목록",
+     "box": [
+      25,
+      418,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식재료품의목록",
+     "id": "heading:식재료품의목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      197,
+      449,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "수량조정",
+     "variant": "plain",
+     "id": "button:수량조정"
+    },
+    {
+     "aria": null,
+     "box": [
+      623,
+      449,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "품의처리",
+     "variant": "primary",
+     "id": "button:품의처리"
+    },
+    {
+     "aria": null,
+     "box": [
+      692,
+      449,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "에듀파인전송",
+     "variant": "primary",
+     "id": "button:에듀파인전송"
+    },
+    {
+     "aria": null,
+     "box": [
+      784,
+      449,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "품의취소",
+     "variant": "secondary",
+     "id": "button:품의취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1161,
+      449,
+      165,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "업체군별/단위기준총량조회",
+     "variant": "plain",
+     "id": "button:업체군별/단위기준총량조회"
+    },
+    {
+     "aria": "식재료품의목록",
+     "box": [
+      25,
+      493,
+      1575,
+      475
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "식재료품의목록",
+     "selectable": true,
+     "declaredColumns": 22,
+     "columns": [
+      {
+       "label": "품의 여부",
+       "depth": 0,
+       "box": [
+        76,
+        494,
+        53,
+        76
+       ],
+       "id": "col:식재료품의목록/품의 여부"
+      },
+      {
+       "label": "검수예정일자",
+       "depth": 0,
+       "box": [
+        129,
+        494,
+        126,
+        36
+       ],
+       "id": "col:식재료품의목록/검수예정일자"
+      },
+      {
+       "label": "급식일자",
+       "depth": 0,
+       "box": [
+        255,
+        494,
+        84,
+        76
+       ],
+       "id": "col:식재료품의목록/급식일자"
+      },
+      {
+       "label": "식사구분",
+       "depth": 0,
+       "box": [
+        339,
+        494,
+        67,
+        76
+       ],
+       "id": "col:식재료품의목록/식사구분"
+      },
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        406,
+        494,
+        195,
+        76
+       ],
+       "span": 2,
+       "id": "col:식재료품의목록/식품명"
+      },
+      {
+       "label": "식품속성",
+       "depth": 0,
+       "box": [
+        600,
+        494,
+        158,
+        76
+       ],
+       "id": "col:식재료품의목록/식품속성"
+      },
+      {
+       "label": "규격",
+       "depth": 0,
+       "box": [
+        758,
+        494,
+        84,
+        76
+       ],
+       "id": "col:식재료품의목록/규격"
+      },
+      {
+       "label": "품의수량",
+       "depth": 0,
+       "box": [
+        842,
+        494,
+        74,
+        36
+       ],
+       "id": "col:식재료품의목록/품의수량"
+      },
+      {
+       "label": "단위",
+       "depth": 0,
+       "box": [
+        915,
+        494,
+        105,
+        36
+       ],
+       "id": "col:식재료품의목록/단위"
+      },
+      {
+       "label": "품의단가",
+       "depth": 0,
+       "box": [
+        1020,
+        494,
+        95,
+        36
+       ],
+       "id": "col:식재료품의목록/품의단가"
+      },
+      {
+       "label": "금액",
+       "depth": 0,
+       "box": [
+        1115,
+        494,
+        105,
+        76
+       ],
+       "id": "col:식재료품의목록/금액"
+      },
+      {
+       "label": "업체군",
+       "depth": 0,
+       "box": [
+        1220,
+        494,
+        105,
+        36
+       ],
+       "id": "col:식재료품의목록/업체군"
+      },
+      {
+       "label": "친환경 인증정보",
+       "depth": 0,
+       "box": [
+        1325,
+        494,
+        70,
+        76
+       ],
+       "id": "col:식재료품의목록/친환경 인증정보"
+      },
+      {
+       "label": "원산지",
+       "depth": 0,
+       "box": [
+        1395,
+        494,
+        70,
+        76
+       ],
+       "id": "col:식재료품의목록/원산지"
+      },
+      {
+       "label": "수입국",
+       "depth": 0,
+       "box": [
+        1466,
+        494,
+        70,
+        76
+       ],
+       "id": "col:식재료품의목록/수입국"
+      },
+      {
+       "label": "에듀파인 전송여부",
+       "depth": 0,
+       "box": [
+        1536,
+        494,
+        63,
+        76
+       ],
+       "id": "col:식재료품의목록/에듀파인 전송여부"
+      },
+      {
+       "label": "선택",
+       "depth": 1,
+       "box": [
+        915,
+        530,
+        105,
+        40
+       ],
+       "id": "col:식재료품의목록/단위>선택"
+      },
+      {
+       "label": "선택",
+       "depth": 1,
+       "box": [
+        1220,
+        530,
+        105,
+        40
+       ],
+       "id": "col:식재료품의목록/업체군>선택"
+      }
+     ],
+     "id": "grid:식재료품의목록"
+    },
+    {
+     "aria": "업체군별현황",
+     "box": [
+      25,
+      978,
+      1575,
+      180
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "업체군별현황",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "업체군",
+       "depth": 0,
+       "box": [
+        126,
+        979,
+        110,
+        30
+       ],
+       "id": "col:업체군별현황/업체군"
+      },
+      {
+       "label": "수량",
+       "depth": 0,
+       "box": [
+        236,
+        979,
+        100,
+        30
+       ],
+       "id": "col:업체군별현황/수량"
+      },
+      {
+       "label": "금액",
+       "depth": 0,
+       "box": [
+        336,
+        979,
+        150,
+        30
+       ],
+       "id": "col:업체군별현황/금액"
+      },
+      {
+       "label": "품의수량",
+       "depth": 0,
+       "box": [
+        486,
+        979,
+        100,
+        30
+       ],
+       "id": "col:업체군별현황/품의수량"
+      },
+      {
+       "label": "품의금액",
+       "depth": 0,
+       "box": [
+        586,
+        979,
+        150,
+        30
+       ],
+       "id": "col:업체군별현황/품의금액"
+      }
+     ],
+     "id": "grid:업체군별현황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식재료품의 > 식재료품의작성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

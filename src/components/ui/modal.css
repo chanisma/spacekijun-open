@@ -1,0 +1,239 @@
+.app-dialog-viewport {
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  max-height: inherit;
+  border-radius: inherit;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.app-dialog-viewport > * { min-width: 0; }
+
+.app-dialog-viewport > [data-slot="dialog-header"],
+.app-dialog-viewport > form > [data-slot="dialog-header"] {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: hsl(var(--background));
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.app-dialog-viewport > [data-slot="dialog-footer"],
+.app-dialog-viewport > form > [data-slot="dialog-footer"] {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  background: hsl(var(--background));
+}
+
+.app-dialog-viewport[data-default-padding="true"] > [data-slot="dialog-header"] {
+  top: -1.5rem;
+  margin: -1.5rem -1.5rem 0;
+  padding: 1.5rem 3.5rem 1.25rem 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.app-dialog-viewport[data-default-padding="true"] > [data-slot="dialog-footer"] {
+  bottom: -1.5rem;
+  margin: 0 -1.5rem -1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+[data-slot="dialog-footer"] > button { border-radius: 0.75rem; }
+
+/* Dedicated editors already own their scroll regions and edge-to-edge chrome. */
+.app-dialog-viewport:has(> .schedule-compose-scroll) { overflow: visible; }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   휴대폰 표시 방식 (2026-09-20)
+
+   `DialogContent` 가 `data-mobile="center|sheet|fullscreen"` 를 붙이고
+   (판정 = `dialog-layout.ts` 의 `resolveMobilePresentation`), 실제 배치는
+   **여기서만** 한다. JS 로 뷰포트를 재지 않는 이유: 첫 렌더가 폭을 모른 채
+   한 번 잘못 그려지고, 회전·키보드 전환마다 다시 재야 한다.
+
+   ⚠️ 특이도를 눈대중하지 말 것 — 2026-09-12 토스트 사고가 정확히 그거였다.
+     · Tailwind 평범한 유틸리티(`max-w-lg`)          = 0-1-0
+     · Tailwind 변형 유틸리티(`data-[state=open]:…`) = 0-2-0  ← animate-in 이 여기
+     · 아래 배치 규칙 `[data-slot][data-mobile]`      = 0-2-0  (유틸리티를 이긴다)
+     · 아래 애니메이션 규칙 `…[data-state]`           = 0-3-0  (animate-in 을 이긴다)
+   0-2-0 끼리는 **소스 순서**로 갈리는데 modal.css 와 Tailwind 출력의 순서는
+   보장되지 않는다. 그래서 애니메이션만 한 단계 더 올려 둔 것이다.
+
+   경계값 640px = `dialog-layout.ts` 의 `MOBILE_MODAL_BREAKPOINT`.
+   **두 값은 반드시 같아야 한다** — 어긋나면 JS 는 시트로 그리는데 CSS 는
+   가운데 모달로 배치하는 상태가 되고, 오류는 나지 않는다.
+   회귀 `scripts/mobile-modal-test/run.mts` 가 일치를 검사한다.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@keyframes app-modal-rise {
+  from { opacity: 0; transform: translateY(1.25rem); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes app-modal-sink {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translateY(1.25rem); }
+}
+@keyframes app-modal-sheet-in {
+  from { transform: translateY(100%); }
+  to   { transform: none; }
+}
+@keyframes app-modal-sheet-out {
+  from { transform: none; }
+  to   { transform: translateY(100%); }
+}
+
+@media (max-width: 639.98px) {
+  /* ── 전체화면: 내용이 많은 모달 ───────────────────────────────────────── */
+  [data-slot="dialog-content"][data-mobile="fullscreen"] {
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    max-height: 100dvh;
+    transform: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    /* 노치·홈 인디케이터. 바깥 surface 에 줘야 안쪽 스크롤 영역이 그만큼 줄어든다.
+       (inline style 의 padding 을 지우고 클래스로 옮긴 이유가 이 한 줄이다) */
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* ⚠️ 화면을 꽉 채우면 **기본 grid 뷰포트가 행을 벌린다**.
+     `align-content` 기본값(normal=stretch)이 auto 트랙을 늘리므로, 세로로 남는
+     공간이 입력칸 **사이사이로** 배분돼 폼이 흩어진다(높이가 내용에 맞던
+     데스크톱에서는 남는 공간이 없어 드러나지 않던 동작이다).
+     그래서 전체화면에서는 세로 flex 로 바꾼다 — 자식은 안 줄고(=grid 와 같다),
+     남는 공간은 전부 푸터 위에 모여 푸터가 화면 아래에 붙는다(엄지 위치).
+
+     `.grid` 를 선택자로 쓸 수 있는 이유: 호출부가 `flex` 를 넘기면 `cn()` 의
+     tailwind-merge 가 display 충돌로 `grid` 를 **지운다**. 즉 DOM 의 `.grid` 는
+     "기본 뷰포트를 그대로 쓰는 모달"이라는 정확한 표시다(실측 확인).
+     직접 flex 를 구성한 모달은 이미 자기 스크롤 영역을 갖고 있어 건드리지 않는다. */
+  [data-slot="dialog-content"][data-mobile="fullscreen"] > .app-dialog-viewport.grid {
+    display: flex;
+    flex-direction: column;
+  }
+  [data-slot="dialog-content"][data-mobile="fullscreen"] > .app-dialog-viewport.grid > *,
+  [data-slot="dialog-content"][data-mobile="fullscreen"] > .app-dialog-viewport.grid > form > * {
+    flex-shrink: 0;   /* grid 와 같은 "안 줄어듦". 없으면 고정 높이 요소가 찌그러진다 */
+  }
+  [data-slot="dialog-content"][data-mobile="fullscreen"] > .app-dialog-viewport.grid > form {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+  [data-slot="dialog-content"][data-mobile="fullscreen"] > .app-dialog-viewport.grid > [data-slot="dialog-footer"],
+  [data-slot="dialog-content"][data-mobile="fullscreen"] > .app-dialog-viewport.grid > form > [data-slot="dialog-footer"] {
+    margin-top: auto;
+  }
+
+  /* 모서리를 없앴으니 sticky 헤더·푸터의 둥근 모서리도 함께 없앤다 */
+  [data-slot="dialog-content"][data-mobile="fullscreen"] .app-dialog-viewport > [data-slot="dialog-header"],
+  [data-slot="dialog-content"][data-mobile="fullscreen"] .app-dialog-viewport > form > [data-slot="dialog-header"],
+  [data-slot="dialog-content"][data-mobile="fullscreen"] .app-dialog-viewport > [data-slot="dialog-footer"],
+  [data-slot="dialog-content"][data-mobile="fullscreen"] .app-dialog-viewport > form > [data-slot="dialog-footer"] {
+    border-radius: 0;
+  }
+
+  /* ── 아래에서 올라오는 선택 시트: 공용 피커(드롭다운 대체) ────────────── */
+  [data-slot="dialog-content"][data-mobile="sheet"] {
+    inset: auto 0 0 0;
+    width: 100%;
+    max-width: none;
+    max-height: 85dvh;
+    transform: none;
+    border-bottom: 0;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* 시트 안의 검색 목록은 **시트가 정한 높이를 채운다**.
+     소비처의 `max-h-[200px]`(팝오버 시절의 값)을 그대로 두면 시트 아래쪽이
+     텅 빈 채 목록만 좁게 스크롤된다. 소비처마다 분기를 넣는 대신 여기서 한 번
+     덮는다 — 새 피커가 늘어도 같은 실수를 반복하지 않는다.
+     `cmdk-*` 속성은 cmdk 가 붙이는 것이고 `command.tsx` 가 이미 의존하고 있다. */
+  [data-slot="dialog-content"][data-mobile="sheet"] [cmdk-root],
+  [data-slot="dialog-content"][data-mobile="sheet"] [cmdk-list] {
+    min-height: 0;
+    max-height: none;
+    flex: 1 1 auto;
+  }
+  [data-slot="dialog-content"][data-mobile="sheet"] [cmdk-root] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 검색을 시작하면 최대 높이로 편다 — 이유는 `responsive-picker.tsx` 주석 참조
+     (키보드가 아래 붙은 시트를 덮으므로 윗부분을 키보드 위로 올려야 한다).
+     0-3-0 이라 위 `max-height` 규칙(0-2-0)을 이긴다. */
+  [data-slot="dialog-content"][data-mobile="sheet"][data-sheet-expanded="true"] {
+    height: 85dvh;
+  }
+
+  /* ── 가운데 유지: 입력 한두 개짜리 ─────────────────────────────────────── */
+  /* 좁은 화면에서 24px 패딩은 본문 폭의 13%를 먹는다. 20px 로 줄이고
+     헤더·푸터가 테두리까지 이어지게 만드는 음수 마진도 같은 값으로 맞춘다
+     (한쪽만 바꾸면 헤더가 한 줄 어긋나 보인다). */
+  .app-dialog-viewport[data-default-padding="true"] {
+    padding: 1.25rem;
+  }
+  .app-dialog-viewport[data-default-padding="true"] > [data-slot="dialog-header"] {
+    top: -1.25rem;
+    margin: -1.25rem -1.25rem 0;
+    padding: 1.25rem 3rem 1rem 1.25rem;
+  }
+  .app-dialog-viewport[data-default-padding="true"] > [data-slot="dialog-footer"] {
+    bottom: -1.25rem;
+    margin: 0 -1.25rem -1.25rem;
+    padding: 0.875rem 1.25rem;
+  }
+
+  /* 손가락 최소 44px. 푸터는 주행동이 모여 있는 곳이라 `h-9`(36px) 로는 좁다.
+     height 가 아니라 min-height 를 주므로 기존 높이 선언과 싸우지 않는다. */
+  [data-slot="dialog-footer"] button {
+    min-height: 2.75rem;
+  }
+
+  /* ⚠️ 입력 글자 16px 는 primitive 만으로 지킬 수 없다.
+     `Input`/`Textarea` 기본값이 `text-base md:text-sm` 이어도 **호출부가 `text-sm` 을
+     주면 `cn()` 의 tailwind-merge 가 같은 group 인 `text-base` 를 지운다** — 그러면
+     휴대폰에서도 14px 이 되고, iOS 는 16px 미만 입력에 포커스할 때 화면을 확대한 뒤
+     **되돌리지 않는다**(모달 안에서는 저장 버튼이 화면 밖으로 밀린다).
+     실측(2026-09-20): 공지 본문 14px · 게시 기간 date 12px · 구매 컬럼명 14px.
+     호출부를 하나씩 고치면 새로 쓰는 `text-sm` 마다 다시 뚫리므로 여기서 한 번 더 막는다.
+     특이도 0-1-1(속성 1 + 타입 1) > 유틸리티 0-1-0. 모달 안에서만, 640px 미만에서만. */
+  [data-slot="dialog-content"] :is(input, textarea, select),
+  [data-slot="alert-dialog-content"] :is(input, textarea, select) {
+    font-size: 16px;
+  }
+
+  /* ── 애니메이션(0-3-0: Tailwind 의 animate-in 0-2-0 을 이긴다) ─────────── */
+  [data-slot="dialog-content"][data-mobile="fullscreen"][data-state="open"],
+  [data-slot="dialog-content"][data-mobile="sheet"][data-state="open"] {
+    animation-duration: 220ms;
+    animation-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  [data-slot="dialog-content"][data-mobile="fullscreen"][data-state="closed"],
+  [data-slot="dialog-content"][data-mobile="sheet"][data-state="closed"] {
+    animation-duration: 180ms;
+    animation-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  [data-slot="dialog-content"][data-mobile="fullscreen"][data-state="open"]   { animation-name: app-modal-rise; }
+  [data-slot="dialog-content"][data-mobile="fullscreen"][data-state="closed"] { animation-name: app-modal-sink; }
+  [data-slot="dialog-content"][data-mobile="sheet"][data-state="open"]        { animation-name: app-modal-sheet-in; }
+  [data-slot="dialog-content"][data-mobile="sheet"][data-state="closed"]      { animation-name: app-modal-sheet-out; }
+}
+
+@media (max-width: 639.98px) and (prefers-reduced-motion: reduce) {
+  [data-slot="dialog-content"][data-mobile="fullscreen"][data-state],
+  [data-slot="dialog-content"][data-mobile="sheet"][data-state] {
+    animation-name: none;
+  }
+}

@@ -1,0 +1,460 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›기준관리›교육비 지원항목권한지정관리",
+ "name": "교육비 지원항목권한지정관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:17:28+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "사용자조회구분",
+     "box": [
+      45,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "사용자조회구분",
+     "options": [
+      "사용자명",
+      "사용자",
+      "ID"
+     ],
+     "id": "radio:사용자조회구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      591,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:사용자구분"
+    },
+    {
+     "aria": "기간조회구분",
+     "box": [
+      801,
+      82,
+      166,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "기간조회구분",
+     "options": [
+      "전체기간",
+      "사용기간"
+     ],
+     "id": "radio:기간조회구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      105,
+      122,
+      60,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      127,
+      62,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "입학금",
+     "checked": false,
+     "id": "check:입학금"
+    },
+    {
+     "aria": null,
+     "box": [
+      254,
+      127,
+      62,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "수업료",
+     "checked": false,
+     "id": "check:수업료"
+    },
+    {
+     "aria": null,
+     "box": [
+      334,
+      127,
+      86,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "학교운영비",
+     "checked": false,
+     "id": "check:학교운영비"
+    },
+    {
+     "aria": null,
+     "box": [
+      437,
+      127,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "급식",
+     "checked": false,
+     "id": "check:급식"
+    },
+    {
+     "aria": null,
+     "box": [
+      504,
+      127,
+      62,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "방과후",
+     "checked": false,
+     "id": "check:방과후"
+    },
+    {
+     "aria": null,
+     "box": [
+      584,
+      127,
+      62,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "정보화",
+     "checked": false,
+     "id": "check:정보화"
+    },
+    {
+     "aria": null,
+     "box": [
+      663,
+      127,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "추가",
+     "checked": false,
+     "id": "check:추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      731,
+      127,
+      74,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "업무알림",
+     "checked": false,
+     "id": "check:업무알림"
+    },
+    {
+     "aria": null,
+     "box": [
+      822,
+      127,
+      74,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "심사결재",
+     "checked": false,
+     "id": "check:심사결재"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 원소속학교가 아닌 교사들은 조회 되지 않습니다. 원소속학교에서 권한을 받으면 겸임학교에서도 동일권한으로 적용됩니다.",
+     "id": "note:※ 원소속학교가 아닌 교사들은 조회 되지 않습니다. 원소속학교에서 권한을 받으면 겸임학교에서도 동일권한으로 적용됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      192,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 조회조건에 있는 담당업무 체크박스는 체크한 업무 중 하나라도 권한이 있는 사용자만 조회 됩니다. (전체조회 : 모든항목 체크해제 후 조회)",
+     "id": "note:※ 조회조건에 있는 담당업무 체크박스는 체크한 업무 중 하나라도 권한이 있는 사용자만 조회 됩니다. (전체조회 : 모든항목 체크해제 후 조회)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1328,
+      230,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      230,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "사용자별변경이력",
+     "variant": "primary",
+     "id": "button:사용자별변경이력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      230,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "사용자 정보 및 지원항목권한 리스트",
+     "box": [
+      25,
+      270,
+      1590,
+      543
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "사용자 정보 및 지원항목권한 리스트",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        26,
+        271,
+        400,
+        93
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/사용자ID"
+      },
+      {
+       "label": "사용자명",
+       "depth": 0,
+       "box": [
+        426,
+        271,
+        176,
+        93
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/사용자명"
+      },
+      {
+       "label": "담당업무",
+       "depth": 0,
+       "box": [
+        602,
+        271,
+        720,
+        31
+       ],
+       "span": 9,
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무"
+      },
+      {
+       "label": "사용기간",
+       "depth": 0,
+       "box": [
+        1322,
+        271,
+        276,
+        93
+       ],
+       "span": 3,
+       "id": "col:사용자 정보 및 지원항목권한 리스트/사용기간"
+      },
+      {
+       "label": "입학금",
+       "depth": 1,
+       "box": [
+        602,
+        302,
+        80,
+        62
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무>입학금"
+      },
+      {
+       "label": "수업료",
+       "depth": 1,
+       "box": [
+        682,
+        302,
+        80,
+        62
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무>수업료"
+      },
+      {
+       "label": "학교 운영비",
+       "depth": 1,
+       "box": [
+        762,
+        302,
+        80,
+        62
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무>학교 운영비"
+      },
+      {
+       "label": "급식",
+       "depth": 1,
+       "box": [
+        842,
+        302,
+        80,
+        62
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무>급식"
+      },
+      {
+       "label": "방과후",
+       "depth": 1,
+       "box": [
+        922,
+        302,
+        80,
+        62
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무>방과후"
+      },
+      {
+       "label": "정보화",
+       "depth": 1,
+       "box": [
+        1002,
+        302,
+        80,
+        62
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무>정보화"
+      },
+      {
+       "label": "추가교육비",
+       "depth": 1,
+       "box": [
+        1082,
+        302,
+        80,
+        62
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무>추가교육비"
+      },
+      {
+       "label": "나이스 업무 알림",
+       "depth": 1,
+       "box": [
+        1162,
+        302,
+        80,
+        62
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무>나이스 업무 알림"
+      },
+      {
+       "label": "심사 결재",
+       "depth": 1,
+       "box": [
+        1242,
+        302,
+        80,
+        62
+       ],
+       "id": "col:사용자 정보 및 지원항목권한 리스트/담당업무>심사 결재"
+      }
+     ],
+     "id": "grid:사용자 정보 및 지원항목권한 리스트"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 기준관리 > 교육비 지원항목권한지정관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

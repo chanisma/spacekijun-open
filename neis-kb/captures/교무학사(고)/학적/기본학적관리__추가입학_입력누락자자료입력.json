@@ -1,0 +1,269 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›기본학적관리›추가입학/입력누락자자료입력",
+ "name": "추가입학/입력누락자자료입력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:01:50+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      180,
+      87,
+      90,
+      25
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      152,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "학생 목록",
+     "box": [
+      25,
+      182,
+      330,
+      510
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        183,
+        54,
+        36
+       ],
+       "id": "col:학생 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        80,
+        183,
+        54,
+        36
+       ],
+       "id": "col:학생 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        135,
+        183,
+        54,
+        36
+       ],
+       "id": "col:학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        189,
+        183,
+        81,
+        36
+       ],
+       "id": "col:학생 목록/성명"
+      },
+      {
+       "label": "변동구분",
+       "depth": 0,
+       "box": [
+        270,
+        183,
+        84,
+        36
+       ],
+       "id": "col:학생 목록/변동구분"
+      }
+     ],
+     "id": "grid:학생 목록"
+    },
+    {
+     "aria": "항목 목록",
+     "box": [
+      370,
+      187,
+      175,
+      505
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "항목 목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [],
+     "id": "grid:항목 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      690,
+      198,
+      310,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      690,
+      238,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주민등록번호 (외국인등록번호)"
+    },
+    {
+     "aria": "성별",
+     "box": [
+      690,
+      278,
+      310,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "성별",
+     "options": [
+      "남성",
+      "여성"
+     ],
+     "id": "radio:성별"
+    },
+    {
+     "aria": null,
+     "box": [
+      690,
+      318,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "생년월일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:생년월일"
+    },
+    {
+     "aria": "찾아보기&변환",
+     "box": [
+      1420,
+      428,
+      110,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "찾아보기&변환",
+     "variant": "primary",
+     "id": "button:찾아보기&변환"
+    },
+    {
+     "aria": "찾아보기",
+     "box": [
+      1536,
+      428,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "찾아보기",
+     "variant": "primary",
+     "id": "button:찾아보기"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 기본학적관리 > 추가입학/입력누락자자료입력",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

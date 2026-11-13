@@ -1,0 +1,526 @@
+{
+ "schema": "neis-capture/1",
+ "key": "민원›민원업무›민원처리›민원접수",
+ "name": "민원접수",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:33:16+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:자주 찾는 민원",
+   "tab": "자주 찾는 민원",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      1110,
+      103,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      158,
+      1194,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "자주 찾는 민원",
+      "제증명민원"
+     ],
+     "active": "자주 찾는 민원",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1325,
+      158,
+      123,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자주 찾는 민원 편집",
+     "variant": "primary",
+     "id": "button:자주 찾는 민원 편집"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      158,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기타발급등록",
+     "variant": "primary",
+     "id": "button:기타발급등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      158,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "팩스신청",
+     "variant": "primary",
+     "id": "button:팩스신청"
+    },
+    {
+     "aria": "제증명민원",
+     "box": [
+      64,
+      232,
+      81,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "제증명민원",
+     "id": "heading:제증명민원"
+    },
+    {
+     "aria": "재증명민원",
+     "box": [
+      64,
+      262,
+      742,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "재증명민원",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문서명",
+       "depth": 0,
+       "box": [
+        65,
+        263,
+        681,
+        36
+       ],
+       "id": "col:재증명민원/문서명"
+      },
+      {
+       "label": "담기",
+       "depth": 0,
+       "box": [
+        746,
+        263,
+        59,
+        36
+       ],
+       "id": "col:재증명민원/담기"
+      }
+     ],
+     "id": "grid:재증명민원"
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      707,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "민원접수",
+     "variant": "primary",
+     "id": "button:민원접수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      707,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "담기취소",
+     "variant": "secondary",
+     "id": "button:담기취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      717,
+      791,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "담기목록",
+     "id": "heading:담기목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:제증명민원",
+   "tab": "제증명민원",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      1110,
+      103,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      158,
+      1194,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "자주 찾는 민원",
+      "제증명민원"
+     ],
+     "active": "제증명민원",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1325,
+      158,
+      123,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자주 찾는 민원 편집",
+     "variant": "primary",
+     "id": "button:자주 찾는 민원 편집"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      158,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기타발급등록",
+     "variant": "primary",
+     "id": "button:기타발급등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      158,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "팩스신청",
+     "variant": "primary",
+     "id": "button:팩스신청"
+    },
+    {
+     "aria": "검정고시",
+     "box": [
+      64,
+      232,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "검정고시",
+     "id": "heading:검정고시"
+    },
+    {
+     "aria": "평생교육",
+     "box": [
+      820,
+      232,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "평생교육",
+     "id": "heading:평생교육"
+    },
+    {
+     "aria": "검정고시",
+     "box": [
+      64,
+      262,
+      742,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "검정고시",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문서",
+       "depth": 0,
+       "box": [
+        65,
+        263,
+        665,
+        36
+       ],
+       "id": "col:검정고시/문서"
+      },
+      {
+       "label": "담기",
+       "depth": 0,
+       "box": [
+        730,
+        263,
+        59,
+        36
+       ],
+       "id": "col:검정고시/담기"
+      }
+     ],
+     "id": "grid:검정고시"
+    },
+    {
+     "aria": "평생교육",
+     "box": [
+      820,
+      262,
+      742,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "평생교육",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문서명",
+       "depth": 0,
+       "box": [
+        821,
+        263,
+        681,
+        36
+       ],
+       "id": "col:평생교육/문서명"
+      },
+      {
+       "label": "담기",
+       "depth": 0,
+       "box": [
+        1502,
+        263,
+        59,
+        36
+       ],
+       "id": "col:평생교육/담기"
+      }
+     ],
+     "id": "grid:평생교육"
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      707,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "민원접수",
+     "variant": "primary",
+     "id": "button:민원접수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      707,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "담기취소",
+     "variant": "secondary",
+     "id": "button:담기취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      717,
+      791,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "담기목록",
+     "id": "heading:담기목록"
+    },
+    {
+     "aria": "학생",
+     "box": [
+      64,
+      715,
+      32,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생",
+     "id": "heading:학생"
+    },
+    {
+     "aria": "인사",
+     "box": [
+      820,
+      715,
+      32,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "인사",
+     "id": "heading:인사"
+    },
+    {
+     "aria": "학생",
+     "box": [
+      64,
+      745,
+      742,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문서명",
+       "depth": 0,
+       "box": [
+        65,
+        746,
+        665,
+        36
+       ],
+       "id": "col:학생/문서명"
+      },
+      {
+       "label": "담기",
+       "depth": 0,
+       "box": [
+        730,
+        746,
+        59,
+        36
+       ],
+       "id": "col:학생/담기"
+      }
+     ],
+     "id": "grid:학생"
+    },
+    {
+     "aria": "인사",
+     "box": [
+      820,
+      745,
+      742,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "인사",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문서명",
+       "depth": 0,
+       "box": [
+        821,
+        746,
+        681,
+        36
+       ],
+       "id": "col:인사/문서명"
+      },
+      {
+       "label": "담기",
+       "depth": 0,
+       "box": [
+        1502,
+        746,
+        59,
+        36
+       ],
+       "id": "col:인사/담기"
+      }
+     ],
+     "id": "grid:인사"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {민원}민원업무 > 민원처리 > 민원접수",
+ "viewport": [
+  1920,
+  945
+ ]
+}

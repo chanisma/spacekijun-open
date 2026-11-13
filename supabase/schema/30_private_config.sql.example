@@ -1,0 +1,14 @@
+-- 엣지 함수를 DB(pg_net)에서 부를 때 쓰는 주소·비밀값. **이 파일을 복사해 값을 채운 뒤 적용하고, 채운 파일은 커밋하지 말 것.**
+-- secret 은 아무 긴 임의 문자열(예: openssl rand -hex 32)이고, 같은 값을 엣지 함수 쪽에서도 대조한다(각 함수 index.ts 참고).
+
+insert into push_private.config (singleton, url, secret)
+values (true, 'https://your-project-ref.supabase.co/functions/v1/push-send', 'CHANGE_ME') on conflict (singleton) do update set url = excluded.url, secret = excluded.secret;
+
+insert into world_news_private.config (singleton, url, secret)
+values (true, 'https://your-project-ref.supabase.co/functions/v1/world-news-fields', 'CHANGE_ME') on conflict (singleton) do update set url = excluded.url, secret = excluded.secret;
+
+insert into invest_private.config (singleton, url, secret)
+values (true, 'https://your-project-ref.supabase.co/functions/v1/invest-quotes', 'CHANGE_ME') on conflict (singleton) do update set url = excluded.url, secret = excluded.secret;
+
+insert into academy_private.generation_worker_config (singleton, url, secret)
+values (true, 'https://your-project-ref.supabase.co/functions/v1/academy-generation-worker', 'CHANGE_ME') on conflict (singleton) do update set url = excluded.url, secret = excluded.secret;

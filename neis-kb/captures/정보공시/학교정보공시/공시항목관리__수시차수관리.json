@@ -1,0 +1,241 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시항목관리›수시차수관리",
+ "name": "수시차수관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:51:28+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 항목삭제는 등록하신 데이터를 삭제하셔야 가능하며, 항목삭제시 담당자 정보가 자동으로 삭제됩니다.",
+     "id": "note:※ 항목삭제는 등록하신 데이터를 삭제하셔야 가능하며, 항목삭제시 담당자 정보가 자동으로 삭제됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 관리자 마감시 항목추가/삭제를 하실 수 없습니다. ※ 수시기준일자는 수시항목이 발생된 일자 또는 학교에서 정한 일자를(개정완료일, 결재완료일)선택합니다.",
+     "id": "note:※ 관리자 마감시 항목추가/삭제를 하실 수 없습니다. ※ 수시기준일자는 수시항목이 발생된 일자 또는 학교에서 정한 일자를(개정완료일, 결재완료일)선택합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      208,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      127,
+      218,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "기준일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기준일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      253,
+      218,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "기준일자추가",
+     "variant": "plain",
+     "id": "button:기준일자추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      359,
+      218,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "기준일자삭제",
+     "variant": "secondary",
+     "id": "button:기준일자삭제"
+    },
+    {
+     "aria": "수시차수 기준일자 목록",
+     "box": [
+      25,
+      298,
+      788,
+      516
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수시차수 기준일자 목록",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        299,
+        50,
+        36
+       ],
+       "id": "col:수시차수 기준일자 목록/순번"
+      },
+      {
+       "label": "기준일자",
+       "depth": 0,
+       "box": [
+        76,
+        299,
+        245,
+        36
+       ],
+       "id": "col:수시차수 기준일자 목록/기준일자"
+      },
+      {
+       "label": "마감일자",
+       "depth": 0,
+       "box": [
+        321,
+        299,
+        245,
+        36
+       ],
+       "id": "col:수시차수 기준일자 목록/마감일자"
+      },
+      {
+       "label": "제출일자",
+       "depth": 0,
+       "box": [
+        567,
+        299,
+        245,
+        36
+       ],
+       "id": "col:수시차수 기준일자 목록/제출일자"
+      }
+     ],
+     "id": "grid:수시차수 기준일자 목록"
+    },
+    {
+     "aria": "수시차수 공시항목 선택",
+     "box": [
+      828,
+      298,
+      788,
+      516
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수시차수 공시항목 선택",
+     "selectable": true,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        879,
+        299,
+        736,
+        36
+       ],
+       "span": 2,
+       "id": "col:수시차수 공시항목 선택/항목"
+      }
+     ],
+     "id": "grid:수시차수 공시항목 선택"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시항목관리 > 기준정보관리 > 수시차수관리",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,737 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식재료품의›검수관련서식출력",
+ "name": "검수관련서식출력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:11:25+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:검수서출력",
+   "tab": "검수서출력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "검수서출력",
+      "검수일지출력"
+     ],
+     "active": "검수서출력",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수예정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수예정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수예정일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      760,
+      137,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      819,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      887,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      954,
+      142,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1015,
+      137,
+      73,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체합산",
+     "checked": false,
+     "id": "check:전체합산"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": "식품정렬순서",
+     "box": [
+      845,
+      177,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "식품정렬구분",
+     "options": [
+      "식품명",
+      "식사구분"
+     ],
+     "id": "radio:식품정렬구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1094,
+      177,
+      73,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "단가제외",
+     "checked": false,
+     "id": "check:단가제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      1177,
+      177,
+      127,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "수량 0인 식품 제외",
+     "checked": false,
+     "id": "check:수량 0인 식품 제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재란",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결재란"
+    },
+    {
+     "aria": null,
+     "box": [
+      277,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/"
+    },
+    {
+     "aria": null,
+     "box": [
+      379,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      481,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      565,
+      217,
+      85,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "결재란표시",
+     "checked": false,
+     "id": "check:결재란표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      845,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "협조자결재란",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:협조자결재란"
+    },
+    {
+     "aria": null,
+     "box": [
+      947,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      1049,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#5"
+    },
+    {
+     "aria": null,
+     "box": [
+      1151,
+      217,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#6"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      217,
+      121,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "협조자결재란표시",
+     "checked": false,
+     "id": "check:협조자결재란표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      217,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      217,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    }
+   ]
+  },
+  {
+   "id": "tab:검수일지출력",
+   "tab": "검수일지출력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "검수서출력",
+      "검수일지출력"
+     ],
+     "active": "검수일지출력",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      845,
+      137,
+      123,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체명"
+    },
+    {
+     "aria": null,
+     "box": [
+      974,
+      137,
+      184,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체명#2"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      1164,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1200,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1239,
+      137,
+      127,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "수량 0인 식품 제외",
+     "checked": false,
+     "id": "check:수량 0인 식품 제외"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재란",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결재란"
+    },
+    {
+     "aria": null,
+     "box": [
+      277,
+      177,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/"
+    },
+    {
+     "aria": null,
+     "box": [
+      379,
+      177,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      481,
+      177,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      565,
+      177,
+      85,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "결재란표시",
+     "checked": false,
+     "id": "check:결재란표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      845,
+      177,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "협조자결재란",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:협조자결재란"
+    },
+    {
+     "aria": null,
+     "box": [
+      947,
+      177,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      1049,
+      177,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#5"
+    },
+    {
+     "aria": null,
+     "box": [
+      1151,
+      177,
+      78,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "/",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/#6"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      177,
+      121,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "협조자결재란표시",
+     "checked": false,
+     "id": "check:협조자결재란표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      177,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      177,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 승인요청: 검수일지에 대한 업무 승인기능은 해당 일자에 대해 1회만 올릴 수 있습니다. (업체명은 출력 조회 옵션으로 승인요청 문서에 적용되지 않습니다.)",
+     "id": "note:※ 승인요청: 검수일지에 대한 업무 승인기능은 해당 일자에 대해 1회만 올릴 수 있습니다. (업체명은 출력 조회 옵션으로 승인요청 문서에 적용되지 않습니다.)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      302,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식재료품의 > 검수관련서식출력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

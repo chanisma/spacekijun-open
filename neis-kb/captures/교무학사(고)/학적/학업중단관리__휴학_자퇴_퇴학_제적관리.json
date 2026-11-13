@@ -1,0 +1,1789 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›학업중단관리›휴학/자퇴/퇴학/제적관리",
+ "name": "휴학/자퇴/퇴학/제적관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:12:29+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:기본학적",
+   "tab": "기본학적",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      550,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "미반영된자료 또는 반영된자료",
+     "box": [
+      680,
+      82,
+      250,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "미반영된자료 또는 반영된자료",
+     "options": [
+      "미반영된자료",
+      "반영된자료"
+     ],
+     "id": "radio:미반영된자료 또는 반영된자료"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "능력단위이수시간재계산",
+     "box": [
+      1158,
+      143,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "능력단위이수시간재계산",
+     "variant": "secondary",
+     "id": "button:능력단위이수시간재계산"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1336,
+      143,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "학적반영",
+     "box": [
+      1407,
+      143,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학적반영",
+     "variant": "secondary",
+     "id": "button:학적반영"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1479,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "secondary",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "휴학/자퇴/퇴학/제적관리 목록",
+     "box": [
+      25,
+      183,
+      1590,
+      320
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "휴학/자퇴/퇴학/제적관리 목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        253,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        431,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        608,
+        184,
+        120,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/성명"
+      },
+      {
+       "label": "변동구분",
+       "depth": 0,
+       "box": [
+        728,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/변동구분"
+      },
+      {
+       "label": "변동사유",
+       "depth": 0,
+       "box": [
+        905,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/변동사유"
+      },
+      {
+       "label": "변동일자",
+       "depth": 0,
+       "box": [
+        1082,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/변동일자"
+      },
+      {
+       "label": "학적반영",
+       "depth": 0,
+       "box": [
+        1260,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/학적반영"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1437,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/비고"
+      }
+     ],
+     "id": "grid:휴학/자퇴/퇴학/제적관리 목록"
+    },
+    {
+     "aria": "학교생활기록부생성",
+     "box": [
+      1371,
+      513,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교생활기록부생성",
+     "variant": "primary",
+     "id": "button:학교생활기록부생성"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1510,
+      513,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1565,
+      513,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": "기본학적",
+     "box": [
+      1115,
+      593,
+      500,
+      48
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "기본학적",
+      "학생생활",
+      "성적"
+     ],
+     "active": "기본학적",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      599,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "학생찾기",
+     "box": [
+      360,
+      599,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생찾기",
+     "variant": "primary",
+     "id": "button:학생찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      615,
+      599,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "변동일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:변동일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      599,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "변동구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:변동구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      639,
+      245,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      615,
+      639,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:반"
+    },
+    {
+     "aria": "건강기록부",
+     "box": [
+      1115,
+      651,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "건강기록부",
+     "variant": "primary",
+     "id": "button:건강기록부"
+    },
+    {
+     "aria": "학교생활기록부",
+     "box": [
+      1285,
+      651,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교생활기록부",
+     "variant": "primary",
+     "id": "button:학교생활기록부"
+    },
+    {
+     "aria": "출결내역",
+     "box": [
+      1455,
+      651,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출결내역",
+     "variant": "primary",
+     "id": "button:출결내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      679,
+      245,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": "PAPS",
+     "box": [
+      1115,
+      708,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "PAPS",
+     "variant": "primary",
+     "id": "button:PAPS"
+    },
+    {
+     "aria": "정정대장",
+     "box": [
+      1285,
+      708,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정대장",
+     "variant": "primary",
+     "id": "button:정정대장"
+    },
+    {
+     "aria": "학교스포츠클럽\r\n누가기록",
+     "box": [
+      1455,
+      708,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교스포츠클럽 누가기록",
+     "variant": "primary",
+     "id": "button:학교스포츠클럽 누가기록"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      719,
+      905,
+      50
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비고",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비고"
+    },
+    {
+     "aria": "개별화 교육계획",
+     "box": [
+      1115,
+      766,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개별화 교육계획",
+     "variant": "primary",
+     "id": "button:개별화 교육계획"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      779,
+      905,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학적특기사항",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학적특기사항"
+    }
+   ]
+  },
+  {
+   "id": "tab:학생생활",
+   "tab": "학생생활",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      550,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "미반영된자료 또는 반영된자료",
+     "box": [
+      680,
+      82,
+      250,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "미반영된자료 또는 반영된자료",
+     "options": [
+      "미반영된자료",
+      "반영된자료"
+     ],
+     "id": "radio:미반영된자료 또는 반영된자료"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "능력단위이수시간재계산",
+     "box": [
+      1158,
+      143,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "능력단위이수시간재계산",
+     "variant": "secondary",
+     "id": "button:능력단위이수시간재계산"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1336,
+      143,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "학적반영",
+     "box": [
+      1407,
+      143,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학적반영",
+     "variant": "secondary",
+     "id": "button:학적반영"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1479,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "secondary",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "휴학/자퇴/퇴학/제적관리 목록",
+     "box": [
+      25,
+      183,
+      1590,
+      320
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "휴학/자퇴/퇴학/제적관리 목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        253,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        431,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        608,
+        184,
+        120,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/성명"
+      },
+      {
+       "label": "변동구분",
+       "depth": 0,
+       "box": [
+        728,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/변동구분"
+      },
+      {
+       "label": "변동사유",
+       "depth": 0,
+       "box": [
+        905,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/변동사유"
+      },
+      {
+       "label": "변동일자",
+       "depth": 0,
+       "box": [
+        1082,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/변동일자"
+      },
+      {
+       "label": "학적반영",
+       "depth": 0,
+       "box": [
+        1260,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/학적반영"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1437,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/비고"
+      }
+     ],
+     "id": "grid:휴학/자퇴/퇴학/제적관리 목록"
+    },
+    {
+     "aria": "학교생활기록부생성",
+     "box": [
+      1371,
+      513,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교생활기록부생성",
+     "variant": "primary",
+     "id": "button:학교생활기록부생성"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1510,
+      513,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1565,
+      513,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": "기본학적",
+     "box": [
+      1115,
+      593,
+      500,
+      48
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "기본학적",
+      "학생생활",
+      "성적"
+     ],
+     "active": "기본학적",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      599,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "학생찾기",
+     "box": [
+      360,
+      599,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생찾기",
+     "variant": "primary",
+     "id": "button:학생찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      615,
+      599,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "변동일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:변동일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      599,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "변동구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:변동구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      639,
+      245,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      615,
+      639,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:반"
+    },
+    {
+     "aria": "건강기록부",
+     "box": [
+      1115,
+      651,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "건강기록부",
+     "variant": "primary",
+     "id": "button:건강기록부"
+    },
+    {
+     "aria": "학교생활기록부",
+     "box": [
+      1285,
+      651,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교생활기록부",
+     "variant": "primary",
+     "id": "button:학교생활기록부"
+    },
+    {
+     "aria": "출결내역",
+     "box": [
+      1455,
+      651,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출결내역",
+     "variant": "primary",
+     "id": "button:출결내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      679,
+      245,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": "PAPS",
+     "box": [
+      1115,
+      708,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "PAPS",
+     "variant": "primary",
+     "id": "button:PAPS"
+    },
+    {
+     "aria": "정정대장",
+     "box": [
+      1285,
+      708,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정대장",
+     "variant": "primary",
+     "id": "button:정정대장"
+    },
+    {
+     "aria": "학교스포츠클럽\r\n누가기록",
+     "box": [
+      1455,
+      708,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교스포츠클럽 누가기록",
+     "variant": "primary",
+     "id": "button:학교스포츠클럽 누가기록"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      719,
+      905,
+      50
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비고",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비고"
+    },
+    {
+     "aria": "개별화 교육계획",
+     "box": [
+      1115,
+      766,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개별화 교육계획",
+     "variant": "primary",
+     "id": "button:개별화 교육계획"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      779,
+      905,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학적특기사항",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학적특기사항"
+    }
+   ]
+  },
+  {
+   "id": "tab:성적",
+   "tab": "성적",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      550,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "미반영된자료 또는 반영된자료",
+     "box": [
+      680,
+      82,
+      250,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "미반영된자료 또는 반영된자료",
+     "options": [
+      "미반영된자료",
+      "반영된자료"
+     ],
+     "id": "radio:미반영된자료 또는 반영된자료"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "능력단위이수시간재계산",
+     "box": [
+      1158,
+      143,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "능력단위이수시간재계산",
+     "variant": "secondary",
+     "id": "button:능력단위이수시간재계산"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1336,
+      143,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "학적반영",
+     "box": [
+      1407,
+      143,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학적반영",
+     "variant": "secondary",
+     "id": "button:학적반영"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1479,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "secondary",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "휴학/자퇴/퇴학/제적관리 목록",
+     "box": [
+      25,
+      183,
+      1590,
+      320
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "휴학/자퇴/퇴학/제적관리 목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        253,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        431,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        608,
+        184,
+        120,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/성명"
+      },
+      {
+       "label": "변동구분",
+       "depth": 0,
+       "box": [
+        728,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/변동구분"
+      },
+      {
+       "label": "변동사유",
+       "depth": 0,
+       "box": [
+        905,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/변동사유"
+      },
+      {
+       "label": "변동일자",
+       "depth": 0,
+       "box": [
+        1082,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/변동일자"
+      },
+      {
+       "label": "학적반영",
+       "depth": 0,
+       "box": [
+        1260,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/학적반영"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1437,
+        184,
+        177,
+        36
+       ],
+       "id": "col:휴학/자퇴/퇴학/제적관리 목록/비고"
+      }
+     ],
+     "id": "grid:휴학/자퇴/퇴학/제적관리 목록"
+    },
+    {
+     "aria": "학교생활기록부생성",
+     "box": [
+      1371,
+      513,
+      134,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교생활기록부생성",
+     "variant": "primary",
+     "id": "button:학교생활기록부생성"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1510,
+      513,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1565,
+      513,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": "기본학적",
+     "box": [
+      1115,
+      593,
+      500,
+      48
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "기본학적",
+      "학생생활",
+      "성적"
+     ],
+     "active": "기본학적",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      599,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "학생찾기",
+     "box": [
+      360,
+      599,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생찾기",
+     "variant": "primary",
+     "id": "button:학생찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      615,
+      599,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "변동일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:변동일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      599,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "변동구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:변동구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      639,
+      245,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      615,
+      639,
+      155,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:반"
+    },
+    {
+     "aria": "건강기록부",
+     "box": [
+      1115,
+      651,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "건강기록부",
+     "variant": "primary",
+     "id": "button:건강기록부"
+    },
+    {
+     "aria": "학교생활기록부",
+     "box": [
+      1285,
+      651,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교생활기록부",
+     "variant": "primary",
+     "id": "button:학교생활기록부"
+    },
+    {
+     "aria": "출결내역",
+     "box": [
+      1455,
+      651,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출결내역",
+     "variant": "primary",
+     "id": "button:출결내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      679,
+      245,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": "PAPS",
+     "box": [
+      1115,
+      708,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "PAPS",
+     "variant": "primary",
+     "id": "button:PAPS"
+    },
+    {
+     "aria": "정정대장",
+     "box": [
+      1285,
+      708,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정대장",
+     "variant": "primary",
+     "id": "button:정정대장"
+    },
+    {
+     "aria": "학교스포츠클럽\r\n누가기록",
+     "box": [
+      1455,
+      708,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교스포츠클럽 누가기록",
+     "variant": "primary",
+     "id": "button:학교스포츠클럽 누가기록"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      719,
+      905,
+      50
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비고",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비고"
+    },
+    {
+     "aria": "개별화 교육계획",
+     "box": [
+      1115,
+      766,
+      160,
+      48
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개별화 교육계획",
+     "variant": "primary",
+     "id": "button:개별화 교육계획"
+    },
+    {
+     "aria": null,
+     "box": [
+      195,
+      779,
+      905,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학적특기사항",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학적특기사항"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 학업중단관리 > 휴학/자퇴/퇴학/제적관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

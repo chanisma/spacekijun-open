@@ -1,0 +1,504 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›시간표관리›전체시간표관리",
+ "name": "전체시간표관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:06:19+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      82,
+      110,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": "하루빼기",
+     "box": [
+      1025,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "하루빼기",
+     "variant": "plain",
+     "id": "button:하루빼기"
+    },
+    {
+     "aria": "하루더하기",
+     "box": [
+      1055,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "하루더하기",
+     "variant": "plain",
+     "id": "button:하루더하기"
+    },
+    {
+     "aria": "일별 및 주별 및 2주 선택",
+     "box": [
+      1125,
+      82,
+      181,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "일별 및 주별 및 2주 선택",
+     "options": [
+      "일별",
+      "주별",
+      "2주"
+     ],
+     "id": "radio:일별 및 주별 및 2주 선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      45,
+      122,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "학과",
+     "checked": false,
+     "id": "check:학과"
+    },
+    {
+     "aria": null,
+     "box": [
+      104,
+      122,
+      228,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "수업 없는 강의실 숨김(일별조회 전용)",
+     "checked": false,
+     "id": "check:수업 없는 강의실 숨김(일별조회 전용)"
+    },
+    {
+     "aria": null,
+     "box": [
+      343,
+      122,
+      128,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "점심시간 포함 조회",
+     "checked": false,
+     "id": "check:점심시간 포함 조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      481,
+      122,
+      113,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "근무상황 미표시",
+     "checked": false,
+     "id": "check:근무상황 미표시"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "셀 크기 상하로 축소",
+     "box": [
+      909,
+      230,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "셀 크기 상하로 축소",
+     "variant": "plain",
+     "id": "button:셀 크기 상하로 축소"
+    },
+    {
+     "aria": "셀 크기 상하로 확대",
+     "box": [
+      947,
+      230,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "셀 크기 상하로 확대",
+     "variant": "plain",
+     "id": "button:셀 크기 상하로 확대"
+    },
+    {
+     "aria": "엑셀 내려받기",
+     "box": [
+      1028,
+      230,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "근무상황변동",
+     "box": [
+      1156,
+      230,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "근무상황변동",
+     "variant": "primary",
+     "id": "button:근무상황변동"
+    },
+    {
+     "aria": "오류결보강삭제",
+     "box": [
+      1252,
+      230,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "오류결보강삭제",
+     "variant": "primary",
+     "id": "button:오류결보강삭제"
+    },
+    {
+     "aria": "시간설정",
+     "box": [
+      1360,
+      230,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "시간설정",
+     "variant": "primary",
+     "id": "button:시간설정"
+    },
+    {
+     "aria": "행사처리",
+     "box": [
+      1431,
+      230,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행사처리",
+     "variant": "primary",
+     "id": "button:행사처리"
+    },
+    {
+     "aria": "일괄변경",
+     "box": [
+      1503,
+      230,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄변경",
+     "variant": "primary",
+     "id": "button:일괄변경"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      230,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "전체시간표 내역",
+     "box": [
+      25,
+      240,
+      117,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "전체시간표 내역",
+     "id": "heading:전체시간표 내역"
+    },
+    {
+     "aria": "전체시간표 내역",
+     "box": [
+      25,
+      270,
+      1590,
+      480
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전체시간표 내역",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "강의실(원적반)",
+       "depth": 0,
+       "box": [
+        26,
+        271,
+        133,
+        86
+       ],
+       "id": "col:전체시간표 내역/강의실(원적반)"
+      },
+      {
+       "label": "1교시",
+       "depth": 1,
+       "box": [
+        159,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/1교시"
+      },
+      {
+       "label": "2교시",
+       "depth": 1,
+       "box": [
+        281,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/2교시"
+      },
+      {
+       "label": "3교시",
+       "depth": 1,
+       "box": [
+        402,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/3교시"
+      },
+      {
+       "label": "4교시",
+       "depth": 1,
+       "box": [
+        523,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/4교시"
+      },
+      {
+       "label": "5교시",
+       "depth": 1,
+       "box": [
+        644,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/5교시"
+      },
+      {
+       "label": "6교시",
+       "depth": 1,
+       "box": [
+        765,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/6교시"
+      },
+      {
+       "label": "7교시",
+       "depth": 1,
+       "box": [
+        887,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/7교시"
+      },
+      {
+       "label": "8교시",
+       "depth": 1,
+       "box": [
+        1008,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/8교시"
+      },
+      {
+       "label": "9교시",
+       "depth": 1,
+       "box": [
+        1129,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/9교시"
+      },
+      {
+       "label": "10교시",
+       "depth": 1,
+       "box": [
+        1250,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/10교시"
+      },
+      {
+       "label": "11교시",
+       "depth": 1,
+       "box": [
+        1372,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/11교시"
+      },
+      {
+       "label": "12교시",
+       "depth": 1,
+       "box": [
+        1493,
+        307,
+        121,
+        50
+       ],
+       "id": "col:전체시간표 내역/12교시"
+      }
+     ],
+     "id": "grid:전체시간표 내역"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 시간표관리 > 전체시간표관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

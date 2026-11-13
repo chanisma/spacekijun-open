@@ -1,0 +1,280 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적처리›최소성취수준보장지도(추가학습)마감관리",
+ "name": "최소성취수준보장지도(추가학습)마감관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:35:32+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 수강생이 없는 강의실의 경우 학점반영없이 마감 처리 가능합니다.",
+     "id": "note:※ 수강생이 없는 강의실의 경우 학점반영없이 마감 처리 가능합니다."
+    },
+    {
+     "aria": "전체마감상태",
+     "box": [
+      1340,
+      171,
+      99,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전체마감상태 :",
+     "id": "note:※ 전체마감상태 :"
+    },
+    {
+     "aria": "마감정보저장",
+     "box": [
+      1455,
+      171,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감정보저장",
+     "variant": "primary",
+     "id": "button:마감정보저장"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1551,
+      171,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "최소성취수준보장지도 마감정보 그리드",
+     "box": [
+      25,
+      239,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "최소성취수준보장지도 마감정보 그리드",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "계열",
+       "depth": 0,
+       "box": [
+        76,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/계열"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        220,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/학과"
+      },
+      {
+       "label": "과목명(학점)",
+       "depth": 0,
+       "box": [
+        363,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/과목명(학점)"
+      },
+      {
+       "label": "강의실/편성반",
+       "depth": 0,
+       "box": [
+        507,
+        240,
+        101,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/강의실/편성반"
+      },
+      {
+       "label": "담당교사",
+       "depth": 0,
+       "box": [
+        608,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/담당교사"
+      },
+      {
+       "label": "보장지도대상인원",
+       "depth": 0,
+       "box": [
+        752,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/보장지도대상인원"
+      },
+      {
+       "label": "예외처리인원",
+       "depth": 0,
+       "box": [
+        895,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/예외처리인원"
+      },
+      {
+       "label": "이수처리인원",
+       "depth": 0,
+       "box": [
+        1039,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/이수처리인원"
+      },
+      {
+       "label": "미이수 처리인원",
+       "depth": 0,
+       "box": [
+        1183,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/미이수 처리인원"
+      },
+      {
+       "label": "학점반영 인원",
+       "depth": 0,
+       "box": [
+        1327,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/학점반영 인원"
+      },
+      {
+       "label": "강의실별 마감여부",
+       "depth": 0,
+       "box": [
+        1470,
+        240,
+        144,
+        39
+       ],
+       "id": "col:최소성취수준보장지도 마감정보 그리드/강의실별 마감여부"
+      }
+     ],
+     "id": "grid:최소성취수준보장지도 마감정보 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적처리 > 최소성취수준보장지도(추가학습)마감관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

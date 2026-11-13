@@ -1,0 +1,50 @@
+begin;
+select set_config('sky.owner',(select id::text from public.profiles where role='student' order by id limit 1),true);
+select set_config('sky.other',(select id::text from public.profiles where role='student' and id::text<>current_setting('sky.owner') order by id limit 1),true);
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('sky.owner'),'role','authenticated')::text,true);
+set local role authenticated;
+do $$ declare g jsonb; t jsonb; gid uuid; region_id integer; revision integer; begin
+ select n into region_id from generate_series(0,9995) n where not exists(select 1 from jsonb_array_elements(public.academy_dormitory_read(current_date,null)->'sky_regions') r where (r->>'region')::int=n) limit 1;
+ perform set_config('sky.region',region_id::text,true);
+ g:=public.academy_sky_region_write(region_id,null,.5,.5,'작은 도서관',0);
+ if g->>'name'<>'작은 도서관' then raise exception 'Name not saved'; end if;
+ begin perform public.academy_sky_region_write(region_id,null,.5,.5,'stale',0);raise exception 'Stale name accepted' using errcode='XX000';exception when serialization_failure then null;end;
+ g:=public.academy_sky_region_write(region_id,null,.5,.5,'   ',1);
+ if g->>'name' is not null then raise exception 'Blank name not cleared'; end if;
+ g:=public.academy_dormitory_write('save_goal','{"title":"TEST region goal"}');gid:=(g->>'id')::uuid;
+ perform set_config('sky.goal',gid::text,true);
+ g:=public.academy_sky_region_write(region_id,gid,.3,.4,null,0);
+ if (g->>'sky_region')::int<>region_id then raise exception 'Region not assigned'; end if;
+ begin perform public.academy_sky_region_write(region_id,gid,.5,.5,null,0);raise exception 'Stale move accepted' using errcode='XX000';exception when serialization_failure then null;end;
+ t:=public.academy_dormitory_write('save_task',jsonb_build_object('title','TEST corner star','task_date','2199-01-01','related_goal_id',gid));
+ perform public.academy_dormitory_write('complete',jsonb_build_object('id',t->>'id','completed',true));
+ g:=public.academy_sky_write('place_star',gid,(t->>'plan_id')::uuid,0,0,null,null,1);
+ g:=public.academy_sky_region_write(region_id,gid,.7,.6,null,2);
+ if not exists(select 1 from jsonb_array_elements(public.academy_dormitory_read(current_date,null)->'plans') p where p->>'id'=t->>'plan_id' and (p->>'sky_x')::numeric=0 and (p->>'sky_y')::numeric=0) then raise exception 'Moving constellation changed local star coordinates'; end if;
+ for i in 2..8 loop
+  g:=public.academy_dormitory_write('save_goal',jsonb_build_object('title','TEST region goal '||i));
+  perform public.academy_sky_region_write(region_id,(g->>'id')::uuid,.5,.5,null,0);
+ end loop;
+ g:=public.academy_dormitory_write('save_goal','{"title":"TEST ninth goal"}');
+ begin perform public.academy_sky_region_write(region_id,(g->>'id')::uuid,.5,.5,null,0);raise exception 'Ninth constellation accepted' using errcode='XX000';exception when raise_exception then null;end;
+ perform public.academy_dormitory_write('archive_goal',jsonb_build_object('id',gid,'archived',true));
+ begin perform public.academy_sky_region_write(region_id,gid,.5,.5,null,3);raise exception 'Archived constellation moved' using errcode='XX000';exception when raise_exception then null;end;
+ begin perform public.academy_sky_region_write(-1,null,.5,.5,'invalid',0);raise exception 'Invalid region accepted' using errcode='XX000';exception when raise_exception then null;end;
+ begin perform public.academy_sky_region_write(region_id,null,.5,.5,repeat('x',61),2);raise exception 'Long name accepted' using errcode='XX000';exception when raise_exception then null;end;
+end $$;
+reset role;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('sky.other'),'role','authenticated')::text,true);
+set local role authenticated;
+do $$ begin
+ begin perform public.academy_sky_region_write(current_setting('sky.region')::int,current_setting('sky.goal')::uuid,.5,.5,null,3);raise exception 'Foreign goal moved' using errcode='XX000';exception when insufficient_privilege then null;end;
+ begin perform 1 from public.academy_sky_regions;raise exception 'Direct access granted' using errcode='XX000';exception when insufficient_privilege then null;end;
+end $$;
+reset role;
+select set_config('request.jwt.claims','{}',true);
+set local role authenticated;
+do $$ begin
+ begin perform public.academy_sky_region_write(0,null,.5,.5,'anonymous',0);raise exception 'Null auth accepted' using errcode='XX000';exception when insufficient_privilege then null;end;
+end $$;
+reset role;
+select 'PASS sky regions: naming, revisions, square editor, shape preservation, eight-goal capacity, archive, ownership and anonymous denial' as result;
+rollback;

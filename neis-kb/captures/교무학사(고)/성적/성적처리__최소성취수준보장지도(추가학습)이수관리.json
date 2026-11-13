@@ -1,0 +1,1209 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적처리›최소성취수준보장지도(추가학습)이수관리",
+ "name": "최소성취수준보장지도(추가학습)이수관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:34:52+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:최소성취수준보장지도(추가학습)대상자",
+   "tab": "최소성취수준보장지도(추가학습)대상자",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "최소성취수준보장지도(추가학습)대상자 선택됨",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "최소성취수준보장지도(추가학습)대상자",
+      "최소성취수준보장지도(추가학습)예외처리",
+      "최소성취수준보장지도(추가학습)이수관리",
+      "최소성취수준보장지도(추가학습)마감"
+     ],
+     "active": "최소성취수준보장지도(추가학습)대상자",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "과목",
+     "box": [
+      895,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "강의실",
+     "box": [
+      1135,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대상자가져오기 버튼은 공통과목의 경우 성적산출전체마감여부와 과목별 출결 마감여부가 모두 마감, 선택과목의 경우 과목별 출결 마감여부가 마감일 시 활성화 됩니다. ※ 정규외 과목의 대상자가져오기 버튼은 해당 개설과목에 편성된 모든학생의 출결처리가 되어야 활성화 됩니다.",
+     "id": "note:※ 대상자가져오기 버튼은 공통과목의 경우 성적산출전체마감여부와 과목별 출결 마감여부가 모두 마감, 선택과목의 경우 과목별 출결 마감여부가 마감일 시 활성화 됩니다. ※ 정규외 과목의 대상자가져오기 버튼은 해당 개설과목에 편성된 모든학생의 출결처리가 되어야 활성화 됩니다."
+    },
+    {
+     "aria": "학업성취율 현황",
+     "box": [
+      1212,
+      295,
+      103,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학업성취율 현황",
+     "variant": "primary",
+     "id": "button:학업성취율 현황"
+    },
+    {
+     "aria": "과목별출결현황",
+     "box": [
+      1324,
+      295,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "과목별출결현황",
+     "variant": "primary",
+     "id": "button:과목별출결현황"
+    },
+    {
+     "aria": "대상자가져오기",
+     "box": [
+      1431,
+      295,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "대상자가져오기",
+     "variant": "primary",
+     "id": "button:대상자가져오기"
+    },
+    {
+     "aria": "대상자삭제",
+     "box": [
+      1539,
+      295,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "대상자삭제",
+     "variant": "primary",
+     "id": "button:대상자삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      305,
+      344,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "☞ 보장지도(추가학습) 대상은 다음과 같습니다.",
+     "id": "heading:☞ 보장지도(추가학습) 대상은 다음과 같습니다."
+    }
+   ]
+  },
+  {
+   "id": "tab:최소성취수준보장지도(추가학습)예외처리",
+   "tab": "최소성취수준보장지도(추가학습)예외처리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "최소성취수준보장지도(추가학습)대상자",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "최소성취수준보장지도(추가학습)대상자",
+      "최소성취수준보장지도(추가학습)예외처리",
+      "최소성취수준보장지도(추가학습)이수관리",
+      "최소성취수준보장지도(추가학습)마감"
+     ],
+     "active": "최소성취수준보장지도(추가학습)예외처리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "과목",
+     "box": [
+      895,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "강의실",
+     "box": [
+      1135,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "이수선택",
+     "box": [
+      1245,
+      152,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "강의실",
+     "options": [
+      "전체",
+      "미이수"
+     ],
+     "id": "radio:강의실"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1407,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1455,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1503,
+      213,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      281,
+      1590,
+      532
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "최소 성취수준 보장지도(추가학습) 대상자",
+       "depth": 0,
+       "box": [
+        76,
+        282,
+        406,
+        38
+       ],
+       "span": 4,
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자"
+      },
+      {
+       "label": "최소 성취수준 보장지도(추가학습) 대상과목",
+       "depth": 0,
+       "box": [
+        482,
+        282,
+        363,
+        38
+       ],
+       "span": 3,
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상과목"
+      },
+      {
+       "label": "최소 성취수준 보장지도(추가학습) 사유",
+       "depth": 0,
+       "box": [
+        845,
+        282,
+        769,
+        38
+       ],
+       "span": 4,
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 사유"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        320,
+        73,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        149,
+        320,
+        73,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자>번호"
+      },
+      {
+       "label": "성명",
+       "depth": 1,
+       "box": [
+        221,
+        320,
+        145,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자>성명"
+      },
+      {
+       "label": "학적변동",
+       "depth": 1,
+       "box": [
+        366,
+        320,
+        116,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자>학적변동"
+      },
+      {
+       "label": "편제",
+       "depth": 1,
+       "box": [
+        482,
+        320,
+        145,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상과목>편제"
+      },
+      {
+       "label": "과목",
+       "depth": 1,
+       "box": [
+        627,
+        320,
+        145,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상과목>과목"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        772,
+        320,
+        73,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상과목>학점"
+      },
+      {
+       "label": "과목 출석률",
+       "depth": 1,
+       "box": [
+        845,
+        320,
+        102,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 사유>과목 출석률"
+      },
+      {
+       "label": "학업 성취율",
+       "depth": 1,
+       "box": [
+        947,
+        320,
+        102,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 사유>학업 성취율"
+      },
+      {
+       "label": "예외",
+       "depth": 1,
+       "box": [
+        1048,
+        320,
+        203,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 사유>예외"
+      },
+      {
+       "label": "예외사유(기타)",
+       "depth": 1,
+       "box": [
+        1251,
+        320,
+        363,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 사유>예외사유(기타)"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:최소성취수준보장지도(추가학습)이수관리",
+   "tab": "최소성취수준보장지도(추가학습)이수관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "최소성취수준보장지도(추가학습)대상자",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "최소성취수준보장지도(추가학습)대상자",
+      "최소성취수준보장지도(추가학습)예외처리",
+      "최소성취수준보장지도(추가학습)이수관리",
+      "최소성취수준보장지도(추가학습)마감"
+     ],
+     "active": "최소성취수준보장지도(추가학습)이수관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "과목",
+     "box": [
+      895,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "강의실",
+     "box": [
+      1135,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "이수선택",
+     "box": [
+      1245,
+      152,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "강의실",
+     "options": [
+      "전체",
+      "미이수"
+     ],
+     "id": "radio:강의실"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1407,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1455,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1503,
+      213,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": null,
+     "box": [
+      118,
+      261,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학점당 시수",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학점당 시수"
+    },
+    {
+     "aria": "학점 당 시수 적용",
+     "box": [
+      324,
+      261,
+      75,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "시수 적용",
+     "variant": "primary",
+     "id": "button:시수 적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      311,
+      1590,
+      502
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 21,
+     "columns": [
+      {
+       "label": "최소 성취수준 보장지도(추가학습) 대상자",
+       "depth": 0,
+       "box": [
+        76,
+        312,
+        326,
+        38
+       ],
+       "span": 4,
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자"
+      },
+      {
+       "label": "최소 성취수준 보장지도(추가학습) 대상과목",
+       "depth": 0,
+       "box": [
+        402,
+        312,
+        361,
+        38
+       ],
+       "span": 4,
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상과목"
+      },
+      {
+       "label": "최소 성취수준 보장지도(추가학습) 사유",
+       "depth": 0,
+       "box": [
+        763,
+        312,
+        175,
+        38
+       ],
+       "span": 2,
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 사유"
+      },
+      {
+       "label": "최소 성취수준 보장지도(추가학습)",
+       "depth": 0,
+       "box": [
+        938,
+        312,
+        583,
+        38
+       ],
+       "span": 5,
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습)"
+      },
+      {
+       "label": "학점 반영여부",
+       "depth": 0,
+       "box": [
+        1521,
+        312,
+        93,
+        77
+       ],
+       "id": "col:그리드/학점 반영여부"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        76,
+        350,
+        58,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        134,
+        350,
+        58,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자>번호"
+      },
+      {
+       "label": "성명",
+       "depth": 1,
+       "box": [
+        193,
+        350,
+        117,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자>성명"
+      },
+      {
+       "label": "학적변동",
+       "depth": 1,
+       "box": [
+        309,
+        350,
+        93,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상자>학적변동"
+      },
+      {
+       "label": "편제",
+       "depth": 1,
+       "box": [
+        402,
+        350,
+        117,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상과목>편제"
+      },
+      {
+       "label": "과목",
+       "depth": 1,
+       "box": [
+        519,
+        350,
+        117,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상과목>과목"
+      },
+      {
+       "label": "학점",
+       "depth": 1,
+       "box": [
+        635,
+        350,
+        58,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상과목>학점"
+      },
+      {
+       "label": "학점당 시수",
+       "depth": 1,
+       "box": [
+        694,
+        350,
+        70,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 대상과목>학점당 시수"
+      },
+      {
+       "label": "과목 출석률",
+       "depth": 1,
+       "box": [
+        763,
+        350,
+        87,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 사유>과목 출석률"
+      },
+      {
+       "label": "학업 성취율",
+       "depth": 1,
+       "box": [
+        851,
+        350,
+        87,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습) 사유>학업 성취율"
+      },
+      {
+       "label": "필요 시수",
+       "depth": 1,
+       "box": [
+        938,
+        350,
+        70,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습)>필요 시수"
+      },
+      {
+       "label": "이수 기준",
+       "depth": 1,
+       "box": [
+        1008,
+        350,
+        70,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습)>이수 기준"
+      },
+      {
+       "label": "참여 시수",
+       "depth": 1,
+       "box": [
+        1078,
+        350,
+        70,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습)>참여 시수"
+      },
+      {
+       "label": "이수여부",
+       "depth": 1,
+       "box": [
+        1148,
+        350,
+        82,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습)>이수여부"
+      },
+      {
+       "label": "비고",
+       "depth": 1,
+       "box": [
+        1230,
+        350,
+        291,
+        39
+       ],
+       "id": "col:그리드/최소 성취수준 보장지도(추가학습)>비고"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:최소성취수준보장지도(추가학습)마감",
+   "tab": "최소성취수준보장지도(추가학습)마감",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "최소성취수준보장지도(추가학습)대상자",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "최소성취수준보장지도(추가학습)대상자",
+      "최소성취수준보장지도(추가학습)예외처리",
+      "최소성취수준보장지도(추가학습)이수관리",
+      "최소성취수준보장지도(추가학습)마감"
+     ],
+     "active": "최소성취수준보장지도(추가학습)마감",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "과목",
+     "box": [
+      895,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "강의실",
+     "box": [
+      1135,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학기말성적반영",
+     "box": [
+      1503,
+      213,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학점반영",
+     "variant": "primary",
+     "id": "button:학점반영"
+    },
+    {
+     "aria": "마감",
+     "box": [
+      1575,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감",
+     "variant": "primary",
+     "id": "button:마감"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      223,
+      344,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "☞ 보장지도(추가학습) 대상은 다음과 같습니다.",
+     "id": "heading:☞ 보장지도(추가학습) 대상은 다음과 같습니다."
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적처리 > 최소성취수준보장지도(추가학습)이수관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

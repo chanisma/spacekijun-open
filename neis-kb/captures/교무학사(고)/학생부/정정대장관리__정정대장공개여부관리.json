@@ -1,0 +1,251 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생부›정정대장관리›정정대장공개여부관리",
+ "name": "정정대장공개여부관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:40:38+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "반별조회 또는 재학아닌학생 선택",
+     "box": [
+      45,
+      82,
+      190,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "반별조회 또는 재학아닌학생 선택",
+     "options": [
+      "반별조회",
+      "재학아닌학생"
+     ],
+     "id": "radio:반별조회 또는 재학아닌학생 선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      365,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      595,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      825,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1025,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "항목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:항목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "정정대장공개여부 그리드 ",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "정정대장공개여부 그리드",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        62
+       ],
+       "id": "col:정정대장공개여부 그리드/순번"
+      },
+      {
+       "label": "정정연월일",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        176,
+        62
+       ],
+       "id": "col:정정대장공개여부 그리드/정정연월일"
+      },
+      {
+       "label": "정정대상자",
+       "depth": 0,
+       "box": [
+        252,
+        174,
+        443,
+        31
+       ],
+       "span": 2,
+       "id": "col:정정대장공개여부 그리드/정정대상자"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        695,
+        174,
+        176,
+        62
+       ],
+       "id": "col:정정대장공개여부 그리드/항목"
+      },
+      {
+       "label": "공개여부",
+       "depth": 0,
+       "box": [
+        871,
+        174,
+        141,
+        62
+       ],
+       "id": "col:정정대장공개여부 그리드/공개여부"
+      },
+      {
+       "label": "비공개사유",
+       "depth": 0,
+       "box": [
+        1012,
+        174,
+        426,
+        62
+       ],
+       "id": "col:정정대장공개여부 그리드/비공개사유"
+      },
+      {
+       "label": "변경사유",
+       "depth": 0,
+       "box": [
+        1438,
+        174,
+        176,
+        62
+       ],
+       "id": "col:정정대장공개여부 그리드/변경사유"
+      },
+      {
+       "label": "학년도/학년/반/번호",
+       "depth": 1,
+       "box": [
+        252,
+        205,
+        267,
+        31
+       ],
+       "id": "col:정정대장공개여부 그리드/정정대상자>학년도/학년/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 1,
+       "box": [
+        519,
+        205,
+        176,
+        31
+       ],
+       "id": "col:정정대장공개여부 그리드/정정대상자>성명"
+      }
+     ],
+     "id": "grid:정정대장공개여부 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부 > 정정대장관리 > 정정대장공개여부관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

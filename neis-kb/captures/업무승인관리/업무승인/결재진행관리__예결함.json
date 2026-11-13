@@ -1,0 +1,390 @@
+{
+ "schema": "neis-capture/1",
+ "key": "업무승인관리›업무승인›결재진행관리›예결함",
+ "name": "예결함",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:55:22+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업무영역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업무영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      465,
+      82,
+      250,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재문서",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:결재문서"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      300,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재문서명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결재문서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1295,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기안자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기안자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상신기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:상신기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상신기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:상신기간~"
+    },
+    {
+     "aria": "오늘",
+     "box": [
+      438,
+      122,
+      40,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "오늘",
+     "variant": "primary",
+     "id": "button:오늘"
+    },
+    {
+     "aria": "일주일",
+     "box": [
+      486,
+      122,
+      52,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일주일",
+     "variant": "primary",
+     "id": "button:일주일"
+    },
+    {
+     "aria": "1개월",
+     "box": [
+      546,
+      122,
+      47,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "1개월",
+     "variant": "primary",
+     "id": "button:1개월"
+    },
+    {
+     "aria": "3개월",
+     "box": [
+      601,
+      122,
+      47,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "3개월",
+     "variant": "primary",
+     "id": "button:3개월"
+    },
+    {
+     "aria": "3개월",
+     "box": [
+      658,
+      122,
+      40,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "전체",
+     "variant": "primary",
+     "id": "button:전체"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      203,
+      1590,
+      570
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        45,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "결재문서명",
+       "depth": 0,
+       "box": [
+        71,
+        204,
+        356,
+        36
+       ],
+       "id": "col:그리드/결재문서명"
+      },
+      {
+       "label": "결재권자명",
+       "depth": 0,
+       "box": [
+        427,
+        204,
+        100,
+        36
+       ],
+       "id": "col:그리드/결재권자명"
+      },
+      {
+       "label": "기안자ID",
+       "depth": 0,
+       "box": [
+        527,
+        204,
+        100,
+        36
+       ],
+       "id": "col:그리드/기안자ID"
+      },
+      {
+       "label": "기안자명",
+       "depth": 0,
+       "box": [
+        627,
+        204,
+        100,
+        36
+       ],
+       "id": "col:그리드/기안자명"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        727,
+        204,
+        100,
+        36
+       ],
+       "id": "col:그리드/직위"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        827,
+        204,
+        100,
+        36
+       ],
+       "id": "col:그리드/조직명"
+      },
+      {
+       "label": "상신일시",
+       "depth": 0,
+       "box": [
+        927,
+        204,
+        150,
+        36
+       ],
+       "id": "col:그리드/상신일시"
+      },
+      {
+       "label": "진행상황",
+       "depth": 0,
+       "box": [
+        1077,
+        204,
+        96,
+        36
+       ],
+       "id": "col:그리드/진행상황"
+      },
+      {
+       "label": "현처리자",
+       "depth": 0,
+       "box": [
+        1173,
+        204,
+        120,
+        36
+       ],
+       "id": "col:그리드/현처리자"
+      },
+      {
+       "label": "사유",
+       "depth": 0,
+       "box": [
+        1293,
+        204,
+        240,
+        36
+       ],
+       "id": "col:그리드/사유"
+      },
+      {
+       "label": "인원",
+       "depth": 0,
+       "box": [
+        1533,
+        204,
+        240,
+        36
+       ],
+       "id": "col:그리드/인원"
+      },
+      {
+       "label": "신청기간",
+       "depth": 0,
+       "box": [
+        1773,
+        204,
+        240,
+        36
+       ],
+       "id": "col:그리드/신청기간"
+      },
+      {
+       "label": "장소",
+       "depth": 0,
+       "box": [
+        2013,
+        204,
+        240,
+        36
+       ],
+       "id": "col:그리드/장소"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {업무승인관리}업무승인 > 결재진행관리 > 예결함",
+ "viewport": [
+  1920,
+  945
+ ]
+}

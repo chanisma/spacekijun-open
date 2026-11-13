@@ -1,0 +1,536 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›통계및현황›측정기록통계",
+ "name": "측정기록통계",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:15:23+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:대상별 측정기록 통계",
+   "tab": "대상별 측정기록 통계",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "대상선택",
+     "box": [
+      175,
+      122,
+      185,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "대상선택",
+     "options": [
+      "학교",
+      "학년",
+      "학급"
+     ],
+     "id": "radio:대상선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      500,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": true,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      580,
+      122,
+      107,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "심폐지구력",
+     "checked": true,
+     "id": "check:심폐지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      687,
+      122,
+      82,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "유연성",
+     "checked": true,
+     "id": "check:유연성"
+    },
+    {
+     "aria": null,
+     "box": [
+      769,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "근력·근지구력",
+     "checked": true,
+     "id": "check:근력·근지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      899,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "순발력",
+     "checked": true,
+     "id": "check:순발력"
+    },
+    {
+     "aria": null,
+     "box": [
+      979,
+      122,
+      73,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "비만",
+     "checked": true,
+     "id": "check:비만"
+    },
+    {
+     "aria": null,
+     "box": [
+      1052,
+      122,
+      60,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "키",
+     "checked": true,
+     "id": "check:키"
+    },
+    {
+     "aria": null,
+     "box": [
+      1112,
+      122,
+      84,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "몸무게",
+     "checked": true,
+     "id": "check:몸무게"
+    },
+    {
+     "aria": null,
+     "box": [
+      1196,
+      122,
+      95,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "체지방률",
+     "checked": true,
+     "id": "check:체지방률"
+    },
+    {
+     "aria": null,
+     "box": [
+      1291,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "자기신체평가",
+     "checked": true,
+     "id": "check:자기신체평가"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      173,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그래프",
+     "variant": "primary",
+     "id": "button:그래프"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      213,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대상별 측정기록 통계",
+      "요인별 측정기록 통계"
+     ],
+     "active": "대상별 측정기록 통계",
+     "id": "tabs:안쪽 탭"
+    }
+   ]
+  },
+  {
+   "id": "tab:요인별 측정기록 통계",
+   "tab": "요인별 측정기록 통계",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "대상선택",
+     "box": [
+      175,
+      122,
+      185,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "대상선택",
+     "options": [
+      "학교",
+      "학년",
+      "학급"
+     ],
+     "id": "radio:대상선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      500,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": true,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      580,
+      122,
+      107,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "심폐지구력",
+     "checked": true,
+     "id": "check:심폐지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      687,
+      122,
+      82,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "유연성",
+     "checked": true,
+     "id": "check:유연성"
+    },
+    {
+     "aria": null,
+     "box": [
+      769,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "근력·근지구력",
+     "checked": true,
+     "id": "check:근력·근지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      899,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "순발력",
+     "checked": true,
+     "id": "check:순발력"
+    },
+    {
+     "aria": null,
+     "box": [
+      979,
+      122,
+      73,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "비만",
+     "checked": true,
+     "id": "check:비만"
+    },
+    {
+     "aria": null,
+     "box": [
+      1052,
+      122,
+      60,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "키",
+     "checked": true,
+     "id": "check:키"
+    },
+    {
+     "aria": null,
+     "box": [
+      1112,
+      122,
+      84,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "몸무게",
+     "checked": true,
+     "id": "check:몸무게"
+    },
+    {
+     "aria": null,
+     "box": [
+      1196,
+      122,
+      95,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "체지방률",
+     "checked": true,
+     "id": "check:체지방률"
+    },
+    {
+     "aria": null,
+     "box": [
+      1291,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "자기신체평가",
+     "checked": true,
+     "id": "check:자기신체평가"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      173,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그래프",
+     "variant": "primary",
+     "id": "button:그래프"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      213,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대상별 측정기록 통계",
+      "요인별 측정기록 통계"
+     ],
+     "active": "요인별 측정기록 통계",
+     "id": "tabs:안쪽 탭"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 통계및현황 > 측정기록통계",
+ "viewport": [
+  1920,
+  945
+ ]
+}

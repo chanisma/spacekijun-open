@@ -1,0 +1,342 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교스포츠클럽관리#학교›학교스포츠클럽관리#학교›학교스포츠클럽관리",
+ "name": "학교스포츠클럽관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:09:10+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "활동상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:활동상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "종목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:종목"
+    },
+    {
+     "aria": null,
+     "box": [
+      995,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "누적시수",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:누적시수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 17,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        123,
+        62
+       ],
+       "id": "col:그리드/학년도"
+      },
+      {
+       "label": "학교스포츠클럽",
+       "depth": 0,
+       "box": [
+        199,
+        174,
+        154,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/학교스포츠클럽"
+      },
+      {
+       "label": "종목",
+       "depth": 0,
+       "box": [
+        353,
+        174,
+        154,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/종목"
+      },
+      {
+       "label": "클럽원",
+       "depth": 0,
+       "box": [
+        507,
+        174,
+        369,
+        31
+       ],
+       "span": 3,
+       "id": "col:그리드/클럽원"
+      },
+      {
+       "label": "실적학생수",
+       "depth": 0,
+       "box": [
+        876,
+        174,
+        369,
+        31
+       ],
+       "span": 3,
+       "id": "col:그리드/실적학생수"
+      },
+      {
+       "label": "지도교사·강사",
+       "depth": 0,
+       "box": [
+        1245,
+        174,
+        123,
+        62
+       ],
+       "id": "col:그리드/지도교사·강사"
+      },
+      {
+       "label": "등록일자",
+       "depth": 0,
+       "box": [
+        1368,
+        174,
+        123,
+        62
+       ],
+       "id": "col:그리드/등록일자"
+      },
+      {
+       "label": "활동상태",
+       "depth": 0,
+       "box": [
+        1491,
+        174,
+        123,
+        62
+       ],
+       "id": "col:그리드/활동상태"
+      },
+      {
+       "label": "클럽명",
+       "depth": 1,
+       "box": [
+        199,
+        205,
+        154,
+        31
+       ],
+       "id": "col:그리드/학교스포츠클럽>클럽명"
+      },
+      {
+       "label": "종목명",
+       "depth": 1,
+       "box": [
+        353,
+        205,
+        154,
+        31
+       ],
+       "id": "col:그리드/종목>종목명"
+      },
+      {
+       "label": "남",
+       "depth": 1,
+       "box": [
+        507,
+        205,
+        123,
+        31
+       ],
+       "id": "col:그리드/클럽원>남"
+      },
+      {
+       "label": "여",
+       "depth": 1,
+       "box": [
+        630,
+        205,
+        123,
+        31
+       ],
+       "id": "col:그리드/클럽원>여"
+      },
+      {
+       "label": "계",
+       "depth": 1,
+       "box": [
+        753,
+        205,
+        123,
+        31
+       ],
+       "id": "col:그리드/클럽원>계"
+      },
+      {
+       "label": "남",
+       "depth": 1,
+       "box": [
+        876,
+        205,
+        123,
+        31
+       ],
+       "id": "col:그리드/실적학생수>남"
+      },
+      {
+       "label": "여",
+       "depth": 1,
+       "box": [
+        999,
+        205,
+        123,
+        31
+       ],
+       "id": "col:그리드/실적학생수>여"
+      },
+      {
+       "label": "계",
+       "depth": 1,
+       "box": [
+        1122,
+        205,
+        123,
+        31
+       ],
+       "id": "col:그리드/실적학생수>계"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교스포츠클럽관리 > 학교스포츠클럽관리 > 학교스포츠클럽관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

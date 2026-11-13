@@ -1,0 +1,1010 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›나의급식(학교)›나의요리›내요리정보",
+ "name": "내요리정보",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:08:25+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요리군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요리군"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요리명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요리명"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      110,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요리그룹",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요리그룹"
+    },
+    {
+     "aria": null,
+     "box": [
+      1105,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사용여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      101,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공통식품코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      282,
+      122,
+      151,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공통식품코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:공통식품코드#2"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      439,
+      122,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      475,
+      122,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1432,
+      122,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1504,
+      122,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1575,
+      74
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 요리 등록 시 (급식관리)내식품정보를 사전에 등록해 주세요. 요리구성식품 시 (급식관리)내식품정보의 식품공통코드를 기준으로 관리됩니다. ※ 공통요리신청 시 학교의 공통요리에 신청정보가 등록되며, 교육청에 공통요리 신청이 완료됩니다. ※ 공통활용여부: 내요리 중 다른 영양교사‧영양사와 공통으로 사용하고자 할 경우 '예'로 등록해 주세요. - (급식관리)식단작성 시 내요리와 다른 영양교사‧영양사의 공통활용여부가 '예'인 요리를 기준으로 식단 편성이 가능합니다.",
+     "id": "note:※ 요리 등록 시 (급식관리)내식품정보를 사전에 등록해 주세요. 요리구성식품 시 (급식관리)내식품정보의 식품공통코드를 기준으로 관리됩니다. ※ 공통요리신청 시 학교의 공통요리에 신청정보가 등록되며, 교육청에 공통요리 신청이 완료됩니다. ※ 공통활용여부: 내요리 중 다른 영양교사‧영양사와 공통으로 사용하고자 할 경우 '예'로 등록해 주세요. - (급식관리)식단작성 시 내요리와 다른 영양교사‧영양사의 공통활용여부가 '예'인 요리를 기준으로 식단 편성이 가능합니다."
+    },
+    {
+     "aria": "복사",
+     "box": [
+      1416,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "복사",
+     "variant": "primary",
+     "id": "button:복사"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1464,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "요리코드출력",
+     "box": [
+      1512,
+      282,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "요리코드출력",
+     "variant": "secondary",
+     "id": "button:요리코드출력"
+    },
+    {
+     "aria": "내요리목록",
+     "box": [
+      25,
+      292,
+      81,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "내요리목록",
+     "id": "heading:내요리목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      328,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "내요리그룹",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:내요리그룹"
+    },
+    {
+     "aria": "요리그룹일괄적용",
+     "box": [
+      356,
+      328,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "요리그룹일괄적용",
+     "variant": "primary",
+     "id": "button:요리그룹일괄적용"
+    },
+    {
+     "aria": "요리그룹관리",
+     "box": [
+      474,
+      328,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "요리그룹관리",
+     "variant": "plain",
+     "id": "button:요리그룹관리"
+    },
+    {
+     "aria": "내요리가져오기",
+     "box": [
+      938,
+      328,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "내요리가져오기",
+     "variant": "plain",
+     "id": "button:내요리가져오기"
+    },
+    {
+     "aria": "(타영양교사‧영양사)요리정보보내기",
+     "box": [
+      1043,
+      328,
+      217,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "(타영양교사‧영양사)요리정보보내기",
+     "variant": "plain",
+     "id": "button:(타영양교사‧영양사)요리정보보내기"
+    },
+    {
+     "aria": "공통요리신청",
+     "box": [
+      1266,
+      328,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "공통요리신청",
+     "variant": "primary",
+     "id": "button:공통요리신청"
+    },
+    {
+     "aria": "식품코드일괄변경",
+     "box": [
+      150,
+      368,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "식품코드일괄변경",
+     "variant": "plain",
+     "id": "button:식품코드일괄변경"
+    },
+    {
+     "aria": "자료올리기/내려받기",
+     "box": [
+      268,
+      368,
+      129,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료올리기/내려받기",
+     "variant": "plain",
+     "id": "button:자료올리기/내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      418,
+      368,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "/",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:/"
+    },
+    {
+     "aria": "공통활용여부일괄사용",
+     "box": [
+      524,
+      368,
+      136,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "공통활용여부일괄사용",
+     "variant": "primary",
+     "id": "button:공통활용여부일괄사용"
+    },
+    {
+     "aria": "공통활용여부일괄미사용",
+     "box": [
+      666,
+      368,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "공통활용여부일괄미사용",
+     "variant": "primary",
+     "id": "button:공통활용여부일괄미사용"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      419,
+      1575,
+      400
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "요리코드",
+       "depth": 0,
+       "box": [
+        76,
+        420,
+        131,
+        62
+       ],
+       "id": "col:그리드/요리코드"
+      },
+      {
+       "label": "요리군",
+       "depth": 0,
+       "box": [
+        207,
+        420,
+        131,
+        62
+       ],
+       "id": "col:그리드/요리군"
+      },
+      {
+       "label": "요리그룹",
+       "depth": 0,
+       "box": [
+        338,
+        420,
+        131,
+        62
+       ],
+       "id": "col:그리드/요리그룹"
+      },
+      {
+       "label": "요리명",
+       "depth": 0,
+       "box": [
+        469,
+        420,
+        255,
+        62
+       ],
+       "span": 2,
+       "id": "col:그리드/요리명"
+      },
+      {
+       "label": "식단출력명",
+       "depth": 0,
+       "box": [
+        724,
+        420,
+        262,
+        62
+       ],
+       "id": "col:그리드/식단출력명"
+      },
+      {
+       "label": "식단검토 등록여부",
+       "depth": 0,
+       "box": [
+        986,
+        420,
+        58,
+        62
+       ],
+       "id": "col:그리드/식단검토 등록여부"
+      },
+      {
+       "label": "사용 여부",
+       "depth": 0,
+       "box": [
+        1043,
+        420,
+        47,
+        62
+       ],
+       "id": "col:그리드/사용 여부"
+      },
+      {
+       "label": "공통 활용여부",
+       "depth": 0,
+       "box": [
+        1091,
+        420,
+        58,
+        62
+       ],
+       "id": "col:그리드/공통 활용여부"
+      },
+      {
+       "label": "공통 요리여부",
+       "depth": 0,
+       "box": [
+        1148,
+        420,
+        58,
+        62
+       ],
+       "id": "col:그리드/공통 요리여부"
+      },
+      {
+       "label": "출처구분",
+       "depth": 0,
+       "box": [
+        1206,
+        420,
+        131,
+        62
+       ],
+       "id": "col:그리드/출처구분"
+      },
+      {
+       "label": "최종수정일",
+       "depth": 0,
+       "box": [
+        1337,
+        420,
+        131,
+        62
+       ],
+       "id": "col:그리드/최종수정일"
+      },
+      {
+       "label": "영양교사‧영양사ID",
+       "depth": 0,
+       "box": [
+        1468,
+        420,
+        131,
+        62
+       ],
+       "id": "col:그리드/영양교사‧영양사ID"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      832,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": "식단검토",
+     "box": [
+      1333,
+      869,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식단검토",
+     "variant": "plain",
+     "id": "button:식단검토"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1404,
+      869,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1452,
+      869,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1500,
+      869,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1548,
+      869,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      879,
+      69,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "요리상세",
+     "id": "heading:요리상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      915,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "출처구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:출처구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      915,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요리군",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:요리군#2"
+    },
+    {
+     "aria": "사용여부",
+     "box": [
+      1200,
+      915,
+      395,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "사용여부",
+     "options": [
+      "예",
+      "아니오"
+     ],
+     "id": "radio:사용여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      955,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요리코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요리코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      955,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요리명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:요리명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      955,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식단출력명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식단출력명"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      995,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요리그룹",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요리그룹#2"
+    },
+    {
+     "aria": "공통활용여부",
+     "box": [
+      675,
+      995,
+      150,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "공통활용여부",
+     "options": [
+      "예",
+      "아니오"
+     ],
+     "id": "radio:공통활용여부"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      693,
+      1041,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "행삭제",
+     "box": [
+      753,
+      1041,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      820,
+      1041,
+      209,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "● 요리방법 및 중점관리사항",
+     "id": "heading:● 요리방법 및 중점관리사항"
+    },
+    {
+     "aria": "● 요리구성식품",
+     "box": [
+      25,
+      1051,
+      119,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "● 요리구성식품",
+     "id": "heading:● 요리구성식품"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1081,
+      780,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "주사용 식품여부",
+       "depth": 0,
+       "box": [
+        76,
+        1082,
+        88,
+        36
+       ],
+       "id": "col:그리드/주사용 식품여부"
+      },
+      {
+       "label": "공통식품코드",
+       "depth": 0,
+       "box": [
+        164,
+        1082,
+        94,
+        36
+       ],
+       "id": "col:그리드/공통식품코드"
+      },
+      {
+       "label": "공통식품명",
+       "depth": 0,
+       "box": [
+        258,
+        1082,
+        183,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/공통식품명"
+      },
+      {
+       "label": "1인량",
+       "depth": 0,
+       "box": [
+        441,
+        1082,
+        75,
+        36
+       ],
+       "id": "col:그리드/1인량"
+      },
+      {
+       "label": "식품알레르기",
+       "depth": 0,
+       "box": [
+        516,
+        1082,
+        144,
+        36
+       ],
+       "id": "col:그리드/식품알레르기"
+      },
+      {
+       "label": "기타요구사항",
+       "depth": 0,
+       "box": [
+        660,
+        1082,
+        144,
+        36
+       ],
+       "id": "col:그리드/기타요구사항"
+      }
+     ],
+     "id": "grid:그리드#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      975,
+      1077,
+      620,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(식품)알레르기정보",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:(식품)알레르기정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      975,
+      1117,
+      620,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(참고)3세대알레르기정보",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:(참고)3세대알레르기정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      975,
+      1157,
+      620,
+      173
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "레시피 (요리방법)",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:레시피 (요리방법)"
+    },
+    {
+     "aria": null,
+     "box": [
+      975,
+      1340,
+      620,
+      173
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "중점관리사항 (특이사항)",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:중점관리사항 (특이사항)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1529,
+      119,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "● 요리영양성분",
+     "id": "heading:● 요리영양성분"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 요리관리 > 내요리정보",
+ "alsoVia": [
+  "부서장(나이스부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

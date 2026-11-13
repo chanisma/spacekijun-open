@@ -1,0 +1,298 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시자료관리›총괄업무담당자마감",
+ "name": "총괄업무담당자마감",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:55:08+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 작성자 및 확인자가 지정된 모든 항목은 반드시 작성자 및 확인자 모두 마감실시 이후 총괄담당자가 마감해야 합니다",
+     "id": "note:※ 작성자 및 확인자가 지정된 모든 항목은 반드시 작성자 및 확인자 모두 마감실시 이후 총괄담당자가 마감해야 합니다"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": true
+   }
+  },
+  {
+   "id": "main+조회",
+   "after": "query",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 작성자 및 확인자가 지정된 모든 항목은 반드시 작성자 및 확인자 모두 마감실시 이후 총괄담당자가 마감해야 합니다",
+     "id": "note:※ 작성자 및 확인자가 지정된 모든 항목은 반드시 작성자 및 확인자 모두 마감실시 이후 총괄담당자가 마감해야 합니다"
+    },
+    {
+     "aria": null,
+     "box": [
+      1300,
+      171,
+      136,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "제출파일개인정보검증",
+     "variant": "link",
+     "id": "button:제출파일개인정보검증"
+    },
+    {
+     "aria": null,
+     "box": [
+      1443,
+      171,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "재검토요청목록",
+     "variant": "link",
+     "id": "button:재검토요청목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      171,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "제출취소",
+     "variant": "secondary",
+     "id": "button:제출취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      211,
+      1590,
+      603
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "공시항목명",
+       "depth": 0,
+       "box": [
+        26,
+        212,
+        530,
+        62
+       ],
+       "span": 2,
+       "id": "col:그리드/공시항목명"
+      },
+      {
+       "label": "작성자 마감",
+       "depth": 0,
+       "box": [
+        556,
+        212,
+        118,
+        62
+       ],
+       "id": "col:그리드/작성자 마감"
+      },
+      {
+       "label": "작성자 마감일시",
+       "depth": 0,
+       "box": [
+        674,
+        212,
+        235,
+        62
+       ],
+       "id": "col:그리드/작성자 마감일시"
+      },
+      {
+       "label": "확인자 마감",
+       "depth": 0,
+       "box": [
+        909,
+        212,
+        118,
+        62
+       ],
+       "id": "col:그리드/확인자 마감"
+      },
+      {
+       "label": "확인자 마감일시",
+       "depth": 0,
+       "box": [
+        1026,
+        212,
+        235,
+        62
+       ],
+       "id": "col:그리드/확인자 마감일시"
+      },
+      {
+       "label": "제출자",
+       "depth": 0,
+       "box": [
+        1261,
+        212,
+        118,
+        62
+       ],
+       "id": "col:그리드/제출자"
+      },
+      {
+       "label": "제출일시",
+       "depth": 0,
+       "box": [
+        1379,
+        212,
+        235,
+        62
+       ],
+       "id": "col:그리드/제출일시"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시자료관리 > 공시자료마감 > 총괄업무담당자마감",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

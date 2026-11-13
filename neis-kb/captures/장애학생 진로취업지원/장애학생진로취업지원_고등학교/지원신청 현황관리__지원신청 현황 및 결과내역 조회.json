@@ -1,0 +1,453 @@
+{
+ "schema": "neis-capture/1",
+ "key": "장애학생 진로취업지원›장애학생진로취업지원#고등학교›지원신청 현황관리›지원신청 현황 및 결과내역 조회",
+ "name": "지원신청 현황 및 결과내역 조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:16:40+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      715,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      935,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1275,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청자",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:신청자"
+    },
+    {
+     "aria": null,
+     "box": [
+      155,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:신청상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      355,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:신청일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      490,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:신청일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      730,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "처리상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:처리상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      950,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "처리일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:처리일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1085,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "처리일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:처리일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1227,
+      173,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1350,
+      173,
+      66,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "SMS전송",
+     "variant": "primary",
+     "id": "button:SMS전송"
+    },
+    {
+     "aria": null,
+     "box": [
+      1424,
+      173,
+      91,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신청내역 출력",
+     "variant": "primary",
+     "id": "button:신청내역 출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1524,
+      173,
+      91,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "결과내역 출력",
+     "variant": "primary",
+     "id": "button:결과내역 출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        84,
+        214,
+        58,
+        36
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        141,
+        214,
+        58,
+        36
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        199,
+        214,
+        58,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        257,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "신청순번",
+       "depth": 0,
+       "box": [
+        372,
+        214,
+        58,
+        36
+       ],
+       "id": "col:그리드/신청순번"
+      },
+      {
+       "label": "희망지원",
+       "depth": 0,
+       "box": [
+        430,
+        214,
+        144,
+        36
+       ],
+       "id": "col:그리드/희망지원"
+      },
+      {
+       "label": "신청자명",
+       "depth": 0,
+       "box": [
+        575,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/신청자명"
+      },
+      {
+       "label": "신청상태",
+       "depth": 0,
+       "box": [
+        690,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/신청상태"
+      },
+      {
+       "label": "신청일자",
+       "depth": 0,
+       "box": [
+        806,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/신청일자"
+      },
+      {
+       "label": "처리상태",
+       "depth": 0,
+       "box": [
+        921,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/처리상태"
+      },
+      {
+       "label": "처리일자",
+       "depth": 0,
+       "box": [
+        1037,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/처리일자"
+      },
+      {
+       "label": "담당자명",
+       "depth": 0,
+       "box": [
+        1152,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/담당자명"
+      },
+      {
+       "label": "담당자연락처",
+       "depth": 0,
+       "box": [
+        1268,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/담당자연락처"
+      },
+      {
+       "label": "SMS전송여부",
+       "depth": 0,
+       "box": [
+        1383,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/SMS전송여부"
+      },
+      {
+       "label": "SMS전송일",
+       "depth": 0,
+       "box": [
+        1499,
+        214,
+        115,
+        36
+       ],
+       "id": "col:그리드/SMS전송일"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 장애학생진로취업지원 > 지원신청 현황관리 > 지원신청 현황 및 결과내역 조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

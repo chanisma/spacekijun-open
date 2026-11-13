@@ -1,0 +1,1194 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›창의적체험활동›진로활동관리",
+ "name": "진로활동관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:25:53+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:출결관리",
+   "tab": "출결관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1290,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "출결관리",
+      "학생부자료기록",
+      "누가기록"
+     ],
+     "active": "출결관리",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "누가기록 작성",
+     "box": [
+      1433,
+      71,
+      182,
+      35
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "누가기록 작성",
+     "options": [
+      "ON",
+      "OFF"
+     ],
+     "id": "radio:누가기록 작성"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 본 화면에서 마감 처리를 하면 [학적-출결관리-일일출결관리(담임용)]에서 진로활동 출결마감을 확인하실 수 있습니다. ※ 2022 개정교육과정 대상 학년의 출석상태 변경은 진로활동 마감 또는 월출결마감이 되지않은 학생만 변경 가능합니다. ※ 2022 개정교육과정 미대상 학년의 출석상태 변경은 진로활동 마감 또는 각 반별 일출결마감, 월출결마감이 되지않은 학생만 변경 가능합니다.",
+     "id": "note:※ 본 화면에서 마감 처리를 하면 [학적-출결관리-일일출결관리(담임용)]에서 진로활동 출결마감을 확인하실 수 있습니다. ※ 2022 개정교육과정 대상 학년의 출석상태 변경은 진로활동 마감 또는 월출결마감이 되지않은 학생만 변경 가능합니다. ※ 2022 개정교육과정 미대상 학년의 출석상태 변경은 진로활동 마감 또는 각 반별 일출결마감, 월출결마감이 되지않은 학생만 변경 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      254,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 등록한 출결('/')이 다른 사용자에 의해 삭제된 경우 출결 부분 배경이 노란색으로 변경되며, 툴팁에 최종 수정자가 나타납니다.",
+     "id": "note:※ 등록한 출결('/')이 다른 사용자에 의해 삭제된 경우 출결 부분 배경이 노란색으로 변경되며, 툴팁에 최종 수정자가 나타납니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      272,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 다른 사용자가 출결('/')을 등록한 경우 출결('/')이 분홍색으로 표시되며, 툴팁에 최종 수정자가 나타납니다.",
+     "id": "note:※ 다른 사용자가 출결('/')을 등록한 경우 출결('/')이 분홍색으로 표시되며, 툴팁에 최종 수정자가 나타납니다."
+    },
+    {
+     "aria": "나이스플러스출결조회",
+     "box": [
+      1304,
+      338,
+      136,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "나이스플러스출결조회",
+     "variant": "link",
+     "id": "button:나이스플러스출결조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1447,
+      338,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1495,
+      338,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "취소",
+     "variant": "plain",
+     "id": "button:취소"
+    },
+    {
+     "aria": "출결마감",
+     "box": [
+      1551,
+      338,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출결마감",
+     "variant": "primary",
+     "id": "button:출결마감"
+    },
+    {
+     "aria": "활동일자",
+     "box": [
+      25,
+      348,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "활동일자",
+     "id": "heading:활동일자"
+    },
+    {
+     "aria": "활동일자목록",
+     "box": [
+      25,
+      378,
+      260,
+      436
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "활동일자목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        26,
+        379,
+        104,
+        40
+       ],
+       "id": "col:활동일자목록/일자"
+      },
+      {
+       "label": "시간표내역",
+       "depth": 0,
+       "box": [
+        130,
+        379,
+        138,
+        40
+       ],
+       "id": "col:활동일자목록/시간표내역"
+      }
+     ],
+     "id": "grid:활동일자목록"
+    },
+    {
+     "aria": "출석관리 목록",
+     "box": [
+      295,
+      378,
+      1320,
+      436
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "출석관리 목록",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        296,
+        379,
+        50,
+        40
+       ],
+       "id": "col:출석관리 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        346,
+        379,
+        50,
+        40
+       ],
+       "id": "col:출석관리 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        396,
+        379,
+        50,
+        40
+       ],
+       "id": "col:출석관리 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        446,
+        379,
+        100,
+        40
+       ],
+       "id": "col:출석관리 목록/성명"
+      },
+      {
+       "label": "학적변동사항 (출결결석사항)",
+       "depth": 0,
+       "box": [
+        546,
+        379,
+        160,
+        40
+       ],
+       "id": "col:출석관리 목록/학적변동사항 (출결결석사항)"
+      },
+      {
+       "label": "일출결 마감여부",
+       "depth": 0,
+       "box": [
+        706,
+        379,
+        80,
+        40
+       ],
+       "id": "col:출석관리 목록/일출결 마감여부"
+      },
+      {
+       "label": "월출결 마감여부",
+       "depth": 0,
+       "box": [
+        786,
+        379,
+        80,
+        40
+       ],
+       "id": "col:출석관리 목록/월출결 마감여부"
+      }
+     ],
+     "id": "grid:출석관리 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:학생부자료기록",
+   "tab": "학생부자료기록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1290,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "출결관리",
+      "학생부자료기록",
+      "누가기록"
+     ],
+     "active": "학생부자료기록",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "누가기록 작성",
+     "box": [
+      1433,
+      71,
+      182,
+      35
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "누가기록 작성",
+     "options": [
+      "ON",
+      "OFF"
+     ],
+     "id": "radio:누가기록 작성"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학적변동자(반변경, 전출입 등)의 경우 학생부 이수시간과 누가기록 이수시간 합계가 다를 수 있으니 학교에서는 확인하여 수기입력하여 주시기 바랍니다.",
+     "id": "note:※ 학적변동자(반변경, 전출입 등)의 경우 학생부 이수시간과 누가기록 이수시간 합계가 다를 수 있으니 학교에서는 확인하여 수기입력하여 주시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      264,
+      66,
+      31
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이수시간기준일",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:이수시간기준일"
+    },
+    {
+     "aria": null,
+     "box": [
+      285,
+      264,
+      128,
+      31
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이수시간기준일",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:이수시간기준일#2"
+    },
+    {
+     "aria": "이수시간반영",
+     "box": [
+      421,
+      264,
+      88,
+      31
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이수시간반영",
+     "variant": "primary",
+     "id": "button:이수시간반영"
+    },
+    {
+     "aria": "입력창축소",
+     "box": [
+      904,
+      264,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창축소",
+     "variant": "plain",
+     "id": "button:입력창축소"
+    },
+    {
+     "aria": "입력창확대",
+     "box": [
+      930,
+      264,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창확대",
+     "variant": "plain",
+     "id": "button:입력창확대"
+    },
+    {
+     "aria": null,
+     "box": [
+      956,
+      264,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1086,
+      264,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀업로드",
+     "variant": "plain",
+     "id": "button:엑셀업로드"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      1216,
+      264,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "link",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": "문자열바꾸기",
+     "box": [
+      1288,
+      264,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "문자열바꾸기",
+     "variant": "link",
+     "id": "button:문자열바꾸기"
+    },
+    {
+     "aria": "진로정보조회",
+     "box": [
+      1383,
+      264,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "진로정보조회",
+     "variant": "link",
+     "id": "button:진로정보조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      264,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      264,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      264,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "진로활동 학생부자료 목록",
+     "box": [
+      25,
+      305,
+      1590,
+      509
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "진로활동 학생부자료 목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        306,
+        67,
+        60
+       ],
+       "id": "col:진로활동 학생부자료 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        143,
+        306,
+        111,
+        60
+       ],
+       "id": "col:진로활동 학생부자료 목록/성명"
+      },
+      {
+       "label": "학생부 이수시간",
+       "depth": 0,
+       "box": [
+        254,
+        306,
+        70,
+        60
+       ],
+       "id": "col:진로활동 학생부자료 목록/학생부 이수시간"
+      },
+      {
+       "label": "누가기록 이수시간 합계",
+       "depth": 0,
+       "box": [
+        324,
+        306,
+        70,
+        60
+       ],
+       "id": "col:진로활동 학생부자료 목록/누가기록 이수시간 합계"
+      },
+      {
+       "label": "특기사항",
+       "depth": 0,
+       "box": [
+        394,
+        306,
+        652,
+        60
+       ],
+       "id": "col:진로활동 학생부자료 목록/특기사항"
+      },
+      {
+       "label": "희망분야",
+       "depth": 0,
+       "box": [
+        1046,
+        306,
+        326,
+        60
+       ],
+       "id": "col:진로활동 학생부자료 목록/희망분야"
+      },
+      {
+       "label": "글자수",
+       "depth": 0,
+       "box": [
+        1372,
+        306,
+        142,
+        60
+       ],
+       "id": "col:진로활동 학생부자료 목록/글자수"
+      },
+      {
+       "label": "위탁/공동",
+       "depth": 0,
+       "box": [
+        1514,
+        306,
+        100,
+        60
+       ],
+       "id": "col:진로활동 학생부자료 목록/위탁/공동"
+      }
+     ],
+     "id": "grid:진로활동 학생부자료 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:누가기록",
+   "tab": "누가기록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1290,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "출결관리",
+      "학생부자료기록",
+      "누가기록"
+     ],
+     "active": "누가기록",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "누가기록 작성",
+     "box": [
+      1433,
+      71,
+      182,
+      35
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "누가기록 작성",
+     "options": [
+      "ON",
+      "OFF"
+     ],
+     "id": "radio:누가기록 작성"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "입력창축소",
+     "box": [
+      1164,
+      233,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창축소",
+     "variant": "plain",
+     "id": "button:입력창축소"
+    },
+    {
+     "aria": "입력창확대",
+     "box": [
+      1190,
+      233,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창확대",
+     "variant": "plain",
+     "id": "button:입력창확대"
+    },
+    {
+     "aria": "일괄등록",
+     "box": [
+      1216,
+      233,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄등록",
+     "variant": "link",
+     "id": "button:일괄등록"
+    },
+    {
+     "aria": "진로정보조회",
+     "box": [
+      1288,
+      233,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "진로정보조회",
+     "variant": "link",
+     "id": "button:진로정보조회"
+    },
+    {
+     "aria": "출결현황조회",
+     "box": [
+      1383,
+      233,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출결현황조회",
+     "variant": "link",
+     "id": "button:출결현황조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      233,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      233,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      233,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "활동일자",
+     "box": [
+      25,
+      243,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "활동일자",
+     "id": "heading:활동일자"
+    },
+    {
+     "aria": "활동일자목록",
+     "box": [
+      25,
+      273,
+      260,
+      540
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "활동일자목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        26,
+        274,
+        104,
+        40
+       ],
+       "id": "col:활동일자목록/일자"
+      },
+      {
+       "label": "시간표내역",
+       "depth": 0,
+       "box": [
+        130,
+        274,
+        138,
+        40
+       ],
+       "id": "col:활동일자목록/시간표내역"
+      }
+     ],
+     "id": "grid:활동일자목록"
+    },
+    {
+     "aria": "창의적체험활동 누가기록 목록",
+     "box": [
+      300,
+      273,
+      1315,
+      540
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "창의적체험활동 누가기록 목록",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        351,
+        274,
+        50,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        401,
+        274,
+        100,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/성명"
+      },
+      {
+       "label": "학적변동사항 (출결결시내역)",
+       "depth": 0,
+       "box": [
+        501,
+        274,
+        160,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/학적변동사항 (출결결시내역)"
+      },
+      {
+       "label": "이수시간",
+       "depth": 0,
+       "box": [
+        661,
+        274,
+        65,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/이수시간"
+      },
+      {
+       "label": "정규외",
+       "depth": 0,
+       "box": [
+        726,
+        274,
+        60,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/정규외"
+      },
+      {
+       "label": "미이수 보충활동",
+       "depth": 0,
+       "box": [
+        786,
+        274,
+        70,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/미이수 보충활동"
+      },
+      {
+       "label": "활동내용",
+       "depth": 0,
+       "box": [
+        856,
+        274,
+        431,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/활동내용"
+      },
+      {
+       "label": "봉사활동 실적입력",
+       "depth": 0,
+       "box": [
+        1287,
+        274,
+        70,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/봉사활동 실적입력"
+      },
+      {
+       "label": "장소 또는 주관기관명",
+       "depth": 0,
+       "box": [
+        1357,
+        274,
+        187,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/장소 또는 주관기관명"
+      },
+      {
+       "label": "등록자명",
+       "depth": 0,
+       "box": [
+        1544,
+        274,
+        70,
+        40
+       ],
+       "id": "col:창의적체험활동 누가기록 목록/등록자명"
+      }
+     ],
+     "id": "grid:창의적체험활동 누가기록 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 창의적체험활동 > 진로활동관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

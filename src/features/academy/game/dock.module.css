@@ -1,0 +1,147 @@
+/*
+ * 핵심 기능 서랍 — 아스트롤라베 메달 + 궤도 위의 별 (2026-10-04 사용자 요청
+ * «데스크톱에서도 서랍식으로 · 서랍 버튼을 세련되게 · 사각형 상자 안에 늘어선 단조로운 메뉴 대신 더 흥미롭게»).
+ *
+ * 왼쪽 아래 메달(서랍 단추)을 중심으로 칸들이 사분원 궤도에 놓인다. 안쪽 궤도부터 장(章) 순서라
+ * «먼저 배운 기능이 중심 가까이» 있다. 상자 대신 어두운 빛무리가 그림 위 글자를 받쳐 준다.
+ *
+ * 자리는 CSS 삼각함수로 계산한다 — 칸마다 --ring(몇 번째 궤도)·--t(궤도 안 위치 0~1)만 받고
+ * 반지름·각도 범위는 화면 크기별 변수가 정한다(같은 마크업이 데스크톱·세로·가로에 다른 크기로 펼쳐진다).
+ * 궤도별 칸 수는 GameDock 이 2·3·4… 로 나눈다(안쪽은 둘레가 짧아 칸이 적어야 이름이 겹치지 않는다).
+ *
+ * 글자 대비: 이름 #f3e2bf / 이름판 #140e22 ≈ 13:1, 잠긴 칸 이름 #b9abc6 ≈ 7.8:1, 배지 흰/#c0395a ≈ 5.3:1.
+ */
+.shell {
+  display: contents;
+  --cx: 56px;          /* 메달 중심 — 무대 왼쪽에서 */
+  --cy: 56px;          /* 메달 중심 — 무대 아래에서 */
+  --medal: 64px;
+  --item: 46px;
+  --r0: 116px;         /* 첫 궤도 반지름 */
+  --rs: 80px;          /* 궤도 간격 */
+  --amin: 6deg;        /* 위(0°)에서 오른쪽(90°)으로 — 칸이 놓이는 각도 범위 */
+  --amax: 84deg;
+}
+
+/* ── 서랍 단추: 아스트롤라베 메달 ─────────────────────────────── */
+.toggle {
+  position: absolute; z-index: 10;
+  left: calc(var(--cx) - var(--medal) / 2); bottom: calc(var(--cy) - var(--medal) / 2);
+  display: flex; align-items: center; gap: 0;
+  padding: 0; border: 0; background: none; color: #f6e4bf; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.medal {
+  position: relative; flex-shrink: 0; width: var(--medal); height: var(--medal); border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, #2c1f3a 0 52%, transparent 53%),
+    conic-gradient(from 200deg, #f6dcaa, #9c7445, #e8c78c, #7d5a35, #f2d293, #a37b4a, #f6dcaa);
+  box-shadow: 0 0 0 1px #2a1d1499, 0 8px 22px #0009, inset 0 0 0 1px #fff3d455;
+  transition: transform .35s cubic-bezier(.3, 1.4, .5, 1), box-shadow .25s;
+}
+.medal svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.dial { fill: none; stroke: #e6c68e; stroke-opacity: .55; stroke-width: 1; stroke-dasharray: 1.5 4.2; transform-origin: 50px 50px; animation: dial 36s linear infinite; }
+.ticks { fill: none; stroke: #e6c68e; stroke-opacity: .35; stroke-width: .8; }
+.star { fill: #f6dcaa; transform-origin: 50px 50px; transition: transform .45s cubic-bezier(.3, 1.4, .5, 1), fill .25s; filter: drop-shadow(0 0 4px #f2d29399); }
+.starCore { fill: #2c1f3a; }
+.toggleLabel {
+  margin-left: -10px; padding: 6px 12px 6px 18px; border: 1px solid #d8b67e88; border-left: 0; border-radius: 0 999px 999px 0;
+  background: linear-gradient(90deg, #1b1428f0, #2a1f36e6); color: #f3e2bf;
+  font: 600 12.5px/1 'Pretendard', 'Noto Sans KR', sans-serif; letter-spacing: .08em; white-space: nowrap;
+  box-shadow: 0 6px 16px #0007; transition: opacity .25s, transform .25s;
+}
+.toggle:hover .medal, .toggle:focus-visible .medal { box-shadow: 0 0 0 1px #2a1d1499, 0 0 22px #f2d29366, 0 8px 22px #0009, inset 0 0 0 1px #fff3d488; }
+.toggle:focus-visible { outline: none; }
+.toggle:focus-visible .medal { outline: 2px solid #ffe7b2; outline-offset: 3px; }
+.shell[data-open=true] .star { transform: rotate(45deg) scale(1.08); fill: #fff4dc; }
+.shell[data-open=true] .medal { transform: scale(1.04); }
+.shell[data-open=true] .toggleLabel { opacity: .0; transform: translateX(-6px); pointer-events: none; }
+.toggle:active .medal { transform: scale(.94); }
+
+/* ── 궤도 위의 칸 ─────────────────────────────────────────────── */
+.dock {
+  --rmax: calc(var(--r0) + (var(--rings) - 1) * var(--rs));
+  position: absolute; z-index: 9; left: 0; bottom: 0;
+  width: calc(var(--cx) + var(--rmax) + var(--item) / 2 + 44px);
+  height: calc(var(--cy) + var(--rmax) + var(--item) / 2 + 14px);
+  margin: 0; padding: 0; pointer-events: none; /* 상자는 보이지 않는 틀일 뿐 — 아래 세계를 막지 않는다 */
+}
+.dock::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(circle at var(--cx) calc(100% - var(--cy)), #120c1fe0 0, #120c1fb8 calc(var(--rmax) * .55), #120c1f70 calc(var(--rmax) * .85), transparent calc(var(--rmax) + 56px));
+  transition: opacity .3s;
+}
+/* 궤도 = 사분원 호 하나. 원 전체를 그려 잘라 내면 보이지 않는 아래 반쪽이 틀 밖으로 넘쳐 스크롤 높이를 키운다
+   (가로 화면 «스크롤 없이 다 보임» 검사가 잡았다) — 그래서 윗변·오른변 테두리 + 오른쪽 위 둥근 모서리로 호만 그린다. */
+.orbit {
+  position: absolute; pointer-events: none;
+  --r: calc(var(--r0) + var(--ring) * var(--rs));
+  left: var(--cx); bottom: var(--cy); width: var(--r); height: var(--r);
+  border-top: 1px dashed #e6c68e4d; border-right: 1px dashed #e6c68e4d; border-top-right-radius: var(--r);
+  transition: opacity .35s, transform .45s cubic-bezier(.3, 1.2, .5, 1); transform-origin: bottom left;
+}
+.item {
+  --a: calc(var(--amin) + (var(--amax) - var(--amin)) * var(--t));
+  --r: calc(var(--r0) + var(--ring) * var(--rs));
+  --x: calc(sin(var(--a)) * var(--r));
+  --y: calc(cos(var(--a)) * var(--r));
+  position: absolute; pointer-events: auto;
+  left: calc(var(--cx) + var(--x) - var(--item) / 2); bottom: calc(var(--cy) + var(--y) - var(--item) / 2);
+  width: var(--item); height: var(--item); padding: 0; border: 0; border-radius: 50%; background: none; color: #f6dcaa; cursor: pointer;
+  transition: transform .42s cubic-bezier(.3, 1.35, .5, 1) calc(var(--i) * 24ms), opacity .3s ease calc(var(--i) * 24ms);
+  -webkit-tap-highlight-color: transparent;
+}
+.icon {
+  display: grid; place-items: center; width: 100%; height: 100%; border-radius: 50%;
+  background: radial-gradient(circle at 35% 28%, #5d4569, #2a1d36 72%);
+  border: 1.5px solid #e6c68ed0;
+  box-shadow: 0 0 0 3px #1a1226c0, 0 6px 14px #0009, inset 0 1px 0 #fff2d433;
+  font-size: 18px; line-height: 1; text-shadow: 0 0 8px #f2d29366;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.label {
+  position: absolute; top: calc(100% + 3px); left: 50%; transform: translateX(-50%);
+  padding: 2px 7px; border-radius: 999px; background: #140e22d9; color: #f3e2bf;
+  font: 500 11px/1.35 'Pretendard', 'Noto Sans KR', sans-serif; white-space: nowrap; pointer-events: none;
+}
+.item:hover:not([data-locked=true]) .icon, .item:focus-visible .icon { transform: scale(1.1); border-color: #fff0cc; box-shadow: 0 0 0 3px #1a1226c0, 0 0 18px #f2d2938c, 0 6px 14px #0009; }
+.item:focus-visible { outline: none; }
+.item:focus-visible .icon { outline: 2px solid #ffe7b2; outline-offset: 2px; }
+.item[data-locked=true] { cursor: help; }
+.item[data-locked=true] .icon { border-style: dashed; border-color: #8a7898; background: radial-gradient(circle at 35% 28%, #3a3045, #211a2b 72%); font-size: 14px; filter: grayscale(1); text-shadow: none; }
+.item[data-locked=true] .label { color: #b9abc6; }
+.badge { position: absolute; top: -4px; right: -6px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: #c0395a; color: #fff; font: 700 11px/18px 'Pretendard', sans-serif; text-align: center; box-shadow: 0 0 0 2px #1d1627; pointer-events: none; }
+
+/* 접힘 — 칸이 메달 속으로 빨려 들어간다(펼칠 땐 안쪽 궤도부터 차례로 나온다). */
+.shell[data-open=false] .dock { visibility: hidden; transition: visibility 0s .42s; }
+.shell[data-open=false] .dock::before { opacity: 0; }
+.shell[data-open=false] .orbit { opacity: 0; transform: scale(.4); }
+.shell[data-open=false] .item { transform: translate(calc(-1 * var(--x)), var(--y)) scale(.2); opacity: 0; pointer-events: none; transition-delay: 0s; }
+
+.hint {
+  position: absolute; z-index: 11; left: calc(var(--cx) + var(--medal) / 2 + 12px); bottom: calc(var(--cy) + var(--medal) / 2 + 8px);
+  max-width: min(260px, 70vw); margin: 0; padding: 8px 12px; border: 1px solid #ddba7f88; border-radius: 8px;
+  background: #1b1428f2; color: #f5deb0; font-size: 13px; line-height: 1.5; box-shadow: 0 6px 20px #0008; pointer-events: none;
+}
+
+@keyframes dial { to { transform: rotate(360deg); } }
+
+/* 휴대폰 세로 — 반지름을 줄이고 각도를 위로 모은다(오른쪽 아래 «여정과 소지품»을 비켜 간다). */
+@media (max-width: 760px) {
+  .shell { --cx: 40px; --cy: 40px; --medal: 54px; --item: 44px; --r0: 98px; --rs: 70px; --amin: 6deg; --amax: 64deg; }
+  .icon { font-size: 17px; }
+  .toggleLabel { font-size: 12px; padding: 5px 10px 5px 16px; }
+}
+/* 휴대폰 가로 — 높이가 낮아 반지름을 더 줄이고 각도는 오른쪽 끝까지 쓴다. */
+@media (orientation: landscape) and (max-height: 520px) {
+  .shell { --cx: 36px; --cy: 36px; --medal: 50px; --item: 44px; --r0: 92px; --rs: 64px; --amin: 6deg; --amax: 84deg; }
+  .label { font-size: 10.5px; padding: 1px 6px; }
+}
+/* 아주 낮은 가로(높이 380 미만 — 667×375·740×360) — 궤도를 한 번 더 조인다. */
+@media (orientation: landscape) and (max-height: 380px) {
+  .shell { --r0: 86px; --rs: 60px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dial { animation: none; }
+  .item, .orbit, .medal, .star, .toggleLabel, .dock::before { transition: none !important; }
+}

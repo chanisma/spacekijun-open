@@ -1,0 +1,275 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›강사/위탁업체관리›강사관리",
+ "name": "강사관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:02:15+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      260,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강사명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:강사명"
+    },
+    {
+     "aria": null,
+     "box": [
+      815,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강사상태구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:강사상태구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1155,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사용여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1322,
+      162,
+      125,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      162,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄등록",
+     "variant": "primary",
+     "id": "button:일괄등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      162,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인",
+     "variant": "primary",
+     "id": "button:승인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      162,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반려",
+     "variant": "secondary",
+     "id": "button:반려"
+    },
+    {
+     "aria": "강사관리목록",
+     "box": [
+      25,
+      202,
+      1590,
+      611
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "강사관리목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        203,
+        50,
+        36
+       ],
+       "id": "col:강사관리목록/순번"
+      },
+      {
+       "label": "위탁업체",
+       "depth": 0,
+       "box": [
+        126,
+        203,
+        198,
+        36
+       ],
+       "id": "col:강사관리목록/위탁업체"
+      },
+      {
+       "label": "강사유형",
+       "depth": 0,
+       "box": [
+        324,
+        203,
+        198,
+        36
+       ],
+       "id": "col:강사관리목록/강사유형"
+      },
+      {
+       "label": "강사명",
+       "depth": 0,
+       "box": [
+        523,
+        203,
+        198,
+        36
+       ],
+       "id": "col:강사관리목록/강사명"
+      },
+      {
+       "label": "강사생년월일",
+       "depth": 0,
+       "box": [
+        721,
+        203,
+        198,
+        36
+       ],
+       "id": "col:강사관리목록/강사생년월일"
+      },
+      {
+       "label": "강사정보상태",
+       "depth": 0,
+       "box": [
+        919,
+        203,
+        198,
+        36
+       ],
+       "id": "col:강사관리목록/강사정보상태"
+      },
+      {
+       "label": "강좌수",
+       "depth": 0,
+       "box": [
+        1117,
+        203,
+        198,
+        36
+       ],
+       "id": "col:강사관리목록/강좌수"
+      },
+      {
+       "label": "범죄경력",
+       "depth": 0,
+       "box": [
+        1316,
+        203,
+        198,
+        36
+       ],
+       "id": "col:강사관리목록/범죄경력"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1514,
+        203,
+        100,
+        36
+       ],
+       "id": "col:강사관리목록/사용여부"
+      }
+     ],
+     "id": "grid:강사관리목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 강사/위탁업체관리 > 강사관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

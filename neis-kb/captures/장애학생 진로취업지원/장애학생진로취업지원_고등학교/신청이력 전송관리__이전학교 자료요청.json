@@ -1,0 +1,358 @@
+{
+ "schema": "neis-capture/1",
+ "key": "장애학생 진로취업지원›장애학생진로취업지원#고등학교›신청이력 전송관리›이전학교 자료요청",
+ "name": "이전학교 자료요청",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:16:51+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      995,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요청일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요청일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요청일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요청일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신학교",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:출신학교"
+    },
+    {
+     "aria": null,
+     "box": [
+      910,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요청상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요청상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료요청",
+     "variant": "primary",
+     "id": "button:자료요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "자료요청조회목록",
+     "box": [
+      25,
+      213,
+      1590,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "자료요청조회목록",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/학년도"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        204,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        332,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        461,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        589,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/성명"
+      },
+      {
+       "label": "출신학교명",
+       "depth": 0,
+       "box": [
+        717,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/출신학교명"
+      },
+      {
+       "label": "요청순번",
+       "depth": 0,
+       "box": [
+        845,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/요청순번"
+      },
+      {
+       "label": "요청자명",
+       "depth": 0,
+       "box": [
+        973,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/요청자명"
+      },
+      {
+       "label": "요청상태",
+       "depth": 0,
+       "box": [
+        1101,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/요청상태"
+      },
+      {
+       "label": "요청일자",
+       "depth": 0,
+       "box": [
+        1230,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/요청일자"
+      },
+      {
+       "label": "처리상태",
+       "depth": 0,
+       "box": [
+        1358,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/처리상태"
+      },
+      {
+       "label": "처리일자",
+       "depth": 0,
+       "box": [
+        1486,
+        214,
+        128,
+        36
+       ],
+       "id": "col:자료요청조회목록/처리일자"
+      }
+     ],
+     "id": "grid:자료요청조회목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 장애학생진로취업지원 > 신청이력 전송관리 > 이전학교 자료요청",
+ "viewport": [
+  1920,
+  945
+ ]
+}

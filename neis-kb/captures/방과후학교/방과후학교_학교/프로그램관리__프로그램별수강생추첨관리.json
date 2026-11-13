@@ -1,0 +1,351 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›프로그램관리›프로그램별수강생추첨관리",
+ "name": "프로그램별수강생추첨관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:01:52+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "프로그램명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:프로그램명"
+    },
+    {
+     "aria": null,
+     "box": [
+      995,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "추첨완료여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:추첨완료여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      163,
+      1590,
+      192
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        255,
+        36
+       ],
+       "id": "col:그리드/프로그램명"
+      },
+      {
+       "label": "강사명",
+       "depth": 0,
+       "box": [
+        281,
+        164,
+        255,
+        36
+       ],
+       "id": "col:그리드/강사명"
+      },
+      {
+       "label": "정원",
+       "depth": 0,
+       "box": [
+        536,
+        164,
+        255,
+        36
+       ],
+       "id": "col:그리드/정원"
+      },
+      {
+       "label": "수강자",
+       "depth": 0,
+       "box": [
+        791,
+        164,
+        255,
+        36
+       ],
+       "id": "col:그리드/수강자"
+      },
+      {
+       "label": "대기자",
+       "depth": 0,
+       "box": [
+        1046,
+        164,
+        255,
+        36
+       ],
+       "id": "col:그리드/대기자"
+      },
+      {
+       "label": "추첨완료여부",
+       "depth": 0,
+       "box": [
+        1301,
+        164,
+        255,
+        36
+       ],
+       "id": "col:그리드/추첨완료여부"
+      },
+      {
+       "label": "추첨",
+       "depth": 0,
+       "box": [
+        1556,
+        164,
+        58,
+        36
+       ],
+       "id": "col:그리드/추첨"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      370,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": "프로그램명 :",
+     "box": [
+      25,
+      380,
+      91,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "프로그램명 :",
+     "id": "heading:프로그램명 :"
+    },
+    {
+     "aria": "프로그램명",
+     "box": [
+      25,
+      410,
+      1590,
+      403
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "프로그램명",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        411,
+        50,
+        36
+       ],
+       "id": "col:프로그램명/순번"
+      },
+      {
+       "label": "원적교명",
+       "depth": 0,
+       "box": [
+        76,
+        411,
+        171,
+        36
+       ],
+       "id": "col:프로그램명/원적교명"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        247,
+        411,
+        171,
+        36
+       ],
+       "id": "col:프로그램명/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        418,
+        411,
+        171,
+        36
+       ],
+       "id": "col:프로그램명/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        589,
+        411,
+        171,
+        36
+       ],
+       "id": "col:프로그램명/번호"
+      },
+      {
+       "label": "수강생명",
+       "depth": 0,
+       "box": [
+        760,
+        411,
+        171,
+        36
+       ],
+       "id": "col:프로그램명/수강생명"
+      },
+      {
+       "label": "수강신청상태",
+       "depth": 0,
+       "box": [
+        930,
+        411,
+        171,
+        36
+       ],
+       "id": "col:프로그램명/수강신청상태"
+      },
+      {
+       "label": "신청일시",
+       "depth": 0,
+       "box": [
+        1101,
+        411,
+        171,
+        36
+       ],
+       "id": "col:프로그램명/신청일시"
+      },
+      {
+       "label": "신청구분",
+       "depth": 0,
+       "box": [
+        1272,
+        411,
+        171,
+        36
+       ],
+       "id": "col:프로그램명/신청구분"
+      },
+      {
+       "label": "추첨순번",
+       "depth": 0,
+       "box": [
+        1443,
+        411,
+        171,
+        36
+       ],
+       "id": "col:프로그램명/추첨순번"
+      }
+     ],
+     "id": "grid:프로그램명"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 프로그램관리 > 프로그램별수강생추첨관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

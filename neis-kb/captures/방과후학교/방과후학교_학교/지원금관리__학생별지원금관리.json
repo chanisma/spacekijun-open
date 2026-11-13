@@ -1,0 +1,373 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›지원금관리›학생별지원금관리",
+ "name": "학생별지원금관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:58:43+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      185,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      705,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "자유수강권지원영역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:자유수강권지원영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      1065,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수강생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:수강생명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1285,
+      82,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "지원금 미사용 학생만",
+     "checked": false,
+     "id": "check:지원금 미사용 학생만"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      74
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※명렬표 올리기 시 명령표 수정 또는 헤더를 삭제할 경우 오류가 발생할 수 있습니다. ※명렬표 올리기 시 \"자유수가권지원영역\" 입력방법 990-국민기초생활수급자, 991-한부모가정, 992-법정차상위, 993-최저생계비130%이내, 994-학교장추천, 995-기타(난민인정자 및 그 자녀) 996-소득수준대상자(교육청별 상이), 997-기타(다자녀, 보훈대상자 등)",
+     "id": "note:※명렬표 올리기 시 명령표 수정 또는 헤더를 삭제할 경우 오류가 발생할 수 있습니다. ※명렬표 올리기 시 \"자유수가권지원영역\" 입력방법 990-국민기초생활수급자, 991-한부모가정, 992-법정차상위, 993-최저생계비130%이내, 994-학교장추천, 995-기타(난민인정자 및 그 자녀) 996-소득수준대상자(교육청별 상이), 997-기타(다자녀, 보훈대상자 등)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1065,
+      242,
+      127,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "명렬표 내려받기",
+     "variant": "plain",
+     "id": "button:명렬표 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1201,
+      242,
+      115,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "명렬표 올리기",
+     "variant": "plain",
+     "id": "button:명렬표 올리기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1324,
+      242,
+      115,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      242,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학생추가",
+     "variant": "link",
+     "id": "button:학생추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      242,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      242,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      347,
+      290,
+      74,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄입력",
+     "variant": "primary",
+     "id": "button:일괄입력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      340,
+      1590,
+      473
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        341,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        126,
+        341,
+        170,
+        36
+       ],
+       "id": "col:그리드/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        296,
+        341,
+        50,
+        36
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        346,
+        341,
+        50,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "수강생명",
+       "depth": 0,
+       "box": [
+        396,
+        341,
+        100,
+        36
+       ],
+       "id": "col:그리드/수강생명"
+      },
+      {
+       "label": "최종학적변동",
+       "depth": 0,
+       "box": [
+        497,
+        341,
+        172,
+        36
+       ],
+       "id": "col:그리드/최종학적변동"
+      },
+      {
+       "label": "사용금총액",
+       "depth": 0,
+       "box": [
+        669,
+        341,
+        172,
+        36
+       ],
+       "id": "col:그리드/사용금총액"
+      },
+      {
+       "label": "가용금총액",
+       "depth": 0,
+       "box": [
+        841,
+        341,
+        172,
+        36
+       ],
+       "id": "col:그리드/가용금총액"
+      },
+      {
+       "label": "지원금총액",
+       "depth": 0,
+       "box": [
+        1013,
+        341,
+        172,
+        36
+       ],
+       "id": "col:그리드/지원금총액"
+      },
+      {
+       "label": "자유수강권지원영역",
+       "depth": 0,
+       "box": [
+        1184,
+        341,
+        258,
+        36
+       ],
+       "id": "col:그리드/자유수강권지원영역"
+      },
+      {
+       "label": "자유수강권 지원금",
+       "depth": 0,
+       "box": [
+        1442,
+        341,
+        172,
+        36
+       ],
+       "id": "col:그리드/자유수강권 지원금"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 지원금관리 > 학생별지원금관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,1852 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식품정보관리›내식품정보",
+ "name": "내식품정보",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:10:01+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품대분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품대분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품중분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품중분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공통식품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주사용식품여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:주사용식품여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "규격",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:규격"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "단위",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:단위"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      162,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품영양량",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품영양량"
+    },
+    {
+     "aria": "식품영양량 이상/이하 선택",
+     "box": [
+      507,
+      162,
+      150,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "radio",
+     "label": "식품영양량 이상/이하 선택",
+     "options": [
+      "이상",
+      "이하"
+     ],
+     "id": "radio:식품영양량 이상/이하 선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      663,
+      162,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "check",
+     "label": "내림차순",
+     "checked": false,
+     "id": "check:내림차순"
+    },
+    {
+     "aria": null,
+     "box": [
+      923,
+      162,
+      101,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요리코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:요리코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1030,
+      162,
+      151,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "요리코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요리코드#2"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      1187,
+      162,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1223,
+      162,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      202,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "내식품그룹",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:내식품그룹"
+    },
+    {
+     "aria": null,
+     "box": [
+      385,
+      202,
+      216,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "교육부와 상이한 알레르기정보 조회",
+     "checked": false,
+     "id": "check:교육부와 상이한 알레르기정보 조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      611,
+      202,
+      204,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "교육부와 상이한 폐기율정보 조회",
+     "checked": false,
+     "id": "check:교육부와 상이한 폐기율정보 조회"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1440,
+      202,
+      56,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1504,
+      202,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      253,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 내식품 사용용도",
+     "id": "note:※ 내식품 사용용도"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      290,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 자료올리기 시 등록된 모든 식품 및 속성정보가 삭제되고, 업로드 파일에 존재하는 식품 및 속성 정보를 등록합니다.",
+     "id": "note:※ 자료올리기 시 등록된 모든 식품 및 속성정보가 삭제되고, 업로드 파일에 존재하는 식품 및 속성 정보를 등록합니다."
+    },
+    {
+     "aria": "4세대 자료올리기",
+     "box": [
+      1168,
+      344,
+      135,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "4세대 자료올리기",
+     "variant": "plain",
+     "id": "button:4세대 자료올리기"
+    },
+    {
+     "aria": "4세대 자료내려받기",
+     "box": [
+      1311,
+      344,
+      147,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "4세대 자료내려받기",
+     "variant": "plain",
+     "id": "button:4세대 자료내려받기"
+    },
+    {
+     "aria": "3세대 자료올리기",
+     "box": [
+      1465,
+      344,
+      135,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "3세대 자료올리기",
+     "variant": "plain",
+     "id": "button:3세대 자료올리기"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      354,
+      250,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "내식품목록",
+     "id": "heading:내식품목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      390,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "내식품그룹",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:내식품그룹#2"
+    },
+    {
+     "aria": "식품그룹일괄적용",
+     "box": [
+      356,
+      390,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "식품그룹일괄적용",
+     "variant": "primary",
+     "id": "button:식품그룹일괄적용"
+    },
+    {
+     "aria": "식품그룹관리",
+     "box": [
+      474,
+      390,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "식품그룹관리",
+     "variant": "plain",
+     "id": "button:식품그룹관리"
+    },
+    {
+     "aria": "내식품정보가져오기",
+     "box": [
+      865,
+      390,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "내식품정보가져오기",
+     "variant": "plain",
+     "id": "button:내식품정보가져오기"
+    },
+    {
+     "aria": "(타영양교사‧영양사)내식품정보보내기",
+     "box": [
+      995,
+      390,
+      229,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "(타영양교사‧영양사)내식품정보보내기",
+     "variant": "plain",
+     "id": "button:(타영양교사‧영양사)내식품정보보내기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1246,
+      390,
+      70,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "/",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:/"
+    },
+    {
+     "aria": "학교식품으로보내기",
+     "box": [
+      1322,
+      390,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교식품으로보내기",
+     "variant": "primary",
+     "id": "button:학교식품으로보내기"
+    },
+    {
+     "aria": "규격/단위일괄등록",
+     "box": [
+      150,
+      430,
+      117,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "규격/단위일괄등록",
+     "variant": "plain",
+     "id": "button:규격/단위일괄등록"
+    },
+    {
+     "aria": "주요속성일괄등록",
+     "box": [
+      273,
+      430,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "주요속성일괄등록",
+     "variant": "plain",
+     "id": "button:주요속성일괄등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      390,
+      430,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "공통식품속성재생성",
+     "variant": "primary",
+     "id": "button:공통식품속성재생성"
+    },
+    {
+     "aria": "일괄미사용",
+     "box": [
+      865,
+      430,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄미사용",
+     "variant": "primary",
+     "id": "button:일괄미사용"
+    },
+    {
+     "aria": null,
+     "box": [
+      963,
+      430,
+      150,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "/",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:/#2"
+    },
+    {
+     "aria": "일괄사용",
+     "box": [
+      1119,
+      430,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄사용",
+     "variant": "primary",
+     "id": "button:일괄사용"
+    },
+    {
+     "aria": "공통식품코드반영",
+     "box": [
+      150,
+      470,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교육부식품가져오기",
+     "variant": "plain",
+     "id": "button:교육부식품가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      296,
+      470,
+      70,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "/",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:/#3"
+    },
+    {
+     "aria": "알레르기정보일괄적용",
+     "box": [
+      372,
+      470,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "알레르기정보초기화",
+     "variant": "primary",
+     "id": "button:알레르기정보초기화"
+    },
+    {
+     "aria": "폐기율정보일괄적용",
+     "box": [
+      501,
+      470,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "폐기율정보초기화",
+     "variant": "primary",
+     "id": "button:폐기율정보초기화"
+    },
+    {
+     "aria": "교육(지원)청 시장조사 공통식품매핑",
+     "box": [
+      865,
+      470,
+      211,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교육(지원)청 시장조사 공통식품매핑",
+     "variant": "plain",
+     "id": "button:교육(지원)청 시장조사 공통식품매핑"
+    },
+    {
+     "aria": "식품목록",
+     "box": [
+      25,
+      551,
+      1575,
+      460
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "식품목록",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "식품그룹",
+       "depth": 0,
+       "box": [
+        76,
+        552,
+        183,
+        62
+       ],
+       "id": "col:식품목록/식품그룹"
+      },
+      {
+       "label": "식품코드",
+       "depth": 0,
+       "box": [
+        259,
+        552,
+        147,
+        62
+       ],
+       "id": "col:식품목록/식품코드"
+      },
+      {
+       "label": "식품분류명",
+       "depth": 0,
+       "box": [
+        406,
+        552,
+        183,
+        62
+       ],
+       "id": "col:식품목록/식품분류명"
+      },
+      {
+       "label": "식품공통코드",
+       "depth": 0,
+       "box": [
+        590,
+        552,
+        147,
+        62
+       ],
+       "id": "col:식품목록/식품공통코드"
+      },
+      {
+       "label": "공통식품명",
+       "depth": 0,
+       "box": [
+        737,
+        552,
+        183,
+        62
+       ],
+       "id": "col:식품목록/공통식품명"
+      },
+      {
+       "label": "규격수",
+       "depth": 0,
+       "box": [
+        920,
+        552,
+        92,
+        62
+       ],
+       "id": "col:식품목록/규격수"
+      },
+      {
+       "label": "규격",
+       "depth": 0,
+       "box": [
+        1012,
+        552,
+        92,
+        62
+       ],
+       "id": "col:식품목록/규격"
+      },
+      {
+       "label": "단위",
+       "depth": 0,
+       "box": [
+        1104,
+        552,
+        92,
+        62
+       ],
+       "id": "col:식품목록/단위"
+      },
+      {
+       "label": "기타요구사항",
+       "depth": 0,
+       "box": [
+        1195,
+        552,
+        183,
+        62
+       ],
+       "id": "col:식품목록/기타요구사항"
+      },
+      {
+       "label": "주사용식품 여부",
+       "depth": 0,
+       "box": [
+        1379,
+        552,
+        110,
+        62
+       ],
+       "id": "col:식품목록/주사용식품 여부"
+      },
+      {
+       "label": "교육부 사용여부",
+       "depth": 0,
+       "box": [
+        1489,
+        552,
+        110,
+        62
+       ],
+       "id": "col:식품목록/교육부 사용여부"
+      }
+     ],
+     "id": "grid:식품목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      1023,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      1358,
+      1061,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색#2"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1394,
+      1061,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#3"
+    },
+    {
+     "aria": "식품상세정보복사",
+     "box": [
+      1430,
+      1061,
+      122,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식품상세정보복사",
+     "variant": "primary",
+     "id": "button:식품상세정보복사"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1560,
+      1061,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1071,
+      784,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "내식품상세",
+     "id": "heading:내식품상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1101,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "알레르기 정보",
+     "id": "heading:알레르기 정보"
+    },
+    {
+     "aria": "알레르기 검색",
+     "box": [
+      742,
+      1137,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "알레르기 검색",
+     "variant": "link",
+     "id": "button:알레르기 검색"
+    },
+    {
+     "aria": "알레르기 삭제",
+     "box": [
+      778,
+      1137,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "알레르기 삭제",
+     "variant": "secondary",
+     "id": "button:알레르기 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1193,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "공통식품상세",
+     "id": "heading:공통식품상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1229,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "공통식품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품명#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1229,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "공통식품코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품코드"
+    },
+    {
+     "aria": "(교육부)사용여부 예/아니오",
+     "box": [
+      1200,
+      1229,
+      395,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "(교육부)사용여부",
+     "options": [
+      "예",
+      "아니오"
+     ],
+     "id": "radio:(교육부)사용여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1269,
+      289,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "규격",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:규격#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1269,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "단위",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:단위#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      1269,
+      289,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "개별규격",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:개별규격"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1349,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "친환경인증정보",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:친환경인증정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1349,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "품질등급 및 크기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:품질등급 및 크기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      1349,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식품안전검사",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식품안전검사"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1389,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "원산지",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:원산지"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1389,
+      195,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "원산지지역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:원산지지역"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      1389,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수입국",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:수입국"
+    },
+    {
+     "aria": "수입국 검색",
+     "box": [
+      1529,
+      1389,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "수입국 검색",
+     "variant": "link",
+     "id": "button:수입국 검색"
+    },
+    {
+     "aria": "수입국 삭제",
+     "box": [
+      1565,
+      1389,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "수입국 삭제",
+     "variant": "secondary",
+     "id": "button:수입국 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1429,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "재배방법",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:재배방법"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1429,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조리용도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:조리용도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      1429,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "맛",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:맛"
+    },
+    {
+     "aria": "맛 검색",
+     "box": [
+      1529,
+      1429,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "맛 검색",
+     "variant": "link",
+     "id": "button:맛 검색"
+    },
+    {
+     "aria": "맛 삭제",
+     "box": [
+      1565,
+      1429,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "맛 삭제",
+     "variant": "secondary",
+     "id": "button:맛 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1469,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "가공방법",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:가공방법"
+    },
+    {
+     "aria": "가공방법 검색",
+     "box": [
+      479,
+      1469,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "가공방법 검색",
+     "variant": "link",
+     "id": "button:가공방법 검색"
+    },
+    {
+     "aria": "가공방법 삭제",
+     "box": [
+      515,
+      1469,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "가공방법 삭제",
+     "variant": "secondary",
+     "id": "button:가공방법 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1469,
+      920,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "원재료성분",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:원재료성분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1509,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "포장방법",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:포장방법"
+    },
+    {
+     "aria": "포장방법 검색",
+     "box": [
+      479,
+      1509,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "포장방법 검색",
+     "variant": "link",
+     "id": "button:포장방법 검색"
+    },
+    {
+     "aria": "포장방법 삭제",
+     "box": [
+      515,
+      1509,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "포장방법 삭제",
+     "variant": "secondary",
+     "id": "button:포장방법 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1509,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "보관방법",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:보관방법"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      1509,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "작업지시",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:작업지시"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1549,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "브랜드(제품명)",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:브랜드(제품명)"
+    },
+    {
+     "aria": "브랜드 검색",
+     "box": [
+      479,
+      1549,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "브랜드 검색",
+     "variant": "link",
+     "id": "button:브랜드 검색"
+    },
+    {
+     "aria": "브랜드 삭제",
+     "box": [
+      515,
+      1549,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "브랜드 삭제",
+     "variant": "secondary",
+     "id": "button:브랜드 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1549,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "제조사",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:제조사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      1549,
+      269,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "제조년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:제조년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1475,
+      1549,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1589,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "배송희망일",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:배송희망일"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1589,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "공동구매",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공동구매"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      1589,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "농식품국가인증",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:농식품국가인증"
+    },
+    {
+     "aria": "농식품국가인증 검색",
+     "box": [
+      1529,
+      1589,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "농식품국가인증 검색",
+     "variant": "link",
+     "id": "button:농식품국가인증 검색"
+    },
+    {
+     "aria": "농식품국가인증 삭제",
+     "box": [
+      1565,
+      1589,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "농식품국가인증 삭제",
+     "variant": "secondary",
+     "id": "button:농식품국가인증 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1629,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식품첨가물",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식품첨가물"
+    },
+    {
+     "aria": "식품첨가물 검색",
+     "box": [
+      479,
+      1629,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식품첨가물 검색",
+     "variant": "link",
+     "id": "button:식품첨가물 검색"
+    },
+    {
+     "aria": "식품첨가물 삭제",
+     "box": [
+      515,
+      1629,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "식품첨가물 삭제",
+     "variant": "secondary",
+     "id": "button:식품첨가물 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1629,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "등급세부기준",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:등급세부기준"
+    },
+    {
+     "aria": "등급세부기준 검색",
+     "box": [
+      1004,
+      1629,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등급세부기준 검색",
+     "variant": "link",
+     "id": "button:등급세부기준 검색"
+    },
+    {
+     "aria": "등급세부기준 삭제",
+     "box": [
+      1040,
+      1629,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등급세부기준 삭제",
+     "variant": "secondary",
+     "id": "button:등급세부기준 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      1629,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전처리방법",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전처리방법"
+    },
+    {
+     "aria": "전처리방법 검색",
+     "box": [
+      1529,
+      1629,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전처리방법 검색",
+     "variant": "link",
+     "id": "button:전처리방법 검색"
+    },
+    {
+     "aria": "전처리방법 삭제",
+     "box": [
+      1565,
+      1629,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전처리방법 삭제",
+     "variant": "secondary",
+     "id": "button:전처리방법 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1669,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "첨부서류",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:첨부서류"
+    },
+    {
+     "aria": "첨부서류 검색",
+     "box": [
+      479,
+      1669,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "첨부서류 검색",
+     "variant": "link",
+     "id": "button:첨부서류 검색"
+    },
+    {
+     "aria": "첨부서류 삭제",
+     "box": [
+      515,
+      1669,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "첨부서류 삭제",
+     "variant": "secondary",
+     "id": "button:첨부서류 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      1669,
+      323,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "제품표시사항",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:제품표시사항"
+    },
+    {
+     "aria": "제품표시사항 검색",
+     "box": [
+      1004,
+      1669,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "제품표시사항 검색",
+     "variant": "link",
+     "id": "button:제품표시사항 검색"
+    },
+    {
+     "aria": "제품표시사항 삭제",
+     "box": [
+      1040,
+      1669,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "제품표시사항 삭제",
+     "variant": "secondary",
+     "id": "button:제품표시사항 삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      1669,
+      137,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "폐기율(%)",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:폐기율(%)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1459,
+      1669,
+      137,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(교육부)폐기율",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:(교육부)폐기율"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      1709,
+      920,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "기타요구사항",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기타요구사항"
+    },
+    {
+     "aria": "주사용식품여부",
+     "box": [
+      1200,
+      1709,
+      395,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "주사용식품여부",
+     "options": [
+      "예",
+      "아니오"
+     ],
+     "id": "radio:주사용식품여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1755,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식품영양 정보",
+     "id": "heading:식품영양 정보"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식품정보관리 > 내식품정보",
+ "alsoVia": [
+  "부서장(나이스부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

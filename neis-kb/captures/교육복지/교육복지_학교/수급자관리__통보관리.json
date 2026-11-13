@@ -1,0 +1,520 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›수급자관리›통보관리",
+ "name": "통보관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:19:47+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통보일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:통보일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      330,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통보일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:통보일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      590,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통보대상",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:통보대상"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      163,
+      1590,
+      65
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "SMS전송",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        318,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/SMS전송"
+      },
+      {
+       "label": "이메일",
+       "depth": 0,
+       "box": [
+        344,
+        164,
+        318,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/이메일"
+      },
+      {
+       "label": "e-그린",
+       "depth": 0,
+       "box": [
+        661,
+        164,
+        318,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/e-그린"
+      },
+      {
+       "label": "국민비서",
+       "depth": 0,
+       "box": [
+        979,
+        164,
+        318,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/국민비서"
+      },
+      {
+       "label": "최근 통보일자",
+       "depth": 0,
+       "box": [
+        1296,
+        164,
+        318,
+        62
+       ],
+       "id": "col:그리드/최근 통보일자"
+      },
+      {
+       "label": "성공",
+       "depth": 1,
+       "box": [
+        26,
+        195,
+        159,
+        31
+       ],
+       "id": "col:그리드/SMS전송>성공"
+      },
+      {
+       "label": "실패",
+       "depth": 1,
+       "box": [
+        185,
+        195,
+        159,
+        31
+       ],
+       "id": "col:그리드/SMS전송>실패"
+      },
+      {
+       "label": "성공",
+       "depth": 1,
+       "box": [
+        344,
+        195,
+        159,
+        31
+       ],
+       "id": "col:그리드/이메일>성공"
+      },
+      {
+       "label": "실패",
+       "depth": 1,
+       "box": [
+        502,
+        195,
+        159,
+        31
+       ],
+       "id": "col:그리드/이메일>실패"
+      },
+      {
+       "label": "성공",
+       "depth": 1,
+       "box": [
+        661,
+        195,
+        159,
+        31
+       ],
+       "id": "col:그리드/e-그린>성공"
+      },
+      {
+       "label": "실패",
+       "depth": 1,
+       "box": [
+        820,
+        195,
+        159,
+        31
+       ],
+       "id": "col:그리드/e-그린>실패"
+      },
+      {
+       "label": "성공",
+       "depth": 1,
+       "box": [
+        979,
+        195,
+        159,
+        31
+       ],
+       "id": "col:그리드/국민비서>성공"
+      },
+      {
+       "label": "실패",
+       "depth": 1,
+       "box": [
+        1138,
+        195,
+        159,
+        31
+       ],
+       "id": "col:그리드/국민비서>실패"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1098,
+      370,
+      150,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "발송상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:발송상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      370,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "홍보발송",
+     "variant": "primary",
+     "id": "button:홍보발송"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      370,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "발송",
+     "variant": "primary",
+     "id": "button:발송"
+    },
+    {
+     "aria": null,
+     "box": [
+      1264,
+      375,
+      53,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "SMS",
+     "checked": true,
+     "id": "check:SMS"
+    },
+    {
+     "aria": null,
+     "box": [
+      1334,
+      375,
+      62,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "e-그린",
+     "checked": true,
+     "id": "check:e-그린"
+    },
+    {
+     "aria": null,
+     "box": [
+      1413,
+      375,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "국민비서",
+     "checked": true,
+     "id": "check:국민비서"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      410,
+      1590,
+      394
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        411,
+        46,
+        62
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "신청자명",
+       "depth": 0,
+       "box": [
+        122,
+        411,
+        100,
+        62
+       ],
+       "id": "col:그리드/신청자명"
+      },
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        222,
+        411,
+        100,
+        62
+       ],
+       "id": "col:그리드/학생명"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        322,
+        411,
+        163,
+        62
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        485,
+        411,
+        81,
+        62
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        566,
+        411,
+        81,
+        62
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "발송현황",
+       "depth": 0,
+       "box": [
+        648,
+        411,
+        244,
+        31
+       ],
+       "span": 3,
+       "id": "col:그리드/발송현황"
+      },
+      {
+       "label": "발송일자",
+       "depth": 0,
+       "box": [
+        892,
+        411,
+        114,
+        62
+       ],
+       "id": "col:그리드/발송일자"
+      },
+      {
+       "label": "주소",
+       "depth": 0,
+       "box": [
+        1006,
+        411,
+        244,
+        62
+       ],
+       "id": "col:그리드/주소"
+      },
+      {
+       "label": "이메일",
+       "depth": 0,
+       "box": [
+        1251,
+        411,
+        163,
+        62
+       ],
+       "id": "col:그리드/이메일"
+      },
+      {
+       "label": "신청인 전화번호 (휴대전화)",
+       "depth": 0,
+       "box": [
+        1414,
+        411,
+        130,
+        62
+       ],
+       "id": "col:그리드/신청인 전화번호 (휴대전화)"
+      },
+      {
+       "label": "발송이력",
+       "depth": 0,
+       "box": [
+        1544,
+        411,
+        70,
+        62
+       ],
+       "id": "col:그리드/발송이력"
+      },
+      {
+       "label": "SMS",
+       "depth": 1,
+       "box": [
+        648,
+        442,
+        81,
+        31
+       ],
+       "id": "col:그리드/발송현황>SMS"
+      },
+      {
+       "label": "e-그린",
+       "depth": 1,
+       "box": [
+        729,
+        442,
+        81,
+        31
+       ],
+       "id": "col:그리드/발송현황>e-그린"
+      },
+      {
+       "label": "국민비서",
+       "depth": 1,
+       "box": [
+        811,
+        442,
+        81,
+        31
+       ],
+       "id": "col:그리드/발송현황>국민비서"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 수급자관리 > 통보관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

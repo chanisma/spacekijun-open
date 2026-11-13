@@ -1,0 +1,363 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›프로그램관리›결보강승인관리",
+ "name": "결보강승인관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:01:05+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "처리상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:처리상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "프로그램명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:프로그램명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강사명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:강사명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1322,
+      133,
+      125,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인",
+     "variant": "primary",
+     "id": "button:승인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "반려",
+     "variant": "secondary",
+     "id": "button:반려"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인취소",
+     "variant": "secondary",
+     "id": "button:승인취소"
+    },
+    {
+     "aria": "결보강승인 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "결보강승인 목록",
+     "selectable": true,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        62
+       ],
+       "id": "col:결보강승인 목록/순번"
+      },
+      {
+       "label": "기간명",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        124,
+        62
+       ],
+       "id": "col:결보강승인 목록/기간명"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        250,
+        174,
+        124,
+        62
+       ],
+       "id": "col:결보강승인 목록/프로그램명"
+      },
+      {
+       "label": "강사명",
+       "depth": 0,
+       "box": [
+        374,
+        174,
+        124,
+        62
+       ],
+       "id": "col:결보강승인 목록/강사명"
+      },
+      {
+       "label": "결강정보",
+       "depth": 0,
+       "box": [
+        498,
+        174,
+        620,
+        31
+       ],
+       "span": 5,
+       "id": "col:결보강승인 목록/결강정보"
+      },
+      {
+       "label": "보강정보",
+       "depth": 0,
+       "box": [
+        1118,
+        174,
+        496,
+        31
+       ],
+       "span": 4,
+       "id": "col:결보강승인 목록/보강정보"
+      },
+      {
+       "label": "처리상태",
+       "depth": 1,
+       "box": [
+        498,
+        205,
+        124,
+        31
+       ],
+       "id": "col:결보강승인 목록/결강정보>처리상태"
+      },
+      {
+       "label": "수업일",
+       "depth": 1,
+       "box": [
+        622,
+        205,
+        124,
+        31
+       ],
+       "id": "col:결보강승인 목록/결강정보>수업일"
+      },
+      {
+       "label": "수업시간",
+       "depth": 1,
+       "box": [
+        746,
+        205,
+        124,
+        31
+       ],
+       "id": "col:결보강승인 목록/결강정보>수업시간"
+      },
+      {
+       "label": "차시",
+       "depth": 1,
+       "box": [
+        870,
+        205,
+        124,
+        31
+       ],
+       "id": "col:결보강승인 목록/결강정보>차시"
+      },
+      {
+       "label": "강의실",
+       "depth": 1,
+       "box": [
+        994,
+        205,
+        124,
+        31
+       ],
+       "id": "col:결보강승인 목록/결강정보>강의실"
+      },
+      {
+       "label": "처리상태",
+       "depth": 1,
+       "box": [
+        1118,
+        205,
+        124,
+        31
+       ],
+       "id": "col:결보강승인 목록/보강정보>처리상태"
+      },
+      {
+       "label": "수업일",
+       "depth": 1,
+       "box": [
+        1242,
+        205,
+        124,
+        31
+       ],
+       "id": "col:결보강승인 목록/보강정보>수업일"
+      },
+      {
+       "label": "수업시간",
+       "depth": 1,
+       "box": [
+        1366,
+        205,
+        124,
+        31
+       ],
+       "id": "col:결보강승인 목록/보강정보>수업시간"
+      },
+      {
+       "label": "강의실",
+       "depth": 1,
+       "box": [
+        1490,
+        205,
+        124,
+        31
+       ],
+       "id": "col:결보강승인 목록/보강정보>강의실"
+      }
+     ],
+     "id": "grid:결보강승인 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 프로그램관리 > 결보강승인관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

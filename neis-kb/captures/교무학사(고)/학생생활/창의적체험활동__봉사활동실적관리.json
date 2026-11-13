@@ -1,0 +1,890 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›창의적체험활동›봉사활동실적관리",
+ "name": "봉사활동실적관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:25:40+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:개인별",
+   "tab": "개인별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "개인별",
+      "반별"
+     ],
+     "active": "개인별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 조회목록에서 *표시가 있는 학생은 나눔포털 봉사활동자료 중 미반영된 자료가 존재하는 학생입니다. 확인 후 반영하여 주시기 바랍니다.",
+     "id": "note:※ 조회목록에서 *표시가 있는 학생은 나눔포털 봉사활동자료 중 미반영된 자료가 존재하는 학생입니다. 확인 후 반영하여 주시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학교 봉사활동인 경우만 영역구분이 활성화되며, 시간표에 편성된 일자만 선택할 수 있습니다.",
+     "id": "note:※ 학교 봉사활동인 경우만 영역구분이 활성화되며, 시간표에 편성된 일자만 선택할 수 있습니다."
+    },
+    {
+     "aria": "출결현황조회",
+     "box": [
+      1111,
+      264,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출결현황조회",
+     "variant": "link",
+     "id": "button:출결현황조회"
+    },
+    {
+     "aria": "나눔포털조회",
+     "box": [
+      1207,
+      264,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "나눔포털조회",
+     "variant": "link",
+     "id": "button:나눔포털조회"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1303,
+      264,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1351,
+      264,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1399,
+      264,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1447,
+      264,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "위탁/공동",
+     "box": [
+      1495,
+      264,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "위탁/공동 가져오기",
+     "variant": "primary",
+     "id": "button:위탁/공동 가져오기"
+    },
+    {
+     "aria": "봉사활동 누가기록 - 번 ",
+     "box": [
+      355,
+      274,
+      170,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "봉사활동 누가기록 - 번",
+     "id": "heading:봉사활동 누가기록 - 번"
+    },
+    {
+     "aria": "봉사활동학생목록",
+     "box": [
+      25,
+      304,
+      315,
+      509
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "봉사활동학생목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        305,
+        99,
+        36
+       ],
+       "id": "col:봉사활동학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        125,
+        305,
+        198,
+        36
+       ],
+       "id": "col:봉사활동학생목록/성명"
+      }
+     ],
+     "id": "grid:봉사활동학생목록"
+    },
+    {
+     "aria": "봉사활동 누가기록 목록",
+     "box": [
+      355,
+      304,
+      1260,
+      509
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "봉사활동 누가기록 목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "시작일자",
+       "depth": 0,
+       "box": [
+        406,
+        305,
+        143,
+        62
+       ],
+       "id": "col:봉사활동 누가기록 목록/시작일자"
+      },
+      {
+       "label": "종료일자",
+       "depth": 0,
+       "box": [
+        549,
+        305,
+        143,
+        62
+       ],
+       "id": "col:봉사활동 누가기록 목록/종료일자"
+      },
+      {
+       "label": "영역구분",
+       "depth": 0,
+       "box": [
+        693,
+        305,
+        100,
+        62
+       ],
+       "id": "col:봉사활동 누가기록 목록/영역구분"
+      },
+      {
+       "label": "봉사활동내용",
+       "depth": 0,
+       "box": [
+        793,
+        305,
+        339,
+        62
+       ],
+       "id": "col:봉사활동 누가기록 목록/봉사활동내용"
+      },
+      {
+       "label": "학교/개인 구분",
+       "depth": 0,
+       "box": [
+        1132,
+        305,
+        104,
+        62
+       ],
+       "id": "col:봉사활동 누가기록 목록/학교/개인 구분"
+      },
+      {
+       "label": "장소 또는 주관 기관명",
+       "depth": 0,
+       "box": [
+        1236,
+        305,
+        196,
+        62
+       ],
+       "id": "col:봉사활동 누가기록 목록/장소 또는 주관 기관명"
+      },
+      {
+       "label": "시간",
+       "depth": 0,
+       "box": [
+        1432,
+        305,
+        91,
+        62
+       ],
+       "id": "col:봉사활동 누가기록 목록/시간"
+      },
+      {
+       "label": "시간 누계",
+       "depth": 0,
+       "box": [
+        1523,
+        305,
+        91,
+        62
+       ],
+       "id": "col:봉사활동 누가기록 목록/시간 누계"
+      }
+     ],
+     "id": "grid:봉사활동 누가기록 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:반별",
+   "tab": "반별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "개인별",
+      "반별"
+     ],
+     "active": "반별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "직전일자 이동",
+     "box": [
+      895,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "직전일자 이동",
+     "variant": "plain",
+     "id": "button:직전일자 이동"
+    },
+    {
+     "aria": null,
+     "box": [
+      935,
+      137,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": "직후일자 이동",
+     "box": [
+      1095,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "직후일자 이동",
+     "variant": "plain",
+     "id": "button:직후일자 이동"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1516,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 시작일자와 종료일자가 같을 경우 시작일자만 입력하시면 됩니다.",
+     "id": "note:※ 시작일자와 종료일자가 같을 경우 시작일자만 입력하시면 됩니다."
+    },
+    {
+     "aria": "적용",
+     "box": [
+      1560,
+      246,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "적용",
+     "variant": "primary",
+     "id": "button:적용"
+    },
+    {
+     "aria": "봉사활동 일괄등록",
+     "box": [
+      25,
+      256,
+      133,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "봉사활동 일괄등록",
+     "id": "heading:봉사활동 일괄등록"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      286,
+      260,
+      711
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        287,
+        69,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        145,
+        287,
+        139,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      292,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "시작일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:시작일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1095,
+      292,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "종료일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:종료일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      332,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "시간",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:시간"
+    },
+    {
+     "aria": null,
+     "box": [
+      1095,
+      332,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "영역구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:영역구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      372,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교/개인 구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교/개인 구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1095,
+      372,
+      500,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "장소 또는 주관기관명",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:장소 또는 주관기관명"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      412,
+      1150,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "봉사활동내용",
+     "control": "textarea",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:봉사활동내용"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1512,
+      511,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1560,
+      511,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "봉사활동실적 목록",
+     "box": [
+      300,
+      546,
+      1300,
+      450
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "봉사활동실적 목록",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        351,
+        547,
+        50,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/순번"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        401,
+        547,
+        50,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        451,
+        547,
+        100,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/성명"
+      },
+      {
+       "label": "시작일자",
+       "depth": 0,
+       "box": [
+        551,
+        547,
+        128,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/시작일자"
+      },
+      {
+       "label": "종료일자",
+       "depth": 0,
+       "box": [
+        679,
+        547,
+        128,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/종료일자"
+      },
+      {
+       "label": "출결확인",
+       "depth": 0,
+       "box": [
+        807,
+        547,
+        100,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/출결확인"
+      },
+      {
+       "label": "영역구분",
+       "depth": 0,
+       "box": [
+        907,
+        547,
+        100,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/영역구분"
+      },
+      {
+       "label": "봉사활동내용",
+       "depth": 0,
+       "box": [
+        1007,
+        547,
+        201,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/봉사활동내용"
+      },
+      {
+       "label": "학교/개인 구분",
+       "depth": 0,
+       "box": [
+        1208,
+        547,
+        100,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/학교/개인 구분"
+      },
+      {
+       "label": "장소 또는 주관기관명",
+       "depth": 0,
+       "box": [
+        1308,
+        547,
+        151,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/장소 또는 주관기관명"
+      },
+      {
+       "label": "시간",
+       "depth": 0,
+       "box": [
+        1459,
+        547,
+        70,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/시간"
+      },
+      {
+       "label": "일자별 시간누계",
+       "depth": 0,
+       "box": [
+        1529,
+        547,
+        70,
+        62
+       ],
+       "id": "col:봉사활동실적 목록/일자별 시간누계"
+      }
+     ],
+     "id": "grid:봉사활동실적 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 창의적체험활동 > 봉사활동실적관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

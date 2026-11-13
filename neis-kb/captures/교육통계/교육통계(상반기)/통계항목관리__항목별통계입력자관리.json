@@ -1,0 +1,457 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육통계›교육통계(상반기)›통계항목관리›항목별통계입력자관리",
+ "name": "항목별통계입력자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:41:21+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "통계년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:통계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 통계담당자는 담당자별/항목별입력자관리에서 조회되지 않습니다. 통계담당자이므로 별도의 입력자 지정 없이 모든 장표의 입력이 가능합니다.",
+     "id": "note:※ 통계담당자는 담당자별/항목별입력자관리에서 조회되지 않습니다. 통계담당자이므로 별도의 입력자 지정 없이 모든 장표의 입력이 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교원현황 및 직원현황과 같이 개인별로 조사를 실시하는 항목은 통계입력자를 관련 인사담당자로 지정하도록 권장함.",
+     "id": "note:※ 교원현황 및 직원현황과 같이 개인별로 조사를 실시하는 항목은 통계입력자를 관련 인사담당자로 지정하도록 권장함."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전년도자료적용시 상∙하반기 공통조사항목의 경우 전년도 하반기기준으로 적용됨.",
+     "id": "note:※ 전년도자료적용시 상∙하반기 공통조사항목의 경우 전년도 하반기기준으로 적용됨."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      224,
+      530,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 선택항목 :",
+     "id": "note:※ 선택항목 :"
+    },
+    {
+     "aria": null,
+     "box": [
+      1268,
+      224,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "권한부여안내",
+     "variant": "primary",
+     "id": "button:권한부여안내"
+    },
+    {
+     "aria": null,
+     "box": [
+      1364,
+      224,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전년도자료적용",
+     "variant": "primary",
+     "id": "button:전년도자료적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1471,
+      224,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      224,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      224,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "담당자 조회리스트",
+     "box": [
+      25,
+      299,
+      788,
+      232
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "담당자 조회리스트",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "선택",
+       "depth": 0,
+       "box": [
+        26,
+        300,
+        40,
+        30
+       ],
+       "id": "col:담당자 조회리스트/선택"
+      },
+      {
+       "label": "분류명",
+       "depth": 0,
+       "box": [
+        66,
+        300,
+        187,
+        30
+       ],
+       "id": "col:담당자 조회리스트/분류명"
+      },
+      {
+       "label": "항목코드",
+       "depth": 0,
+       "box": [
+        253,
+        300,
+        187,
+        30
+       ],
+       "id": "col:담당자 조회리스트/항목코드"
+      },
+      {
+       "label": "항목명",
+       "depth": 0,
+       "box": [
+        439,
+        300,
+        373,
+        30
+       ],
+       "id": "col:담당자 조회리스트/항목명"
+      }
+     ],
+     "id": "grid:담당자 조회리스트"
+    },
+    {
+     "aria": "성명, ID",
+     "box": [
+      938,
+      305,
+      107,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "검색구분",
+     "options": [
+      "성명",
+      "ID"
+     ],
+     "id": "radio:검색구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1050,
+      305,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검색구분",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검색구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1256,
+      305,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": "담당자 조회리스트",
+     "box": [
+      828,
+      346,
+      788,
+      468
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "담당자 조회리스트",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "ID",
+       "depth": 0,
+       "box": [
+        869,
+        347,
+        187,
+        30
+       ],
+       "id": "col:담당자 조회리스트/ID"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1055,
+        347,
+        187,
+        30
+       ],
+       "id": "col:담당자 조회리스트/성명"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        1242,
+        347,
+        187,
+        30
+       ],
+       "id": "col:담당자 조회리스트/직위"
+      },
+      {
+       "label": "사무실전화번호",
+       "depth": 0,
+       "box": [
+        1428,
+        347,
+        187,
+        30
+       ],
+       "id": "col:담당자 조회리스트/사무실전화번호"
+      }
+     ],
+     "id": "grid:담당자 조회리스트#2"
+    },
+    {
+     "aria": "항목별 입력담당자 목록",
+     "box": [
+      25,
+      546,
+      170,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "항목별 입력담당자 목록",
+     "id": "heading:항목별 입력담당자 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      289,
+      546,
+      523,
+      20
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 위 테이블에서 통계항목을 선택하세요",
+     "id": "note:※ 위 테이블에서 통계항목을 선택하세요"
+    },
+    {
+     "aria": "담당자별 통계 입력항목",
+     "box": [
+      25,
+      623,
+      788,
+      190
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "담당자별 통계 입력항목",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        26,
+        624,
+        137,
+        30
+       ],
+       "id": "col:담당자별 통계 입력항목/성명"
+      },
+      {
+       "label": "ID",
+       "depth": 0,
+       "box": [
+        163,
+        624,
+        137,
+        30
+       ],
+       "id": "col:담당자별 통계 입력항목/ID"
+      },
+      {
+       "label": "소속기관명",
+       "depth": 0,
+       "box": [
+        299,
+        624,
+        171,
+        30
+       ],
+       "id": "col:담당자별 통계 입력항목/소속기관명"
+      },
+      {
+       "label": "직위",
+       "depth": 0,
+       "box": [
+        470,
+        624,
+        171,
+        30
+       ],
+       "id": "col:담당자별 통계 입력항목/직위"
+      },
+      {
+       "label": "전화번호",
+       "depth": 0,
+       "box": [
+        641,
+        624,
+        171,
+        30
+       ],
+       "id": "col:담당자별 통계 입력항목/전화번호"
+      }
+     ],
+     "id": "grid:담당자별 통계 입력항목"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "교육통계 > {교육통계}교육통계(상반기) > 통계항목관리 > 항목별통계입력자관리",
+ "alsoVia": [
+  "교육통계",
+  "부서장(나이스부)",
+  "부서장(나이스부)",
+  "부서장(정보화부)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

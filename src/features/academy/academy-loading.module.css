@@ -1,0 +1,103 @@
+/*
+ * 별빛 탐구 아카데미 로딩 화면 (2026-10-04 개편 — 진행률 % · 천천히 도는 성좌 문장 · 금빛 막대).
+ *
+ * 게임 루트(.game)가 position:fixed/z-index:80 인 전체 화면이라 이 화면도 같은 자리를 차지한다(게임 안에서는 그 위 90).
+ * 배경 그림(plaza.png)은 «도착하면 덧입히는» 층 — 별밤은 CSS(0바이트)로 즉시 그리고 그림은 나중에 겹친다.
+ * 글자 대비: 금빛 #e6c68e / 막 위 ≈ 9:1, 본문 #f1e8da ≈ 13:1.
+ */
+.screen {
+  --gold: #e6c68e;
+  --ink: #f1e8da;
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 60% 0, #382b47, #171320 70%), #100d18;
+  color: var(--ink);
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* 도착하면 덧입히는 배경 — 아주 천천히 다가오는(켄 번스) 광장. */
+.art {
+  position: absolute;
+  inset: -4%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 1.4s ease;
+  animation: drift 18s ease-in-out infinite alternate;
+}
+.art[data-ready='true'] { opacity: 1; }
+.art::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 55%, #130e21a6 0%, #130e21d9 60%, #0d0918f2 100%); }
+
+/* 별밤 — 점 일곱 겹을 서로 다른 타일·주기로 깜빡인다. */
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 22%, #fff6e4d0, transparent),
+    radial-gradient(1.5px 1.5px at 68% 14%, #ffeccfc0, transparent),
+    radial-gradient(1px 1px at 84% 38%, #fff4e0b0, transparent),
+    radial-gradient(1.5px 1.5px at 32% 66%, #ffeed4a8, transparent),
+    radial-gradient(1px 1px at 54% 84%, #fff6e6a0, transparent),
+    radial-gradient(1px 1px at 22% 46%, #f7e6c898, transparent),
+    radial-gradient(1.5px 1.5px at 92% 72%, #fff2da90, transparent);
+  background-size: 300px 240px, 420px 340px, 260px 300px, 380px 420px, 340px 280px, 460px 360px, 280px 400px;
+  animation: twinkle 4.5s ease-in-out infinite;
+}
+
+.frame {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  width: min(420px, calc(100vw - 48px));
+  padding: 28px 28px 24px;
+  text-align: center;
+}
+
+/* 성좌 문장 — 바깥 고리는 천천히, 궤도의 별은 조금 빠르게 돈다. */
+.emblem { width: 92px; height: 92px; margin-bottom: 4px; overflow: visible; filter: drop-shadow(0 0 14px #e6c68e55); }
+.ringOuter { fill: none; stroke: #e6c68e66; stroke-width: 1; stroke-dasharray: 2 5; transform-origin: 60px 60px; animation: spin 40s linear infinite; }
+.ringInner { fill: none; stroke: #e6c68ea8; stroke-width: 1.2; }
+.orbit { fill: #f6dcaa; transform-origin: 60px 60px; animation: spin 6s linear infinite; }
+.star { fill: #f2d293; transform-origin: 60px 60px; animation: breathe 3.2s ease-in-out infinite; }
+
+.eyebrow { margin: 0; color: var(--gold); font-size: 11px; font-weight: 600; letter-spacing: 0.24em; }
+.title { margin: 0 0 10px; font: 500 clamp(24px, 4.4vw, 34px)/1.3 Georgia, 'Noto Serif KR', serif; letter-spacing: 0.14em; color: #fff3dc; text-shadow: 0 2px 18px #100a22; }
+
+/* 진행 막대 — 금빛 채움 + 끝에서 빛나는 별. 진행률을 모르면 빛줄기가 흐른다. */
+.meter { position: relative; width: 100%; height: 6px; border-radius: 6px; background: #2d2238; box-shadow: inset 0 0 0 1px #e6c68e33; overflow: visible; }
+.fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: 6px; background: linear-gradient(90deg, #a6804c, #e6c68e 70%, #fff1cf); box-shadow: 0 0 12px #e6c68e88; transition: width .35s ease; }
+.fill::after { content: ''; position: absolute; right: -5px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle, #fffaf0 0 30%, #f2d29366 55%, transparent 70%); }
+.meter[data-indeterminate='true'] { overflow: hidden; }
+.meter[data-indeterminate='true'] .fill { width: 38%; animation: sweep 1.6s ease-in-out infinite; }
+.meter[data-indeterminate='true'] .fill::after { display: none; }
+
+.readout { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; width: 100%; margin-top: 2px; }
+.label { margin: 0; color: #e8dccb; font-size: 13px; letter-spacing: 0.02em; text-align: left; }
+.readout:not(:has(.percent)) { justify-content: center; }
+.readout:not(:has(.percent)) .label { text-align: center; }
+.percent { margin: 0; color: var(--gold); font: 600 22px/1 Georgia, 'Noto Serif KR', serif; font-variant-numeric: tabular-nums; }
+.percent small { margin-left: 1px; font-size: 13px; }
+
+@keyframes twinkle { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+@keyframes drift { from { transform: scale(1.04) translate(0, 0); } to { transform: scale(1.1) translate(-1.2%, -0.8%); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes breathe { 0%, 100% { transform: scale(0.94); opacity: 0.85; } 50% { transform: scale(1.06); opacity: 1; } }
+@keyframes sweep { from { transform: translateX(-110%); } to { transform: translateX(270%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .stars, .art, .ringOuter, .orbit, .star, .meter[data-indeterminate='true'] .fill { animation: none; }
+  .fill { transition: none; }
+}
+/* 휴대폰 가로 — 높이 390 안에 문장·제목·막대가 다 들어가게. */
+@media (orientation: landscape) and (max-height: 520px) {
+  .frame { gap: 6px; padding: 12px 24px; }
+  .emblem { width: 60px; height: 60px; }
+  .title { margin-bottom: 6px; font-size: 24px; }
+}

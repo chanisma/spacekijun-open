@@ -1,0 +1,1168 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›통계및현황›등급/점수통계",
+ "name": "등급/점수통계",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:15:07+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:대상별 등급 통계",
+   "tab": "대상별 등급 통계",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "대상선택",
+     "box": [
+      755,
+      82,
+      185,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "대상선택",
+     "options": [
+      "학교",
+      "학년",
+      "학급"
+     ],
+     "id": "radio:대상선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      171,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": true,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      257,
+      122,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "건강체력평가",
+     "checked": true,
+     "id": "check:건강체력평가"
+    },
+    {
+     "aria": null,
+     "box": [
+      400,
+      122,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "심폐지구력",
+     "checked": true,
+     "id": "check:심폐지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      543,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "유연성",
+     "checked": true,
+     "id": "check:유연성"
+    },
+    {
+     "aria": null,
+     "box": [
+      668,
+      122,
+      156,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "근력·근지구력",
+     "checked": true,
+     "id": "check:근력·근지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      830,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "순발력",
+     "checked": true,
+     "id": "check:순발력"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      122,
+      107,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "비만(BMI)",
+     "checked": true,
+     "id": "check:비만(BMI)"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      27
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 비만(BMI)은 [마름, 정상, 과체중, 경도비만, 고도비만]으로 구별됩니다.",
+     "id": "note:※ 비만(BMI)은 [마름, 정상, 과체중, 경도비만, 고도비만]으로 구별됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      210,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      210,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그래프",
+     "variant": "primary",
+     "id": "button:그래프"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      250,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대상별 등급 통계",
+      "요인별 등급 통계",
+      "대상별 점수 통계",
+      "요인별 점수 통계"
+     ],
+     "active": "대상별 등급 통계",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "대상별 등급 통계 목록",
+     "box": [
+      25,
+      335,
+      1590,
+      470
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "대상별 등급 통계 목록",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "평가요인",
+       "depth": 0,
+       "box": [
+        26,
+        336,
+        265,
+        36
+       ],
+       "id": "col:대상별 등급 통계 목록/평가요인"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        291,
+        336,
+        110,
+        36
+       ],
+       "id": "col:대상별 등급 통계 목록/성별"
+      },
+      {
+       "label": "1등급(마름)",
+       "depth": 0,
+       "box": [
+        401,
+        336,
+        221,
+        36
+       ],
+       "span": 2,
+       "id": "col:대상별 등급 통계 목록/1등급(마름)"
+      },
+      {
+       "label": "2등급(정상)",
+       "depth": 0,
+       "box": [
+        622,
+        336,
+        221,
+        36
+       ],
+       "span": 2,
+       "id": "col:대상별 등급 통계 목록/2등급(정상)"
+      },
+      {
+       "label": "3등급(과체중)",
+       "depth": 0,
+       "box": [
+        842,
+        336,
+        221,
+        36
+       ],
+       "span": 2,
+       "id": "col:대상별 등급 통계 목록/3등급(과체중)"
+      },
+      {
+       "label": "4등급(경도비만)",
+       "depth": 0,
+       "box": [
+        1063,
+        336,
+        221,
+        36
+       ],
+       "span": 2,
+       "id": "col:대상별 등급 통계 목록/4등급(경도비만)"
+      },
+      {
+       "label": "5등급(고도비만)",
+       "depth": 0,
+       "box": [
+        1283,
+        336,
+        221,
+        36
+       ],
+       "span": 2,
+       "id": "col:대상별 등급 통계 목록/5등급(고도비만)"
+      },
+      {
+       "label": "합계",
+       "depth": 0,
+       "box": [
+        1504,
+        336,
+        110,
+        36
+       ],
+       "id": "col:대상별 등급 통계 목록/합계"
+      }
+     ],
+     "id": "grid:대상별 등급 통계 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:요인별 등급 통계",
+   "tab": "요인별 등급 통계",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "대상선택",
+     "box": [
+      755,
+      82,
+      185,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "대상선택",
+     "options": [
+      "학교",
+      "학년",
+      "학급"
+     ],
+     "id": "radio:대상선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      171,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": true,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      257,
+      122,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "건강체력평가",
+     "checked": true,
+     "id": "check:건강체력평가"
+    },
+    {
+     "aria": null,
+     "box": [
+      400,
+      122,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "심폐지구력",
+     "checked": true,
+     "id": "check:심폐지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      543,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "유연성",
+     "checked": true,
+     "id": "check:유연성"
+    },
+    {
+     "aria": null,
+     "box": [
+      668,
+      122,
+      156,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "근력·근지구력",
+     "checked": true,
+     "id": "check:근력·근지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      830,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "순발력",
+     "checked": true,
+     "id": "check:순발력"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      122,
+      107,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "비만(BMI)",
+     "checked": true,
+     "id": "check:비만(BMI)"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      27
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 비만(BMI)은 [마름, 정상, 과체중, 경도비만, 고도비만]으로 구별됩니다.",
+     "id": "note:※ 비만(BMI)은 [마름, 정상, 과체중, 경도비만, 고도비만]으로 구별됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      210,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      210,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그래프",
+     "variant": "primary",
+     "id": "button:그래프"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      250,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대상별 등급 통계",
+      "요인별 등급 통계",
+      "대상별 점수 통계",
+      "요인별 점수 통계"
+     ],
+     "active": "요인별 등급 통계",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "요인별 등급 통계 목록",
+     "box": [
+      25,
+      335,
+      1590,
+      470
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "요인별 등급 통계 목록",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "평가요인",
+       "depth": 0,
+       "box": [
+        26,
+        336,
+        262,
+        36
+       ],
+       "id": "col:요인별 등급 통계 목록/평가요인"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        288,
+        336,
+        175,
+        36
+       ],
+       "id": "col:요인별 등급 통계 목록/성별"
+      },
+      {
+       "label": "1등급(마름)",
+       "depth": 0,
+       "box": [
+        462,
+        336,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:요인별 등급 통계 목록/1등급(마름)"
+      },
+      {
+       "label": "2등급(정상)",
+       "depth": 0,
+       "box": [
+        672,
+        336,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:요인별 등급 통계 목록/2등급(정상)"
+      },
+      {
+       "label": "3등급(과체중)",
+       "depth": 0,
+       "box": [
+        881,
+        336,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:요인별 등급 통계 목록/3등급(과체중)"
+      },
+      {
+       "label": "4등급(경도비만)",
+       "depth": 0,
+       "box": [
+        1090,
+        336,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:요인별 등급 통계 목록/4등급(경도비만)"
+      },
+      {
+       "label": "5등급(고도비만)",
+       "depth": 0,
+       "box": [
+        1300,
+        336,
+        209,
+        36
+       ],
+       "span": 2,
+       "id": "col:요인별 등급 통계 목록/5등급(고도비만)"
+      },
+      {
+       "label": "합계",
+       "depth": 0,
+       "box": [
+        1509,
+        336,
+        105,
+        36
+       ],
+       "id": "col:요인별 등급 통계 목록/합계"
+      }
+     ],
+     "id": "grid:요인별 등급 통계 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:대상별 점수 통계",
+   "tab": "대상별 점수 통계",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "대상선택",
+     "box": [
+      755,
+      82,
+      185,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "대상선택",
+     "options": [
+      "학교",
+      "학년",
+      "학급"
+     ],
+     "id": "radio:대상선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      171,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": true,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      257,
+      122,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "건강체력평가",
+     "checked": true,
+     "id": "check:건강체력평가"
+    },
+    {
+     "aria": null,
+     "box": [
+      400,
+      122,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "심폐지구력",
+     "checked": true,
+     "id": "check:심폐지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      543,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "유연성",
+     "checked": true,
+     "id": "check:유연성"
+    },
+    {
+     "aria": null,
+     "box": [
+      668,
+      122,
+      156,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "근력·근지구력",
+     "checked": true,
+     "id": "check:근력·근지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      830,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "순발력",
+     "checked": true,
+     "id": "check:순발력"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      122,
+      107,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "비만(BMI)",
+     "checked": true,
+     "id": "check:비만(BMI)"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      27
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 비만(BMI)은 [마름, 정상, 과체중, 경도비만, 고도비만]으로 구별됩니다.",
+     "id": "note:※ 비만(BMI)은 [마름, 정상, 과체중, 경도비만, 고도비만]으로 구별됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      210,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      210,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그래프",
+     "variant": "primary",
+     "id": "button:그래프"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      250,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대상별 등급 통계",
+      "요인별 등급 통계",
+      "대상별 점수 통계",
+      "요인별 점수 통계"
+     ],
+     "active": "대상별 점수 통계",
+     "id": "tabs:안쪽 탭"
+    }
+   ]
+  },
+  {
+   "id": "tab:요인별 점수 통계",
+   "tab": "요인별 점수 통계",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "대상선택",
+     "box": [
+      755,
+      82,
+      185,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "대상선택",
+     "options": [
+      "학교",
+      "학년",
+      "학급"
+     ],
+     "id": "radio:대상선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      171,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": true,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      257,
+      122,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "건강체력평가",
+     "checked": true,
+     "id": "check:건강체력평가"
+    },
+    {
+     "aria": null,
+     "box": [
+      400,
+      122,
+      137,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "심폐지구력",
+     "checked": true,
+     "id": "check:심폐지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      543,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "유연성",
+     "checked": true,
+     "id": "check:유연성"
+    },
+    {
+     "aria": null,
+     "box": [
+      668,
+      122,
+      156,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "근력·근지구력",
+     "checked": true,
+     "id": "check:근력·근지구력"
+    },
+    {
+     "aria": null,
+     "box": [
+      830,
+      122,
+      119,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "순발력",
+     "checked": true,
+     "id": "check:순발력"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      122,
+      107,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "비만(BMI)",
+     "checked": true,
+     "id": "check:비만(BMI)"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      27
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 비만(BMI)은 [마름, 정상, 과체중, 경도비만, 고도비만]으로 구별됩니다.",
+     "id": "note:※ 비만(BMI)은 [마름, 정상, 과체중, 경도비만, 고도비만]으로 구별됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      210,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      210,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그래프",
+     "variant": "primary",
+     "id": "button:그래프"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      250,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "대상별 등급 통계",
+      "요인별 등급 통계",
+      "대상별 점수 통계",
+      "요인별 점수 통계"
+     ],
+     "active": "요인별 점수 통계",
+     "id": "tabs:안쪽 탭"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 통계및현황 > 등급/점수통계",
+ "viewport": [
+  1920,
+  945
+ ]
+}

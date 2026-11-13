@@ -1,0 +1,347 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›프로그램관리›학생별수강현황조회",
+ "name": "학생별수강현황조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:59:55+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "원적교",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:원적교"
+    },
+    {
+     "aria": null,
+     "box": [
+      995,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계열/학년/학과",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계열/학년/학과"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1493,
+      173,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": "학년별 수강현황 목록",
+     "box": [
+      25,
+      213,
+      1590,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학년별 수강현황 목록",
+     "selectable": false,
+     "declaredColumns": 22,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        214,
+        50,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/순번"
+      },
+      {
+       "label": "원적교",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        120,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/원적교"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        196,
+        214,
+        120,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        316,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        416,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        516,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        616,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/성별"
+      },
+      {
+       "label": "최종학적변동",
+       "depth": 0,
+       "box": [
+        716,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/최종학적변동"
+      },
+      {
+       "label": "중도추가/취소",
+       "depth": 0,
+       "box": [
+        816,
+        214,
+        120,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/중도추가/취소"
+      },
+      {
+       "label": "기간명",
+       "depth": 0,
+       "box": [
+        936,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/기간명"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        1036,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/프로그램명"
+      },
+      {
+       "label": "프로그램기간",
+       "depth": 0,
+       "box": [
+        1136,
+        214,
+        200,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/프로그램기간"
+      },
+      {
+       "label": "프로그램소개",
+       "depth": 0,
+       "box": [
+        1336,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/프로그램소개"
+      },
+      {
+       "label": "프로그램총차시",
+       "depth": 0,
+       "box": [
+        1436,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/프로그램총차시"
+      },
+      {
+       "label": "출석",
+       "depth": 0,
+       "box": [
+        1536,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학년별 수강현황 목록/출석"
+      }
+     ],
+     "id": "grid:학년별 수강현황 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 프로그램관리 > 학생별수강현황조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

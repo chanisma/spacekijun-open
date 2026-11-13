@@ -1,0 +1,227 @@
+/* 이세계 사회인 «내 기록» — 게임(isekai3d src/styles.css)의 크림·남색·금색 + 플럼밥 초록. 앱 테마가 아니라 게임 옷이다
+   (coin-guide 와 같은 원칙). 글자: 제목 Hahmlet(게임 --font-display) · 손글씨 느낌 Jua(게임 설계 문서의 제목 서체). */
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700;800&family=Jua&display=swap');
+
+.isk {
+  --isk-ink: #1c2850;
+  --isk-ink-2: #2a3c80;
+  --isk-sub: #55618a;
+  --isk-paper: #fdfaf1;
+  --isk-paper-2: #f6efdc;
+  --isk-line: #e6dcc0;
+  --isk-gold: #c9a14a;
+  --isk-gold-2: #d9b45f;
+  --isk-green: #2fbf6a;
+  --isk-green-2: #6be39a;
+  --isk-rose: #d2475d;
+  --isk-blue: #3a7bd5;
+  color: var(--isk-ink);
+  font-family: Pretendard, 'Noto Sans KR', system-ui, sans-serif;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.isk-display { font-family: 'Hahmlet', Georgia, 'Noto Serif KR', serif; }
+.isk-hand { font-family: 'Jua', 'Hahmlet', system-ui, sans-serif; letter-spacing: 0.01em; }
+
+/* ── 히어로: 이세계 사옥의 창밖 ─────────────────────────────────── */
+.isk-hero {
+  position: relative; overflow: hidden; border-radius: 28px; padding: 22px;
+  background: linear-gradient(180deg, #2a3c80 0%, #4f6bc4 38%, #f3c98b 78%, #fbe3b5 100%);
+  box-shadow: 0 10px 0 #e6dcc0, 0 18px 40px #1c285022;
+  display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 22px; align-items: stretch;
+}
+@media (max-width: 860px) { .isk-hero { grid-template-columns: minmax(0, 1fr); padding: 16px; } }
+.isk-hero::before { /* 별 몇 개 */
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.8;
+  background-image: radial-gradient(2px 2px at 12% 14%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 30% 8%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 58% 18%, #fff8 50%, transparent 51%), radial-gradient(1.5px 1.5px at 82% 10%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 70% 28%, #fff9 50%, transparent 51%);
+}
+.isk-skyline { /* 빌딩 실루엣 */
+  position: absolute; left: 0; right: 0; bottom: 0; height: 90px; pointer-events: none; opacity: 0.55;
+  background:
+    linear-gradient(#1c2850, #1c2850) 2% 100% / 7% 70% no-repeat, linear-gradient(#1c2850, #1c2850) 10% 100% / 5% 45% no-repeat,
+    linear-gradient(#1c2850, #1c2850) 16% 100% / 9% 85% no-repeat, linear-gradient(#1c2850, #1c2850) 27% 100% / 6% 55% no-repeat,
+    linear-gradient(#1c2850, #1c2850) 60% 100% / 8% 65% no-repeat, linear-gradient(#1c2850, #1c2850) 70% 100% / 5% 95% no-repeat,
+    linear-gradient(#1c2850, #1c2850) 77% 100% / 10% 50% no-repeat, linear-gradient(#1c2850, #1c2850) 89% 100% / 9% 75% no-repeat;
+}
+
+/* 사원증 — 누르면 뒤집혀 인사평가 */
+.isk-idwrap { perspective: 1200px; position: relative; z-index: 1; min-height: 360px; }
+.isk-id {
+  position: relative; width: 100%; height: 100%; min-height: 360px; transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(.2,.8,.2,1); cursor: pointer; border: 0; background: none; padding: 0; text-align: left; color: inherit;
+}
+.isk-id[data-flipped='true'] { transform: rotateY(180deg); }
+.isk-id:focus-visible { outline: 3px solid var(--isk-gold-2); outline-offset: 4px; border-radius: 22px; }
+.isk-id-face {
+  position: absolute; inset: 0; backface-visibility: hidden; border-radius: 22px; overflow: hidden;
+  background: var(--isk-paper); box-shadow: 0 6px 0 #c9b98f, 0 14px 30px #0003; display: flex; flex-direction: column;
+}
+.isk-id-back { transform: rotateY(180deg); }
+.isk-id-strap { height: 46px; background: repeating-linear-gradient(135deg, var(--isk-ink-2) 0 12px, #33479a 12px 24px); position: relative; }
+.isk-id-strap::after { content: ''; position: absolute; left: 50%; top: 12px; width: 54px; height: 10px; margin-left: -27px; border-radius: 6px; background: var(--isk-paper); box-shadow: inset 0 2px 3px #0004; }
+.isk-id-body { padding: 14px 18px 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.isk-id-company { font-size: 11px; letter-spacing: 0.18em; color: var(--isk-gold); font-weight: 700; }
+.isk-id-row { display: flex; gap: 14px; align-items: center; margin-top: 18px; /* 플럼밥이 회사 줄과 겹치지 않게 */ }
+.isk-photo {
+  position: relative; width: 92px; height: 108px; flex: none; border-radius: 14px; background: linear-gradient(180deg, #dfe8ff, #f5f0e0);
+  border: 3px solid #fff; box-shadow: 0 0 0 2px var(--isk-line); display: grid; place-items: end center; overflow: visible;
+}
+.isk-plumbob { position: absolute; top: -26px; left: 50%; width: 22px; margin-left: -11px; animation: isk-bob 2.6s ease-in-out infinite; filter: drop-shadow(0 0 6px var(--isk-green-2)); }
+.isk-plumbob[data-mood='idle'] { filter: drop-shadow(0 0 6px #ffd54f); }
+@keyframes isk-bob { 0%, 100% { transform: translateY(0) rotateY(0deg); } 50% { transform: translateY(-5px) rotateY(180deg); } }
+.isk-name { font-size: 24px; font-weight: 800; line-height: 1.15; }
+.isk-rank-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; background: var(--isk-ink); color: #fff; font-size: 13px; font-weight: 700; }
+.isk-badge-ribbon {
+  display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px 4px 10px; border-radius: 6px 999px 999px 6px;
+  background: linear-gradient(90deg, var(--isk-gold), var(--isk-gold-2)); color: #3a2a06; font-size: 13px; font-weight: 700;
+}
+.isk-id-fields { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 13px; }
+.isk-id-fields dt { color: var(--isk-sub); }
+.isk-id-fields dd { font-weight: 600; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.isk-barcode { margin-top: auto; height: 30px; border-radius: 4px; background: repeating-linear-gradient(90deg, var(--isk-ink) 0 2px, transparent 2px 4px, var(--isk-ink) 4px 5px, transparent 5px 8px, var(--isk-ink) 8px 11px, transparent 11px 12px); opacity: 0.85; }
+.isk-flip-hint { font-size: 11px; color: var(--isk-sub); text-align: center; }
+
+.isk-grade { font-size: 72px; line-height: 1; font-weight: 800; color: var(--isk-ink-2); text-shadow: 3px 3px 0 var(--isk-gold-2); }
+.isk-stamp {
+  display: inline-grid; place-items: center; width: 84px; height: 84px; border-radius: 50%; border: 3px solid var(--isk-rose); color: var(--isk-rose);
+  font-weight: 800; font-size: 15px; transform: rotate(-14deg); text-align: center; line-height: 1.15; opacity: 0.9;
+  box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px var(--isk-rose);
+}
+
+/* 히어로 오른쪽 */
+.isk-hero-side { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.isk-messenger {
+  align-self: flex-start; max-width: 520px; background: #ffffffee; border-radius: 18px 18px 18px 4px; padding: 10px 14px; font-size: 14px;
+  box-shadow: 0 4px 0 #0001; display: flex; gap: 10px; align-items: flex-start;
+}
+.isk-messenger b { color: var(--isk-ink-2); }
+.isk-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 640px) { .isk-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.isk-kpi { background: #fffdf6f2; border-radius: 16px; padding: 10px 12px; box-shadow: 0 4px 0 #e6dcc0; min-width: 0; }
+.isk-kpi-label { font-size: 12px; color: var(--isk-sub); }
+.isk-kpi-value { font-size: 22px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.isk-kpi-value small { font-size: 13px; font-weight: 600; color: var(--isk-sub); margin-left: 2px; }
+
+.isk-ladder { background: #fffdf6f2; border-radius: 18px; padding: 12px 14px; box-shadow: 0 4px 0 #e6dcc0; }
+.isk-ladder-steps { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; margin-top: 8px; }
+.isk-step { text-align: center; font-size: 12px; color: var(--isk-sub); }
+.isk-step-bar { height: 10px; border-radius: 6px; background: var(--isk-paper-2); margin-bottom: 4px; box-shadow: inset 0 1px 2px #0002; }
+.isk-step[data-on='true'] { color: var(--isk-ink); font-weight: 700; }
+.isk-step[data-on='true'] .isk-step-bar { background: linear-gradient(90deg, var(--isk-green), var(--isk-green-2)); }
+.isk-step[data-here='true'] .isk-step-bar { box-shadow: 0 0 0 2px var(--isk-gold-2); }
+
+/* ── 탭 ─────────────────────────────────────────────────────────── */
+.isk-tabs { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 6px; scrollbar-width: none; }
+.isk-tab {
+  flex: none; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 2px solid var(--isk-line); background: var(--isk-paper);
+  color: var(--isk-ink); font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
+  box-shadow: 0 3px 0 var(--isk-line); transition: transform .12s;
+}
+.isk-tab:hover { transform: translateY(-1px); }
+.isk-tab[aria-selected='true'] { background: var(--isk-ink); color: #fff; border-color: var(--isk-ink); box-shadow: 0 3px 0 #0b1330; }
+.isk-tab-dot { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--isk-rose); color: #fff; font-size: 12px; display: inline-grid; place-items: center; }
+
+/* ── 패널(서류철) ───────────────────────────────────────────────── */
+.isk-panel {
+  background: var(--isk-paper); border-radius: 22px; padding: 18px; box-shadow: 0 6px 0 var(--isk-line);
+  background-image: linear-gradient(transparent 31px, #efe6cc 32px); background-size: 100% 32px; background-position: 0 14px;
+}
+@media (max-width: 640px) { .isk-panel { padding: 14px; } }
+.isk-panel-title { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+.isk-panel-title h2 { font-size: 20px; font-weight: 800; }
+.isk-panel-title p { font-size: 13px; color: var(--isk-sub); }
+.isk-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 860px) { .isk-grid-2 { grid-template-columns: minmax(0, 1fr); } }
+.isk-card { background: #fff; border-radius: 18px; padding: 14px; box-shadow: 0 3px 0 var(--isk-line); min-width: 0; }
+
+/* 근무 기록부 잔디 */
+.isk-heat-scroll { overflow-x: auto; padding-bottom: 4px; }
+.isk-heat { display: inline-grid; grid-auto-flow: column; gap: 4px; }
+.isk-heat-col { display: grid; grid-template-rows: repeat(7, 16px); gap: 4px; }
+.isk-heat-cell { width: 16px; height: 16px; border-radius: 4px; background: #ece4cc; border: 0; padding: 0; }
+.isk-heat-cell[data-l='1'] { background: #b7ecc9; }
+.isk-heat-cell[data-l='2'] { background: #6fd598; }
+.isk-heat-cell[data-l='3'] { background: #2fbf6a; }
+.isk-heat-cell[data-l='4'] { background: #178a48; }
+.isk-heat-cell[data-future='true'] { background: transparent; box-shadow: inset 0 0 0 1px #e6dcc0; }
+.isk-heat-cell[data-today='true'] { box-shadow: 0 0 0 2px var(--isk-gold); }
+.isk-heat-legend { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--isk-sub); margin-top: 8px; flex-wrap: wrap; }
+.isk-stamp-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.isk-attend {
+  width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; text-align: center; font-size: 11px; line-height: 1.1;
+  border: 2px dashed #d8cba5; color: var(--isk-sub);
+}
+.isk-attend[data-on='true'] { border: 2px solid var(--isk-rose); color: var(--isk-rose); font-weight: 800; transform: rotate(-8deg); background: #fff5f6; }
+
+/* 막대 */
+.isk-bar { height: 12px; border-radius: 8px; background: var(--isk-paper-2); overflow: hidden; box-shadow: inset 0 1px 2px #0002; }
+.isk-bar > span { display: block; height: 100%; border-radius: 8px; background: linear-gradient(90deg, var(--isk-green), var(--isk-green-2)); transition: width .8s cubic-bezier(.2,.8,.2,1); }
+.isk-bar[data-tone='gold'] > span { background: linear-gradient(90deg, var(--isk-gold), var(--isk-gold-2)); }
+.isk-bar[data-tone='blue'] > span { background: linear-gradient(90deg, var(--isk-ink-2), var(--isk-blue)); }
+
+/* 성향 저울 */
+.isk-scale { position: relative; height: 14px; border-radius: 8px; background: linear-gradient(90deg, #3a7bd5, #e8e2cf 50%, #d2475d); }
+.isk-scale-pin { position: absolute; top: -5px; width: 24px; height: 24px; margin-left: -12px; border-radius: 50%; background: #fff; border: 3px solid var(--isk-ink); box-shadow: 0 2px 4px #0003; transition: left .8s; }
+
+/* 드라마 포스터 */
+.isk-posters { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.isk-poster {
+  position: relative; border-radius: 18px; overflow: hidden; color: #fff; padding: 14px; min-height: 210px; display: flex; flex-direction: column; gap: 6px;
+  box-shadow: 0 5px 0 #0b133044; text-align: left; border: 0; cursor: pointer;
+}
+.isk-poster:focus-visible { outline: 3px solid var(--isk-gold-2); outline-offset: 3px; }
+.isk-poster-genre { align-self: flex-start; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #fff3; backdrop-filter: blur(2px); }
+.isk-poster-title { padding-right: 58px; /* 완결 도장 자리 */ font-size: 21px; font-weight: 800; line-height: 1.2; text-shadow: 0 2px 0 #0004; }
+.isk-poster-log { font-size: 13px; opacity: 0.92; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.isk-poster-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; font-size: 12px; gap: 8px; }
+.isk-poster-seal { position: absolute; right: 10px; top: 10px; }
+.isk-poster-seal .isk-stamp { width: 64px; height: 64px; font-size: 12px; background: #fffc; }
+
+/* 면담 노트 */
+.isk-notes { display: flex; flex-direction: column; gap: 10px; }
+.isk-note { background: #fff; border-radius: 16px; padding: 12px 14px; box-shadow: 0 3px 0 var(--isk-line); border-left: 6px solid var(--isk-ink-2); min-width: 0; }
+.isk-note[data-kind='life'] { border-left-color: var(--isk-gold); }
+.isk-note[data-kind='explore'] { border-left-color: var(--isk-green); }
+.isk-note-ask { font-size: 15px; font-weight: 600; word-break: keep-all; overflow-wrap: anywhere; }
+.isk-note-ans { margin-top: 8px; font-size: 14px; background: var(--isk-paper); border-radius: 12px; padding: 8px 10px; overflow-wrap: anywhere; }
+.isk-chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: 12px; background: var(--isk-paper-2); color: var(--isk-ink); font-weight: 600; }
+.isk-filter { min-height: 44px; padding: 0 14px; border-radius: 999px; border: 2px solid var(--isk-line); background: #fff; font-weight: 700; font-size: 14px; cursor: pointer; color: var(--isk-ink); }
+.isk-filter[aria-pressed='true'] { background: var(--isk-gold-2); border-color: var(--isk-gold); color: #3a2a06; }
+
+/* 업적 결재판 */
+.isk-ach-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+.isk-ach { position: relative; background: #fff; border-radius: 18px; padding: 14px; box-shadow: 0 3px 0 var(--isk-line); display: flex; flex-direction: column; gap: 8px; min-width: 0; overflow: hidden; }
+.isk-ach[data-state='locked'] { background: #fbf8ef; }
+.isk-ach[data-state='locked'] .isk-ach-title { color: var(--isk-sub); }
+.isk-ach[data-state='ready'] { box-shadow: 0 3px 0 var(--isk-gold), 0 0 0 2px var(--isk-gold-2); animation: isk-glow 2s ease-in-out infinite; }
+@keyframes isk-glow { 0%, 100% { box-shadow: 0 3px 0 var(--isk-gold), 0 0 0 2px var(--isk-gold-2); } 50% { box-shadow: 0 3px 0 var(--isk-gold), 0 0 0 2px var(--isk-gold-2), 0 0 18px #d9b45f88; } }
+.isk-ach-title { font-size: 16px; font-weight: 800; }
+.isk-ach-desc { font-size: 13px; color: var(--isk-sub); }
+.isk-ach-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; }
+.isk-ach-coin { font-size: 13px; font-weight: 700; color: #8a6a1c; }
+.isk-ach-seal { position: absolute; right: 10px; top: 10px; }
+.isk-ach-seal .isk-stamp { width: 58px; height: 58px; font-size: 11px; }
+.isk-ach-seal[data-fresh='true'] .isk-stamp { animation: isk-stampin .5s cubic-bezier(.3,1.6,.5,1) both; }
+@keyframes isk-stampin { 0% { transform: scale(2.2) rotate(-30deg); opacity: 0; } 100% { transform: scale(1) rotate(-14deg); opacity: .9; } }
+.isk-btn {
+  min-height: 44px; padding: 0 16px; border-radius: 12px; border: 0; font-weight: 800; font-size: 15px; cursor: pointer;
+  background: var(--isk-ink); color: #fff; box-shadow: 0 3px 0 #0b1330; display: inline-flex; align-items: center; gap: 6px;
+}
+.isk-btn[data-tone='gold'] { background: linear-gradient(180deg, var(--isk-gold-2), var(--isk-gold)); color: #3a2a06; box-shadow: 0 3px 0 #9b7a2c; }
+.isk-btn:disabled { opacity: 0.55; cursor: default; }
+.isk-btn-ghost { min-height: 44px; padding: 0 14px; border-radius: 12px; border: 2px solid var(--isk-line); background: #fff; color: var(--isk-ink); font-weight: 700; cursor: pointer; }
+
+.isk-empty { text-align: center; padding: 26px 12px; color: var(--isk-sub); font-size: 14px; }
+.isk-empty b { display: block; font-size: 17px; color: var(--isk-ink); margin-bottom: 6px; }
+.isk-preview-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; justify-content: space-between; background: #fff7e0; border: 2px dashed var(--isk-gold-2); border-radius: 16px; padding: 10px 14px; font-size: 14px; }
+
+/* 칭호 고르기 */
+.isk-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.isk-badge-pick { min-height: 44px; padding: 0 12px; border-radius: 999px; border: 2px solid var(--isk-line); background: #fff; font-weight: 700; cursor: pointer; color: var(--isk-ink); }
+.isk-badge-pick[aria-pressed='true'] { background: linear-gradient(90deg, var(--isk-gold), var(--isk-gold-2)); border-color: var(--isk-gold); color: #3a2a06; }
+
+@media (prefers-reduced-motion: reduce) {
+  .isk-plumbob, .isk-ach[data-state='ready'] { animation: none; }
+  .isk-id { transition: none; }
+}

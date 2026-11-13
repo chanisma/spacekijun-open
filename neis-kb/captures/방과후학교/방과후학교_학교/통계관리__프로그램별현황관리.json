@@ -1,0 +1,356 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›통계관리›프로그램별현황관리",
+ "name": "프로그램별현황관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:04:32+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:통계년월"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1216,
+      133,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "방과후자료복사",
+     "variant": "primary",
+     "id": "button:방과후자료복사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1324,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "이전자료복사",
+     "variant": "primary",
+     "id": "button:이전자료복사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1419,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행복사",
+     "variant": "primary",
+     "id": "button:행복사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "프로그램별현황 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "프로그램별현황 목록",
+     "selectable": true,
+     "declaredColumns": 17,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        62
+       ],
+       "id": "col:프로그램별현황 목록/순번"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        165,
+        62
+       ],
+       "id": "col:프로그램별현황 목록/프로그램명"
+      },
+      {
+       "label": "경비별",
+       "depth": 0,
+       "box": [
+        291,
+        174,
+        110,
+        62
+       ],
+       "id": "col:프로그램별현황 목록/경비별"
+      },
+      {
+       "label": "프로그램 내용구분",
+       "depth": 0,
+       "box": [
+        402,
+        174,
+        110,
+        62
+       ],
+       "id": "col:프로그램별현황 목록/프로그램 내용구분"
+      },
+      {
+       "label": "강사수",
+       "depth": 0,
+       "box": [
+        512,
+        174,
+        265,
+        31
+       ],
+       "span": 3,
+       "id": "col:프로그램별현황 목록/강사수"
+      },
+      {
+       "label": "강사료",
+       "depth": 0,
+       "box": [
+        776,
+        174,
+        397,
+        31
+       ],
+       "span": 3,
+       "id": "col:프로그램별현황 목록/강사료"
+      },
+      {
+       "label": "수강료",
+       "depth": 0,
+       "box": [
+        1173,
+        174,
+        132,
+        62
+       ],
+       "id": "col:프로그램별현황 목록/수강료"
+      },
+      {
+       "label": "수익자 부담금액",
+       "depth": 0,
+       "box": [
+        1305,
+        174,
+        132,
+        62
+       ],
+       "id": "col:프로그램별현황 목록/수익자 부담금액"
+      },
+      {
+       "label": "시수",
+       "depth": 0,
+       "box": [
+        1438,
+        174,
+        88,
+        62
+       ],
+       "id": "col:프로그램별현황 목록/시수"
+      },
+      {
+       "label": "학생수",
+       "depth": 0,
+       "box": [
+        1526,
+        174,
+        88,
+        62
+       ],
+       "id": "col:프로그램별현황 목록/학생수"
+      },
+      {
+       "label": "교원",
+       "depth": 1,
+       "box": [
+        512,
+        205,
+        88,
+        31
+       ],
+       "id": "col:프로그램별현황 목록/강사수>교원"
+      },
+      {
+       "label": "개인위탁",
+       "depth": 1,
+       "box": [
+        600,
+        205,
+        88,
+        31
+       ],
+       "id": "col:프로그램별현황 목록/강사수>개인위탁"
+      },
+      {
+       "label": "업체위탁",
+       "depth": 1,
+       "box": [
+        688,
+        205,
+        88,
+        31
+       ],
+       "id": "col:프로그램별현황 목록/강사수>업체위탁"
+      },
+      {
+       "label": "교원",
+       "depth": 1,
+       "box": [
+        776,
+        205,
+        132,
+        31
+       ],
+       "id": "col:프로그램별현황 목록/강사료>교원"
+      },
+      {
+       "label": "개인위탁",
+       "depth": 1,
+       "box": [
+        909,
+        205,
+        132,
+        31
+       ],
+       "id": "col:프로그램별현황 목록/강사료>개인위탁"
+      },
+      {
+       "label": "업체위탁",
+       "depth": 1,
+       "box": [
+        1041,
+        205,
+        132,
+        31
+       ],
+       "id": "col:프로그램별현황 목록/강사료>업체위탁"
+      }
+     ],
+     "id": "grid:프로그램별현황 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 통계관리 > 프로그램별현황관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,1422 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›수상경력›수상대장관리",
+ "name": "수상대장관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:05:01+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:수상대장관리",
+   "tab": "수상대장관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "수상대장관리",
+      "상장출력",
+      "수상대장조회"
+     ],
+     "active": "수상대장관리",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교내/교외",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:교내/교외"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수상명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:수상명"
+    },
+    {
+     "aria": "성명 또는 상장번호 선택",
+     "box": [
+      45,
+      177,
+      126,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "성명 또는 상장번호 선택",
+     "options": [
+      "성명",
+      "상장번호"
+     ],
+     "id": "radio:성명 또는 상장번호 선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      521,
+      177,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상장번호형식",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:상장번호형식"
+    },
+    {
+     "aria": "상장번호형식 추가 버튼",
+     "box": [
+      727,
+      177,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "+",
+     "variant": "primary",
+     "id": "button:+"
+    },
+    {
+     "aria": null,
+     "box": [
+      767,
+      182,
+      114,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "상장번호로 정렬",
+     "checked": false,
+     "id": "check:상장번호로 정렬"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      177,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ '결재중, 결재완결' 된 정보는 수정, 삭제를 할수 없습니다. 수정, 삭제를 하려면 '회수, 기결문서취소' 를 해야 합니다. ※ '결재완료' 된 건에 대해서 학교생활기록부에 자료반영 됩니다. ※ '학교생활기록부 마감' 된 반의 학생정보는 저장, 삭제를 할 수 없습니다. 저장, 삭제를 하려면 '학교생활기록부 마감취소' 를 해야 합니다.",
+     "id": "note:※ '결재중, 결재완결' 된 정보는 수정, 삭제를 할수 없습니다. 수정, 삭제를 하려면 '회수, 기결문서취소' 를 해야 합니다. ※ '결재완료' 된 건에 대해서 학교생활기록부에 자료반영 됩니다. ※ '학교생활기록부 마감' 된 반의 학생정보는 저장, 삭제를 할 수 없습니다. 저장, 삭제를 하려면 '학교생활기록부 마감취소' 를 해야 합니다."
+    },
+    {
+     "aria": "상장양식관리",
+     "box": [
+      1455,
+      339,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "상장양식관리",
+     "variant": "link",
+     "id": "button:상장양식관리"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1551,
+      339,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "link",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "개인/단체수상등록",
+     "box": [
+      1091,
+      389,
+      117,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "개인/단체수상등록",
+     "variant": "link",
+     "id": "button:개인/단체수상등록"
+    },
+    {
+     "aria": "성적우수자수상등록",
+     "box": [
+      1216,
+      389,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "성적우수자수상등록",
+     "variant": "link",
+     "id": "button:성적우수자수상등록"
+    },
+    {
+     "aria": "출석우수자수상등록",
+     "box": [
+      1348,
+      389,
+      124,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출석우수자수상등록",
+     "variant": "link",
+     "id": "button:출석우수자수상등록"
+    },
+    {
+     "aria": "상장번호설정",
+     "box": [
+      1479,
+      389,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "상장번호설정",
+     "variant": "link",
+     "id": "button:상장번호설정"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      389,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      25,
+      399,
+      32,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "조회",
+     "id": "heading:조회"
+    },
+    {
+     "aria": "수상대장관리 목록",
+     "box": [
+      25,
+      429,
+      1590,
+      345
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수상대장관리 목록",
+     "selectable": true,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        430,
+        61,
+        62
+       ],
+       "id": "col:수상대장관리 목록/학년"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        137,
+        430,
+        121,
+        62
+       ],
+       "id": "col:수상대장관리 목록/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        258,
+        430,
+        61,
+        62
+       ],
+       "id": "col:수상대장관리 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        318,
+        430,
+        61,
+        62
+       ],
+       "id": "col:수상대장관리 목록/번호"
+      },
+      {
+       "label": "성명 (수상대표명)",
+       "depth": 0,
+       "box": [
+        379,
+        430,
+        121,
+        62
+       ],
+       "id": "col:수상대장관리 목록/성명 (수상대표명)"
+      },
+      {
+       "label": "교내외 구분",
+       "depth": 0,
+       "box": [
+        500,
+        430,
+        85,
+        62
+       ],
+       "id": "col:수상대장관리 목록/교내외 구분"
+      },
+      {
+       "label": "수상명",
+       "depth": 0,
+       "box": [
+        585,
+        430,
+        121,
+        62
+       ],
+       "id": "col:수상대장관리 목록/수상명"
+      },
+      {
+       "label": "등급(위)",
+       "depth": 0,
+       "box": [
+        706,
+        430,
+        121,
+        62
+       ],
+       "id": "col:수상대장관리 목록/등급(위)"
+      },
+      {
+       "label": "상장번호",
+       "depth": 0,
+       "box": [
+        827,
+        430,
+        121,
+        62
+       ],
+       "id": "col:수상대장관리 목록/상장번호"
+      },
+      {
+       "label": "수상일자",
+       "depth": 0,
+       "box": [
+        948,
+        430,
+        109,
+        62
+       ],
+       "id": "col:수상대장관리 목록/수상일자"
+      },
+      {
+       "label": "수여기관",
+       "depth": 0,
+       "box": [
+        1057,
+        430,
+        145,
+        62
+       ],
+       "id": "col:수상대장관리 목록/수여기관"
+      },
+      {
+       "label": "참가대상 (참가인원)",
+       "depth": 0,
+       "box": [
+        1202,
+        430,
+        121,
+        62
+       ],
+       "id": "col:수상대장관리 목록/참가대상 (참가인원)"
+      },
+      {
+       "label": "개인/단체 구분",
+       "depth": 0,
+       "box": [
+        1323,
+        430,
+        85,
+        62
+       ],
+       "id": "col:수상대장관리 목록/개인/단체 구분"
+      },
+      {
+       "label": "결재상태 (기안자)",
+       "depth": 0,
+       "box": [
+        1408,
+        430,
+        85,
+        62
+       ],
+       "id": "col:수상대장관리 목록/결재상태 (기안자)"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1493,
+        430,
+        121,
+        62
+       ],
+       "id": "col:수상대장관리 목록/비고"
+      }
+     ],
+     "id": "grid:수상대장관리 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  },
+  {
+   "id": "tab:상장출력",
+   "tab": "상장출력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "수상대장관리",
+      "상장출력",
+      "수상대장조회"
+     ],
+     "active": "상장출력",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교내/교외",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:교내/교외"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수상명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:수상명"
+    },
+    {
+     "aria": "성명 또는 상장번호 선택",
+     "box": [
+      385,
+      177,
+      126,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "성명 또는 상장번호 선택",
+     "options": [
+      "성명",
+      "상장번호"
+     ],
+     "id": "radio:성명 또는 상장번호 선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      861,
+      177,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상장번호형식",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:상장번호형식"
+    },
+    {
+     "aria": "상장번호형식 추가 버튼",
+     "box": [
+      1067,
+      177,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "+",
+     "variant": "primary",
+     "id": "button:+"
+    },
+    {
+     "aria": null,
+     "box": [
+      1122,
+      182,
+      114,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "상장번호로 정렬",
+     "checked": false,
+     "id": "check:상장번호로 정렬"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      177,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "상장양식관리",
+     "box": [
+      1527,
+      238,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "상장양식관리",
+     "variant": "link",
+     "id": "button:상장양식관리"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      294,
+      1460,
+      21
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "체크되면 수상명 \"( )\" 안의 글자는 출력시 등급앞에 표시됩니다.",
+     "checked": false,
+     "id": "check:체크되면 수상명 \"( )\" 안의 글자는 출력시 등급앞에 표시됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      321,
+      1460,
+      21
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "체크되면 부문이 없고 등급만 있는 경우 출력시 등급(위)이 표시됩니다.",
+     "checked": false,
+     "id": "check:체크되면 부문이 없고 등급만 있는 경우 출력시 등급(위)이 표시됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      347,
+      1460,
+      21
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "체크되면 단체건일 경우 단체상장과 개인별단체상장까지 출력됩니다.",
+     "checked": false,
+     "id": "check:체크되면 단체건일 경우 단체상장과 개인별단체상장까지 출력됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      374,
+      1460,
+      21
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "체크되면 상장 출력시 학과명이 표시되지않습니다.",
+     "checked": false,
+     "id": "check:체크되면 상장 출력시 학과명이 표시되지않습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      428,
+      1460,
+      21
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "체크되면 상장 부문과 등급(위)가 개행되어 표시됩니다.",
+     "checked": false,
+     "id": "check:체크되면 상장 부문과 등급(위)가 개행되어 표시됩니다."
+    },
+    {
+     "aria": "인쇄",
+     "box": [
+      1527,
+      495,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인쇄",
+     "variant": "link",
+     "id": "button:인쇄"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      495,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      25,
+      505,
+      32,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "조회",
+     "id": "heading:조회"
+    },
+    {
+     "aria": "상장출력 목록",
+     "box": [
+      25,
+      535,
+      1590,
+      238
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "상장출력 목록",
+     "selectable": true,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        536,
+        57,
+        62
+       ],
+       "id": "col:상장출력 목록/학년"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        133,
+        536,
+        114,
+        62
+       ],
+       "id": "col:상장출력 목록/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        247,
+        536,
+        57,
+        62
+       ],
+       "id": "col:상장출력 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        304,
+        536,
+        57,
+        62
+       ],
+       "id": "col:상장출력 목록/번호"
+      },
+      {
+       "label": "성명 (수상대표명)",
+       "depth": 0,
+       "box": [
+        361,
+        536,
+        114,
+        62
+       ],
+       "id": "col:상장출력 목록/성명 (수상대표명)"
+      },
+      {
+       "label": "상장명(코드)",
+       "depth": 0,
+       "box": [
+        475,
+        536,
+        137,
+        62
+       ],
+       "id": "col:상장출력 목록/상장명(코드)"
+      },
+      {
+       "label": "교내외 구분",
+       "depth": 0,
+       "box": [
+        611,
+        536,
+        80,
+        62
+       ],
+       "id": "col:상장출력 목록/교내외 구분"
+      },
+      {
+       "label": "수상명",
+       "depth": 0,
+       "box": [
+        691,
+        536,
+        148,
+        62
+       ],
+       "id": "col:상장출력 목록/수상명"
+      },
+      {
+       "label": "등급(위)",
+       "depth": 0,
+       "box": [
+        839,
+        536,
+        114,
+        62
+       ],
+       "id": "col:상장출력 목록/등급(위)"
+      },
+      {
+       "label": "상장번호",
+       "depth": 0,
+       "box": [
+        953,
+        536,
+        114,
+        62
+       ],
+       "id": "col:상장출력 목록/상장번호"
+      },
+      {
+       "label": "수상일자",
+       "depth": 0,
+       "box": [
+        1067,
+        536,
+        91,
+        62
+       ],
+       "id": "col:상장출력 목록/수상일자"
+      },
+      {
+       "label": "수여기관",
+       "depth": 0,
+       "box": [
+        1158,
+        536,
+        159,
+        62
+       ],
+       "id": "col:상장출력 목록/수여기관"
+      },
+      {
+       "label": "참가대상 (참가인원)",
+       "depth": 0,
+       "box": [
+        1318,
+        536,
+        103,
+        62
+       ],
+       "id": "col:상장출력 목록/참가대상 (참가인원)"
+      },
+      {
+       "label": "개인/단체 구분",
+       "depth": 0,
+       "box": [
+        1420,
+        536,
+        80,
+        62
+       ],
+       "id": "col:상장출력 목록/개인/단체 구분"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1500,
+        536,
+        114,
+        62
+       ],
+       "id": "col:상장출력 목록/비고"
+      }
+     ],
+     "id": "grid:상장출력 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  },
+  {
+   "id": "tab:수상대장조회",
+   "tab": "수상대장조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "수상대장관리",
+      "상장출력",
+      "수상대장조회"
+     ],
+     "active": "수상대장조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교내/교외",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:교내/교외"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:결재상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수상명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:수상명"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수상일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:수상일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      650,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수상일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:수상일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      780,
+      182,
+      114,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "상장번호로 정렬",
+     "checked": false,
+     "id": "check:상장번호로 정렬"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      177,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1447,
+      238,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      238,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "수상대장조회 목록",
+     "box": [
+      25,
+      278,
+      1590,
+      535
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수상대장조회 목록",
+     "selectable": false,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        279,
+        50,
+        62
+       ],
+       "id": "col:수상대장조회 목록/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        279,
+        61,
+        62
+       ],
+       "id": "col:수상대장조회 목록/학년"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        137,
+        279,
+        121,
+        62
+       ],
+       "id": "col:수상대장조회 목록/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        258,
+        279,
+        61,
+        62
+       ],
+       "id": "col:수상대장조회 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        318,
+        279,
+        61,
+        62
+       ],
+       "id": "col:수상대장조회 목록/번호"
+      },
+      {
+       "label": "성명 (수상대표명)",
+       "depth": 0,
+       "box": [
+        379,
+        279,
+        121,
+        62
+       ],
+       "id": "col:수상대장조회 목록/성명 (수상대표명)"
+      },
+      {
+       "label": "교내외 구분",
+       "depth": 0,
+       "box": [
+        500,
+        279,
+        85,
+        62
+       ],
+       "id": "col:수상대장조회 목록/교내외 구분"
+      },
+      {
+       "label": "수상명",
+       "depth": 0,
+       "box": [
+        585,
+        279,
+        121,
+        62
+       ],
+       "id": "col:수상대장조회 목록/수상명"
+      },
+      {
+       "label": "등급(위)",
+       "depth": 0,
+       "box": [
+        706,
+        279,
+        121,
+        62
+       ],
+       "id": "col:수상대장조회 목록/등급(위)"
+      },
+      {
+       "label": "상장번호",
+       "depth": 0,
+       "box": [
+        827,
+        279,
+        121,
+        62
+       ],
+       "id": "col:수상대장조회 목록/상장번호"
+      },
+      {
+       "label": "수상일자",
+       "depth": 0,
+       "box": [
+        948,
+        279,
+        121,
+        62
+       ],
+       "id": "col:수상대장조회 목록/수상일자"
+      },
+      {
+       "label": "수여기관",
+       "depth": 0,
+       "box": [
+        1069,
+        279,
+        121,
+        62
+       ],
+       "id": "col:수상대장조회 목록/수여기관"
+      },
+      {
+       "label": "참가대상 (참가인원)",
+       "depth": 0,
+       "box": [
+        1190,
+        279,
+        121,
+        62
+       ],
+       "id": "col:수상대장조회 목록/참가대상 (참가인원)"
+      },
+      {
+       "label": "개인/단체 구분",
+       "depth": 0,
+       "box": [
+        1311,
+        279,
+        85,
+        62
+       ],
+       "id": "col:수상대장조회 목록/개인/단체 구분"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1396,
+        279,
+        97,
+        62
+       ],
+       "id": "col:수상대장조회 목록/결재상태"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1493,
+        279,
+        121,
+        62
+       ],
+       "id": "col:수상대장조회 목록/비고"
+      }
+     ],
+     "id": "grid:수상대장조회 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 수상경력 > 수상대장관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

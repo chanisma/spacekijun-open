@@ -1,0 +1,11 @@
+{
+  "asset": "chapter-observatory-arrival.png",
+  "generated_at": "2026-09-13",
+  "mode": "built-in imagegen",
+  "size": [1536, 1024],
+  "references": ["ria-player.png", "luon.png", "observatory.png"],
+  "use_case": "illustration-story",
+  "description": "First observatory entrance: Ria is delighted and amazed by the vast celestial dome and telescope; taller silver-haired Luon smiles beside her and gestures to introduce the room. Preserve existing faces and default costumes; plum, ivory and antique gold painterly romance-fantasy art. Single landscape scene, no text or UI. Central faces for mobile cropping.",
+  "postprocessing": "None; generated original copied to project.",
+  "wardrobe": "Fixed story illustration in default outfits; live dialogue portraits use equipped outfits."
+}

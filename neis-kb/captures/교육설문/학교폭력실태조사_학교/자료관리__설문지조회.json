@@ -1,0 +1,165 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학교폭력실태조사#학교›자료관리›설문지조회",
+ "name": "설문지조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:12:39+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "설문연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:설문연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      260,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "설문연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:설문연도#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "설문지 목록",
+     "box": [
+      25,
+      163,
+      1590,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "설문지 목록",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        50,
+        36
+       ],
+       "id": "col:설문지 목록/순번"
+      },
+      {
+       "label": "설문차수",
+       "depth": 0,
+       "box": [
+        76,
+        164,
+        120,
+        36
+       ],
+       "id": "col:설문지 목록/설문차수"
+      },
+      {
+       "label": "초중등구분",
+       "depth": 0,
+       "box": [
+        196,
+        164,
+        100,
+        36
+       ],
+       "id": "col:설문지 목록/초중등구분"
+      },
+      {
+       "label": "설문지유형",
+       "depth": 0,
+       "box": [
+        296,
+        164,
+        120,
+        36
+       ],
+       "id": "col:설문지 목록/설문지유형"
+      },
+      {
+       "label": "설문지명",
+       "depth": 0,
+       "box": [
+        416,
+        164,
+        1018,
+        36
+       ],
+       "id": "col:설문지 목록/설문지명"
+      },
+      {
+       "label": "미리보기",
+       "depth": 0,
+       "box": [
+        1434,
+        164,
+        80,
+        36
+       ],
+       "id": "col:설문지 목록/미리보기"
+      },
+      {
+       "label": "등록일자",
+       "depth": 0,
+       "box": [
+        1514,
+        164,
+        100,
+        36
+       ],
+       "id": "col:설문지 목록/등록일자"
+      }
+     ],
+     "id": "grid:설문지 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교폭력실태조사 > 자료관리 > 설문지조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

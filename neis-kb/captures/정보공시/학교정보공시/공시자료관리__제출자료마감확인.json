@@ -1,0 +1,271 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시자료관리›제출자료마감확인",
+ "name": "제출자료마감확인",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:55:38+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "제외항목여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:제외항목여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "작성자마감여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:작성자마감여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1115,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "확인자마감여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:확인자마감여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1355,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "제출여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:제출여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      163,
+      1590,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "공시항목",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        342,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/공시항목"
+      },
+      {
+       "label": "제외항목여부",
+       "depth": 0,
+       "box": [
+        368,
+        164,
+        82,
+        36
+       ],
+       "id": "col:그리드/제외항목여부"
+      },
+      {
+       "label": "작성자",
+       "depth": 0,
+       "box": [
+        450,
+        164,
+        117,
+        36
+       ],
+       "id": "col:그리드/작성자"
+      },
+      {
+       "label": "작성자마감여부",
+       "depth": 0,
+       "box": [
+        568,
+        164,
+        135,
+        36
+       ],
+       "id": "col:그리드/작성자마감여부"
+      },
+      {
+       "label": "작성자마감일자",
+       "depth": 0,
+       "box": [
+        703,
+        164,
+        130,
+        36
+       ],
+       "id": "col:그리드/작성자마감일자"
+      },
+      {
+       "label": "확인자",
+       "depth": 0,
+       "box": [
+        833,
+        164,
+        117,
+        36
+       ],
+       "id": "col:그리드/확인자"
+      },
+      {
+       "label": "확인자마감여부",
+       "depth": 0,
+       "box": [
+        950,
+        164,
+        140,
+        36
+       ],
+       "id": "col:그리드/확인자마감여부"
+      },
+      {
+       "label": "확인자마감일자",
+       "depth": 0,
+       "box": [
+        1090,
+        164,
+        121,
+        36
+       ],
+       "id": "col:그리드/확인자마감일자"
+      },
+      {
+       "label": "총괄업무담당자마감여부",
+       "depth": 0,
+       "box": [
+        1211,
+        164,
+        204,
+        36
+       ],
+       "id": "col:그리드/총괄업무담당자마감여부"
+      },
+      {
+       "label": "총괄업무담당자마감일자",
+       "depth": 0,
+       "box": [
+        1416,
+        164,
+        198,
+        36
+       ],
+       "id": "col:그리드/총괄업무담당자마감일자"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시자료관리 > 공시자료마감 > 제출자료마감확인",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

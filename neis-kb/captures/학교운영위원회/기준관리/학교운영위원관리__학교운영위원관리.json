@@ -1,0 +1,384 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교운영위원회›기준관리›학교운영위원관리›학교운영위원관리",
+ "name": "학교운영위원관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:31:13+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "기수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기수"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "자격여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:자격여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1264,
+      133,
+      119,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "이전기수 자료 복사",
+     "variant": "plain",
+     "id": "button:이전기수 자료 복사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1399,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1459,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "운영위원 관리 그리드",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "운영위원 관리 그리드",
+     "selectable": true,
+     "declaredColumns": 27,
+     "columns": [
+      {
+       "label": "F",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        35,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/F"
+      },
+      {
+       "label": "연도",
+       "depth": 0,
+       "box": [
+        111,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/연도"
+      },
+      {
+       "label": "기수",
+       "depth": 0,
+       "box": [
+        211,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/기수"
+      },
+      {
+       "label": "위원구분",
+       "depth": 0,
+       "box": [
+        311,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/위원구분"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        411,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/성명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        511,
+        174,
+        132,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/생년월일"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        643,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/성별"
+      },
+      {
+       "label": "나이",
+       "depth": 0,
+       "box": [
+        743,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/나이"
+      },
+      {
+       "label": "직업",
+       "depth": 0,
+       "box": [
+        843,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/직업"
+      },
+      {
+       "label": "직책",
+       "depth": 0,
+       "box": [
+        943,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/직책"
+      },
+      {
+       "label": "임기",
+       "depth": 0,
+       "box": [
+        1043,
+        174,
+        264,
+        31
+       ],
+       "span": 2,
+       "id": "col:운영위원 관리 그리드/임기"
+      },
+      {
+       "label": "당선결정일",
+       "depth": 0,
+       "box": [
+        1307,
+        174,
+        132,
+        62
+       ],
+       "id": "col:운영위원 관리 그리드/당선결정일"
+      },
+      {
+       "label": "학운위원 경력",
+       "depth": 0,
+       "box": [
+        1439,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/학운위원 경력"
+      },
+      {
+       "label": "당해 학교 학부모 여부",
+       "depth": 0,
+       "box": [
+        1539,
+        174,
+        100,
+        93
+       ],
+       "id": "col:운영위원 관리 그리드/당해 학교 학부모 여부"
+      },
+      {
+       "label": "일괄적용",
+       "depth": 1,
+       "box": [
+        1043,
+        205,
+        264,
+        31
+       ],
+       "span": 2,
+       "id": "col:운영위원 관리 그리드/임기>일괄적용"
+      },
+      {
+       "label": "시작일",
+       "depth": 2,
+       "box": [
+        1043,
+        236,
+        132,
+        31
+       ],
+       "id": "col:운영위원 관리 그리드/임기>일괄적용>시작일"
+      },
+      {
+       "label": "종료일",
+       "depth": 2,
+       "box": [
+        1175,
+        236,
+        132,
+        31
+       ],
+       "id": "col:운영위원 관리 그리드/임기>일괄적용>종료일"
+      },
+      {
+       "label": "일괄적용",
+       "depth": 2,
+       "box": [
+        1307,
+        236,
+        132,
+        31
+       ],
+       "id": "col:운영위원 관리 그리드/당선결정일>일괄적용"
+      }
+     ],
+     "id": "grid:운영위원 관리 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교운영위원회}기준관리 > 학교운영위원관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,561 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›독서활동상황›독서활동상황기록",
+ "name": "독서활동상황기록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:30:08+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:개인별",
+   "tab": "개인별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "개인별",
+      "반별"
+     ],
+     "active": "개인별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1279,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1327,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "독서활동상황조회",
+     "box": [
+      1375,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "독서활동상황조회",
+     "variant": "link",
+     "id": "button:독서활동상황조회"
+    },
+    {
+     "aria": "공동/위탁",
+     "box": [
+      1495,
+      198,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "위탁/공동 가져오기",
+     "variant": "primary",
+     "id": "button:위탁/공동 가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      208,
+      359,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학교생활기록부 반영기록",
+     "id": "heading:학교생활기록부 반영기록"
+    },
+    {
+     "aria": "독서활동학생목록",
+     "box": [
+      25,
+      228,
+      394,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "독서활동학생목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        229,
+        125,
+        36
+       ],
+       "id": "col:독서활동학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        151,
+        229,
+        251,
+        36
+       ],
+       "id": "col:독서활동학생목록/성명"
+      }
+     ],
+     "id": "grid:독서활동학생목록"
+    },
+    {
+     "aria": "독서활동내역상세",
+     "box": [
+      434,
+      238,
+      1181,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "독서활동내역상세",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "과목 또는 영역",
+       "depth": 0,
+       "box": [
+        485,
+        239,
+        208,
+        62
+       ],
+       "id": "col:독서활동내역상세/과목 또는 영역"
+      },
+      {
+       "label": "독서활동상황",
+       "depth": 0,
+       "box": [
+        693,
+        239,
+        625,
+        62
+       ],
+       "id": "col:독서활동내역상세/독서활동상황"
+      },
+      {
+       "label": "글자수 (1,2학기 통합)",
+       "depth": 0,
+       "box": [
+        1318,
+        239,
+        296,
+        62
+       ],
+       "id": "col:독서활동내역상세/글자수 (1,2학기 통합)"
+      }
+     ],
+     "id": "grid:독서활동내역상세"
+    }
+   ]
+  },
+  {
+   "id": "tab:반별",
+   "tab": "반별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "개인별",
+      "반별"
+     ],
+     "active": "반별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1115,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "독서활동 영역",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:독서활동 영역"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "그리드 축소",
+     "box": [
+      1323,
+      237,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그리드 축소",
+     "variant": "plain",
+     "id": "button:그리드 축소"
+    },
+    {
+     "aria": "그리드 확대",
+     "box": [
+      1361,
+      237,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그리드 확대",
+     "variant": "plain",
+     "id": "button:그리드 확대"
+    },
+    {
+     "aria": "일괄입력",
+     "box": [
+      1407,
+      237,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄입력",
+     "variant": "link",
+     "id": "button:일괄입력"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      237,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      237,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      237,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      247,
+      443,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학교생활기록부 반영기록",
+     "id": "heading:학교생활기록부 반영기록"
+    },
+    {
+     "aria": "반별독서활동상황기록 목록",
+     "box": [
+      25,
+      277,
+      1590,
+      536
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반별독서활동상황기록 목록",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        278,
+        137,
+        62
+       ],
+       "id": "col:반별독서활동상황기록 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        213,
+        278,
+        273,
+        62
+       ],
+       "id": "col:반별독서활동상황기록 목록/성명"
+      },
+      {
+       "label": "독서활동상황",
+       "depth": 0,
+       "box": [
+        486,
+        278,
+        820,
+        62
+       ],
+       "id": "col:반별독서활동상황기록 목록/독서활동상황"
+      },
+      {
+       "label": "글자수 (1,2학기 통합)",
+       "depth": 0,
+       "box": [
+        1306,
+        278,
+        292,
+        62
+       ],
+       "id": "col:반별독서활동상황기록 목록/글자수 (1,2학기 통합)"
+      }
+     ],
+     "id": "grid:반별독서활동상황기록 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 독서활동상황 > 독서활동상황기록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

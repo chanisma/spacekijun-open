@@ -1,0 +1,435 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›기준정보관리›기준정보관리",
+ "name": "기준정보관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:16:13+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      97,
+      82,
+      148,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      791,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "note",
+     "label": "※ 지원금의 추가, 수정 등 변경사항이 있으면 연계상태가 'N'으로 되니 반드시 연계전송 버튼을 눌러주시기 바랍니다.",
+     "id": "note:※ 지원금의 추가, 수정 등 변경사항이 있으면 연계상태가 'N'으로 되니 반드시 연계전송 버튼을 눌러주시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      133,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      91,
+      173,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수용비설정",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:수용비설정"
+    },
+    {
+     "aria": null,
+     "box": [
+      197,
+      173,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수용비설정",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:수용비설정#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      213,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "연계전송",
+     "variant": "primary",
+     "id": "button:연계전송"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "자유수강권 지원금 설정 (1인당)",
+     "box": [
+      25,
+      223,
+      230,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "자유수강권 지원금 설정 (1인당)",
+     "id": "heading:자유수강권 지원금 설정 (1인당)"
+    },
+    {
+     "aria": "추가지원금 설정(1인당)",
+     "box": [
+      828,
+      223,
+      172,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "추가지원금 설정(1인당)",
+     "id": "heading:추가지원금 설정(1인당)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      253,
+      788,
+      213
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "지원구분",
+       "depth": 0,
+       "box": [
+        26,
+        254,
+        333,
+        36
+       ],
+       "id": "col:그리드/지원구분"
+      },
+      {
+       "label": "지원금액",
+       "depth": 0,
+       "box": [
+        359,
+        254,
+        333,
+        36
+       ],
+       "id": "col:그리드/지원금액"
+      },
+      {
+       "label": "지원여부",
+       "depth": 0,
+       "box": [
+        692,
+        254,
+        60,
+        36
+       ],
+       "id": "col:그리드/지원여부"
+      },
+      {
+       "label": "연계상태",
+       "depth": 0,
+       "box": [
+        752,
+        254,
+        60,
+        36
+       ],
+       "id": "col:그리드/연계상태"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": "추가지원금 설정 목록",
+     "box": [
+      828,
+      253,
+      788,
+      213
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "추가지원금 설정 목록",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "학비지원구분",
+       "depth": 0,
+       "box": [
+        879,
+        254,
+        132,
+        36
+       ],
+       "id": "col:추가지원금 설정 목록/학비지원구분"
+      },
+      {
+       "label": "학비지원명",
+       "depth": 0,
+       "box": [
+        1010,
+        254,
+        132,
+        36
+       ],
+       "id": "col:추가지원금 설정 목록/학비지원명"
+      },
+      {
+       "label": "지원금액",
+       "depth": 0,
+       "box": [
+        1142,
+        254,
+        110,
+        36
+       ],
+       "id": "col:추가지원금 설정 목록/지원금액"
+      },
+      {
+       "label": "감면근거",
+       "depth": 0,
+       "box": [
+        1251,
+        254,
+        153,
+        36
+       ],
+       "id": "col:추가지원금 설정 목록/감면근거"
+      },
+      {
+       "label": "지원여부",
+       "depth": 0,
+       "box": [
+        1405,
+        254,
+        70,
+        36
+       ],
+       "id": "col:추가지원금 설정 목록/지원여부"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1475,
+        254,
+        70,
+        36
+       ],
+       "id": "col:추가지원금 설정 목록/사용여부"
+      },
+      {
+       "label": "연계상태",
+       "depth": 0,
+       "box": [
+        1545,
+        254,
+        70,
+        36
+       ],
+       "id": "col:추가지원금 설정 목록/연계상태"
+      }
+     ],
+     "id": "grid:추가지원금 설정 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      521,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      521,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": "강의실 설정",
+     "box": [
+      25,
+      531,
+      85,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "강의실 설정",
+     "id": "heading:강의실 설정"
+    },
+    {
+     "aria": "강의실 목록",
+     "box": [
+      25,
+      561,
+      1590,
+      213
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "강의실 목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        562,
+        50,
+        36
+       ],
+       "id": "col:강의실 목록/순번"
+      },
+      {
+       "label": "강의실명",
+       "depth": 0,
+       "box": [
+        126,
+        562,
+        744,
+        36
+       ],
+       "id": "col:강의실 목록/강의실명"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        870,
+        562,
+        744,
+        36
+       ],
+       "id": "col:강의실 목록/비고"
+      }
+     ],
+     "id": "grid:강의실 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 기준정보관리 > 기준정보관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

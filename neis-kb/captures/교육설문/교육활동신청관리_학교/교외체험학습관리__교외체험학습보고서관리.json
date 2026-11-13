@@ -1,0 +1,339 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›교육활동신청관리#학교›교외체험학습관리›교외체험학습보고서관리",
+ "name": "교외체험학습보고서관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:57:22+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      865,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1075,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1315,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "접수상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:접수상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:결재상태"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교외체험학습 누적일수는 교외체험학습 기준관리 완결 시점 이후부터 제출된 신청서에 대해 적용됩니다.",
+     "id": "note:※ 교외체험학습 누적일수는 교외체험학습 기준관리 완결 시점 이후부터 제출된 신청서에 대해 적용됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      211,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      251,
+      1590,
+      563
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        67,
+        252,
+        160,
+        47
+       ],
+       "span": 2,
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "신청일자",
+       "depth": 0,
+       "box": [
+        227,
+        252,
+        101,
+        47
+       ],
+       "id": "col:그리드/신청일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        328,
+        252,
+        50,
+        47
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        378,
+        252,
+        50,
+        47
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        428,
+        252,
+        50,
+        47
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        478,
+        252,
+        137,
+        47
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "체험기간",
+       "depth": 0,
+       "box": [
+        615,
+        252,
+        252,
+        47
+       ],
+       "id": "col:그리드/체험기간"
+      },
+      {
+       "label": "체험장소",
+       "depth": 0,
+       "box": [
+        867,
+        252,
+        260,
+        47
+       ],
+       "id": "col:그리드/체험장소"
+      },
+      {
+       "label": "허용일수",
+       "depth": 0,
+       "box": [
+        1127,
+        252,
+        80,
+        47
+       ],
+       "id": "col:그리드/허용일수"
+      },
+      {
+       "label": "신청일수",
+       "depth": 0,
+       "box": [
+        1207,
+        252,
+        80,
+        47
+       ],
+       "id": "col:그리드/신청일수"
+      },
+      {
+       "label": "누적일수",
+       "depth": 0,
+       "box": [
+        1287,
+        252,
+        80,
+        47
+       ],
+       "id": "col:그리드/누적일수"
+      },
+      {
+       "label": "잔여일수",
+       "depth": 0,
+       "box": [
+        1367,
+        252,
+        80,
+        47
+       ],
+       "id": "col:그리드/잔여일수"
+      },
+      {
+       "label": "참고사항",
+       "depth": 0,
+       "box": [
+        1447,
+        252,
+        167,
+        47
+       ],
+       "id": "col:그리드/참고사항"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육활동신청관리 > 교외체험학습관리 > 교외체험학습보고서관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

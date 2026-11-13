@@ -1,0 +1,1166 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›학교기본정보등록›학교기본정보",
+ "name": "학교기본정보",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:09:11+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학교기본정보는 식단 편성 시 공동조리교 급식인원 관리 및 CCP관리 등록 기준 등 급식을 운영하는데 필요한 중요한 정보를 관리하는 화면입니다.",
+     "id": "note:※ 학교기본정보는 식단 편성 시 공동조리교 급식인원 관리 및 CCP관리 등록 기준 등 급식을 운영하는데 필요한 중요한 정보를 관리하는 화면입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 급식시작기준일은 급식일지에서 누적인원, 학부모참여인원, 급식횟수를 계산하는 시작기준일 입니다.(매년 3월1일 권장)",
+     "id": "note:※ 급식시작기준일은 급식일지에서 누적인원, 학부모참여인원, 급식횟수를 계산하는 시작기준일 입니다.(매년 3월1일 권장)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      205,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      215,
+      450,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학교기본정보",
+     "id": "heading:학교기본정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      291,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교장명",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학교장명"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      377,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "급식기본정보",
+     "id": "heading:급식기본정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      413,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급식유형구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:급식유형구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      413,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급식형태구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:급식형태구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      413,
+      250,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "공동관리구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공동관리구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      453,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급식시작기준일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식시작기준일"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      453,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "최초급식개시일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:최초급식개시일"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      453,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급식지정일",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:급식지정일"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      493,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "집단급식소신고일",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:집단급식소신고일"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      493,
+      395,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급식대상학년",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:급식대상학년"
+    },
+    {
+     "aria": "후원회유무여부",
+     "box": [
+      1200,
+      493,
+      180,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "후원회유무여부 /금액",
+     "options": [
+      "있음",
+      "없음"
+     ],
+     "id": "radio:후원회유무여부 /금액"
+    },
+    {
+     "aria": null,
+     "box": [
+      252,
+      533,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기중지원방법",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학기중지원방법"
+    },
+    {
+     "aria": null,
+     "box": [
+      608,
+      533,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "토공휴일및방학중지원방법",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:토공휴일및방학중지원방법"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      579,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "급식시설",
+     "id": "heading:급식시설"
+    },
+    {
+     "aria": null,
+     "box": [
+      1087,
+      579,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1147,
+      579,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1488,
+      579,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      579,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제#2"
+    },
+    {
+     "aria": "냉장/냉동고",
+     "box": [
+      813,
+      589,
+      87,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "냉장/냉동고",
+     "id": "heading:냉장/냉동고"
+    },
+    {
+     "aria": "영양교사‧영양사",
+     "box": [
+      1214,
+      589,
+      130,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "영양교사‧영양사",
+     "id": "heading:영양교사‧영양사"
+    },
+    {
+     "aria": null,
+     "box": [
+      140,
+      615,
+      266,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급식실위치",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:급식실위치"
+    },
+    {
+     "aria": null,
+     "box": [
+      526,
+      615,
+      266,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급식실구조",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:급식실구조"
+    },
+    {
+     "aria": "냉장/냉동고 목록",
+     "box": [
+      813,
+      619,
+      386,
+      200
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "냉장/냉동고 목록",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        854,
+        620,
+        92,
+        36
+       ],
+       "id": "col:냉장/냉동고 목록/구분"
+      },
+      {
+       "label": "냉장고 냉동고명",
+       "depth": 0,
+       "box": [
+        945,
+        620,
+        138,
+        36
+       ],
+       "id": "col:냉장/냉동고 목록/냉장고 냉동고명"
+      },
+      {
+       "label": "정렬 순서",
+       "depth": 0,
+       "box": [
+        1083,
+        620,
+        69,
+        36
+       ],
+       "id": "col:냉장/냉동고 목록/정렬 순서"
+      },
+      {
+       "label": "사용 여부",
+       "depth": 0,
+       "box": [
+        1152,
+        620,
+        46,
+        36
+       ],
+       "id": "col:냉장/냉동고 목록/사용 여부"
+      }
+     ],
+     "id": "grid:냉장/냉동고 목록"
+    },
+    {
+     "aria": "영양교사‧영양사 목록",
+     "box": [
+      1214,
+      619,
+      386,
+      200
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "영양교사‧영양사 목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        1265,
+        620,
+        142,
+        36
+       ],
+       "id": "col:영양교사‧영양사 목록/구분"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        1407,
+        620,
+        142,
+        36
+       ],
+       "id": "col:영양교사‧영양사 목록/성명"
+      },
+      {
+       "label": "대표 여부",
+       "depth": 0,
+       "box": [
+        1549,
+        620,
+        50,
+        36
+       ],
+       "id": "col:영양교사‧영양사 목록/대표 여부"
+      }
+     ],
+     "id": "grid:영양교사‧영양사 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      140,
+      655,
+      244,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조리장면적",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:조리장면적"
+    },
+    {
+     "aria": null,
+     "box": [
+      526,
+      655,
+      244,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식당면적",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:식당면적"
+    },
+    {
+     "aria": null,
+     "box": [
+      140,
+      695,
+      266,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사용용수",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사용용수"
+    },
+    {
+     "aria": null,
+     "box": [
+      526,
+      695,
+      266,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "사용연료",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사용연료"
+    },
+    {
+     "aria": null,
+     "box": [
+      140,
+      735,
+      244,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식당좌석수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:식당좌석수"
+    },
+    {
+     "aria": "전처리실분리여부",
+     "box": [
+      526,
+      735,
+      266,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "전처리실 분리여부",
+     "options": [
+      "분리",
+      "미분리"
+     ],
+     "id": "radio:전처리실 분리여부"
+    },
+    {
+     "aria": "세척기여부",
+     "box": [
+      140,
+      775,
+      266,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "세척기여부",
+     "options": [
+      "있음",
+      "없음"
+     ],
+     "id": "radio:세척기여부"
+    },
+    {
+     "aria": "식판소독가능여부",
+     "box": [
+      526,
+      775,
+      266,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "식판소독 가능여부",
+     "options": [
+      "가능",
+      "불가능"
+     ],
+     "id": "radio:식판소독 가능여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      829,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "실시현황",
+     "id": "heading:실시현황"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      865,
+      180,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식사구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:식사구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      366,
+      865,
+      180,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조식",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      865,
+      240,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "배식방법(장소)",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:배식방법(장소)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      865,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "배식시간구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:배식시간구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      905,
+      377,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "연급식일수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:연급식일수"
+    },
+    {
+     "aria": null,
+     "box": [
+      705,
+      905,
+      273,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조식",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:조식#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1014,
+      905,
+      273,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "중식",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1322,
+      905,
+      273,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "석식",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      196,
+      945,
+      231,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "(식품비",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:(식품비"
+    },
+    {
+     "aria": null,
+     "box": [
+      483,
+      945,
+      231,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "+운영비",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:+운영비"
+    },
+    {
+     "aria": null,
+     "box": [
+      769,
+      945,
+      231,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "+인건비",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:+인건비"
+    },
+    {
+     "aria": null,
+     "box": [
+      1056,
+      945,
+      231,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "+기타비",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:+기타비"
+    },
+    {
+     "aria": null,
+     "box": [
+      1346,
+      945,
+      231,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": ")=급식비",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:)=급식비"
+    },
+    {
+     "aria": null,
+     "box": [
+      958,
+      991,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      1018,
+      991,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      1488,
+      991,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      991,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1001,
+      200,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "위탁업체",
+     "id": "heading:위탁업체"
+    },
+    {
+     "aria": "공동조리교",
+     "box": [
+      555,
+      1001,
+      81,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "공동조리교",
+     "id": "heading:공동조리교"
+    },
+    {
+     "aria": "공동관리교",
+     "box": [
+      1085,
+      1001,
+      81,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "공동관리교",
+     "id": "heading:공동관리교"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      1031,
+      515,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 위탁업체정보는 학교급식개시/변경보고서 작성 메뉴에서 작성해 주세요.",
+     "id": "note:※ 위탁업체정보는 학교급식개시/변경보고서 작성 메뉴에서 작성해 주세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      555,
+      1031,
+      515,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 급식형태구분이 조리교일 경우에만 활성화됩니다.",
+     "id": "note:※ 급식형태구분이 조리교일 경우에만 활성화됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1085,
+      1031,
+      515,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 공동관리구분이 공동관리(배치교)일 경우에만 활성화됩니다.",
+     "id": "note:※ 공동관리구분이 공동관리(배치교)일 경우에만 활성화됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      555,
+      1050,
+      515,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 운반방법이 급식운반 형태의 경우 비조리교는 급식일지 작성이 가능합니다.",
+     "id": "note:※ 운반방법이 급식운반 형태의 경우 비조리교는 급식일지 작성이 가능합니다."
+    },
+    {
+     "aria": "공동조리교 목록",
+     "box": [
+      555,
+      1079,
+      515,
+      231
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "공동조리교 목록",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "학교명(비조리교)",
+       "depth": 0,
+       "box": [
+        606,
+        1080,
+        232,
+        36
+       ],
+       "id": "col:공동조리교 목록/학교명(비조리교)"
+      },
+      {
+       "label": "운반방법",
+       "depth": 0,
+       "box": [
+        838,
+        1080,
+        232,
+        36
+       ],
+       "id": "col:공동조리교 목록/운반방법"
+      }
+     ],
+     "id": "grid:공동조리교 목록"
+    },
+    {
+     "aria": "공동관리교 목록",
+     "box": [
+      1085,
+      1079,
+      515,
+      231
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "공동관리교 목록",
+     "selectable": true,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "학교명(대상교)",
+       "depth": 0,
+       "box": [
+        1136,
+        1080,
+        463,
+        36
+       ],
+       "id": "col:공동관리교 목록/학교명(대상교)"
+      }
+     ],
+     "id": "grid:공동관리교 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 학교기본정보등록 > 학교기본정보",
+ "viewport": [
+  1920,
+  945
+ ]
+}

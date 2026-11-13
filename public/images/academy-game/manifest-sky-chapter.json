@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-14",
+  "method": "Built-in image_gen; lamplighter alpha via existing MODNet procedure specified by academy-sky-planner.md",
+  "assets": [
+    {
+      "key": "lamplighter",
+      "file": "lamplighter.png",
+      "source": "C:/Users/User/AppData/Roaming/orca/codex-accounts/1d402b94-c4df-49d2-aa50-906649ba513c/home/generated_images/01a09d77-6669-79a2-9d19-c627faf650a6/exec-43fc573d-a455-488a-a86b-4f5743515193.png",
+      "prompt": "Theo, handsome adult male lamplighter, short dark brown hair, amber eyes, navy practical work coat with brass fittings, cream shirt, brown work gloves and boots, holding warm brass lantern. Painterly romance fantasy game style, full body 1024x1536, transparent background."
+    },
+    {
+      "key": "chapter-sky-lantern",
+      "file": "chapter-sky-lantern.png",
+      "source": "C:/Users/User/AppData/Roaming/orca/codex-accounts/1d402b94-c4df-49d2-aa50-906649ba513c/home/generated_images/01a09d77-6669-79a2-9d19-c627faf650a6/exec-426e9ada-0ca5-405a-bc98-f84659b2e202.png",
+      "prompt": "Romance fantasy story CG, 1536x1024 landscape. Preserve referenced Ria, Luon, Theo and academy plaza in detailed painterly anime style. Theo lights a brass street lantern in the evening plaza as Ria and Luon watch. Faces visible above lower dialogue area, warm lantern light and violet evening. No text or UI."
+    },
+    {
+      "key": "chapter-sky-window",
+      "file": "chapter-sky-window.png",
+      "source": "C:/Users/User/AppData/Roaming/orca/codex-accounts/4f67eed1-f6b8-4888-8f2c-1a039e061e65/home/generated_images/01a09d77-6669-79a2-9d19-c627faf650a6/exec-1804ba93-32fb-49c0-bc21-bd97c1dcd494.png",
+      "prompt": "Use case illustration-story. Create one finished 1536x1024 landscape PNG for chapter V of a Korean romance fantasy visual novel. References: Ria, brown-haired violet-eyed heroine in purple fantasy dress; Serin, honey blonde braid sage eyes cream blouse green long skirt; dorm room architecture. Preserve their identities, dress, painterly detailed anime style. Ria has returned to her familiar dormitory. Serin stands by the wide arched window and warmly offers Ria the chair at the window-side desk. Two women exchange a gentle thoughtful look, close intimate eye-level composition, violet night sky and distant academy lights visible beyond window. Warm gold room lamplight. Faces clearly visible in upper two thirds. No text, UI, labels, watermark, speech bubbles or other characters."
+    },
+    {
+      "key": "chapter-sky-first-star",
+      "file": "chapter-sky-first-star.png",
+      "source": "C:/Users/User/AppData/Roaming/orca/codex-accounts/4f67eed1-f6b8-4888-8f2c-1a039e061e65/home/generated_images/01a09d77-6669-79a2-9d19-c627faf650a6/exec-75076e11-4c68-4796-89fa-e4a025fa7758.png",
+      "prompt": "Use case: illustration-story. Create one finished 1536x1024 landscape PNG for chapter V of a Korean romance fantasy visual novel. Input image is the preceding scene reference, preserve Ria (brown hair violet eyes purple fantasy dress), Serin (honey blonde braid green eyes cream blouse green skirt), and the same ornate dormitory window architecture and painterly anime art style. New scene: Ria seated beside the window reaches her fingertip toward one tiny luminous golden star suspended in the violet night just beyond the glass. Serin beside her watches with a gentle smile. The single bright star represents her first practice. Tender intimate eye-level composition, both faces visible in upper two thirds, warm gold lamplight mingling with cool purple night. No constellation connecting lines, no UI, words, watermark or extra characters."
+    },
+    {
+      "key": "chapter-sky-complete",
+      "file": "chapter-sky-complete.png",
+      "source": "C:/Users/User/AppData/Roaming/orca/codex-accounts/4f67eed1-f6b8-4888-8f2c-1a039e061e65/home/generated_images/01a09d77-6669-79a2-9d19-c627faf650a6/exec-daa95bbe-796c-4409-9539-cc081b5220f3.png",
+      "prompt": "Use case: illustration-story. One finished 1536x1024 landscape PNG, final quiet scene chapter V Korean romance fantasy visual novel. Reference image establishes the exact Ria brown hair violet eyes purple dress and Serin honey blonde braid green eyes cream blouse green skirt and their dormitory architecture. Preserve identities and detailed painterly anime style. New wider composition from slightly behind and to their side: Ria and Serin sit together at the ornate arched window, faces visible in gentle three-quarter profile upper half. Hands resting calmly, gazing out. Beyond the window one distinct tiny golden star shines in a spacious violet sky; below, the academy plaza's pathway is lined by warm brass lanterns. Visual connection between her first light above and Theo's lamps below. Warm lamplight, quiet reflective satisfaction, beautiful spacious ending. No drawn constellation lines, no text, UI, watermark or extra characters."
+    }
+  ],
+  "validation": {
+    "portrait": "1024x1536 RGBA, transparent corners; MODNet alpha from documented existing process",
+    "cg": "All four 1536x1024, visually reviewed, decoded in desktop and 390px browser checks",
+    "references": [
+      "ria-player.png",
+      "luon.png",
+      "serin.png",
+      "dorm.png",
+      "plaza.png",
+      "lamplighter.png",
+      "chapter-sky-window.png"
+    ]
+  }
+}

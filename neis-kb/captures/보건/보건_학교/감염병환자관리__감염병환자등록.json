@@ -1,0 +1,469 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›감염병환자관리›감염병환자등록",
+ "name": "감염병환자등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:50:09+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검색일",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검색일"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검색일~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검색일~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      810,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "치료현황",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:치료현황"
+    },
+    {
+     "aria": null,
+     "box": [
+      1140,
+      82,
+      210,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "보고여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:보고여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "학생찾기",
+     "box": [
+      335,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "학생찾기",
+     "variant": "primary",
+     "id": "button:학생찾기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 보고서가 생성된 학생은 해당메뉴에서 수정 및 삭제를 할 수 없습니다.",
+     "id": "note:※ 보고서가 생성된 학생은 해당메뉴에서 수정 및 삭제를 할 수 없습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      192,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 보고서가 생성되었으나 아직 제출되지 않은 경우 [감염병보고제출] 메뉴에서 해당 보고서를 삭제한 후 수정 및 삭제를 할 수 있습니다.",
+     "id": "note:※ 보고서가 생성되었으나 아직 제출되지 않은 경우 [감염병보고제출] 메뉴에서 해당 보고서를 삭제한 후 수정 및 삭제를 할 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      210,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 보고서가 생성되어 제출된 학생은 [감염병환자조회및수정보고제출] 메뉴에서 수정하실 수 있습니다.",
+     "id": "note:※ 보고서가 생성되어 제출된 학생은 [감염병환자조회및수정보고제출] 메뉴에서 수정하실 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      229,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 보고서가 생성된 학생은 해당 메뉴에서 보건소신고일을 저장할 수 없으므로 [감염병보고제출]메뉴에서 보고서 제출 후 [감염병환자조회및수정보고제출] 메뉴에서 보건소신고일을 저장합니다.",
+     "id": "note:※ 보고서가 생성된 학생은 해당 메뉴에서 보건소신고일을 저장할 수 없으므로 [감염병보고제출]메뉴에서 보고서 제출 후 [감염병환자조회및수정보고제출] 메뉴에서 보건소신고일을 저장합니다."
+    },
+    {
+     "aria": "에듀파인기안신청",
+     "box": [
+      1192,
+      282,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "에듀파인기안신청",
+     "variant": "link",
+     "id": "button:에듀파인기안신청"
+    },
+    {
+     "aria": "교육청보고서생성",
+     "box": [
+      1312,
+      282,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교육청보고서생성",
+     "variant": "link",
+     "id": "button:교육청보고서생성"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1431,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      282,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "감염병환자목록",
+     "box": [
+      25,
+      292,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "감염병환자목록",
+     "id": "heading:감염병환자목록"
+    },
+    {
+     "aria": "감염병환자 목록",
+     "box": [
+      25,
+      322,
+      1590,
+      491
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "감염병환자 목록",
+     "selectable": true,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        323,
+        50,
+        36
+       ],
+       "id": "col:감염병환자 목록/순번"
+      },
+      {
+       "label": "발생인지일",
+       "depth": 0,
+       "box": [
+        126,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/발생인지일"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        240,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/성명"
+      },
+      {
+       "label": "학년/반/번호",
+       "depth": 0,
+       "box": [
+        355,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/학년/반/번호"
+      },
+      {
+       "label": "병명",
+       "depth": 0,
+       "box": [
+        469,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/병명"
+      },
+      {
+       "label": "증상",
+       "depth": 0,
+       "box": [
+        584,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/증상"
+      },
+      {
+       "label": "전자결재상태",
+       "depth": 0,
+       "box": [
+        698,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/전자결재상태"
+      },
+      {
+       "label": "확진여부",
+       "depth": 0,
+       "box": [
+        813,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/확진여부"
+      },
+      {
+       "label": "치료현황",
+       "depth": 0,
+       "box": [
+        927,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/치료현황"
+      },
+      {
+       "label": "등교중지현황",
+       "depth": 0,
+       "box": [
+        1042,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/등교중지현황"
+      },
+      {
+       "label": "발견경위",
+       "depth": 0,
+       "box": [
+        1156,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/발견경위"
+      },
+      {
+       "label": "교육청보고여부",
+       "depth": 0,
+       "box": [
+        1271,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/교육청보고여부"
+      },
+      {
+       "label": "보건소신고일",
+       "depth": 0,
+       "box": [
+        1385,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/보건소신고일"
+      },
+      {
+       "label": "참고사항",
+       "depth": 0,
+       "box": [
+        1500,
+        323,
+        114,
+        36
+       ],
+       "id": "col:감염병환자 목록/참고사항"
+      }
+     ],
+     "id": "grid:감염병환자 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 감염병환자관리 > 감염병환자등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

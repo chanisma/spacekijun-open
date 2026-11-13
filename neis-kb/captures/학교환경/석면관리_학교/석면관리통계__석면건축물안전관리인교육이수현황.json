@@ -1,0 +1,185 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교환경›석면관리#학교›석면관리통계›석면건축물안전관리인교육이수현황",
+ "name": "석면건축물안전관리인교육이수현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:31:14+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      133,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        31
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        216,
+        31
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        292,
+        174,
+        100,
+        31
+       ],
+       "id": "col:그리드/생년월일"
+      },
+      {
+       "label": "직위(급)",
+       "depth": 0,
+       "box": [
+        392,
+        174,
+        100,
+        31
+       ],
+       "id": "col:그리드/직위(급)"
+      },
+      {
+       "label": "교육이수번호",
+       "depth": 0,
+       "box": [
+        492,
+        174,
+        216,
+        31
+       ],
+       "id": "col:그리드/교육이수번호"
+      },
+      {
+       "label": "교육이수일",
+       "depth": 0,
+       "box": [
+        707,
+        174,
+        90,
+        31
+       ],
+       "id": "col:그리드/교육이수일"
+      },
+      {
+       "label": "교육이수기관",
+       "depth": 0,
+       "box": [
+        797,
+        174,
+        302,
+        31
+       ],
+       "id": "col:그리드/교육이수기관"
+      },
+      {
+       "label": "지정기간",
+       "depth": 0,
+       "box": [
+        1099,
+        174,
+        170,
+        31
+       ],
+       "id": "col:그리드/지정기간"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1269,
+        174,
+        345,
+        31
+       ],
+       "id": "col:그리드/비고"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교환경}석면관리 > 석면관리통계 > 석면건축물안전관리인교육이수현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

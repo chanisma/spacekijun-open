@@ -1,0 +1,314 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시자료관리›정정대장확인",
+ "name": "정정대장확인",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:54:23+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기준일자",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기준일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      975,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시항목",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:공시항목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1181,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:정정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:정정일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ ‘정정일자’를 클릭하면 정정대장 상세내역을 확인하실 수 있습니다.",
+     "id": "note:※ ‘정정일자’를 클릭하면 정정대장 상세내역을 확인하실 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      211,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인쇄",
+     "variant": "primary",
+     "id": "button:인쇄"
+    },
+    {
+     "aria": "정정대장-전체목록",
+     "box": [
+      25,
+      221,
+      135,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "정정대장-전체목록",
+     "id": "heading:정정대장-전체목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      251,
+      1590,
+      563
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "일련번호",
+       "depth": 0,
+       "box": [
+        26,
+        252,
+        100,
+        62
+       ],
+       "id": "col:그리드/일련번호"
+      },
+      {
+       "label": "정정일시",
+       "depth": 0,
+       "box": [
+        126,
+        252,
+        150,
+        62
+       ],
+       "id": "col:그리드/정정일시"
+      },
+      {
+       "label": "정정사항",
+       "depth": 0,
+       "box": [
+        276,
+        252,
+        1002,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/정정사항"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        1278,
+        252,
+        186,
+        62
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "진행일시",
+       "depth": 0,
+       "box": [
+        1464,
+        252,
+        150,
+        62
+       ],
+       "id": "col:그리드/진행일시"
+      },
+      {
+       "label": "정정항목",
+       "depth": 1,
+       "box": [
+        276,
+        283,
+        443,
+        31
+       ],
+       "id": "col:그리드/정정사항>정정항목"
+      },
+      {
+       "label": "오류내용",
+       "depth": 1,
+       "box": [
+        719,
+        283,
+        186,
+        31
+       ],
+       "id": "col:그리드/정정사항>오류내용"
+      },
+      {
+       "label": "정정내용",
+       "depth": 1,
+       "box": [
+        905,
+        283,
+        186,
+        31
+       ],
+       "id": "col:그리드/정정사항>정정내용"
+      },
+      {
+       "label": "정정사유",
+       "depth": 1,
+       "box": [
+        1092,
+        283,
+        186,
+        31
+       ],
+       "id": "col:그리드/정정사항>정정사유"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시자료관리 > 공시자료정정 > 정정대장확인",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

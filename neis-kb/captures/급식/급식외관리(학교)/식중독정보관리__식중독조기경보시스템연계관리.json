@@ -1,0 +1,1434 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식외관리(학교)›식중독정보관리›식중독조기경보시스템연계관리",
+ "name": "식중독조기경보시스템연계관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:24:13+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:식중독조기경보탭",
+   "tab": "식중독조기경보탭",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식중독조기경보탭",
+      "식중독조기경보발령정보탭"
+     ],
+     "active": "식중독조기경보탭",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "식재료공급업체구분",
+     "box": [
+      175,
+      137,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체구분"
+    },
+    {
+     "aria": "식재료공급업체사업자등록번호",
+     "box": [
+      570,
+      137,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사업자등록번호",
+     "control": "mask",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사업자등록번호"
+    },
+    {
+     "aria": "식재료공급업체명",
+     "box": [
+      965,
+      137,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체명"
+    },
+    {
+     "aria": "식재료공급업체대표자명",
+     "box": [
+      175,
+      177,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대표자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:대표자명"
+    },
+    {
+     "aria": "계약기간",
+     "box": [
+      570,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계약기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계약기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      705,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계약기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계약기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      217,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      217,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:일자~"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1432,
+      217,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1504,
+      217,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      278,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ eaT 및 나라장터 미사용교의 경우 나이스 내 상기 메뉴에서 해당 정보를 입력하여야 식약처의 식중독조기경보 알림 자동연계가 가능합니다.",
+     "id": "note:※ eaT 및 나라장터 미사용교의 경우 나이스 내 상기 메뉴에서 해당 정보를 입력하여야 식약처의 식중독조기경보 알림 자동연계가 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      297,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 상기 메뉴의 담당자정보로 식중독조기경보 알람이 송신되오니, 급식 담당자정보(영양교사‧영양사)는 최신화 관리가 필요합니다.",
+     "id": "note:※ 상기 메뉴의 담당자정보로 식중독조기경보 알람이 송신되오니, 급식 담당자정보(영양교사‧영양사)는 최신화 관리가 필요합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1404,
+      360,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1452,
+      360,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1500,
+      360,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1548,
+      360,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": "송신내역",
+     "box": [
+      25,
+      370,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "송신내역",
+     "id": "heading:송신내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      520,
+      370,
+      117,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "담당자정보 상세",
+     "id": "heading:담당자정보 상세"
+    },
+    {
+     "aria": "전송상태목록",
+     "box": [
+      25,
+      395,
+      480,
+      1230
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전송상태목록",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        26,
+        396,
+        120,
+        36
+       ],
+       "id": "col:전송상태목록/전송상태"
+      },
+      {
+       "label": "전송일자",
+       "depth": 0,
+       "box": [
+        146,
+        396,
+        120,
+        36
+       ],
+       "id": "col:전송상태목록/전송일자"
+      },
+      {
+       "label": "학교담당자성명",
+       "depth": 0,
+       "box": [
+        265,
+        396,
+        120,
+        36
+       ],
+       "id": "col:전송상태목록/학교담당자성명"
+      },
+      {
+       "label": "업체정보건수",
+       "depth": 0,
+       "box": [
+        385,
+        396,
+        120,
+        36
+       ],
+       "id": "col:전송상태목록/업체정보건수"
+      }
+     ],
+     "id": "grid:전송상태목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      665,
+      446,
+      60,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교주소",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학교주소"
+    },
+    {
+     "aria": "주소검색",
+     "box": [
+      731,
+      446,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "주소검색",
+     "variant": "link",
+     "id": "button:주소검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      767,
+      446,
+      411,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교주소",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학교주소#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1184,
+      446,
+      411,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학교명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학교명"
+    },
+    {
+     "aria": "시설급식관리",
+     "box": [
+      665,
+      486,
+      930,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "시설급식관리",
+     "options": [
+      "직영",
+      "위탁",
+      "직영+위탁",
+      "미급식"
+     ],
+     "id": "radio:시설급식관리"
+    },
+    {
+     "aria": null,
+     "box": [
+      665,
+      526,
+      390,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당자 성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:담당자 성명"
+    },
+    {
+     "aria": "개인정보 활용동의여부",
+     "box": [
+      1205,
+      526,
+      390,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "개인정보 활용동의여부",
+     "options": [
+      "예",
+      "아니요"
+     ],
+     "id": "radio:개인정보 활용동의여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      665,
+      566,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      743,
+      566,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:전화번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1205,
+      566,
+      121,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이메일주소",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:이메일주소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1428,
+      612,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1488,
+      612,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1548,
+      612,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#3"
+    },
+    {
+     "aria": "공동급식학교",
+     "box": [
+      520,
+      622,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "공동급식학교",
+     "id": "heading:공동급식학교"
+    },
+    {
+     "aria": "공동조리교",
+     "box": [
+      520,
+      647,
+      1080,
+      300
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "공동조리교",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "학교고유번호",
+       "depth": 0,
+       "box": [
+        551,
+        648,
+        349,
+        36
+       ],
+       "id": "col:공동조리교/학교고유번호"
+      },
+      {
+       "label": "학교명",
+       "depth": 0,
+       "box": [
+        900,
+        648,
+        349,
+        36
+       ],
+       "id": "col:공동조리교/학교명"
+      },
+      {
+       "label": "공동급식여부",
+       "depth": 0,
+       "box": [
+        1250,
+        648,
+        349,
+        36
+       ],
+       "id": "col:공동조리교/공동급식여부"
+      }
+     ],
+     "id": "grid:공동조리교"
+    },
+    {
+     "aria": null,
+     "box": [
+      1428,
+      957,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1488,
+      957,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제#2"
+    },
+    {
+     "aria": "초기화",
+     "box": [
+      1548,
+      957,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#4"
+    },
+    {
+     "aria": "업체정보내역",
+     "box": [
+      520,
+      967,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "업체정보내역",
+     "id": "heading:업체정보내역"
+    },
+    {
+     "aria": "업체정보내역",
+     "box": [
+      520,
+      992,
+      1080,
+      300
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "업체정보내역",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        561,
+        993,
+        201,
+        36
+       ],
+       "id": "col:업체정보내역/구분"
+      },
+      {
+       "label": "사업자번호",
+       "depth": 0,
+       "box": [
+        762,
+        993,
+        147,
+        36
+       ],
+       "id": "col:업체정보내역/사업자번호"
+      },
+      {
+       "label": "업체명",
+       "depth": 0,
+       "box": [
+        910,
+        993,
+        161,
+        36
+       ],
+       "id": "col:업체정보내역/업체명"
+      },
+      {
+       "label": "대표자명",
+       "depth": 0,
+       "box": [
+        1071,
+        993,
+        134,
+        36
+       ],
+       "id": "col:업체정보내역/대표자명"
+      },
+      {
+       "label": "전화번호",
+       "depth": 0,
+       "box": [
+        1205,
+        993,
+        134,
+        36
+       ],
+       "id": "col:업체정보내역/전화번호"
+      },
+      {
+       "label": "계약시작일자",
+       "depth": 0,
+       "box": [
+        1339,
+        993,
+        134,
+        36
+       ],
+       "id": "col:업체정보내역/계약시작일자"
+      },
+      {
+       "label": "계약종료일자",
+       "depth": 0,
+       "box": [
+        1473,
+        993,
+        132,
+        36
+       ],
+       "id": "col:업체정보내역/계약종료일자"
+      }
+     ],
+     "id": "grid:업체정보내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      1308,
+      950,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1185,
+      1348,
+      374,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체명#2"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      1565,
+      1348,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      1388,
+      410,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "대표자",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:대표자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1185,
+      1388,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      1263,
+      1388,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전화번호#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      1428,
+      60,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:주소"
+    },
+    {
+     "aria": "주소검색",
+     "box": [
+      711,
+      1428,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "주소검색",
+     "variant": "link",
+     "id": "button:주소검색#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      747,
+      1428,
+      421,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:주소#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      1468,
+      950,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "업종",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업종"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      1508,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "계약기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계약기간#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      780,
+      1508,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "계약기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:계약기간~#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      1553,
+      79,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "농/임산물",
+     "checked": false,
+     "id": "check:농/임산물"
+    },
+    {
+     "aria": null,
+     "box": [
+      741,
+      1553,
+      62,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "축산물",
+     "checked": false,
+     "id": "check:축산물"
+    },
+    {
+     "aria": null,
+     "box": [
+      821,
+      1553,
+      62,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "수산물",
+     "checked": false,
+     "id": "check:수산물"
+    },
+    {
+     "aria": null,
+     "box": [
+      900,
+      1553,
+      74,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "가공식품",
+     "checked": false,
+     "id": "check:가공식품"
+    },
+    {
+     "aria": null,
+     "box": [
+      992,
+      1553,
+      62,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "가금류",
+     "checked": false,
+     "id": "check:가금류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1071,
+      1553,
+      62,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "김치류",
+     "checked": false,
+     "id": "check:김치류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1150,
+      1553,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "곡류",
+     "checked": false,
+     "id": "check:곡류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1218,
+      1553,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "떡류",
+     "checked": false,
+     "id": "check:떡류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1285,
+      1553,
+      62,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "유제품",
+     "checked": false,
+     "id": "check:유제품"
+    },
+    {
+     "aria": null,
+     "box": [
+      645,
+      1588,
+      950,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주요식재료내용",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:주요식재료내용"
+    }
+   ]
+  },
+  {
+   "id": "tab:식중독조기경보발령정보탭",
+   "tab": "식중독조기경보발령정보탭",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다",
+     "box": [
+      25,
+      71,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "식중독조기경보탭",
+      "식중독조기경보발령정보탭"
+     ],
+     "active": "식중독조기경보발령정보탭",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대표자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:대표자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      137,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사업자번호",
+     "control": "mask",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:사업자번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      137,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업종명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업종명"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      177,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주요식재료",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:주요식재료"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식중독발생기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:식중독발생기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      705,
+      177,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식중독발생기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:식중독발생기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      177,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기타내용",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기타내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      177,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      177,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": "식중독 조기경보 발령정보 내역",
+     "box": [
+      25,
+      238,
+      223,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식중독 조기경보 발령정보 내역",
+     "id": "heading:식중독 조기경보 발령정보 내역"
+    },
+    {
+     "aria": "식중독조기경보발령정보내역",
+     "box": [
+      25,
+      268,
+      1575,
+      400
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "식중독조기경보발령정보내역",
+     "selectable": false,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        269,
+        50,
+        36
+       ],
+       "id": "col:식중독조기경보발령정보내역/순번"
+      },
+      {
+       "label": "식중독발생일자",
+       "depth": 0,
+       "box": [
+        76,
+        269,
+        255,
+        36
+       ],
+       "id": "col:식중독조기경보발령정보내역/식중독발생일자"
+      },
+      {
+       "label": "식중독발생지역명",
+       "depth": 0,
+       "box": [
+        331,
+        269,
+        255,
+        36
+       ],
+       "id": "col:식중독조기경보발령정보내역/식중독발생지역명"
+      },
+      {
+       "label": "식중독의심시설명",
+       "depth": 0,
+       "box": [
+        586,
+        269,
+        255,
+        36
+       ],
+       "id": "col:식중독조기경보발령정보내역/식중독의심시설명"
+      },
+      {
+       "label": "식중독의심환자수",
+       "depth": 0,
+       "box": [
+        842,
+        269,
+        255,
+        36
+       ],
+       "id": "col:식중독조기경보발령정보내역/식중독의심환자수"
+      },
+      {
+       "label": "식중독섭취대상자수",
+       "depth": 0,
+       "box": [
+        1097,
+        269,
+        255,
+        36
+       ],
+       "id": "col:식중독조기경보발령정보내역/식중독섭취대상자수"
+      },
+      {
+       "label": "업체명",
+       "depth": 0,
+       "box": [
+        1352,
+        269,
+        255,
+        36
+       ],
+       "id": "col:식중독조기경보발령정보내역/업체명"
+      }
+     ],
+     "id": "grid:식중독조기경보발령정보내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      681,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      728,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "발령정보",
+     "id": "heading:발령정보"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식외관리(학교) > 식중독정보관리 > 식중독조기경보시스템연계관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

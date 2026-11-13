@@ -1,0 +1,355 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›건강기록부관리›항목별등록",
+ "name": "항목별등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:20:26+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": true
+   }
+  },
+  {
+   "id": "main+조회",
+   "after": "query",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "취학후예방접종",
+      "신체발달",
+      "신체능력",
+      "건강검진"
+     ],
+     "active": "취학후예방접종",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      188,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 질병관리청 연계를 통해 건강기록부에 반영된 취학후예방접종 내역은 학교과정구분/학년을 표시하지 않으며, 내용 수정이 불가능합니다.",
+     "id": "note:※ 질병관리청 연계를 통해 건강기록부에 반영된 취학후예방접종 내역은 학교과정구분/학년을 표시하지 않으며, 내용 수정이 불가능합니다."
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      252,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      252,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "취학후예방접종",
+     "box": [
+      25,
+      262,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "취학후예방접종",
+     "id": "heading:취학후예방접종"
+    },
+    {
+     "aria": null,
+     "box": [
+      67,
+      290,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "접종명",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:접종명"
+    },
+    {
+     "aria": null,
+     "box": [
+      327,
+      290,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "접종일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:접종일자"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      453,
+      290,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "primary",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": "취학후예방접종 목록",
+     "box": [
+      25,
+      330,
+      1590,
+      484
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "취학후예방접종 목록",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        331,
+        50,
+        36
+       ],
+       "id": "col:취학후예방접종 목록/순번"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        126,
+        331,
+        294,
+        36
+       ],
+       "id": "col:취학후예방접종 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        420,
+        331,
+        442,
+        36
+       ],
+       "id": "col:취학후예방접종 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        862,
+        331,
+        294,
+        36
+       ],
+       "id": "col:취학후예방접종 목록/성별"
+      },
+      {
+       "label": "접종일자",
+       "depth": 0,
+       "box": [
+        1156,
+        331,
+        442,
+        36
+       ],
+       "id": "col:취학후예방접종 목록/접종일자"
+      }
+     ],
+     "id": "grid:취학후예방접종 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 건강기록부관리 > 항목별등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

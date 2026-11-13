@@ -1,0 +1,1066 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›학사일정관리›학사일정관리",
+ "name": "학사일정관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:59:43+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:연간 학사일정관리",
+   "tab": "연간 학사일정관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "연간 학사일정관리",
+      "연간 학사일정 조회",
+      "기타일정관리",
+      "행사코드관리"
+     ],
+     "active": "연간 학사일정관리",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학기",
+     "box": [
+      395,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기준학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:기준학기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      188,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 원하는 날짜에서 마우스 우클릭 시 행사를 추가할 수 있습니다.",
+     "id": "note:※ 원하는 날짜에서 마우스 우클릭 시 행사를 추가할 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1199,
+      242,
+      116,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "주5일수업제적용",
+     "checked": true,
+     "id": "check:주5일수업제적용"
+    },
+    {
+     "aria": "공휴일정보생성",
+     "box": [
+      1324,
+      242,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "공휴일정보생성",
+     "variant": "primary",
+     "id": "button:공휴일정보생성"
+    },
+    {
+     "aria": "일괄등록",
+     "box": [
+      1431,
+      242,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄등록",
+     "variant": "primary",
+     "id": "button:일괄등록"
+    },
+    {
+     "aria": "일괄삭제",
+     "box": [
+      1503,
+      242,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄삭제",
+     "variant": "secondary",
+     "id": "button:일괄삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      242,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "연간학사일정",
+     "box": [
+      25,
+      282,
+      1590,
+      532
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "연간학사일정",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        26,
+        283,
+        102,
+        62
+       ],
+       "id": "col:연간학사일정/월"
+      },
+      {
+       "label": "주",
+       "depth": 0,
+       "box": [
+        128,
+        283,
+        102,
+        62
+       ],
+       "id": "col:연간학사일정/주"
+      },
+      {
+       "label": "일",
+       "depth": 0,
+       "box": [
+        230,
+        283,
+        73,
+        62
+       ],
+       "id": "col:연간학사일정/일"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        303,
+        283,
+        73,
+        62
+       ],
+       "id": "col:연간학사일정/월#2"
+      },
+      {
+       "label": "화",
+       "depth": 0,
+       "box": [
+        376,
+        283,
+        73,
+        62
+       ],
+       "id": "col:연간학사일정/화"
+      },
+      {
+       "label": "수",
+       "depth": 0,
+       "box": [
+        448,
+        283,
+        73,
+        62
+       ],
+       "id": "col:연간학사일정/수"
+      },
+      {
+       "label": "목",
+       "depth": 0,
+       "box": [
+        521,
+        283,
+        73,
+        62
+       ],
+       "id": "col:연간학사일정/목"
+      },
+      {
+       "label": "금",
+       "depth": 0,
+       "box": [
+        594,
+        283,
+        73,
+        62
+       ],
+       "id": "col:연간학사일정/금"
+      },
+      {
+       "label": "토",
+       "depth": 0,
+       "box": [
+        667,
+        283,
+        73,
+        62
+       ],
+       "id": "col:연간학사일정/토"
+      },
+      {
+       "label": "학년별 수업일수",
+       "depth": 0,
+       "box": [
+        740,
+        283,
+        437,
+        31
+       ],
+       "span": 3,
+       "id": "col:연간학사일정/학년별 수업일수"
+      },
+      {
+       "label": "주요행사",
+       "depth": 0,
+       "box": [
+        1177,
+        283,
+        437,
+        62
+       ],
+       "id": "col:연간학사일정/주요행사"
+      },
+      {
+       "label": "1학년",
+       "depth": 1,
+       "box": [
+        740,
+        314,
+        146,
+        31
+       ],
+       "id": "col:연간학사일정/학년별 수업일수>1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 1,
+       "box": [
+        886,
+        314,
+        146,
+        31
+       ],
+       "id": "col:연간학사일정/학년별 수업일수>2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 1,
+       "box": [
+        1031,
+        314,
+        146,
+        31
+       ],
+       "id": "col:연간학사일정/학년별 수업일수>3학년"
+      }
+     ],
+     "id": "grid:연간학사일정"
+    }
+   ]
+  },
+  {
+   "id": "tab:연간 학사일정 조회",
+   "tab": "연간 학사일정 조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "연간 학사일정관리",
+      "연간 학사일정 조회",
+      "기타일정관리",
+      "행사코드관리"
+     ],
+     "active": "연간 학사일정 조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "구분",
+     "box": [
+      395,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:구분"
+    },
+    {
+     "aria": "기준학기",
+     "box": [
+      635,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기준학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:기준학기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ]
+  },
+  {
+   "id": "tab:기타일정관리",
+   "tab": "기타일정관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "연간 학사일정관리",
+      "연간 학사일정 조회",
+      "기타일정관리",
+      "행사코드관리"
+     ],
+     "active": "기타일정관리",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "월",
+     "box": [
+      395,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:월"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1431,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "기타일정",
+     "box": [
+      25,
+      238,
+      1590,
+      298
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기타일정",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        239,
+        50,
+        36
+       ],
+       "id": "col:기타일정/순번"
+      },
+      {
+       "label": "일정",
+       "depth": 0,
+       "box": [
+        126,
+        239,
+        595,
+        36
+       ],
+       "span": 2,
+       "id": "col:기타일정/일정"
+      },
+      {
+       "label": "제목",
+       "depth": 0,
+       "box": [
+        721,
+        239,
+        893,
+        36
+       ],
+       "id": "col:기타일정/제목"
+      }
+     ],
+     "id": "grid:기타일정"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      556,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "기타일정내역",
+     "id": "heading:기타일정내역"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      592,
+      130,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "등록일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:등록일자"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      280,
+      592,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      310,
+      592,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      367,
+      592,
+      130,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "등록일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:등록일자~"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      497,
+      592,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기#2"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      527,
+      592,
+      30,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      632,
+      1460,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "제목",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:제목"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      672,
+      1460,
+      60
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "내용",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:내용"
+    }
+   ]
+  },
+  {
+   "id": "tab:행사코드관리",
+   "tab": "행사코드관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "연간 학사일정관리",
+      "연간 학사일정 조회",
+      "기타일정관리",
+      "행사코드관리"
+     ],
+     "active": "행사코드관리",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "사용여부",
+     "box": [
+      175,
+      137,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "사용여부",
+     "options": [
+      "사용",
+      "미사용"
+     ],
+     "id": "radio:사용여부"
+    },
+    {
+     "aria": "행사명",
+     "box": [
+      445,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "행사명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:행사명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      1348,
+      198,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "일괄수정",
+     "box": [
+      1407,
+      198,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄수정",
+     "variant": "primary",
+     "id": "button:일괄수정"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "연간 학사일정 관리",
+     "box": [
+      25,
+      238,
+      1590,
+      388
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "연간 학사일정 관리",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "행사명",
+       "depth": 0,
+       "box": [
+        122,
+        239,
+        383,
+        36
+       ],
+       "id": "col:연간 학사일정 관리/행사명"
+      },
+      {
+       "label": "수업공제일구분",
+       "depth": 0,
+       "box": [
+        505,
+        239,
+        383,
+        36
+       ],
+       "id": "col:연간 학사일정 관리/수업공제일구분"
+      },
+      {
+       "label": "전국공통행사",
+       "depth": 0,
+       "box": [
+        889,
+        239,
+        383,
+        36
+       ],
+       "id": "col:연간 학사일정 관리/전국공통행사"
+      },
+      {
+       "label": "학생부특별활동",
+       "depth": 0,
+       "box": [
+        1272,
+        239,
+        192,
+        36
+       ],
+       "id": "col:연간 학사일정 관리/학생부특별활동"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1464,
+        239,
+        134,
+        36
+       ],
+       "id": "col:연간 학사일정 관리/사용여부"
+      }
+     ],
+     "id": "grid:연간 학사일정 관리"
+    },
+    {
+     "aria": "행사명",
+     "box": [
+      150,
+      652,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "행사명",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:행사명#2"
+    },
+    {
+     "aria": "수업공제일구분",
+     "box": [
+      680,
+      652,
+      930,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "수업공제일구분",
+     "options": [
+      "공휴일",
+      "휴업일",
+      "전일행사",
+      "해당없음"
+     ],
+     "id": "radio:수업공제일구분"
+    },
+    {
+     "aria": "전국공통행사코드",
+     "box": [
+      150,
+      692,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전국공통행사코드",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:전국공통행사코드"
+    },
+    {
+     "aria": "학생부특별활동",
+     "box": [
+      680,
+      692,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학생부특별활동",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학생부특별활동"
+    },
+    {
+     "aria": "사용여부",
+     "box": [
+      1210,
+      692,
+      400,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "사용여부",
+     "options": [
+      "사용",
+      "미사용"
+     ],
+     "id": "radio:사용여부#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 학사일정관리 > 학사일정관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

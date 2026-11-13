@@ -1,0 +1,334 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›시간표관리›기초시간표검증및반영",
+ "name": "기초시간표검증및반영",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:00:11+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학교운영방식의 차이로 인해 [검증]이 맞지 않을 수 있으나 그대로 진행하셔도 시간표운영에 영향은 없습니다.",
+     "id": "note:※ 학교운영방식의 차이로 인해 [검증]이 맞지 않을 수 있으나 그대로 진행하셔도 시간표운영에 영향은 없습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      90,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 기초시간표 반영은 현재 등록되어 있는 기초시간표 및 학사일정을 전체시간표에 반영시키는 작업입니다.",
+     "id": "note:※ 기초시간표 반영은 현재 등록되어 있는 기초시간표 및 학사일정을 전체시간표에 반영시키는 작업입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      108,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 반영 기간에 결보강내역이 존재하면 시간표를 반영하실 수 없습니다.",
+     "id": "note:※ 반영 기간에 결보강내역이 존재하면 시간표를 반영하실 수 없습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      127,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 기초시간표 반영은 검증작업 수행여부/결과와 관계없이 가능합니다.",
+     "id": "note:※ 기초시간표 반영은 검증작업 수행여부/결과와 관계없이 가능합니다."
+    },
+    {
+     "aria": "검증",
+     "box": [
+      1575,
+      180,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "검증",
+     "variant": "primary",
+     "id": "button:검증"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      190,
+      117,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "기초시간표 검증",
+     "id": "heading:기초시간표 검증"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      226,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      226,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      226,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      266,
+      1460,
+      240
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "검증결과",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:검증결과"
+    },
+    {
+     "aria": null,
+     "box": [
+      483,
+      522,
+      824,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ (기본)시간표로 지정된 기초시간표만 반영됩니다.",
+     "id": "note:※ (기본)시간표로 지정된 기초시간표만 반영됩니다."
+    },
+    {
+     "aria": "학년별 학기 날짜정보 보기",
+     "box": [
+      1409,
+      522,
+      158,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학년별 학기 날짜정보 보기",
+     "variant": "primary",
+     "id": "button:학년별 학기 날짜정보 보기"
+    },
+    {
+     "aria": "반영",
+     "box": [
+      1575,
+      522,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반영",
+     "variant": "primary",
+     "id": "button:반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      532,
+      450,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "기초시간표 반영",
+     "id": "heading:기초시간표 반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      568,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:학년도#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      568,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "semester",
+     "id": "field:학기#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      608,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      608,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:강의실"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      648,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반영시작",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:반영시작"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      648,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반영종료",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:반영종료"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      688,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:과정#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 시간표관리 > 기초시간표검증및반영",
+ "viewport": [
+  1920,
+  945
+ ]
+}

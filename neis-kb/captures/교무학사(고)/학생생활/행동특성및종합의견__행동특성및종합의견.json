@@ -1,0 +1,669 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›행동특성및종합의견›행동특성및종합의견",
+ "name": "행동특성및종합의견",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:27:10+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:학생부자료기록",
+   "tab": "학생부자료기록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1290,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생부자료기록",
+      "누가기록"
+     ],
+     "active": "학생부자료기록",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "누가기록 작성",
+     "box": [
+      1433,
+      71,
+      182,
+      35
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "누가기록 작성",
+     "options": [
+      "ON",
+      "OFF"
+     ],
+     "id": "radio:누가기록 작성"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "입력창축소",
+     "box": [
+      1000,
+      198,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창축소",
+     "variant": "plain",
+     "id": "button:입력창축소"
+    },
+    {
+     "aria": "입력창확대",
+     "box": [
+      1026,
+      198,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창확대",
+     "variant": "plain",
+     "id": "button:입력창확대"
+    },
+    {
+     "aria": null,
+     "box": [
+      1052,
+      198,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1182,
+      198,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀업로드",
+     "variant": "plain",
+     "id": "button:엑셀업로드"
+    },
+    {
+     "aria": "문자열바꾸기",
+     "box": [
+      1312,
+      198,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "문자열바꾸기",
+     "variant": "link",
+     "id": "button:문자열바꾸기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1407,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1455,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "일괄적용",
+     "box": [
+      1503,
+      198,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "link",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "행동특성 및 종합의견 - 학교생활기록부 반영기록",
+     "box": [
+      25,
+      208,
+      351,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "행동특성 및 종합의견 - 학교생활기록부 반영기록",
+     "id": "heading:행동특성 및 종합의견 - 학교생활기록부 반영기록"
+    },
+    {
+     "aria": "학교생활기록부 반영기록 목록",
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교생활기록부 반영기록 목록",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        239,
+        80,
+        40
+       ],
+       "id": "col:학교생활기록부 반영기록 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        156,
+        239,
+        120,
+        40
+       ],
+       "id": "col:학교생활기록부 반영기록 목록/성명"
+      },
+      {
+       "label": "행동특성 및 종합의견",
+       "depth": 0,
+       "box": [
+        276,
+        239,
+        1096,
+        40
+       ],
+       "span": 2,
+       "id": "col:학교생활기록부 반영기록 목록/행동특성 및 종합의견"
+      },
+      {
+       "label": "글자수",
+       "depth": 0,
+       "box": [
+        1372,
+        239,
+        142,
+        40
+       ],
+       "id": "col:학교생활기록부 반영기록 목록/글자수"
+      },
+      {
+       "label": "위탁",
+       "depth": 0,
+       "box": [
+        1514,
+        239,
+        100,
+        40
+       ],
+       "id": "col:학교생활기록부 반영기록 목록/위탁"
+      }
+     ],
+     "id": "grid:학교생활기록부 반영기록 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:누가기록",
+   "tab": "누가기록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1290,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생부자료기록",
+      "누가기록"
+     ],
+     "active": "누가기록",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "누가기록 작성",
+     "box": [
+      1433,
+      71,
+      182,
+      35
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "누가기록 작성",
+     "options": [
+      "ON",
+      "OFF"
+     ],
+     "id": "radio:누가기록 작성"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "계열/학년/학과설명",
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "반설명",
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1447,
+      138,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "일자별조회",
+     "box": [
+      1519,
+      138,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자별조회",
+     "variant": "secondary",
+     "id": "button:일자별조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      203,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 행동특성 누가기록에서 붉은색으로 표기된 일자는 결석 처리된 일자입니다.",
+     "id": "note:※ 행동특성 누가기록에서 붉은색으로 표기된 일자는 결석 처리된 일자입니다."
+    },
+    {
+     "aria": "입력창축소",
+     "box": [
+      1280,
+      267,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창축소",
+     "variant": "plain",
+     "id": "button:입력창축소"
+    },
+    {
+     "aria": "입력창확대",
+     "box": [
+      1314,
+      267,
+      18,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창확대",
+     "variant": "plain",
+     "id": "button:입력창확대"
+    },
+    {
+     "aria": "일괄등록",
+     "box": [
+      1348,
+      267,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄등록",
+     "variant": "primary",
+     "id": "button:일괄등록"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      1419,
+      267,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "primary",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      267,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      267,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      267,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "행동특성 누가기록",
+     "box": [
+      434,
+      277,
+      133,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "행동특성 누가기록",
+     "id": "heading:행동특성 누가기록"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      307,
+      394,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        308,
+        125,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        151,
+        308,
+        251,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "행동특성 누가기록 목록",
+     "box": [
+      434,
+      307,
+      1181,
+      507
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "행동특성 누가기록 목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        485,
+        308,
+        50,
+        36
+       ],
+       "id": "col:행동특성 누가기록 목록/순번"
+      },
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        535,
+        308,
+        120,
+        36
+       ],
+       "id": "col:행동특성 누가기록 목록/일자"
+      },
+      {
+       "label": "행동특성내용",
+       "depth": 0,
+       "box": [
+        655,
+        308,
+        959,
+        36
+       ],
+       "id": "col:행동특성 누가기록 목록/행동특성내용"
+      }
+     ],
+     "id": "grid:행동특성 누가기록 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 행동특성및종합의견 > 행동특성및종합의견",
+ "viewport": [
+  1920,
+  945
+ ]
+}

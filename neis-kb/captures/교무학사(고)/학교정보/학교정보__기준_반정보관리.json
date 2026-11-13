@@ -1,0 +1,429 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학교정보›학교정보›기준/반정보관리",
+ "name": "기준/반정보관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T03:59:54+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "선택학년도",
+     "box": [
+      225,
+      337,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "선택학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:선택학년도"
+    },
+    {
+     "aria": "복사",
+     "box": [
+      331,
+      337,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "복사",
+     "variant": "primary",
+     "id": "button:복사"
+    },
+    {
+     "aria": "학교기준 행추가",
+     "box": [
+      379,
+      377,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "학교기준 저장",
+     "box": [
+      439,
+      377,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "학교기준 삭제",
+     "box": [
+      487,
+      377,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      535,
+      377,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "학교반정보 행추가",
+     "box": [
+      1348,
+      377,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가#2"
+    },
+    {
+     "aria": "학교반정보 저장",
+     "box": [
+      1407,
+      377,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": "학교반정보 삭제",
+     "box": [
+      1455,
+      377,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1503,
+      377,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기#2"
+    },
+    {
+     "aria": "학교기준정보 그리드",
+     "box": [
+      25,
+      417,
+      622,
+      397
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교기준정보 그리드",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        418,
+        50,
+        62
+       ],
+       "id": "col:학교기준정보 그리드/순번"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        126,
+        418,
+        87,
+        62
+       ],
+       "id": "col:학교기준정보 그리드/학년"
+      },
+      {
+       "label": "주야과정구분",
+       "depth": 0,
+       "box": [
+        213,
+        418,
+        87,
+        62
+       ],
+       "id": "col:학교기준정보 그리드/주야과정구분"
+      },
+      {
+       "label": "학과계열명",
+       "depth": 0,
+       "box": [
+        300,
+        418,
+        109,
+        62
+       ],
+       "id": "col:학교기준정보 그리드/학과계열명"
+      },
+      {
+       "label": "학과명",
+       "depth": 0,
+       "box": [
+        408,
+        418,
+        152,
+        62
+       ],
+       "id": "col:학교기준정보 그리드/학과명"
+      },
+      {
+       "label": "정렬",
+       "depth": 0,
+       "box": [
+        560,
+        418,
+        86,
+        62
+       ],
+       "id": "col:학교기준정보 그리드/정렬"
+      }
+     ],
+     "id": "grid:학교기준정보 그리드"
+    },
+    {
+     "aria": "학교반정보 그리드",
+     "box": [
+      683,
+      417,
+      932,
+      397
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교반정보 그리드",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        734,
+        418,
+        50,
+        62
+       ],
+       "id": "col:학교반정보 그리드/순번"
+      },
+      {
+       "label": "반명",
+       "depth": 0,
+       "box": [
+        784,
+        418,
+        113,
+        62
+       ],
+       "id": "col:학교반정보 그리드/반명"
+      },
+      {
+       "label": "반코드",
+       "depth": 0,
+       "box": [
+        897,
+        418,
+        96,
+        62
+       ],
+       "id": "col:학교반정보 그리드/반코드"
+      },
+      {
+       "label": "강의실 코드",
+       "depth": 0,
+       "box": [
+        993,
+        418,
+        96,
+        62
+       ],
+       "id": "col:학교반정보 그리드/강의실 코드"
+      },
+      {
+       "label": "강의실 정원",
+       "depth": 0,
+       "box": [
+        1090,
+        418,
+        85,
+        62
+       ],
+       "id": "col:학교반정보 그리드/강의실 정원"
+      },
+      {
+       "label": "성적반코드",
+       "depth": 0,
+       "box": [
+        1175,
+        418,
+        85,
+        62
+       ],
+       "id": "col:학교반정보 그리드/성적반코드"
+      },
+      {
+       "label": "남녀공학",
+       "depth": 0,
+       "box": [
+        1260,
+        418,
+        113,
+        62
+       ],
+       "id": "col:학교반정보 그리드/남녀공학"
+      },
+      {
+       "label": "특수학급 설정여부",
+       "depth": 0,
+       "box": [
+        1373,
+        418,
+        75,
+        62
+       ],
+       "id": "col:학교반정보 그리드/특수학급 설정여부"
+      },
+      {
+       "label": "사용여부",
+       "depth": 0,
+       "box": [
+        1448,
+        418,
+        75,
+        62
+       ],
+       "id": "col:학교반정보 그리드/사용여부"
+      },
+      {
+       "label": "정렬",
+       "depth": 0,
+       "box": [
+        1523,
+        418,
+        91,
+        62
+       ],
+       "id": "col:학교반정보 그리드/정렬"
+      }
+     ],
+     "id": "grid:학교반정보 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교정보 > 학교정보 > 기준/반정보관리",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

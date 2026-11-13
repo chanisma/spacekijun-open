@@ -1,0 +1,1072 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시자료관리›정정대장관리",
+ "name": "정정대장관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:53:08+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:정정대장",
+   "tab": "정정대장",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      159,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      380,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1509,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      183,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ ‘정정일자’를 클릭하면 정정대장 수정 팝업창이 뜨며, ‘정정항목’을 클릭하면 자료수정화면으로 이동합니다.",
+     "id": "note:※ ‘정정일자’를 클릭하면 정정대장 수정 팝업창이 뜨며, ‘정정항목’을 클릭하면 자료수정화면으로 이동합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      202,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 자료수정 후 ‘검증’ 버튼을 클릭하여 검증여부를 진행하세요.",
+     "id": "note:※ 자료수정 후 ‘검증’ 버튼을 클릭하여 검증여부를 진행하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      220,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 검증이 정상적으로 처리되면 ‘기안문 상신’을 진행하세요.",
+     "id": "note:※ 검증이 정상적으로 처리되면 ‘기안문 상신’을 진행하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      239,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ ‘정정항목’을 클릭하면 정정내역을 확인 하실 수 있습니다.",
+     "id": "note:※ ‘정정항목’을 클릭하면 정정내역을 확인 하실 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1485,
+      263,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "도움말보기",
+     "variant": "secondary",
+     "id": "button:도움말보기"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      298,
+      1530,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정정대장",
+      "기안문 상신",
+      "미반영자료",
+      "재검토확인"
+     ],
+     "active": "정정대장",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "제출파일개인정보검증 결과팝업",
+     "box": [
+      1298,
+      353,
+      136,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "제출파일개인정보검증",
+     "variant": "link",
+     "id": "button:제출파일개인정보검증"
+    },
+    {
+     "aria": null,
+     "box": [
+      1449,
+      353,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검증",
+     "variant": "plain",
+     "id": "button:검증"
+    },
+    {
+     "aria": null,
+     "box": [
+      1497,
+      353,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1545,
+      353,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      393,
+      1530,
+      345
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "정정일시",
+       "depth": 0,
+       "box": [
+        106,
+        394,
+        211,
+        36
+       ],
+       "id": "col:그리드/정정일시"
+      },
+      {
+       "label": "정정항목",
+       "depth": 0,
+       "box": [
+        317,
+        394,
+        422,
+        36
+       ],
+       "id": "col:그리드/정정항목"
+      },
+      {
+       "label": "오류내용",
+       "depth": 0,
+       "box": [
+        739,
+        394,
+        211,
+        36
+       ],
+       "id": "col:그리드/오류내용"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        951,
+        394,
+        211,
+        36
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "진행일시",
+       "depth": 0,
+       "box": [
+        1162,
+        394,
+        211,
+        36
+       ],
+       "id": "col:그리드/진행일시"
+      },
+      {
+       "label": "검증",
+       "depth": 0,
+       "box": [
+        1373,
+        394,
+        211,
+        36
+       ],
+       "id": "col:그리드/검증"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1482,
+      778,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "secondary",
+     "id": "button:정정내역확인"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:기안문 상신",
+   "tab": "기안문 상신",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      159,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      380,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1509,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      183,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ ‘정정일자’를 클릭하면 정정대장 수정 팝업창이 뜨며, ‘정정항목’을 클릭하면 자료수정화면으로 이동합니다.",
+     "id": "note:※ ‘정정일자’를 클릭하면 정정대장 수정 팝업창이 뜨며, ‘정정항목’을 클릭하면 자료수정화면으로 이동합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      202,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 자료수정 후 ‘검증’ 버튼을 클릭하여 검증여부를 진행하세요.",
+     "id": "note:※ 자료수정 후 ‘검증’ 버튼을 클릭하여 검증여부를 진행하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      220,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 검증이 정상적으로 처리되면 ‘기안문 상신’을 진행하세요.",
+     "id": "note:※ 검증이 정상적으로 처리되면 ‘기안문 상신’을 진행하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      239,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ ‘정정항목’을 클릭하면 정정내역을 확인 하실 수 있습니다.",
+     "id": "note:※ ‘정정항목’을 클릭하면 정정내역을 확인 하실 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1485,
+      263,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "도움말보기",
+     "variant": "secondary",
+     "id": "button:도움말보기"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      298,
+      1530,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정정대장",
+      "기안문 상신",
+      "미반영자료",
+      "재검토확인"
+     ],
+     "active": "기안문 상신",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1545,
+      353,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "상신",
+     "variant": "primary",
+     "id": "button:상신"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      393,
+      1530,
+      345
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "정정일시",
+       "depth": 0,
+       "box": [
+        106,
+        394,
+        246,
+        36
+       ],
+       "id": "col:그리드/정정일시"
+      },
+      {
+       "label": "정정항목",
+       "depth": 0,
+       "box": [
+        352,
+        394,
+        493,
+        36
+       ],
+       "id": "col:그리드/정정항목"
+      },
+      {
+       "label": "오류내용",
+       "depth": 0,
+       "box": [
+        845,
+        394,
+        246,
+        36
+       ],
+       "id": "col:그리드/오류내용"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        1091,
+        394,
+        246,
+        36
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "진행일시",
+       "depth": 0,
+       "box": [
+        1338,
+        394,
+        246,
+        36
+       ],
+       "id": "col:그리드/진행일시"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1482,
+      778,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "secondary",
+     "id": "button:정정내역확인"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:미반영자료",
+   "tab": "미반영자료",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      159,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      380,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1509,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      183,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ ‘정정일자’를 클릭하면 정정대장 수정 팝업창이 뜨며, ‘정정항목’을 클릭하면 자료수정화면으로 이동합니다.",
+     "id": "note:※ ‘정정일자’를 클릭하면 정정대장 수정 팝업창이 뜨며, ‘정정항목’을 클릭하면 자료수정화면으로 이동합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      202,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 자료수정 후 ‘검증’ 버튼을 클릭하여 검증여부를 진행하세요.",
+     "id": "note:※ 자료수정 후 ‘검증’ 버튼을 클릭하여 검증여부를 진행하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      220,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 검증이 정상적으로 처리되면 ‘기안문 상신’을 진행하세요.",
+     "id": "note:※ 검증이 정상적으로 처리되면 ‘기안문 상신’을 진행하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      239,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ ‘정정항목’을 클릭하면 정정내역을 확인 하실 수 있습니다.",
+     "id": "note:※ ‘정정항목’을 클릭하면 정정내역을 확인 하실 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1485,
+      263,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "도움말보기",
+     "variant": "secondary",
+     "id": "button:도움말보기"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      298,
+      1530,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정정대장",
+      "기안문 상신",
+      "미반영자료",
+      "재검토확인"
+     ],
+     "active": "미반영자료",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1449,
+      353,
+      136,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교알리미에자료반영",
+     "variant": "primary",
+     "id": "button:학교알리미에자료반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      393,
+      1530,
+      345
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "정정일시",
+       "depth": 0,
+       "box": [
+        106,
+        394,
+        246,
+        36
+       ],
+       "id": "col:그리드/정정일시"
+      },
+      {
+       "label": "정정항목",
+       "depth": 0,
+       "box": [
+        352,
+        394,
+        493,
+        36
+       ],
+       "id": "col:그리드/정정항목"
+      },
+      {
+       "label": "오류내용",
+       "depth": 0,
+       "box": [
+        845,
+        394,
+        246,
+        36
+       ],
+       "id": "col:그리드/오류내용"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        1091,
+        394,
+        246,
+        36
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "진행일시",
+       "depth": 0,
+       "box": [
+        1338,
+        394,
+        246,
+        36
+       ],
+       "id": "col:그리드/진행일시"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1482,
+      778,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "secondary",
+     "id": "button:정정내역확인"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:재검토확인",
+   "tab": "재검토확인",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      159,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      380,
+      122,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1509,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      183,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ ‘정정일자’를 클릭하면 정정대장 수정 팝업창이 뜨며, ‘정정항목’을 클릭하면 자료수정화면으로 이동합니다.",
+     "id": "note:※ ‘정정일자’를 클릭하면 정정대장 수정 팝업창이 뜨며, ‘정정항목’을 클릭하면 자료수정화면으로 이동합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      202,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 자료수정 후 ‘검증’ 버튼을 클릭하여 검증여부를 진행하세요.",
+     "id": "note:※ 자료수정 후 ‘검증’ 버튼을 클릭하여 검증여부를 진행하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      220,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 검증이 정상적으로 처리되면 ‘기안문 상신’을 진행하세요.",
+     "id": "note:※ 검증이 정상적으로 처리되면 ‘기안문 상신’을 진행하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      239,
+      1530,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ ‘정정항목’을 클릭하면 정정내역을 확인 하실 수 있습니다.",
+     "id": "note:※ ‘정정항목’을 클릭하면 정정내역을 확인 하실 수 있습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1485,
+      263,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "도움말보기",
+     "variant": "secondary",
+     "id": "button:도움말보기"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      298,
+      1530,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "정정대장",
+      "기안문 상신",
+      "미반영자료",
+      "재검토확인"
+     ],
+     "active": "재검토확인",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1521,
+      353,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인완료",
+     "variant": "primary",
+     "id": "button:확인완료"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      393,
+      1530,
+      180
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "재요청기관",
+       "depth": 0,
+       "box": [
+        106,
+        394,
+        286,
+        36
+       ],
+       "id": "col:그리드/재요청기관"
+      },
+      {
+       "label": "항목명",
+       "depth": 0,
+       "box": [
+        392,
+        394,
+        286,
+        36
+       ],
+       "id": "col:그리드/항목명"
+      },
+      {
+       "label": "처리상태",
+       "depth": 0,
+       "box": [
+        678,
+        394,
+        192,
+        36
+       ],
+       "id": "col:그리드/처리상태"
+      },
+      {
+       "label": "담당자",
+       "depth": 0,
+       "box": [
+        869,
+        394,
+        286,
+        36
+       ],
+       "id": "col:그리드/담당자"
+      },
+      {
+       "label": "당담자연락처",
+       "depth": 0,
+       "box": [
+        1155,
+        394,
+        286,
+        36
+       ],
+       "id": "col:그리드/당담자연락처"
+      },
+      {
+       "label": "요청일자",
+       "depth": 0,
+       "box": [
+        1441,
+        394,
+        143,
+        36
+       ],
+       "id": "col:그리드/요청일자"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1482,
+      778,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "secondary",
+     "id": "button:정정내역확인"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시자료관리 > 공시자료정정 > 정정대장관리",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

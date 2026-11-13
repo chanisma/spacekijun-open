@@ -1,0 +1,370 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교과용도서›교과용도서#학교›AIDT 관리›(AIDT) 인정도서 조회",
+ "name": "(AIDT) 인정도서 조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:38:00+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "인정시도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:인정시도"
+    },
+    {
+     "aria": null,
+     "box": [
+      475,
+      82,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교육과정차수",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:교육과정차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      775,
+      82,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교과목명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교과목명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1075,
+      82,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      475,
+      122,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "발행사명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:발행사명"
+    },
+    {
+     "aria": null,
+     "box": [
+      775,
+      122,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "저자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:저자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1075,
+      122,
+      160,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "도서명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:도서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1245,
+      122,
+      147,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "미사용 포함",
+     "checked": false,
+     "id": "check:미사용 포함"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "자료내려받기",
+     "box": [
+      1503,
+      173,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": "인정도서목록",
+     "box": [
+      25,
+      213,
+      1590,
+      560
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "인정도서목록",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "교육과정 차수",
+       "depth": 0,
+       "box": [
+        26,
+        214,
+        157,
+        62
+       ],
+       "id": "col:인정도서목록/교육과정 차수"
+      },
+      {
+       "label": "인정시도",
+       "depth": 0,
+       "box": [
+        183,
+        214,
+        91,
+        62
+       ],
+       "id": "col:인정도서목록/인정시도"
+      },
+      {
+       "label": "사용 학년",
+       "depth": 0,
+       "box": [
+        274,
+        214,
+        105,
+        62
+       ],
+       "id": "col:인정도서목록/사용 학년"
+      },
+      {
+       "label": "사용 학기",
+       "depth": 0,
+       "box": [
+        379,
+        214,
+        78,
+        62
+       ],
+       "id": "col:인정도서목록/사용 학기"
+      },
+      {
+       "label": "교과목명",
+       "depth": 0,
+       "box": [
+        457,
+        214,
+        131,
+        62
+       ],
+       "id": "col:인정도서목록/교과목명"
+      },
+      {
+       "label": "구분고시",
+       "depth": 0,
+       "box": [
+        588,
+        214,
+        118,
+        62
+       ],
+       "id": "col:인정도서목록/구분고시"
+      },
+      {
+       "label": "도서명",
+       "depth": 0,
+       "box": [
+        706,
+        214,
+        196,
+        62
+       ],
+       "id": "col:인정도서목록/도서명"
+      },
+      {
+       "label": "인정일자",
+       "depth": 0,
+       "box": [
+        902,
+        214,
+        118,
+        62
+       ],
+       "id": "col:인정도서목록/인정일자"
+      },
+      {
+       "label": "발행사",
+       "depth": 0,
+       "box": [
+        1019,
+        214,
+        131,
+        62
+       ],
+       "id": "col:인정도서목록/발행사"
+      },
+      {
+       "label": "저자",
+       "depth": 0,
+       "box": [
+        1150,
+        214,
+        131,
+        62
+       ],
+       "id": "col:인정도서목록/저자"
+      },
+      {
+       "label": "가격",
+       "depth": 0,
+       "box": [
+        1281,
+        214,
+        98,
+        62
+       ],
+       "id": "col:인정도서목록/가격"
+      },
+      {
+       "label": "사용 여부",
+       "depth": 0,
+       "box": [
+        1379,
+        214,
+        78,
+        62
+       ],
+       "id": "col:인정도서목록/사용 여부"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1457,
+        214,
+        157,
+        62
+       ],
+       "id": "col:인정도서목록/비고"
+      }
+     ],
+     "id": "grid:인정도서목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교과용도서 > AIDT 관리 > (AIDT) 인정도서 조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

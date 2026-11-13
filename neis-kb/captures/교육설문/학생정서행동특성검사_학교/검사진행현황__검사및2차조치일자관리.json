@@ -1,0 +1,326 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학생정서행동특성검사#학교›검사진행현황›검사및2차조치일자관리",
+ "name": "검사및2차조치일자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:53:28+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검사연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:검사연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      330,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      885,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1105,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "참여여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:참여여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1305,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "관심군여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:관심군여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 1차검사일자에 노란색 표시는 전출교에서 검사한 날짜입니다. 검사를 실시하면 현재교 검사일자로 변경됩니다.",
+     "id": "note:※ 1차검사일자에 노란색 표시는 전출교에서 검사한 날짜입니다. 검사를 실시하면 현재교 검사일자로 변경됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 검사거부여부에 체크가 된 학생은 검사 거부 학생이며, 체크가 없는 학생의 경우 단순 미실시 학생입니다.",
+     "id": "note:※ 검사거부여부에 체크가 된 학생은 검사 거부 학생이며, 체크가 없는 학생의 경우 단순 미실시 학생입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1356,
+      205,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      205,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반별저장여부",
+     "variant": "link",
+     "id": "button:반별저장여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "반별 검사 정보",
+     "box": [
+      25,
+      245,
+      1590,
+      568
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반별 검사 정보",
+     "selectable": false,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        170,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        315,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        459,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/성명"
+      },
+      {
+       "label": "전입여부",
+       "depth": 0,
+       "box": [
+        603,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/전입여부"
+      },
+      {
+       "label": "전입일자",
+       "depth": 0,
+       "box": [
+        748,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/전입일자"
+      },
+      {
+       "label": "1차검사일자",
+       "depth": 0,
+       "box": [
+        892,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/1차검사일자"
+      },
+      {
+       "label": "검사거부여부",
+       "depth": 0,
+       "box": [
+        1037,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/검사거부여부"
+      },
+      {
+       "label": "상담대상",
+       "depth": 0,
+       "box": [
+        1181,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/상담대상"
+      },
+      {
+       "label": "관심군여부",
+       "depth": 0,
+       "box": [
+        1325,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/관심군여부"
+      },
+      {
+       "label": "전문기관2차조치일자",
+       "depth": 0,
+       "box": [
+        1470,
+        246,
+        144,
+        36
+       ],
+       "id": "col:반별 검사 정보/전문기관2차조치일자"
+      }
+     ],
+     "id": "grid:반별 검사 정보"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생정서행동특성검사 > 검사진행현황 > 검사및2차조치일자관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

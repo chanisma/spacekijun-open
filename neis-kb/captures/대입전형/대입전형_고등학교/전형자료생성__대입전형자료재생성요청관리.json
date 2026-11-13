@@ -1,0 +1,373 @@
+{
+ "schema": "neis-capture/1",
+ "key": "대입전형›대입전형#고등학교›전형자료생성›대입전형자료재생성요청관리",
+ "name": "대입전형자료재생성요청관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:44:48+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1516,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 재생성요청기간 : 2026.09.04. 14시(부터) ~ 2026.09.07. 18시(까지)",
+     "id": "note:※ 재생성요청기간 : 2026.09.04. 14시(부터) ~ 2026.09.07. 18시(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료 재생성 진행 순서",
+     "id": "note:※ 대입전형자료 재생성 진행 순서"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1560,
+      281,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      291,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "재생성요청등록",
+     "id": "heading:재생성요청등록"
+    },
+    {
+     "aria": "지원자구분",
+     "box": [
+      150,
+      327,
+      718,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "지원자구분",
+     "options": [
+      "재학생",
+      "졸업생"
+     ],
+     "id": "radio:지원자구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      367,
+      130,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "재생성기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:재생성기간"
+    },
+    {
+     "aria": "시작일자 빼기",
+     "box": [
+      286,
+      367,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "시작일자 빼기",
+     "variant": "plain",
+     "id": "button:시작일자 빼기"
+    },
+    {
+     "aria": "시작일자 더하기",
+     "box": [
+      316,
+      367,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "시작일자 더하기",
+     "variant": "plain",
+     "id": "button:시작일자 더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      435,
+      367,
+      130,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "재생성기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:재생성기간~"
+    },
+    {
+     "aria": "종료일자 빼기",
+     "box": [
+      571,
+      367,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "종료일자 빼기",
+     "variant": "plain",
+     "id": "button:종료일자 빼기"
+    },
+    {
+     "aria": "종료일자 더하기",
+     "box": [
+      601,
+      367,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "종료일자 더하기",
+     "variant": "plain",
+     "id": "button:종료일자 더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      407,
+      360,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "신청사유",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:신청사유"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1488,
+      453,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1560,
+      453,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "재생성요청목록",
+     "box": [
+      25,
+      463,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "재생성요청목록",
+     "id": "heading:재생성요청목록"
+    },
+    {
+     "aria": "재생성요청목록",
+     "box": [
+      25,
+      493,
+      1575,
+      328
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "재생성요청목록",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "요청일시",
+       "depth": 0,
+       "box": [
+        76,
+        494,
+        257,
+        36
+       ],
+       "id": "col:재생성요청목록/요청일시"
+      },
+      {
+       "label": "요청자",
+       "depth": 0,
+       "box": [
+        333,
+        494,
+        171,
+        36
+       ],
+       "id": "col:재생성요청목록/요청자"
+      },
+      {
+       "label": "지원자구분",
+       "depth": 0,
+       "box": [
+        504,
+        494,
+        171,
+        36
+       ],
+       "id": "col:재생성요청목록/지원자구분"
+      },
+      {
+       "label": "재생성기간",
+       "depth": 0,
+       "box": [
+        675,
+        494,
+        342,
+        36
+       ],
+       "id": "col:재생성요청목록/재생성기간"
+      },
+      {
+       "label": "신청사유",
+       "depth": 0,
+       "box": [
+        1017,
+        494,
+        411,
+        36
+       ],
+       "id": "col:재생성요청목록/신청사유"
+      },
+      {
+       "label": "결재진행상태",
+       "depth": 0,
+       "box": [
+        1428,
+        494,
+        171,
+        36
+       ],
+       "id": "col:재생성요청목록/결재진행상태"
+      }
+     ],
+     "id": "grid:재생성요청목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 대입전형 > 전형자료생성 > 대입전형자료재생성요청관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

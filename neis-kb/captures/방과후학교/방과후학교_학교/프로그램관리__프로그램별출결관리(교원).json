@@ -1,0 +1,180 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›프로그램관리›프로그램별출결관리(교원)",
+ "name": "프로그램별출결관리(교원)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:00:54+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "유형분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:유형분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1095,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "내용분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:내용분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "프로그램명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:프로그램명"
+    },
+    {
+     "aria": "프로그램 출결 목록",
+     "box": [
+      25,
+      203,
+      1590,
+      610
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "프로그램 출결 목록",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        397,
+        36
+       ],
+       "id": "col:프로그램 출결 목록/프로그램명"
+      },
+      {
+       "label": "강의기간",
+       "depth": 0,
+       "box": [
+        423,
+        204,
+        397,
+        36
+       ],
+       "id": "col:프로그램 출결 목록/강의기간"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        820,
+        204,
+        397,
+        36
+       ],
+       "id": "col:프로그램 출결 목록/상태"
+      },
+      {
+       "label": "최근작업일자",
+       "depth": 0,
+       "box": [
+        1217,
+        204,
+        397,
+        36
+       ],
+       "id": "col:프로그램 출결 목록/최근작업일자"
+      }
+     ],
+     "id": "grid:프로그램 출결 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 프로그램관리 > 프로그램별출결관리(교원)",
+ "viewport": [
+  1920,
+  945
+ ]
+}

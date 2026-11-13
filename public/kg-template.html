@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>__STUDENT_NAME__ (__STUDENT_INFO__) 텍스트 지식그래프</title>
+<script src="https://unpkg.com/cytoscape@3.30.4/dist/cytoscape.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; display: flex; height: 100vh; overflow: hidden; }
+  #cy { flex: 1; background: #0f172a; }
+
+  /* Controls */
+  #controls { position: absolute; top: 16px; left: 16px; z-index: 10; display: flex; gap: 8px; flex-wrap: wrap; max-width: 600px; }
+  #controls button { padding: 6px 14px; border: 1px solid #334155; border-radius: 6px; background: #1e293b; color: #e2e8f0; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+  #controls button:hover { background: #334155; border-color: #60a5fa; }
+  #controls button.active { background: #3b82f6; border-color: #3b82f6; color: white; }
+
+  /* Title */
+  #title-bar { position: absolute; top: 16px; left: 50%; transform: translateX(-50%); z-index: 10; text-align: center; pointer-events: none; }
+  #title-bar h1 { font-size: 20px; font-weight: 700; color: #f8fafc; }
+  #title-bar p { font-size: 12px; color: #64748b; margin-top: 2px; }
+
+  /* Filter Panel */
+  #filter-panel { position: absolute; top: 70px; left: 16px; z-index: 10; background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 16px; width: 260px; }
+  #filter-panel h4 { font-size: 13px; color: #94a3b8; margin-bottom: 10px; }
+  .filter-group { margin-bottom: 12px; }
+  .filter-group label { font-size: 12px; color: #94a3b8; display: block; margin-bottom: 4px; }
+  .filter-check { display: flex; align-items: center; gap: 6px; padding: 3px 0; font-size: 12px; cursor: pointer; }
+  .filter-check input { accent-color: #3b82f6; }
+  .filter-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  #confidence-slider { width: 100%; accent-color: #3b82f6; }
+  #confidence-value { font-size: 12px; color: #60a5fa; font-weight: 600; }
+
+  /* Detail Panel */
+  #detail-panel { position: absolute; top: 16px; right: 16px; width: 340px; background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; z-index: 10; display: none; max-height: calc(100vh - 32px); overflow-y: auto; }
+  #detail-panel h3 { font-size: 16px; margin-bottom: 12px; color: #60a5fa; }
+  .detail-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #334155; font-size: 13px; }
+  .detail-label { color: #94a3b8; min-width: 80px; }
+  .detail-value { color: #e2e8f0; font-weight: 500; text-align: right; max-width: 200px; word-break: keep-all; }
+  .evidence-box { margin-top: 8px; padding: 10px; background: #0f172a; border-radius: 8px; font-size: 12px; color: #cbd5e1; line-height: 1.6; max-height: 200px; overflow-y: auto; }
+  .close-btn { position: absolute; top: 12px; right: 12px; background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 18px; }
+  .close-btn:hover { color: #e2e8f0; }
+
+  /* Legend (right side, above stats) */
+  #legend { position: absolute; bottom: 120px; right: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 14px; z-index: 10; }
+  #legend h4 { font-size: 12px; color: #94a3b8; margin-bottom: 6px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; padding: 2px 0; font-size: 11px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+
+  /* Stats */
+  #stats-bar { position: absolute; bottom: 16px; right: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 16px; z-index: 10; font-size: 12px; }
+  .stat-row { display: flex; justify-content: space-between; gap: 16px; padding: 2px 0; }
+  .stat-label { color: #94a3b8; }
+  .stat-value { color: #60a5fa; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="cy"></div>
+
+<div id="title-bar">
+  <h1>__STUDENT_NAME__ (__STUDENT_INFO__) 텍스트 지식그래프</h1>
+  <p>Text-based Knowledge Graph Extraction</p>
+</div>
+
+<div id="controls">
+  <button onclick="cy.fit(undefined, 50)" title="전체보기">전체보기</button>
+  <button onclick="cy.zoom(cy.zoom() * 1.7); cy.center()">+</button>
+  <button onclick="cy.zoom(cy.zoom() / 1.7); cy.center()">-</button>
+  <button onclick="runLayout('cose')" class="active" id="btn-cose">연결 기반</button>
+  <button onclick="runLayout('circle')" id="btn-circle">원형</button>
+  <button onclick="toggleFilter()" id="btn-filter">필터</button>
+</div>
+
+<div id="filter-panel" style="display:none;">
+  <h4>필터</h4>
+  <div class="filter-group">
+    <label>엔티티 유형</label>
+    <div id="type-filters"></div>
+  </div>
+  <div class="filter-group">
+    <label>신뢰도 기준: <span id="confidence-value">0.70</span></label>
+    <input type="range" id="confidence-slider" min="50" max="100" value="70" oninput="updateConfidence(this.value)">
+  </div>
+  <div class="filter-group">
+    <label>관계 유형 필터</label>
+    <div id="predicate-filters"></div>
+  </div>
+</div>
+
+<div id="detail-panel">
+  <button class="close-btn" onclick="closeDetail()">&times;</button>
+  <h3 id="detail-title"></h3>
+  <div id="detail-content"></div>
+</div>
+
+<div id="legend">
+  <h4>엔티티 유형</h4>
+  <div class="legend-item"><div class="legend-dot" style="background:#3B82F6"></div>Student (학생)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#8B5CF6"></div>Competency (역량)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#06B6D4"></div>Activity (활동)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#10B981"></div>Attitude (태도)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#F59E0B"></div>Interest (관심분야)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#EAB308"></div>Concept (개념)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#EC4899"></div>Book (독서)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#EF4444"></div>Achievement (성취)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#F97316"></div>Person (인물)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#A855F7"></div>Role (역할)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6366F1"></div>Thread (탐구 스레드)</div>
+</div>
+
+<div id="stats-bar">
+  <div class="stat-row"><span class="stat-label">노드</span><span class="stat-value" id="stat-nodes">0</span></div>
+  <div class="stat-row"><span class="stat-label">엣지</span><span class="stat-value" id="stat-edges">0</span></div>
+  <div class="stat-row"><span class="stat-label">표시 중</span><span class="stat-value" id="stat-visible">0</span></div>
+</div>
+
+<script>
+// === COLOR / SHAPE / EDGE CONFIG ===
+var typeColors = {
+  Student: '#3B82F6', Competency: '#8B5CF6', Activity: '#06B6D4', Attitude: '#10B981',
+  Interest: '#F59E0B', Concept: '#EAB308', Book: '#EC4899', Achievement: '#EF4444',
+  Person: '#F97316', Role: '#A855F7', Thread: '#6366F1'
+};
+var typeShapes = {
+  Student: 'ellipse', Competency: 'round-rectangle', Activity: 'diamond', Attitude: 'ellipse',
+  Interest: 'star', Concept: 'hexagon', Book: 'rectangle', Achievement: 'octagon',
+  Person: 'ellipse', Role: 'round-rectangle', Thread: 'round-rectangle'
+};
+var predColors = {
+  DEMONSTRATED: '#8B5CF6', PERFORMED: '#06B6D4', SHOWED_ATTITUDE: '#10B981',
+  INTERESTED_IN: '#F59E0B', ENGAGED_WITH: '#EAB308', READ: '#EC4899',
+  ACHIEVED: '#EF4444', HELD_ROLE: '#A855F7', RELATED_TO: '#64748b',
+  APPLIED_IN: '#22D3EE', EVIDENCED_BY: '#FB923C', DEVELOPS_INTO: '#34D399',
+  MOTIVATED_BY: '#FBBF24', SUPPORTS: '#A78BFA', INSPIRED_BY: '#F472B6',
+  DEEPENED_FROM: '#818CF8', PART_OF: '#94A3B8'
+};
+var predLineStyles = {
+  DEMONSTRATED: 'solid', PERFORMED: 'solid', SHOWED_ATTITUDE: 'solid',
+  INTERESTED_IN: 'solid', ENGAGED_WITH: 'solid', READ: 'dotted',
+  ACHIEVED: 'solid', HELD_ROLE: 'solid', RELATED_TO: 'dashed',
+  APPLIED_IN: 'dashed', EVIDENCED_BY: 'dashed', DEVELOPS_INTO: 'dashed',
+  MOTIVATED_BY: 'dashed', SUPPORTS: 'dashed', INSPIRED_BY: 'dashed',
+  DEEPENED_FROM: 'dashed', PART_OF: 'dashed'
+};
+var predLabelsKo = {
+  DEMONSTRATED: '역량 발현', PERFORMED: '활동 수행', SHOWED_ATTITUDE: '태도 표출',
+  INTERESTED_IN: '관심 분야', ENGAGED_WITH: '개념 탐구', READ: '독서',
+  ACHIEVED: '성취 달성', HELD_ROLE: '역할 수행', RELATED_TO: '관련',
+  APPLIED_IN: '적용', EVIDENCED_BY: '근거 활동', DEVELOPS_INTO: '발전',
+  MOTIVATED_BY: '동기 부여', SUPPORTS: '뒷받침', INSPIRED_BY: '영감',
+  DEEPENED_FROM: '심화', PART_OF: '소속'
+};
+
+// === GRAPH DATA (replaced at generation time) ===
+var graphData = __GRAPH_DATA__;
+
+// Process nodes
+graphData.nodes.forEach(function(n) {
+  var d = n.data;
+  d.bgColor = typeColors[d.type] || '#64748b';
+  d.shapeVal = typeShapes[d.type] || 'ellipse';
+  d.nodeSize = d.type === 'Student' ? 60 : (d.type === 'Thread' ? 45 : 35);
+  d.fontSize = d.type === 'Student' ? 13 : 10;
+  d.borderW = d.type === 'Student' ? 3 : (d.type === 'Thread' ? 2.5 : 2);
+});
+graphData.edges.forEach(function(e) {
+  var d = e.data;
+  d.edgeColor = predColors[d.type] || '#64748b';
+  d.lineStyle = predLineStyles[d.type] || 'solid';
+  d.edgeWidth = d.confidence ? (1 + d.confidence * 2) : 2;
+  d.labelKo = predLabelsKo[d.type] || d.label;
+});
+
+var cy = cytoscape({
+  container: document.getElementById('cy'),
+  elements: graphData,
+  style: [
+    { selector: 'node', style: {
+      'label': 'data(label)', 'text-wrap': 'wrap', 'text-valign': 'center', 'text-halign': 'center',
+      'font-size': 'data(fontSize)', 'color': '#f8fafc',
+      'text-outline-color': 'data(bgColor)', 'text-outline-width': 2,
+      'width': 'data(nodeSize)', 'height': 'data(nodeSize)',
+      'border-width': 'data(borderW)', 'border-color': '#475569',
+      'background-color': 'data(bgColor)', 'shape': 'data(shapeVal)'
+    }},
+    { selector: 'node[type="Student"]', style: { 'border-color': '#93c5fd', 'font-weight': 'bold' }},
+    { selector: 'node[type="Thread"]', style: { 'border-color': '#818cf8', 'border-style': 'double' }},
+    { selector: 'edge', style: {
+      'width': 'data(edgeWidth)', 'curve-style': 'bezier',
+      'target-arrow-shape': 'triangle', 'target-arrow-color': 'data(edgeColor)',
+      'line-color': 'data(edgeColor)', 'line-style': 'data(lineStyle)',
+      'arrow-scale': 0.8, 'opacity': 0.6,
+      'label': 'data(labelKo)', 'font-size': '8px', 'color': '#94a3b8',
+      'text-rotation': 'autorotate',
+      'text-background-color': '#0f172a', 'text-background-opacity': 0.8,
+      'text-background-padding': '2px'
+    }},
+    { selector: 'edge:active', style: { 'overlay-opacity': 0.05 } },
+    { selector: 'node.highlighted', style: { 'border-color': '#60a5fa', 'border-width': 4, 'z-index': 999 } },
+    { selector: 'edge.highlighted', style: { 'width': 4, 'opacity': 1, 'z-index': 999 } },
+    { selector: 'node.faded', style: { 'opacity': 0.15 } },
+    { selector: 'edge.faded', style: { 'opacity': 0.05 } },
+    { selector: 'node.filtered-out', style: { 'display': 'none' } },
+    { selector: 'edge.filtered-out', style: { 'display': 'none' } }
+  ],
+  layout: { name: 'cose', quality: 'default', nodeDimensionsIncludeLabels: true, idealEdgeLength: 120, nodeRepulsion: 8000, padding: 50 },
+  minZoom: 0.2, maxZoom: 4, wheelSensitivity: 0.55
+});
+
+// === LAYOUT ===
+function runLayout(name) {
+  document.querySelectorAll('#controls button[id^="btn-"]').forEach(function(b) { b.classList.remove('active'); });
+  var btn = document.getElementById('btn-' + (name === 'cose' ? 'cose' : name));
+  if (btn) btn.classList.add('active');
+  var opts;
+  if (name === 'cose') {
+    opts = {
+      name: 'cose',
+      quality: 'default',
+      nodeDimensionsIncludeLabels: true,
+      idealEdgeLength: 120,
+      nodeRepulsion: 8000,
+      edgeElasticity: 120,
+      gravity: 0.25,
+      numIter: 1200,
+      padding: 50
+    };
+  } else {
+    opts = { name: 'circle', padding: 50 };
+  }
+  cy.layout(opts).run();
+}
+
+// === FILTER STATE ===
+var activeTypes = {};
+var activePredicates = {};
+Object.keys(typeColors).forEach(function(t) { activeTypes[t] = true; });
+Object.keys(predColors).forEach(function(p) { activePredicates[p] = true; });
+var minConfidence = 0.70;
+
+function toggleFilter() {
+  var panel = document.getElementById('filter-panel');
+  panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+}
+
+function toggleType(type) {
+  var chk = document.getElementById('chk-' + type);
+  activeTypes[type] = chk.checked;
+  applyFilters();
+}
+
+function togglePredicate(pred) {
+  var chk = document.getElementById('chk-' + pred);
+  activePredicates[pred] = chk.checked;
+  applyFilters();
+}
+
+function updateConfidence(val) {
+  minConfidence = val / 100;
+  document.getElementById('confidence-value').textContent = minConfidence.toFixed(2);
+  applyFilters();
+}
+
+function applyFilters() {
+  cy.batch(function() {
+    cy.nodes().forEach(function(n) {
+      var t = n.data('type');
+      if (t === 'Student' || activeTypes[t]) {
+        n.removeClass('filtered-out');
+      } else {
+        n.addClass('filtered-out');
+      }
+    });
+    cy.edges().forEach(function(e) {
+      var pred = e.data('type');
+      var conf = e.data('confidence') || 1;
+      var srcVisible = !e.source().hasClass('filtered-out');
+      var tgtVisible = !e.target().hasClass('filtered-out');
+      if (srcVisible && tgtVisible && activePredicates[pred] && conf >= minConfidence) {
+        e.removeClass('filtered-out');
+      } else {
+        e.addClass('filtered-out');
+      }
+    });
+  });
+  updateStats();
+}
+
+function updateStats() {
+  var visibleNodes = cy.nodes().not('.filtered-out').length;
+  var visibleEdges = cy.edges().not('.filtered-out').length;
+  document.getElementById('stat-nodes').textContent = String(cy.nodes().length);
+  document.getElementById('stat-edges').textContent = String(cy.edges().length);
+  document.getElementById('stat-visible').textContent = visibleNodes + 'N / ' + visibleEdges + 'E';
+}
+
+// === BUILD FILTER CHECKBOXES (safe DOM) ===
+(function() {
+  var typeContainer = document.getElementById('type-filters');
+  Object.keys(typeColors).forEach(function(t) {
+    if (t === 'Student') return;
+    var count = cy.nodes('[type="' + t + '"]').length;
+    if (count === 0) return;
+    var div = document.createElement('div');
+    div.className = 'filter-check';
+    var input = document.createElement('input');
+    input.type = 'checkbox';
+    input.id = 'chk-' + t;
+    input.checked = true;
+    input.addEventListener('change', function() { toggleType(t); });
+    var dot = document.createElement('div');
+    dot.className = 'filter-dot';
+    dot.style.background = typeColors[t];
+    var label = document.createElement('span');
+    label.textContent = t + ' (' + count + ')';
+    div.appendChild(input);
+    div.appendChild(dot);
+    div.appendChild(label);
+    typeContainer.appendChild(div);
+  });
+
+  var predContainer = document.getElementById('predicate-filters');
+  var usedPreds = {};
+  cy.edges().forEach(function(e) { usedPreds[e.data('type')] = (usedPreds[e.data('type')] || 0) + 1; });
+  Object.keys(usedPreds).sort().forEach(function(p) {
+    var div = document.createElement('div');
+    div.className = 'filter-check';
+    var input = document.createElement('input');
+    input.type = 'checkbox';
+    input.id = 'chk-' + p;
+    input.checked = true;
+    input.addEventListener('change', function() { togglePredicate(p); });
+    var label = document.createElement('span');
+    label.textContent = (predLabelsKo[p] || p) + ' (' + usedPreds[p] + ')';
+    div.appendChild(input);
+    div.appendChild(label);
+    predContainer.appendChild(div);
+  });
+})();
+
+// === DETAIL PANEL (safe DOM methods) ===
+function makeDetailRow(label, value) {
+  var row = document.createElement('div');
+  row.className = 'detail-row';
+  var spanL = document.createElement('span');
+  spanL.className = 'detail-label';
+  spanL.textContent = label;
+  var spanV = document.createElement('span');
+  spanV.className = 'detail-value';
+  spanV.textContent = String(value);
+  row.appendChild(spanL);
+  row.appendChild(spanV);
+  return row;
+}
+
+function makeEvidenceBox(title, text) {
+  var ebox = document.createElement('div');
+  ebox.className = 'evidence-box';
+  var strong = document.createElement('strong');
+  strong.textContent = title;
+  ebox.appendChild(strong);
+  ebox.appendChild(document.createElement('br'));
+  ebox.appendChild(document.createTextNode(text));
+  return ebox;
+}
+
+function closeDetail() {
+  document.getElementById('detail-panel').style.display = 'none';
+  cy.elements().removeClass('highlighted faded');
+}
+
+cy.on('tap', 'node', function(e) {
+  var d = e.target.data();
+  var panel = document.getElementById('detail-panel');
+  document.getElementById('detail-title').textContent = d.label;
+  var content = document.getElementById('detail-content');
+  content.replaceChildren();
+  content.appendChild(makeDetailRow('유형', d.type));
+  if (d.confidence) content.appendChild(makeDetailRow('신뢰도', (d.confidence * 100).toFixed(0) + '%'));
+  if (d.sourceCount) content.appendChild(makeDetailRow('출처', d.sourceCount + '개 출처'));
+  content.appendChild(makeDetailRow('연결 수', e.target.connectedEdges().not('.filtered-out').length));
+
+  if (d.evidence) {
+    content.appendChild(makeEvidenceBox('근거:', d.evidence));
+  }
+
+  if (d.sources) {
+    try {
+      var sources = typeof d.sources === 'string' ? JSON.parse(d.sources) : d.sources;
+      if (sources.length > 0) {
+        var sourceText = sources.map(function(s) {
+          return (s.subject || s.category) + ' (' + s.grade + '학년 ' + (s.semester || '') + ')';
+        }).join(', ');
+        content.appendChild(makeEvidenceBox('Sources:', sourceText));
+      }
+    } catch(ex) { /* ignore parse errors */ }
+  }
+
+  panel.style.display = 'block';
+  cy.elements().removeClass('highlighted faded');
+  e.target.addClass('highlighted');
+  e.target.connectedEdges().not('.filtered-out').addClass('highlighted');
+  e.target.neighborhood().nodes().not('.filtered-out').addClass('highlighted');
+  cy.elements().not('.filtered-out').not(e.target.neighborhood().add(e.target)).addClass('faded');
+});
+
+cy.on('tap', 'edge', function(e) {
+  var d = e.target.data();
+  var panel = document.getElementById('detail-panel');
+  document.getElementById('detail-title').textContent = d.label;
+  var content = document.getElementById('detail-content');
+  content.replaceChildren();
+  content.appendChild(makeDetailRow('관계 유형', d.type));
+  content.appendChild(makeDetailRow('출발', e.target.source().data('label')));
+  content.appendChild(makeDetailRow('도착', e.target.target().data('label')));
+  if (d.confidence) content.appendChild(makeDetailRow('신뢰도', (d.confidence * 100).toFixed(0) + '%'));
+  if (d.evidence) {
+    content.appendChild(makeEvidenceBox('근거:', d.evidence));
+  }
+  panel.style.display = 'block';
+});
+
+cy.on('tap', function(e) {
+  if (e.target === cy) closeDetail();
+});
+
+updateStats();
+</script>
+</body>
+</html>

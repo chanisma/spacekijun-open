@@ -1,0 +1,168 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교환경›교내위생점검#학교›공기질관리›공기질마감관리(정기점검)",
+ "name": "공기질마감관리(정기점검)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:30:29+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점검년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:점검년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      455,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "업무승인",
+     "variant": "primary",
+     "id": "button:업무승인"
+    },
+    {
+     "aria": "공기질 점검 측정 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "공기질 점검 측정 목록",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:공기질 점검 측정 목록/순번"
+      },
+      {
+       "label": "점검년도",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        308,
+        36
+       ],
+       "id": "col:공기질 점검 측정 목록/점검년도"
+      },
+      {
+       "label": "반기",
+       "depth": 0,
+       "box": [
+        384,
+        174,
+        308,
+        36
+       ],
+       "id": "col:공기질 점검 측정 목록/반기"
+      },
+      {
+       "label": "승인여부",
+       "depth": 0,
+       "box": [
+        691,
+        174,
+        308,
+        36
+       ],
+       "id": "col:공기질 점검 측정 목록/승인여부"
+      },
+      {
+       "label": "승인일자",
+       "depth": 0,
+       "box": [
+        999,
+        174,
+        308,
+        36
+       ],
+       "id": "col:공기질 점검 측정 목록/승인일자"
+      },
+      {
+       "label": "제출자ID",
+       "depth": 0,
+       "box": [
+        1306,
+        174,
+        308,
+        36
+       ],
+       "id": "col:공기질 점검 측정 목록/제출자ID"
+      }
+     ],
+     "id": "grid:공기질 점검 측정 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교환경}교내위생점검 > 공기질관리 > 공기질마감관리(정기점검)",
+ "viewport": [
+  1920,
+  945
+ ]
+}

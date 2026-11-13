@@ -1,0 +1,202 @@
+{
+ "schema": "neis-capture/1",
+ "key": "상담관리›상담관리#학교›상담통계›상담통계",
+ "name": "상담통계",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:00:57+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "통계종류",
+     "box": [
+      175,
+      82,
+      1286,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "통계구분",
+     "options": [
+      "개인통계",
+      "일반통계(학교)",
+      "Wee통계"
+     ],
+     "id": "radio:통계구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      171,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      383,
+      122,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "월",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:월"
+    },
+    {
+     "aria": null,
+     "box": [
+      469,
+      122,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "기간",
+     "checked": false,
+     "id": "check:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      524,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      659,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      171,
+      162,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      171,
+      202,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상담사소속",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:상담사소속"
+    },
+    {
+     "aria": null,
+     "box": [
+      503,
+      202,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "마감상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:마감상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      202,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      253,
+      1590,
+      560
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 상담관리 > 상담통계",
+ "viewport": [
+  1920,
+  945
+ ]
+}

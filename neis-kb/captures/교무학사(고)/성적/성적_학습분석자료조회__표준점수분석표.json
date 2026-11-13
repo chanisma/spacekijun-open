@@ -1,0 +1,208 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적/학습분석자료조회›표준점수분석표",
+ "name": "표준점수분석표",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:06:20+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      453,
+      235,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학년#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      693,
+      235,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      933,
+      235,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "성적기준",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:성적기준"
+    },
+    {
+     "aria": "상세조회",
+     "box": [
+      1459,
+      235,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "상세조회",
+     "variant": "secondary",
+     "id": "button:상세조회"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      235,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      254,
+      263,
+      560
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        255,
+        65,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        91,
+        255,
+        196,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적/학습분석자료조회 > 표준점수분석표",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,240 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›사용자›2차인증관리›2차인증사용현황",
+ "name": "2차인증사용현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:51:43+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "2차인증구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:2차인증구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      650,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      910,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업무영역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업무영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      1250,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "단위업무",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:단위업무"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "2차인증사용현황",
+     "box": [
+      25,
+      173,
+      123,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "2차인증사용현황",
+     "id": "heading:2차인증사용현황"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      203,
+      1590,
+      610
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "날짜",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        227,
+        36
+       ],
+       "id": "col:그리드/날짜"
+      },
+      {
+       "label": "업무영역",
+       "depth": 0,
+       "box": [
+        253,
+        204,
+        227,
+        36
+       ],
+       "id": "col:그리드/업무영역"
+      },
+      {
+       "label": "단위업무",
+       "depth": 0,
+       "box": [
+        480,
+        204,
+        227,
+        36
+       ],
+       "id": "col:그리드/단위업무"
+      },
+      {
+       "label": "2차인증구분",
+       "depth": 0,
+       "box": [
+        707,
+        204,
+        227,
+        36
+       ],
+       "id": "col:그리드/2차인증구분"
+      },
+      {
+       "label": "요청건수",
+       "depth": 0,
+       "box": [
+        933,
+        204,
+        227,
+        36
+       ],
+       "id": "col:그리드/요청건수"
+      },
+      {
+       "label": "성공",
+       "depth": 0,
+       "box": [
+        1160,
+        204,
+        227,
+        36
+       ],
+       "id": "col:그리드/성공"
+      },
+      {
+       "label": "실패",
+       "depth": 0,
+       "box": [
+        1387,
+        204,
+        227,
+        36
+       ],
+       "id": "col:그리드/실패"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}사용자 > 2차인증관리 > 2차인증사용현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

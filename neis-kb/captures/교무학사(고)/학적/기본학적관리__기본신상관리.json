@@ -1,0 +1,1561 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›기본학적관리›기본신상관리",
+ "name": "기본신상관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:01:10+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:기본신상",
+   "tab": "기본신상",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "기본신상/번호수정 구분",
+     "box": [
+      1331,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "기본신상/번호수정 구분",
+     "options": [
+      "기본신상",
+      "번호수정"
+     ],
+     "id": "radio:기본신상/번호수정 구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      434,
+      148,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "기본신상",
+      "누가주소등록",
+      "학적사항",
+      "학년반이력조회"
+     ],
+     "active": "기본신상",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "기본신상 학생 목록",
+     "box": [
+      25,
+      188,
+      394,
+      610
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기본신상 학생 목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        189,
+        50,
+        36
+       ],
+       "id": "col:기본신상 학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        76,
+        189,
+        342,
+        36
+       ],
+       "id": "col:기본신상 학생 목록/성명"
+      }
+     ],
+     "id": "grid:기본신상 학생 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      229,
+      376,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      269,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주민등록번호 (외국인등록번호)",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주민등록번호 (외국인등록번호)"
+    },
+    {
+     "aria": "성별",
+     "box": [
+      559,
+      309,
+      376,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "성별",
+     "options": [
+      "남성",
+      "여성"
+     ],
+     "id": "radio:성별"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      349,
+      376,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "생년월일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:생년월일"
+    },
+    {
+     "aria": "찾아보기&변환",
+     "box": [
+      1364,
+      469,
+      108,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾아보기&변환",
+     "variant": "primary",
+     "id": "button:찾아보기&변환"
+    },
+    {
+     "aria": "찾아보기",
+     "box": [
+      1478,
+      469,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾아보기",
+     "variant": "primary",
+     "id": "button:찾아보기"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1560,
+      469,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    }
+   ]
+  },
+  {
+   "id": "tab:누가주소등록",
+   "tab": "누가주소등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "기본신상/번호수정 구분",
+     "box": [
+      1331,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "기본신상/번호수정 구분",
+     "options": [
+      "기본신상",
+      "번호수정"
+     ],
+     "id": "radio:기본신상/번호수정 구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      434,
+      148,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "기본신상",
+      "누가주소등록",
+      "학적사항",
+      "학년반이력조회"
+     ],
+     "active": "누가주소등록",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1527,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "기본신상 학생 목록",
+     "box": [
+      25,
+      188,
+      394,
+      610
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기본신상 학생 목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        189,
+        50,
+        36
+       ],
+       "id": "col:기본신상 학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        76,
+        189,
+        342,
+        36
+       ],
+       "id": "col:기본신상 학생 목록/성명"
+      }
+     ],
+     "id": "grid:기본신상 학생 목록"
+    },
+    {
+     "aria": "누가주소 목록",
+     "box": [
+      434,
+      223,
+      1181,
+      200
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "누가주소 목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "등록일자",
+       "depth": 0,
+       "box": [
+        485,
+        224,
+        100,
+        36
+       ],
+       "id": "col:누가주소 목록/등록일자"
+      },
+      {
+       "label": "우편번호",
+       "depth": 0,
+       "box": [
+        585,
+        224,
+        100,
+        36
+       ],
+       "id": "col:누가주소 목록/우편번호"
+      },
+      {
+       "label": "주소",
+       "depth": 0,
+       "box": [
+        685,
+        224,
+        929,
+        36
+       ],
+       "id": "col:누가주소 목록/주소"
+      }
+     ],
+     "id": "grid:누가주소 목록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      433,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1575,
+      433,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      479,
+      381,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "우편번호",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:우편번호"
+    },
+    {
+     "aria": "주소찾기",
+     "box": [
+      945,
+      479,
+      74,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "주소찾기",
+     "variant": "primary",
+     "id": "button:주소찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1149,
+      479,
+      110,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "등록일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:등록일자"
+    }
+   ]
+  },
+  {
+   "id": "tab:학적사항",
+   "tab": "학적사항",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "기본신상/번호수정 구분",
+     "box": [
+      1331,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "기본신상/번호수정 구분",
+     "options": [
+      "기본신상",
+      "번호수정"
+     ],
+     "id": "radio:기본신상/번호수정 구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      434,
+      148,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "기본신상",
+      "누가주소등록",
+      "학적사항",
+      "학년반이력조회"
+     ],
+     "active": "학적사항",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1455,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "순번저장",
+     "box": [
+      1503,
+      183,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "순번저장",
+     "variant": "primary",
+     "id": "button:순번저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "기본신상 학생 목록",
+     "box": [
+      25,
+      188,
+      394,
+      610
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기본신상 학생 목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        189,
+        50,
+        36
+       ],
+       "id": "col:기본신상 학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        76,
+        189,
+        342,
+        36
+       ],
+       "id": "col:기본신상 학생 목록/성명"
+      }
+     ],
+     "id": "grid:기본신상 학생 목록"
+    },
+    {
+     "aria": "학적사항 목록",
+     "box": [
+      434,
+      223,
+      1181,
+      130
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학적사항 목록",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        485,
+        224,
+        50,
+        36
+       ],
+       "id": "col:학적사항 목록/순번"
+      },
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        535,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학적사항 목록/일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        751,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학적사항 목록/학년"
+      },
+      {
+       "label": "학적변동구분",
+       "depth": 0,
+       "box": [
+        966,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학적사항 목록/학적변동구분"
+      },
+      {
+       "label": "학적변동사유",
+       "depth": 0,
+       "box": [
+        1182,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학적사항 목록/학적변동사유"
+      },
+      {
+       "label": "관련학교명",
+       "depth": 0,
+       "box": [
+        1398,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학적사항 목록/관련학교명"
+      }
+     ],
+     "id": "grid:학적사항 목록"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      374,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1575,
+      374,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      420,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학년도",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:학년도#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      953,
+      420,
+      110,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "변동일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:변동일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1346,
+      420,
+      170,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      460,
+      250,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학적변동구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학적변동구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      953,
+      460,
+      170,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학적변동사유",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학적변동사유"
+    },
+    {
+     "aria": null,
+     "box": [
+      1346,
+      460,
+      184,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "관련학교명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:관련학교명"
+    },
+    {
+     "aria": "학교찾기",
+     "box": [
+      1536,
+      460,
+      74,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학교찾기",
+     "variant": "primary",
+     "id": "button:학교찾기"
+    },
+    {
+     "aria": "일괄/개별 입력 구분",
+     "box": [
+      1359,
+      514,
+      200,
+      20
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "일괄/개별 입력 구분",
+     "options": [
+      "일괄입력",
+      "개별입력"
+     ],
+     "id": "radio:일괄/개별 입력 구분"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1575,
+      514,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      560,
+      1051,
+      55
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학적특기사항",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학적특기사항"
+    }
+   ]
+  },
+  {
+   "id": "tab:학년반이력조회",
+   "tab": "학년반이력조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "기본신상/번호수정 구분",
+     "box": [
+      1331,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "기본신상/번호수정 구분",
+     "options": [
+      "기본신상",
+      "번호수정"
+     ],
+     "id": "radio:기본신상/번호수정 구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      434,
+      148,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "기본신상",
+      "누가주소등록",
+      "학적사항",
+      "학년반이력조회"
+     ],
+     "active": "학년반이력조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1527,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      183,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "기본신상 학생 목록",
+     "box": [
+      25,
+      188,
+      394,
+      610
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기본신상 학생 목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        189,
+        50,
+        36
+       ],
+       "id": "col:기본신상 학생 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        76,
+        189,
+        342,
+        36
+       ],
+       "id": "col:기본신상 학생 목록/성명"
+      }
+     ],
+     "id": "grid:기본신상 학생 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      527,
+      189,
+      419,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생의 번호 수정은 우측 상단의 '번호수정' 탭에서 진행해 주시기 바랍니다.",
+     "id": "note:※ 학생의 번호 수정은 우측 상단의 '번호수정' 탭에서 진행해 주시기 바랍니다."
+    },
+    {
+     "aria": "학년반이력조회 목록",
+     "box": [
+      434,
+      223,
+      1181,
+      170
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학년반이력조회 목록",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        535,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학년반이력조회 목록/학년"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        751,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학년반이력조회 목록/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        966,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학년반이력조회 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        1182,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학년반이력조회 목록/번호"
+      },
+      {
+       "label": "담임성명",
+       "depth": 0,
+       "box": [
+        1398,
+        224,
+        216,
+        36
+       ],
+       "id": "col:학년반이력조회 목록/담임성명"
+      }
+     ],
+     "id": "grid:학년반이력조회 목록"
+    },
+    {
+     "aria": "담임추가",
+     "box": [
+      1383,
+      403,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "담임추가",
+     "variant": "primary",
+     "id": "button:담임추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1455,
+      403,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1503,
+      403,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": "담임삭제",
+     "box": [
+      1551,
+      403,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "담임삭제",
+     "variant": "secondary",
+     "id": "button:담임삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      449,
+      170,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학년도",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학년도#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      953,
+      449,
+      110,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "변동일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:변동일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1346,
+      449,
+      170,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "주야과정구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주야과정구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      489,
+      170,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "계열",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:계열"
+    },
+    {
+     "aria": null,
+     "box": [
+      953,
+      489,
+      170,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학년#2"
+    },
+    {
+     "aria": "학과조회",
+     "box": [
+      1522,
+      489,
+      74,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학과조회",
+     "variant": "primary",
+     "id": "button:학과조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      559,
+      529,
+      170,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "반명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:반명"
+    },
+    {
+     "aria": null,
+     "box": [
+      953,
+      529,
+      170,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "번호",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:번호"
+    },
+    {
+     "aria": "담임 목록",
+     "box": [
+      438,
+      574,
+      1173,
+      127
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "담임 목록",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "담임번호",
+       "depth": 0,
+       "box": [
+        489,
+        575,
+        511,
+        36
+       ],
+       "id": "col:담임 목록/담임번호"
+      },
+      {
+       "label": "담임성명",
+       "depth": 0,
+       "box": [
+        999,
+        575,
+        511,
+        36
+       ],
+       "id": "col:담임 목록/담임성명"
+      },
+      {
+       "label": "찾기",
+       "depth": 0,
+       "box": [
+        1510,
+        575,
+        100,
+        36
+       ],
+       "id": "col:담임 목록/찾기"
+      }
+     ],
+     "id": "grid:담임 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 기본학적관리 > 기본신상관리",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

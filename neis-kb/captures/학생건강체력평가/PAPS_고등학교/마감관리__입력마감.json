@@ -1,0 +1,189 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›마감관리›입력마감",
+ "name": "입력마감",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:12:06+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 측정 마감이 되어 있으면 입력 마감취소를 할 수 없습니다. 이 경우에는 측정 마감을 먼저 취소하고 입력 마감을 취소해야 합니다.",
+     "id": "note:※ 측정 마감이 되어 있으면 입력 마감취소를 할 수 없습니다. 이 경우에는 측정 마감을 먼저 취소하고 입력 마감을 취소해야 합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      171,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력마감",
+     "variant": "primary",
+     "id": "button:입력마감"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      171,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력마감취소",
+     "variant": "secondary",
+     "id": "button:입력마감취소"
+    },
+    {
+     "aria": "입력마감 목록",
+     "box": [
+      25,
+      211,
+      1590,
+      603
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "입력마감 목록",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        76,
+        212,
+        385,
+        36
+       ],
+       "id": "col:입력마감 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        461,
+        212,
+        385,
+        36
+       ],
+       "id": "col:입력마감 목록/반"
+      },
+      {
+       "label": "입력마감상태",
+       "depth": 0,
+       "box": [
+        845,
+        212,
+        385,
+        36
+       ],
+       "id": "col:입력마감 목록/입력마감상태"
+      },
+      {
+       "label": "측정현황(측정학생수/전체학생수)",
+       "depth": 0,
+       "box": [
+        1230,
+        212,
+        385,
+        36
+       ],
+       "id": "col:입력마감 목록/측정현황(측정학생수/전체학생수)"
+      }
+     ],
+     "id": "grid:입력마감 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 마감관리 > 입력마감",
+ "viewport": [
+  1920,
+  945
+ ]
+}

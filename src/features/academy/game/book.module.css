@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Nanum+Pen+Script&display=swap');
+/* 별빛 플래너 — 책상 위에 펼친 가죽 플래너 (2026-10-03 오버홀).
+ * 색: 가죽 = 깊은 자주, 장식 = 금빛, 종이 = 크림, 잉크 = 밤하늘 남보라. 종이 위 글자는 4.5:1 이상(잉크 #2c2340 / 크림 ≈ 13:1). */
+
+.desk { position: relative; z-index: 5; flex: 1; min-height: 0; display: flex; align-items: stretch; gap: 14px; padding-top: 10px; }
+.ria { position: relative; flex: 0 0 190px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; pointer-events: none; }
+.ria img { width: 230%; max-width: none; height: 78%; object-fit: contain; object-position: bottom; filter: drop-shadow(0 10px 14px #160c2a90); }
+.bubble { position: absolute; top: 4%; left: 0; right: -12px; margin: 0; padding: 12px 14px; border: 1px solid #d9bb81; border-radius: 16px 16px 16px 4px; color: #2c2340; background: linear-gradient(160deg, #fff8ea, #f3e4c7); font: 15px/1.6 'Gowun Batang', Georgia, serif; box-shadow: 0 8px 24px #12092a66; pointer-events: auto; }
+.bubble::after { content: ''; position: absolute; left: 26px; bottom: -9px; width: 16px; height: 16px; background: #f3e4c7; border-right: 1px solid #d9bb81; border-bottom: 1px solid #d9bb81; transform: rotate(45deg); }
+
+/* 책 — 가죽 표지가 종이를 감싼다. 오른쪽 여백은 리본 책갈피가 튀어나올 자리. */
+.book { position: relative; flex: 1; min-width: 0; min-height: 0; display: flex; margin-right: 122px; padding: 16px; border-radius: 18px 22px 22px 18px;
+  background: radial-gradient(ellipse at 20% 0%, #6a3f6b, transparent 60%), radial-gradient(ellipse at 90% 100%, #2a1631, transparent 55%), linear-gradient(135deg, #4b2a4e, #2b1830);
+  box-shadow: 0 22px 50px #0b061a99, inset 0 0 0 2px #d8b77a55, inset 0 0 0 7px #3a2140, inset 0 0 0 8px #e4c48a40; }
+.book::before { content: ''; position: absolute; inset: 9px; border-radius: 14px 18px 18px 14px; border: 1px dashed #e4c48a40; pointer-events: none; }
+.spread { position: relative; flex: 1; min-width: 0; min-height: 0; display: flex; perspective: 1800px; }
+.spreadInner { position: relative; flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; filter: drop-shadow(0 4px 6px #0007); transform-style: preserve-3d; }
+.book .weekSpread button { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: inherit; font-size: inherit; }
+/* ↑ 기숙사 전역 `.scene button`(어두운 자주 단추)을 한 주 펼침면 안에서 지운다. 아래 개별 단추 규칙은 이것과 특이도가 같거나 높고 뒤에 있어 이긴다. */
+/* 2026-10-03: 기숙사 쪽 규칙이 이제 `[data-book]` 안을 건너뛴다(:where — 특이도 그대로). 위 초기화는 남겨 두고, 비활성 표시만 책이 직접 맡는다. */
+.book button:disabled { opacity: .55; cursor: not-allowed; }
+.spreadInner[data-turn=next] { animation: turnNext .55s cubic-bezier(.2, .7, .2, 1) both; transform-origin: left center; }
+.spreadInner[data-turn=prev] { animation: turnPrev .55s cubic-bezier(.2, .7, .2, 1) both; transform-origin: right center; }
+@keyframes turnNext { from { transform: rotateY(-14deg) translateX(18px); opacity: .25; } to { transform: none; opacity: 1; } }
+@keyframes turnPrev { from { transform: rotateY(14deg) translateX(-18px); opacity: .25; } to { transform: none; opacity: 1; } }
+
+/* 종이 — 크림 바탕 + 옅은 줄 + 가운데 접힘의 그림자. 스크롤은 종이 안에서(스크롤바는 게임 전역 규칙으로 감춰진다). */
+.page { position: relative; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 22px 26px 60px; color: #2c2340;
+  background-color: #fbf3e2; background-image: repeating-linear-gradient(transparent 0 33px, #c9b38d38 33px 34px); background-attachment: local; }
+.left { border-radius: 8px 2px 2px 8px; box-shadow: inset -26px 0 30px -18px #6b4b3a55; }
+.right { border-radius: 2px 8px 8px 2px; box-shadow: inset 26px 0 30px -18px #6b4b3a55; }
+.paperContent { color: #2c2340; }
+.paperState { padding: 30px 0; color: #4b3c55; text-align: center; font: 16px 'Gowun Batang', Georgia, serif; }
+.book .paperState button { color: #6b3a6a; text-decoration: underline; }
+
+/* 주 머리 — 이번 주의 별 */
+.weekHead { display: grid; gap: 8px; margin-bottom: 10px; padding-bottom: 12px; border-bottom: 1px solid #b89a6c66; }
+.kicker { color: #7a5a2e; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+.weekHead h3 { display: flex; align-items: center; gap: 10px; margin: 0; color: #2c2340; font: 700 26px/1.2 'Gowun Batang', Georgia, serif; }
+.weekHead h3 em { padding: 2px 10px; border-radius: 999px; color: #fff4dc; background: #6b3a6a; font: 600 12px 'Pretendard', sans-serif; font-style: normal; }
+.weekStars { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; min-height: 22px; }
+.weekStars i { width: 15px; height: 15px; background: #c9b38d; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); transition: background .3s, transform .3s; }
+.weekStars i[data-lit=true] { background: #d79a1e; transform: scale(1.15); filter: drop-shadow(0 0 3px #f2c04e); }
+.weekStars b { margin-left: 6px; color: #4b3c55; font-size: 13px; }
+.weekStars small { color: #5a4a62; font-size: 13px; }
+.ribbonNote { margin: 0; color: #4b3c55; font-size: 13px; line-height: 1.6; }
+.overdue { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0; color: #6b4314; font-size: 13px; }
+.book .overdue button { padding: 4px 10px; border: 1px solid #a8742f; border-radius: 6px; color: #fff6e6; background: #8a5a14; font-size: 12px; }
+
+/* 하루 칸 */
+.dayBlock { position: relative; padding: 8px 6px 10px; border-radius: 10px; transition: background .2s, box-shadow .2s; }
+.dayBlock + .dayBlock { border-top: 1px dashed #b89a6c55; }
+.dayBlock[data-past=true]:not([data-today=true]) { opacity: .82; }
+.dayBlock[data-drop=true] { background: #f3e2bf; box-shadow: inset 0 0 0 2px #d79a1e; }
+.book button.dayTitle { display: flex; align-items: baseline; gap: 8px; width: 100%; padding: 0 0 4px; color: #2c2340; text-align: left; }
+.book button.dayTitle b { font: 700 24px/1 'Gowun Batang', Georgia, serif; }
+.book button.dayTitle span { color: #5a4a62; font-size: 13px; }
+.book button.dayTitle em { position: relative; padding: 1px 8px; border-radius: 999px; color: #fff4dc; background: #8f4c1c; font-size: 11px; font-style: normal; font-weight: 700; }
+.book button.dayTitle small { margin-left: auto; color: #5a4a62; font-size: 12px; }
+.book button.dayTitle:hover b { text-decoration: underline; text-decoration-color: #d79a1e; }
+.dayBlock[data-today=true] .book button.dayTitle b { color: #8a3f1e; }
+.lines { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.line { position: relative; display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; align-items: center; gap: 6px; min-height: 36px; padding: 1px 4px; border-radius: 8px; cursor: grab; }
+.line:hover { background: #f5e8cf; }
+.line[data-dragging=true] { opacity: .4; }
+.ink { display: grid; min-width: 0; cursor: pointer; border-radius: 4px; }
+.ink > span { color: #2c2340; font: 22px/1.15 'Nanum Pen Script', 'Gowun Batang', cursive; overflow-wrap: anywhere; }
+.ink time { color: #5a4a62; font-size: 12px; font-variant-numeric: tabular-nums; }
+.ink:focus-visible { outline: 2px solid #6b3a6a; outline-offset: 2px; }
+.mark { margin-right: 4px; color: #b0662a; font-style: normal; }
+.line[data-complete=true] .ink > span { color: #6f6276; text-decoration: line-through; text-decoration-color: #d79a1e; text-decoration-thickness: 2px; }
+
+/* 밀랍 인장 — 비어 있을 땐 잉크 점선 동그라미, 찍으면 목표 색(없으면 자주)의 인장이 «쿵» 하고 찍힌다. */
+.book button.seal { position: relative; display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 1.5px dashed #7a6585; border-radius: 50%; background: transparent; color: #fff4dc; cursor: pointer; }
+.book button.seal:hover:not(:disabled) { border-style: solid; border-color: var(--goal, #6b3a6a); background: #fff3; }
+.book button.seal[aria-checked=true] { border: 0; background: radial-gradient(circle at 35% 30%, #ffffff55, transparent 40%), radial-gradient(circle, var(--goal, #7b2d4c) 58%, color-mix(in srgb, var(--goal, #7b2d4c) 70%, #000) 100%); box-shadow: 0 2px 3px #0004, inset 0 -2px 3px #0003; }
+.book button.seal[aria-checked=true] > span { font-size: 14px; text-shadow: 0 1px 0 #0005; }
+.book button.seal[data-stamped=true] { animation: stamp .45s cubic-bezier(.3, 1.6, .5, 1); }
+.book button.seal[data-stamped=true]::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--goal, #7b2d4c); animation: ripple .6s ease-out forwards; }
+@keyframes stamp { 0% { transform: scale(1.8) rotate(-25deg); opacity: .2; } 60% { transform: scale(.85) rotate(4deg); opacity: 1; } 100% { transform: none; } }
+@keyframes ripple { from { transform: scale(.8); opacity: .9; } to { transform: scale(1.9); opacity: 0; } }
+.book button.seal:disabled { cursor: not-allowed; }
+
+/* 하루 옮기기 ‹ › — 마우스는 올렸을 때만, 터치는 늘 */
+.nudge { display: flex; gap: 2px; opacity: 0; transition: opacity .15s; }
+.line:hover .nudge, .line:focus-within .nudge { opacity: 1; }
+.book .nudge button { width: 24px; height: 24px; padding: 0; border: 1px solid #b89a6c; border-radius: 6px; color: #4b3c55; background: #fffaf0; font-size: 15px; line-height: 1; }
+@media (hover: none) { .nudge { opacity: 1; } .book .nudge button { width: 34px; height: 34px; } }
+
+/* 깃펜 줄 — 적고 Enter */
+.quill { display: flex; align-items: center; gap: 6px; margin-top: 2px; padding: 2px 6px; border-bottom: 1.5px dotted #a08a6a; }
+.quill:focus-within { border-bottom-style: solid; border-bottom-color: #6b3a6a; }
+.quill > span { color: #7a6585; font-size: 15px; }
+.quill input { width: 100%; min-width: 0; padding: 4px 0; border: 0 !important; outline: 0; background: transparent !important; color: #2c2340 !important; font: 21px/1.2 'Nanum Pen Script', 'Gowun Batang', cursive !important; box-shadow: none !important; }
+.quill input::placeholder { color: #7d6d83; }
+.book .quill input:focus-visible { outline: none; } /* 밑줄이 초점을 말한다 — 기숙사 전역의 노란 테두리는 종이 위에서 상자처럼 보였다 */
+
+/* 페이지 모서리 — 펼침면 아래 두 귀퉁이에 고정(쪽 안은 스크롤되지만 모서리는 늘 같은 자리). */
+.book button.corner { position: absolute; bottom: 10px; z-index: 2; display: inline-flex; align-items: center; padding: 7px 14px; border: 1px solid #b89a6c; border-radius: 999px; color: #4b2a4e; background: linear-gradient(135deg, #fff9ec, #efdcb6); font-size: 13px; font-weight: 700; box-shadow: 0 3px 8px #6b4b3a40; transition: transform .2s; }
+.book button.cornerPrev { left: 16px; }
+.book button.cornerNext { right: 16px; }
+.book button.corner:hover:not(:disabled) { transform: translateY(-2px) rotate(-2deg); background: linear-gradient(135deg, #fffdf5, #f3e2bf); }
+.book button.corner:disabled { opacity: .5; }
+.backToToday { display: block; margin: 10px auto 0; padding: 6px 14px; border: 1px solid #6b3a6a; border-radius: 999px; color: #6b3a6a; background: #fffaf0; font-size: 13px; }
+
+/* 목표 별자리 — 고른 목표의 인장들을 날짜 순서로 잇는 금빛 실 */
+
+/* 리본 책갈피 = 메뉴. 책 오른쪽 가장자리에서 튀어나오고, 고른 리본은 더 길게 나온다. */
+.ribbons { position: absolute; top: 34px; right: -120px; display: flex; flex-direction: column; gap: 8px; z-index: 3; }
+.book .ribbons button { position: relative; display: flex; align-items: center; gap: 7px; width: 134px; min-height: 44px; padding: 8px 18px 8px 12px; white-space: nowrap; border: 0 !important; border-radius: 0 !important;
+  color: #fff4dc !important; font-size: 13px; font-weight: 700; text-align: left; clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%);
+  background: linear-gradient(90deg, #00000030, transparent 30%), var(--ribbon, #6b3a6a) !important; box-shadow: none !important; transform: translateX(-14px); transition: transform .2s ease, filter .2s; }
+.book .ribbons button > span { font-size: 16px; }
+.book .ribbons button:hover:not(:disabled) { transform: translateX(-6px); filter: brightness(1.12); }
+.book .ribbons button[aria-pressed=true] { transform: translateX(0); filter: brightness(1.08) drop-shadow(0 3px 4px #0006); }
+.book .ribbons button[aria-pressed=true]::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #ffe4a8; }
+.book .ribbons button:disabled { opacity: .5; cursor: not-allowed; }
+.book .ribbons [data-ribbon=week] { --ribbon: #7a3b6e; }
+.book .ribbons [data-ribbon=day] { --ribbon: #a5562c; }
+.book .ribbons [data-ribbon=goals] { --ribbon: #2f6b62; }
+.book .ribbons [data-ribbon=time] { --ribbon: #3f4f8a; }
+.book .ribbons [data-ribbon=month] { --ribbon: #23284d; }
+
+
+:global([data-reduced=true]) .spreadInner, :global([data-reduced=true]) .book button.seal, :global([data-reduced=true]) .book button.seal::after { animation: none !important; }
+
+@media (max-width: 1180px) { .ria { display: none; } }
+@media (max-width: 760px) {
+  .desk { flex-direction: column; padding-top: 6px; }
+  .book { flex-direction: column; margin-right: 0; padding: 8px; border-radius: 14px; }
+  /* 리본 넷이 한 줄에 다 보이게(가로 스크롤은 스크롤바가 없어 넷째 리본이 숨은 줄 몰랐다) — 지갑은 책 위로 올린다. */
+  .ribbons { position: static; order: -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; margin: 0 0 8px; }
+  .book .ribbons button { width: auto; min-width: 0; min-height: 44px; padding: 6px 2px; justify-content: center; gap: 3px; font-size: 12px; white-space: normal; line-height: 1.15; text-align: center; clip-path: none; border-radius: 8px 8px 2px 2px !important; transform: none; }
+  .book .ribbons button > span { font-size: 13px; }
+  .book .ribbons button[aria-pressed=true] { transform: translateY(2px); }
+  /* 휴대폰: 두 쪽을 위아래로 이어 붙이고 펼침면 전체가 한 번에 스크롤된다(쪽마다 높이를 나누면 아래 쪽이 위 쪽을 덮었다). */
+  .spreadInner { display: block; overflow-y: auto; overscroll-behavior: contain; }
+  .page { overflow: visible; padding: 16px 14px 18px; }
+  .left, .right { border-radius: 8px; box-shadow: none; }
+  .right { margin-top: 6px; }
+  .book button.corner { position: static; display: inline-flex; justify-content: center; width: calc(50% - 8px); min-height: 44px; margin: 10px 4px 4px; }
+}
+
+/* ── 책장 넘김 (2026-10-03) — 옛 쪽의 사본 한 장이 가운데 접힘을 축으로 넘어간다 ── */
+.leaf { position: absolute; top: 0; bottom: 0; width: 50%; z-index: 6; transform-style: preserve-3d; pointer-events: none; animation-duration: .75s; animation-timing-function: cubic-bezier(.45, .05, .25, 1); animation-fill-mode: both; }
+.leaf[data-dir=next] { left: 50%; transform-origin: left center; animation-name: leafNext; }
+.leaf[data-dir=prev] { left: 0; transform-origin: right center; animation-name: leafPrev; }
+@keyframes leafNext { from { transform: rotateY(0); } to { transform: rotateY(-180deg); } }
+@keyframes leafPrev { from { transform: rotateY(0); } to { transform: rotateY(180deg); } }
+.leafFace { position: absolute; inset: 0; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+/* 넘어가는 동안 빛이 쪽을 훑는다 — 들리는 쪽은 밝아졌다가, 눕는 쪽은 그늘진다. */
+.leafFace::after { content: ''; position: absolute; inset: 0; pointer-events: none; animation: inherit; animation-name: leafLight; }
+@keyframes leafLight { 0% { background: transparent; } 45% { background: linear-gradient(90deg, #fff6, transparent 60%); } 100% { background: linear-gradient(90deg, transparent, #6b4b3a55); } }
+.leafBack { transform: rotateY(180deg); background-color: #f6ecd7; background-image: repeating-linear-gradient(transparent 0 33px, #c9b38d2a 33px 34px), linear-gradient(90deg, #6b4b3a33, transparent 18%, transparent 82%, #6b4b3a33); }
+.leaf[data-dir=next] .leafBack { border-radius: 8px 2px 2px 8px; }
+.leaf[data-dir=prev] .leafBack { border-radius: 2px 8px 8px 2px; }
+.leaf[data-dir=next]::before, .leaf[data-dir=prev]::before { content: ''; position: absolute; top: 0; bottom: 0; width: 40px; pointer-events: none; animation: inherit; animation-name: leafShadow; }
+.leaf[data-dir=next]::before { left: 100%; background: linear-gradient(90deg, #2b183055, transparent); }
+.leaf[data-dir=prev]::before { right: 100%; background: linear-gradient(270deg, #2b183055, transparent); }
+@keyframes leafShadow { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+:global([data-reduced=true]) .leaf { display: none; }
+@media (max-width: 760px) { .leaf { display: none; } }
+
+
+/* ── 하루 쪽 (2026-10-03) ── */
+.weekHead h3.bigDate { font-size: 34px; }
+.weekHead h3.bigDate small { color: #5a4a62; font: 500 15px 'Pretendard', sans-serif; }
+.strip { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; margin: 4px 0 12px; }
+.book .strip button { display: grid; justify-items: center; gap: 2px; min-height: 64px; padding: 6px 2px; border: 1px solid #b89a6c66; border-radius: 10px; background: #fffaf0aa; color: #3d2f45; transition: transform .15s, background .15s; }
+.book .strip button span { font-size: 11px; color: #5a4a62; }
+.book .strip button b { font: 700 19px/1 'Gowun Batang', Georgia, serif; }
+.book .strip button i { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px; min-height: 8px; }
+.book .strip button s { width: 6px; height: 6px; border-radius: 50%; background: #c9b38d; text-decoration: none; }
+.book .strip button s[data-lit=true] { background: #d79a1e; box-shadow: 0 0 3px #f2c04e; }
+.book .strip button:hover:not(:disabled) { transform: translateY(-2px); background: #f5e8cf; }
+.book .strip button[data-today=true] { border-color: #8f4c1c; }
+.book .strip button[aria-current=date] { color: #fff7e6; background: linear-gradient(160deg, #6b3a6a, #4b2a4e); border-color: #4b2a4e; box-shadow: 0 3px 8px #4b2a4e55; }
+.book .strip button[aria-current=date] span { color: #f3dcc0; }
+.reward { margin: 0 0 10px; color: #6b4314; font-size: 13px; }
+.book button.inkButton { display: inline-flex; align-items: center; gap: 6px; min-height: 36px; margin: 4px 6px 4px 0; padding: 6px 14px; border: 1px dashed #6b3a6a; border-radius: 999px; color: #4b2a4e; background: #fffaf0; font-size: 13px; font-weight: 600; transition: background .15s, transform .15s; }
+.book button.inkButton:hover:not(:disabled) { background: #f3e2bf; transform: rotate(-1deg); }
+.book button.inkButton[aria-pressed=true], .book button.inkButton[aria-expanded=true] { border-style: solid; background: #f3e2bf; }
+.book button.inkButton:disabled { opacity: .5; cursor: not-allowed; }
+.book button.timeLink { display: flex; margin-top: 10px; }
+.pageActions { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; margin-bottom: 6px; }
+.pageActions > span { color: #5a4a62; font-size: 12px; }
+.lineMeta { margin: -2px 0 4px 40px; color: #5a4a62; font-size: 12px; list-style: none; overflow-wrap: anywhere; }
+.pageTip { margin: 14px 0 0; color: #5a4a62; font-size: 12px; line-height: 1.7; }
+/* 쪽지 — 줄 아래에 비스듬히 붙는 노란 메모. 지우기 확인도 같은 모양(분홍). */
+.stickyNote { position: relative; margin: 4px 0 10px 34px; padding: 12px 14px 10px; list-style: none; border-radius: 2px 2px 12px 2px; color: #3d2f45; background: linear-gradient(170deg, #fff6c8, #f6e49a); box-shadow: 0 6px 12px #6b4b3a33; transform: rotate(-.6deg); }
+.stickyNote::before { content: ''; position: absolute; top: -8px; left: 40%; width: 56px; height: 16px; background: #e9d9b4cc; transform: rotate(3deg); }
+.stickyNote[data-tone=warn] { background: linear-gradient(170deg, #ffe6e0, #f6c9bf); }
+.stickyNote p { margin: 0 0 8px; font-size: 13px; }
+.stickyNote label { display: grid; gap: 4px; font-size: 12px; font-weight: 600; }
+.stickyNote textarea { min-height: 70px; border: 0 !important; background: #fffbe8 !important; font: 19px/1.3 'Nanum Pen Script', 'Gowun Batang', cursive !important; }
+.stickyNote div { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.book .stickyNote button { min-height: 32px; padding: 4px 12px; border: 1px solid #8f6b45; border-radius: 6px; color: #3d2f45; background: #fffaf0; font-size: 12px; font-weight: 600; }
+.book .stickyNote button:first-child { color: #fff6e6; background: #6b3a6a; border-color: #4b2a4e; }
+.book .stickyNote[data-tone=warn] button:first-child { background: #9b3a4a; border-color: #7a2a38; }
+/* 장 안내·양식은 종이 위의 카드 — 기숙사 전역의 어두운 단추·글자를 종이 색으로 되돌린다. */
+.guideNote { margin-bottom: 10px; }
+.guideNote aside { margin: 0 0 8px; padding: 12px 14px; border: 1px solid #b89a6c; border-radius: 4px 14px; color: #2c2340; background: #f3e2bf; }
+.guideNote p { margin: 4px 0 8px; font-size: 13px; line-height: 1.7; }
+.noteCard { padding: 14px 16px; border: 1px solid #b89a6c; border-radius: 4px 14px; background: #fffaf0e0; box-shadow: 0 6px 16px #6b4b3a22; }
+.noteCard label { color: #2c2340; }
+.noteCard small { color: #5a4a62 !important; }
+.book .guideNote button, .book .noteCard button { min-height: 36px; padding: 6px 14px; border: 1px solid #8f6b45; border-radius: 7px 2px; color: #fff1d6; background: linear-gradient(145deg, #5b3a5e, #3c2541); font-size: 13px; }
+.book .noteCard button[type=button] { color: #3d2f45; background: #fffaf0; }
+.book .noteCard button[aria-pressed=true] { color: #2c2340; background: linear-gradient(140deg, #e3c287, #b28a55); }
+.book .guideNote button:disabled, .book .noteCard button:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ── 목표 쪽 «나의 별자리» ── */
+.goalCards { display: grid; gap: 8px; margin: 10px 0; padding: 0; list-style: none; }
+.goalCard { display: grid; grid-template-columns: 30px minmax(0, 1fr); align-items: center; gap: 8px; padding: 8px 10px 8px 8px; border: 1px solid #b89a6c66; border-left: 5px solid var(--goal, #6b3a6a); border-radius: 4px 12px 12px 4px; background: #fffaf0b0; transition: transform .15s, box-shadow .15s; }
+.goalCard[data-selected=true] { background: #fffaf0; box-shadow: 0 4px 12px #6b4b3a33; transform: translateX(4px); }
+.goalCard[data-complete=true] strong { color: #6f6276; text-decoration: line-through; text-decoration-color: #d79a1e; }
+.book button.goalOpen { display: grid; gap: 4px; min-width: 0; padding: 2px 0; text-align: left; }
+.goalOpen strong { color: #2c2340; font: 700 17px/1.3 'Gowun Batang', Georgia, serif; overflow-wrap: anywhere; }
+.goalStars { display: flex; flex-wrap: wrap; align-items: center; gap: 3px; min-height: 12px; }
+.goalStars i { width: 11px; height: 11px; background: var(--goal, #d79a1e); clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); filter: drop-shadow(0 0 2px #f2c04e); }
+.goalStars b, .goalStars small { color: #5a4a62; font-size: 11px; }
+.goalSheet { display: grid; gap: 12px; padding: 8px 2px 4px; border-top: 6px solid var(--goal, #6b3a6a); }
+.goalSheet h3 { margin: 0; color: #2c2340; font: 700 26px/1.25 'Gowun Batang', Georgia, serif; overflow-wrap: anywhere; }
+.goalSheet h4 { margin: 0 0 4px; color: #6b4314; font-size: 12px; letter-spacing: .04em; }
+.goalSheet section p { margin: 0; color: #3d2f45; font: 19px/1.35 'Nanum Pen Script', 'Gowun Batang', cursive; }
+.planList { display: grid; gap: 4px; margin: 0 0 6px; padding: 0; list-style: none; }
+.planList li { display: flex; justify-content: space-between; gap: 10px; padding: 4px 0; border-bottom: 1px dashed #b89a6c55; color: #2c2340; font-size: 14px; }
+.planList i { color: var(--goal, #b0662a); font-style: normal; letter-spacing: 1px; white-space: nowrap; }
+.sheetActions { display: flex; flex-wrap: wrap; gap: 6px; }
+.book .sheetActions button { display: inline-flex; align-items: center; gap: 5px; min-height: 34px; padding: 5px 12px; border: 1px solid #b89a6c; border-radius: 999px; color: #3d2f45; background: #fffaf0; font-size: 12px; }
+.book .sheetActions button:first-child { color: #fff7e6; background: var(--goal, #6b3a6a); border-color: var(--goal, #6b3a6a); }
+.book .sheetActions button:hover:not(:disabled) { filter: brightness(1.05); transform: translateY(-1px); }
+.book .sheetActions button:disabled { opacity: .5; cursor: not-allowed; }
+
+.timeScroll { position: relative; max-height: min(64vh, 620px); overflow-y: auto; overscroll-behavior: contain; padding: 10px 4px 10px 0; border-radius: 10px; background: #fffaf080; box-shadow: inset 0 0 0 1px #b89a6c55; }
+.timeGrid { position: relative; display: grid; grid-template-columns: 44px minmax(0, 1fr); }
+.hours { position: relative; margin: 0; padding: 0; list-style: none; }
+.hours li { position: absolute; left: 0; right: 0; transform: translateY(-50%); }
+.book .hours button { width: 40px; min-height: 22px; padding: 0; border-radius: 6px; color: #5a4a62; font-size: 11px; font-variant-numeric: tabular-nums; }
+.book .hours button:hover:not(:disabled) { color: #fff; background: #3f4f8a; }
+.column { position: relative; border-left: 1.5px solid #b89a6c; cursor: crosshair; touch-action: pan-y; user-select: none; }
+.column[data-holding=true], .column[data-pick=true] { background: repeating-linear-gradient(135deg, transparent 0 10px, #3f4f8a0d 10px 20px); }
+.hourRule { position: absolute; left: 0; right: 0; height: 0; border-top: 1px dashed #c9b38d88; pointer-events: none; }
+.nowRule { position: absolute; left: -6px; right: 0; height: 0; border-top: 2px solid #9b3a4a; pointer-events: none; z-index: 3; }
+.nowRule::before { content: ''; position: absolute; left: 0; top: -5px; width: 8px; height: 8px; border-radius: 50%; background: #9b3a4a; }
+.block { position: absolute; z-index: 2; display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; grid-template-rows: auto 1fr; align-items: start; column-gap: 6px; overflow: hidden; padding: 3px 6px 8px 4px; border-radius: 6px; border-left: 4px solid var(--goal, #3f4f8a);
+  color: #1f2340; background: color-mix(in srgb, var(--goal, #3f4f8a) 16%, #fffdf6); box-shadow: 0 2px 6px #2b183033; cursor: grab; touch-action: none; user-select: none; transition: box-shadow .15s; }
+.block:hover { box-shadow: 0 4px 12px #2b183055; }
+.block[data-live=true] { z-index: 4; cursor: grabbing; box-shadow: 0 10px 20px #2b183066; }
+.block[data-leaving=true] { opacity: .45; }
+.block[data-complete=true] .blockTitle { color: #6f6276; text-decoration: line-through; }
+.book button.blockSeal { grid-row: 1 / 3; width: 20px; height: 20px; margin-top: 2px; border: 1.5px dashed #5a5a7a; border-radius: 50%; color: #fff4dc; font-size: 11px; }
+.book button.blockSeal[aria-checked=true] { border: 0; background: radial-gradient(circle, var(--goal, #7b2d4c) 60%, color-mix(in srgb, var(--goal, #7b2d4c) 70%, #000)); }
+.blockTitle { min-width: 0; font: 18px/1.1 'Nanum Pen Script', 'Gowun Batang', cursive; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.block time { grid-column: 2; font-size: 10px; color: #4b4b66; font-variant-numeric: tabular-nums; }
+.blockTools { grid-column: 3; grid-row: 1; display: flex; gap: 1px; opacity: 0; transition: opacity .15s; }
+.block:hover .blockTools, .block:focus-within .blockTools { opacity: 1; }
+.book .blockTools button { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 5px; color: #3d2f45; background: #fffaf0cc; }
+.blockHandle { position: absolute; left: 30%; right: 30%; bottom: 1px; height: 7px; border-radius: 4px; background: color-mix(in srgb, var(--goal, #3f4f8a) 55%, #fff); cursor: ns-resize; touch-action: none; }
+.rangeGhost { position: absolute; left: 4px; right: 4px; z-index: 3; padding: 2px 8px; border: 2px dashed #3f4f8a; border-radius: 6px; background: #3f4f8a1f; pointer-events: none; }
+.rangeGhost time { color: #2a3566; font-size: 11px; font-weight: 700; }
+.draftBlock { position: absolute; left: 4px; right: 4px; z-index: 5; display: grid; align-content: start; gap: 4px; min-height: 92px; padding: 6px 8px; border: 2px solid #3f4f8a; border-radius: 8px; background: #fffdf6; box-shadow: 0 10px 22px #2b183055; }
+.draftBlock time { color: #2a3566; font-size: 11px; font-weight: 700; }
+.draftBlock input { padding: 4px 6px !important; font: 20px/1.1 'Nanum Pen Script', 'Gowun Batang', cursive !important; }
+.draftBlock span { display: flex; gap: 6px; }
+.book .draftBlock button { min-height: 28px; padding: 2px 10px; border: 1px solid #3f4f8a; border-radius: 6px; color: #fff; background: #3f4f8a; font-size: 12px; }
+.book .draftBlock button[type=button] { color: #3f4f8a; background: #fff; }
+.dragGhost { position: fixed; z-index: 9999; max-width: 220px; padding: 6px 12px; border: 1px solid #3f4f8a; border-radius: 8px; color: #1f2340; background: #fffdf6; box-shadow: 0 10px 22px #0005; font: 19px/1.1 'Nanum Pen Script', 'Gowun Batang', cursive; pointer-events: none; transform: translate(-30%, -120%) rotate(-3deg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (hover: none) { .blockTools { opacity: 1; } }
+:global([data-reduced=true]) .goalCard, :global([data-reduced=true]) .block { transition: none; transform: none; }
+@media (max-width: 760px) {
+  .weekHead h3.bigDate { font-size: 28px; }
+  .timeScroll { max-height: 62vh; }
+  .stickyNote { margin-left: 10px; }
+  .lineMeta { margin-left: 36px; }
+}
+
+/* ── 하루 쪽의 목록 = 시간표의 쟁반 (2026-10-03) ── */
+.dayList { margin: 0 -6px; padding: 4px 6px 6px; border: 2px dashed transparent; border-radius: 12px; transition: background .15s, border-color .15s; }
+.dayList[data-drop=true] { border-color: #9b3a4a; background: #f6c9bf55; }
+.line[data-timeable=true] { touch-action: pan-y; user-select: none; }
+.line[data-selected=true] { background: #f3e2bf; box-shadow: inset 0 0 0 2px #d79a1e; }
+.book .nudge button[aria-pressed=true] { color: #fff; background: #3f4f8a; border-color: #3f4f8a; }
+.timeHint { margin: 0 0 8px; color: #3f4f8a; font-size: 13px; font-weight: 600; }
+
+/* ── 월별 일정 쪽 ── */
+.monthGrid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; margin: 6px 0 10px; }
+.monthHead { padding: 2px 0 4px; color: #6b4314; font-size: 11px; font-weight: 700; text-align: center; }
+.book button.monthCell { display: grid; align-content: start; gap: 2px; min-width: 0; min-height: 76px; padding: 4px 4px 5px; border: 1px solid #b89a6c55; border-radius: 6px; background: #fffaf0b0; color: #2c2340; text-align: left; overflow: hidden; transition: background .15s, transform .15s; }
+.book button.monthCell b { font: 700 15px/1 'Gowun Batang', Georgia, serif; }
+.book button.monthCell span { display: block; min-width: 0; padding-left: 4px; border-left: 2px solid var(--goal, #a0907a); color: #3d2f45; font-size: 11px; line-height: 1.3; overflow: hidden; text-overflow: clip; white-space: nowrap; }
+.book button.monthCell span[data-complete=true] { color: #7d6d83; text-decoration: line-through; text-decoration-color: #d79a1e; }
+.book button.monthCell small { color: #5a4a62; font-size: 10px; }
+.book button.monthCell[data-out=true] { opacity: .5; }
+.book button.monthCell[data-today=true] b { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; color: #fff4dc; background: #8f4c1c; font-size: 13px; }
+.book button.monthCell:hover:not(:disabled) { background: #f5e8cf; transform: translateY(-1px); }
+.book button.monthCell[aria-pressed=true] { background: #fffaf0; border-color: #4b2a4e; box-shadow: 0 0 0 2px #4b2a4e, 0 4px 10px #4b2a4e33; }
+.weekHead h3 small.daySmall { color: #5a4a62; font: 500 14px 'Pretendard', sans-serif; }
+.monthGoals { margin-top: 16px; padding-top: 10px; border-top: 1px solid #b89a6c66; }
+.monthGoals h4 { margin: 0 0 8px; color: #6b4314; font-size: 12px; letter-spacing: .04em; }
+.monthGoals ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.monthGoals li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 8px; color: #2c2340; font-size: 13px; }
+.monthGoals li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.monthGoals li b { color: #4b3c55; font-size: 12px; font-variant-numeric: tabular-nums; }
+.monthGoals li i { grid-column: 1 / -1; height: 6px; border-radius: 6px; background: linear-gradient(90deg, var(--goal, #6b3a6a) var(--fill, 0%), #e3d3b2 var(--fill, 0%)); }
+@media (max-width: 760px) {
+  .book button.monthCell { min-height: 54px; }
+  .book button.monthCell span { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 50%; background: var(--goal, #a0907a); font-size: 0; }
+  .book button.monthCell small { display: none; }
+}
+
+/* 목표 갈래 — 이어가는 중 / 이룬 목표 / 보관함 */
+.goalTabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin: 10px 0 0; padding: 3px; border-radius: 10px; background: #efe0c2; }
+.book .goalTabs button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; padding: 4px 6px; border-radius: 8px; color: #4b3c55; font-size: 13px; font-weight: 600; }
+.book .goalTabs button b { min-width: 20px; padding: 0 6px; border-radius: 999px; color: #fff4dc; background: #8a7a6a; font-size: 11px; }
+.book .goalTabs button[aria-pressed=true] { color: #2c2340; background: #fffaf0; box-shadow: 0 2px 6px #6b4b3a33; }
+.book .goalTabs button[aria-pressed=true] b { background: #6b3a6a; }
+
+/* ── 목표 두 층 (2026-10-03) — 장기 목표 띠 + 매달린 단기 목표 ── */
+.longGroup { margin: 12px 0 4px; padding: 0 0 4px 10px; border-left: 3px solid var(--goal, #6b3a6a); }
+.longBanner { display: grid; grid-template-columns: 30px minmax(0, 1fr); align-items: center; gap: 8px; padding: 10px 12px 10px 8px; border-radius: 4px 14px 14px 4px; color: #fff7e6;
+  background: linear-gradient(120deg, color-mix(in srgb, var(--goal, #6b3a6a) 88%, #000), var(--goal, #6b3a6a)); box-shadow: 0 4px 12px #6b4b3a40; transition: transform .15s, box-shadow .15s; }
+.longBanner[data-selected=true] { transform: translateX(4px); box-shadow: 0 0 0 2px #fff7e6, 0 0 0 4px var(--goal, #6b3a6a), 0 6px 16px #6b4b3a55; }
+.longBanner .goalOpen strong { color: #fff7e6; font-size: 18px; }
+.book .longBanner button.seal { border-color: #fff7e6aa; }
+.book .longBanner button.seal[aria-checked=true] { background: radial-gradient(circle at 35% 30%, #ffffff55, transparent 40%), #fff7e6; color: var(--goal, #6b3a6a); }
+.horizonTag { display: inline-block; justify-self: start; margin-bottom: 1px; padding: 0 7px; border-radius: 999px; color: inherit; background: #ffffff2e; font-size: 10px; font-weight: 700; letter-spacing: .04em; }
+.goalCard .horizonTag { color: #5a4a62; background: #e9dcc4; }
+.longMeta { color: #f6e8cf; font-size: 12px; }
+.longGroup .goalCards { margin: 6px 0 2px 14px; }
+.longGroup .goalCard { border-left-width: 3px; }
+.longGroup form { margin-left: 14px; }
+.looseGroup { margin-top: 18px; }
+.looseGroup > h4 { margin: 0 0 4px; color: #6b4314; font-size: 13px; }
+.book button.childLink { padding: 2px 0; color: #2c2340; font-size: 14px; text-align: left; }
+.book button.childLink:hover { text-decoration: underline; text-decoration-color: var(--goal, #6b3a6a); }
+.parentPick { width: 100%; min-height: 40px; padding: 6px 10px; border: 1px solid #b89a6c; border-radius: 6px; color: #2c2340; background: #fffaf0; font-size: 14px; }
+.sheetHint { margin: 6px 0 0; color: #5a4a62; font-size: 12px; }
+
+/* 계획 끌어 옮기기 (2026-10-03, `usePlanDrag`) — 이번 주·월별 일정 공용. */
+.line[data-timeable=true] { -webkit-touch-callout: none; -webkit-user-select: none; }
+.line[data-pressing=true] { background: #f3e2bf; transform: scale(.985); transition: background .3s, transform .3s; }
+.book button.monthCell[data-drop=true] { background: #f3e2bf; border-color: #d79a1e; box-shadow: inset 0 0 0 2px #d79a1e; }
+.book button.monthCell span[data-drag-chip] { cursor: grab; -webkit-touch-callout: none; user-select: none; -webkit-user-select: none; }
+.book button.monthCell span[data-dragging=true] { opacity: .35; }
+.dragHint { margin: 6px 0 0; color: #5a4a62; font-size: 12px; line-height: 1.5; }
+
+/* ── 휴대폰 가로 화면 (2026-10-03) — 책이 높이를 다 쓰게 여백을 줄이고, 리본은 돌아가기 단추 아래에서 시작한다. ── */
+@media (orientation: landscape) and (max-height: 520px) {
+  .desk { padding-top: 0; gap: 0; }
+  .book { padding: 8px; margin-right: 106px; border-radius: 12px 16px 16px 12px; }
+  .book::before { inset: 5px; }
+  /* 리본이 오른쪽 쪽 끝 글자를 덮지 않게 책 밖으로 조금 더 뺀다(안 고른 리본의 숨김 폭도 줄인다). */
+  .ribbons { top: 46px; right: -110px; gap: 4px; }
+  .book .ribbons button:not([aria-pressed=true]) { transform: translateX(-6px); }
+  .book .ribbons button { width: 116px; min-height: 36px; padding: 5px 14px 5px 10px; font-size: 12px; }
+  .page { padding: 12px 16px 50px; }
+  .weekHead { gap: 4px; margin-bottom: 6px; padding-bottom: 8px; }
+  .weekHead h3 { font-size: 20px; }
+  .weekHead h3.bigDate { font-size: 24px; }
+  .book button.corner { bottom: 6px; padding: 5px 11px; font-size: 12px; }
+  .strip { margin: 2px 0 8px; }
+  .book .strip button { min-height: 50px; padding: 4px 2px; }
+  .timeScroll { max-height: calc(100dvh - 150px); }
+  .book button.monthCell { min-height: 48px; }
+}
+
+/* 좁은 휴대폰 가로(폭 760 이하 — 667×375 등): 휴대폰 규칙이 리본을 책 위 한 줄로 올리므로 오른쪽 여백 단은 비어 있었다.
+   책이 폭을 다 쓰고, 리본 줄 오른쪽 끝을 돌아가기 단추 자리로 비운다(dormitory.module.css 와 짝). */
+@media (orientation: landscape) and (max-height: 520px) and (max-width: 760px) {
+  .book { margin-right: 0; }
+  .ribbons { margin-right: 108px; }
+}
+
+/* 계획 줄 끝 — 늘 보이는 «i» 정보 단추 + 마우스를 올려야 보이는 작은 동작들 (2026-10-04, 목표 리본 대신).
+   카드는 단추에 마우스를 올리거나 포커스가 가면(휴대폰은 탭) 펼친다 — PlanInfo.tsx. */
+.lineEnd { display: flex; align-items: center; gap: 4px; }
+.planInfo { position: relative; display: inline-flex; }
+.book button.planInfoButton { display: grid; place-items: center; width: 20px; height: 20px; padding: 0; border: 1px solid #b89a6c; border-radius: 50%; background: #fffaf0; color: #6b4f3a; font: italic 700 12px/1 Georgia, 'Noto Serif KR', serif; cursor: help; }
+.book button.planInfoButton:hover, .book button.planInfoButton:focus-visible { background: #6b3a6a; border-color: #6b3a6a; color: #fff7e6; outline: none; }
+.planInfoCard { position: absolute; z-index: 30; right: -6px; bottom: calc(100% + 8px); display: grid; gap: 4px; width: max-content; min-width: 190px; max-width: 260px; padding: 10px 12px; border: 1px solid #b89a6c; border-radius: 8px; background: #fffaf0; color: #3b2c40; box-shadow: 0 10px 24px #2a1a2a40; font-size: 12.5px; line-height: 1.5; text-align: left; opacity: 0; visibility: hidden; transform: translateY(4px); transition: opacity .15s, transform .15s, visibility 0s .15s; pointer-events: none; }
+.planInfoCard::after { content: ''; position: absolute; right: 12px; top: 100%; border: 6px solid transparent; border-top-color: #b89a6c; }
+.planInfo:hover .planInfoCard, .planInfo:focus-within .planInfoCard { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.planInfoCard strong { font: 600 13.5px/1.4 'Gowun Batang', 'Noto Serif KR', serif; color: #2c2340; overflow-wrap: anywhere; }
+.planInfoCard > span { display: flex; align-items: baseline; gap: 6px; overflow-wrap: anywhere; }
+.planInfoCard em { flex-shrink: 0; width: 46px; color: #7a6585; font-style: normal; font-size: 11.5px; }
+.planInfoCard i { flex-shrink: 0; width: 8px; height: 8px; border-radius: 50%; align-self: center; }
+.planInfoMemo { white-space: pre-wrap; }
+@media (hover: none) { .book button.planInfoButton { width: 30px; height: 30px; } }

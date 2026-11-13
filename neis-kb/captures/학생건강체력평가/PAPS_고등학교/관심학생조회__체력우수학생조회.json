@@ -1,0 +1,149 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›관심학생조회›체력우수학생조회",
+ "name": "체력우수학생조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:22:10+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조건",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:조건"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 스포츠영재:심폐지구력 20점, 순발력20점 ※ 건강체력우수:심폐지구력 1등급, 유연성 1등급, 근력ㆍ근지구력 1등급, 순발력 1등급, 비만 정상 ※ 체력우수:심폐지구력 1등급, 유연성 1등급, 근력ㆍ근지구력 1등급, 순발력 1등급",
+     "id": "note:※ 스포츠영재:심폐지구력 20점, 순발력20점 ※ 건강체력우수:심폐지구력 1등급, 유연성 1등급, 근력ㆍ근지구력 1등급, 순발력 1등급, 비만 정상 ※ 체력우수:심폐지구력 1등급, 유연성 1등급, 근력ㆍ근지구력 1등급, 순발력 1등급"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      224,
+      1590,
+      590
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 관심학생조회 > 체력우수학생조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,1140 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생부보존›학생부보존#고등학교›학생부정정관리›졸업생학생부정정대장작성",
+ "name": "졸업생학생부정정대장작성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:23:40+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:1. 정정대장목록",
+   "tab": "1. 정정대장목록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다.",
+     "id": "note:※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다.",
+     "id": "note:※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다."
+    },
+    {
+     "aria": "대상목록",
+     "box": [
+      25,
+      207,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대상목록",
+     "id": "heading:대상목록"
+    },
+    {
+     "aria": "1 정정대장목록 선택됨",
+     "box": [
+      434,
+      207,
+      1181,
+      40
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1. 정정대장목록",
+      "2. 정정대장등록",
+      "3. 항목별정정",
+      "4. 승인요청"
+     ],
+     "active": "1. 정정대장목록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생 목록 그리드",
+     "box": [
+      25,
+      237,
+      383,
+      576
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록 그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        26,
+        238,
+        85,
+        62
+       ],
+       "id": "col:학생 목록 그리드/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        111,
+        238,
+        115,
+        62
+       ],
+       "id": "col:학생 목록 그리드/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "졸업대장번호",
+       "depth": 0,
+       "box": [
+        226,
+        238,
+        121,
+        62
+       ],
+       "id": "col:학생 목록 그리드/졸업대장번호"
+      },
+      {
+       "label": "확인",
+       "depth": 0,
+       "box": [
+        347,
+        238,
+        60,
+        62
+       ],
+       "id": "col:학생 목록 그리드/확인"
+      }
+     ],
+     "id": "grid:학생 목록 그리드"
+    },
+    {
+     "aria": "정정내역확인",
+     "box": [
+      1384,
+      267,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "link",
+     "id": "button:정정내역확인"
+    },
+    {
+     "aria": "정정대장수정",
+     "box": [
+      1479,
+      267,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정대장수정",
+     "variant": "link",
+     "id": "button:정정대장수정"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      267,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "정정대장목록 그리드",
+     "box": [
+      434,
+      307,
+      1181,
+      506
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "정정대장목록 그리드",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "심의일자",
+       "depth": 0,
+       "box": [
+        485,
+        308,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/심의일자"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        706,
+        308,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/성명"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        927,
+        308,
+        553,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/항목"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1481,
+        308,
+        133,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/결재상태"
+      }
+     ],
+     "id": "grid:정정대장목록 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:2. 정정대장등록",
+   "tab": "2. 정정대장등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다.",
+     "id": "note:※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다.",
+     "id": "note:※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다."
+    },
+    {
+     "aria": "대상목록",
+     "box": [
+      25,
+      207,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대상목록",
+     "id": "heading:대상목록"
+    },
+    {
+     "aria": "1 정정대장목록 선택됨",
+     "box": [
+      434,
+      207,
+      1181,
+      40
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1. 정정대장목록",
+      "2. 정정대장등록",
+      "3. 항목별정정",
+      "4. 승인요청"
+     ],
+     "active": "1. 정정대장목록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생 목록 그리드",
+     "box": [
+      25,
+      237,
+      383,
+      576
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록 그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        26,
+        238,
+        85,
+        62
+       ],
+       "id": "col:학생 목록 그리드/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        111,
+        238,
+        115,
+        62
+       ],
+       "id": "col:학생 목록 그리드/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "졸업대장번호",
+       "depth": 0,
+       "box": [
+        226,
+        238,
+        121,
+        62
+       ],
+       "id": "col:학생 목록 그리드/졸업대장번호"
+      },
+      {
+       "label": "확인",
+       "depth": 0,
+       "box": [
+        347,
+        238,
+        60,
+        62
+       ],
+       "id": "col:학생 목록 그리드/확인"
+      }
+     ],
+     "id": "grid:학생 목록 그리드"
+    },
+    {
+     "aria": "정정내역확인",
+     "box": [
+      1384,
+      267,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "link",
+     "id": "button:정정내역확인"
+    },
+    {
+     "aria": "정정대장수정",
+     "box": [
+      1479,
+      267,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정대장수정",
+     "variant": "link",
+     "id": "button:정정대장수정"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      267,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "정정대장목록 그리드",
+     "box": [
+      434,
+      307,
+      1181,
+      506
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "정정대장목록 그리드",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "심의일자",
+       "depth": 0,
+       "box": [
+        485,
+        308,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/심의일자"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        706,
+        308,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/성명"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        927,
+        308,
+        553,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/항목"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1481,
+        308,
+        133,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/결재상태"
+      }
+     ],
+     "id": "grid:정정대장목록 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:3. 항목별정정",
+   "tab": "3. 항목별정정",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다.",
+     "id": "note:※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다.",
+     "id": "note:※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다."
+    },
+    {
+     "aria": "대상목록",
+     "box": [
+      25,
+      207,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대상목록",
+     "id": "heading:대상목록"
+    },
+    {
+     "aria": "1 정정대장목록 선택됨",
+     "box": [
+      434,
+      207,
+      1181,
+      40
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1. 정정대장목록",
+      "2. 정정대장등록",
+      "3. 항목별정정",
+      "4. 승인요청"
+     ],
+     "active": "1. 정정대장목록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생 목록 그리드",
+     "box": [
+      25,
+      237,
+      383,
+      576
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록 그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        26,
+        238,
+        85,
+        62
+       ],
+       "id": "col:학생 목록 그리드/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        111,
+        238,
+        115,
+        62
+       ],
+       "id": "col:학생 목록 그리드/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "졸업대장번호",
+       "depth": 0,
+       "box": [
+        226,
+        238,
+        121,
+        62
+       ],
+       "id": "col:학생 목록 그리드/졸업대장번호"
+      },
+      {
+       "label": "확인",
+       "depth": 0,
+       "box": [
+        347,
+        238,
+        60,
+        62
+       ],
+       "id": "col:학생 목록 그리드/확인"
+      }
+     ],
+     "id": "grid:학생 목록 그리드"
+    },
+    {
+     "aria": "정정내역확인",
+     "box": [
+      1384,
+      267,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "link",
+     "id": "button:정정내역확인"
+    },
+    {
+     "aria": "정정대장수정",
+     "box": [
+      1479,
+      267,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정대장수정",
+     "variant": "link",
+     "id": "button:정정대장수정"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      267,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "정정대장목록 그리드",
+     "box": [
+      434,
+      307,
+      1181,
+      506
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "정정대장목록 그리드",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "심의일자",
+       "depth": 0,
+       "box": [
+        485,
+        308,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/심의일자"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        706,
+        308,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/성명"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        927,
+        308,
+        553,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/항목"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1481,
+        308,
+        133,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/결재상태"
+      }
+     ],
+     "id": "grid:정정대장목록 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:4. 승인요청",
+   "tab": "4. 승인요청",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다.",
+     "id": "note:※ 정정대장 결재 완료 후에는 학교생활기록부에 정정한 자료가 자동 반영됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다.",
+     "id": "note:※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다."
+    },
+    {
+     "aria": "대상목록",
+     "box": [
+      25,
+      207,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대상목록",
+     "id": "heading:대상목록"
+    },
+    {
+     "aria": "1 정정대장목록 선택됨",
+     "box": [
+      434,
+      207,
+      1181,
+      40
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1. 정정대장목록",
+      "2. 정정대장등록",
+      "3. 항목별정정",
+      "4. 승인요청"
+     ],
+     "active": "1. 정정대장목록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학생 목록 그리드",
+     "box": [
+      25,
+      237,
+      383,
+      576
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록 그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        26,
+        238,
+        85,
+        62
+       ],
+       "id": "col:학생 목록 그리드/성명"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        111,
+        238,
+        115,
+        62
+       ],
+       "id": "col:학생 목록 그리드/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "졸업대장번호",
+       "depth": 0,
+       "box": [
+        226,
+        238,
+        121,
+        62
+       ],
+       "id": "col:학생 목록 그리드/졸업대장번호"
+      },
+      {
+       "label": "확인",
+       "depth": 0,
+       "box": [
+        347,
+        238,
+        60,
+        62
+       ],
+       "id": "col:학생 목록 그리드/확인"
+      }
+     ],
+     "id": "grid:학생 목록 그리드"
+    },
+    {
+     "aria": "정정내역확인",
+     "box": [
+      1384,
+      267,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "정정내역확인",
+     "variant": "link",
+     "id": "button:정정내역확인"
+    },
+    {
+     "aria": "정정대장수정",
+     "box": [
+      1479,
+      267,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정정대장수정",
+     "variant": "link",
+     "id": "button:정정대장수정"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      267,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "정정대장목록 그리드",
+     "box": [
+      434,
+      307,
+      1181,
+      506
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "정정대장목록 그리드",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "심의일자",
+       "depth": 0,
+       "box": [
+        485,
+        308,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/심의일자"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        706,
+        308,
+        221,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/성명"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        927,
+        308,
+        553,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/항목"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1481,
+        308,
+        133,
+        36
+       ],
+       "id": "col:정정대장목록 그리드/결재상태"
+      }
+     ],
+     "id": "grid:정정대장목록 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부보존 > 학생부정정관리 > 졸업생학생부정정대장작성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

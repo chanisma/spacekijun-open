@@ -1,0 +1,856 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›입학생학교교육과정관리›이수현황조회",
+ "name": "이수현황조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:02:09+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:교육과정편성내역",
+   "tab": "교육과정편성내역",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "반",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      434,
+      133,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육과정편성내역",
+      "자격종별편성내용",
+      "미이수 현황"
+     ],
+     "active": "교육과정편성내역",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "반별출력",
+     "box": [
+      352,
+      136,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반별출력",
+     "variant": "link",
+     "id": "button:반별출력"
+    },
+    {
+     "aria": "학생",
+     "box": [
+      25,
+      178,
+      394,
+      635
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        179,
+        131,
+        36
+       ],
+       "id": "col:학생/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        157,
+        179,
+        261,
+        36
+       ],
+       "id": "col:학생/성명"
+      }
+     ],
+     "id": "grid:학생"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      188,
+      1181,
+      20
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 이수완료 학점은 과거학년도에 이수 완료한 학점입니다. 이수중 학점과 이수예정 학점은 본교 편성 기준으로 조회되며, 위탁교 및 공동교육과정 등으로 수강중인 학점은 조회되지 않습니다.",
+     "id": "note:※ 이수완료 학점은 과거학년도에 이수 완료한 학점입니다. 이수중 학점과 이수예정 학점은 본교 편성 기준으로 조회되며, 위탁교 및 공동교육과정 등으로 수강중인 학점은 조회되지 않습니다."
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      218,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "교육과정편성내역",
+     "box": [
+      434,
+      258,
+      1181,
+      555
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "교육과정편성내역",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "교과영역",
+       "depth": 0,
+       "box": [
+        435,
+        259,
+        121,
+        72
+       ],
+       "id": "col:교육과정편성내역/교과영역"
+      },
+      {
+       "label": "교과(군)",
+       "depth": 0,
+       "box": [
+        556,
+        259,
+        302,
+        72
+       ],
+       "id": "col:교육과정편성내역/교과(군)"
+      },
+      {
+       "label": "이수완료 학점",
+       "depth": 0,
+       "box": [
+        858,
+        259,
+        151,
+        72
+       ],
+       "id": "col:교육과정편성내역/이수완료 학점"
+      },
+      {
+       "label": "이수 중 학점",
+       "depth": 0,
+       "box": [
+        1009,
+        259,
+        151,
+        72
+       ],
+       "id": "col:교육과정편성내역/이수 중 학점"
+      },
+      {
+       "label": "이수예정 학점",
+       "depth": 0,
+       "box": [
+        1160,
+        259,
+        302,
+        36
+       ],
+       "span": 2,
+       "id": "col:교육과정편성내역/이수예정 학점"
+      },
+      {
+       "label": "필수 학점",
+       "depth": 0,
+       "box": [
+        1463,
+        259,
+        151,
+        72
+       ],
+       "id": "col:교육과정편성내역/필수 학점"
+      },
+      {
+       "label": "학교공통",
+       "depth": 1,
+       "box": [
+        1160,
+        295,
+        151,
+        36
+       ],
+       "id": "col:교육과정편성내역/이수예정 학점>학교공통"
+      },
+      {
+       "label": "선택과목",
+       "depth": 1,
+       "box": [
+        1311,
+        295,
+        151,
+        36
+       ],
+       "id": "col:교육과정편성내역/이수예정 학점>선택과목"
+      }
+     ],
+     "id": "grid:교육과정편성내역"
+    }
+   ]
+  },
+  {
+   "id": "tab:자격종별편성내용",
+   "tab": "자격종별편성내용",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "반",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      434,
+      133,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육과정편성내역",
+      "자격종별편성내용",
+      "미이수 현황"
+     ],
+     "active": "자격종별편성내용",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "반별출력",
+     "box": [
+      352,
+      136,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반별출력",
+     "variant": "link",
+     "id": "button:반별출력"
+    },
+    {
+     "aria": "학생",
+     "box": [
+      25,
+      178,
+      394,
+      635
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        179,
+        131,
+        36
+       ],
+       "id": "col:학생/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        157,
+        179,
+        261,
+        36
+       ],
+       "id": "col:학생/성명"
+      }
+     ],
+     "id": "grid:학생"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      188,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "자격종별편성내용",
+     "box": [
+      434,
+      228,
+      1181,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "자격종별편성내용",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "자격종명",
+       "depth": 0,
+       "box": [
+        435,
+        229,
+        232,
+        72
+       ],
+       "id": "col:자격종별편성내용/자격종명"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        667,
+        229,
+        193,
+        72
+       ],
+       "id": "col:자격종별편성내용/구분"
+      },
+      {
+       "label": "능력단위명",
+       "depth": 0,
+       "box": [
+        860,
+        229,
+        290,
+        72
+       ],
+       "id": "col:자격종별편성내용/능력단위명"
+      },
+      {
+       "label": "훈련기준시간",
+       "depth": 0,
+       "box": [
+        1150,
+        229,
+        116,
+        72
+       ],
+       "id": "col:자격종별편성내용/훈련기준시간"
+      },
+      {
+       "label": "편성시간",
+       "depth": 0,
+       "box": [
+        1266,
+        229,
+        348,
+        36
+       ],
+       "span": 3,
+       "id": "col:자격종별편성내용/편성시간"
+      },
+      {
+       "label": "1학년",
+       "depth": 1,
+       "box": [
+        1266,
+        265,
+        116,
+        36
+       ],
+       "id": "col:자격종별편성내용/편성시간>1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 1,
+       "box": [
+        1382,
+        265,
+        116,
+        36
+       ],
+       "id": "col:자격종별편성내용/편성시간>2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 1,
+       "box": [
+        1498,
+        265,
+        116,
+        36
+       ],
+       "id": "col:자격종별편성내용/편성시간>3학년"
+      }
+     ],
+     "id": "grid:자격종별편성내용"
+    }
+   ]
+  },
+  {
+   "id": "tab:미이수 현황",
+   "tab": "미이수 현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "반",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      434,
+      133,
+      1181,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육과정편성내역",
+      "자격종별편성내용",
+      "미이수 현황"
+     ],
+     "active": "미이수 현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      294,
+      136,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "반별내려받기",
+     "variant": "plain",
+     "id": "button:반별내려받기"
+    },
+    {
+     "aria": "학생",
+     "box": [
+      25,
+      178,
+      394,
+      635
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        179,
+        131,
+        36
+       ],
+       "id": "col:학생/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        157,
+        179,
+        261,
+        36
+       ],
+       "id": "col:학생/성명"
+      }
+     ],
+     "id": "grid:학생"
+    },
+    {
+     "aria": null,
+     "box": [
+      434,
+      188,
+      1181,
+      20
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 미이수 현황은 최소성취수준보장지도(추가학습) 이수관리 화면 데이터를 연동하여 조회합니다.",
+     "id": "note:※ 미이수 현황은 최소성취수준보장지도(추가학습) 이수관리 화면 데이터를 연동하여 조회합니다."
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      218,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "미이수 현황",
+     "box": [
+      434,
+      258,
+      1181,
+      555
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "미이수 현황",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        435,
+        259,
+        129,
+        72
+       ],
+       "id": "col:미이수 현황/학년도"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        564,
+        259,
+        144,
+        72
+       ],
+       "id": "col:미이수 현황/학년"
+      },
+      {
+       "label": "과목",
+       "depth": 0,
+       "box": [
+        708,
+        259,
+        129,
+        72
+       ],
+       "id": "col:미이수 현황/과목"
+      },
+      {
+       "label": "미이수 학점수",
+       "depth": 0,
+       "box": [
+        837,
+        259,
+        129,
+        72
+       ],
+       "id": "col:미이수 현황/미이수 학점수"
+      },
+      {
+       "label": "최소 성취수준 보장지도(추가학습)",
+       "depth": 0,
+       "box": [
+        967,
+        259,
+        647,
+        36
+       ],
+       "span": 5,
+       "id": "col:미이수 현황/최소 성취수준 보장지도(추가학습)"
+      },
+      {
+       "label": "과목출석률",
+       "depth": 1,
+       "box": [
+        967,
+        295,
+        129,
+        36
+       ],
+       "id": "col:미이수 현황/최소 성취수준 보장지도(추가학습)>과목출석률"
+      },
+      {
+       "label": "학업성취율",
+       "depth": 1,
+       "box": [
+        1096,
+        295,
+        129,
+        36
+       ],
+       "id": "col:미이수 현황/최소 성취수준 보장지도(추가학습)>학업성취율"
+      },
+      {
+       "label": "필요시수",
+       "depth": 1,
+       "box": [
+        1225,
+        295,
+        129,
+        36
+       ],
+       "id": "col:미이수 현황/최소 성취수준 보장지도(추가학습)>필요시수"
+      },
+      {
+       "label": "이수기준",
+       "depth": 1,
+       "box": [
+        1355,
+        295,
+        129,
+        36
+       ],
+       "id": "col:미이수 현황/최소 성취수준 보장지도(추가학습)>이수기준"
+      },
+      {
+       "label": "참여시수",
+       "depth": 1,
+       "box": [
+        1484,
+        295,
+        129,
+        36
+       ],
+       "id": "col:미이수 현황/최소 성취수준 보장지도(추가학습)>참여시수"
+      }
+     ],
+     "id": "grid:미이수 현황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 입학생학교교육과정관리 > 이수현황조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

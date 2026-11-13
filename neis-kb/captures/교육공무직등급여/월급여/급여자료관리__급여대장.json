@@ -1,0 +1,570 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육공무직등급여›월급여›급여자료관리›급여대장",
+ "name": "급여대장",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:23:04+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      155,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "적용기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:적용기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      282,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "적용기간~",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:적용기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      535,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "수당구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:수당구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1125,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "회계구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:회계구분"
+    },
+    {
+     "aria": "개인별내역/기관별내역",
+     "box": [
+      155,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "출력구분",
+     "options": [
+      "개인별내역",
+      "기관별내역"
+     ],
+     "id": "radio:출력구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "인원수",
+     "checked": false,
+     "id": "check:인원수"
+    },
+    {
+     "aria": null,
+     "box": [
+      155,
+      162,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "선택",
+     "variant": "link",
+     "id": "button:선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      215,
+      162,
+      57,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      282,
+      162,
+      1200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급여구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:급여구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      95,
+      202,
+      180,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "계약제교원 세부직종 표기",
+     "checked": false,
+     "id": "check:계약제교원 세부직종 표기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      202,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1431,
+      253,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "급여대장생성",
+     "variant": "primary",
+     "id": "button:급여대장생성"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      253,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "집계항목저장",
+     "variant": "primary",
+     "id": "button:집계항목저장"
+    },
+    {
+     "aria": "수당 / 공제명",
+     "box": [
+      25,
+      263,
+      96,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "수당 / 공제명",
+     "id": "heading:수당 / 공제명"
+    },
+    {
+     "aria": "수당명",
+     "box": [
+      25,
+      298,
+      788,
+      283
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수당명",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        299,
+        38,
+        36
+       ],
+       "id": "col:수당명/순번"
+      },
+      {
+       "label": "수당명",
+       "depth": 0,
+       "box": [
+        114,
+        299,
+        698,
+        36
+       ],
+       "id": "col:수당명/수당명"
+      }
+     ],
+     "id": "grid:수당명"
+    },
+    {
+     "aria": "공제명",
+     "box": [
+      828,
+      298,
+      788,
+      283
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "공제명",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        879,
+        299,
+        38,
+        36
+       ],
+       "id": "col:공제명/순번"
+      },
+      {
+       "label": "공제명",
+       "depth": 0,
+       "box": [
+        917,
+        299,
+        698,
+        36
+       ],
+       "id": "col:공제명/공제명"
+      }
+     ],
+     "id": "grid:공제명"
+    },
+    {
+     "aria": null,
+     "box": [
+      230,
+      591,
+      116,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급여대장 출력폰트",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:급여대장 출력폰트"
+    },
+    {
+     "aria": null,
+     "box": [
+      562,
+      591,
+      116,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "급여총괄표 양식",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:급여총괄표 양식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1119,
+      591,
+      130,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "부서출력여부",
+     "checked": false,
+     "id": "check:부서출력여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1265,
+      591,
+      122,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀파일출력",
+     "variant": "plain",
+     "id": "button:엑셀파일출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1413,
+      591,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "급여대장출력",
+     "variant": "primary",
+     "id": "button:급여대장출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      591,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "급여총괄표",
+     "variant": "primary",
+     "id": "button:급여총괄표"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      642,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "작업기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:작업기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      642,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "작업기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:작업기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1555,
+      642,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      693,
+      1590,
+      120
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "작업번호",
+       "depth": 0,
+       "box": [
+        76,
+        694,
+        144,
+        36
+       ],
+       "id": "col:그리드/작업번호"
+      },
+      {
+       "label": "작업명",
+       "depth": 0,
+       "box": [
+        220,
+        694,
+        241,
+        36
+       ],
+       "id": "col:그리드/작업명"
+      },
+      {
+       "label": "작업상태",
+       "depth": 0,
+       "box": [
+        461,
+        694,
+        144,
+        36
+       ],
+       "id": "col:그리드/작업상태"
+      },
+      {
+       "label": "시작시간",
+       "depth": 0,
+       "box": [
+        605,
+        694,
+        168,
+        36
+       ],
+       "id": "col:그리드/시작시간"
+      },
+      {
+       "label": "종료시간",
+       "depth": 0,
+       "box": [
+        774,
+        694,
+        168,
+        36
+       ],
+       "id": "col:그리드/종료시간"
+      },
+      {
+       "label": "처리시간",
+       "depth": 0,
+       "box": [
+        942,
+        694,
+        176,
+        36
+       ],
+       "id": "col:그리드/처리시간"
+      },
+      {
+       "label": "처리건수",
+       "depth": 0,
+       "box": [
+        1118,
+        694,
+        96,
+        36
+       ],
+       "id": "col:그리드/처리건수"
+      },
+      {
+       "label": "상태메세",
+       "depth": 0,
+       "box": [
+        1214,
+        694,
+        400,
+        36
+       ],
+       "id": "col:그리드/상태메세"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {공무원급여}월급여 > 급여자료관리 > 급여대장",
+ "alsoVia": [
+  "부서장(나이스부)",
+  "부서장(나이스부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

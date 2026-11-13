@@ -1,0 +1,1775 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›출결관리›출결관리",
+ "name": "출결관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:14:02+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:일일출결관리(담임용)",
+   "tab": "일일출결관리(담임용)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "일일출결관리(담임용) 선택됨",
+     "box": [
+      25,
+      71,
+      1470,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "일일출결관리(담임용)",
+      "일일결석자조회",
+      "반별일출결마감관리",
+      "반별월출결마감관리",
+      "월출결마감현황",
+      "출결특기사항등록",
+      "출결마감"
+     ],
+     "active": "일일출결관리(담임용)",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      152,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      1005,
+      152,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      1035,
+      152,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      157,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      208,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 마감란 선택 시 출결구분 선택 화면을 출력합니다.",
+     "id": "note:※ 마감란 선택 시 출결구분 선택 화면을 출력합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      227,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 공동교육과정 학생의 경우 거점교의 시간표 전송 교시와 상관없이 '공강'에 출결 처리('/')가 가능하므로 전송된 정확한 출결확인하여 반영처리(클릭 시 활성화 됨)",
+     "id": "note:※ 공동교육과정 학생의 경우 거점교의 시간표 전송 교시와 상관없이 '공강'에 출결 처리('/')가 가능하므로 전송된 정확한 출결확인하여 반영처리(클릭 시 활성화 됨)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      245,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 입력된 자료는 학생/학부모서비스의 [학교생활-출석부-출석상세조회]에서 조회됩니다.",
+     "id": "note:※ 입력된 자료는 학생/학부모서비스의 [학교생활-출석부-출석상세조회]에서 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      264,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 출결마감 시 현장실습 대상자의 출결이 비어있을 경우 출석인정결석 표시 여부를 확인합니다. ※ 해당일자 기준 이전 출결이 연속 7일이상 동일 결석 학생의 경우 출결마감 시 장기결석자 대상 알림을 TODO-LIST에 전송합니다.",
+     "id": "note:※ 출결마감 시 현장실습 대상자의 출결이 비어있을 경우 출석인정결석 표시 여부를 확인합니다. ※ 해당일자 기준 이전 출결이 연속 7일이상 동일 결석 학생의 경우 출결마감 시 장기결석자 대상 알림을 TODO-LIST에 전송합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      301,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 분홍색으로 표시된 부분은 해당 교시가 아직 마감하지 않은 상태입니다.",
+     "id": "note:※ 분홍색으로 표시된 부분은 해당 교시가 아직 마감하지 않은 상태입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      319,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 등록한 출결('/')이 다른 사용자에 의해 삭제된 경우 출결 부분 배경이 빨간색으로 변경되며, 툴팁에 최종 수정자가 나타납니다.",
+     "id": "note:※ 등록한 출결('/')이 다른 사용자에 의해 삭제된 경우 출결 부분 배경이 빨간색으로 변경되며, 툴팁에 최종 수정자가 나타납니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      338,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 다른 사용자가 출결('/')을 등록한 경우 출결('/')이 분홍색으로 표시되며, 툴팁에 최종 수정자가 나타납니다.",
+     "id": "note:※ 다른 사용자가 출결('/')을 등록한 경우 출결('/')이 분홍색으로 표시되며, 툴팁에 최종 수정자가 나타납니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      356,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 출석인정('Ø')과 출결('/')이 동일한 일자에 존재하는 경우 '출석인정'으로 마감할 수 없습니다.",
+     "id": "note:※ 출석인정('Ø')과 출결('/')이 동일한 일자에 존재하는 경우 '출석인정'으로 마감할 수 없습니다."
+    },
+    {
+     "aria": "동아리활동",
+     "box": [
+      1204,
+      410,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "동아리활동",
+     "variant": "primary",
+     "id": "button:동아리활동"
+    },
+    {
+     "aria": "사유일괄입력",
+     "box": [
+      1288,
+      410,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "사유일괄입력",
+     "variant": "primary",
+     "id": "button:사유일괄입력"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1383,
+      410,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "마감취소",
+     "box": [
+      1503,
+      410,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감취소",
+     "variant": "secondary",
+     "id": "button:마감취소"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      410,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      35,
+      458,
+      70,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "깨끗이",
+     "checked": false,
+     "id": "check:깨끗이"
+    },
+    {
+     "aria": null,
+     "box": [
+      300,
+      458,
+      450,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "사유",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사유"
+    },
+    {
+     "aria": "일일출결관리 테이블",
+     "box": [
+      25,
+      509,
+      1590,
+      305
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "일일출결관리 테이블",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        510,
+        132,
+        30
+       ],
+       "id": "col:일일출결관리 테이블/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        158,
+        510,
+        351,
+        30
+       ],
+       "span": 2,
+       "id": "col:일일출결관리 테이블/성명"
+      },
+      {
+       "label": "마감",
+       "depth": 0,
+       "box": [
+        508,
+        510,
+        263,
+        30
+       ],
+       "id": "col:일일출결관리 테이블/마감"
+      },
+      {
+       "label": "조회",
+       "depth": 0,
+       "box": [
+        772,
+        510,
+        158,
+        30
+       ],
+       "id": "col:일일출결관리 테이블/조회"
+      },
+      {
+       "label": "종례",
+       "depth": 0,
+       "box": [
+        930,
+        510,
+        158,
+        30
+       ],
+       "id": "col:일일출결관리 테이블/종례"
+      },
+      {
+       "label": "사유",
+       "depth": 0,
+       "box": [
+        1088,
+        510,
+        526,
+        30
+       ],
+       "id": "col:일일출결관리 테이블/사유"
+      }
+     ],
+     "id": "grid:일일출결관리 테이블"
+    }
+   ]
+  },
+  {
+   "id": "tab:일일결석자조회",
+   "tab": "일일결석자조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "일일출결관리(담임용)",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "일일출결관리(담임용)",
+      "일일결석자조회",
+      "반별일출결마감관리",
+      "반별월출결마감관리",
+      "월출결마감현황",
+      "출결특기사항등록"
+     ],
+     "active": "일일결석자조회",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      845,
+      152,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      975,
+      152,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      1005,
+      152,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1045,
+      152,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "기간",
+     "checked": false,
+     "id": "check:기간"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "일일결석자조회 테이블",
+     "box": [
+      25,
+      253,
+      1590,
+      560
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "일일결석자조회 테이블",
+     "selectable": false,
+     "declaredColumns": 22,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        254,
+        84,
+        62
+       ],
+       "id": "col:일일결석자조회 테이블/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        110,
+        254,
+        167,
+        62
+       ],
+       "id": "col:일일결석자조회 테이블/성명"
+      },
+      {
+       "label": "결석",
+       "depth": 0,
+       "box": [
+        277,
+        254,
+        334,
+        31
+       ],
+       "span": 4,
+       "id": "col:일일결석자조회 테이블/결석"
+      },
+      {
+       "label": "지각",
+       "depth": 0,
+       "box": [
+        611,
+        254,
+        334,
+        31
+       ],
+       "span": 4,
+       "id": "col:일일결석자조회 테이블/지각"
+      },
+      {
+       "label": "조퇴",
+       "depth": 0,
+       "box": [
+        945,
+        254,
+        334,
+        31
+       ],
+       "span": 4,
+       "id": "col:일일결석자조회 테이블/조퇴"
+      },
+      {
+       "label": "결과",
+       "depth": 0,
+       "box": [
+        1280,
+        254,
+        334,
+        31
+       ],
+       "span": 4,
+       "id": "col:일일결석자조회 테이블/결과"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        277,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/결석>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        360,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/결석>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        444,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/결석>기타"
+      },
+      {
+       "label": "인정",
+       "depth": 1,
+       "box": [
+        527,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/결석>인정"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        611,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/지각>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        695,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/지각>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        778,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/지각>기타"
+      },
+      {
+       "label": "인정",
+       "depth": 1,
+       "box": [
+        862,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/지각>인정"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        945,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/조퇴>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1029,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/조퇴>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1113,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/조퇴>기타"
+      },
+      {
+       "label": "인정",
+       "depth": 1,
+       "box": [
+        1196,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/조퇴>인정"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1280,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/결과>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1363,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/결과>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1447,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/결과>기타"
+      },
+      {
+       "label": "인정",
+       "depth": 1,
+       "box": [
+        1530,
+        285,
+        84,
+        31
+       ],
+       "id": "col:일일결석자조회 테이블/결과>인정"
+      }
+     ],
+     "id": "grid:일일결석자조회 테이블"
+    }
+   ]
+  },
+  {
+   "id": "tab:반별일출결마감관리",
+   "tab": "반별일출결마감관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "일일출결관리(담임용)",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "일일출결관리(담임용)",
+      "일일결석자조회",
+      "반별일출결마감관리",
+      "반별월출결마감관리",
+      "월출결마감현황",
+      "출결특기사항등록"
+     ],
+     "active": "반별일출결마감관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:월"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "전체선택",
+     "box": [
+      1383,
+      213,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체선택",
+     "variant": "primary",
+     "id": "button:전체선택"
+    },
+    {
+     "aria": "전체해제",
+     "box": [
+      1455,
+      213,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체해제",
+     "variant": "primary",
+     "id": "button:전체해제"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1575,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    }
+   ]
+  },
+  {
+   "id": "tab:반별월출결마감관리",
+   "tab": "반별월출결마감관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "일일출결관리(담임용)",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "일일출결관리(담임용)",
+      "일일결석자조회",
+      "반별일출결마감관리",
+      "반별월출결마감관리",
+      "월출결마감현황",
+      "출결특기사항등록"
+     ],
+     "active": "반별월출결마감관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생의 반이 변경된 경우 변경된 반에 대해서 반 변경일자에 해당하는 해당 월의 월마감을 다시 하십시오.",
+     "id": "note:※ 학생의 반이 변경된 경우 변경된 반에 대해서 반 변경일자에 해당하는 해당 월의 월마감을 다시 하십시오."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      232,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 해당 월의 마지막 일자가 아닐 경우 마감여부에 마감된 일자가 표시됩니다.",
+     "id": "note:※ 해당 월의 마지막 일자가 아닐 경우 마감여부에 마감된 일자가 표시됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      250,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 월 중간에 1학기가 종료되어 1,2학기가 모두 존재하는 월일 경우에는 2학기까지 모두 마감 후 기안문상신하셔야 합니다. 입력받은 마감일자까지 일출결자료를 합산하여 월출결마감자료가 생성됩니다.",
+     "id": "note:※ 월 중간에 1학기가 종료되어 1,2학기가 모두 존재하는 월일 경우에는 2학기까지 모두 마감 후 기안문상신하셔야 합니다. 입력받은 마감일자까지 일출결자료를 합산하여 월출결마감자료가 생성됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      287,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 위탁시간 시작일과 종료일이 월 중간일인 학생의 경우 해당월의 수업일수와 출결내용은 위탁교의 수업일수 및 출결내용과 본교의 수업일수 및 출결내용을 합산하여 [위탁학생출결관리] 메뉴에서 입력하셔야 합니다. ※ 집계된 일출결 정보와 마감된 월출결 정보가 일치하지 않을 경우 '재마감 필요' 문구가 표시되며 학생부에 올바른 출결 반영을 위해 마감 취소 후 재마감을 진행해주시기 바랍니다.",
+     "id": "note:※ 위탁시간 시작일과 종료일이 월 중간일인 학생의 경우 해당월의 수업일수와 출결내용은 위탁교의 수업일수 및 출결내용과 본교의 수업일수 및 출결내용을 합산하여 [위탁학생출결관리] 메뉴에서 입력하셔야 합니다. ※ 집계된 일출결 정보와 마감된 월출결 정보가 일치하지 않을 경우 '재마감 필요' 문구가 표시되며 학생부에 올바른 출결 반영을 위해 마감 취소 후 재마감을 진행해주시기 바랍니다."
+    },
+    {
+     "aria": "반별월출결 목록 테이블",
+     "box": [
+      25,
+      389,
+      525,
+      424
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반별월출결 목록 테이블",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        26,
+        390,
+        174,
+        36
+       ],
+       "id": "col:반별월출결 목록 테이블/학기"
+      },
+      {
+       "label": "월",
+       "depth": 0,
+       "box": [
+        200,
+        390,
+        174,
+        36
+       ],
+       "id": "col:반별월출결 목록 테이블/월"
+      },
+      {
+       "label": "마감",
+       "depth": 0,
+       "box": [
+        375,
+        390,
+        174,
+        36
+       ],
+       "id": "col:반별월출결 목록 테이블/마감"
+      }
+     ],
+     "id": "grid:반별월출결 목록 테이블"
+    },
+    {
+     "aria": null,
+     "box": [
+      571,
+      411,
+      202,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      783,
+      411,
+      202,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:월"
+    },
+    {
+     "aria": null,
+     "box": [
+      994,
+      411,
+      202,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "일",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:일"
+    },
+    {
+     "aria": "마감",
+     "box": [
+      1306,
+      411,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "마감",
+     "variant": "primary",
+     "id": "button:마감"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1352,
+      411,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": "출결마감자료확인",
+     "box": [
+      1397,
+      411,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출결마감자료확인",
+     "variant": "link",
+     "id": "button:출결마감자료확인"
+    }
+   ]
+  },
+  {
+   "id": "tab:월출결마감현황",
+   "tab": "월출결마감현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "일일출결관리(담임용)",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "일일출결관리(담임용)",
+      "일일결석자조회",
+      "반별일출결마감관리",
+      "반별월출결마감관리",
+      "월출결마감현황",
+      "출결특기사항등록"
+     ],
+     "active": "월출결마감현황",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:월"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "월출결마감현황 테이블",
+     "box": [
+      25,
+      291,
+      1590,
+      522
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "월출결마감현황 테이블",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        292,
+        463,
+        36
+       ],
+       "id": "col:월출결마감현황 테이블/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        489,
+        292,
+        463,
+        36
+       ],
+       "id": "col:월출결마감현황 테이블/반"
+      },
+      {
+       "label": "마감여부",
+       "depth": 0,
+       "box": [
+        952,
+        292,
+        662,
+        36
+       ],
+       "id": "col:월출결마감현황 테이블/마감여부"
+      }
+     ],
+     "id": "grid:월출결마감현황 테이블"
+    }
+   ]
+  },
+  {
+   "id": "tab:출결특기사항등록",
+   "tab": "출결특기사항등록",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "일일출결관리(담임용)",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "일일출결관리(담임용)",
+      "일일결석자조회",
+      "반별일출결마감관리",
+      "반별월출결마감관리",
+      "월출결마감현황",
+      "출결특기사항등록"
+     ],
+     "active": "출결특기사항등록",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      74
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 덮어쓰기 : 기존 입력한 출결 특기사항 내용 삭제 후 입력됩니다. ※ 이어쓰기 : 기존 입력한 출결 특기사항 내용 뒤에, 추가 후 입력됩니다. ※ 학생의 결석, 지각, 조퇴, 결과는 각 학생의 해당 학년도내에 포함되는 월 중에서 월출결이 마감된 월의 출결내역을 집계하여 보여드립니다. ※ 입력/수정/삭제한 내용은 결재 및 학생부 반영된 후 분석을 통해 금지어 통계에 반영이 됩니다.",
+     "id": "note:※ 덮어쓰기 : 기존 입력한 출결 특기사항 내용 삭제 후 입력됩니다. ※ 이어쓰기 : 기존 입력한 출결 특기사항 내용 뒤에, 추가 후 입력됩니다. ※ 학생의 결석, 지각, 조퇴, 결과는 각 학생의 해당 학년도내에 포함되는 월 중에서 월출결이 마감된 월의 출결내역을 집계하여 보여드립니다. ※ 입력/수정/삭제한 내용은 결재 및 학생부 반영된 후 분석을 통해 금지어 통계에 반영이 됩니다."
+    },
+    {
+     "aria": "입력창축소",
+     "box": [
+      1113,
+      332,
+      16,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창축소",
+     "variant": "plain",
+     "id": "button:입력창축소"
+    },
+    {
+     "aria": "입력창확대",
+     "box": [
+      1137,
+      332,
+      16,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입력창확대",
+     "variant": "plain",
+     "id": "button:입력창확대"
+    },
+    {
+     "aria": "기타결석사유 가져오기",
+     "box": [
+      1161,
+      332,
+      139,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "기타결석사유 가져오기",
+     "variant": "link",
+     "id": "button:기타결석사유 가져오기"
+    },
+    {
+     "aria": "일괄입력",
+     "box": [
+      1308,
+      332,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄입력",
+     "variant": "link",
+     "id": "button:일괄입력"
+    },
+    {
+     "aria": "개근 일괄입력",
+     "box": [
+      1380,
+      332,
+      91,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개근 일괄입력",
+     "variant": "primary",
+     "id": "button:개근 일괄입력"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      332,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1527,
+      332,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1575,
+      332,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": "출결특기사항 테이블",
+     "box": [
+      25,
+      372,
+      1590,
+      441
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "출결특기사항 테이블",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        373,
+        140,
+        36
+       ],
+       "id": "col:출결특기사항 테이블/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        216,
+        373,
+        280,
+        36
+       ],
+       "id": "col:출결특기사항 테이블/성명"
+      },
+      {
+       "label": "결석",
+       "depth": 0,
+       "box": [
+        495,
+        373,
+        140,
+        36
+       ],
+       "id": "col:출결특기사항 테이블/결석"
+      },
+      {
+       "label": "지각",
+       "depth": 0,
+       "box": [
+        635,
+        373,
+        140,
+        36
+       ],
+       "id": "col:출결특기사항 테이블/지각"
+      },
+      {
+       "label": "조퇴",
+       "depth": 0,
+       "box": [
+        775,
+        373,
+        140,
+        36
+       ],
+       "id": "col:출결특기사항 테이블/조퇴"
+      },
+      {
+       "label": "결과",
+       "depth": 0,
+       "box": [
+        915,
+        373,
+        140,
+        36
+       ],
+       "id": "col:출결특기사항 테이블/결과"
+      },
+      {
+       "label": "특기사항",
+       "depth": 0,
+       "box": [
+        1055,
+        373,
+        559,
+        36
+       ],
+       "id": "col:출결특기사항 테이블/특기사항"
+      }
+     ],
+     "id": "grid:출결특기사항 테이블"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 출결관리 > 출결관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

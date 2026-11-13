@@ -1,0 +1,182 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›측정종목관리›측정종목선택",
+ "name": "측정종목선택",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:10:08+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:측정구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1524,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 여러 학년을 선택한 경우 선택한 모든 학년에 반영됩니다.",
+     "id": "note:※ 여러 학년을 선택한 경우 선택한 모든 학년에 반영됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정시의 경우 필수평가의 각 체력요인 1종목씩 반드시 선택하셔야 합니다.",
+     "id": "note:※ 정시의 경우 필수평가의 각 체력요인 1종목씩 반드시 선택하셔야 합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교육청에서 등록한 평가유형을 참고자료로 조회할 수 있습니다.",
+     "id": "note:※ 교육청에서 등록한 평가유형을 참고자료로 조회할 수 있습니다."
+    },
+    {
+     "aria": "측정종목선택 목록",
+     "box": [
+      25,
+      264,
+      780,
+      602
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "측정종목선택 목록",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "측정구분",
+       "depth": 0,
+       "box": [
+        26,
+        265,
+        156,
+        36
+       ],
+       "id": "col:측정종목선택 목록/측정구분"
+      },
+      {
+       "label": "측정이름",
+       "depth": 0,
+       "box": [
+        182,
+        265,
+        156,
+        36
+       ],
+       "id": "col:측정종목선택 목록/측정이름"
+      },
+      {
+       "label": "측정일자",
+       "depth": 0,
+       "box": [
+        337,
+        265,
+        156,
+        36
+       ],
+       "id": "col:측정종목선택 목록/측정일자"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        493,
+        265,
+        156,
+        36
+       ],
+       "id": "col:측정종목선택 목록/학년"
+      },
+      {
+       "label": "선정여부",
+       "depth": 0,
+       "box": [
+        648,
+        265,
+        156,
+        36
+       ],
+       "id": "col:측정종목선택 목록/선정여부"
+      }
+     ],
+     "id": "grid:측정종목선택 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 측정종목관리 > 측정종목선택",
+ "viewport": [
+  1920,
+  945
+ ]
+}

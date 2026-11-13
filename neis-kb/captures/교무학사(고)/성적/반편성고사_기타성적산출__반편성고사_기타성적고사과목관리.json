@@ -1,0 +1,154 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›반편성고사/기타성적산출›반편성고사/기타성적고사과목관리",
+ "name": "반편성고사/기타성적고사과목관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:37:26+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진급 학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:진급 학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "반편성고사 과목 목록",
+     "box": [
+      25,
+      276,
+      1590,
+      537
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반편성고사 과목 목록",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "과목코드",
+       "depth": 0,
+       "box": [
+        76,
+        277,
+        306,
+        36
+       ],
+       "id": "col:반편성고사 과목 목록/과목코드"
+      },
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        382,
+        277,
+        306,
+        36
+       ],
+       "id": "col:반편성고사 과목 목록/과목명"
+      },
+      {
+       "label": "응시생수",
+       "depth": 0,
+       "box": [
+        687,
+        277,
+        232,
+        36
+       ],
+       "id": "col:반편성고사 과목 목록/응시생수"
+      },
+      {
+       "label": "총점",
+       "depth": 0,
+       "box": [
+        919,
+        277,
+        232,
+        36
+       ],
+       "id": "col:반편성고사 과목 목록/총점"
+      },
+      {
+       "label": "평균",
+       "depth": 0,
+       "box": [
+        1151,
+        277,
+        232,
+        36
+       ],
+       "id": "col:반편성고사 과목 목록/평균"
+      },
+      {
+       "label": "표준편차",
+       "depth": 0,
+       "box": [
+        1382,
+        277,
+        232,
+        36
+       ],
+       "id": "col:반편성고사 과목 목록/표준편차"
+      }
+     ],
+     "id": "grid:반편성고사 과목 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 반편성고사/기타성적산출 > 반편성고사/기타성적고사과목관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

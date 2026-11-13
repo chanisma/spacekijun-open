@@ -1,0 +1,11 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생맞춤통합지원›학생맞춤통합지원#학교›현황관리›현황통계",
+ "name": "현황통계",
+ "status": "not_found",
+ "capturedAt": "2026-10-05T06:36:26+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [],
+ "error": "메뉴 검색 결과 1건 중 경로가 맞는 것이 없습니다"
+}

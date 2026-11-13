@@ -1,0 +1,1014 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›시장조사자료관리›시장조사자료등록",
+ "name": "시장조사자료등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:24:01+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "시장조사일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:시장조사일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "시장조사일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:시장조사일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 최종가적용 : 동일 식품의 마지막 시장조사일자의 적용단가를 조사가1에 입력",
+     "id": "note:※ 최종가적용 : 동일 식품의 마지막 시장조사일자의 적용단가를 조사가1에 입력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 최저가선택 : 조사가 1,2,3 중 최저가를 적용가로 입력",
+     "id": "note:※ 최저가선택 : 조사가 1,2,3 중 최저가를 적용가로 입력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 최빈가선택 : 가장 자주 사용한 조사단가를 적용가로 입력 (단, 검색조건의 시장조사일자를 기준으로 최빈가 적용)",
+     "id": "note:※ 최빈가선택 : 가장 자주 사용한 조사단가를 적용가로 입력 (단, 검색조건의 시장조사일자를 기준으로 최빈가 적용)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      189,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 예정단가반영 : 선택한 식품에 입력한 적용가를 예정단가에 반영(예정단가등록 및 이력조회 메뉴로 송신)",
+     "id": "note:※ 예정단가반영 : 선택한 식품에 입력한 적용가를 예정단가에 반영(예정단가등록 및 이력조회 메뉴로 송신)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      207,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 자료올리기시 업체군, 친환경구분은 시장조사자료상세에 등록되지 않으나 저장후 조회시 표시됩니다",
+     "id": "note:※ 자료올리기시 업체군, 친환경구분은 시장조사자료상세에 등록되지 않으나 저장후 조회시 표시됩니다"
+    },
+    {
+     "aria": "시장조사자료목록",
+     "box": [
+      25,
+      261,
+      129,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "시장조사자료목록",
+     "id": "heading:시장조사자료목록"
+    },
+    {
+     "aria": "시장조사자료목록",
+     "box": [
+      25,
+      291,
+      1575,
+      250
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "시장조사자료목록",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        292,
+        50,
+        36
+       ],
+       "id": "col:시장조사자료목록/순번"
+      },
+      {
+       "label": "시장조사일자",
+       "depth": 0,
+       "box": [
+        76,
+        292,
+        254,
+        36
+       ],
+       "id": "col:시장조사자료목록/시장조사일자"
+      },
+      {
+       "label": "급식일자",
+       "depth": 0,
+       "box": [
+        330,
+        292,
+        254,
+        36
+       ],
+       "id": "col:시장조사자료목록/급식일자"
+      },
+      {
+       "label": "시장조사장소1",
+       "depth": 0,
+       "box": [
+        584,
+        292,
+        254,
+        36
+       ],
+       "id": "col:시장조사자료목록/시장조사장소1"
+      },
+      {
+       "label": "시장조사장소2",
+       "depth": 0,
+       "box": [
+        838,
+        292,
+        254,
+        36
+       ],
+       "id": "col:시장조사자료목록/시장조사장소2"
+      },
+      {
+       "label": "시장조사장소3",
+       "depth": 0,
+       "box": [
+        1091,
+        292,
+        254,
+        36
+       ],
+       "id": "col:시장조사자료목록/시장조사장소3"
+      },
+      {
+       "label": "승인상태",
+       "depth": 0,
+       "box": [
+        1345,
+        292,
+        254,
+        36
+       ],
+       "id": "col:시장조사자료목록/승인상태"
+      }
+     ],
+     "id": "grid:시장조사자료목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      553,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1285,
+      591,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1333,
+      591,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1380,
+      591,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "상세조회",
+     "variant": "primary",
+     "id": "button:상세조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1452,
+      591,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      591,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      591,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      601,
+      129,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "시장조사자료상세",
+     "id": "heading:시장조사자료상세"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      637,
+      264,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "시장조사일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:시장조사일자#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      637,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "시장조사장소1",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:시장조사장소1"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      637,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "시장조사장소2",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:시장조사장소2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1331,
+      637,
+      264,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "시장조사장소3",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:시장조사장소3"
+    },
+    {
+     "aria": null,
+     "box": [
+      135,
+      694,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:급식일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      694,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "급식일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:급식일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      490,
+      694,
+      49,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      835,
+      694,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "식품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:식품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1041,
+      694,
+      109,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "주사용식품여부",
+     "checked": false,
+     "id": "check:주사용식품여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      549,
+      699,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      617,
+      699,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "중식",
+     "checked": false,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      684,
+      699,
+      50,
+      20
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1339,
+      695,
+      169,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "급식식품/조사식품",
+     "options": [
+      "급식식품",
+      "조사식품"
+     ],
+     "id": "radio:급식식품/조사식품"
+    },
+    {
+     "aria": null,
+     "box": [
+      1516,
+      695,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1139,
+      746,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료올리기",
+     "variant": "plain",
+     "id": "button:자료올리기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1247,
+      746,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1375,
+      746,
+      109,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(공통식품)행추가",
+     "variant": "plain",
+     "id": "button:(공통식품)행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1491,
+      746,
+      109,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "(공통식품)행삭제",
+     "variant": "plain",
+     "id": "button:(공통식품)행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      103,
+      796,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "최저가선택",
+     "variant": "plain",
+     "id": "button:최저가선택"
+    },
+    {
+     "aria": null,
+     "box": [
+      185,
+      796,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "최종가적용",
+     "variant": "primary",
+     "id": "button:최종가적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      266,
+      796,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "예정단가반영",
+     "variant": "primary",
+     "id": "button:예정단가반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      501,
+      796,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "교육(지원)청자료적용",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교육(지원)청자료적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      607,
+      796,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "최저가적용",
+     "variant": "plain",
+     "id": "button:최저가적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      688,
+      796,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "최고가적용",
+     "variant": "plain",
+     "id": "button:최고가적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      770,
+      796,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "최빈가적용",
+     "variant": "plain",
+     "id": "button:최빈가적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      852,
+      796,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "평균가적용",
+     "variant": "plain",
+     "id": "button:평균가적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1098,
+      796,
+      84,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "교육(지원)청자료일괄적용",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:교육(지원)청자료일괄적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1192,
+      796,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄적용",
+     "variant": "plain",
+     "id": "button:일괄적용"
+    },
+    {
+     "aria": "시장조사자료상세",
+     "box": [
+      25,
+      841,
+      1575,
+      480
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "시장조사자료상세",
+     "selectable": true,
+     "declaredColumns": 38,
+     "columns": [
+      {
+       "label": "내식품그룹",
+       "depth": 0,
+       "box": [
+        76,
+        842,
+        100,
+        66
+       ],
+       "id": "col:시장조사자료상세/내식품그룹"
+      },
+      {
+       "label": "주사용 식품 여부",
+       "depth": 0,
+       "box": [
+        176,
+        842,
+        58,
+        66
+       ],
+       "id": "col:시장조사자료상세/주사용 식품 여부"
+      },
+      {
+       "label": "공통식품코드",
+       "depth": 0,
+       "box": [
+        234,
+        842,
+        86,
+        66
+       ],
+       "id": "col:시장조사자료상세/공통식품코드"
+      },
+      {
+       "label": "공통식품명",
+       "depth": 0,
+       "box": [
+        320,
+        842,
+        200,
+        66
+       ],
+       "span": 2,
+       "id": "col:시장조사자료상세/공통식품명"
+      },
+      {
+       "label": "공통식품속성",
+       "depth": 0,
+       "box": [
+        521,
+        842,
+        150,
+        66
+       ],
+       "id": "col:시장조사자료상세/공통식품속성"
+      },
+      {
+       "label": "규격 (kg.l)",
+       "depth": 0,
+       "box": [
+        671,
+        842,
+        68,
+        66
+       ],
+       "id": "col:시장조사자료상세/규격 (kg.l)"
+      },
+      {
+       "label": "단위",
+       "depth": 0,
+       "box": [
+        739,
+        842,
+        68,
+        66
+       ],
+       "id": "col:시장조사자료상세/단위"
+      },
+      {
+       "label": "적용가",
+       "depth": 0,
+       "box": [
+        807,
+        842,
+        89,
+        66
+       ],
+       "id": "col:시장조사자료상세/적용가"
+      },
+      {
+       "label": "학교",
+       "depth": 0,
+       "box": [
+        896,
+        842,
+        467,
+        33
+       ],
+       "span": 4,
+       "id": "col:시장조사자료상세/학교"
+      },
+      {
+       "label": "업체군",
+       "depth": 0,
+       "box": [
+        1363,
+        842,
+        87,
+        66
+       ],
+       "id": "col:시장조사자료상세/업체군"
+      },
+      {
+       "label": "친환경구분",
+       "depth": 0,
+       "box": [
+        1450,
+        842,
+        80,
+        66
+       ],
+       "id": "col:시장조사자료상세/친환경구분"
+      },
+      {
+       "label": "최종가",
+       "depth": 0,
+       "box": [
+        1530,
+        842,
+        200,
+        33
+       ],
+       "span": 2,
+       "id": "col:시장조사자료상세/최종가"
+      },
+      {
+       "label": "조사가1",
+       "depth": 1,
+       "box": [
+        896,
+        875,
+        89,
+        33
+       ],
+       "id": "col:시장조사자료상세/학교>조사가1"
+      },
+      {
+       "label": "조사가2",
+       "depth": 1,
+       "box": [
+        985,
+        875,
+        89,
+        33
+       ],
+       "id": "col:시장조사자료상세/학교>조사가2"
+      },
+      {
+       "label": "조사가3",
+       "depth": 1,
+       "box": [
+        1074,
+        875,
+        89,
+        33
+       ],
+       "id": "col:시장조사자료상세/학교>조사가3"
+      },
+      {
+       "label": "비고",
+       "depth": 1,
+       "box": [
+        1163,
+        875,
+        200,
+        33
+       ],
+       "id": "col:시장조사자료상세/학교>비고"
+      },
+      {
+       "label": "시장조사일자",
+       "depth": 1,
+       "box": [
+        1530,
+        875,
+        100,
+        33
+       ],
+       "id": "col:시장조사자료상세/최종가>시장조사일자"
+      }
+     ],
+     "id": "grid:시장조사자료상세"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 시장조사자료관리 > 시장조사자료등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

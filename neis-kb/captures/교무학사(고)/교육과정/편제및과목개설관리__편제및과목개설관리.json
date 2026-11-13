@@ -1,0 +1,604 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›편제및과목개설관리›편제및과목개설관리",
+ "name": "편제및과목개설관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:03:09+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:1학기",
+   "tab": "1학기",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "편제및시간배당관리 선택됨",
+     "box": [
+      25,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "편제및시간배당관리",
+     "variant": "link",
+     "id": "button:편제및시간배당관리"
+    },
+    {
+     "aria": "선택과목군편성",
+     "box": [
+      293,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택과목군편성",
+     "variant": "link",
+     "id": "button:선택과목군편성"
+    },
+    {
+     "aria": "강의실관리",
+     "box": [
+      562,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "강의실관리",
+     "variant": "link",
+     "id": "button:강의실관리"
+    },
+    {
+     "aria": "과목개설",
+     "box": [
+      830,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "과목개설",
+     "variant": "link",
+     "id": "button:과목개설"
+    },
+    {
+     "aria": "수강생편성",
+     "box": [
+      1098,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수강생편성",
+     "variant": "link",
+     "id": "button:수강생편성"
+    },
+    {
+     "aria": "확인 및 승인",
+     "box": [
+      1367,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인 및 승인",
+     "variant": "link",
+     "id": "button:확인 및 승인"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      162,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학년",
+     "box": [
+      415,
+      162,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      162,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "편제",
+     "box": [
+      25,
+      223,
+      1599,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1학기",
+      "2학기"
+     ],
+     "active": "1학기",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "가져오기",
+     "box": [
+      1455,
+      278,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "가져오기",
+     "variant": "link",
+     "id": "button:가져오기"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1527,
+      278,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      278,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "편제목록",
+     "box": [
+      25,
+      318,
+      1590,
+      495
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "편제목록",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "편제명",
+       "depth": 0,
+       "box": [
+        26,
+        319,
+        288,
+        36
+       ],
+       "id": "col:편제목록/편제명"
+      },
+      {
+       "label": "시수",
+       "depth": 0,
+       "box": [
+        314,
+        319,
+        134,
+        36
+       ],
+       "id": "col:편제목록/시수"
+      },
+      {
+       "label": "학점",
+       "depth": 0,
+       "box": [
+        448,
+        319,
+        134,
+        36
+       ],
+       "id": "col:편제목록/학점"
+      },
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        582,
+        319,
+        460,
+        36
+       ],
+       "id": "col:편제목록/과목명"
+      },
+      {
+       "label": "시수",
+       "depth": 0,
+       "box": [
+        1042,
+        319,
+        134,
+        36
+       ],
+       "id": "col:편제목록/시수#2"
+      },
+      {
+       "label": "학점",
+       "depth": 0,
+       "box": [
+        1176,
+        319,
+        134,
+        36
+       ],
+       "id": "col:편제목록/학점#2"
+      },
+      {
+       "label": "성적처리유형",
+       "depth": 0,
+       "box": [
+        1310,
+        319,
+        288,
+        36
+       ],
+       "id": "col:편제목록/성적처리유형"
+      }
+     ],
+     "id": "grid:편제목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:2학기",
+   "tab": "2학기",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "편제및시간배당관리 선택됨",
+     "box": [
+      25,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "편제및시간배당관리",
+     "variant": "link",
+     "id": "button:편제및시간배당관리"
+    },
+    {
+     "aria": "선택과목군편성",
+     "box": [
+      293,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택과목군편성",
+     "variant": "link",
+     "id": "button:선택과목군편성"
+    },
+    {
+     "aria": "강의실관리",
+     "box": [
+      562,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "강의실관리",
+     "variant": "link",
+     "id": "button:강의실관리"
+    },
+    {
+     "aria": "과목개설",
+     "box": [
+      830,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "과목개설",
+     "variant": "link",
+     "id": "button:과목개설"
+    },
+    {
+     "aria": "수강생편성",
+     "box": [
+      1098,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수강생편성",
+     "variant": "link",
+     "id": "button:수강생편성"
+    },
+    {
+     "aria": "확인 및 승인",
+     "box": [
+      1367,
+      71,
+      248,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인 및 승인",
+     "variant": "link",
+     "id": "button:확인 및 승인"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      162,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": "학년",
+     "box": [
+      415,
+      162,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      162,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "편제",
+     "box": [
+      25,
+      223,
+      1599,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "1학기",
+      "2학기"
+     ],
+     "active": "2학기",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "가져오기",
+     "box": [
+      1455,
+      278,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "가져오기",
+     "variant": "link",
+     "id": "button:가져오기"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1527,
+      278,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      278,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "편제목록",
+     "box": [
+      25,
+      318,
+      1590,
+      495
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "편제목록",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "편제명",
+       "depth": 0,
+       "box": [
+        26,
+        319,
+        288,
+        36
+       ],
+       "id": "col:편제목록/편제명"
+      },
+      {
+       "label": "시수",
+       "depth": 0,
+       "box": [
+        314,
+        319,
+        134,
+        36
+       ],
+       "id": "col:편제목록/시수"
+      },
+      {
+       "label": "학점",
+       "depth": 0,
+       "box": [
+        448,
+        319,
+        134,
+        36
+       ],
+       "id": "col:편제목록/학점"
+      },
+      {
+       "label": "과목명",
+       "depth": 0,
+       "box": [
+        582,
+        319,
+        460,
+        36
+       ],
+       "id": "col:편제목록/과목명"
+      },
+      {
+       "label": "시수",
+       "depth": 0,
+       "box": [
+        1042,
+        319,
+        134,
+        36
+       ],
+       "id": "col:편제목록/시수#2"
+      },
+      {
+       "label": "학점",
+       "depth": 0,
+       "box": [
+        1176,
+        319,
+        134,
+        36
+       ],
+       "id": "col:편제목록/학점#2"
+      },
+      {
+       "label": "성적처리유형",
+       "depth": 0,
+       "box": [
+        1310,
+        319,
+        288,
+        36
+       ],
+       "id": "col:편제목록/성적처리유형"
+      }
+     ],
+     "id": "grid:편제목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 편제및과목개설관리 > 편제및과목개설관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,397 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학업중단›학업중단#학교›학교밖청소년지원센터연계관리›학교밖청소년연계관리및전송",
+ "name": "학교밖청소년연계관리및전송",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:25:05+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진행상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:진행상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:결재상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1516,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      754,
+      173,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      878,
+      173,
+      171,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개인정보활용안내및동의서식",
+     "variant": "plain",
+     "id": "button:개인정보활용안내및동의서식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1057,
+      173,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "개인정보활용동의서조회",
+     "variant": "plain",
+     "id": "button:개인정보활용동의서조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1213,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1261,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1333,
+      173,
+      148,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성평등가족부전송및제출",
+     "variant": "primary",
+     "id": "button:성평등가족부전송및제출"
+    },
+    {
+     "aria": null,
+     "box": [
+      1488,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학업복귀",
+     "variant": "primary",
+     "id": "button:학업복귀"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "학교밖청소년지원센터연계학생정보",
+     "box": [
+      25,
+      213,
+      1575,
+      464
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교밖청소년지원센터연계학생정보",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        50,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/순번"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        126,
+        214,
+        224,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/진행상태"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        350,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        450,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        550,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        650,
+        214,
+        224,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        875,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/성별"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        975,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/생년월일"
+      },
+      {
+       "label": "학업중단종류",
+       "depth": 0,
+       "box": [
+        1075,
+        214,
+        224,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/학업중단종류"
+      },
+      {
+       "label": "등록일",
+       "depth": 0,
+       "box": [
+        1299,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/등록일"
+      },
+      {
+       "label": "제출일",
+       "depth": 0,
+       "box": [
+        1399,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/제출일"
+      },
+      {
+       "label": "반려일",
+       "depth": 0,
+       "box": [
+        1499,
+        214,
+        100,
+        36
+       ],
+       "id": "col:학교밖청소년지원센터연계학생정보/반려일"
+      }
+     ],
+     "id": "grid:학교밖청소년지원센터연계학생정보"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학업중단 > 학교밖청소년지원센터연계관리 > 학교밖청소년연계관리및전송",
+ "viewport": [
+  1920,
+  945
+ ]
+}

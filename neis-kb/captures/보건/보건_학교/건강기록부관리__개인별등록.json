@@ -1,0 +1,91 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›건강기록부관리›개인별등록",
+ "name": "개인별등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:20:11+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      220,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "학생찾기",
+     "box": [
+      641,
+      82,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "학생찾기",
+     "variant": "link",
+     "id": "button:학생찾기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ],
+   "query": {
+    "alerts": [
+     "-- 사유를 선택하세요 -- 개인정보 다운로드 사유를 수기 입력해주세요. 필수입력 ※사유는 필수입력입니다. 0 char max( 50 ) 제출 닫기 개인정보 포함 파일 다운로드 사유 입력 개인정보사용이유다이얼로그 페이지 열림"
+    ],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 건강기록부관리 > 개인별등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

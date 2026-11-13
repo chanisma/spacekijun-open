@@ -1,0 +1,333 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교운영위원회›회의관리›회의개최관리›회의개최관리",
+ "name": "회의개최관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:32:16+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "문서번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:문서번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      959,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "수정",
+     "variant": "plain",
+     "id": "button:수정"
+    },
+    {
+     "aria": null,
+     "box": [
+      1007,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "plain",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1062,
+      133,
+      79,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "공고문 출력",
+     "variant": "link",
+     "id": "button:공고문 출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1150,
+      133,
+      91,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "심의자료 출력",
+     "variant": "link",
+     "id": "button:심의자료 출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1249,
+      133,
+      79,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "안내장 출력",
+     "variant": "link",
+     "id": "button:안내장 출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1337,
+      133,
+      103,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "회의개최문 출력",
+     "variant": "link",
+     "id": "button:회의개최문 출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1448,
+      133,
+      79,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록부 출력",
+     "variant": "link",
+     "id": "button:등록부 출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1536,
+      133,
+      79,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록부 갱신",
+     "variant": "link",
+     "id": "button:등록부 갱신"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "문서번호",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        135,
+        36
+       ],
+       "id": "col:그리드/문서번호"
+      },
+      {
+       "label": "결재일자",
+       "depth": 0,
+       "box": [
+        261,
+        174,
+        135,
+        36
+       ],
+       "id": "col:그리드/결재일자"
+      },
+      {
+       "label": "회수",
+       "depth": 0,
+       "box": [
+        397,
+        174,
+        135,
+        36
+       ],
+       "id": "col:그리드/회수"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        532,
+        174,
+        135,
+        36
+       ],
+       "id": "col:그리드/구분"
+      },
+      {
+       "label": "제목",
+       "depth": 0,
+       "box": [
+        667,
+        174,
+        203,
+        36
+       ],
+       "id": "col:그리드/제목"
+      },
+      {
+       "label": "회의일시",
+       "depth": 0,
+       "box": [
+        870,
+        174,
+        203,
+        36
+       ],
+       "id": "col:그리드/회의일시"
+      },
+      {
+       "label": "회의장소",
+       "depth": 0,
+       "box": [
+        1073,
+        174,
+        135,
+        36
+       ],
+       "id": "col:그리드/회의장소"
+      },
+      {
+       "label": "안건수",
+       "depth": 0,
+       "box": [
+        1208,
+        174,
+        135,
+        36
+       ],
+       "id": "col:그리드/안건수"
+      },
+      {
+       "label": "공고문",
+       "depth": 0,
+       "box": [
+        1343,
+        174,
+        135,
+        36
+       ],
+       "id": "col:그리드/공고문"
+      },
+      {
+       "label": "기타",
+       "depth": 0,
+       "box": [
+        1479,
+        174,
+        135,
+        36
+       ],
+       "id": "col:그리드/기타"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교운영위원회}회의관리 > 회의개최관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,453 @@
+{
+ "schema": "neis-capture/1",
+ "key": "업무승인관리›업무승인›결재현황관리›결재현황판관리",
+ "name": "결재현황판관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:54:24+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      135,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "권한조직",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:권한조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업무영역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업무영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      715,
+      82,
+      251,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재문서",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:결재문서"
+    },
+    {
+     "aria": null,
+     "box": [
+      1106,
+      82,
+      300,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재문서명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결재문서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      131,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기안자",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기안자"
+    },
+    {
+     "aria": "찾기",
+     "box": [
+      257,
+      122,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상신기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:상신기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      550,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "상신기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:상신기간~"
+    },
+    {
+     "aria": "이전주",
+     "box": [
+      680,
+      122,
+      60,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "이전주",
+     "variant": "primary",
+     "id": "button:이전주"
+    },
+    {
+     "aria": "다음주",
+     "box": [
+      750,
+      122,
+      60,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "다음주",
+     "variant": "primary",
+     "id": "button:다음주"
+    },
+    {
+     "aria": "진행상태",
+     "box": [
+      910,
+      122,
+      501,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "진행상태",
+     "options": [
+      "전체",
+      "상신(진행)",
+      "상신취소",
+      "반려",
+      "완결",
+      "완결(기결취소)"
+     ],
+     "id": "radio:진행상태"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1383,
+      173,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "인쇄",
+     "box": [
+      1503,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인쇄",
+     "variant": "link",
+     "id": "button:인쇄"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      570
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 22,
+     "columns": [
+      {
+       "label": "선택",
+       "depth": 0,
+       "box": [
+        26,
+        214,
+        50,
+        36
+       ],
+       "id": "col:그리드/선택"
+      },
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "결재문서명",
+       "depth": 0,
+       "box": [
+        126,
+        214,
+        390,
+        36
+       ],
+       "id": "col:그리드/결재문서명"
+      },
+      {
+       "label": "상신일시",
+       "depth": 0,
+       "box": [
+        516,
+        214,
+        140,
+        36
+       ],
+       "id": "col:그리드/상신일시"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        656,
+        214,
+        83,
+        36
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "결재권자명",
+       "depth": 0,
+       "box": [
+        739,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/결재권자명"
+      },
+      {
+       "label": "기안자ID",
+       "depth": 0,
+       "box": [
+        839,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/기안자ID"
+      },
+      {
+       "label": "기안자명",
+       "depth": 0,
+       "box": [
+        939,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/기안자명"
+      },
+      {
+       "label": "기안자직위",
+       "depth": 0,
+       "box": [
+        1039,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/기안자직위"
+      },
+      {
+       "label": "기안자조직명",
+       "depth": 0,
+       "box": [
+        1139,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/기안자조직명"
+      },
+      {
+       "label": "결재순서",
+       "depth": 0,
+       "box": [
+        1239,
+        214,
+        62,
+        36
+       ],
+       "id": "col:그리드/결재순서"
+      },
+      {
+       "label": "결재자",
+       "depth": 0,
+       "box": [
+        1301,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/결재자"
+      },
+      {
+       "label": "현처리자",
+       "depth": 0,
+       "box": [
+        1401,
+        214,
+        65,
+        36
+       ],
+       "id": "col:그리드/현처리자"
+      },
+      {
+       "label": "결재자직위",
+       "depth": 0,
+       "box": [
+        1466,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/결재자직위"
+      },
+      {
+       "label": "결재자조직명",
+       "depth": 0,
+       "box": [
+        1566,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/결재자조직명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {업무승인관리}업무승인 > 결재현황관리 > 결재현황판관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

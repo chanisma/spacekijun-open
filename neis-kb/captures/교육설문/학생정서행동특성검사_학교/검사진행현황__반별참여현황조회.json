@@ -1,0 +1,189 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학생정서행동특성검사#학교›검사진행현황›반별참여현황조회",
+ "name": "반별참여현황조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:53:17+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검사연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:검사연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      330,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      885,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1095,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "참여여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:참여여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      133,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": "반별참여현황 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반별참여현황 목록",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        318,
+        36
+       ],
+       "id": "col:반별참여현황 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        344,
+        174,
+        318,
+        36
+       ],
+       "id": "col:반별참여현황 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        661,
+        174,
+        318,
+        36
+       ],
+       "id": "col:반별참여현황 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        979,
+        174,
+        318,
+        36
+       ],
+       "id": "col:반별참여현황 목록/성명"
+      },
+      {
+       "label": "참여여부(참여일)",
+       "depth": 0,
+       "box": [
+        1296,
+        174,
+        318,
+        36
+       ],
+       "id": "col:반별참여현황 목록/참여여부(참여일)"
+      }
+     ],
+     "id": "grid:반별참여현황 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생정서행동특성검사 > 검사진행현황 > 반별참여현황조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

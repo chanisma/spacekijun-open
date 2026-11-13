@@ -1,0 +1,564 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›조직코드›조직코드관리›비공식조직관리",
+ "name": "비공식조직관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:48:41+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "비공식조직명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비공식조직명"
+    },
+    {
+     "aria": null,
+     "box": [
+      381,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "비공식조직 목록",
+     "box": [
+      25,
+      143,
+      117,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "비공식조직 목록",
+     "id": "heading:비공식조직 목록"
+    },
+    {
+     "aria": "비공식조직 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      170
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "비공식조직 목록",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:비공식조직 목록/순번"
+      },
+      {
+       "label": "소속조직명",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        128,
+        36
+       ],
+       "id": "col:비공식조직 목록/소속조직명"
+      },
+      {
+       "label": "한글비공식조직명",
+       "depth": 0,
+       "box": [
+        204,
+        174,
+        128,
+        36
+       ],
+       "id": "col:비공식조직 목록/한글비공식조직명"
+      },
+      {
+       "label": "영문비공식조직명",
+       "depth": 0,
+       "box": [
+        332,
+        174,
+        128,
+        36
+       ],
+       "id": "col:비공식조직 목록/영문비공식조직명"
+      },
+      {
+       "label": "1번조직약어명",
+       "depth": 0,
+       "box": [
+        461,
+        174,
+        128,
+        36
+       ],
+       "id": "col:비공식조직 목록/1번조직약어명"
+      },
+      {
+       "label": "2번조직약어명",
+       "depth": 0,
+       "box": [
+        589,
+        174,
+        128,
+        36
+       ],
+       "id": "col:비공식조직 목록/2번조직약어명"
+      },
+      {
+       "label": "기관분류코드",
+       "depth": 0,
+       "box": [
+        717,
+        174,
+        128,
+        36
+       ],
+       "id": "col:비공식조직 목록/기관분류코드"
+      },
+      {
+       "label": "시도교육청조직명",
+       "depth": 0,
+       "box": [
+        845,
+        174,
+        128,
+        36
+       ],
+       "id": "col:비공식조직 목록/시도교육청조직명"
+      },
+      {
+       "label": "관할조직명",
+       "depth": 0,
+       "box": [
+        973,
+        174,
+        107,
+        36
+       ],
+       "id": "col:비공식조직 목록/관할조직명"
+      },
+      {
+       "label": "소속기관명",
+       "depth": 0,
+       "box": [
+        1080,
+        174,
+        107,
+        36
+       ],
+       "id": "col:비공식조직 목록/소속기관명"
+      },
+      {
+       "label": "상위조직명",
+       "depth": 0,
+       "box": [
+        1187,
+        174,
+        107,
+        36
+       ],
+       "id": "col:비공식조직 목록/상위조직명"
+      },
+      {
+       "label": "조직구분코드",
+       "depth": 0,
+       "box": [
+        1294,
+        174,
+        107,
+        36
+       ],
+       "id": "col:비공식조직 목록/조직구분코드"
+      },
+      {
+       "label": "적용시작일자",
+       "depth": 0,
+       "box": [
+        1400,
+        174,
+        107,
+        36
+       ],
+       "id": "col:비공식조직 목록/적용시작일자"
+      },
+      {
+       "label": "적용종료일자",
+       "depth": 0,
+       "box": [
+        1507,
+        174,
+        107,
+        36
+       ],
+       "id": "col:비공식조직 목록/적용종료일자"
+      }
+     ],
+     "id": "grid:비공식조직 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      356,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      393,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      393,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      393,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      403,
+      117,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "비공식조직 등록",
+     "id": "heading:비공식조직 등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      240,
+      439,
+      575,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "시도교육청명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:시도교육청명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1035,
+      439,
+      130,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "생성일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:생성일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      240,
+      479,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조직구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:조직구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1035,
+      479,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "기관분류",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기관분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      240,
+      519,
+      575,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비공식조직명(한글)",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:비공식조직명(한글)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1035,
+      519,
+      575,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비공식조직명약칭1",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:비공식조직명약칭1"
+    },
+    {
+     "aria": null,
+     "box": [
+      240,
+      559,
+      575,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비공식조직명(영문)",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비공식조직명(영문)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1035,
+      559,
+      575,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "비공식조직명약칭2",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:비공식조직명약칭2"
+    },
+    {
+     "aria": null,
+     "box": [
+      240,
+      599,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "소속기관",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:소속기관"
+    },
+    {
+     "aria": null,
+     "box": [
+      652,
+      599,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1035,
+      599,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "관할기관",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:관할기관"
+    },
+    {
+     "aria": null,
+     "box": [
+      240,
+      639,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "상위조직",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:상위조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      652,
+      639,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      240,
+      679,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:적용기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      375,
+      679,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "적용기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:적용기간~"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}조직코드 > 조직코드관리 > 비공식조직관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

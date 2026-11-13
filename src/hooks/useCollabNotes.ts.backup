@@ -1,0 +1,460 @@
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/components/auth/AuthProvider';
+
+export interface CollabNote {
+  id: string;
+  board_id: string;
+  title: string;
+  content: string;
+  color: string;
+  author_id: string;
+  is_pinned: boolean;
+  is_acknowledged: boolean;
+  is_archived: boolean;
+  archived_at: string | null;
+  position_x: number | null;
+  position_y: number | null;
+  created_at: string;
+  updated_at: string;
+  meta: Record<string, any>;
+  author?: {
+    id: string;
+    name: string | null;
+  };
+  comments?: CollabNoteComment[];
+  comment_count?: number;
+  attachments?: any[];
+}
+
+export interface CollabNoteComment {
+  id: string;
+  note_id: string;
+  author_id: string;
+  content: string;
+  created_at: string;
+  updated_at: string;
+  author?: {
+    id: string;
+    name: string | null;
+  };
+}
+
+export interface CreateNoteInput {
+  board_id: string;
+  title: string;
+  content: string;
+  color?: string;
+}
+
+export interface UpdateNoteInput {
+  title?: string;
+  content?: string;
+  color?: string;
+  is_pinned?: boolean;
+  is_acknowledged?: boolean;
+  position_x?: number | null;
+  position_y?: number | null;
+}
+
+// Get all notes for a board
+export function useCollabNotes(boardId: string | undefined) {
+  const { user } = useAuth();
+
+  return useQuery({
+    queryKey: ['collab-notes', boardId],
+    queryFn: async () => {
+      if (!boardId) return [];
+
+      const { data, error } = await supabase
+        .from('collab_notes')
+        .select(`
+          *,
+          resource:author_id(id, name),
+          collab_note_comments(
+            id,
+            content,
+            created_at,
+            resource:author_id(id, name)
+          )
+        `)
+        .eq('board_id', boardId)
+        .order('is_pinned', { ascending: false })
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+
+      return data.map((note: any) => ({
+        ...note,
+        author: note.resource,
+        comments: note.collab_note_comments?.map((c: any) => ({
+          ...c,
+          author: c.resource,
+        })) || [],
+        comment_count: note.collab_note_comments?.length || 0,
+      })) as CollabNote[];
+    },
+    enabled: !!boardId && !!user?.id,
+  });
+}
+
+// Get single note by ID
+export function useCollabNote(noteId: string | undefined) {
+  const { user } = useAuth();
+
+  return useQuery({
+    queryKey: ['collab-note', noteId],
+    queryFn: async () => {
+      if (!noteId) return null;
+
+      const { data, error } = await supabase
+        .from('collab_notes')
+        .select(`
+          *,
+          resource:author_id(id, name),
+          collab_note_comments(
+            id,
+            content,
+            created_at,
+            updated_at,
+            resource:author_id(id, name)
+          )
+        `)
+        .eq('id', noteId)
+        .single();
+
+      if (error) throw error;
+
+      return {
+        ...data,
+        author: data.resource,
+        comments: data.collab_note_comments?.map((c: any) => ({
+          ...c,
+          author: c.resource,
+        })) || [],
+        comment_count: data.collab_note_comments?.length || 0,
+      } as CollabNote;
+    },
+    enabled: !!noteId && !!user?.id,
+  });
+}
+
+// Create new note
+export function useCreateNote() {
+  const queryClient = useQueryClient();
+  const { user } = useAuth();
+
+  return useMutation({
+    mutationFn: async (input: CreateNoteInput) => {
+      if (!user?.id) throw new Error('User not authenticated');
+
+      // Get current user's resource_id
+      const { data: userResource, error: resourceError } = await supabase
+        .from('user_resource')
+        .select('resource_id')
+        .eq('user_id', user.id)
+        .single();
+
+      if (resourceError || !userResource) {
+        throw new Error('User resource not found. Please connect your profile first.');
+      }
+
+      const { data, error } = await supabase
+        .from('collab_notes')
+        .insert({
+          board_id: input.board_id,
+          title: input.title,
+          content: input.content,
+          color: input.color || 'yellow',
+          author_id: userResource.resource_id,
+        })
+        .select(`
+          *,
+          resource:author_id(id, name)
+        `)
+        .single();
+
+      if (error) throw error;
+
+      return {
+        ...data,
+        author: data.resource,
+        comments: [],
+        comment_count: 0,
+      } as CollabNote;
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: ['collab-notes', data.board_id],
+      });
+      queryClient.invalidateQueries({
+        queryKey: ['collab-board', data.board_id],
+      });
+    },
+  });
+}
+
+// Update note
+export function useUpdateNote() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({
+      noteId,
+      input,
+    }: {
+      noteId: string;
+      input: UpdateNoteInput;
+    }) => {
+      const { data, error } = await supabase
+        .from('collab_notes')
+        .update({
+          ...input,
+          updated_at: new Date().toISOString(),
+        })
+        .eq('id', noteId)
+        .select(`
+          *,
+          resource:author_id(id, name)
+        `)
+        .single();
+
+      if (error) throw error;
+
+      return {
+        ...data,
+        author: data.resource,
+      };
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: ['collab-notes', data.board_id],
+      });
+      queryClient.invalidateQueries({ queryKey: ['collab-note', data.id] });
+    },
+  });
+}
+
+// Delete note
+export function useDeleteNote() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({ noteId, boardId }: { noteId: string; boardId: string }) => {
+      const { error } = await supabase
+        .from('collab_notes')
+        .delete()
+        .eq('id', noteId);
+
+      if (error) throw error;
+      return { noteId, boardId };
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: ['collab-notes', data.boardId],
+      });
+      queryClient.invalidateQueries({
+        queryKey: ['collab-board', data.boardId],
+      });
+    },
+  });
+}
+
+// Toggle pin status
+export function useToggleNotePin() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({
+      noteId,
+      isPinned,
+    }: {
+      noteId: string;
+      isPinned: boolean;
+    }) => {
+      const { data, error } = await supabase
+        .from('collab_notes')
+        .update({ is_pinned: isPinned })
+        .eq('id', noteId)
+        .select()
+        .single();
+
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: ['collab-notes', data.board_id],
+      });
+      queryClient.invalidateQueries({ queryKey: ['collab-note', data.id] });
+    },
+  });
+}
+
+// Toggle acknowledgement status
+export function useToggleNoteAcknowledgement() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({
+      noteId,
+      isAcknowledged,
+    }: {
+      noteId: string;
+      isAcknowledged: boolean;
+    }) => {
+      const { data, error } = await supabase
+        .from('collab_notes')
+        .update({ is_acknowledged: isAcknowledged })
+        .eq('id', noteId)
+        .select()
+        .single();
+
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: ['collab-notes', data.board_id],
+      });
+      queryClient.invalidateQueries({ queryKey: ['collab-note', data.id] });
+    },
+  });
+}
+
+// Create comment
+export function useCreateComment() {
+  const queryClient = useQueryClient();
+  const { user } = useAuth();
+
+  return useMutation({
+    mutationFn: async ({
+      noteId,
+      content,
+    }: {
+      noteId: string;
+      content: string;
+    }) => {
+      if (!user?.id) throw new Error('User not authenticated');
+
+      // Get current user's resource_id
+      const { data: userResource, error: resourceError } = await supabase
+        .from('user_resource')
+        .select('resource_id')
+        .eq('user_id', user.id)
+        .single();
+
+      if (resourceError || !userResource) {
+        throw new Error('User resource not found. Please connect your profile first.');
+      }
+
+      const { data, error } = await supabase
+        .from('collab_note_comments')
+        .insert({
+          note_id: noteId,
+          author_id: userResource.resource_id,
+          content,
+        })
+        .select(`
+          *,
+          resource:author_id(id, name)
+        `)
+        .single();
+
+      if (error) throw error;
+
+      return {
+        ...data,
+        author: data.resource,
+      } as CollabNoteComment;
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ['collab-note', data.note_id] });
+      // Also invalidate the notes list to update comment count
+      queryClient.invalidateQueries({ queryKey: ['collab-notes'] });
+    },
+  });
+}
+
+// Delete comment
+export function useDeleteComment() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({
+      commentId,
+      noteId,
+    }: {
+      commentId: string;
+      noteId: string;
+    }) => {
+      const { error } = await supabase
+        .from('collab_note_comments')
+        .delete()
+        .eq('id', commentId);
+
+      if (error) throw error;
+      return { commentId, noteId };
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ['collab-note', data.noteId] });
+      queryClient.invalidateQueries({ queryKey: ['collab-notes'] });
+    },
+  });
+}
+
+// Archive note
+export function useArchiveNote() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (noteId: string) => {
+      const { data, error } = await supabase
+        .from('collab_notes')
+        .update({
+          is_archived: true,
+          archived_at: new Date().toISOString(),
+        })
+        .eq('id', noteId)
+        .select()
+        .single();
+
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: ['collab-notes', data.board_id],
+      });
+      queryClient.invalidateQueries({ queryKey: ['collab-note', data.id] });
+    },
+  });
+}
+
+// Unarchive note
+export function useUnarchiveNote() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async (noteId: string) => {
+      const { data, error } = await supabase
+        .from('collab_notes')
+        .update({
+          is_archived: false,
+          archived_at: null,
+        })
+        .eq('id', noteId)
+        .select()
+        .single();
+
+      if (error) throw error;
+      return data;
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({
+        queryKey: ['collab-notes', data.board_id],
+      });
+      queryClient.invalidateQueries({ queryKey: ['collab-note', data.id] });
+    },
+  });
+}

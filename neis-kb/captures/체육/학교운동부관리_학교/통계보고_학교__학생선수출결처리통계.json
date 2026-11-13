@@ -1,0 +1,130 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교운동부관리#학교›통계보고#학교›학생선수출결처리통계",
+ "name": "학생선수출결처리통계",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:08:35+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "종목",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:종목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1336,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계생성",
+     "variant": "primary",
+     "id": "button:통계생성"
+    },
+    {
+     "aria": null,
+     "box": [
+      1407,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "통계생성취소",
+     "variant": "secondary",
+     "id": "button:통계생성취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "link",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "제출",
+     "variant": "primary",
+     "id": "button:제출"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교운동부관리 > 통계보고 > 학생선수출결처리통계",
+ "viewport": [
+  1920,
+  945
+ ]
+}

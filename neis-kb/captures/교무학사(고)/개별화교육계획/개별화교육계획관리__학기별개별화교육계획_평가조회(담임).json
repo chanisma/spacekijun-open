@@ -1,0 +1,199 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›개별화교육계획›개별화교육계획관리›학기별개별화교육계획/평가조회(담임)",
+ "name": "학기별개별화교육계획/평가조회(담임)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:41:50+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "입력구분",
+     "box": [
+      1135,
+      82,
+      305,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "입력구분",
+     "options": [
+      "교과영역",
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:입력구분"
+    },
+    {
+     "aria": "출력구분",
+     "box": [
+      175,
+      122,
+      166,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "출력구분",
+     "options": [
+      "교육계획",
+      "교육평가"
+     ],
+     "id": "radio:출력구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학생 테이블",
+     "box": [
+      25,
+      203,
+      394,
+      610
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 테이블",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        204,
+        73,
+        36
+       ],
+       "id": "col:학생 테이블/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        99,
+        204,
+        73,
+        36
+       ],
+       "id": "col:학생 테이블/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        171,
+        204,
+        102,
+        36
+       ],
+       "id": "col:학생 테이블/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        273,
+        204,
+        145,
+        36
+       ],
+       "id": "col:학생 테이블/성명"
+      }
+     ],
+     "id": "grid:학생 테이블"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 개별화교육계획 > 개별화교육계획관리 > 학기별개별화교육계획/평가조회(담임)",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,8 @@
+{
+  "schoolName": "샘플고등학교",
+  "shortName": "샘플고",
+  "emailDomain": "myschool.hs.kr",
+  "neisOfficeCode": "Z99",
+  "neisSchoolCode": "9999999",
+  "supabaseProjectRef": "your-project-ref"
+}

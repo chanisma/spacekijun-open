@@ -1,0 +1,82 @@
+/*
+ * 카시안의 연속 의뢰 — 연구 수첩 오른쪽 쪽 한 장 (JourneyPage.tsx, 2026-10-04).
+ * 수첩 종이(크림) 위에 의뢰서 편지 · 별 세 개 궤적 · «지금 할 일» 카드.
+ * 글자 대비: 본문 #3b2c40 / 종이 #fbf4e4 ≈ 11:1, 흐린 글 #6b5a6e ≈ 5.6:1, 금빛 단추 글 #2a1d2b / #e2c48d ≈ 10:1.
+ */
+.page { display: grid; gap: 14px; color: #3b2c40; animation: turn .35s ease-out both; }
+.kicker { color: #8a6b45; font-size: 11px; letter-spacing: .16em; }
+.title { margin: -6px 0 0; font: 500 22px/1.35 Georgia, 'Noto Serif KR', serif; color: #2c2340; }
+
+/* 의뢰서 편지 */
+.letter { position: relative; padding: 16px 18px 14px 20px; border: 1px solid #cdb187; border-radius: 4px; background: linear-gradient(180deg, #fffaf0, #f6ead2); box-shadow: 0 2px 0 #e5d3b0, 0 6px 14px #6b4b3a22; }
+.letter::before { content: ''; position: absolute; inset: 6px; border: 1px dashed #d8c19a; border-radius: 2px; pointer-events: none; }
+.seal { position: absolute; top: -12px; right: 16px; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #a84d6a, #6b2340 70%); color: #fbe7d2; font: italic 700 17px/1 Georgia, serif; box-shadow: 0 2px 4px #0004, inset 0 -2px 4px #0003; transform: rotate(-8deg); }
+.letterFrom { margin: 0 0 6px; color: #8a6b45; font-size: 12px; letter-spacing: .08em; }
+.letter blockquote { margin: 0; font: 500 16px/1.6 'Gowun Batang', 'Noto Serif KR', serif; color: #2c2340; white-space: pre-wrap; overflow-wrap: anywhere; }
+.letterBody { margin: 0; font: 15px/1.75 'Gowun Batang', 'Noto Serif KR', serif; color: #3b2c40; }
+.reason { display: flex; gap: 8px; margin: 8px 0 0; color: #5c4b52; font-size: 13px; line-height: 1.6; }
+.reason em { flex-shrink: 0; color: #8a6b45; font-style: normal; font-size: 12px; }
+
+/* 별 세 개 궤적 */
+.track { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 4px 0 0; padding: 0; list-style: none; }
+.track::before { content: ''; position: absolute; top: 17px; left: 16.6%; right: 16.6%; height: 2px; background: repeating-linear-gradient(90deg, #cdb187 0 6px, transparent 6px 11px); }
+.track li { position: relative; display: grid; justify-items: center; gap: 2px; text-align: center; }
+.star { z-index: 1; display: grid; place-items: center; width: 34px; height: 34px; border: 1.5px dashed #b19b75; border-radius: 50%; background: #fbf4e4; color: #8a7898; font: 600 14px/1 Georgia, serif; }
+.track strong { font-size: 13px; color: #6b5a6e; }
+.track small { color: #8a7898; font-size: 11px; }
+.track li[data-state=done] .star { border: 0; background: radial-gradient(circle at 35% 30%, #fff1cf, #d9b16d 70%); color: #6b3a1e; font-size: 16px; box-shadow: 0 0 10px #e6c68e99; }
+.track li[data-state=done] strong { color: #3b2c40; }
+.track li[data-state=current] .star { border: 2px solid #6b3a6a; color: #4b2a4e; background: #fff; box-shadow: 0 0 0 4px #6b3a6a22; animation: pulse 2.2s ease-in-out infinite; }
+.track li[data-state=current] strong { color: #2c2340; }
+
+/* 지금 할 일 */
+.task { display: grid; gap: 10px; padding: 14px 16px; border-radius: 8px; background: #f3e6cf99; border: 1px solid #e0cba5; }
+.task h4 { margin: 0; font: 600 15px/1.4 Georgia, 'Noto Serif KR', serif; color: #2c2340; }
+.task > p { margin: 0; font-size: 13.5px; line-height: 1.7; color: #4b3c55; }
+.picker { display: grid; gap: 6px; max-height: 260px; margin: 0; padding: 2px; overflow-y: auto; list-style: none; scrollbar-width: thin; }
+.picker label { display: flex; gap: 10px; align-items: flex-start; padding: 9px 11px; border: 1px solid #d9c49e; border-radius: 6px; background: #fffdf6; cursor: pointer; transition: border-color .15s, background .15s; }
+.picker label:hover { border-color: #b8925e; }
+.picker label[data-checked] { border-color: #6b3a6a; background: #fbf2fa; box-shadow: inset 0 0 0 1px #6b3a6a44; }
+.picker input { margin-top: 3px; accent-color: #6b3a6a; }
+.picker strong { display: block; font-size: 13px; color: #2c2340; }
+.picker small { display: block; color: #6b5a6e; font-size: 12px; line-height: 1.55; }
+.activity { display: grid; gap: 3px; padding: 10px 12px; border-left: 3px solid #b8925e; border-radius: 0 6px 6px 0; background: #fffdf6; }
+.activity span { color: #8a6b45; font-size: 11px; letter-spacing: .08em; }
+.activity strong { font-size: 13.5px; color: #2c2340; }
+.activity p { margin: 0; color: #4b3c55; font-size: 12.5px; line-height: 1.6; max-height: 6.4em; overflow: hidden; }
+.change { display: grid; gap: 8px; }
+.field { display: grid; gap: 6px; font-size: 13px; color: #4b3c55; }
+.field textarea { min-height: 120px; padding: 10px 12px; border: 1px solid #b89a6c; border-radius: 6px; background: #fffdf6; color: #2c2340; font: 14px/1.7 'Pretendard', 'Noto Sans KR', sans-serif; resize: vertical; color-scheme: light; }
+.field small { justify-self: end; color: #8a7898; font-size: 12px; }
+.field small[data-ok] { color: #3f7a4f; }
+.done { display: grid; justify-items: center; gap: 6px; text-align: center; }
+.done blockquote { margin: 4px 0 0; padding: 10px 14px; border-left: 3px solid #d9b16d; background: #fffdf6; color: #3b2c40; font: 14px/1.75 'Gowun Batang', 'Noto Serif KR', serif; text-align: left; white-space: pre-wrap; justify-self: stretch; }
+.done .activity { justify-self: stretch; text-align: left; }
+.done small { color: #8a7898; }
+.reward { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff1cf, #d9b16d 70%); color: #6b3a1e; font-size: 26px; box-shadow: 0 0 22px #e6c68eaa; animation: glow 3s ease-in-out infinite; }
+
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.primary, .secondary, .danger, .text { min-height: 40px; padding: 8px 14px; border-radius: 6px; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+.primary { border: 1px solid #b8925e; background: linear-gradient(110deg, #e7c992, #bc9765); color: #2a1d2b; box-shadow: 0 2px 6px #6b4b3a33; }
+.secondary { border: 1px solid #6b3a6a; background: #fff; color: #4b2a4e; }
+.danger { border: 1px solid #b0475f; background: #b0475f; color: #fff; }
+.text { justify-self: start; min-height: 36px; padding: 6px 4px; border: 0; background: none; color: #6b3a6a; text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+.primary:disabled, .secondary:disabled, .danger:disabled, .text:disabled { opacity: .5; cursor: not-allowed; }
+.primary:focus-visible, .secondary:focus-visible, .danger:focus-visible, .text:focus-visible, .picker input:focus-visible { outline: 2px solid #6b3a6a; outline-offset: 2px; }
+
+.message { margin: 0; padding: 8px 12px; border-radius: 6px; background: #e8f3ea; color: #2f5c3b; font-size: 13px; }
+.message[data-tone=error] { background: #f8e3e7; color: #8a2a40; }
+.empty { margin: 0; color: #6b5a6e; font-size: 13px; }
+.footer { padding-top: 10px; border-top: 1px dashed #d8c19a; }
+.confirm { display: grid; gap: 8px; padding: 12px 14px; border: 1px solid #e3b5bf; border-radius: 8px; background: #fbeef0; }
+.confirm p { margin: 0; color: #6b2a3a; font-size: 13px; line-height: 1.6; }
+
+@keyframes turn { from { opacity: 0; transform: translateX(8px); } to { opacity: 1; transform: none; } }
+@keyframes pulse { 50% { box-shadow: 0 0 0 7px #6b3a6a11; } }
+@keyframes glow { 50% { box-shadow: 0 0 32px #e6c68ecc; } }
+:global([data-reduced=true]) .page, :global([data-reduced=true]) .track li .star, :global([data-reduced=true]) .reward { animation: none; }
+@media (max-width: 760px) { .track small { display: none; } .picker { max-height: 220px; } }
+/* 수첩·장면의 일반 label/input 규칙(세로 격자 · 폭 100%)이 새어 들어와 라디오가 글 위 가운데로 떴다 — 이 목록만은 가로로 못 박는다. */
+.page .picker > li > label { display: flex; flex-direction: row; align-items: flex-start; text-align: left; }
+.page .picker input[type=radio] { flex: 0 0 auto; width: 16px; height: 16px; min-height: 0; margin: 3px 0 0; padding: 0; }
+.page .picker label > span { flex: 1; min-width: 0; }

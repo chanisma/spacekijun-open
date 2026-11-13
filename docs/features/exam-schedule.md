@@ -1,0 +1,14 @@
+# exam-schedule
+
+> CLAUDE.md '주요 패턴'에서 분리한 exam-schedule 멀티학년 모델·감독 교사 배정 상세.
+
+- **exam-schedule 멀티학년 모델**: 입력은 `{grades, gradeInputs{학년별 과목/일차설정/고정}, supervision, options, weights}` (v3). 학생 코드가 학년 간 겹치지 않아 conflict graph에 학년 간 간선이 없고, **학년 결합은 감독·시험실 용량 제약이 유일**. 시험실 산정: 공통(scope 'all') 과목 = 학년 반 수(`classCountByGrade`, 각 반에서 응시), **선택과목 = 자기 학년의 일반 교실(classCountByGrade, 공통과목이 점유하지 않은 여분)을 먼저 쓰고 부족분만 공유 고사실 풀(`roomTiers`)로** greedy 배정(`slotSupervision()`·`buildSlotRooms()` 동일 모델, 시험실 1실=1과목, 일반 교실 정원=풀 최대 정원 대리값). 예) 2학년 선택과목은 2학년 9개 반 + 공유 고사실을 함께 사용. 이 모델 덕에 선택과목이 작은 공유 풀을 초과해 감독 HARD에서 CSP가 막히던 문제가 해소됨. 감독 수요 = 시험실 합 × 실당 감독, 슬롯별 전 학년 합산 ≤ 가용 인원 + 고사실 풀 수용 가능(fits)을 CSP·score 양쪽에서 enforce. 일일 시험 개수(H5)·동시배치 정책(H7)·주요교과 분산은 학년별로 평가. CSP는 MRV 동적 변수 선택 + 타깃 forward checking + 일일 개수 "정확 일치" 하한 전파 + 시간 예산(SA와 동일) 사용. v1(단일학년)·v2(단일 roomCapacity) 저장본은 `normalizeScheduleInput()`으로 읽기 호환, studentCodes는 저장 시 제거되고 studentCount만 보존. DB `exam_schedule.grade=0` = 통합 시간표. 회귀 테스트: `npx tsx scripts/exam-schedule-test/run-multigrade.mts`
+- **exam-schedule 감독 교사 배정**: `supervision/roomPlan.ts`가 확정 배치를 시험실로 전개(slotSupervision과 동일 greedy — 방 수 합 = 감독 수요 보장), `supervision/autoAssign.ts`가 2단계 배정(Phase A: 과목 담당 교사 → 그 과목 시험실, 분반 수 내림차순 / Phase B: 빈 좌석을 (누적+이번) 감독 횟수 최소 교사로 균등 채움, 같은 교시 중복 투입 금지). 과목 담당 = **`teacher_timetable` 최신 학기(1차)** + `resource.meta.section` 키 파싱(보조, 분반명은 자유 문자열 — `"한문Ⅱ 3-3학년 1반 한문"` 같은 비표준 키 존재)을 키별 max 병합, **담임 = `resource_tags` "N학년 M반" 태그** (meta 아님). 고정 제외 = `meta.exclude_supervision = true`(테스트 계정 "교사A") 또는 **`resource_tags` '학교관리자'·'고사운영교사' 태그**, 시험별 임시 제외 = UI 선택 → `plan.excludedTeacherIds` 저장. **일일 상한**: 한 교사 하루 최대 2회 기본, **그날 시험이 4교시 이상이면 3회**(`dailyCapForPeriodCount`/`buildCapByDay` — 그날 distinct 교시 수 기준, `EXTENDED_CAP_PERIOD_THRESHOLD=4`). **3개 교시 연속 감독 금지**(`createsTripleConsecutive` — 정규·모의 공통). 두 제약 모두 자동 배정 hard 게이트(`canPlace`) + validatePlan 검출. 상태는 `dayPeriods`(교사×일차 교시 집합)로 상한·연속 동시 추적. 균등 채움은 최종 편차 ≤ 1 보장(`BALANCE_SPREAD_TOLERANCE`, 배정 후 부하 기준 후보 제한) + **복수 일차일 때만** 동률 안에서 같은 날 집중(단일 일차=모의고사는 전원 1회 펼침), 동률은 실행마다 무작위(`buildTieRank`), 그리디 굶김은 증강 재배치(`augmentSeat`)로 구제. 모의고사(`supervision/mockPlan.ts`, exam_type='mock')는 반×교시 그리드에 교시당 1명, 각 학년 첫·마지막 교시 담임 고정. 누적 감독 횟수 = finalized 행들의 `supervisor_assignments` 합산 + `exam_supervision_adjustment` 보정 (draft는 미집계). plan은 `exam_schedule.supervisor_assignments` JSONB(SupervisorPlan v1), 시간표 수정 시 방 구조 시그니처 불일치를 감지해 좌석을 roomId 기준 이월. **엑셀 내보내기**(`supervision/exportXlsx.ts`, `xlsx-js-style`): 학교 표준 양식 "교사별 고사 감독 시간표"(교사=열, 교시별 과목/시험실/감(정·부) 3행, 시수 행, 정규=일차별 시트·모의=단일 시트). 테스트: `npx tsx scripts/exam-schedule-test/run-supervision.mts`
+
+---
+
+## CLAUDE.md 에서 옮긴 원문 (2026-10-23)
+
+> 2026-10-23 CLAUDE.md 정리 때 **한 줄도 고치지 않고** 옮긴 원문이다. 요약·포인터는 CLAUDE.md 에 남아 있다.
+
+| `exam-schedule` | 시험 시간표 자동 생성 (CSP+SA) + 감독 교사 배정 (정규·모의) | `algorithm/solver.ts`, `supervision/` · `docs/features/exam-schedule.md` |

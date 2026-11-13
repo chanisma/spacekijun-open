@@ -1,0 +1,198 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›출결관리›출석부출력(담임용)",
+ "name": "출석부출력(담임용)",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:18:11+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:월"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "주",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:주"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      122,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:일자~"
+    },
+    {
+     "aria": "토요일 출력 여부",
+     "box": [
+      570,
+      122,
+      86,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "토요일 출력 여부",
+     "options": [
+      "Y",
+      "N"
+     ],
+     "id": "radio:토요일 출력 여부"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      50,
+      173,
+      1540,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 해당 주에 재학 아닌 학적변동(전출,자퇴..)이 발생한 학생은 성명에 취소선이 표시됩니다. ※ 출석부 출력 시 용지 사이즈 규격은 A3(297x420mm)를 권장합니다.",
+     "id": "note:※ 해당 주에 재학 아닌 학적변동(전출,자퇴..)이 발생한 학생은 성명에 취소선이 표시됩니다. ※ 출석부 출력 시 용지 사이즈 규격은 A3(297x420mm)를 권장합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      221,
+      1590,
+      592
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 출결관리 > 출석부출력(담임용)",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,272 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›지급관리›교육급여 지원추가 요청관리",
+ "name": "교육급여 지원추가 요청관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:21:08+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생명"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "처리상태",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:처리상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지원항목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:지원항목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "항목생성요청",
+     "variant": "link",
+     "id": "button:항목생성요청"
+    },
+    {
+     "aria": "지원학생추가관리 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "지원학생추가관리 목록",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        93,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/학년도"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        119,
+        174,
+        70,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        189,
+        174,
+        70,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        259,
+        174,
+        70,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/번호"
+      },
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        330,
+        174,
+        117,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/학생명"
+      },
+      {
+       "label": "지원항목",
+       "depth": 0,
+       "box": [
+        446,
+        174,
+        117,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/지원항목"
+      },
+      {
+       "label": "처리상태",
+       "depth": 0,
+       "box": [
+        563,
+        174,
+        93,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/처리상태"
+      },
+      {
+       "label": "요청사유",
+       "depth": 0,
+       "box": [
+        656,
+        174,
+        163,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/요청사유"
+      },
+      {
+       "label": "승인요청일자",
+       "depth": 0,
+       "box": [
+        820,
+        174,
+        140,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/승인요청일자"
+      },
+      {
+       "label": "요청취소",
+       "depth": 0,
+       "box": [
+        960,
+        174,
+        82,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/요청취소"
+      },
+      {
+       "label": "요청취소일자",
+       "depth": 0,
+       "box": [
+        1042,
+        174,
+        140,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/요청취소일자"
+      },
+      {
+       "label": "승인취소사유",
+       "depth": 0,
+       "box": [
+        1182,
+        174,
+        152,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/승인취소사유"
+      },
+      {
+       "label": "승인일자",
+       "depth": 0,
+       "box": [
+        1334,
+        174,
+        140,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/승인일자"
+      },
+      {
+       "label": "승인취소일자",
+       "depth": 0,
+       "box": [
+        1474,
+        174,
+        140,
+        36
+       ],
+       "id": "col:지원학생추가관리 목록/승인취소일자"
+      }
+     ],
+     "id": "grid:지원학생추가관리 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 지급관리 > 교육급여 지원추가 요청관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,233 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›수행평가›수행평가마감관리",
+ "name": "수행평가마감관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:31:03+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 수행평가 마감관리 유의사항",
+     "id": "note:※ 수행평가 마감관리 유의사항"
+    },
+    {
+     "aria": "마감정보저장",
+     "box": [
+      1360,
+      242,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감정보저장",
+     "variant": "primary",
+     "id": "button:마감정보저장"
+    },
+    {
+     "aria": "전과목조회",
+     "box": [
+      1455,
+      242,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전과목조회",
+     "variant": "link",
+     "id": "button:전과목조회"
+    },
+    {
+     "aria": "전과목마감",
+     "box": [
+      1539,
+      242,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전과목마감",
+     "variant": "link",
+     "id": "button:전과목마감"
+    },
+    {
+     "aria": "수행평가 마감정보 그리드",
+     "box": [
+      25,
+      282,
+      1590,
+      531
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수행평가 마감정보 그리드",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "영역",
+       "depth": 0,
+       "box": [
+        76,
+        283,
+        350,
+        62
+       ],
+       "id": "col:수행평가 마감정보 그리드/영역"
+      },
+      {
+       "label": "성취기준",
+       "depth": 0,
+       "box": [
+        426,
+        283,
+        350,
+        62
+       ],
+       "id": "col:수행평가 마감정보 그리드/성취기준"
+      },
+      {
+       "label": "강의실/편성반",
+       "depth": 0,
+       "box": [
+        775,
+        283,
+        245,
+        62
+       ],
+       "id": "col:수행평가 마감정보 그리드/강의실/편성반"
+      },
+      {
+       "label": "담당교사",
+       "depth": 0,
+       "box": [
+        1020,
+        283,
+        350,
+        62
+       ],
+       "id": "col:수행평가 마감정보 그리드/담당교사"
+      },
+      {
+       "label": "강의실별 마감여부",
+       "depth": 0,
+       "box": [
+        1369,
+        283,
+        245,
+        62
+       ],
+       "id": "col:수행평가 마감정보 그리드/강의실별 마감여부"
+      }
+     ],
+     "id": "grid:수행평가 마감정보 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 수행평가 > 수행평가마감관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

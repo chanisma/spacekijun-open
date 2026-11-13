@@ -1,0 +1,811 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›수행평가조회/통계›수행평가통계",
+ "name": "수행평가통계",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:31:33+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:도수분포표",
+   "tab": "도수분포표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "도수분포표 선택됨",
+     "box": [
+      46,
+      112,
+      519,
+      30
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "도수분포표",
+      "구간비교표",
+      "정답률비교표",
+      "문항분석표",
+      "성적집계표"
+     ],
+     "active": "도수분포표",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      196,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "도수분포표",
+     "id": "heading:도수분포표"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "영역",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:영역"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1491,
+      247,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      287,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급간",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:급간"
+    }
+   ]
+  },
+  {
+   "id": "tab:구간비교표",
+   "tab": "구간비교표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "도수분포표",
+     "box": [
+      46,
+      112,
+      519,
+      30
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "도수분포표",
+      "구간비교표",
+      "정답률비교표",
+      "문항분석표",
+      "성적집계표"
+     ],
+     "active": "도수분포표",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      196,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "구간비교표",
+     "id": "heading:구간비교표"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      247,
+      75,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점수",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:점수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1310,
+      247,
+      75,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "점 이상",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:점 이상"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1491,
+      247,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ]
+  },
+  {
+   "id": "tab:정답률비교표",
+   "tab": "정답률비교표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "도수분포표",
+     "box": [
+      46,
+      112,
+      519,
+      30
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "도수분포표",
+      "구간비교표",
+      "정답률비교표",
+      "문항분석표",
+      "성적집계표"
+     ],
+     "active": "도수분포표",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      196,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "정답률비교표",
+     "id": "heading:정답률비교표"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "영역",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:영역"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1491,
+      247,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ]
+  },
+  {
+   "id": "tab:문항분석표",
+   "tab": "문항분석표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "도수분포표",
+     "box": [
+      46,
+      112,
+      519,
+      30
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "도수분포표",
+      "구간비교표",
+      "정답률비교표",
+      "문항분석표",
+      "성적집계표"
+     ],
+     "active": "도수분포표",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      196,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "문항분석표",
+     "id": "heading:문항분석표"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      292,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      292,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      292,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      292,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      292,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "영역",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      332,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1491,
+      332,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ]
+  },
+  {
+   "id": "tab:성적집계표",
+   "tab": "성적집계표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "도수분포표",
+     "box": [
+      46,
+      112,
+      519,
+      30
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "도수분포표",
+      "구간비교표",
+      "정답률비교표",
+      "문항분석표",
+      "성적집계표"
+     ],
+     "active": "도수분포표",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      196,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "성적집계표",
+     "id": "heading:성적집계표"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      247,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1491,
+      247,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 수행평가조회/통계 > 수행평가통계",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

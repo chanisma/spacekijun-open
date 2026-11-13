@@ -1,0 +1,541 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›수행평가›수행평가학생답관리",
+ "name": "수행평가학생답관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:05:39+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "영역",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:영역"
+    },
+    {
+     "aria": null,
+     "box": [
+      1375,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "일괄삭제",
+     "box": [
+      275,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄삭제",
+     "variant": "secondary",
+     "id": "button:일괄삭제"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "취소",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "취소",
+     "variant": "secondary",
+     "id": "button:취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      314,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "반/번호",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        115,
+        36
+       ],
+       "id": "col:그리드/반/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        141,
+        174,
+        197,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      437,
+      181,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "결시확인",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:결시확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      359,
+      231,
+      303,
+      381
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        360,
+        232,
+        60,
+        36
+       ],
+       "id": "col:그리드/문항"
+      },
+      {
+       "label": "답안",
+       "depth": 0,
+       "box": [
+        420,
+        232,
+        241,
+        36
+       ],
+       "span": 5,
+       "id": "col:그리드/답안"
+      }
+     ],
+     "id": "grid:그리드#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      677,
+      231,
+      303,
+      381
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        678,
+        232,
+        60,
+        36
+       ],
+       "id": "col:그리드/문항"
+      },
+      {
+       "label": "답안",
+       "depth": 0,
+       "box": [
+        738,
+        232,
+        241,
+        36
+       ],
+       "span": 5,
+       "id": "col:그리드/답안"
+      }
+     ],
+     "id": "grid:그리드#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      995,
+      231,
+      303,
+      381
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        996,
+        232,
+        60,
+        36
+       ],
+       "id": "col:그리드/문항"
+      },
+      {
+       "label": "답안",
+       "depth": 0,
+       "box": [
+        1056,
+        232,
+        241,
+        36
+       ],
+       "span": 5,
+       "id": "col:그리드/답안"
+      }
+     ],
+     "id": "grid:그리드#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      1312,
+      231,
+      303,
+      381
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        1313,
+        232,
+        60,
+        36
+       ],
+       "id": "col:그리드/문항"
+      },
+      {
+       "label": "답안",
+       "depth": 0,
+       "box": [
+        1373,
+        232,
+        241,
+        36
+       ],
+       "span": 5,
+       "id": "col:그리드/답안"
+      }
+     ],
+     "id": "grid:그리드#5"
+    },
+    {
+     "aria": null,
+     "box": [
+      678,
+      628,
+      304,
+      21
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "기타점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기타점수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1201,
+      628,
+      199,
+      21
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "서답형점수/문항별점수합",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:서답형점수/문항별점수합"
+    },
+    {
+     "aria": null,
+     "box": [
+      479,
+      681,
+      109,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수"
+    },
+    {
+     "aria": null,
+     "box": [
+      592,
+      681,
+      109,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      479,
+      734,
+      109,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      592,
+      734,
+      109,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#4"
+    },
+    {
+     "aria": null,
+     "box": [
+      479,
+      787,
+      109,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#5"
+    },
+    {
+     "aria": null,
+     "box": [
+      592,
+      787,
+      109,
+      20
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:점수#6"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 수행평가 > 수행평가학생답관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

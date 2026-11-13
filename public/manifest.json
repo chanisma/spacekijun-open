@@ -1,0 +1,19 @@
+{
+  "name": "SPACEKIJUN",
+  "short_name": "SPACEKIJUN",
+  "lang": "ko",
+  "dir": "ltr",
+  "description": "SPACEKIJUN - Teacher's Management System",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7cc6a0",
+  "icons": [
+    {
+      "src": "/logo_sm.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

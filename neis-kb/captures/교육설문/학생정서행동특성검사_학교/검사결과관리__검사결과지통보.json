@@ -1,0 +1,317 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학생정서행동특성검사#학교›검사결과관리›검사결과지통보",
+ "name": "검사결과지통보",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:54:27+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검사연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:검사연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      330,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      885,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "출력구분",
+     "box": [
+      1125,
+      82,
+      166,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "출력조건",
+     "options": [
+      "일반출력",
+      "양면출력"
+     ],
+     "id": "radio:출력조건"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      938,
+      133,
+      132,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "가정통신문(성명표시)",
+     "variant": "link",
+     "id": "button:가정통신문(성명표시)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1079,
+      133,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "가정통신문출력",
+     "variant": "link",
+     "id": "button:가정통신문출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1186,
+      133,
+      144,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학적주소가져오기(선택)",
+     "variant": "primary",
+     "id": "button:학적주소가져오기(선택)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1339,
+      133,
+      144,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학적주소가져오기(일괄)",
+     "variant": "primary",
+     "id": "button:학적주소가져오기(일괄)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1491,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      133,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "문의처입력",
+     "variant": "link",
+     "id": "button:문의처입력"
+    },
+    {
+     "aria": "· 검사완료 학생 중에서 주소 미등록 학생 :  0명",
+     "box": [
+      25,
+      143,
+      340,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "· 검사완료 학생 중에서 주소 미등록 학생 : 0명",
+     "id": "heading:· 검사완료 학생 중에서 주소 미등록 학생 : 0명"
+    },
+    {
+     "aria": "학생별 주소 목록",
+     "box": [
+      25,
+      181,
+      1590,
+      632
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생별 주소 목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        182,
+        51,
+        36
+       ],
+       "id": "col:학생별 주소 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        127,
+        182,
+        174,
+        36
+       ],
+       "id": "col:학생별 주소 목록/성명"
+      },
+      {
+       "label": "주소찾기",
+       "depth": 0,
+       "box": [
+        301,
+        182,
+        82,
+        36
+       ],
+       "id": "col:학생별 주소 목록/주소찾기"
+      },
+      {
+       "label": "우편번호",
+       "depth": 0,
+       "box": [
+        383,
+        182,
+        256,
+        36
+       ],
+       "id": "col:학생별 주소 목록/우편번호"
+      },
+      {
+       "label": "주소",
+       "depth": 0,
+       "box": [
+        639,
+        182,
+        256,
+        36
+       ],
+       "id": "col:학생별 주소 목록/주소"
+      },
+      {
+       "label": "상세주소",
+       "depth": 0,
+       "box": [
+        896,
+        182,
+        256,
+        36
+       ],
+       "id": "col:학생별 주소 목록/상세주소"
+      },
+      {
+       "label": "검사방식",
+       "depth": 0,
+       "box": [
+        1152,
+        182,
+        100,
+        36
+       ],
+       "id": "col:학생별 주소 목록/검사방식"
+      },
+      {
+       "label": "검사결과",
+       "depth": 0,
+       "box": [
+        1252,
+        182,
+        256,
+        36
+       ],
+       "id": "col:학생별 주소 목록/검사결과"
+      },
+      {
+       "label": "입력사항조회",
+       "depth": 0,
+       "box": [
+        1508,
+        182,
+        106,
+        36
+       ],
+       "id": "col:학생별 주소 목록/입력사항조회"
+      }
+     ],
+     "id": "grid:학생별 주소 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생정서행동특성검사 > 검사결과관리 > 검사결과지통보",
+ "viewport": [
+  1920,
+  945
+ ]
+}

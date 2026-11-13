@@ -1,0 +1,348 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교과용도서›교과용도서#학교›AIDT 관리›(AIDT) 발행사/교육자료 조회",
+ "name": "(AIDT) 발행사/교육자료 조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:37:50+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교육과정차수",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:교육과정차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      110,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "도서구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:도서구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      82,
+      110,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1195,
+      82,
+      110,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교과목명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교과목명"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "발행사명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:발행사명"
+    },
+    {
+     "aria": null,
+     "box": [
+      855,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "저자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:저자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      162,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "도서명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:도서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      385,
+      162,
+      147,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "미사용 포함",
+     "checked": false,
+     "id": "check:미사용 포함"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      162,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "자료내려받기",
+     "box": [
+      1503,
+      213,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": "교과서/지도서관리",
+     "box": [
+      25,
+      253,
+      1590,
+      520
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "교과서/지도서관리",
+     "selectable": false,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "교육과정 차수",
+       "depth": 0,
+       "box": [
+        26,
+        254,
+        192,
+        62
+       ],
+       "id": "col:교과서/지도서관리/교육과정 차수"
+      },
+      {
+       "label": "도서 구분",
+       "depth": 0,
+       "box": [
+        218,
+        254,
+        60,
+        62
+       ],
+       "id": "col:교과서/지도서관리/도서 구분"
+      },
+      {
+       "label": "사용 학년",
+       "depth": 0,
+       "box": [
+        278,
+        254,
+        160,
+        62
+       ],
+       "id": "col:교과서/지도서관리/사용 학년"
+      },
+      {
+       "label": "사용 학기",
+       "depth": 0,
+       "box": [
+        438,
+        254,
+        60,
+        62
+       ],
+       "id": "col:교과서/지도서관리/사용 학기"
+      },
+      {
+       "label": "교과목명",
+       "depth": 0,
+       "box": [
+        498,
+        254,
+        160,
+        62
+       ],
+       "id": "col:교과서/지도서관리/교과목명"
+      },
+      {
+       "label": "도서명",
+       "depth": 0,
+       "box": [
+        658,
+        254,
+        288,
+        62
+       ],
+       "id": "col:교과서/지도서관리/도서명"
+      },
+      {
+       "label": "발행사",
+       "depth": 0,
+       "box": [
+        946,
+        254,
+        160,
+        62
+       ],
+       "id": "col:교과서/지도서관리/발행사"
+      },
+      {
+       "label": "저자",
+       "depth": 0,
+       "box": [
+        1106,
+        254,
+        160,
+        62
+       ],
+       "id": "col:교과서/지도서관리/저자"
+      },
+      {
+       "label": "가격",
+       "depth": 0,
+       "box": [
+        1266,
+        254,
+        128,
+        62
+       ],
+       "id": "col:교과서/지도서관리/가격"
+      },
+      {
+       "label": "사용 여부",
+       "depth": 0,
+       "box": [
+        1394,
+        254,
+        60,
+        62
+       ],
+       "id": "col:교과서/지도서관리/사용 여부"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1454,
+        254,
+        160,
+        62
+       ],
+       "id": "col:교과서/지도서관리/비고"
+      }
+     ],
+     "id": "grid:교과서/지도서관리"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교과용도서 > AIDT 관리 > (AIDT) 발행사/교육자료 조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

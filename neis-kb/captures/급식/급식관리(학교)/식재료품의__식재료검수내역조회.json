@@ -1,0 +1,414 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식재료품의›식재료검수내역조회",
+ "name": "식재료검수내역조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:46:55+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:검수일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검수일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:검수일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      82,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체군",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:업체군"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1024,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1092,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      1159,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품대분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품대분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      570,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "식품중분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:식품중분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      965,
+      122,
+      255,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공통식품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:공통식품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      124,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      124,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      175,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": "식재료검수목록",
+     "box": [
+      25,
+      185,
+      113,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "식재료검수목록",
+     "id": "heading:식재료검수목록"
+    },
+    {
+     "aria": "식재료품의목록",
+     "box": [
+      25,
+      215,
+      1590,
+      598
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "식재료품의목록",
+     "selectable": false,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "검수일자",
+       "depth": 0,
+       "box": [
+        26,
+        216,
+        102,
+        36
+       ],
+       "id": "col:식재료품의목록/검수일자"
+      },
+      {
+       "label": "식사구분",
+       "depth": 0,
+       "box": [
+        128,
+        216,
+        68,
+        36
+       ],
+       "id": "col:식재료품의목록/식사구분"
+      },
+      {
+       "label": "식품소분류명",
+       "depth": 0,
+       "box": [
+        196,
+        216,
+        113,
+        36
+       ],
+       "id": "col:식재료품의목록/식품소분류명"
+      },
+      {
+       "label": "식품명",
+       "depth": 0,
+       "box": [
+        310,
+        216,
+        227,
+        36
+       ],
+       "id": "col:식재료품의목록/식품명"
+      },
+      {
+       "label": "규격",
+       "depth": 0,
+       "box": [
+        536,
+        216,
+        79,
+        36
+       ],
+       "id": "col:식재료품의목록/규격"
+      },
+      {
+       "label": "단위",
+       "depth": 0,
+       "box": [
+        616,
+        216,
+        91,
+        36
+       ],
+       "id": "col:식재료품의목록/단위"
+      },
+      {
+       "label": "검수수량",
+       "depth": 0,
+       "box": [
+        707,
+        216,
+        91,
+        36
+       ],
+       "id": "col:식재료품의목록/검수수량"
+      },
+      {
+       "label": "검수단가",
+       "depth": 0,
+       "box": [
+        797,
+        216,
+        113,
+        36
+       ],
+       "id": "col:식재료품의목록/검수단가"
+      },
+      {
+       "label": "계약금액",
+       "depth": 0,
+       "box": [
+        911,
+        216,
+        113,
+        36
+       ],
+       "id": "col:식재료품의목록/계약금액"
+      },
+      {
+       "label": "조치사항",
+       "depth": 0,
+       "box": [
+        1024,
+        216,
+        113,
+        36
+       ],
+       "id": "col:식재료품의목록/조치사항"
+      },
+      {
+       "label": "포장상태",
+       "depth": 0,
+       "box": [
+        1138,
+        216,
+        79,
+        36
+       ],
+       "id": "col:식재료품의목록/포장상태"
+      },
+      {
+       "label": "식품온도",
+       "depth": 0,
+       "box": [
+        1217,
+        216,
+        113,
+        36
+       ],
+       "id": "col:식재료품의목록/식품온도"
+      },
+      {
+       "label": "품질상태",
+       "depth": 0,
+       "box": [
+        1330,
+        216,
+        79,
+        36
+       ],
+       "id": "col:식재료품의목록/품질상태"
+      },
+      {
+       "label": "소비기한(제조일)",
+       "depth": 0,
+       "box": [
+        1410,
+        216,
+        91,
+        36
+       ],
+       "id": "col:식재료품의목록/소비기한(제조일)"
+      },
+      {
+       "label": "업체군",
+       "depth": 0,
+       "box": [
+        1501,
+        216,
+        113,
+        36
+       ],
+       "id": "col:식재료품의목록/업체군"
+      }
+     ],
+     "id": "grid:식재료품의목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식재료품의 > 식재료검수내역조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

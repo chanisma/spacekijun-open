@@ -1,0 +1,609 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›지급관리›교육급여 지급결과조회",
+ "name": "교육급여 지급결과조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:18:14+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      76,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      76,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지급분기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:지급분기"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      76,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지급일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:지급일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      770,
+      76,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지급일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:지급일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1030,
+      76,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1270,
+      76,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지급상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:지급상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      116,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1516,
+      116,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "※ 감면여부가 \"1\"이면 \"감면\", \"0\"이면 \"지원\"입니다.",
+     "box": [
+      25,
+      167,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 감면여부가 \"1\"이면 \"감면\", \"0\"이면 \"지원\"입니다.",
+     "id": "note:※ 감면여부가 \"1\"이면 \"감면\", \"0\"이면 \"지원\"입니다."
+    },
+    {
+     "aria": "※ 지급상태: 지급실패건에 대해서는 지급일자가 적용받지 않습니다.",
+     "box": [
+      25,
+      186,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 지급상태: 지급실패건에 대해서는 지급일자가 적용받지 않습니다.",
+     "id": "note:※ 지급상태: 지급실패건에 대해서는 지급일자가 적용받지 않습니다."
+    },
+    {
+     "aria": "※ 지급결과가 등록된 항목만 과오지급내역 생성",
+     "box": [
+      25,
+      204,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 지급결과가 등록된 항목만 과오지급내역 생성",
+     "id": "note:※ 지급결과가 등록된 항목만 과오지급내역 생성"
+    },
+    {
+     "aria": "※ 지급분기 1/4 분기는 3~5월로 조회됩니다. ",
+     "box": [
+      25,
+      223,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 지급분기 1/4 분기는 3~5월로 조회됩니다.",
+     "id": "note:※ 지급분기 1/4 분기는 3~5월로 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      305,
+      276,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "생성일자",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:생성일자"
+    },
+    {
+     "aria": "생성일자별 지급결과",
+     "box": [
+      441,
+      276,
+      127,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "생성일자별 지급결과",
+     "variant": "primary",
+     "id": "button:생성일자별 지급결과"
+    },
+    {
+     "aria": null,
+     "box": [
+      1211,
+      276,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "생성일자",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:생성일자#2"
+    },
+    {
+     "aria": "입학금, 수업료, 교과서대 지급결과 파일저장",
+     "box": [
+      1347,
+      276,
+      253,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "입학금, 수업료, 교과서대 지급결과 파일저장",
+     "variant": "primary",
+     "id": "button:입학금, 수업료, 교과서대 지급결과 파일저장"
+    },
+    {
+     "aria": "교육급여 지급결과 조회 메인",
+     "box": [
+      25,
+      334,
+      1575,
+      285
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "교육급여 지급결과 조회 메인",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        26,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/학년도"
+      },
+      {
+       "label": "분기",
+       "depth": 0,
+       "box": [
+        183,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/분기"
+      },
+      {
+       "label": "수급자수",
+       "depth": 0,
+       "box": [
+        341,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/수급자수"
+      },
+      {
+       "label": "지급상태",
+       "depth": 0,
+       "box": [
+        498,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/지급상태"
+      },
+      {
+       "label": "교육활동지원비",
+       "depth": 0,
+       "box": [
+        655,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/교육활동지원비"
+      },
+      {
+       "label": "입학금",
+       "depth": 0,
+       "box": [
+        813,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/입학금"
+      },
+      {
+       "label": "수업료",
+       "depth": 0,
+       "box": [
+        970,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/수업료"
+      },
+      {
+       "label": "교과서대",
+       "depth": 0,
+       "box": [
+        1127,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/교과서대"
+      },
+      {
+       "label": "합계",
+       "depth": 0,
+       "box": [
+        1284,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/합계"
+      },
+      {
+       "label": "바우처지급금액",
+       "depth": 0,
+       "box": [
+        1442,
+        335,
+        157,
+        30
+       ],
+       "id": "col:교육급여 지급결과 조회 메인/바우처지급금액"
+      }
+     ],
+     "id": "grid:교육급여 지급결과 조회 메인"
+    },
+    {
+     "aria": "전체 자료내리기",
+     "box": [
+      1473,
+      634,
+      127,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체 자료내리기",
+     "variant": "plain",
+     "id": "button:전체 자료내리기"
+    },
+    {
+     "aria": "교육급여 지급결과 상세",
+     "box": [
+      25,
+      674,
+      1575,
+      303
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "교육급여 지급결과 상세",
+     "selectable": false,
+     "declaredColumns": 22,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        675,
+        100,
+        50
+       ],
+       "id": "col:교육급여 지급결과 상세/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        126,
+        675,
+        80,
+        50
+       ],
+       "id": "col:교육급여 지급결과 상세/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        206,
+        675,
+        80,
+        50
+       ],
+       "id": "col:교육급여 지급결과 상세/번호"
+      },
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        286,
+        675,
+        100,
+        50
+       ],
+       "id": "col:교육급여 지급결과 상세/학생명"
+      },
+      {
+       "label": "주민등록번호",
+       "depth": 0,
+       "box": [
+        386,
+        675,
+        120,
+        50
+       ],
+       "id": "col:교육급여 지급결과 상세/주민등록번호"
+      },
+      {
+       "label": "지원항목",
+       "depth": 0,
+       "box": [
+        506,
+        675,
+        100,
+        50
+       ],
+       "id": "col:교육급여 지급결과 상세/지원항목"
+      },
+      {
+       "label": "지급환수구분",
+       "depth": 0,
+       "box": [
+        606,
+        675,
+        100,
+        50
+       ],
+       "id": "col:교육급여 지급결과 상세/지급환수구분"
+      },
+      {
+       "label": "지급금액",
+       "depth": 0,
+       "box": [
+        706,
+        675,
+        100,
+        50
+       ],
+       "id": "col:교육급여 지급결과 상세/지급금액"
+      },
+      {
+       "label": "바우처 정보",
+       "depth": 0,
+       "box": [
+        806,
+        675,
+        700,
+        25
+       ],
+       "span": 7,
+       "id": "col:교육급여 지급결과 상세/바우처 정보"
+      },
+      {
+       "label": "바우처의뢰일자",
+       "depth": 0,
+       "box": [
+        1506,
+        675,
+        100,
+        50
+       ],
+       "id": "col:교육급여 지급결과 상세/바우처의뢰일자"
+      },
+      {
+       "label": "배정자명",
+       "depth": 1,
+       "box": [
+        806,
+        700,
+        100,
+        25
+       ],
+       "id": "col:교육급여 지급결과 상세/바우처 정보>배정자명"
+      },
+      {
+       "label": "지급방식",
+       "depth": 1,
+       "box": [
+        906,
+        700,
+        100,
+        25
+       ],
+       "id": "col:교육급여 지급결과 상세/바우처 정보>지급방식"
+      },
+      {
+       "label": "지급카드사",
+       "depth": 1,
+       "box": [
+        1006,
+        700,
+        100,
+        25
+       ],
+       "id": "col:교육급여 지급결과 상세/바우처 정보>지급카드사"
+      },
+      {
+       "label": "발급카드사",
+       "depth": 1,
+       "box": [
+        1106,
+        700,
+        100,
+        25
+       ],
+       "id": "col:교육급여 지급결과 상세/바우처 정보>발급카드사"
+      },
+      {
+       "label": "지급거절사유",
+       "depth": 1,
+       "box": [
+        1206,
+        700,
+        100,
+        25
+       ],
+       "id": "col:교육급여 지급결과 상세/바우처 정보>지급거절사유"
+      },
+      {
+       "label": "바우처지급결과",
+       "depth": 1,
+       "box": [
+        1306,
+        700,
+        100,
+        25
+       ],
+       "id": "col:교육급여 지급결과 상세/바우처 정보>바우처지급결과"
+      },
+      {
+       "label": "누적실사용금액",
+       "depth": 1,
+       "box": [
+        1406,
+        700,
+        100,
+        25
+       ],
+       "id": "col:교육급여 지급결과 상세/바우처 정보>누적실사용금액"
+      }
+     ],
+     "id": "grid:교육급여 지급결과 상세"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 지급관리 > 교육급여 지급결과조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

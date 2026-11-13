@@ -1,0 +1,1754 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›측정결과입력›학급별필수평가입력",
+ "name": "학급별필수평가입력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:10:19+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:심폐지구력",
+   "tab": "심폐지구력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다.",
+     "id": "note:※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "심폐지구력",
+      "유연성",
+      "근력•근지구력",
+      "순발력",
+      "비만"
+     ],
+     "active": "심폐지구력",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      226,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "임시저장",
+     "variant": "primary",
+     "id": "button:임시저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "심폐지구력 측정값 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "심폐지구력 측정값 목록",
+     "selectable": false,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        267,
+        50,
+        124
+       ],
+       "id": "col:심폐지구력 측정값 목록/순번"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        267,
+        50,
+        124
+       ],
+       "id": "col:심폐지구력 측정값 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        126,
+        267,
+        129,
+        124
+       ],
+       "id": "col:심폐지구력 측정값 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        255,
+        267,
+        129,
+        124
+       ],
+       "id": "col:심폐지구력 측정값 목록/성별"
+      },
+      {
+       "label": "심폐지구력",
+       "depth": 0,
+       "box": [
+        383,
+        267,
+        1215,
+        31
+       ],
+       "span": 9,
+       "id": "col:심폐지구력 측정값 목록/심폐지구력"
+      },
+      {
+       "label": "왕복오래달리기 (회)",
+       "depth": 1,
+       "box": [
+        383,
+        298,
+        157,
+        93
+       ],
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>왕복오래달리기 (회)"
+      },
+      {
+       "label": "오래달리기걷기 (분.초)",
+       "depth": 1,
+       "box": [
+        540,
+        298,
+        157,
+        93
+       ],
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>오래달리기걷기 (분.초)"
+      },
+      {
+       "label": "스텝검사",
+       "depth": 1,
+       "box": [
+        697,
+        298,
+        643,
+        31
+       ],
+       "span": 5,
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>스텝검사"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1341,
+        298,
+        129,
+        93
+       ],
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1469,
+        298,
+        129,
+        93
+       ],
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>등급"
+      },
+      {
+       "label": "촉진",
+       "depth": 2,
+       "box": [
+        697,
+        329,
+        129,
+        62
+       ],
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>스텝검사>촉진"
+      },
+      {
+       "label": "심박수(1) (회/분)",
+       "depth": 2,
+       "box": [
+        826,
+        329,
+        129,
+        62
+       ],
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>스텝검사>심박수(1) (회/분)"
+      },
+      {
+       "label": "심박수(2) (회/분)",
+       "depth": 2,
+       "box": [
+        955,
+        329,
+        129,
+        62
+       ],
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>스텝검사>심박수(2) (회/분)"
+      },
+      {
+       "label": "심박수(3) (회/분)",
+       "depth": 2,
+       "box": [
+        1083,
+        329,
+        129,
+        62
+       ],
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>스텝검사>심박수(3) (회/분)"
+      },
+      {
+       "label": "PEI",
+       "depth": 2,
+       "box": [
+        1212,
+        329,
+        129,
+        62
+       ],
+       "id": "col:심폐지구력 측정값 목록/심폐지구력>스텝검사>PEI"
+      }
+     ],
+     "id": "grid:심폐지구력 측정값 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:유연성",
+   "tab": "유연성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다.",
+     "id": "note:※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "심폐지구력",
+      "유연성",
+      "근력•근지구력",
+      "순발력",
+      "비만"
+     ],
+     "active": "유연성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      226,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "임시저장",
+     "variant": "primary",
+     "id": "button:임시저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "유연성 측정값 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "유연성 측정값 목록",
+     "selectable": false,
+     "declaredColumns": 25,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        267,
+        50,
+        124
+       ],
+       "id": "col:유연성 측정값 목록/순번"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        267,
+        68,
+        124
+       ],
+       "id": "col:유연성 측정값 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        144,
+        267,
+        136,
+        124
+       ],
+       "id": "col:유연성 측정값 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        280,
+        267,
+        136,
+        124
+       ],
+       "id": "col:유연성 측정값 목록/성별"
+      },
+      {
+       "label": "유연성",
+       "depth": 0,
+       "box": [
+        416,
+        267,
+        1182,
+        31
+       ],
+       "span": 14,
+       "id": "col:유연성 측정값 목록/유연성"
+      },
+      {
+       "label": "앉아윗몸 앞으로 굽히기(cm)",
+       "depth": 1,
+       "box": [
+        416,
+        298,
+        408,
+        62
+       ],
+       "span": 3,
+       "id": "col:유연성 측정값 목록/유연성>앉아윗몸 앞으로 굽히기(cm)"
+      },
+      {
+       "label": "종합유연성(0:실패, 1:성공)",
+       "depth": 1,
+       "box": [
+        823,
+        298,
+        544,
+        31
+       ],
+       "span": 8,
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)"
+      },
+      {
+       "label": "평가값",
+       "depth": 1,
+       "box": [
+        1367,
+        298,
+        68,
+        93
+       ],
+       "id": "col:유연성 측정값 목록/유연성>평가값"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1435,
+        298,
+        82,
+        93
+       ],
+       "id": "col:유연성 측정값 목록/유연성>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1516,
+        298,
+        82,
+        93
+       ],
+       "id": "col:유연성 측정값 목록/유연성>등급"
+      },
+      {
+       "label": "어깨",
+       "depth": 2,
+       "box": [
+        823,
+        329,
+        136,
+        31
+       ],
+       "span": 2,
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>어깨"
+      },
+      {
+       "label": "몸통",
+       "depth": 2,
+       "box": [
+        959,
+        329,
+        136,
+        31
+       ],
+       "span": 2,
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>몸통"
+      },
+      {
+       "label": "옆구리",
+       "depth": 2,
+       "box": [
+        1095,
+        329,
+        136,
+        31
+       ],
+       "span": 2,
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>옆구리"
+      },
+      {
+       "label": "하체",
+       "depth": 2,
+       "box": [
+        1231,
+        329,
+        136,
+        31
+       ],
+       "span": 2,
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>하체"
+      },
+      {
+       "label": "1차",
+       "depth": 3,
+       "box": [
+        416,
+        360,
+        136,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>앉아윗몸 앞으로 굽히기(cm)>1차"
+      },
+      {
+       "label": "2차",
+       "depth": 3,
+       "box": [
+        552,
+        360,
+        136,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>앉아윗몸 앞으로 굽히기(cm)>2차"
+      },
+      {
+       "label": "평가값",
+       "depth": 3,
+       "box": [
+        688,
+        360,
+        136,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>앉아윗몸 앞으로 굽히기(cm)>평가값"
+      },
+      {
+       "label": "좌",
+       "depth": 3,
+       "box": [
+        823,
+        360,
+        68,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>어깨>좌"
+      },
+      {
+       "label": "우",
+       "depth": 3,
+       "box": [
+        891,
+        360,
+        68,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>어깨>우"
+      },
+      {
+       "label": "좌",
+       "depth": 3,
+       "box": [
+        959,
+        360,
+        68,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>몸통>좌"
+      },
+      {
+       "label": "우",
+       "depth": 3,
+       "box": [
+        1027,
+        360,
+        68,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>몸통>우"
+      },
+      {
+       "label": "좌",
+       "depth": 3,
+       "box": [
+        1095,
+        360,
+        68,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>옆구리>좌"
+      },
+      {
+       "label": "우",
+       "depth": 3,
+       "box": [
+        1163,
+        360,
+        68,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>옆구리>우"
+      },
+      {
+       "label": "좌",
+       "depth": 3,
+       "box": [
+        1231,
+        360,
+        68,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>하체>좌"
+      },
+      {
+       "label": "우",
+       "depth": 3,
+       "box": [
+        1299,
+        360,
+        68,
+        31
+       ],
+       "id": "col:유연성 측정값 목록/유연성>종합유연성(0:실패, 1:성공)>하체>우"
+      }
+     ],
+     "id": "grid:유연성 측정값 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:근력•근지구력",
+   "tab": "근력•근지구력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다.",
+     "id": "note:※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "심폐지구력",
+      "유연성",
+      "근력•근지구력",
+      "순발력",
+      "비만"
+     ],
+     "active": "근력•근지구력",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      226,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "임시저장",
+     "variant": "primary",
+     "id": "button:임시저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "근력•근지구력 측정값 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "근력•근지구력 측정값 목록",
+     "selectable": false,
+     "declaredColumns": 17,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        267,
+        50,
+        124
+       ],
+       "id": "col:근력•근지구력 측정값 목록/순번"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        267,
+        61,
+        124
+       ],
+       "id": "col:근력•근지구력 측정값 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        137,
+        267,
+        122,
+        124
+       ],
+       "id": "col:근력•근지구력 측정값 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        259,
+        267,
+        122,
+        124
+       ],
+       "id": "col:근력•근지구력 측정값 목록/성별"
+      },
+      {
+       "label": "근력•근지구력",
+       "depth": 0,
+       "box": [
+        380,
+        267,
+        1218,
+        31
+       ],
+       "span": 13,
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력"
+      },
+      {
+       "label": "(무릎대고)팔굽혀펴기(회)",
+       "depth": 1,
+       "box": [
+        380,
+        298,
+        183,
+        93
+       ],
+       "span": 3,
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>(무릎대고)팔굽혀펴기(회)"
+      },
+      {
+       "label": "윗몸말아올리기(회)",
+       "depth": 1,
+       "box": [
+        563,
+        298,
+        183,
+        93
+       ],
+       "span": 3,
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>윗몸말아올리기(회)"
+      },
+      {
+       "label": "악력(kg)",
+       "depth": 1,
+       "box": [
+        746,
+        298,
+        609,
+        31
+       ],
+       "span": 5,
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>악력(kg)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1354,
+        298,
+        122,
+        93
+       ],
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1476,
+        298,
+        122,
+        93
+       ],
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>등급"
+      },
+      {
+       "label": "1차",
+       "depth": 2,
+       "box": [
+        746,
+        329,
+        244,
+        31
+       ],
+       "span": 2,
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>악력(kg)>1차"
+      },
+      {
+       "label": "2차",
+       "depth": 2,
+       "box": [
+        989,
+        329,
+        244,
+        31
+       ],
+       "span": 2,
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>악력(kg)>2차"
+      },
+      {
+       "label": "악력",
+       "depth": 2,
+       "box": [
+        1233,
+        329,
+        122,
+        62
+       ],
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>악력(kg)>악력"
+      },
+      {
+       "label": "오른쪽",
+       "depth": 3,
+       "box": [
+        746,
+        360,
+        122,
+        31
+       ],
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>악력(kg)>1차>오른쪽"
+      },
+      {
+       "label": "왼쪽",
+       "depth": 3,
+       "box": [
+        867,
+        360,
+        122,
+        31
+       ],
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>악력(kg)>1차>왼쪽"
+      },
+      {
+       "label": "오른쪽",
+       "depth": 3,
+       "box": [
+        989,
+        360,
+        122,
+        31
+       ],
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>악력(kg)>2차>오른쪽"
+      },
+      {
+       "label": "왼쪽",
+       "depth": 3,
+       "box": [
+        1111,
+        360,
+        122,
+        31
+       ],
+       "id": "col:근력•근지구력 측정값 목록/근력•근지구력>악력(kg)>2차>왼쪽"
+      }
+     ],
+     "id": "grid:근력•근지구력 측정값 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:순발력",
+   "tab": "순발력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다.",
+     "id": "note:※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "심폐지구력",
+      "유연성",
+      "근력•근지구력",
+      "순발력",
+      "비만"
+     ],
+     "active": "순발력",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      226,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "임시저장",
+     "variant": "primary",
+     "id": "button:임시저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "순발력 측정값 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "순발력 측정값 목록",
+     "selectable": false,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        267,
+        50,
+        93
+       ],
+       "id": "col:순발력 측정값 목록/순번"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        267,
+        90,
+        93
+       ],
+       "id": "col:순발력 측정값 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        166,
+        267,
+        179,
+        93
+       ],
+       "id": "col:순발력 측정값 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        345,
+        267,
+        179,
+        93
+       ],
+       "id": "col:순발력 측정값 목록/성별"
+      },
+      {
+       "label": "순발력",
+       "depth": 0,
+       "box": [
+        524,
+        267,
+        1074,
+        31
+       ],
+       "span": 6,
+       "id": "col:순발력 측정값 목록/순발력"
+      },
+      {
+       "label": "50m 달리기(초)",
+       "depth": 1,
+       "box": [
+        524,
+        298,
+        179,
+        62
+       ],
+       "id": "col:순발력 측정값 목록/순발력>50m 달리기(초)"
+      },
+      {
+       "label": "제자리멀리뛰기(cm)",
+       "depth": 1,
+       "box": [
+        703,
+        298,
+        537,
+        31
+       ],
+       "span": 3,
+       "id": "col:순발력 측정값 목록/순발력>제자리멀리뛰기(cm)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1240,
+        298,
+        179,
+        62
+       ],
+       "id": "col:순발력 측정값 목록/순발력>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1419,
+        298,
+        179,
+        62
+       ],
+       "id": "col:순발력 측정값 목록/순발력>등급"
+      },
+      {
+       "label": "1차",
+       "depth": 2,
+       "box": [
+        703,
+        329,
+        179,
+        31
+       ],
+       "id": "col:순발력 측정값 목록/순발력>제자리멀리뛰기(cm)>1차"
+      },
+      {
+       "label": "2차",
+       "depth": 2,
+       "box": [
+        882,
+        329,
+        179,
+        31
+       ],
+       "id": "col:순발력 측정값 목록/순발력>제자리멀리뛰기(cm)>2차"
+      },
+      {
+       "label": "평가값",
+       "depth": 2,
+       "box": [
+        1061,
+        329,
+        179,
+        31
+       ],
+       "id": "col:순발력 측정값 목록/순발력>제자리멀리뛰기(cm)>평가값"
+      }
+     ],
+     "id": "grid:순발력 측정값 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:비만",
+   "tab": "비만",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다.",
+     "id": "note:※ PAPS자료를 보건에서 참조하기 위해선 정시측정회차로 입력 하셔야 합니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "심폐지구력",
+      "유연성",
+      "근력•근지구력",
+      "순발력",
+      "비만"
+     ],
+     "active": "비만",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1380,
+      226,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "보건자료 불러오기",
+     "variant": "primary",
+     "id": "button:보건자료 불러오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      226,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "임시저장",
+     "variant": "primary",
+     "id": "button:임시저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "비만 측정값 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "비만 측정값 목록",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        267,
+        50,
+        62
+       ],
+       "id": "col:비만 측정값 목록/순번"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        267,
+        80,
+        62
+       ],
+       "id": "col:비만 측정값 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        156,
+        267,
+        160,
+        62
+       ],
+       "id": "col:비만 측정값 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        316,
+        267,
+        160,
+        62
+       ],
+       "id": "col:비만 측정값 목록/성별"
+      },
+      {
+       "label": "비만",
+       "depth": 0,
+       "box": [
+        477,
+        267,
+        1121,
+        31
+       ],
+       "span": 7,
+       "id": "col:비만 측정값 목록/비만"
+      },
+      {
+       "label": "신장(cm)",
+       "depth": 1,
+       "box": [
+        477,
+        298,
+        320,
+        31
+       ],
+       "span": 2,
+       "id": "col:비만 측정값 목록/비만>신장(cm)"
+      },
+      {
+       "label": "체중(kg)",
+       "depth": 1,
+       "box": [
+        797,
+        298,
+        320,
+        31
+       ],
+       "span": 2,
+       "id": "col:비만 측정값 목록/비만>체중(kg)"
+      },
+      {
+       "label": "BMI(kg/㎡)",
+       "depth": 1,
+       "box": [
+        1117,
+        298,
+        160,
+        31
+       ],
+       "id": "col:비만 측정값 목록/비만>BMI(kg/㎡)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1278,
+        298,
+        160,
+        31
+       ],
+       "id": "col:비만 측정값 목록/비만>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1438,
+        298,
+        160,
+        31
+       ],
+       "id": "col:비만 측정값 목록/비만>등급"
+      }
+     ],
+     "id": "grid:비만 측정값 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 측정결과입력 > 학급별필수평가입력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

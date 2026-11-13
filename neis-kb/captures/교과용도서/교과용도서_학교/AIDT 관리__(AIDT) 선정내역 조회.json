@@ -1,0 +1,285 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교과용도서›교과용도서#학교›AIDT 관리›(AIDT) 선정내역 조회",
+ "name": "(AIDT) 선정내역 조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:38:23+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:신청학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "신청학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:신청학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      183,
+      1590,
+      590
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 15,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        184,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "대상학년",
+       "depth": 0,
+       "box": [
+        76,
+        184,
+        97,
+        36
+       ],
+       "id": "col:그리드/대상학년"
+      },
+      {
+       "label": "신청학년",
+       "depth": 0,
+       "box": [
+        173,
+        184,
+        70,
+        36
+       ],
+       "id": "col:그리드/신청학년"
+      },
+      {
+       "label": "신청학기",
+       "depth": 0,
+       "box": [
+        243,
+        184,
+        70,
+        36
+       ],
+       "id": "col:그리드/신청학기"
+      },
+      {
+       "label": "특수구분",
+       "depth": 0,
+       "box": [
+        313,
+        184,
+        80,
+        36
+       ],
+       "id": "col:그리드/특수구분"
+      },
+      {
+       "label": "도서구분",
+       "depth": 0,
+       "box": [
+        393,
+        184,
+        100,
+        36
+       ],
+       "id": "col:그리드/도서구분"
+      },
+      {
+       "label": "교육과정차수",
+       "depth": 0,
+       "box": [
+        493,
+        184,
+        146,
+        36
+       ],
+       "id": "col:그리드/교육과정차수"
+      },
+      {
+       "label": "도서명",
+       "depth": 0,
+       "box": [
+        639,
+        184,
+        219,
+        36
+       ],
+       "id": "col:그리드/도서명"
+      },
+      {
+       "label": "가격",
+       "depth": 0,
+       "box": [
+        858,
+        184,
+        100,
+        36
+       ],
+       "id": "col:그리드/가격"
+      },
+      {
+       "label": "저자",
+       "depth": 0,
+       "box": [
+        958,
+        184,
+        122,
+        36
+       ],
+       "id": "col:그리드/저자"
+      },
+      {
+       "label": "발행사",
+       "depth": 0,
+       "box": [
+        1079,
+        184,
+        122,
+        36
+       ],
+       "id": "col:그리드/발행사"
+      },
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        1201,
+        184,
+        80,
+        36
+       ],
+       "id": "col:그리드/과정"
+      },
+      {
+       "label": "계열",
+       "depth": 0,
+       "box": [
+        1281,
+        184,
+        122,
+        36
+       ],
+       "id": "col:그리드/계열"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        1402,
+        184,
+        122,
+        36
+       ],
+       "id": "col:그리드/학과"
+      },
+      {
+       "label": "확정여부",
+       "depth": 0,
+       "box": [
+        1524,
+        184,
+        90,
+        36
+       ],
+       "id": "col:그리드/확정여부"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교과용도서 > AIDT 관리 > (AIDT) 선정내역 조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

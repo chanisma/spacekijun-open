@@ -1,0 +1,353 @@
+{
+ "schema": "neis-capture/1",
+ "key": "대입전형›대입전형#고등학교›제공현황조회›대입전형자료요청제외자관리",
+ "name": "대입전형자료요청제외자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:45:09+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지원자구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:지원자구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업(예정)학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:졸업(예정)학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1115,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료생성관리기간(생성/검증/암호화/업무마감) : (재학생)2026.09.01. 08시(부터) ~ 2026.09.04. 14시(까지), (졸업생)2026.08.24. 08시(부터) ~ 2026.09.04. 14시(까지)",
+     "id": "note:※ 대입전형자료생성관리기간(생성/검증/암호화/업무마감) : (재학생)2026.09.01. 08시(부터) ~ 2026.09.04. 14시(까지), (졸업생)2026.08.24. 08시(부터) ~ 2026.09.04. 14시(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료온라인제공기간 : 2026.09.12.(부터) ~ 2026.12.17.(까지)",
+     "id": "note:※ 대입전형자료온라인제공기간 : 2026.09.12.(부터) ~ 2026.12.17.(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 요청제외자 등록 및 삭제는 대입전형자료 생성 관리기간 이후 대입전형자료 온라인 제공기간에도 가능합니다.",
+     "id": "note:※ 요청제외자 등록 및 삭제는 대입전형자료 생성 관리기간 이후 대입전형자료 온라인 제공기간에도 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      189,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 요청제외자로 등록된 학생은 제공대상에서 제외되며, 학교생활기록부(대입전형용) 민원서류를 대학에 직접 제출하도록 안내하여야 합니다.",
+     "id": "note:※ 요청제외자로 등록된 학생은 제공대상에서 제외되며, 학교생활기록부(대입전형용) 민원서류를 대학에 직접 제출하도록 안내하여야 합니다."
+    },
+    {
+     "aria": "대상학생조회",
+     "box": [
+      1407,
+      244,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "대상학생조회",
+     "variant": "primary",
+     "id": "button:대상학생조회"
+    },
+    {
+     "aria": "학생등록",
+     "box": [
+      1503,
+      244,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학생등록",
+     "variant": "primary",
+     "id": "button:학생등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      244,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "대입전형자료요청제외자",
+     "box": [
+      25,
+      254,
+      177,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대입전형자료요청제외자",
+     "id": "heading:대입전형자료요청제외자"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      284,
+      1590,
+      529
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "지원자구분",
+       "depth": 0,
+       "box": [
+        76,
+        285,
+        122,
+        36
+       ],
+       "id": "col:그리드/지원자구분"
+      },
+      {
+       "label": "졸업(예정)학년도",
+       "depth": 0,
+       "box": [
+        198,
+        285,
+        122,
+        36
+       ],
+       "id": "col:그리드/졸업(예정)학년도"
+      },
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        320,
+        285,
+        122,
+        36
+       ],
+       "id": "col:그리드/과정"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        442,
+        285,
+        293,
+        36
+       ],
+       "id": "col:그리드/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        735,
+        285,
+        122,
+        36
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        857,
+        285,
+        122,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        979,
+        285,
+        195,
+        36
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "졸업회차",
+       "depth": 0,
+       "box": [
+        1175,
+        285,
+        122,
+        36
+       ],
+       "id": "col:그리드/졸업회차"
+      },
+      {
+       "label": "졸업대장번호",
+       "depth": 0,
+       "box": [
+        1297,
+        285,
+        195,
+        36
+       ],
+       "id": "col:그리드/졸업대장번호"
+      },
+      {
+       "label": "졸업일자",
+       "depth": 0,
+       "box": [
+        1492,
+        285,
+        122,
+        36
+       ],
+       "id": "col:그리드/졸업일자"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 대입전형 > 제공현황조회 > 대입전형자료요청제외자관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

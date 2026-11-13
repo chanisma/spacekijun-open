@@ -1,0 +1,131 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생부보존›학생부보존#고등학교›학생부정정관리›졸업생학생부정정대장조회",
+ "name": "졸업생학생부정정대장조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:23:26+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      128,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:정정일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      318,
+      82,
+      128,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:정정일자~"
+    },
+    {
+     "aria": null,
+     "box": [
+      585,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      791,
+      82,
+      86,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "졸업생찾기",
+     "variant": "link",
+     "id": "button:졸업생찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다.",
+     "id": "note:※ 학생부 보존 시스템으로 자료가 이관된 이후에 작성된 정정대장이 조회됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      168,
+      1590,
+      645
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부보존 > 학생부정정관리 > 졸업생학생부정정대장조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

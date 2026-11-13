@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.course-analyze-wrapper {
+  --background: 210 40% 98%;
+  /* Light bluish gray background */
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 243 75% 59%;
+  /* Indigo 500 equivalent */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 243 75% 59%;
+  --radius: 0.75rem;
+
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', sans-serif;
+  height: 100%; /* Ensure it fills the container */
+}
+
+.course-analyze-wrapper.dark {
+  --background: 222.2 84% 4.9%;
+  /* ... rest of dark mode (keep as is or update later) ... */
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 243 75% 59%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+.course-analyze-wrapper * {
+  @apply border-border;
+}
+
+.course-analyze-wrapper .glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.course-analyze-wrapper .glass-dark {
+  @apply bg-slate-900/70 backdrop-blur-md border border-white/10 shadow-sm;
+}
+
+.course-analyze-wrapper .glass-panel {
+  @apply bg-white/80 backdrop-blur-lg border border-white/40 shadow-xl;
+}
+
+/* Custom scrollbar styles */
+.course-analyze-wrapper .scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.course-analyze-wrapper .scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.course-analyze-wrapper .scrollbar-thin::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+.course-analyze-wrapper .scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+
+.course-analyze-wrapper .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* ── 휴대폰(md 미만) ─────────────────────────────────────────────
+   ① 높이를 고정하지 않는다 — 사이트 본문이 스크롤하고 헤더·탭은 내용과 함께 지나간다.
+   ② 표는 좁히지 않고 가로로 스크롤한다. w-full 표를 390px 에 욱여넣으면 과목명·학생명이
+      한 글자씩 세로로 부서졌다(2026-09-29 캡처). 표를 감싼 칸이 overflow-x-auto 여야 한다. */
+@media (max-width: 767px) {
+  .course-analyze-wrapper {
+    height: auto;
+  }
+  .course-analyze-wrapper table:not(.ca-table-fit) {
+    min-width: 640px;
+  }
+  /* 첫 열을 붙여 두는 표 — 칸을 늘리지 않고 내용 폭만큼만 쓴다 */
+  .course-analyze-wrapper table.ca-table-fit {
+    width: max-content;
+    min-width: 100%;
+  }
+  .course-analyze-wrapper th,
+  .course-analyze-wrapper td {
+    word-break: keep-all;
+  }
+  .course-analyze-wrapper th {
+    white-space: nowrap;
+  }
+}

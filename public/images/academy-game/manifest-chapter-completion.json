@@ -1,0 +1,13 @@
+{
+  "asset": "chapter-first-star-complete.png",
+  "generated_at": "2026-09-13",
+  "mode": "built-in imagegen",
+  "use_case": "illustration-story",
+  "references": [
+    "chapter-observatory-arrival.png",
+    "professor.png"
+  ],
+  "prompt": "Use case: illustration-story. Create a new landscape romance-fantasy visual novel chapter-completion CG. Reference 1 shows established Ria (brown long wavy hair, violet eyes, purple ribbon and ivory/plum academy outfit), Luon (silver hair, blue eyes, navy gold uniform) and observatory art style. Reference 2 is professor Cassian (black wavy hair, dark plum long scholar coat with gold celestial embroidery). Preserve all three character identities and costumes. In the same magnificent golden royal observatory at night, Ria has just completed her first inquiry blueprint and found her first metaphorical star. She stands at a research desk at center with a parchment constellation blueprint and a small luminous star above it, beaming with proud delighted joy, hands near the map. Taller Luon beside her smiles warmly at her and celebrates, and taller adult professor Cassian on the other side smiles with quiet pride and gestures toward her new star. Exactly three people, Ria visibly shorter and smaller than both men. Upper half of composition has their expressive faces together in central 60 percent, waist-up medium-wide view so all three remain visible on smaller displays. Lower quarter leaves a quiet dark desk and soft golden light suitable for later UI overlay, no faces there. Painterly detailed Korean romance fantasy illustration, warm gold and violet starlight, tender earned achievement, same polished art style as reference1. No text, no lettering, no watermark, no UI. Single landscape illustration.",
+  "postprocessing": "None; generated original copied to project.",
+  "wardrobe": "Fixed story illustration; preserves default faces and costumes."
+}

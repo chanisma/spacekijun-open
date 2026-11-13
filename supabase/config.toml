@@ -1,0 +1,91 @@
+project_id = "your-project-ref"
+
+# ⚠️ 여기 선언이 없는 함수를 CLI 로 배포하면 verify_jwt 가 **true 로 되돌아간다**
+# (기본값이 true 다). 이 프로젝트는 평소 Supabase MCP 로 배포해 설정이 보존되지만,
+# `npx supabase functions deploy` 를 쓰는 순간 조용히 뒤집힌다.
+# 라이브에서 verify_jwt=false 인 함수는 이 둘 말고도 여럿이다(gemini-proxy ·
+# solar-proxy · inquiry-comprehensive · academy-* · smartthings-proxy ·
+# generate-embedding · desktop-session …) — CLI 로 배포할 일이 생기면 그 함수의
+# 선언을 먼저 여기 추가할 것.
+[functions.academy-generation-worker]
+verify_jwt = false
+
+# 별빛 아카데미 단독 사본(orca)의 테스트 로그인 — 로그인 전에 부르므로 anon 키로 통과(anon 도 유효한 JWT), 함수 안에서 비밀번호 확인.
+[functions.academy-test-login]
+verify_jwt = true
+
+# 창가의 하늘 임베딩 — 게이트웨이가 JWT 를 검사하고 함수 안에서 auth.getUser 로 한 번 더 확인한다.
+[functions.academy-sky-embed]
+verify_jwt = true
+
+# 자체 인증을 한다(함수 안에서 검사). 게이트웨이 JWT 검증을 켜면 익명 경로가 막힌다.
+[functions.openai-proxy]
+verify_jwt = false
+
+# 자체 인증(Authorization 헤더 → auth.getUser). 라이브 verify_jwt=false 를 그대로 옮겼다(2026-09-27 CLI 배포 전 확인).
+[functions.solar-proxy]
+verify_jwt = false
+
+# Web Push 발송(2026-10-07) — 알림 트리거(pg_net)가 부른다. 인증 = x-push-secret(DB 비밀 대조), 게이트웨이 JWT 아님.
+[functions.push-send]
+verify_jwt = false
+
+# 요즘 세상 기사 분야 태그(2026-10-11) — pg_cron(world-news-tag)이 pg_net 으로 부른다. 인증 = x-world-secret(DB 비밀 대조).
+[functions.world-news-fields]
+verify_jwt = false
+
+# 투자 게임 시세 받기(2026-10-26) — pg_cron(invest-quotes)이 pg_net 으로 부른다. 인증 = x-invest-secret(DB 비밀 대조).
+[functions.invest-quotes]
+verify_jwt = false
+
+# 교실 기기 QR 세팅(2026-10-13) — 기기 동작은 기기 키, 교사 동작은 함수 안에서 auth/v1/user 로 확인한다.
+# 기기는 로그인 전이라 JWT 가 없다 → 게이트웨이 JWT 검증을 켜면 QR 을 띄우지 못한다.
+[functions.classroom-link]
+verify_jwt = false
+
+# 자동화 업무 실행기(2026-10-23) — 학교 서버 PC 는 로그인 토큰이 없고 실행기 키(x-runner-key)로 증명한다.
+[functions.automation-runner]
+verify_jwt = false
+
+# 공문 판단함 입구 — 서버 PC 실행기 키로 자체 인증(2026-10-30)
+[functions.official-doc-ingest]
+verify_jwt = false
+
+# 자체 인증(getUser) + 명단 연결 확인(2026-10-15). 라이브 verify_jwt=false 를 그대로 옮겼다.
+[functions.smartthings-proxy]
+verify_jwt = false
+
+# 데스크톱 앱 세션 발급 — 자체 인증(auth/v1/user). 라이브 verify_jwt=false 를 그대로 옮겼다(2026-10-18 CLI 배포 전 확인).
+[functions.desktop-session]
+verify_jwt = false
+
+# MCP 서버(2026-10-18) — 토큰이 없을 때 401 + WWW-Authenticate(보호 자원 메타데이터)를 **함수가** 내야
+# 에이전트가 OAuth 인가 서버를 찾는다. 게이트웨이가 먼저 401 을 내면 그 헤더가 없어 연결이 시작되지 않는다.
+# 토큰 검증은 함수 안에서 auth/v1/user 로 한다.
+[functions.mcp]
+verify_jwt = false
+
+# MCP 한글 양식 올리기(2026-10-20) — 에이전트가 curl 로 1회용 주소(티켓)에 파일을 올린다. 토큰이 없으므로
+# 게이트웨이 검증을 끄고, 함수가 티켓(DB 가 발급·15분·한 번)으로 사람과 경로를 정한다.
+[functions.mcp-upload]
+verify_jwt = false
+
+# MCP 문서 쓰기(2026-10-20) — MCP 서버가 에이전트 토큰을 실어 부른다. 게이트웨이 검증을 켜 두면 OAuth 토큰이
+# 통과하는지 확인되지 않았으므로 끄고, 함수가 auth/v1/user + client_id 로 직접 확인한다(mcp 와 같은 방식).
+[functions.mcp-docgen]
+verify_jwt = false
+
+# MCP 전자서명 문서 받기(2026-10-25) — mcp-docgen 과 같은 이유로 끄고 함수가 직접 확인한다.
+[functions.mcp-sign]
+verify_jwt = false
+
+# MCP 서류함·코드 공유 파일 올리기·받기·지우기(2026-11-04) — 같은 이유로 끄고 함수가 직접 확인한다(에이전트 토큰만).
+[functions.mcp-files]
+verify_jwt = false
+
+# 이세계 3D 질문 만들기(2026-10-19) — 자체 인증(getUser) + 역할·동의 확인. 스페이스기전 학생의 로컬 서버가 학생 세션으로 부른다.
+[functions.isekai3d-question]
+verify_jwt = false
+
+[functions.isekai3d-episode]
+verify_jwt = false

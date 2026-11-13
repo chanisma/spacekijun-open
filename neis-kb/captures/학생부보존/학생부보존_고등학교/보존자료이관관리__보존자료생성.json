@@ -1,0 +1,568 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생부보존›학생부보존#고등학교›보존자료이관관리›보존자료생성",
+ "name": "보존자료생성",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:21:43+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:보존자료생성",
+   "tab": "보존자료생성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "보존자료생성",
+      "추가반영대상생성"
+     ],
+     "active": "보존자료생성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      188,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학생수 선택 시 해당 졸업생 학생부조회 화면으로 이동합니다.",
+     "id": "note:※ 학생수 선택 시 해당 졸업생 학생부조회 화면으로 이동합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      209,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 정정대장건수 선택 시 해당 정정대장조회 화면으로 이동합니다.",
+     "id": "note:※ 정정대장건수 선택 시 해당 정정대장조회 화면으로 이동합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      230,
+      1590,
+      20
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 시범운영시 이관된 정정대장은 자료 이관 정책이 상이하여 조회 결과에 표시된 정정대장건수와 해당 졸업학년도의 정정대장건수가 상이할 수 있습니다. 건수를 클릭하여 해당 졸업학년도에 생성된 보존자료를 확인하시길 바랍니다.",
+     "id": "note:※ 시범운영시 이관된 정정대장은 자료 이관 정책이 상이하여 조회 결과에 표시된 정정대장건수와 해당 졸업학년도의 정정대장건수가 상이할 수 있습니다. 건수를 클릭하여 해당 졸업학년도에 생성된 보존자료를 확인하시길 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1419,
+      294,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "미등록자료조회",
+     "variant": "link",
+     "id": "button:미등록자료조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      294,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      294,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "보존자료",
+     "box": [
+      25,
+      305,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "보존자료",
+     "id": "heading:보존자료"
+    },
+    {
+     "aria": "보존자료생성목록",
+     "box": [
+      25,
+      335,
+      1590,
+      478
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "보존자료생성목록",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "졸업학년도",
+       "depth": 0,
+       "box": [
+        76,
+        336,
+        149,
+        36
+       ],
+       "id": "col:보존자료생성목록/졸업학년도"
+      },
+      {
+       "label": "목록명",
+       "depth": 0,
+       "box": [
+        225,
+        336,
+        597,
+        36
+       ],
+       "id": "col:보존자료생성목록/목록명"
+      },
+      {
+       "label": "학생부건수",
+       "depth": 0,
+       "box": [
+        823,
+        336,
+        149,
+        36
+       ],
+       "id": "col:보존자료생성목록/학생부건수"
+      },
+      {
+       "label": "정정대장건수",
+       "depth": 0,
+       "box": [
+        972,
+        336,
+        149,
+        36
+       ],
+       "id": "col:보존자료생성목록/정정대장건수"
+      },
+      {
+       "label": "생성일자",
+       "depth": 0,
+       "box": [
+        1121,
+        336,
+        194,
+        36
+       ],
+       "id": "col:보존자료생성목록/생성일자"
+      },
+      {
+       "label": "이관상태",
+       "depth": 0,
+       "box": [
+        1315,
+        336,
+        149,
+        36
+       ],
+       "id": "col:보존자료생성목록/이관상태"
+      },
+      {
+       "label": "이관자료삭제상태",
+       "depth": 0,
+       "box": [
+        1465,
+        336,
+        149,
+        36
+       ],
+       "id": "col:보존자료생성목록/이관자료삭제상태"
+      }
+     ],
+     "id": "grid:보존자료생성목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:추가반영대상생성",
+   "tab": "추가반영대상생성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "보존자료생성",
+      "추가반영대상생성"
+     ],
+     "active": "추가반영대상생성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      250,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      250,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "추가반영자료",
+     "box": [
+      25,
+      260,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "추가반영자료",
+     "id": "heading:추가반영자료"
+    },
+    {
+     "aria": "추가반영자료목록",
+     "box": [
+      25,
+      290,
+      1590,
+      232
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "추가반영자료목록",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "졸업학년도",
+       "depth": 0,
+       "box": [
+        76,
+        291,
+        200,
+        36
+       ],
+       "id": "col:추가반영자료목록/졸업학년도"
+      },
+      {
+       "label": "목록명",
+       "depth": 0,
+       "box": [
+        276,
+        291,
+        538,
+        36
+       ],
+       "id": "col:추가반영자료목록/목록명"
+      },
+      {
+       "label": "학생수",
+       "depth": 0,
+       "box": [
+        814,
+        291,
+        200,
+        36
+       ],
+       "id": "col:추가반영자료목록/학생수"
+      },
+      {
+       "label": "생성일자",
+       "depth": 0,
+       "box": [
+        1014,
+        291,
+        200,
+        36
+       ],
+       "id": "col:추가반영자료목록/생성일자"
+      },
+      {
+       "label": "이관상태",
+       "depth": 0,
+       "box": [
+        1214,
+        291,
+        200,
+        36
+       ],
+       "id": "col:추가반영자료목록/이관상태"
+      },
+      {
+       "label": "이관자료삭제상태",
+       "depth": 0,
+       "box": [
+        1414,
+        291,
+        200,
+        36
+       ],
+       "id": "col:추가반영자료목록/이관자료삭제상태"
+      }
+     ],
+     "id": "grid:추가반영자료목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      542,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      542,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": "대상학생",
+     "box": [
+      25,
+      552,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대상학생",
+     "id": "heading:대상학생"
+    },
+    {
+     "aria": "대상학생목록",
+     "box": [
+      25,
+      582,
+      1590,
+      232
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "대상학생목록",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "졸업학년도",
+       "depth": 0,
+       "box": [
+        76,
+        583,
+        200,
+        36
+       ],
+       "id": "col:대상학생목록/졸업학년도"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        276,
+        583,
+        200,
+        36
+       ],
+       "id": "col:대상학생목록/번호"
+      },
+      {
+       "label": "졸업대장번호",
+       "depth": 0,
+       "box": [
+        476,
+        583,
+        200,
+        36
+       ],
+       "id": "col:대상학생목록/졸업대장번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        676,
+        583,
+        200,
+        36
+       ],
+       "id": "col:대상학생목록/성명"
+      },
+      {
+       "label": "정정항목",
+       "depth": 0,
+       "box": [
+        876,
+        583,
+        538,
+        36
+       ],
+       "id": "col:대상학생목록/정정항목"
+      },
+      {
+       "label": "등록일자",
+       "depth": 0,
+       "box": [
+        1414,
+        583,
+        200,
+        36
+       ],
+       "id": "col:대상학생목록/등록일자"
+      }
+     ],
+     "id": "grid:대상학생목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부보존 > 보존자료이관관리 > 보존자료생성",
+ "viewport": [
+  1920,
+  945
+ ]
+}

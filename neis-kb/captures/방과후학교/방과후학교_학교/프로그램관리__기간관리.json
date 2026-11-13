@@ -1,0 +1,242 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›프로그램관리›기간관리",
+ "name": "기간관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:59:21+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "※ 프로그램이 등록된 기간은 시작일자를 수정 할 수 없습니다.",
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 프로그램이 등록된 기간은 시작일자를 수정 할 수 없습니다.",
+     "id": "note:※ 프로그램이 등록된 기간은 시작일자를 수정 할 수 없습니다."
+    },
+    {
+     "aria": "※ 프로그램이 등록된 기간은 종료일자를 줄일 수 없습니다.",
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 프로그램이 등록된 기간은 종료일자를 줄일 수 없습니다.",
+     "id": "note:※ 프로그램이 등록된 기간은 종료일자를 줄일 수 없습니다."
+    },
+    {
+     "aria": "자료내려받기",
+     "box": [
+      1252,
+      189,
+      115,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": "프로그램복사",
+     "box": [
+      1383,
+      189,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "프로그램복사",
+     "variant": "primary",
+     "id": "button:프로그램복사"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      1479,
+      189,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      189,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      189,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "기간관리",
+     "box": [
+      25,
+      229,
+      1590,
+      584
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기간관리",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "기간명",
+       "depth": 0,
+       "box": [
+        76,
+        230,
+        167,
+        36
+       ],
+       "id": "col:기간관리/기간명"
+      },
+      {
+       "label": "전체기간",
+       "depth": 0,
+       "box": [
+        243,
+        230,
+        368,
+        36
+       ],
+       "span": 3,
+       "id": "col:기간관리/전체기간"
+      },
+      {
+       "label": "수강신청기간",
+       "depth": 0,
+       "box": [
+        611,
+        230,
+        368,
+        36
+       ],
+       "span": 3,
+       "id": "col:기간관리/수강신청기간"
+      },
+      {
+       "label": "프로그램기간",
+       "depth": 0,
+       "box": [
+        979,
+        230,
+        368,
+        36
+       ],
+       "span": 3,
+       "id": "col:기간관리/프로그램기간"
+      },
+      {
+       "label": "프로그램 수",
+       "depth": 0,
+       "box": [
+        1347,
+        230,
+        167,
+        36
+       ],
+       "id": "col:기간관리/프로그램 수"
+      },
+      {
+       "label": "정렬순서",
+       "depth": 0,
+       "box": [
+        1514,
+        230,
+        100,
+        36
+       ],
+       "id": "col:기간관리/정렬순서"
+      }
+     ],
+     "id": "grid:기간관리"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 프로그램관리 > 기간관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,108 @@
+{
+ "schema": "neis-capture/1",
+ "key": "민원›민원업무›발급문서 진위확인›발급번호 확인",
+ "name": "발급번호 확인",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:34:48+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 문서진위확인서비스는 발급된 문서를 수령한 기관/개인이 문서의 진위여부를 확인할 수 있는 기능을 제공합니다.",
+     "id": "note:※ 문서진위확인서비스는 발급된 문서를 수령한 기관/개인이 문서의 진위여부를 확인할 수 있는 기능을 제공합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      90,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 발급문서 소지자만 원본문서를 조회할 수 있으며, 발급문서를 접수일 이후 90일까지 조회가 가능합니다.",
+     "id": "note:※ 발급문서 소지자만 원본문서를 조회할 수 있으며, 발급문서를 접수일 이후 90일까지 조회가 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      143,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인",
+     "variant": "primary",
+     "id": "button:확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1563,
+      143,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "primary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      153,
+      101,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "발급번호 확인",
+     "id": "heading:발급번호 확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      189,
+      157,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "발급번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:발급번호"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {민원}민원업무 > 발급문서 진위확인 > 발급번호 확인",
+ "viewport": [
+  1920,
+  945
+ ]
+}

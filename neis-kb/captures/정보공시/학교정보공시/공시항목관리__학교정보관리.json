@@ -1,0 +1,289 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시항목관리›학교정보관리",
+ "name": "학교정보관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:50:33+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 가져오기한 이후에 반드시 저장을 하세요.",
+     "id": "note:※ 가져오기한 이후에 반드시 저장을 하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      90,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 본교정보 - 분교의 경우, 본교가 통합하여 공시하는 경우에는 해당 본교정보를 입력하세요.",
+     "id": "note:※ 본교정보 - 분교의 경우, 본교가 통합하여 공시하는 경우에는 해당 본교정보를 입력하세요."
+    },
+    {
+     "aria": null,
+     "box": [
+      1495,
+      127,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "가져오기",
+     "variant": "link",
+     "id": "button:가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      127,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      985,
+      293,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "설립유형",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:설립유형"
+    },
+    {
+     "aria": null,
+     "box": [
+      985,
+      373,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "고등학교종류구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고등학교종류구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      413,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "본교/분교",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:본교/분교"
+    },
+    {
+     "aria": null,
+     "box": [
+      988,
+      416,
+      50,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "초",
+     "checked": false,
+     "id": "check:초"
+    },
+    {
+     "aria": null,
+     "box": [
+      1043,
+      416,
+      50,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "중",
+     "checked": false,
+     "id": "check:중"
+    },
+    {
+     "aria": null,
+     "box": [
+      1098,
+      416,
+      50,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "check",
+     "label": "고",
+     "checked": false,
+     "id": "check:고"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      453,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "본교관리여부",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:본교관리여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      985,
+      453,
+      244,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "본교정보",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:본교정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      453,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      533,
+      220,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호(행정실)",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호(행정실)"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      573,
+      220,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호(교무실)",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호(교무실)"
+    },
+    {
+     "aria": null,
+     "box": [
+      210,
+      693,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "법정동 주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:법정동 주소"
+    },
+    {
+     "aria": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "box": [
+      316,
+      693,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "variant": "link",
+     "id": "button:우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다."
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시항목관리 > 기준정보관리 > 학교정보관리",
+ "alsoVia": [
+  "부서장(나이스부)",
+  "부서장(정보공시)",
+  "부서장(정보화부)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

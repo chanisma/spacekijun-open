@@ -1,0 +1,223 @@
+{
+ "schema": "neis-capture/1",
+ "key": "특수교육통계›특수교육통계›통계제출관리›통계 승인요청 및 제출",
+ "name": "통계 승인요청 및 제출",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:47:18+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:통계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      375,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      450,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 통계전체마감 후 '승인요청'이 가능합니다.",
+     "id": "note:※ 통계전체마감 후 '승인요청'이 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "제출",
+     "variant": "primary",
+     "id": "button:제출"
+    },
+    {
+     "aria": null,
+     "box": [
+      121,
+      181,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "제출담당자",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:제출담당자"
+    },
+    {
+     "aria": null,
+     "box": [
+      406,
+      181,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      484,
+      181,
+      63,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:전화번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      231,
+      1590,
+      582
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "관할조직",
+       "depth": 0,
+       "box": [
+        26,
+        232,
+        512,
+        36
+       ],
+       "id": "col:그리드/관할조직"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        538,
+        232,
+        359,
+        36
+       ],
+       "id": "col:그리드/진행상태"
+      },
+      {
+       "label": "제출여부",
+       "depth": 0,
+       "box": [
+        897,
+        232,
+        359,
+        36
+       ],
+       "id": "col:그리드/제출여부"
+      },
+      {
+       "label": "제출일",
+       "depth": 0,
+       "box": [
+        1255,
+        232,
+        359,
+        36
+       ],
+       "id": "col:그리드/제출일"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 특수교육통계 > 통계제출관리 > 통계 승인요청 및 제출",
+ "viewport": [
+  1920,
+  945
+ ]
+}

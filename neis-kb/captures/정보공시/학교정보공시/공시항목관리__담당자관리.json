@@ -1,0 +1,653 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시항목관리›담당자관리",
+ "name": "담당자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:51:58+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:작성자",
+   "tab": "작성자",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1524,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교직원 검색 기능을 통해서 총괄업무담당자 및 연락처를 입력해 주세요. ※ [이전담당자가져오기] 사용 시 작성자·확인자는 함께 설정되며, 총괄업무담당자는 [총괄업무담당자] 탭에서 별도로 [이전담당자가져오기]를 진행해야 합니다.",
+     "id": "note:※ 교직원 검색 기능을 통해서 총괄업무담당자 및 연락처를 입력해 주세요. ※ [이전담당자가져오기] 사용 시 작성자·확인자는 함께 설정되며, 총괄업무담당자는 [총괄업무담당자] 탭에서 별도로 [이전담당자가져오기]를 진행해야 합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 다음 항목은 원자료가 동일하므로 동일한 작성자로 지정하시기 바랍니다.",
+     "id": "note:※ 다음 항목은 원자료가 동일하므로 동일한 작성자로 지정하시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1273,
+      261,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교직원검색",
+     "variant": "link",
+     "id": "button:교직원검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      1357,
+      261,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이전담당자가져오기",
+     "variant": "link",
+     "id": "button:이전담당자가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1488,
+      261,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1536,
+      261,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인쇄",
+     "variant": "link",
+     "id": "button:인쇄"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      301,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "작성자",
+      "확인자",
+      "총괄업무담당자"
+     ],
+     "active": "작성자",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "담당자관리-작성자",
+     "box": [
+      25,
+      396,
+      1575,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "담당자관리-작성자",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "공시항목",
+       "depth": 0,
+       "box": [
+        76,
+        397,
+        588,
+        36
+       ],
+       "span": 2,
+       "id": "col:담당자관리-작성자/공시항목"
+      },
+      {
+       "label": "작성자",
+       "depth": 0,
+       "box": [
+        664,
+        397,
+        338,
+        36
+       ],
+       "id": "col:담당자관리-작성자/작성자"
+      },
+      {
+       "label": "연락처",
+       "depth": 0,
+       "box": [
+        1001,
+        397,
+        338,
+        36
+       ],
+       "id": "col:담당자관리-작성자/연락처"
+      },
+      {
+       "label": "제외",
+       "depth": 0,
+       "box": [
+        1339,
+        397,
+        60,
+        36
+       ],
+       "id": "col:담당자관리-작성자/제외"
+      },
+      {
+       "label": "작성자마감",
+       "depth": 0,
+       "box": [
+        1399,
+        397,
+        100,
+        36
+       ],
+       "id": "col:담당자관리-작성자/작성자마감"
+      },
+      {
+       "label": "확인자마감",
+       "depth": 0,
+       "box": [
+        1499,
+        397,
+        100,
+        36
+       ],
+       "id": "col:담당자관리-작성자/확인자마감"
+      }
+     ],
+     "id": "grid:담당자관리-작성자"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:확인자",
+   "tab": "확인자",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1524,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교직원 검색 기능을 통해서 총괄업무담당자 및 연락처를 입력해 주세요. ※ [이전담당자가져오기] 사용 시 작성자·확인자는 함께 설정되며, 총괄업무담당자는 [총괄업무담당자] 탭에서 별도로 [이전담당자가져오기]를 진행해야 합니다.",
+     "id": "note:※ 교직원 검색 기능을 통해서 총괄업무담당자 및 연락처를 입력해 주세요. ※ [이전담당자가져오기] 사용 시 작성자·확인자는 함께 설정되며, 총괄업무담당자는 [총괄업무담당자] 탭에서 별도로 [이전담당자가져오기]를 진행해야 합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 다음 항목은 원자료가 동일하므로 동일한 작성자로 지정하시기 바랍니다.",
+     "id": "note:※ 다음 항목은 원자료가 동일하므로 동일한 작성자로 지정하시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1536,
+      261,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인쇄",
+     "variant": "link",
+     "id": "button:인쇄"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      301,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "작성자",
+      "확인자",
+      "총괄업무담당자"
+     ],
+     "active": "확인자",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      849,
+      356,
+      751,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학교전체마감",
+     "id": "note:※ 학교전체마감"
+    },
+    {
+     "aria": "공시항목-확인자",
+     "box": [
+      25,
+      396,
+      1575,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "공시항목-확인자",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "공시항목",
+       "depth": 0,
+       "box": [
+        76,
+        397,
+        631,
+        36
+       ],
+       "span": 2,
+       "id": "col:공시항목-확인자/공시항목"
+      },
+      {
+       "label": "확인자",
+       "depth": 0,
+       "box": [
+        707,
+        397,
+        366,
+        36
+       ],
+       "id": "col:공시항목-확인자/확인자"
+      },
+      {
+       "label": "연락처",
+       "depth": 0,
+       "box": [
+        1073,
+        397,
+        366,
+        36
+       ],
+       "id": "col:공시항목-확인자/연락처"
+      },
+      {
+       "label": "제외",
+       "depth": 0,
+       "box": [
+        1439,
+        397,
+        60,
+        36
+       ],
+       "id": "col:공시항목-확인자/제외"
+      },
+      {
+       "label": "확인자마감",
+       "depth": 0,
+       "box": [
+        1499,
+        397,
+        100,
+        36
+       ],
+       "id": "col:공시항목-확인자/확인자마감"
+      }
+     ],
+     "id": "grid:공시항목-확인자"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  },
+  {
+   "id": "tab:총괄업무담당자",
+   "tab": "총괄업무담당자",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1524,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교직원 검색 기능을 통해서 총괄업무담당자 및 연락처를 입력해 주세요. ※ [이전담당자가져오기] 사용 시 작성자·확인자는 함께 설정되며, 총괄업무담당자는 [총괄업무담당자] 탭에서 별도로 [이전담당자가져오기]를 진행해야 합니다.",
+     "id": "note:※ 교직원 검색 기능을 통해서 총괄업무담당자 및 연락처를 입력해 주세요. ※ [이전담당자가져오기] 사용 시 작성자·확인자는 함께 설정되며, 총괄업무담당자는 [총괄업무담당자] 탭에서 별도로 [이전담당자가져오기]를 진행해야 합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      170,
+      1575,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 다음 항목은 원자료가 동일하므로 동일한 작성자로 지정하시기 바랍니다.",
+     "id": "note:※ 다음 항목은 원자료가 동일하므로 동일한 작성자로 지정하시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1536,
+      261,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인쇄",
+     "variant": "link",
+     "id": "button:인쇄"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      301,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "작성자",
+      "확인자",
+      "총괄업무담당자"
+     ],
+     "active": "총괄업무담당자",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      849,
+      356,
+      751,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 학교전체마감",
+     "id": "note:※ 학교전체마감"
+    },
+    {
+     "aria": "공시항목-총괄업무담당자",
+     "box": [
+      25,
+      396,
+      1575,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "공시항목-총괄업무담당자",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "담당자",
+       "depth": 0,
+       "box": [
+        419,
+        397,
+        393,
+        36
+       ],
+       "id": "col:공시항목-총괄업무담당자/담당자"
+      },
+      {
+       "label": "총괄업무담당자",
+       "depth": 0,
+       "box": [
+        813,
+        397,
+        393,
+        36
+       ],
+       "id": "col:공시항목-총괄업무담당자/총괄업무담당자"
+      },
+      {
+       "label": "연락처",
+       "depth": 0,
+       "box": [
+        1206,
+        397,
+        393,
+        36
+       ],
+       "id": "col:공시항목-총괄업무담당자/연락처"
+      }
+     ],
+     "id": "grid:공시항목-총괄업무담당자"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시항목관리 > 기준정보관리 > 담당자관리",
+ "alsoVia": [
+  "부서장(나이스부)",
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

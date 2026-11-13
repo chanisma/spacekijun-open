@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "student_code": "00-00001",
+  "grade_info": {
+    "1-1": [{ "subject": "국어", "credits": 4, "grade": 2, "raw_score": 88 }, { "subject": "수학", "credits": 4, "grade": 3, "raw_score": 79 }]
+  },
+  "academic_development": {
+    "1": [{ "subject": "국어", "text": "(가상 예시) 글의 구조를 분석해 발표하며 근거를 들어 의견을 펼침." }]
+  },
+  "attendance": { "1": { "absent": 0, "late": 1 } },
+  "volunteer": [{ "grade": 1, "hours": 12, "place": "(가상) 지역 도서관" }],
+  "reading": [{ "grade": 1, "title": "(가상) 과학의 기쁨" }],
+  "mock_result": [{ "year": 2026, "month": 3, "subject": "국어", "grade": 2 }],
+  "mock_marking": [],
+  "activities": [
+    { "category": "동아리", "subject_name": null, "content": "(가상 예시) 환경 동아리에서 교내 분리배출 실태를 조사함.", "grade": 1, "semester": 1 }
+  ]
+}

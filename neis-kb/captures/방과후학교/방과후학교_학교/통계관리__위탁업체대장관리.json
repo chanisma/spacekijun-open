@@ -1,0 +1,221 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›통계관리›위탁업체대장관리",
+ "name": "위탁업체대장관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:04:21+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "위탁업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:위탁업체명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1435,
+      133,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전년도복사",
+     "variant": "plain",
+     "id": "button:전년도복사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "위탁업체대장관리 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "위탁업체대장관리 목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        36
+       ],
+       "id": "col:위탁업체대장관리 목록/순번"
+      },
+      {
+       "label": "위탁업체명",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        213,
+        36
+       ],
+       "id": "col:위탁업체대장관리 목록/위탁업체명"
+      },
+      {
+       "label": "설립구분",
+       "depth": 0,
+       "box": [
+        339,
+        174,
+        213,
+        36
+       ],
+       "id": "col:위탁업체대장관리 목록/설립구분"
+      },
+      {
+       "label": "법인구분",
+       "depth": 0,
+       "box": [
+        551,
+        174,
+        213,
+        36
+       ],
+       "id": "col:위탁업체대장관리 목록/법인구분"
+      },
+      {
+       "label": "계약일자",
+       "depth": 0,
+       "box": [
+        764,
+        174,
+        213,
+        36
+       ],
+       "id": "col:위탁업체대장관리 목록/계약일자"
+      },
+      {
+       "label": "계약기간",
+       "depth": 0,
+       "box": [
+        976,
+        174,
+        213,
+        36
+       ],
+       "id": "col:위탁업체대장관리 목록/계약기간"
+      },
+      {
+       "label": "계약금액",
+       "depth": 0,
+       "box": [
+        1189,
+        174,
+        213,
+        36
+       ],
+       "id": "col:위탁업체대장관리 목록/계약금액"
+      },
+      {
+       "label": "위탁프로그램수",
+       "depth": 0,
+       "box": [
+        1401,
+        174,
+        213,
+        36
+       ],
+       "id": "col:위탁업체대장관리 목록/위탁프로그램수"
+      }
+     ],
+     "id": "grid:위탁업체대장관리 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 통계관리 > 위탁업체대장관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

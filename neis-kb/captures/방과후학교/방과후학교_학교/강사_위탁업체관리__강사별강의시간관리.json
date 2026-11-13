@@ -1,0 +1,283 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›강사/위탁업체관리›강사별강의시간관리",
+ "name": "강사별강의시간관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:02:53+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강사명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:강사명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1471,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자동시수적용",
+     "variant": "plain",
+     "id": "button:자동시수적용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 16,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        62
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/학년도"
+      },
+      {
+       "label": "기간명",
+       "depth": 0,
+       "box": [
+        226,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/기간명"
+      },
+      {
+       "label": "강사명",
+       "depth": 0,
+       "box": [
+        326,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/강사명"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        426,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/프로그램명"
+      },
+      {
+       "label": "프로그램기간",
+       "depth": 0,
+       "box": [
+        526,
+        174,
+        200,
+        62
+       ],
+       "id": "col:그리드/프로그램기간"
+      },
+      {
+       "label": "총차시 ①",
+       "depth": 0,
+       "box": [
+        726,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/총차시 ①"
+      },
+      {
+       "label": "결보강 ②",
+       "depth": 0,
+       "box": [
+        826,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/결보강 ②"
+      },
+      {
+       "label": "적용시수 ③",
+       "depth": 0,
+       "box": [
+        926,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/적용시수 ③"
+      },
+      {
+       "label": "총시수(자동) (①+②)*③",
+       "depth": 0,
+       "box": [
+        1026,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/총시수(자동) (①+②)*③"
+      },
+      {
+       "label": "주당시수 (자동)",
+       "depth": 0,
+       "box": [
+        1126,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/주당시수 (자동)"
+      },
+      {
+       "label": "총 시수",
+       "depth": 0,
+       "box": [
+        1226,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/총 시수"
+      },
+      {
+       "label": "주당 시수",
+       "depth": 0,
+       "box": [
+        1326,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/주당 시수"
+      },
+      {
+       "label": "전담구분",
+       "depth": 0,
+       "box": [
+        1426,
+        174,
+        100,
+        62
+       ],
+       "id": "col:그리드/전담구분"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1526,
+        174,
+        300,
+        62
+       ],
+       "id": "col:그리드/비고"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 강사/위탁업체관리 > 강사별강의시간관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

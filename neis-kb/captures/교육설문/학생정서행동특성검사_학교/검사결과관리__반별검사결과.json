@@ -1,0 +1,262 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학생정서행동특성검사#학교›검사결과관리›반별검사결과",
+ "name": "반별검사결과",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:15:03+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검사연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:검사연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      330,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      885,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 반 마감 이전 서면검사는 온라인검사기간 이후에도 실시할 수 있습니다.",
+     "id": "note:※ 반 마감 이전 서면검사는 온라인검사기간 이후에도 실시할 수 있습니다."
+    },
+    {
+     "aria": "반별 검사결과 목록",
+     "box": [
+      25,
+      240,
+      1590,
+      573
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반별 검사결과 목록",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        26,
+        241,
+        154,
+        62
+       ],
+       "id": "col:반별 검사결과 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        180,
+        241,
+        154,
+        62
+       ],
+       "id": "col:반별 검사결과 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        334,
+        241,
+        154,
+        62
+       ],
+       "id": "col:반별 검사결과 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        489,
+        241,
+        154,
+        62
+       ],
+       "id": "col:반별 검사결과 목록/성명"
+      },
+      {
+       "label": "검사방식",
+       "depth": 0,
+       "box": [
+        643,
+        241,
+        154,
+        62
+       ],
+       "id": "col:반별 검사결과 목록/검사방식"
+      },
+      {
+       "label": "1차검사",
+       "depth": 0,
+       "box": [
+        797,
+        241,
+        254,
+        31
+       ],
+       "span": 2,
+       "id": "col:반별 검사결과 목록/1차검사"
+      },
+      {
+       "label": "신뢰도",
+       "depth": 0,
+       "box": [
+        1051,
+        241,
+        154,
+        62
+       ],
+       "id": "col:반별 검사결과 목록/신뢰도"
+      },
+      {
+       "label": "재검사",
+       "depth": 0,
+       "box": [
+        1206,
+        241,
+        254,
+        31
+       ],
+       "span": 2,
+       "id": "col:반별 검사결과 목록/재검사"
+      },
+      {
+       "label": "신뢰도",
+       "depth": 0,
+       "box": [
+        1460,
+        241,
+        154,
+        62
+       ],
+       "id": "col:반별 검사결과 목록/신뢰도#2"
+      },
+      {
+       "label": "무응답수",
+       "depth": 1,
+       "box": [
+        797,
+        272,
+        154,
+        31
+       ],
+       "id": "col:반별 검사결과 목록/1차검사>무응답수"
+      },
+      {
+       "label": "검사등록",
+       "depth": 1,
+       "box": [
+        951,
+        272,
+        100,
+        31
+       ],
+       "id": "col:반별 검사결과 목록/1차검사>검사등록"
+      },
+      {
+       "label": "무응답수",
+       "depth": 1,
+       "box": [
+        1206,
+        272,
+        154,
+        31
+       ],
+       "id": "col:반별 검사결과 목록/재검사>무응답수"
+      },
+      {
+       "label": "검사등록",
+       "depth": 1,
+       "box": [
+        1360,
+        272,
+        100,
+        31
+       ],
+       "id": "col:반별 검사결과 목록/재검사>검사등록"
+      }
+     ],
+     "id": "grid:반별 검사결과 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생정서행동특성검사 > 검사결과관리 > 반별검사결과",
+ "viewport": [
+  1920,
+  945
+ ]
+}

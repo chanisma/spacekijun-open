@@ -1,0 +1,26 @@
+.improved-card {
+  padding: 0;
+  display: block;
+  width: 100%;
+  min-height: auto;
+  background: rgb(255, 255, 255);
+  border-radius: 1rem;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+/* Share Schedule's elevation effect without imposing its block layout/padding. */
+.improved-card,
+.card-surface-effect {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: all ease-in-out 0.3s;
+}
+
+.improved-card:hover,
+.card-surface-effect:hover {
+  background-color: #fdfdfd;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}

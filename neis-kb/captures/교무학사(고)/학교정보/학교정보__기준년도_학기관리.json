@@ -1,0 +1,473 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학교정보›학교정보›기준년도/학기관리",
+ "name": "기준년도/학기관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:20:41+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "계절수업 학적생성",
+     "box": [
+      1259,
+      72,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "계절수업 학적생성",
+     "variant": "primary",
+     "id": "button:계절수업 학적생성"
+    },
+    {
+     "aria": "학기정보관리",
+     "box": [
+      1383,
+      72,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학기정보관리",
+     "variant": "primary",
+     "id": "button:학기정보관리"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1478,
+      72,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "자료오류삭제",
+     "box": [
+      1526,
+      72,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료오류삭제",
+     "variant": "secondary",
+     "id": "button:자료오류삭제"
+    },
+    {
+     "aria": "교무학년도",
+     "box": [
+      421,
+      118,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "교무학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:교무학년도"
+    },
+    {
+     "aria": "교무학기",
+     "box": [
+      753,
+      118,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "교무학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:교무학기"
+    },
+    {
+     "aria": "교무학기 학기시작일",
+     "box": [
+      1085,
+      118,
+      130,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기시작일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:학기시작일"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      1215,
+      118,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      1245,
+      118,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기"
+    },
+    {
+     "aria": "교무학기 학기종료일",
+     "box": [
+      1417,
+      118,
+      130,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기종료일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:학기종료일"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      1547,
+      118,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기#2"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      1577,
+      118,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기#2"
+    },
+    {
+     "aria": "학년",
+     "box": [
+      141,
+      138,
+      140,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": "수업학년도",
+     "box": [
+      421,
+      158,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:수업학년도"
+    },
+    {
+     "aria": "수업학기",
+     "box": [
+      753,
+      158,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수업학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:수업학기"
+    },
+    {
+     "aria": "수업학기 학기시작일",
+     "box": [
+      1085,
+      158,
+      130,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기시작일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:학기시작일#2"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      1215,
+      158,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기#3"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      1245,
+      158,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기#3"
+    },
+    {
+     "aria": "수업학기 학기종료일",
+     "box": [
+      1417,
+      158,
+      130,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학기종료일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:학기종료일#2"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      1547,
+      158,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기#4"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      1577,
+      158,
+      30,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기#4"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1406,
+      313,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "학기일자조회",
+     "box": [
+      1526,
+      313,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학기일자조회",
+     "variant": "primary",
+     "id": "button:학기일자조회"
+    },
+    {
+     "aria": "기준년도/학기 일자",
+     "box": [
+      26,
+      363,
+      1588,
+      449
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기준년도/학기 일자",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        27,
+        364,
+        100,
+        31
+       ],
+       "id": "col:기준년도/학기 일자/순번"
+      },
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        127,
+        364,
+        212,
+        31
+       ],
+       "id": "col:기준년도/학기 일자/학년도"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        339,
+        364,
+        212,
+        31
+       ],
+       "id": "col:기준년도/학기 일자/학기"
+      },
+      {
+       "label": "학생부적용학기",
+       "depth": 0,
+       "box": [
+        552,
+        364,
+        212,
+        31
+       ],
+       "id": "col:기준년도/학기 일자/학생부적용학기"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        764,
+        364,
+        212,
+        31
+       ],
+       "id": "col:기준년도/학기 일자/학년"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        976,
+        364,
+        212,
+        31
+       ],
+       "id": "col:기준년도/학기 일자/구분"
+      },
+      {
+       "label": "학기시작일",
+       "depth": 0,
+       "box": [
+        1188,
+        364,
+        212,
+        31
+       ],
+       "id": "col:기준년도/학기 일자/학기시작일"
+      },
+      {
+       "label": "학기종료일",
+       "depth": 0,
+       "box": [
+        1401,
+        364,
+        212,
+        31
+       ],
+       "id": "col:기준년도/학기 일자/학기종료일"
+      }
+     ],
+     "id": "grid:기준년도/학기 일자"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교정보 > 학교정보 > 기준년도/학기관리",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

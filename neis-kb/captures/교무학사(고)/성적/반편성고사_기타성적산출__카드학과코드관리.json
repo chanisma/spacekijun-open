@@ -1,0 +1,174 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›반편성고사/기타성적산출›카드학과코드관리",
+ "name": "카드학과코드관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:37:01+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진급 학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:진급 학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 신입생 반편성고사 카드학과 코드 관리 유의사항",
+     "id": "note:※ 신입생 반편성고사 카드학과 코드 관리 유의사항"
+    },
+    {
+     "aria": "일괄부여",
+     "box": [
+      1407,
+      224,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄부여",
+     "variant": "primary",
+     "id": "button:일괄부여"
+    },
+    {
+     "aria": "복사",
+     "box": [
+      1479,
+      224,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "복사",
+     "variant": "primary",
+     "id": "button:복사"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      224,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      224,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "카드학과 코드 목록",
+     "box": [
+      25,
+      264,
+      1590,
+      550
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "카드학과 코드 목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "카드학과코드",
+       "depth": 0,
+       "box": [
+        76,
+        265,
+        227,
+        36
+       ],
+       "id": "col:카드학과 코드 목록/카드학과코드"
+      },
+      {
+       "label": "계열",
+       "depth": 0,
+       "box": [
+        303,
+        265,
+        143,
+        36
+       ],
+       "id": "col:카드학과 코드 목록/계열"
+      },
+      {
+       "label": "학과명",
+       "depth": 0,
+       "box": [
+        446,
+        265,
+        1168,
+        36
+       ],
+       "id": "col:카드학과 코드 목록/학과명"
+      }
+     ],
+     "id": "grid:카드학과 코드 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 반편성고사/기타성적산출 > 카드학과코드관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

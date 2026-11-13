@@ -1,0 +1,153 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›통계관리(학교)›학교급식실시현황›축산물사용현황",
+ "name": "축산물사용현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T10:58:08+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      155,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "연도",
+     "control": "date",
+     "required": false,
+     "valueKind": "year",
+     "id": "field:연도"
+    },
+    {
+     "aria": "구분",
+     "box": [
+      395,
+      82,
+      118,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "구분",
+     "options": [
+      "월간",
+      "반기"
+     ],
+     "id": "radio:구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      633,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "월",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:월"
+    },
+    {
+     "aria": null,
+     "box": [
+      833,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "반기",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반기"
+    },
+    {
+     "aria": "구분",
+     "box": [
+      987,
+      82,
+      199,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "구분",
+     "options": [
+      "총수량(규격)",
+      "총수량(Kg)"
+     ],
+     "id": "radio:구분#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      224,
+      1590,
+      590
+     ],
+     "region": "body",
+     "kind": "report",
+     "label": "보고서",
+     "id": "report:보고서"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}통계관리(학교) > 학교급식실시현황 > 축산물사용현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

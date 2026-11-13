@@ -1,0 +1,635 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교운영위원회›기준관리›학교운영위원회기본사항관리›학교운영위원회기본사항관리",
+ "name": "학교운영위원회기본사항관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:31:00+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "임기개시일",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:임기개시일"
+    },
+    {
+     "aria": null,
+     "box": [
+      310,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "임기개시일~",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:임기개시일~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1516,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1459,
+      138,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1507,
+      138,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1555,
+      138,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "기수목록",
+     "box": [
+      30,
+      148,
+      64,
+      20
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "heading",
+     "label": "기수목록",
+     "id": "heading:기수목록"
+    },
+    {
+     "aria": "기수목록",
+     "box": [
+      25,
+      188,
+      280,
+      344
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "기수목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "선택",
+       "depth": 0,
+       "box": [
+        26,
+        189,
+        50,
+        36
+       ],
+       "id": "col:기수목록/선택"
+      },
+      {
+       "label": "기수",
+       "depth": 0,
+       "box": [
+        76,
+        189,
+        83,
+        36
+       ],
+       "id": "col:기수목록/기수"
+      },
+      {
+       "label": "학교추가",
+       "depth": 0,
+       "box": [
+        159,
+        189,
+        145,
+        36
+       ],
+       "id": "col:기수목록/학교추가"
+      }
+     ],
+     "id": "grid:기수목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      427,
+      198,
+      144,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학교추가/삭제",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학교추가/삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      577,
+      198,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "추가",
+     "variant": "primary",
+     "id": "button:추가#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      633,
+      198,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      506,
+      289,
+      539,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "기준 학생수(기관별 입력)",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:기준 학생수(기관별 입력)"
+    },
+    {
+     "aria": null,
+     "box": [
+      1055,
+      289,
+      539,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "합계",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:합계"
+    },
+    {
+     "aria": null,
+     "box": [
+      506,
+      329,
+      539,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학부모",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:학부모"
+    },
+    {
+     "aria": null,
+     "box": [
+      506,
+      369,
+      539,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "교원",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:교원"
+    },
+    {
+     "aria": null,
+     "box": [
+      506,
+      409,
+      539,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "지역",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:지역"
+    },
+    {
+     "aria": null,
+     "box": [
+      506,
+      449,
+      539,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "합계",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:합계#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1416,
+      542,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1464,
+      542,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "primary",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1512,
+      542,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      542,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제#3"
+    },
+    {
+     "aria": "기본사항목록",
+     "box": [
+      25,
+      552,
+      97,
+      20
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "heading",
+     "label": "기본사항목록",
+     "id": "heading:기본사항목록"
+    },
+    {
+     "aria": "기본사항목록",
+     "box": [
+      25,
+      582,
+      1575,
+      495
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "기본사항목록",
+     "selectable": true,
+     "declaredColumns": 20,
+     "columns": [
+      {
+       "label": "설치 기관",
+       "depth": 0,
+       "box": [
+        76,
+        583,
+        106,
+        93
+       ],
+       "id": "col:기본사항목록/설치 기관"
+      },
+      {
+       "label": "위원회구분",
+       "depth": 0,
+       "box": [
+        182,
+        583,
+        106,
+        93
+       ],
+       "id": "col:기본사항목록/위원회구분"
+      },
+      {
+       "label": "연도",
+       "depth": 0,
+       "box": [
+        288,
+        583,
+        85,
+        93
+       ],
+       "id": "col:기본사항목록/연도"
+      },
+      {
+       "label": "기수",
+       "depth": 0,
+       "box": [
+        372,
+        583,
+        74,
+        93
+       ],
+       "id": "col:기본사항목록/기수"
+      },
+      {
+       "label": "별도 인원 추가",
+       "depth": 0,
+       "box": [
+        446,
+        583,
+        63,
+        93
+       ],
+       "id": "col:기본사항목록/별도 인원 추가"
+      },
+      {
+       "label": "통합운영구분",
+       "depth": 0,
+       "box": [
+        510,
+        583,
+        127,
+        93
+       ],
+       "id": "col:기본사항목록/통합운영구분"
+      },
+      {
+       "label": "산업수요 맞춤형고 및 특성화고 여부",
+       "depth": 0,
+       "box": [
+        637,
+        583,
+        85,
+        93
+       ],
+       "id": "col:기본사항목록/산업수요 맞춤형고 및 특성화고 여부"
+      },
+      {
+       "label": "각종학교 여부",
+       "depth": 0,
+       "box": [
+        721,
+        583,
+        85,
+        93
+       ],
+       "id": "col:기본사항목록/각종학교 여부"
+      },
+      {
+       "label": "급식 소위원회 구성여부",
+       "depth": 0,
+       "box": [
+        806,
+        583,
+        63,
+        93
+       ],
+       "id": "col:기본사항목록/급식 소위원회 구성여부"
+      },
+      {
+       "label": "예결산 소위원회 구성여부",
+       "depth": 0,
+       "box": [
+        869,
+        583,
+        63,
+        93
+       ],
+       "id": "col:기본사항목록/예결산 소위원회 구성여부"
+      },
+      {
+       "label": "임기개시일",
+       "depth": 0,
+       "box": [
+        933,
+        583,
+        116,
+        93
+       ],
+       "id": "col:기본사항목록/임기개시일"
+      },
+      {
+       "label": "기준 학생수",
+       "depth": 0,
+       "box": [
+        1049,
+        583,
+        85,
+        93
+       ],
+       "id": "col:기본사항목록/기준 학생수"
+      },
+      {
+       "label": "위원정수",
+       "depth": 0,
+       "box": [
+        1134,
+        583,
+        254,
+        62
+       ],
+       "span": 4,
+       "id": "col:기본사항목록/위원정수"
+      },
+      {
+       "label": "등록자",
+       "depth": 0,
+       "box": [
+        1387,
+        583,
+        106,
+        93
+       ],
+       "id": "col:기본사항목록/등록자"
+      },
+      {
+       "label": "위원정수 검증",
+       "depth": 0,
+       "box": [
+        1493,
+        583,
+        106,
+        93
+       ],
+       "id": "col:기본사항목록/위원정수 검증"
+      },
+      {
+       "label": "학부모",
+       "depth": 1,
+       "box": [
+        1134,
+        645,
+        63,
+        31
+       ],
+       "id": "col:기본사항목록/위원정수>학부모"
+      },
+      {
+       "label": "교원",
+       "depth": 1,
+       "box": [
+        1197,
+        645,
+        63,
+        31
+       ],
+       "id": "col:기본사항목록/위원정수>교원"
+      },
+      {
+       "label": "지역",
+       "depth": 1,
+       "box": [
+        1261,
+        645,
+        63,
+        31
+       ],
+       "id": "col:기본사항목록/위원정수>지역"
+      },
+      {
+       "label": "계",
+       "depth": 1,
+       "box": [
+        1324,
+        645,
+        63,
+        31
+       ],
+       "id": "col:기본사항목록/위원정수>계"
+      }
+     ],
+     "id": "grid:기본사항목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교운영위원회}기준관리 > 학교운영위원회기본사항관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

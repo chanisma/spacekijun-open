@@ -1,0 +1,186 @@
+{
+ "schema": "neis-capture/1",
+ "key": "특수교육통계›특수교육통계›통계검증 및 마감›통계 전체마감",
+ "name": "통계 전체마감",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:47:07+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:통계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      375,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      475,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 완결 상태에서는 전체마감취소를 하실 수 없습니다. 승인취소를 하여 주시기 바랍니다.",
+     "id": "note:※ 완결 상태에서는 전체마감취소를 하실 수 없습니다. 승인취소를 하여 주시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전체마감",
+     "variant": "primary",
+     "id": "button:전체마감"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전체마감취소",
+     "variant": "secondary",
+     "id": "button:전체마감취소"
+    },
+    {
+     "aria": "통계 전체마감 정보",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "통계 전체마감 정보",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "배치구분",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        227,
+        36
+       ],
+       "id": "col:통계 전체마감 정보/배치구분"
+      },
+      {
+       "label": "통계항목",
+       "depth": 0,
+       "box": [
+        253,
+        174,
+        681,
+        36
+       ],
+       "id": "col:통계 전체마감 정보/통계항목"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        933,
+        174,
+        227,
+        36
+       ],
+       "id": "col:통계 전체마감 정보/상태"
+      },
+      {
+       "label": "일자",
+       "depth": 0,
+       "box": [
+        1160,
+        174,
+        227,
+        36
+       ],
+       "id": "col:통계 전체마감 정보/일자"
+      },
+      {
+       "label": "처리자",
+       "depth": 0,
+       "box": [
+        1387,
+        174,
+        227,
+        36
+       ],
+       "id": "col:통계 전체마감 정보/처리자"
+      }
+     ],
+     "id": "grid:통계 전체마감 정보"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 특수교육통계 > 통계검증 및 마감 > 통계 전체마감",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,567 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›정기시험/수행평가선행작업›성취기준관리",
+ "name": "성취기준관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:27:43+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:성취기준관리",
+   "tab": "성취기준관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "성취기준관리 선택됨",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "성취기준관리",
+      "성취수준(평가기준)관리"
+     ],
+     "active": "성취기준관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "영역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:영역"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      1172,
+      213,
+      52,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "영역명 관리",
+     "box": [
+      1232,
+      213,
+      79,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "영역명 관리",
+     "variant": "primary",
+     "id": "button:영역명 관리"
+    },
+    {
+     "aria": "일괄업로드",
+     "box": [
+      1320,
+      213,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄업로드",
+     "variant": "primary",
+     "id": "button:일괄업로드"
+    },
+    {
+     "aria": "가져오기",
+     "box": [
+      1407,
+      213,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "가져오기",
+     "variant": "primary",
+     "id": "button:가져오기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "평가준거 성취기준 관리 테이블",
+     "box": [
+      25,
+      253,
+      1590,
+      560
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "평가준거 성취기준 관리 테이블",
+     "selectable": true,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "영역명",
+       "depth": 0,
+       "box": [
+        76,
+        254,
+        270,
+        36
+       ],
+       "id": "col:평가준거 성취기준 관리 테이블/영역명"
+      },
+      {
+       "label": "성취기준코드",
+       "depth": 0,
+       "box": [
+        346,
+        254,
+        270,
+        36
+       ],
+       "id": "col:평가준거 성취기준 관리 테이블/성취기준코드"
+      },
+      {
+       "label": "성취기준",
+       "depth": 0,
+       "box": [
+        615,
+        254,
+        899,
+        36
+       ],
+       "id": "col:평가준거 성취기준 관리 테이블/성취기준"
+      },
+      {
+       "label": "등록사용자",
+       "depth": 0,
+       "box": [
+        1514,
+        254,
+        100,
+        36
+       ],
+       "id": "col:평가준거 성취기준 관리 테이블/등록사용자"
+      }
+     ],
+     "id": "grid:평가준거 성취기준 관리 테이블"
+    }
+   ]
+  },
+  {
+   "id": "tab:성취수준(평가기준)관리",
+   "tab": "성취수준(평가기준)관리",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "성취기준관리",
+     "box": [
+      25,
+      71,
+      1590,
+      60
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "성취기준관리",
+      "성취수준(평가기준)관리"
+     ],
+     "active": "성취수준(평가기준)관리",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "영역",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:영역"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      152,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1479,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1527,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      213,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": " ",
+     "box": [
+      25,
+      253,
+      788,
+      560
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "영역명",
+       "depth": 0,
+       "box": [
+        26,
+        254,
+        121,
+        36
+       ],
+       "id": "col:그리드/영역명"
+      },
+      {
+       "label": "성취기준코드",
+       "depth": 0,
+       "box": [
+        147,
+        254,
+        121,
+        36
+       ],
+       "id": "col:그리드/성취기준코드"
+      },
+      {
+       "label": "성취기준",
+       "depth": 0,
+       "box": [
+        268,
+        254,
+        206,
+        36
+       ],
+       "id": "col:그리드/성취기준"
+      },
+      {
+       "label": "성취수준",
+       "depth": 0,
+       "box": [
+        473,
+        254,
+        339,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/성취수준"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      828,
+      253,
+      788,
+      560
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 1,
+     "columns": [
+      {
+       "label": "성취수준",
+       "depth": 0,
+       "box": [
+        829,
+        254,
+        786,
+        36
+       ],
+       "span": 2,
+       "id": "col:그리드/성취수준"
+      }
+     ],
+     "id": "grid:그리드#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 정기시험/수행평가선행작업 > 성취기준관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

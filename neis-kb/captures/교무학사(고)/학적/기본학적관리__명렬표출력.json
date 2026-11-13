@@ -1,0 +1,295 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›기본학적관리›명렬표출력",
+ "name": "명렬표출력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:08:32+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      994,
+      133,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "명렬표내용선택",
+     "box": [
+      1122,
+      133,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "명렬표내용선택",
+     "variant": "link",
+     "id": "button:명렬표내용선택"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1230,
+      133,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "선택자료출력",
+     "box": [
+      1288,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택자료출력",
+     "variant": "link",
+     "id": "button:선택자료출력"
+    },
+    {
+     "aria": "사진명렬표출력",
+     "box": [
+      1384,
+      133,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "사진명렬표출력",
+     "variant": "link",
+     "id": "button:사진명렬표출력"
+    },
+    {
+     "aria": "선택사진명렬표출력",
+     "box": [
+      1491,
+      133,
+      124,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택사진명렬표출력",
+     "variant": "link",
+     "id": "button:선택사진명렬표출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      94,
+      171,
+      189,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "명렬표 제목",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:명렬표 제목"
+    },
+    {
+     "aria": "출력구분",
+     "box": [
+      343,
+      171,
+      140,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "출력구분",
+     "options": [
+      "가로",
+      "세로"
+     ],
+     "id": "radio:출력구분"
+    },
+    {
+     "aria": "명렬표출력 목록",
+     "box": [
+      25,
+      211,
+      1590,
+      602
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "명렬표출력 목록",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        185,
+        212,
+        159,
+        62
+       ],
+       "id": "col:명렬표출력 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        344,
+        212,
+        159,
+        62
+       ],
+       "id": "col:명렬표출력 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        502,
+        212,
+        159,
+        62
+       ],
+       "id": "col:명렬표출력 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        661,
+        212,
+        318,
+        62
+       ],
+       "id": "col:명렬표출력 목록/성명"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        979,
+        212,
+        635,
+        62
+       ],
+       "id": "col:명렬표출력 목록/비고"
+      }
+     ],
+     "id": "grid:명렬표출력 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 기본학적관리 > 명렬표출력",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

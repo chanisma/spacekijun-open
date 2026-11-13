@@ -1,0 +1,311 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›프로그램관리›타학교수강현황",
+ "name": "타학교수강현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:01:40+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "운영학교",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:운영학교"
+    },
+    {
+     "aria": null,
+     "box": [
+      435,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      915,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "년월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:년월"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1490,
+      133,
+      125,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 21,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "학교명",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        150,
+        36
+       ],
+       "id": "col:그리드/학교명"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        226,
+        174,
+        80,
+        36
+       ],
+       "id": "col:그리드/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        306,
+        174,
+        80,
+        36
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        386,
+        174,
+        80,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "수강생명",
+       "depth": 0,
+       "box": [
+        466,
+        174,
+        120,
+        36
+       ],
+       "id": "col:그리드/수강생명"
+      },
+      {
+       "label": "처리상태",
+       "depth": 0,
+       "box": [
+        586,
+        174,
+        100,
+        36
+       ],
+       "id": "col:그리드/처리상태"
+      },
+      {
+       "label": "처리일자",
+       "depth": 0,
+       "box": [
+        686,
+        174,
+        120,
+        36
+       ],
+       "id": "col:그리드/처리일자"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        806,
+        174,
+        150,
+        36
+       ],
+       "id": "col:그리드/프로그램명"
+      },
+      {
+       "label": "수강료",
+       "depth": 0,
+       "box": [
+        956,
+        174,
+        100,
+        36
+       ],
+       "id": "col:그리드/수강료"
+      },
+      {
+       "label": "강사료",
+       "depth": 0,
+       "box": [
+        1056,
+        174,
+        100,
+        36
+       ],
+       "id": "col:그리드/강사료"
+      },
+      {
+       "label": "수용비",
+       "depth": 0,
+       "box": [
+        1156,
+        174,
+        100,
+        36
+       ],
+       "id": "col:그리드/수용비"
+      },
+      {
+       "label": "교재비",
+       "depth": 0,
+       "box": [
+        1256,
+        174,
+        100,
+        36
+       ],
+       "id": "col:그리드/교재비"
+      },
+      {
+       "label": "재료비",
+       "depth": 0,
+       "box": [
+        1356,
+        174,
+        100,
+        36
+       ],
+       "id": "col:그리드/재료비"
+      },
+      {
+       "label": "출석",
+       "depth": 0,
+       "box": [
+        1456,
+        174,
+        100,
+        36
+       ],
+       "id": "col:그리드/출석"
+      },
+      {
+       "label": "출석률",
+       "depth": 0,
+       "box": [
+        1556,
+        174,
+        100,
+        36
+       ],
+       "id": "col:그리드/출석률"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 프로그램관리 > 타학교수강현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

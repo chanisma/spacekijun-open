@@ -1,0 +1,41 @@
+{
+  "mode": "built-in imagegen",
+  "reference": "/images/world-today/academy-observers.png",
+  "assets": [
+    {
+      "key": "plaza",
+      "prompt": "Use case: stylized-concept. Create a production game BACKGROUND, landscape 1536x1024. Input image is STYLE REFERENCE ONLY, do not reproduce its collage or characters. Match its elegant Korean romance-fantasy illustrated academy: painterly anime, ivory stone, muted violet, antique gold, warm twilight. One coherent single scene, no panels, no text, no UI, NO PEOPLE. A walkable royal academy courtyard viewed straight ahead from slightly above ground in a 2D point-and-click adventure. At upper left (x25%, y40%) a tall arched royal-library double wooden door in a stone facade, clearly visible and closed. Upper right a distant observatory dome. Central courtyard fountain at x60% y55%, ivory balustrades and gardens around the edges. Bottom 40 percent is OPEN broad cobblestone walkway for a player character, no obstructing foreground objects. Purple sunset beyond an arched gateway. Left and right framing foliage, softly luminous small lamps. Atmospheric depth and rich carved details, calm magical mood. Do not paint any characters, labels, particles covering the floor or readable writing. Full bleed illustration designed for game scene with overlaid interactive sprites."
+    },
+    {
+      "key": "library",
+      "prompt": "Use case: stylized-concept. Create a production game BACKGROUND, landscape 1536x1024. Input image is STYLE REFERENCE ONLY. Match its Korean romance-fantasy academy illustration: muted violet shadows, antique gold, dark walnut bookshelves, ivory stone, warm lamps. One coherent scene, no collage, no text, NO PEOPLE. A grand magical library interior for 2D point-and-click game, slight elevated front perspective. Along LEFT and center back wall are tall orderly bookshelves (x15-55%, y15-60%) with decorative closed volumes. At RIGHT midground x74%,y57% an elegant curved librarian desk, clear open floor in front where a standing NPC will be overlaid. An arched door back left at x8%,y43% exits to courtyard. Huge arched window back center right shows a dusky purple sky, softly luminous celestial armillary upper right, small candle lamps in back. Bottom 35% wide OPEN polished wood floor, uncluttered for character walking. Keep critical architecture in upper 70%. Cinematic handpainted painterly anime artwork, beautifully drawn books and woodwork, quiet enchanted atmosphere. No baked UI or characters, no text or watermark."
+    },
+    {
+      "key": "ria",
+      "prompt": "Use case: identity-preserve. Production 2D game character asset SHEET on truly TRANSPARENT alpha background. Use ONLY the brown-haired young woman in the reference as Ria, preserve identity exactly: violet eyes, long brown hair, plum ribbon, gold hair ornament, ivory ruffled blouse, purple fitted waistcoat with antique gold trim, purple long skirt. NO BACKGROUND or scene, no white/gray baked rectangle, no text, no grid lines. Create a precise 2x2 equal-cell character sheet on square 1024x1024 transparent canvas; each cell is 512x512. Same character bust portrait from waist upward, same camera and scale, entirely contained within its cell with 30px transparent padding. Upper-left: gentle welcoming smile. Upper-right: thoughtful listening, hand near chin. Lower-left: delighted encouraging smile. Lower-right: attentive neutral expression. All portraits face slightly toward viewer's right; intricate consistent romance-fantasy illustrated style matching reference, clean edges, no overlaps between cells. This sheet will be displayed by selecting quadrants, so exact grid and consistent framing are essential."
+    },
+    {
+      "key": "librarian",
+      "prompt": "Use case: stylized-concept. Production 2D game NPC character asset SHEET on truly TRANSPARENT alpha background. Style reference only from attached illustration: elegant painterly Korean romance-fantasy, fine anime faces, plum and gold academy aesthetic. A NEW adult female librarian, about 35, dark teal hair in a neat low bun, delicate oval gold glasses, small gold crescent hairpin, ivory high-neck blouse, long dark forest-teal dress with gold embroidered vest, warm wise expression, holding a closed plum book. Do not use Ria's identity. Precise 2x2 equal-cell sheet on square 1024x1024 transparent canvas, no background rectangle, no scene, no text, no grid lines. Each cell 512x512, character waist-up, consistently same scale/camera, contained in its cell with 30px transparent margin. Upper-left welcoming smile, upper-right thoughtful listening, lower-left pleased and proud smile, lower-right calm attentive neutral. Faces slightly toward viewer left. No overlap between cells, consistent glasses hair dress across expressions. Clean alpha edges."
+    },
+    {
+      "key": "traveler",
+      "prompt": "Use case: stylized-concept. Production small full-body 2D game avatar on truly TRANSPARENT alpha background, portrait 1024x1536. Same painterly romance-fantasy visual quality and plum antique-gold palette as style reference, but this is a small 3-head-tall chibi apprentice seen in three-quarter BACK VIEW facing right. Short chestnut hair, long violet academy cape with gold trim and tiny embroidered star, cream tunic, brown boots, a leather book satchel. Full body including feet fits with generous transparent padding. Neutral standing pose with feet a little apart, hands and arms naturally by sides under cape. No face portrait needed, the player is represented by the back of this traveler. One figure only, no panels, no text, no background, no shadow baked outside feet. Readable silhouette for displaying at 120px tall in a game courtyard."
+    }
+  ],
+  "finalRiaEditPrompt": "Create the final production NPC portrait expression sheet by editing this image. PRESERVE EXACTLY the same four Ria portraits and 2x2 layout on 1254 by 1254 square canvas. REPLACE EVERY gray and white checkerboard area around and between the characters with a completely solid, flat, uniform very dark plum purple background RGB 42,32,53 hex #2a2035. This is deliberately an OPAQUE illustrated portrait sheet, NOT transparent. No checkerboard pattern anywhere, no white, no transparency. Keep hair edges and fine strands crisp against the solid dark purple. No decorative texture or gradients in background, no text. Do not change faces, hair, pose, clothing, composition.",
+  "actualFrames": {
+    "librarian": {
+      "alpha": true,
+      "width": 1254,
+      "frame": 627,
+      "height": 1254
+    },
+    "ria": {
+      "alpha": false,
+      "width": 1254,
+      "frame": 627,
+      "height": 1254
+    }
+  }
+}

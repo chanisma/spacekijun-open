@@ -1,0 +1,385 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›자격증취득및NCS이수상황›국가직무능력표준 이수상황관리",
+ "name": "국가직무능력표준 이수상황관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:26:34+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      590,
+      133,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이수시간 기준일",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:이수시간 기준일"
+    },
+    {
+     "aria": null,
+     "box": [
+      698,
+      133,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이수시간 기준일",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:이수시간 기준일#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      957,
+      133,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "이수시간 기준일~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:이수시간 기준일~"
+    },
+    {
+     "aria": "이수시간 재계산",
+     "box": [
+      1085,
+      133,
+      103,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "이수시간 재계산",
+     "variant": "primary",
+     "id": "button:이수시간 재계산"
+    },
+    {
+     "aria": "정규교과과정외 추가",
+     "box": [
+      1197,
+      133,
+      127,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "정규교과과정외 추가",
+     "variant": "link",
+     "id": "button:정규교과과정외 추가"
+    },
+    {
+     "aria": "능력단위추가",
+     "box": [
+      1332,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "능력단위추가",
+     "variant": "link",
+     "id": "button:능력단위추가"
+    },
+    {
+     "aria": "학생선택 추가",
+     "box": [
+      1428,
+      133,
+      91,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "학생선택 추가",
+     "variant": "link",
+     "id": "button:학생선택 추가"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      173,
+      315,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        104,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        130,
+        174,
+        209,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    },
+    {
+     "aria": "학생별 이수상황 목록",
+     "box": [
+      355,
+      173,
+      1260,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생별 이수상황 목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        406,
+        174,
+        50,
+        36
+       ],
+       "id": "col:학생별 이수상황 목록/순번"
+      },
+      {
+       "label": "NCS이수구분",
+       "depth": 0,
+       "box": [
+        456,
+        174,
+        184,
+        36
+       ],
+       "id": "col:학생별 이수상황 목록/NCS이수구분"
+      },
+      {
+       "label": "실무과목",
+       "depth": 0,
+       "box": [
+        640,
+        174,
+        276,
+        36
+       ],
+       "id": "col:학생별 이수상황 목록/실무과목"
+      },
+      {
+       "label": "능력단위",
+       "depth": 0,
+       "box": [
+        916,
+        174,
+        276,
+        36
+       ],
+       "id": "col:학생별 이수상황 목록/능력단위"
+      },
+      {
+       "label": "이수시간",
+       "depth": 0,
+       "box": [
+        1191,
+        174,
+        92,
+        36
+       ],
+       "id": "col:학생별 이수상황 목록/이수시간"
+      },
+      {
+       "label": "원점수",
+       "depth": 0,
+       "box": [
+        1283,
+        174,
+        92,
+        36
+       ],
+       "id": "col:학생별 이수상황 목록/원점수"
+      },
+      {
+       "label": "성취도",
+       "depth": 0,
+       "box": [
+        1375,
+        174,
+        92,
+        36
+       ],
+       "id": "col:학생별 이수상황 목록/성취도"
+      },
+      {
+       "label": "변동구분",
+       "depth": 0,
+       "box": [
+        1467,
+        174,
+        147,
+        36
+       ],
+       "id": "col:학생별 이수상황 목록/변동구분"
+      }
+     ],
+     "id": "grid:학생별 이수상황 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 자격증취득및NCS이수상황 > 국가직무능력표준 이수상황관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

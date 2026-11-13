@@ -1,0 +1,1820 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›분할점수›분할점수관리",
+ "name": "분할점수관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:32:02+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:예상정답률입력",
+   "tab": "예상정답률입력",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험추정분할점수산출관리 선택됨",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정기시험추정분할점수산출관리",
+     "variant": "link",
+     "id": "button:정기시험추정분할점수산출관리"
+    },
+    {
+     "aria": "수행평가추정분할점수산출관리",
+     "box": [
+      562,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수행평가추정분할점수산출관리",
+     "variant": "link",
+     "id": "button:수행평가추정분할점수산출관리"
+    },
+    {
+     "aria": "학기말 추정분할점수산출",
+     "box": [
+      1098,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학기말 추정분할점수산출",
+     "variant": "link",
+     "id": "button:학기말 추정분할점수산출"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      192,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "라운드",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:라운드"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      192,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "추정분할점수산출결과관리",
+     "box": [
+      1257,
+      435,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추정분할점수산출결과관리",
+     "variant": "link",
+     "id": "button:추정분할점수산출결과관리"
+    },
+    {
+     "aria": "라운드등록",
+     "box": [
+      1435,
+      435,
+      86,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "라운드등록",
+     "variant": "secondary",
+     "id": "button:라운드등록"
+    },
+    {
+     "aria": "라운드삭제",
+     "box": [
+      1529,
+      435,
+      86,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "라운드삭제",
+     "variant": "secondary",
+     "id": "button:라운드삭제"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      470,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "예상정답률입력",
+      "교사별입력정보조회",
+      "문항범주별조회",
+      "예상추정분할점수조회"
+     ],
+     "active": "예상정답률입력",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1503,
+      525,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "[통합산출] 예상정답률입력",
+     "box": [
+      25,
+      535,
+      195,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "[통합산출] 예상정답률입력",
+     "id": "heading:[통합산출] 예상정답률입력"
+    },
+    {
+     "aria": "평가단계 선택",
+     "box": [
+      109,
+      573,
+      350,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "평가단계",
+     "options": [
+      "5수준(A-E)",
+      "+",
+      "미도달",
+      "5수준(A-E)"
+     ],
+     "id": "radio:평가단계"
+    },
+    {
+     "aria": "예상정답률 구분 선택",
+     "box": [
+      583,
+      573,
+      73,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "예상정답률 구분",
+     "options": [
+      "5%",
+      "단위"
+     ],
+     "id": "radio:예상정답률 구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      610,
+      1590,
+      204
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "문항구분",
+       "depth": 0,
+       "box": [
+        126,
+        611,
+        100,
+        62
+       ],
+       "id": "col:그리드/문항구분"
+      },
+      {
+       "label": "난이도",
+       "depth": 0,
+       "box": [
+        226,
+        611,
+        69,
+        62
+       ],
+       "id": "col:그리드/난이도"
+      },
+      {
+       "label": "해당문항번호",
+       "depth": 0,
+       "box": [
+        295,
+        611,
+        243,
+        62
+       ],
+       "id": "col:그리드/해당문항번호"
+      },
+      {
+       "label": "문항수",
+       "depth": 0,
+       "box": [
+        538,
+        611,
+        100,
+        62
+       ],
+       "id": "col:그리드/문항수"
+      },
+      {
+       "label": "배점합",
+       "depth": 0,
+       "box": [
+        638,
+        611,
+        100,
+        62
+       ],
+       "id": "col:그리드/배점합"
+      },
+      {
+       "label": "최소능력자 예상정답률(%)",
+       "depth": 0,
+       "box": [
+        738,
+        611,
+        860,
+        31
+       ],
+       "span": 5,
+       "id": "col:그리드/최소능력자 예상정답률(%)"
+      },
+      {
+       "label": "A",
+       "depth": 1,
+       "box": [
+        738,
+        642,
+        172,
+        31
+       ],
+       "id": "col:그리드/최소능력자 예상정답률(%)>A"
+      },
+      {
+       "label": "B",
+       "depth": 1,
+       "box": [
+        910,
+        642,
+        172,
+        31
+       ],
+       "id": "col:그리드/최소능력자 예상정답률(%)>B"
+      },
+      {
+       "label": "C",
+       "depth": 1,
+       "box": [
+        1082,
+        642,
+        172,
+        31
+       ],
+       "id": "col:그리드/최소능력자 예상정답률(%)>C"
+      },
+      {
+       "label": "D",
+       "depth": 1,
+       "box": [
+        1254,
+        642,
+        172,
+        31
+       ],
+       "id": "col:그리드/최소능력자 예상정답률(%)>D"
+      },
+      {
+       "label": "E",
+       "depth": 1,
+       "box": [
+        1426,
+        642,
+        172,
+        31
+       ],
+       "id": "col:그리드/최소능력자 예상정답률(%)>E"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:교사별입력정보조회",
+   "tab": "교사별입력정보조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험추정분할점수산출관리 선택됨",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정기시험추정분할점수산출관리",
+     "variant": "link",
+     "id": "button:정기시험추정분할점수산출관리"
+    },
+    {
+     "aria": "수행평가추정분할점수산출관리",
+     "box": [
+      562,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수행평가추정분할점수산출관리",
+     "variant": "link",
+     "id": "button:수행평가추정분할점수산출관리"
+    },
+    {
+     "aria": "학기말 추정분할점수산출",
+     "box": [
+      1098,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학기말 추정분할점수산출",
+     "variant": "link",
+     "id": "button:학기말 추정분할점수산출"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      192,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "라운드",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:라운드"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      192,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "추정분할점수산출결과관리",
+     "box": [
+      1257,
+      435,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추정분할점수산출결과관리",
+     "variant": "link",
+     "id": "button:추정분할점수산출결과관리"
+    },
+    {
+     "aria": "라운드등록",
+     "box": [
+      1435,
+      435,
+      86,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "라운드등록",
+     "variant": "secondary",
+     "id": "button:라운드등록"
+    },
+    {
+     "aria": "라운드삭제",
+     "box": [
+      1529,
+      435,
+      86,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "라운드삭제",
+     "variant": "secondary",
+     "id": "button:라운드삭제"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      470,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "예상정답률입력",
+      "교사별입력정보조회",
+      "문항범주별조회",
+      "예상추정분할점수조회"
+     ],
+     "active": "교사별입력정보조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1339,
+      525,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "교사명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교사명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      525,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회#2"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1503,
+      525,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "[통합산출] 교사별입력정보조회",
+     "box": [
+      25,
+      535,
+      227,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "[통합산출] 교사별입력정보조회",
+     "id": "heading:[통합산출] 교사별입력정보조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      565,
+      1590,
+      249
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "문항유형",
+       "depth": 0,
+       "box": [
+        26,
+        566,
+        132,
+        62
+       ],
+       "id": "col:그리드/문항유형"
+      },
+      {
+       "label": "난이도",
+       "depth": 0,
+       "box": [
+        158,
+        566,
+        120,
+        62
+       ],
+       "id": "col:그리드/난이도"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        278,
+        566,
+        240,
+        62
+       ],
+       "id": "col:그리드/계열/학년/학과"
+      },
+      {
+       "label": "교사",
+       "depth": 0,
+       "box": [
+        518,
+        566,
+        240,
+        62
+       ],
+       "id": "col:그리드/교사"
+      },
+      {
+       "label": "배점합(문항수)",
+       "depth": 0,
+       "box": [
+        758,
+        566,
+        240,
+        62
+       ],
+       "id": "col:그리드/배점합(문항수)"
+      },
+      {
+       "label": "성취수준",
+       "depth": 0,
+       "box": [
+        998,
+        566,
+        600,
+        31
+       ],
+       "span": 5,
+       "id": "col:그리드/성취수준"
+      },
+      {
+       "label": "A",
+       "depth": 1,
+       "box": [
+        998,
+        597,
+        120,
+        31
+       ],
+       "id": "col:그리드/성취수준>A"
+      },
+      {
+       "label": "B",
+       "depth": 1,
+       "box": [
+        1118,
+        597,
+        120,
+        31
+       ],
+       "id": "col:그리드/성취수준>B"
+      },
+      {
+       "label": "C",
+       "depth": 1,
+       "box": [
+        1238,
+        597,
+        120,
+        31
+       ],
+       "id": "col:그리드/성취수준>C"
+      },
+      {
+       "label": "D",
+       "depth": 1,
+       "box": [
+        1358,
+        597,
+        120,
+        31
+       ],
+       "id": "col:그리드/성취수준>D"
+      },
+      {
+       "label": "E",
+       "depth": 1,
+       "box": [
+        1478,
+        597,
+        120,
+        31
+       ],
+       "id": "col:그리드/성취수준>E"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:문항범주별조회",
+   "tab": "문항범주별조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험추정분할점수산출관리 선택됨",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정기시험추정분할점수산출관리",
+     "variant": "link",
+     "id": "button:정기시험추정분할점수산출관리"
+    },
+    {
+     "aria": "수행평가추정분할점수산출관리",
+     "box": [
+      562,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수행평가추정분할점수산출관리",
+     "variant": "link",
+     "id": "button:수행평가추정분할점수산출관리"
+    },
+    {
+     "aria": "학기말 추정분할점수산출",
+     "box": [
+      1098,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학기말 추정분할점수산출",
+     "variant": "link",
+     "id": "button:학기말 추정분할점수산출"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      192,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "라운드",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:라운드"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      192,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "추정분할점수산출결과관리",
+     "box": [
+      1257,
+      435,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추정분할점수산출결과관리",
+     "variant": "link",
+     "id": "button:추정분할점수산출결과관리"
+    },
+    {
+     "aria": "라운드등록",
+     "box": [
+      1435,
+      435,
+      86,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "라운드등록",
+     "variant": "secondary",
+     "id": "button:라운드등록"
+    },
+    {
+     "aria": "라운드삭제",
+     "box": [
+      1529,
+      435,
+      86,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "라운드삭제",
+     "variant": "secondary",
+     "id": "button:라운드삭제"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      470,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "예상정답률입력",
+      "교사별입력정보조회",
+      "문항범주별조회",
+      "예상추정분할점수조회"
+     ],
+     "active": "문항범주별조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1503,
+      525,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "[통합산출] 문항범주별조회",
+     "box": [
+      25,
+      535,
+      195,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "[통합산출] 문항범주별조회",
+     "id": "heading:[통합산출] 문항범주별조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      565,
+      1590,
+      249
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 27,
+     "columns": [
+      {
+       "label": "문항유형(난이도)",
+       "depth": 0,
+       "box": [
+        26,
+        566,
+        143,
+        93
+       ],
+       "id": "col:그리드/문항유형(난이도)"
+      },
+      {
+       "label": "성취수준",
+       "depth": 0,
+       "box": [
+        169,
+        566,
+        1429,
+        31
+       ],
+       "span": 20,
+       "id": "col:그리드/성취수준"
+      },
+      {
+       "label": "A",
+       "depth": 1,
+       "box": [
+        169,
+        597,
+        286,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/성취수준>A"
+      },
+      {
+       "label": "B",
+       "depth": 1,
+       "box": [
+        455,
+        597,
+        286,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/성취수준>B"
+      },
+      {
+       "label": "C",
+       "depth": 1,
+       "box": [
+        741,
+        597,
+        286,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/성취수준>C"
+      },
+      {
+       "label": "D",
+       "depth": 1,
+       "box": [
+        1026,
+        597,
+        286,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/성취수준>D"
+      },
+      {
+       "label": "E",
+       "depth": 1,
+       "box": [
+        1312,
+        597,
+        286,
+        31
+       ],
+       "span": 4,
+       "id": "col:그리드/성취수준>E"
+      },
+      {
+       "label": "평균",
+       "depth": 2,
+       "box": [
+        169,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>A>평균"
+      },
+      {
+       "label": "표준편차",
+       "depth": 2,
+       "box": [
+        240,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>A>표준편차"
+      },
+      {
+       "label": "최솟값",
+       "depth": 2,
+       "box": [
+        312,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>A>최솟값"
+      },
+      {
+       "label": "최댓값",
+       "depth": 2,
+       "box": [
+        383,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>A>최댓값"
+      },
+      {
+       "label": "평균",
+       "depth": 2,
+       "box": [
+        455,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>B>평균"
+      },
+      {
+       "label": "표준편차",
+       "depth": 2,
+       "box": [
+        526,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>B>표준편차"
+      },
+      {
+       "label": "최솟값",
+       "depth": 2,
+       "box": [
+        598,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>B>최솟값"
+      },
+      {
+       "label": "최댓값",
+       "depth": 2,
+       "box": [
+        669,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>B>최댓값"
+      },
+      {
+       "label": "평균",
+       "depth": 2,
+       "box": [
+        741,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>C>평균"
+      },
+      {
+       "label": "표준편차",
+       "depth": 2,
+       "box": [
+        812,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>C>표준편차"
+      },
+      {
+       "label": "최솟값",
+       "depth": 2,
+       "box": [
+        883,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>C>최솟값"
+      },
+      {
+       "label": "최댓값",
+       "depth": 2,
+       "box": [
+        955,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>C>최댓값"
+      },
+      {
+       "label": "평균",
+       "depth": 2,
+       "box": [
+        1026,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>D>평균"
+      },
+      {
+       "label": "표준편차",
+       "depth": 2,
+       "box": [
+        1098,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>D>표준편차"
+      },
+      {
+       "label": "최솟값",
+       "depth": 2,
+       "box": [
+        1169,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>D>최솟값"
+      },
+      {
+       "label": "최댓값",
+       "depth": 2,
+       "box": [
+        1241,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>D>최댓값"
+      },
+      {
+       "label": "평균",
+       "depth": 2,
+       "box": [
+        1312,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>E>평균"
+      },
+      {
+       "label": "표준편차",
+       "depth": 2,
+       "box": [
+        1384,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>E>표준편차"
+      },
+      {
+       "label": "최솟값",
+       "depth": 2,
+       "box": [
+        1455,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>E>최솟값"
+      },
+      {
+       "label": "최댓값",
+       "depth": 2,
+       "box": [
+        1527,
+        628,
+        71,
+        31
+       ],
+       "id": "col:그리드/성취수준>E>최댓값"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:예상추정분할점수조회",
+   "tab": "예상추정분할점수조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "정기시험추정분할점수산출관리 선택됨",
+     "box": [
+      25,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "정기시험추정분할점수산출관리",
+     "variant": "link",
+     "id": "button:정기시험추정분할점수산출관리"
+    },
+    {
+     "aria": "수행평가추정분할점수산출관리",
+     "box": [
+      562,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "수행평가추정분할점수산출관리",
+     "variant": "link",
+     "id": "button:수행평가추정분할점수산출관리"
+    },
+    {
+     "aria": "학기말 추정분할점수산출",
+     "box": [
+      1098,
+      71,
+      517,
+      60
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학기말 추정분할점수산출",
+     "variant": "link",
+     "id": "button:학기말 추정분할점수산출"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1175,
+      152,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      192,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "라운드",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:라운드"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      192,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "추정분할점수산출결과관리",
+     "box": [
+      1257,
+      435,
+      170,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추정분할점수산출결과관리",
+     "variant": "link",
+     "id": "button:추정분할점수산출결과관리"
+    },
+    {
+     "aria": "라운드등록",
+     "box": [
+      1435,
+      435,
+      86,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "라운드등록",
+     "variant": "secondary",
+     "id": "button:라운드등록"
+    },
+    {
+     "aria": "라운드삭제",
+     "box": [
+      1529,
+      435,
+      86,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "라운드삭제",
+     "variant": "secondary",
+     "id": "button:라운드삭제"
+    },
+    {
+     "aria": "4개의 탭이 있습니다.",
+     "box": [
+      25,
+      470,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "예상정답률입력",
+      "교사별입력정보조회",
+      "문항범주별조회",
+      "예상추정분할점수조회"
+     ],
+     "active": "예상추정분할점수조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "전과목 엑셀다운로드",
+     "box": [
+      1296,
+      525,
+      151,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전과목 엑셀다운로드",
+     "variant": "plain",
+     "id": "button:전과목 엑셀다운로드"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1455,
+      525,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      525,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "[통합산출] 예상추정분할점수조회",
+     "box": [
+      25,
+      535,
+      243,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "[통합산출] 예상추정분할점수조회",
+     "id": "heading:[통합산출] 예상추정분할점수조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      565,
+      1590,
+      249
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        26,
+        566,
+        454,
+        62
+       ],
+       "id": "col:그리드/구분"
+      },
+      {
+       "label": "성취수준",
+       "depth": 0,
+       "box": [
+        480,
+        566,
+        1134,
+        31
+       ],
+       "span": 5,
+       "id": "col:그리드/성취수준"
+      },
+      {
+       "label": "A/B",
+       "depth": 1,
+       "box": [
+        480,
+        597,
+        227,
+        31
+       ],
+       "id": "col:그리드/성취수준>A/B"
+      },
+      {
+       "label": "B/C",
+       "depth": 1,
+       "box": [
+        707,
+        597,
+        227,
+        31
+       ],
+       "id": "col:그리드/성취수준>B/C"
+      },
+      {
+       "label": "C/D",
+       "depth": 1,
+       "box": [
+        933,
+        597,
+        227,
+        31
+       ],
+       "id": "col:그리드/성취수준>C/D"
+      },
+      {
+       "label": "D/E",
+       "depth": 1,
+       "box": [
+        1160,
+        597,
+        227,
+        31
+       ],
+       "id": "col:그리드/성취수준>D/E"
+      },
+      {
+       "label": "E/미도달",
+       "depth": 1,
+       "box": [
+        1387,
+        597,
+        227,
+        31
+       ],
+       "id": "col:그리드/성취수준>E/미도달"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 분할점수 > 분할점수관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

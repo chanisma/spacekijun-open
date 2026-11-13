@@ -1,0 +1,1301 @@
+{
+ "schema": "neis-capture/1",
+ "key": "대입전형›대입전형#고등학교›제공현황조회›제공현황진행상황조회",
+ "name": "제공현황진행상황조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T11:27:49+00:00",
+ "collector": "collect.py@3",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:반별",
+   "tab": "반별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반별",
+      "학생별",
+      "대학별"
+     ],
+     "active": "반별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지원자구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:지원자구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업(예정)학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업(예정)학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1115,
+      137,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료온라인제공기간 : 2026.09.12.(부터) ~ 2026.12.17.(까지)",
+     "id": "note:※ 대입전형자료온라인제공기간 : 2026.09.12.(부터) ~ 2026.12.17.(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 제공현황 진행상태",
+     "id": "note:※ 제공현황 진행상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      383,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대학 대입전형자료 제공 진행 순서",
+     "id": "note:※ 대학 대입전형자료 제공 진행 순서"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      439,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ \"졸업생 온라인 개인 생성 신청\" 제공현황 진행상황은 조회되지 않습니다.",
+     "id": "note:※ \"졸업생 온라인 개인 생성 신청\" 제공현황 진행상황은 조회되지 않습니다."
+    },
+    {
+     "aria": "선택조회",
+     "box": [
+      1312,
+      523,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "선택조회",
+     "variant": "primary",
+     "id": "button:선택조회"
+    },
+    {
+     "aria": "전체조회",
+     "box": [
+      1383,
+      523,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체조회",
+     "variant": "primary",
+     "id": "button:전체조회"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1455,
+      523,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      523,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "반별제공현황진행상황(2027학년도-수시)",
+     "box": [
+      355,
+      533,
+      301,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "반별제공현황진행상황(2027학년도-수시)",
+     "id": "heading:반별제공현황진행상황(2027학년도-수시)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      563,
+      315,
+      251
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        564,
+        88,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        164,
+        564,
+        175,
+        36
+       ],
+       "id": "col:그리드/성명"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": "반별제공현황진행상황",
+     "box": [
+      355,
+      563,
+      1260,
+      211
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "반별제공현황진행상황",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "지원자",
+       "depth": 0,
+       "box": [
+        356,
+        564,
+        69,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/지원자"
+      },
+      {
+       "label": "졸업학년도",
+       "depth": 0,
+       "box": [
+        425,
+        564,
+        69,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/졸업학년도"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        494,
+        564,
+        69,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        562,
+        564,
+        57,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        620,
+        564,
+        57,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        677,
+        564,
+        92,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/성명"
+      },
+      {
+       "label": "대학",
+       "depth": 0,
+       "box": [
+        769,
+        564,
+        138,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/대학"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        906,
+        564,
+        90,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/진행상태"
+      },
+      {
+       "label": "모집시기",
+       "depth": 0,
+       "box": [
+        996,
+        564,
+        69,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/모집시기"
+      },
+      {
+       "label": "평가단위명",
+       "depth": 0,
+       "box": [
+        1065,
+        564,
+        138,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/평가단위명"
+      },
+      {
+       "label": "수험번호",
+       "depth": 0,
+       "box": [
+        1203,
+        564,
+        115,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/수험번호"
+      },
+      {
+       "label": "요청구분",
+       "depth": 0,
+       "box": [
+        1318,
+        564,
+        92,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/요청구분"
+      },
+      {
+       "label": "재요청사유",
+       "depth": 0,
+       "box": [
+        1409,
+        564,
+        115,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/재요청사유"
+      },
+      {
+       "label": "최종처리일시",
+       "depth": 0,
+       "box": [
+        1524,
+        564,
+        90,
+        40
+       ],
+       "id": "col:반별제공현황진행상황/최종처리일시"
+      }
+     ],
+     "id": "grid:반별제공현황진행상황"
+    },
+    {
+     "aria": null,
+     "box": [
+      541,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  },
+  {
+   "id": "tab:학생별",
+   "tab": "학생별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반별",
+      "학생별",
+      "대학별"
+     ],
+     "active": "학생별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지원자구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:지원자구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "진행상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:진행상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1235,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료온라인제공기간 : 2026.09.12.(부터) ~ 2026.12.17.(까지)",
+     "id": "note:※ 대입전형자료온라인제공기간 : 2026.09.12.(부터) ~ 2026.12.17.(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 제공현황 진행상태",
+     "id": "note:※ 제공현황 진행상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      383,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대학 대입전형자료 제공 진행 순서",
+     "id": "note:※ 대학 대입전형자료 제공 진행 순서"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      439,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ \"졸업생 온라인 개인 생성 신청\" 제공현황 진행상황은 조회되지 않습니다.",
+     "id": "note:※ \"졸업생 온라인 개인 생성 신청\" 제공현황 진행상황은 조회되지 않습니다."
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1455,
+      523,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      523,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "학생별제공현황진행상황(2027학년도-수시)",
+     "box": [
+      25,
+      533,
+      317,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생별제공현황진행상황(2027학년도-수시)",
+     "id": "heading:학생별제공현황진행상황(2027학년도-수시)"
+    },
+    {
+     "aria": "학생별제공현황진행상황",
+     "box": [
+      25,
+      563,
+      1590,
+      211
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생별제공현황진행상황",
+     "selectable": false,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "지원자",
+       "depth": 0,
+       "box": [
+        26,
+        564,
+        84,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/지원자"
+      },
+      {
+       "label": "졸업학년도",
+       "depth": 0,
+       "box": [
+        110,
+        564,
+        84,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/졸업학년도"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        195,
+        564,
+        169,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        364,
+        564,
+        70,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        434,
+        564,
+        70,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        505,
+        564,
+        113,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/성명"
+      },
+      {
+       "label": "대학",
+       "depth": 0,
+       "box": [
+        617,
+        564,
+        169,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/대학"
+      },
+      {
+       "label": "진행상태",
+       "depth": 0,
+       "box": [
+        786,
+        564,
+        90,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/진행상태"
+      },
+      {
+       "label": "모집시기",
+       "depth": 0,
+       "box": [
+        876,
+        564,
+        84,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/모집시기"
+      },
+      {
+       "label": "평가단위명",
+       "depth": 0,
+       "box": [
+        961,
+        564,
+        169,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/평가단위명"
+      },
+      {
+       "label": "수험번호",
+       "depth": 0,
+       "box": [
+        1130,
+        564,
+        141,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/수험번호"
+      },
+      {
+       "label": "요청구분",
+       "depth": 0,
+       "box": [
+        1271,
+        564,
+        113,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/요청구분"
+      },
+      {
+       "label": "재요청사유",
+       "depth": 0,
+       "box": [
+        1383,
+        564,
+        141,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/재요청사유"
+      },
+      {
+       "label": "최종처리일시",
+       "depth": 0,
+       "box": [
+        1524,
+        564,
+        90,
+        40
+       ],
+       "id": "col:학생별제공현황진행상황/최종처리일시"
+      }
+     ],
+     "id": "grid:학생별제공현황진행상황"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      786,
+      40,
+      25
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  },
+  {
+   "id": "tab:대학별",
+   "tab": "대학별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "반별",
+      "학생별",
+      "대학별"
+     ],
+     "active": "대학별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대입학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:대입학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "모집구분",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:모집구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "대학명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:대학명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      198,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대입전형자료온라인제공기간 : 2026.09.12.(부터) ~ 2026.12.17.(까지)",
+     "id": "note:※ 대입전형자료온라인제공기간 : 2026.09.12.(부터) ~ 2026.12.17.(까지)"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      217,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 제공현황 진행상태",
+     "id": "note:※ 제공현황 진행상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      383,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 대학 대입전형자료 제공 진행 순서",
+     "id": "note:※ 대학 대입전형자료 제공 진행 순서"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      439,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ \"졸업생 온라인 개인 생성 신청\" 제공현황 진행상황은 조회되지 않습니다.",
+     "id": "note:※ \"졸업생 온라인 개인 생성 신청\" 제공현황 진행상황은 조회되지 않습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      523,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      523,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "대학별제공현황진행상황(2027학년도-수시)",
+     "box": [
+      25,
+      533,
+      317,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "대학별제공현황진행상황(2027학년도-수시)",
+     "id": "heading:대학별제공현황진행상황(2027학년도-수시)"
+    },
+    {
+     "aria": "검증결과조회",
+     "box": [
+      25,
+      563,
+      1590,
+      251
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "검증결과조회",
+     "selectable": false,
+     "declaredColumns": 19,
+     "columns": [
+      {
+       "label": "대학",
+       "depth": 0,
+       "box": [
+        26,
+        564,
+        254,
+        112
+       ],
+       "id": "col:검증결과조회/대학"
+      },
+      {
+       "label": "금일진행상황",
+       "depth": 0,
+       "box": [
+        280,
+        564,
+        667,
+        40
+       ],
+       "span": 7,
+       "id": "col:검증결과조회/금일진행상황"
+      },
+      {
+       "label": "누계진행상황",
+       "depth": 0,
+       "box": [
+        947,
+        564,
+        667,
+        40
+       ],
+       "span": 7,
+       "id": "col:검증결과조회/누계진행상황"
+      },
+      {
+       "label": "요청접수",
+       "depth": 1,
+       "box": [
+        280,
+        604,
+        95,
+        72
+       ],
+       "id": "col:검증결과조회/금일진행상황>요청접수"
+      },
+      {
+       "label": "대입전형자료생성",
+       "depth": 1,
+       "box": [
+        375,
+        604,
+        286,
+        36
+       ],
+       "span": 3,
+       "id": "col:검증결과조회/금일진행상황>대입전형자료생성"
+      },
+      {
+       "label": "수신완료",
+       "depth": 1,
+       "box": [
+        661,
+        604,
+        95,
+        72
+       ],
+       "id": "col:검증결과조회/금일진행상황>수신완료"
+      },
+      {
+       "label": "블라인드자료 제공완료",
+       "depth": 1,
+       "box": [
+        756,
+        604,
+        95,
+        72
+       ],
+       "id": "col:검증결과조회/금일진행상황>블라인드자료 제공완료"
+      },
+      {
+       "label": "대입전형자료 제공완료",
+       "depth": 1,
+       "box": [
+        852,
+        604,
+        95,
+        72
+       ],
+       "id": "col:검증결과조회/금일진행상황>대입전형자료 제공완료"
+      },
+      {
+       "label": "요청접수",
+       "depth": 1,
+       "box": [
+        947,
+        604,
+        95,
+        72
+       ],
+       "id": "col:검증결과조회/누계진행상황>요청접수"
+      },
+      {
+       "label": "대입전형자료생성",
+       "depth": 1,
+       "box": [
+        1042,
+        604,
+        286,
+        36
+       ],
+       "span": 3,
+       "id": "col:검증결과조회/누계진행상황>대입전형자료생성"
+      },
+      {
+       "label": "수신완료",
+       "depth": 1,
+       "box": [
+        1328,
+        604,
+        95,
+        72
+       ],
+       "id": "col:검증결과조회/누계진행상황>수신완료"
+      },
+      {
+       "label": "블라인드자료 제공완료",
+       "depth": 1,
+       "box": [
+        1423,
+        604,
+        95,
+        72
+       ],
+       "id": "col:검증결과조회/누계진행상황>블라인드자료 제공완료"
+      },
+      {
+       "label": "대입전형자료 제공완료",
+       "depth": 1,
+       "box": [
+        1519,
+        604,
+        95,
+        72
+       ],
+       "id": "col:검증결과조회/누계진행상황>대입전형자료 제공완료"
+      },
+      {
+       "label": "생성완료",
+       "depth": 2,
+       "box": [
+        375,
+        640,
+        95,
+        36
+       ],
+       "id": "col:검증결과조회/금일진행상황>대입전형자료생성>생성완료"
+      },
+      {
+       "label": "대상학생없음",
+       "depth": 2,
+       "box": [
+        471,
+        640,
+        95,
+        36
+       ],
+       "id": "col:검증결과조회/금일진행상황>대입전형자료생성>대상학생없음"
+      },
+      {
+       "label": "미제공",
+       "depth": 2,
+       "box": [
+        566,
+        640,
+        95,
+        36
+       ],
+       "id": "col:검증결과조회/금일진행상황>대입전형자료생성>미제공"
+      },
+      {
+       "label": "생성완료",
+       "depth": 2,
+       "box": [
+        1042,
+        640,
+        95,
+        36
+       ],
+       "id": "col:검증결과조회/누계진행상황>대입전형자료생성>생성완료"
+      },
+      {
+       "label": "대상학생없음",
+       "depth": 2,
+       "box": [
+        1138,
+        640,
+        95,
+        36
+       ],
+       "id": "col:검증결과조회/누계진행상황>대입전형자료생성>대상학생없음"
+      },
+      {
+       "label": "미제공",
+       "depth": 2,
+       "box": [
+        1233,
+        640,
+        95,
+        36
+       ],
+       "id": "col:검증결과조회/누계진행상황>대입전형자료생성>미제공"
+      }
+     ],
+     "id": "grid:검증결과조회"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 대입전형 > 제공현황조회 > 제공현황진행상황조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

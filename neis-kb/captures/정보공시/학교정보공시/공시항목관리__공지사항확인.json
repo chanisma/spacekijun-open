@@ -1,0 +1,178 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시항목관리›공지사항확인",
+ "name": "공지사항확인",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:50:44+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공지연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공지연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "지역",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:지역"
+    },
+    {
+     "aria": null,
+     "box": [
+      735,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공지구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공지구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "총괄, 관할시도교육(지원)청에서 등록한 공지사항 정보",
+     "box": [
+      25,
+      163,
+      1590,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "총괄, 관할시도교육(지원)청에서 등록한 공지사항 정보",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        80,
+        36
+       ],
+       "id": "col:총괄, 관할시도교육(지원)청에서 등록한 공지사항 정보/번호"
+      },
+      {
+       "label": "공지구분",
+       "depth": 0,
+       "box": [
+        106,
+        164,
+        80,
+        36
+       ],
+       "id": "col:총괄, 관할시도교육(지원)청에서 등록한 공지사항 정보/공지구분"
+      },
+      {
+       "label": "제목",
+       "depth": 0,
+       "box": [
+        186,
+        164,
+        878,
+        36
+       ],
+       "id": "col:총괄, 관할시도교육(지원)청에서 등록한 공지사항 정보/제목"
+      },
+      {
+       "label": "지역",
+       "depth": 0,
+       "box": [
+        1064,
+        164,
+        200,
+        36
+       ],
+       "id": "col:총괄, 관할시도교육(지원)청에서 등록한 공지사항 정보/지역"
+      },
+      {
+       "label": "작성자",
+       "depth": 0,
+       "box": [
+        1264,
+        164,
+        200,
+        36
+       ],
+       "id": "col:총괄, 관할시도교육(지원)청에서 등록한 공지사항 정보/작성자"
+      },
+      {
+       "label": "등록일시",
+       "depth": 0,
+       "box": [
+        1464,
+        164,
+        150,
+        36
+       ],
+       "id": "col:총괄, 관할시도교육(지원)청에서 등록한 공지사항 정보/등록일시"
+      }
+     ],
+     "id": "grid:총괄, 관할시도교육(지원)청에서 등록한 공지사항 정보"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시항목관리 > 공지사항관리 > 공지사항확인",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

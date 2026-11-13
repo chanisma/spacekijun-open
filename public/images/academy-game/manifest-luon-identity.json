@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-13",
+  "reference": "/images/world-today/academy-observers.png",
+  "identity": "은백색 머리, 푸른 눈, 남색 금장 아카데미 제복의 루온. 기존 갈색 머리 스프라이트의 외형 오류를 수정.",
+  "assets": [
+    {
+      "key": "luon",
+      "file": "luon.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-97edadac-6b5e-46f6-bf09-2fa4eb9ee33b.png",
+      "prompt": "Create one 1024x1536 full-body isolated game character sprite of LUON matching the SILVER-HAIRED, BLUE-EYED MALE in the FIRST reference collage EXACTLY. His original identity is a handsome young adult male with soft wavy layered SILVER WHITE hair with center-parted bangs, clear pale BLUE eyes, refined gentle face and fair skin. The second reference is only for exact full-body pose and framing: one hand politely extended toward viewer, other hand at chest, tall slim adult male, whole head and feet inside canvas. REPLACE the wrong brown-haired identity completely with the original silver-haired man's likeness. Keep the navy and antique gold high-collared academy jacket design from FIRST reference with cream shirt, ivory fitted trousers and tall dark boots. Exquisite detailed Korean romantic fantasy manhwa illustration, elegant painterly rendering matching first reference, gentle assured expression. ONE man only, NOT a collage, no woman. His face should look exactly like the silver-haired young man in first reference, not the brown-haired man. Transparent PNG RGBA, completely empty transparent alpha outside the figure, no background, no checkerboard pattern, no ground, no halo or shadow. All hair and fingertips and soles fully inside canvas with a small margin.",
+      "status": "ready",
+      "postprocess": "User-authorized local MODNet alpha matting; RGB preserved. See prepare-outfit-alpha.mjs."
+    },
+    {
+      "key": "luon-blue",
+      "file": "luon-blue.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-56c60d1a-b842-419b-89ee-84efe0007a67.png",
+      "prompt": "Edit FIRST reference character into his blue ceremonial outfit. Preserve EXACT same silver-white layered wavy hair, blue eyes, face anatomy and expression from FIRST image, same full body hand extended pose, same tall adult male proportions and 1024x1536 canvas. FIRST reference is canonical LUON identity. SECOND reference is CLOTHING inspiration ONLY: replace his dark navy jacket with royal cobalt blue velvet long jacket with antique gold constellation embroidery and ivory damask waistcoat, charcoal trousers, black boots. Never adopt the brown hair or purple eyes of second reference; character MUST have the first reference's silver-white hair and pale BLUE eyes. Korean romance fantasy manhwa elegant detailed painterly style. Full head, hands, feet inside frame. One character cutout. PNG with genuinely transparent alpha outside the person. No checkerboard no cloth texture no pattern no background no halo no ground no text.",
+      "status": "ready",
+      "postprocess": "User-authorized local MODNet alpha matting; RGB preserved. See prepare-outfit-alpha.mjs."
+    },
+    {
+      "key": "prologue-arrival",
+      "file": "prologue-arrival.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-3c02c41c-75ec-492b-9f4d-cf10bddc3c54.png",
+      "prompt": "Edit the FIRST image (the prologue academy arrival scene). Change ONLY the male guide Luon's identity and costume to match the SILVER-HAIRED man in the SECOND reference: silver-white wavy layered center-parted hair, pale BLUE eyes, refined gentle face, navy and gold high collar coat, ivory trousers. Use SECOND reference as the canonical Luon face and clothing model. Keep him in exactly the existing pose welcoming Ria with one hand extended, tall beside the smaller heroine. Ria's face, brown hair, violet eyes, purple dress, pose, notebook, all background architecture, flowers, lighting, composition and canvas1536x1024 must remain the same. No brown hair or purple eyes on the man. Preserve detailed romantic fantasy painterly manhwa art. Finished opaque illustration, no transparency no checkerboard no labels no text.",
+      "status": "ready",
+      "refs": [
+        "prologue-arrival.png (previous version)",
+        "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-97edadac-6b5e-46f6-bf09-2fa4eb9ee33b.png"
+      ]
+    },
+    {
+      "key": "prologue-notebook",
+      "file": "prologue-notebook.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-60d60a12-5a19-4c24-9f72-7928d2b2abc7.png",
+      "prompt": "Edit the FIRST image (Ria writing in the prologue). Correct ONLY Luon, the taller male beside her holding a gold star lantern. Replace his brown hair/purple eyes/wrong face with the exact SILVER-WHITE wavy layered hair, pale BLUE eyes and refined gentle face of the male in SECOND reference. Match second reference navy antique-gold high collar academy coat and cream trousers. Preserve his lantern-holding pose helping Ria, the heroine actively writing with quill, heroine face/body/hair/dress entirely unchanged, composition, sunset, architecture, stone balustrade and book, exact 1536x1024 canvas. His hair MUST be silver white, eyes BLUE. Finished opaque romantic fantasy manhwa painterly illustration. No text, no new objects, no watermark.",
+      "status": "ready",
+      "refs": [
+        "prologue-notebook.png (previous version)",
+        "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-97edadac-6b5e-46f6-bf09-2fa4eb9ee33b.png"
+      ]
+    }
+  ]
+}

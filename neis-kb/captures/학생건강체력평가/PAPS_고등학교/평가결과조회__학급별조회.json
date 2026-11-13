@@ -1,0 +1,2147 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생건강체력평가›PAPS#고등학교›평가결과조회›학급별조회",
+ "name": "학급별조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:12:29+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:건강체력평가",
+   "tab": "건강체력평가",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      420,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      665,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      915,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전출교의 측정결과는 평가지로 보실 수 없습니다.",
+     "id": "note:※ 전출교의 측정결과는 평가지로 보실 수 없습니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "건강체력평가",
+      "심폐지구력정밀평가",
+      "체지방률평가",
+      "자세평가",
+      "자기신체평가"
+     ],
+     "active": "건강체력평가",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1267,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계",
+     "variant": "primary",
+     "id": "button:통계"
+    },
+    {
+     "aria": null,
+     "box": [
+      1315,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1363,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지앞면",
+     "variant": "link",
+     "id": "button:평가지앞면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지뒷면",
+     "variant": "link",
+     "id": "button:평가지뒷면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1530,
+      226,
+      85,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지(양면)",
+     "variant": "link",
+     "id": "button:평가지(양면)"
+    },
+    {
+     "aria": "건강체력평가 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "건강체력평가 목록",
+     "selectable": true,
+     "declaredColumns": 32,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        64,
+        267,
+        54,
+        124
+       ],
+       "id": "col:건강체력평가 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        118,
+        267,
+        99,
+        124
+       ],
+       "id": "col:건강체력평가 목록/성명"
+      },
+      {
+       "label": "건강체력평가",
+       "depth": 0,
+       "box": [
+        217,
+        267,
+        90,
+        31
+       ],
+       "span": 2,
+       "id": "col:건강체력평가 목록/건강체력평가"
+      },
+      {
+       "label": "심폐지구력",
+       "depth": 0,
+       "box": [
+        307,
+        267,
+        315,
+        31
+       ],
+       "span": 5,
+       "id": "col:건강체력평가 목록/심폐지구력"
+      },
+      {
+       "label": "유연성",
+       "depth": 0,
+       "box": [
+        622,
+        267,
+        240,
+        31
+       ],
+       "span": 4,
+       "id": "col:건강체력평가 목록/유연성"
+      },
+      {
+       "label": "근력ㆍ근지구력",
+       "depth": 0,
+       "box": [
+        862,
+        267,
+        315,
+        31
+       ],
+       "span": 5,
+       "id": "col:건강체력평가 목록/근력ㆍ근지구력"
+      },
+      {
+       "label": "순발력",
+       "depth": 0,
+       "box": [
+        1177,
+        267,
+        240,
+        31
+       ],
+       "span": 4,
+       "id": "col:건강체력평가 목록/순발력"
+      },
+      {
+       "label": "비만",
+       "depth": 0,
+       "box": [
+        1417,
+        267,
+        181,
+        31
+       ],
+       "span": 3,
+       "id": "col:건강체력평가 목록/비만"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        217,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/건강체력평가>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        262,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/건강체력평가>등급"
+      },
+      {
+       "label": "왕복오래 달리기 (회)",
+       "depth": 1,
+       "box": [
+        307,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/심폐지구력>왕복오래 달리기 (회)"
+      },
+      {
+       "label": "오래달리기 걷기 (분,초)",
+       "depth": 1,
+       "box": [
+        382,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/심폐지구력>오래달리기 걷기 (분,초)"
+      },
+      {
+       "label": "스텝검사 (PEI)",
+       "depth": 1,
+       "box": [
+        457,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/심폐지구력>스텝검사 (PEI)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        532,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/심폐지구력>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        577,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/심폐지구력>등급"
+      },
+      {
+       "label": "앉아윗몸 앞으로굽히기 (cm)",
+       "depth": 1,
+       "box": [
+        622,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/유연성>앉아윗몸 앞으로굽히기 (cm)"
+      },
+      {
+       "label": "종합 유연성 (점)",
+       "depth": 1,
+       "box": [
+        697,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/유연성>종합 유연성 (점)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        772,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/유연성>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        817,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/유연성>등급"
+      },
+      {
+       "label": "(무릎대고) 팔굽혀펴기 (회)",
+       "depth": 1,
+       "box": [
+        862,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/근력ㆍ근지구력>(무릎대고) 팔굽혀펴기 (회)"
+      },
+      {
+       "label": "윗몸말아 올리기 (회)",
+       "depth": 1,
+       "box": [
+        937,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/근력ㆍ근지구력>윗몸말아 올리기 (회)"
+      },
+      {
+       "label": "악력 (Kg)",
+       "depth": 1,
+       "box": [
+        1012,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/근력ㆍ근지구력>악력 (Kg)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1087,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/근력ㆍ근지구력>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1132,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/근력ㆍ근지구력>등급"
+      },
+      {
+       "label": "50달리기 (초)",
+       "depth": 1,
+       "box": [
+        1177,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/순발력>50달리기 (초)"
+      },
+      {
+       "label": "제자리 멀리뛰기 (cm)",
+       "depth": 1,
+       "box": [
+        1252,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/순발력>제자리 멀리뛰기 (cm)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1327,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/순발력>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1372,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/순발력>등급"
+      },
+      {
+       "label": "BMI (kg/㎡)",
+       "depth": 1,
+       "box": [
+        1417,
+        298,
+        75,
+        93
+       ],
+       "id": "col:건강체력평가 목록/비만>BMI (kg/㎡)"
+      },
+      {
+       "label": "점수",
+       "depth": 1,
+       "box": [
+        1492,
+        298,
+        45,
+        93
+       ],
+       "id": "col:건강체력평가 목록/비만>점수"
+      },
+      {
+       "label": "등급",
+       "depth": 1,
+       "box": [
+        1537,
+        298,
+        61,
+        93
+       ],
+       "id": "col:건강체력평가 목록/비만>등급"
+      }
+     ],
+     "id": "grid:건강체력평가 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:심폐지구력정밀평가",
+   "tab": "심폐지구력정밀평가",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      420,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      665,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      915,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전출교의 측정결과는 평가지로 보실 수 없습니다.",
+     "id": "note:※ 전출교의 측정결과는 평가지로 보실 수 없습니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "건강체력평가",
+      "심폐지구력정밀평가",
+      "체지방률평가",
+      "자세평가",
+      "자기신체평가"
+     ],
+     "active": "심폐지구력정밀평가",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1207,
+      226,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "그래프",
+     "variant": "primary",
+     "id": "button:그래프"
+    },
+    {
+     "aria": null,
+     "box": [
+      1267,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계",
+     "variant": "primary",
+     "id": "button:통계"
+    },
+    {
+     "aria": null,
+     "box": [
+      1315,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1363,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지앞면",
+     "variant": "link",
+     "id": "button:평가지앞면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지뒷면",
+     "variant": "link",
+     "id": "button:평가지뒷면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1530,
+      226,
+      85,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지(양면)",
+     "variant": "link",
+     "id": "button:평가지(양면)"
+    },
+    {
+     "aria": "심폐지구력정밀평가 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "심폐지구력정밀평가 목록",
+     "selectable": true,
+     "declaredColumns": 21,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        267,
+        52,
+        155
+       ],
+       "id": "col:심폐지구력정밀평가 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        128,
+        267,
+        105,
+        155
+       ],
+       "id": "col:심폐지구력정밀평가 목록/성명"
+      },
+      {
+       "label": "3분운동",
+       "depth": 0,
+       "box": [
+        233,
+        267,
+        945,
+        31
+       ],
+       "span": 9,
+       "id": "col:심폐지구력정밀평가 목록/3분운동"
+      },
+      {
+       "label": "3분휴식",
+       "depth": 0,
+       "box": [
+        1178,
+        267,
+        420,
+        31
+       ],
+       "span": 4,
+       "id": "col:심폐지구력정밀평가 목록/3분휴식"
+      },
+      {
+       "label": "심박수 (회/분)",
+       "depth": 1,
+       "box": [
+        233,
+        298,
+        210,
+        62
+       ],
+       "span": 2,
+       "id": "col:심폐지구력정밀평가 목록/3분운동>심박수 (회/분)"
+      },
+      {
+       "label": "운동강도 (%)",
+       "depth": 1,
+       "box": [
+        443,
+        298,
+        105,
+        62
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>운동강도 (%)"
+      },
+      {
+       "label": "총 소비열량 (kcal)",
+       "depth": 1,
+       "box": [
+        548,
+        298,
+        105,
+        124
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>총 소비열량 (kcal)"
+      },
+      {
+       "label": "구간별 운동시간(초)",
+       "depth": 1,
+       "box": [
+        653,
+        298,
+        525,
+        62
+       ],
+       "span": 5,
+       "id": "col:심폐지구력정밀평가 목록/3분운동>구간별 운동시간(초)"
+      },
+      {
+       "label": "심박수1 (회/분)",
+       "depth": 1,
+       "box": [
+        1178,
+        298,
+        105,
+        124
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분휴식>심박수1 (회/분)"
+      },
+      {
+       "label": "심박수2 (회/분)",
+       "depth": 1,
+       "box": [
+        1283,
+        298,
+        105,
+        124
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분휴식>심박수2 (회/분)"
+      },
+      {
+       "label": "심박수3 (회/분)",
+       "depth": 1,
+       "box": [
+        1388,
+        298,
+        105,
+        124
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분휴식>심박수3 (회/분)"
+      },
+      {
+       "label": "PEI",
+       "depth": 1,
+       "box": [
+        1493,
+        298,
+        105,
+        124
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분휴식>PEI"
+      },
+      {
+       "label": "평균",
+       "depth": 2,
+       "box": [
+        233,
+        360,
+        105,
+        62
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>심박수 (회/분)>평균"
+      },
+      {
+       "label": "최고",
+       "depth": 2,
+       "box": [
+        338,
+        360,
+        105,
+        62
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>심박수 (회/분)>최고"
+      },
+      {
+       "label": "평균",
+       "depth": 2,
+       "box": [
+        443,
+        360,
+        105,
+        62
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>운동강도 (%)>평균"
+      },
+      {
+       "label": "1구간",
+       "depth": 2,
+       "box": [
+        653,
+        360,
+        105,
+        62
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>구간별 운동시간(초)>1구간"
+      },
+      {
+       "label": "2구간",
+       "depth": 2,
+       "box": [
+        758,
+        360,
+        105,
+        62
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>구간별 운동시간(초)>2구간"
+      },
+      {
+       "label": "3구간",
+       "depth": 2,
+       "box": [
+        863,
+        360,
+        105,
+        62
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>구간별 운동시간(초)>3구간"
+      },
+      {
+       "label": "4구간",
+       "depth": 2,
+       "box": [
+        968,
+        360,
+        105,
+        62
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>구간별 운동시간(초)>4구간"
+      },
+      {
+       "label": "5구간",
+       "depth": 2,
+       "box": [
+        1073,
+        360,
+        105,
+        62
+       ],
+       "id": "col:심폐지구력정밀평가 목록/3분운동>구간별 운동시간(초)>5구간"
+      }
+     ],
+     "id": "grid:심폐지구력정밀평가 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:체지방률평가",
+   "tab": "체지방률평가",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      420,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      665,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      915,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전출교의 측정결과는 평가지로 보실 수 없습니다.",
+     "id": "note:※ 전출교의 측정결과는 평가지로 보실 수 없습니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "건강체력평가",
+      "심폐지구력정밀평가",
+      "체지방률평가",
+      "자세평가",
+      "자기신체평가"
+     ],
+     "active": "체지방률평가",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1267,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계",
+     "variant": "primary",
+     "id": "button:통계"
+    },
+    {
+     "aria": null,
+     "box": [
+      1315,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1363,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지앞면",
+     "variant": "link",
+     "id": "button:평가지앞면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지뒷면",
+     "variant": "link",
+     "id": "button:평가지뒷면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1530,
+      226,
+      85,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지(양면)",
+     "variant": "link",
+     "id": "button:평가지(양면)"
+    },
+    {
+     "aria": "체지방률평가 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "체지방률평가 목록",
+     "selectable": true,
+     "declaredColumns": 21,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        267,
+        56,
+        62
+       ],
+       "id": "col:체지방률평가 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        132,
+        267,
+        113,
+        62
+       ],
+       "id": "col:체지방률평가 목록/성명"
+      },
+      {
+       "label": "키(cm)",
+       "depth": 0,
+       "box": [
+        245,
+        267,
+        225,
+        31
+       ],
+       "span": 2,
+       "id": "col:체지방률평가 목록/키(cm)"
+      },
+      {
+       "label": "몸무게(kg)",
+       "depth": 0,
+       "box": [
+        471,
+        267,
+        225,
+        31
+       ],
+       "span": 2,
+       "id": "col:체지방률평가 목록/몸무게(kg)"
+      },
+      {
+       "label": "BMI(kg/㎡)",
+       "depth": 0,
+       "box": [
+        696,
+        267,
+        225,
+        31
+       ],
+       "span": 2,
+       "id": "col:체지방률평가 목록/BMI(kg/㎡)"
+      },
+      {
+       "label": "체지방률(%fat)",
+       "depth": 0,
+       "box": [
+        922,
+        267,
+        225,
+        31
+       ],
+       "span": 2,
+       "id": "col:체지방률평가 목록/체지방률(%fat)"
+      },
+      {
+       "label": "근육량(%)",
+       "depth": 0,
+       "box": [
+        1147,
+        267,
+        225,
+        31
+       ],
+       "span": 2,
+       "id": "col:체지방률평가 목록/근육량(%)"
+      },
+      {
+       "label": "지방량(%)",
+       "depth": 0,
+       "box": [
+        1373,
+        267,
+        225,
+        31
+       ],
+       "span": 2,
+       "id": "col:체지방률평가 목록/지방량(%)"
+      },
+      {
+       "label": "값",
+       "depth": 1,
+       "box": [
+        245,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/키(cm)>값"
+      },
+      {
+       "label": "평가",
+       "depth": 1,
+       "box": [
+        358,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/키(cm)>평가"
+      },
+      {
+       "label": "값",
+       "depth": 1,
+       "box": [
+        471,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/몸무게(kg)>값"
+      },
+      {
+       "label": "평가",
+       "depth": 1,
+       "box": [
+        583,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/몸무게(kg)>평가"
+      },
+      {
+       "label": "값",
+       "depth": 1,
+       "box": [
+        696,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/BMI(kg/㎡)>값"
+      },
+      {
+       "label": "평가",
+       "depth": 1,
+       "box": [
+        809,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/BMI(kg/㎡)>평가"
+      },
+      {
+       "label": "값",
+       "depth": 1,
+       "box": [
+        922,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/체지방률(%fat)>값"
+      },
+      {
+       "label": "평가",
+       "depth": 1,
+       "box": [
+        1034,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/체지방률(%fat)>평가"
+      },
+      {
+       "label": "값",
+       "depth": 1,
+       "box": [
+        1147,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/근육량(%)>값"
+      },
+      {
+       "label": "평가",
+       "depth": 1,
+       "box": [
+        1260,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/근육량(%)>평가"
+      },
+      {
+       "label": "값",
+       "depth": 1,
+       "box": [
+        1373,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/지방량(%)>값"
+      },
+      {
+       "label": "평가",
+       "depth": 1,
+       "box": [
+        1485,
+        298,
+        113,
+        31
+       ],
+       "id": "col:체지방률평가 목록/지방량(%)>평가"
+      }
+     ],
+     "id": "grid:체지방률평가 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:자세평가",
+   "tab": "자세평가",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      420,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      665,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      915,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전출교의 측정결과는 평가지로 보실 수 없습니다.",
+     "id": "note:※ 전출교의 측정결과는 평가지로 보실 수 없습니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "건강체력평가",
+      "심폐지구력정밀평가",
+      "체지방률평가",
+      "자세평가",
+      "자기신체평가"
+     ],
+     "active": "자세평가",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1267,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계",
+     "variant": "primary",
+     "id": "button:통계"
+    },
+    {
+     "aria": null,
+     "box": [
+      1315,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1363,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지앞면",
+     "variant": "link",
+     "id": "button:평가지앞면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지뒷면",
+     "variant": "link",
+     "id": "button:평가지뒷면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1530,
+      226,
+      85,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지(양면)",
+     "variant": "link",
+     "id": "button:평가지(양면)"
+    },
+    {
+     "aria": "자세평가 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "자세평가 목록",
+     "selectable": true,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        267,
+        66,
+        36
+       ],
+       "id": "col:자세평가 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        142,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/성명"
+      },
+      {
+       "label": "문진1",
+       "depth": 0,
+       "box": [
+        275,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/문진1"
+      },
+      {
+       "label": "문진2",
+       "depth": 0,
+       "box": [
+        407,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/문진2"
+      },
+      {
+       "label": "어깨 기울기",
+       "depth": 0,
+       "box": [
+        539,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/어깨 기울기"
+      },
+      {
+       "label": "골반 기울기",
+       "depth": 0,
+       "box": [
+        672,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/골반 기울기"
+      },
+      {
+       "label": "다리 굴곡",
+       "depth": 0,
+       "box": [
+        804,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/다리 굴곡"
+      },
+      {
+       "label": "목뼈 기울기",
+       "depth": 0,
+       "box": [
+        936,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/목뼈 기울기"
+      },
+      {
+       "label": "상체 기울기",
+       "depth": 0,
+       "box": [
+        1069,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/상체 기울기"
+      },
+      {
+       "label": "골반전후 기울기",
+       "depth": 0,
+       "box": [
+        1201,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/골반전후 기울기"
+      },
+      {
+       "label": "척추 휨정도",
+       "depth": 0,
+       "box": [
+        1333,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/척추 휨정도"
+      },
+      {
+       "label": "평가",
+       "depth": 0,
+       "box": [
+        1466,
+        267,
+        132,
+        36
+       ],
+       "id": "col:자세평가 목록/평가"
+      }
+     ],
+     "id": "grid:자세평가 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:자기신체평가",
+   "tab": "자기신체평가",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      420,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      665,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      915,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "측정회차",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:측정회차"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 전출교의 측정결과는 평가지로 보실 수 없습니다.",
+     "id": "note:※ 전출교의 측정결과는 평가지로 보실 수 없습니다."
+    },
+    {
+     "aria": "5개의 탭이 있습니다.",
+     "box": [
+      25,
+      171,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "건강체력평가",
+      "심폐지구력정밀평가",
+      "체지방률평가",
+      "자세평가",
+      "자기신체평가"
+     ],
+     "active": "자기신체평가",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1267,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계",
+     "variant": "primary",
+     "id": "button:통계"
+    },
+    {
+     "aria": null,
+     "box": [
+      1315,
+      226,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1363,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지앞면",
+     "variant": "link",
+     "id": "button:평가지앞면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      226,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지뒷면",
+     "variant": "link",
+     "id": "button:평가지뒷면"
+    },
+    {
+     "aria": null,
+     "box": [
+      1530,
+      226,
+      85,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "평가지(양면)",
+     "variant": "link",
+     "id": "button:평가지(양면)"
+    },
+    {
+     "aria": "자기신체평가 목록",
+     "box": [
+      25,
+      266,
+      1590,
+      548
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "자기신체평가 목록",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        76,
+        267,
+        61,
+        36
+       ],
+       "id": "col:자기신체평가 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        137,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/성명"
+      },
+      {
+       "label": "총점",
+       "depth": 0,
+       "box": [
+        259,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/총점"
+      },
+      {
+       "label": "심폐지구력",
+       "depth": 0,
+       "box": [
+        380,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/심폐지구력"
+      },
+      {
+       "label": "유연성",
+       "depth": 0,
+       "box": [
+        502,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/유연성"
+      },
+      {
+       "label": "근력ㆍ근지구력",
+       "depth": 0,
+       "box": [
+        624,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/근력ㆍ근지구력"
+      },
+      {
+       "label": "체지방",
+       "depth": 0,
+       "box": [
+        746,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/체지방"
+      },
+      {
+       "label": "신체활동",
+       "depth": 0,
+       "box": [
+        867,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/신체활동"
+      },
+      {
+       "label": "스포츠자신감",
+       "depth": 0,
+       "box": [
+        989,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/스포츠자신감"
+      },
+      {
+       "label": "외모",
+       "depth": 0,
+       "box": [
+        1111,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/외모"
+      },
+      {
+       "label": "건강",
+       "depth": 0,
+       "box": [
+        1233,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/건강"
+      },
+      {
+       "label": "신체전반",
+       "depth": 0,
+       "box": [
+        1354,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/신체전반"
+      },
+      {
+       "label": "자기존중감",
+       "depth": 0,
+       "box": [
+        1476,
+        267,
+        122,
+        36
+       ],
+       "id": "col:자기신체평가 목록/자기존중감"
+      }
+     ],
+     "id": "grid:자기신체평가 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학생건강체력평가}PAPS > 평가결과조회 > 학급별조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

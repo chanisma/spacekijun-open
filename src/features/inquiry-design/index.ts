@@ -1,0 +1,1 @@
+export { InquiryDesignPage } from './InquiryDesignPage';

@@ -1,0 +1,64 @@
+/* Parallax pixel stars — adapted from Saransh Sinha's CodePen pattern.
+ * Source idea: https://gist.github.com/mauriciorodriguezgit/be154a58d332d8f16d0b8675b81c98e7
+ *
+ * Three layers of 1-3px white dots drift upward at different speeds for
+ * a depth-of-field parallax. Each layer is rendered twice (clone offset
+ * by 2000px) so the animation seamlessly loops without gaps. Box-shadow
+ * coordinates are produced once on mount in React (useMemo) and passed
+ * as inline `box-shadow` style, mirroring the SCSS @function approach.
+ */
+
+.starfield {
+  position: relative;
+  /* Indigo-tinted cosmos so the background shares a hue family with the brand
+   * accent (Tailwind `brand`/indigo). Base shifts from neutral slate to a deep
+   * indigo-navy; stars stay white. */
+  /* 캔버스가 `--kg-sky` 로 바꿀 수 있다(아카데미 별자리는 자주빛 밤). 변수가 없으면 종전 색. */
+  background: var(--kg-sky, radial-gradient(ellipse at bottom, #1a1a2e 0%, #0a0a12 100%));
+  overflow: hidden;
+}
+
+.starfield-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.starfield-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  will-change: transform;
+}
+
+.starfield-layer--medium { width: 2px; height: 2px; }
+.starfield-layer--large  { width: 3px; height: 3px; }
+
+.starfield-layer--small,
+.starfield-layer--small.starfield-layer--clone   { animation: starfield-drift 240s linear infinite; }
+.starfield-layer--medium,
+.starfield-layer--medium.starfield-layer--clone  { animation: starfield-drift 480s linear infinite; }
+.starfield-layer--large,
+.starfield-layer--large.starfield-layer--clone   { animation: starfield-drift 720s linear infinite; }
+
+.starfield-layer--clone { top: 2000px; }
+
+@keyframes starfield-drift {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-2000px); }
+}
+
+/* OS 의 «동작 줄이기»는 탐구 설계 화면에만 따른다. 아카데미 별자리(data-chrome-theme="constellation")는
+ * 게임의 ✦ 단추가 유일한 스위치다(2026-09-14 사용자 결정 — AcademyGame 의 REDUCED_MOTION_KEY 주석). 이 미디어 쿼리가
+ * 남아 있어 OS 설정이 켜진 기기에서는 단추를 꺼도 별이 멈춰 있었다(2026-10-04 «localhost 는 되는데 배포 사이트는 안 움직인다»
+ * — 같은 빌드 CSS 로 재 보니 OS 설정 off = 움직임, on = 멈춤. 빌드 문제가 아니라 보는 환경의 OS 설정이었다).
+ * 게임의 단추가 켜지면 game.module.css 의 [data-reduced=true] * 가 따로 멈춘다. */
+@media (prefers-reduced-motion: reduce) {
+  .starfield:not([data-chrome-theme='constellation']) .starfield-layer,
+  .starfield:not([data-chrome-theme='constellation']) .starfield-layer--clone { animation: none; }
+}

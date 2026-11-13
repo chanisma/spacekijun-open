@@ -1,0 +1,730 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생부›정정대장관리›정정대장이력조회",
+ "name": "정정대장이력조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:40:25+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:항목별",
+   "tab": "항목별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2 개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "항목별",
+      "개인별"
+     ],
+     "active": "항목별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "학년도",
+     "box": [
+      135,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      315,
+      137,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:정정일자"
+    },
+    {
+     "aria": "시작일자 빼기",
+     "box": [
+      451,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "시작일자 빼기",
+     "variant": "plain",
+     "id": "button:시작일자 빼기"
+    },
+    {
+     "aria": "시작일자 더하기",
+     "box": [
+      481,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "시작일자 더하기",
+     "variant": "plain",
+     "id": "button:시작일자 더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      137,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:정정일자~"
+    },
+    {
+     "aria": "종료일자 빼기",
+     "box": [
+      680,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "종료일자 빼기",
+     "variant": "plain",
+     "id": "button:종료일자 빼기"
+    },
+    {
+     "aria": "종료일자 더하기",
+     "box": [
+      710,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "종료일자 더하기",
+     "variant": "plain",
+     "id": "button:종료일자 더하기"
+    },
+    {
+     "aria": "항목",
+     "box": [
+      865,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "항목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:항목"
+    },
+    {
+     "aria": "성명",
+     "box": [
+      1165,
+      137,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "성명 검색",
+     "box": [
+      1325,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "성명 검색",
+     "variant": "link",
+     "id": "button:성명 검색"
+    },
+    {
+     "aria": "되돌리기",
+     "box": [
+      1365,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "되돌리기",
+     "variant": "secondary",
+     "id": "button:되돌리기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1521,
+      137,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1503,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "학년이력",
+     "box": [
+      25,
+      208,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학년이력",
+     "id": "heading:학년이력"
+    },
+    {
+     "aria": "학년이력 그리드",
+     "box": [
+      25,
+      248,
+      1590,
+      565
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학년이력 그리드",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "정정연월일",
+       "depth": 0,
+       "box": [
+        26,
+        249,
+        121,
+        62
+       ],
+       "id": "col:학년이력 그리드/정정연월일"
+      },
+      {
+       "label": "정정대상자",
+       "depth": 0,
+       "box": [
+        147,
+        249,
+        339,
+        31
+       ],
+       "span": 2,
+       "id": "col:학년이력 그리드/정정대상자"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        487,
+        249,
+        97,
+        62
+       ],
+       "id": "col:학년이력 그리드/구분"
+      },
+      {
+       "label": "정정사항",
+       "depth": 0,
+       "box": [
+        584,
+        249,
+        1030,
+        31
+       ],
+       "span": 7,
+       "id": "col:학년이력 그리드/정정사항"
+      },
+      {
+       "label": "학년도,학년,반,번호",
+       "depth": 1,
+       "box": [
+        147,
+        280,
+        218,
+        31
+       ],
+       "id": "col:학년이력 그리드/정정대상자>학년도,학년,반,번호"
+      },
+      {
+       "label": "학생명",
+       "depth": 1,
+       "box": [
+        365,
+        280,
+        121,
+        31
+       ],
+       "id": "col:학년이력 그리드/정정대상자>학생명"
+      },
+      {
+       "label": "변동일자",
+       "depth": 1,
+       "box": [
+        584,
+        280,
+        182,
+        31
+       ],
+       "id": "col:학년이력 그리드/정정사항>변동일자"
+      },
+      {
+       "label": "학년도",
+       "depth": 1,
+       "box": [
+        765,
+        280,
+        121,
+        31
+       ],
+       "id": "col:학년이력 그리드/정정사항>학년도"
+      },
+      {
+       "label": "학년",
+       "depth": 1,
+       "box": [
+        887,
+        280,
+        121,
+        31
+       ],
+       "id": "col:학년이력 그리드/정정사항>학년"
+      },
+      {
+       "label": "학과",
+       "depth": 1,
+       "box": [
+        1008,
+        280,
+        182,
+        31
+       ],
+       "id": "col:학년이력 그리드/정정사항>학과"
+      },
+      {
+       "label": "반",
+       "depth": 1,
+       "box": [
+        1190,
+        280,
+        121,
+        31
+       ],
+       "id": "col:학년이력 그리드/정정사항>반"
+      },
+      {
+       "label": "번호",
+       "depth": 1,
+       "box": [
+        1311,
+        280,
+        121,
+        31
+       ],
+       "id": "col:학년이력 그리드/정정사항>번호"
+      },
+      {
+       "label": "담임성명",
+       "depth": 1,
+       "box": [
+        1432,
+        280,
+        182,
+        31
+       ],
+       "id": "col:학년이력 그리드/정정사항>담임성명"
+      }
+     ],
+     "id": "grid:학년이력 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:개인별",
+   "tab": "개인별",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "2 개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "항목별",
+      "개인별"
+     ],
+     "active": "개인별",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:정정일자"
+    },
+    {
+     "aria": "시작일자 빼기",
+     "box": [
+      311,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "시작일자 빼기",
+     "variant": "plain",
+     "id": "button:시작일자 빼기"
+    },
+    {
+     "aria": "시작일자 더하기",
+     "box": [
+      341,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "시작일자 더하기",
+     "variant": "plain",
+     "id": "button:시작일자 더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      404,
+      137,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "정정일자~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:정정일자~"
+    },
+    {
+     "aria": "종료일자 빼기",
+     "box": [
+      540,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "종료일자 빼기",
+     "variant": "plain",
+     "id": "button:종료일자 빼기"
+    },
+    {
+     "aria": "종료일자 더하기",
+     "box": [
+      570,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "종료일자 더하기",
+     "variant": "plain",
+     "id": "button:종료일자 더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      810,
+      137,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      970,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색"
+    },
+    {
+     "aria": "되돌리기",
+     "box": [
+      1010,
+      137,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "되돌리기",
+     "variant": "secondary",
+     "id": "button:되돌리기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀다운로드",
+     "box": [
+      1503,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀다운로드",
+     "variant": "plain",
+     "id": "button:엑셀다운로드"
+    },
+    {
+     "aria": "개인별 정정이력조회 그리드 ",
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "개인별 정정이력조회 그리드",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "변경학교",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        132,
+        62
+       ],
+       "id": "col:개인별 정정이력조회 그리드/변경학교"
+      },
+      {
+       "label": "정정연월일",
+       "depth": 0,
+       "box": [
+        158,
+        239,
+        132,
+        62
+       ],
+       "id": "col:개인별 정정이력조회 그리드/정정연월일"
+      },
+      {
+       "label": "정정대상자",
+       "depth": 0,
+       "box": [
+        291,
+        239,
+        331,
+        31
+       ],
+       "span": 2,
+       "id": "col:개인별 정정이력조회 그리드/정정대상자"
+      },
+      {
+       "label": "정정사항",
+       "depth": 0,
+       "box": [
+        622,
+        239,
+        993,
+        31
+       ],
+       "span": 4,
+       "id": "col:개인별 정정이력조회 그리드/정정사항"
+      },
+      {
+       "label": "학년도,학년,반,번호",
+       "depth": 1,
+       "box": [
+        291,
+        270,
+        199,
+        31
+       ],
+       "id": "col:개인별 정정이력조회 그리드/정정대상자>학년도,학년,반,번호"
+      },
+      {
+       "label": "학생명",
+       "depth": 1,
+       "box": [
+        489,
+        270,
+        132,
+        31
+       ],
+       "id": "col:개인별 정정이력조회 그리드/정정대상자>학생명"
+      },
+      {
+       "label": "정정항목",
+       "depth": 1,
+       "box": [
+        622,
+        270,
+        199,
+        31
+       ],
+       "id": "col:개인별 정정이력조회 그리드/정정사항>정정항목"
+      },
+      {
+       "label": "오류내용",
+       "depth": 1,
+       "box": [
+        820,
+        270,
+        265,
+        31
+       ],
+       "id": "col:개인별 정정이력조회 그리드/정정사항>오류내용"
+      },
+      {
+       "label": "정정내용",
+       "depth": 1,
+       "box": [
+        1085,
+        270,
+        265,
+        31
+       ],
+       "id": "col:개인별 정정이력조회 그리드/정정사항>정정내용"
+      },
+      {
+       "label": "정정사유",
+       "depth": 1,
+       "box": [
+        1349,
+        270,
+        265,
+        31
+       ],
+       "id": "col:개인별 정정이력조회 그리드/정정사항>정정사유"
+      }
+     ],
+     "id": "grid:개인별 정정이력조회 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부 > 정정대장관리 > 정정대장이력조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

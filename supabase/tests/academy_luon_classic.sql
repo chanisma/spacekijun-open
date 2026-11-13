@@ -1,0 +1,24 @@
+begin;
+select set_config('academy.owner',(select id::text from public.profiles where role='student' limit 1),true);
+delete from public.academy_user_items where user_id=current_setting('academy.owner')::uuid;
+insert into public.academy_user_stats(user_id,coins) values(current_setting('academy.owner')::uuid,100) on conflict(user_id) do update set coins=100;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('academy.owner'),'role','authenticated')::text,true);
+do $$ declare classic integer; blue integer; begin
+ select id into strict classic from public.academy_shop_items where academy_asset='luon-classic' and academy_slot='luon' and price=35 and is_active and academy_owner is null;
+ select id into strict blue from public.academy_shop_items where academy_asset='luon-blue';
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',blue));
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',blue));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',classic));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',classic));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>30 then raise exception 'Incorrect price or duplicate charge'; end if;
+ if (select count(*) from public.academy_user_items where user_id=auth.uid() and item_id=classic)<>1 then raise exception 'Duplicate ownership'; end if;
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',classic));
+ if not exists(select 1 from public.academy_user_items where user_id=auth.uid() and item_id=classic and is_equipped) then raise exception 'Classic not equipped'; end if;
+ if exists(select 1 from public.academy_user_items where user_id=auth.uid() and item_id=blue and is_equipped) then raise exception 'Conflicting Luon outfits'; end if;
+ perform public.academy_dormitory_write('unequip',jsonb_build_object('item_id',classic));
+ if exists(select 1 from public.academy_user_items where user_id=auth.uid() and is_equipped) then raise exception 'Default restore failed'; end if;
+end $$;
+reset role;
+select 'PASS: classic purchase, duplicate prevention, exclusive Luon equipment and default restore. Rolled back.' as result;
+rollback;

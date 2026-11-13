@@ -1,0 +1,1719 @@
+{
+ "schema": "neis-capture/1",
+ "key": "급식›급식관리(학교)›식단관리›CCP관리",
+ "name": "CCP관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:44:41+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:CCP2B",
+   "tab": "CCP2B",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      175,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식일자"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      331,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      554,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      622,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      689,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      167
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ CCP 화면 설정기준 - CCP1: 식재료 품의 목록 조회 (급식관리 > 식재료구매관리 > 식재료검수처리) - CCP2A: 학교기본정보등록 > 학교기본정보 > 전처리실분리여부 '분리' / CCP2B: 전처리실분리여부 '미분리' - CCP3A: 학교기본정보등록 > 학교기본정보 > 급식형태구분 '단독조리'이고, 배식방법 '식당배식' / CCP3B: '단독조리'이고, '교실배식' / CCP3C: '공동조리' - CP1: 학교기본정보등록 > 학교기본정보 > 식사구분항목 값이 1식일 경우 일2회 작성, 2식 또는 3식일 경우 일3회 작성",
+     "id": "note:※ CCP 화면 설정기준 - CCP1: 식재료 품의 목록 조회 (급식관리 > 식재료구매관리 > 식재료검수처리) - CCP2A: 학교기본정보등록 > 학교기본정보 > 전처리실분리여부 '분리' / CCP2B: 전처리실분리여부 '미분리' - CCP3A: 학교기본정보등록 > 학교기본정보 > 급식형태구분 '단독조리'이고, 배식방법 '식당배식' / CCP3B: '단독조리'이고, '교실배식' / CCP3C: '공동조리' - CP1: 학교기본정보등록 > 학교기본정보 > 식사구분항목 값이 1식일 경우 일2회 작성, 2식 또는 3식일 경우 일3회 작성"
+    },
+    {
+     "aria": "9개의 탭이 있습니다.",
+     "box": [
+      25,
+      335,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "CCP2B",
+      "CCP3A",
+      "CP1",
+      "CP2A"
+     ],
+     "active": "CCP2B",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1213,
+      390,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1273,
+      390,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1333,
+      390,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "최근정보불러오기",
+     "variant": "link",
+     "id": "button:최근정보불러오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1452,
+      390,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      390,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      390,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)",
+     "box": [
+      25,
+      400,
+      380,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)",
+     "id": "heading:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)"
+    },
+    {
+     "aria": "CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)",
+     "box": [
+      25,
+      430,
+      1575,
+      464
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        76,
+        431,
+        165,
+        62
+       ],
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/구분"
+      },
+      {
+       "label": "식사구분",
+       "depth": 0,
+       "box": [
+        241,
+        431,
+        90,
+        62
+       ],
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/식사구분"
+      },
+      {
+       "label": "음식명",
+       "depth": 0,
+       "box": [
+        331,
+        431,
+        100,
+        62
+       ],
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/음식명"
+      },
+      {
+       "label": "식재료명",
+       "depth": 0,
+       "box": [
+        431,
+        431,
+        199,
+        62
+       ],
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/식재료명"
+      },
+      {
+       "label": "취급 및 조리 방법",
+       "depth": 0,
+       "box": [
+        631,
+        431,
+        199,
+        62
+       ],
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/취급 및 조리 방법"
+      },
+      {
+       "label": "전처리완료/조리 시작시간",
+       "depth": 0,
+       "box": [
+        830,
+        431,
+        170,
+        62
+       ],
+       "span": 2,
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/전처리완료/조리 시작시간"
+      },
+      {
+       "label": "식품 중심 온도(℃)",
+       "depth": 0,
+       "box": [
+        1000,
+        431,
+        199,
+        62
+       ],
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/식품 중심 온도(℃)"
+      },
+      {
+       "label": "소독제 농도 및 시간확인",
+       "depth": 0,
+       "box": [
+        1200,
+        431,
+        100,
+        62
+       ],
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/소독제 농도 및 시간확인"
+      },
+      {
+       "label": "칼/도마/장갑 용기 구분사용 OX표",
+       "depth": 0,
+       "box": [
+        1300,
+        431,
+        100,
+        62
+       ],
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/칼/도마/장갑 용기 구분사용 OX표"
+      },
+      {
+       "label": "작성자 서명",
+       "depth": 0,
+       "box": [
+        1400,
+        431,
+        199,
+        62
+       ],
+       "id": "col:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)/작성자 서명"
+      }
+     ],
+     "id": "grid:CCP2B. 식품취급 및 조리 (장소구분이 안 되는 경우)"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      920,
+      1445,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "개선조치기록",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:개선조치기록"
+    }
+   ]
+  },
+  {
+   "id": "tab:CCP3A",
+   "tab": "CCP3A",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      175,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식일자"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      331,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1432,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1504,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      554,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      622,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      689,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1575,
+      167
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ CCP 화면 설정기준 - CCP1: 식재료 품의 목록 조회 (급식관리 > 식재료구매관리 > 식재료검수처리) - CCP2A: 학교기본정보등록 > 학교기본정보 > 전처리실분리여부 '분리' / CCP2B: 전처리실분리여부 '미분리' - CCP3A: 학교기본정보등록 > 학교기본정보 > 급식형태구분 '단독조리'이고, 배식방법 '식당배식' / CCP3B: '단독조리'이고, '교실배식' / CCP3C: '공동조리' - CP1: 학교기본정보등록 > 학교기본정보 > 식사구분항목 값이 1식일 경우 일2회 작성, 2식 또는 3식일 경우 일3회 작성",
+     "id": "note:※ CCP 화면 설정기준 - CCP1: 식재료 품의 목록 조회 (급식관리 > 식재료구매관리 > 식재료검수처리) - CCP2A: 학교기본정보등록 > 학교기본정보 > 전처리실분리여부 '분리' / CCP2B: 전처리실분리여부 '미분리' - CCP3A: 학교기본정보등록 > 학교기본정보 > 급식형태구분 '단독조리'이고, 배식방법 '식당배식' / CCP3B: '단독조리'이고, '교실배식' / CCP3C: '공동조리' - CP1: 학교기본정보등록 > 학교기본정보 > 식사구분항목 값이 1식일 경우 일2회 작성, 2식 또는 3식일 경우 일3회 작성"
+    },
+    {
+     "aria": "9개의 탭이 있습니다.",
+     "box": [
+      25,
+      335,
+      1575,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "CCP2B",
+      "CCP3A",
+      "CP1",
+      "CP2A"
+     ],
+     "active": "CCP3A",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1333,
+      390,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1392,
+      390,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행삭제",
+     "variant": "plain",
+     "id": "button:행삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1452,
+      390,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      390,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      390,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "CCP3A. 조리완료 및 배식 (단독조리 : 식당배식)",
+     "box": [
+      25,
+      400,
+      347,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "CCP3A. 조리완료 및 배식 (단독조리 : 식당배식)",
+     "id": "heading:CCP3A. 조리완료 및 배식 (단독조리 : 식당배식)"
+    },
+    {
+     "aria": "CCP3A. 조리완료 및 배식(단독조리 : 식당배식)",
+     "box": [
+      25,
+      430,
+      1575,
+      495
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "CCP3A. 조리완료 및 배식(단독조리 : 식당배식)",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "식사구분",
+       "depth": 0,
+       "box": [
+        76,
+        431,
+        90,
+        70
+       ],
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/식사구분"
+      },
+      {
+       "label": "음식명",
+       "depth": 0,
+       "box": [
+        166,
+        431,
+        259,
+        70
+       ],
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/음식명"
+      },
+      {
+       "label": "혼합시작시간",
+       "depth": 0,
+       "box": [
+        425,
+        431,
+        170,
+        70
+       ],
+       "span": 2,
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/혼합시작시간"
+      },
+      {
+       "label": "조리완료시간",
+       "depth": 0,
+       "box": [
+        595,
+        431,
+        170,
+        70
+       ],
+       "span": 2,
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/조리완료시간"
+      },
+      {
+       "label": "배식완료",
+       "depth": 0,
+       "box": [
+        765,
+        431,
+        421,
+        31
+       ],
+       "span": 4,
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/배식완료"
+      },
+      {
+       "label": "배식도구 청결도",
+       "depth": 0,
+       "box": [
+        1186,
+        431,
+        80,
+        70
+       ],
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/배식도구 청결도"
+      },
+      {
+       "label": "위생복장 착용",
+       "depth": 0,
+       "box": [
+        1266,
+        431,
+        80,
+        70
+       ],
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/위생복장 착용"
+      },
+      {
+       "label": "배식통 관리",
+       "depth": 0,
+       "box": [
+        1346,
+        431,
+        80,
+        70
+       ],
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/배식통 관리"
+      },
+      {
+       "label": "작성자 서명",
+       "depth": 0,
+       "box": [
+        1426,
+        431,
+        173,
+        70
+       ],
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/작성자 서명"
+      },
+      {
+       "label": "시간",
+       "depth": 1,
+       "box": [
+        765,
+        462,
+        168,
+        39
+       ],
+       "span": 2,
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/배식완료>시간"
+      },
+      {
+       "label": "온도(℃)",
+       "depth": 1,
+       "box": [
+        933,
+        462,
+        173,
+        39
+       ],
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/배식완료>온도(℃)"
+      },
+      {
+       "label": "2시간이내",
+       "depth": 1,
+       "box": [
+        1106,
+        462,
+        80,
+        39
+       ],
+       "id": "col:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)/배식완료>2시간이내"
+      }
+     ],
+     "id": "grid:CCP3A. 조리완료 및 배식(단독조리 : 식당배식)"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      951,
+      1445,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "개선조치기록",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:개선조치기록"
+    }
+   ]
+  },
+  {
+   "id": "tab:CP1",
+   "tab": "CP1",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      175,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식일자"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      331,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      554,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      622,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      689,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      167
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ CCP 화면 설정기준 - CCP1: 식재료 품의 목록 조회 (급식관리 > 식재료구매관리 > 식재료검수처리) - CCP2A: 학교기본정보등록 > 학교기본정보 > 전처리실분리여부 '분리' / CCP2B: 전처리실분리여부 '미분리' - CCP3A: 학교기본정보등록 > 학교기본정보 > 급식형태구분 '단독조리'이고, 배식방법 '식당배식' / CCP3B: '단독조리'이고, '교실배식' / CCP3C: '공동조리' - CP1: 학교기본정보등록 > 학교기본정보 > 식사구분항목 값이 1식일 경우 일2회 작성, 2식 또는 3식일 경우 일3회 작성",
+     "id": "note:※ CCP 화면 설정기준 - CCP1: 식재료 품의 목록 조회 (급식관리 > 식재료구매관리 > 식재료검수처리) - CCP2A: 학교기본정보등록 > 학교기본정보 > 전처리실분리여부 '분리' / CCP2B: 전처리실분리여부 '미분리' - CCP3A: 학교기본정보등록 > 학교기본정보 > 급식형태구분 '단독조리'이고, 배식방법 '식당배식' / CCP3B: '단독조리'이고, '교실배식' / CCP3C: '공동조리' - CP1: 학교기본정보등록 > 학교기본정보 > 식사구분항목 값이 1식일 경우 일2회 작성, 2식 또는 3식일 경우 일3회 작성"
+    },
+    {
+     "aria": "9개의 탭이 있습니다.",
+     "box": [
+      25,
+      335,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "CCP2B",
+      "CCP3A",
+      "CP1",
+      "CP2A"
+     ],
+     "active": "CP1",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1419,
+      390,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1467,
+      390,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "link",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      390,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      390,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": "CP1. 냉장/냉동고(실) 온도관리",
+     "box": [
+      25,
+      400,
+      228,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "CP1. 냉장/냉동고(실) 온도관리",
+     "id": "heading:CP1. 냉장/냉동고(실) 온도관리"
+    },
+    {
+     "aria": "CP1. 냉장/냉동고(실) 온도관리",
+     "box": [
+      25,
+      430,
+      1590,
+      184
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "CP1. 냉장/냉동고(실) 온도관리",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "확인시간",
+       "depth": 0,
+       "box": [
+        26,
+        431,
+        157,
+        62
+       ],
+       "span": 2,
+       "id": "col:CP1. 냉장/냉동고(실) 온도관리/확인시간"
+      },
+      {
+       "label": "(냉장고)전처리실",
+       "depth": 0,
+       "box": [
+        183,
+        431,
+        273,
+        62
+       ],
+       "id": "col:CP1. 냉장/냉동고(실) 온도관리/(냉장고)전처리실"
+      },
+      {
+       "label": "(냉장고)조리실",
+       "depth": 0,
+       "box": [
+        456,
+        431,
+        273,
+        62
+       ],
+       "id": "col:CP1. 냉장/냉동고(실) 온도관리/(냉장고)조리실"
+      },
+      {
+       "label": "(냉동고)석식식재료전용",
+       "depth": 0,
+       "box": [
+        729,
+        431,
+        273,
+        62
+       ],
+       "id": "col:CP1. 냉장/냉동고(실) 온도관리/(냉동고)석식식재료전용"
+      },
+      {
+       "label": "(냉동고)보존식전용",
+       "depth": 0,
+       "box": [
+        1001,
+        431,
+        273,
+        62
+       ],
+       "id": "col:CP1. 냉장/냉동고(실) 온도관리/(냉동고)보존식전용"
+      },
+      {
+       "label": "청결도 확인",
+       "depth": 0,
+       "box": [
+        1274,
+        431,
+        80,
+        62
+       ],
+       "id": "col:CP1. 냉장/냉동고(실) 온도관리/청결도 확인"
+      },
+      {
+       "label": "덮개확인",
+       "depth": 0,
+       "box": [
+        1354,
+        431,
+        80,
+        62
+       ],
+       "id": "col:CP1. 냉장/냉동고(실) 온도관리/덮개확인"
+      },
+      {
+       "label": "분리보관 여부",
+       "depth": 0,
+       "box": [
+        1434,
+        431,
+        80,
+        62
+       ],
+       "id": "col:CP1. 냉장/냉동고(실) 온도관리/분리보관 여부"
+      },
+      {
+       "label": "작성자서명",
+       "depth": 0,
+       "box": [
+        1514,
+        431,
+        100,
+        62
+       ],
+       "id": "col:CP1. 냉장/냉동고(실) 온도관리/작성자서명"
+      }
+     ],
+     "id": "grid:CP1. 냉장/냉동고(실) 온도관리"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      640,
+      1460,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "개선조치기록",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:개선조치기록"
+    }
+   ]
+  },
+  {
+   "id": "tab:CP2A",
+   "tab": "CP2A",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "box": [
+      175,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 이전 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "급식일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:급식일자"
+    },
+    {
+     "aria": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "box": [
+      331,
+      82,
+      24,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다.",
+     "variant": "plain",
+     "id": "button:날짜 이동 스핀 버튼. 다음 날짜가 선택됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      495,
+      82,
+      49,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "전체",
+     "checked": false,
+     "id": "check:전체"
+    },
+    {
+     "aria": null,
+     "box": [
+      1447,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1519,
+      82,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화"
+    },
+    {
+     "aria": null,
+     "box": [
+      554,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "조식",
+     "checked": false,
+     "id": "check:조식"
+    },
+    {
+     "aria": null,
+     "box": [
+      622,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "중식",
+     "checked": true,
+     "id": "check:중식"
+    },
+    {
+     "aria": null,
+     "box": [
+      689,
+      87,
+      50,
+      20
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "석식",
+     "checked": false,
+     "id": "check:석식"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      167
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ CCP 화면 설정기준 - CCP1: 식재료 품의 목록 조회 (급식관리 > 식재료구매관리 > 식재료검수처리) - CCP2A: 학교기본정보등록 > 학교기본정보 > 전처리실분리여부 '분리' / CCP2B: 전처리실분리여부 '미분리' - CCP3A: 학교기본정보등록 > 학교기본정보 > 급식형태구분 '단독조리'이고, 배식방법 '식당배식' / CCP3B: '단독조리'이고, '교실배식' / CCP3C: '공동조리' - CP1: 학교기본정보등록 > 학교기본정보 > 식사구분항목 값이 1식일 경우 일2회 작성, 2식 또는 3식일 경우 일3회 작성",
+     "id": "note:※ CCP 화면 설정기준 - CCP1: 식재료 품의 목록 조회 (급식관리 > 식재료구매관리 > 식재료검수처리) - CCP2A: 학교기본정보등록 > 학교기본정보 > 전처리실분리여부 '분리' / CCP2B: 전처리실분리여부 '미분리' - CCP3A: 학교기본정보등록 > 학교기본정보 > 급식형태구분 '단독조리'이고, 배식방법 '식당배식' / CCP3B: '단독조리'이고, '교실배식' / CCP3C: '공동조리' - CP1: 학교기본정보등록 > 학교기본정보 > 식사구분항목 값이 1식일 경우 일2회 작성, 2식 또는 3식일 경우 일3회 작성"
+    },
+    {
+     "aria": "9개의 탭이 있습니다.",
+     "box": [
+      25,
+      335,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "CCP2B",
+      "CCP3A",
+      "CP1",
+      "CP2A"
+     ],
+     "active": "CP2A",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1348,
+      390,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "최근정보불러오기",
+     "variant": "link",
+     "id": "button:최근정보불러오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1467,
+      390,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1515,
+      390,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "초기화",
+     "variant": "secondary",
+     "id": "button:초기화#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      390,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      436,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "온수온도",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:온수온도"
+    },
+    {
+     "aria": null,
+     "box": [
+      608,
+      436,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "세척상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:세척상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      1065,
+      436,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "설정온도",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:설정온도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1403,
+      436,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "설정시간",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:설정시간"
+    },
+    {
+     "aria": null,
+     "box": [
+      1489,
+      436,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "현재시간",
+     "variant": "plain",
+     "id": "button:현재시간"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      476,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "제조시간",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:제조시간"
+    },
+    {
+     "aria": null,
+     "box": [
+      356,
+      476,
+      74,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "현재시간",
+     "variant": "plain",
+     "id": "button:현재시간#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      516,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "도마소독조제품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:도마소독조제품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      608,
+      516,
+      328,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "도마소독조ppm",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:도마소독조ppm"
+    },
+    {
+     "aria": null,
+     "box": [
+      1065,
+      516,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "세정대제품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:세정대제품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1403,
+      516,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "세정대ppm",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:세정대ppm"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      556,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "장갑소독조제품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:장갑소독조제품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      608,
+      556,
+      328,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "장갑소독조ppm",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:장갑소독조ppm"
+    },
+    {
+     "aria": null,
+     "box": [
+      1065,
+      556,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "칼소독조제품명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:칼소독조제품명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1403,
+      556,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "칼소독조ppm",
+     "control": "number",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:칼소독조ppm"
+    },
+    {
+     "aria": null,
+     "box": [
+      270,
+      596,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "작성자서명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:작성자서명"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      636,
+      1460,
+      60
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "개선조치기록",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:개선조치기록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {급식}급식관리(학교) > 식단관리 > CCP관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교환경›석면관리#학교›석면마감관리›석면마감현황",
+ "name": "석면마감현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:33:21+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관명"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      140,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조사년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:조사년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      85,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      136,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 마감기간 안내 : 2026.01.01 ~ 2026.06.30",
+     "id": "note:※ 마감기간 안내 : 2026.01.01 ~ 2026.06.30"
+    },
+    {
+     "aria": null,
+     "box": [
+      1500,
+      174,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감",
+     "variant": "primary",
+     "id": "button:마감"
+    },
+    {
+     "aria": null,
+     "box": [
+      1548,
+      174,
+      67,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감취소",
+     "variant": "secondary",
+     "id": "button:마감취소"
+    },
+    {
+     "aria": "석면마감현황",
+     "box": [
+      25,
+      214,
+      1590,
+      599
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "석면마감현황",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "선택",
+       "depth": 0,
+       "box": [
+        26,
+        215,
+        50,
+        36
+       ],
+       "id": "col:석면마감현황/선택"
+      },
+      {
+       "label": "조사년도",
+       "depth": 0,
+       "box": [
+        76,
+        215,
+        385,
+        36
+       ],
+       "id": "col:석면마감현황/조사년도"
+      },
+      {
+       "label": "학교",
+       "depth": 0,
+       "box": [
+        461,
+        215,
+        385,
+        36
+       ],
+       "id": "col:석면마감현황/학교"
+      },
+      {
+       "label": "마감상태",
+       "depth": 0,
+       "box": [
+        845,
+        215,
+        385,
+        36
+       ],
+       "id": "col:석면마감현황/마감상태"
+      },
+      {
+       "label": "마감일시",
+       "depth": 0,
+       "box": [
+        1230,
+        215,
+        385,
+        36
+       ],
+       "id": "col:석면마감현황/마감일시"
+      }
+     ],
+     "id": "grid:석면마감현황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교환경}석면관리 > 석면마감관리 > 석면마감현황",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,214 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학생부보존›학생부보존#고등학교›이관완료자료삭제관리›이관완료자료삭제",
+ "name": "이관완료자료삭제",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:23:17+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 목록 삭제시 졸업생 학교생활기록부 및 정정대장 자료를 복구할 수 없습니다.",
+     "id": "note:※ 목록 삭제시 졸업생 학교생활기록부 및 정정대장 자료를 복구할 수 없습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1479,
+      171,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "link",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      171,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료삭제",
+     "variant": "link",
+     "id": "button:자료삭제"
+    },
+    {
+     "aria": "보존자료",
+     "box": [
+      25,
+      181,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "보존자료",
+     "id": "heading:보존자료"
+    },
+    {
+     "aria": "이관완료자료 목록",
+     "box": [
+      25,
+      211,
+      1590,
+      603
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "이관완료자료 목록",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "졸업학년도",
+       "depth": 0,
+       "box": [
+        76,
+        212,
+        148,
+        36
+       ],
+       "id": "col:이관완료자료 목록/졸업학년도"
+      },
+      {
+       "label": "목록명",
+       "depth": 0,
+       "box": [
+        224,
+        212,
+        500,
+        36
+       ],
+       "id": "col:이관완료자료 목록/목록명"
+      },
+      {
+       "label": "학생부건수",
+       "depth": 0,
+       "box": [
+        724,
+        212,
+        148,
+        36
+       ],
+       "id": "col:이관완료자료 목록/학생부건수"
+      },
+      {
+       "label": "정정대장건수",
+       "depth": 0,
+       "box": [
+        873,
+        212,
+        148,
+        36
+       ],
+       "id": "col:이관완료자료 목록/정정대장건수"
+      },
+      {
+       "label": "이관일자",
+       "depth": 0,
+       "box": [
+        1021,
+        212,
+        148,
+        36
+       ],
+       "id": "col:이관완료자료 목록/이관일자"
+      },
+      {
+       "label": "결재상태",
+       "depth": 0,
+       "box": [
+        1169,
+        212,
+        148,
+        36
+       ],
+       "id": "col:이관완료자료 목록/결재상태"
+      },
+      {
+       "label": "삭제상태",
+       "depth": 0,
+       "box": [
+        1317,
+        212,
+        148,
+        36
+       ],
+       "id": "col:이관완료자료 목록/삭제상태"
+      },
+      {
+       "label": "이관자료삭제일자",
+       "depth": 0,
+       "box": [
+        1466,
+        212,
+        148,
+        36
+       ],
+       "id": "col:이관완료자료 목록/이관자료삭제일자"
+      }
+     ],
+     "id": "grid:이관완료자료 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생부보존 > 이관완료자료삭제관리 > 이관완료자료삭제",
+ "viewport": [
+  1920,
+  945
+ ]
+}

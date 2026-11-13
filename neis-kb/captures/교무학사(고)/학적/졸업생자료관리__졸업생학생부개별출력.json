@@ -1,0 +1,114 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업생자료관리›졸업생학생부개별출력",
+ "name": "졸업생학생부개별출력",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:20:06+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      178,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "검색",
+     "box": [
+      579,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색",
+     "variant": "secondary",
+     "id": "button:검색"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      145,
+      144,
+      116,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "학생부I",
+     "checked": false,
+     "id": "check:학생부I"
+    },
+    {
+     "aria": null,
+     "box": [
+      269,
+      144,
+      116,
+      31
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "학생부II",
+     "checked": true,
+     "id": "check:학생부II"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업생자료관리 > 졸업생학생부개별출력",
+ "viewport": [
+  1920,
+  945
+ ]
+}

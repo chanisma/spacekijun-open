@@ -1,0 +1,1 @@
+export { SubjectAssignmentTab } from './SubjectAssignmentTab';

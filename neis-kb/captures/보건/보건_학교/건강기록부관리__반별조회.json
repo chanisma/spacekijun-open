@@ -1,0 +1,11 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›건강기록부관리›반별조회",
+ "name": "반별조회",
+ "status": "not_found",
+ "capturedAt": "2026-10-05T04:48:12+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [],
+ "error": "메뉴 검색 결과 1건 중 경로가 맞는 것이 없습니다"
+}

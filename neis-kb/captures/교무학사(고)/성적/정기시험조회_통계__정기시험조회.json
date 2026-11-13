@@ -1,0 +1,746 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›정기시험조회/통계›정기시험조회",
+ "name": "정기시험조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:53:33+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:결시생명단",
+   "tab": "결시생명단",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      30,
+      86,
+      1580,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "교과목별일람표조회-강의실별 선택됨",
+     "box": [
+      56,
+      132,
+      208,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과목별일람표조회-강의실별",
+     "variant": "link",
+     "id": "button:교과목별일람표조회-강의실별"
+    },
+    {
+     "aria": "교과목별일람표조회-전체학급",
+     "box": [
+      272,
+      132,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과목별일람표조회-전체학급",
+     "variant": "link",
+     "id": "button:교과목별일람표조회-전체학급"
+    },
+    {
+     "aria": "학급별일람표조회-전체교과목",
+     "box": [
+      472,
+      132,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학급별일람표조회-전체교과목",
+     "variant": "link",
+     "id": "button:학급별일람표조회-전체교과목"
+    },
+    {
+     "aria": "결시생명단",
+     "box": [
+      672,
+      132,
+      511,
+      30
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "결시생명단",
+      "결시생인정점",
+      "학생별학생답정오표"
+     ],
+     "active": "결시생명단",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "교과목별학생답정오표",
+     "box": [
+      884,
+      132,
+      152,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과목별학생답정오표",
+     "variant": "link",
+     "id": "button:교과목별학생답정오표"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      223,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "교과목별일람표조회-강의실별",
+     "id": "heading:교과목별일람표조회-강의실별"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      314,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:강의실"
+    },
+    {
+     "aria": null,
+     "box": [
+      315,
+      314,
+      105,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "학과평균표시",
+     "checked": true,
+     "id": "check:학과평균표시"
+    },
+    {
+     "aria": null,
+     "box": [
+      430,
+      314,
+      105,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "개별출력",
+     "checked": false,
+     "id": "check:개별출력"
+    },
+    {
+     "aria": "전과목출력",
+     "box": [
+      1405,
+      314,
+      76,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "전과목출력",
+     "variant": "link",
+     "id": "button:전과목출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      1491,
+      314,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "link",
+     "id": "button:조회"
+    }
+   ]
+  },
+  {
+   "id": "tab:결시생인정점",
+   "tab": "결시생인정점",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      30,
+      86,
+      1580,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "교과목별일람표조회-강의실별",
+     "box": [
+      56,
+      132,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과목별일람표조회-강의실별",
+     "variant": "link",
+     "id": "button:교과목별일람표조회-강의실별"
+    },
+    {
+     "aria": "교과목별일람표조회-전체학급",
+     "box": [
+      256,
+      132,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과목별일람표조회-전체학급",
+     "variant": "link",
+     "id": "button:교과목별일람표조회-전체학급"
+    },
+    {
+     "aria": "학급별일람표조회-전체교과목",
+     "box": [
+      456,
+      132,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학급별일람표조회-전체교과목",
+     "variant": "link",
+     "id": "button:학급별일람표조회-전체교과목"
+    },
+    {
+     "aria": "결시생명단",
+     "box": [
+      656,
+      132,
+      527,
+      30
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "결시생명단",
+      "결시생인정점",
+      "학생별학생답정오표"
+     ],
+     "active": "결시생명단",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "교과목별학생답정오표",
+     "box": [
+      884,
+      132,
+      152,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과목별학생답정오표",
+     "variant": "link",
+     "id": "button:교과목별학생답정오표"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      223,
+      1530,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "결시생인정점조회",
+     "id": "heading:결시생인정점조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1501,
+      274,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    }
+   ]
+  },
+  {
+   "id": "tab:학생별학생답정오표",
+   "tab": "학생별학생답정오표",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      30,
+      86,
+      1565,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "목록",
+     "id": "heading:목록"
+    },
+    {
+     "aria": "교과목별일람표조회-강의실별",
+     "box": [
+      56,
+      132,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과목별일람표조회-강의실별",
+     "variant": "link",
+     "id": "button:교과목별일람표조회-강의실별"
+    },
+    {
+     "aria": "교과목별일람표조회-전체학급",
+     "box": [
+      256,
+      132,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과목별일람표조회-전체학급",
+     "variant": "link",
+     "id": "button:교과목별일람표조회-전체학급"
+    },
+    {
+     "aria": "학급별일람표조회-전체교과목",
+     "box": [
+      456,
+      132,
+      192,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학급별일람표조회-전체교과목",
+     "variant": "link",
+     "id": "button:학급별일람표조회-전체교과목"
+    },
+    {
+     "aria": "결시생명단",
+     "box": [
+      656,
+      132,
+      527,
+      30
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "결시생명단",
+      "결시생인정점",
+      "학생별학생답정오표"
+     ],
+     "active": "결시생명단",
+     "via": "buttons",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "교과목별학생답정오표",
+     "box": [
+      868,
+      132,
+      152,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교과목별학생답정오표",
+     "variant": "link",
+     "id": "button:교과목별학생답정오표"
+    },
+    {
+     "aria": null,
+     "box": [
+      55,
+      223,
+      1515,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생별학생답정오표",
+     "id": "heading:학생별학생답정오표"
+    },
+    {
+     "aria": null,
+     "box": [
+      205,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      445,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      685,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      925,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1165,
+      274,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1486,
+      274,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "미리보기",
+     "box": [
+      1506,
+      335,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "미리보기",
+     "variant": "link",
+     "id": "button:미리보기"
+    },
+    {
+     "aria": null,
+     "box": [
+      65,
+      423,
+      73,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "양면인쇄",
+     "checked": false,
+     "id": "check:양면인쇄"
+    },
+    {
+     "aria": "학생리스트",
+     "box": [
+      55,
+      473,
+      1515,
+      381
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생리스트",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        106,
+        474,
+        488,
+        36
+       ],
+       "id": "col:학생리스트/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        594,
+        474,
+        975,
+        36
+       ],
+       "id": "col:학생리스트/성명"
+      }
+     ],
+     "id": "grid:학생리스트"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 정기시험조회/통계 > 정기시험조회",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

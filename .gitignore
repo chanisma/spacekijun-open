@@ -1,0 +1,25 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+__pycache__/
+.venv*/
+supabase/.temp/
+supabase/.branches/
+.mcp.json
+.claude/settings.local.json
+.claude/worktrees/
+.omc/
+.playwright-mcp/
+school.config.json
+
+# 생기부 로컬 파일 — 절대 커밋 금지 (docs/student-records-local.md)
+local-records/

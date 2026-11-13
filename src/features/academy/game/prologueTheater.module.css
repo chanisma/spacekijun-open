@@ -1,0 +1,107 @@
+/* 프롤로그 영상 극장 — 타이틀(60)·글 프롤로그(65) 위에 뜬다.
+ * 화면 크기는 «남은 칸에 16:9 가 들어가는 가장 큰 크기»(container query) — 휴대폰 가로에서도 위아래가 잘리지 않는다.
+ * 글자 대비: 크림 #fae9c9 / 밤보라 #120e24 ≈ 15:1, 보조 글 #d9c7af / 같은 바탕 ≈ 11:1. */
+.theater { position: absolute; inset: 0; z-index: 80; display: flex; flex-direction: column; overflow: hidden; color: #fae9c9; background: radial-gradient(ellipse at 50% 35%, #3a2a4a, #120e24 70%); animation: theaterIn .45s ease-out both; }
+.theater:focus { outline: none; }
+.backdrop { position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px); object-fit: cover; filter: blur(28px) saturate(1.2); opacity: .32; pointer-events: none; }
+.sky { position: absolute; inset: 0; pointer-events: none; background:
+  radial-gradient(1.5px 1.5px at 12% 18%, #fff4d6cc, transparent), radial-gradient(1px 1px at 28% 72%, #fff4d6aa, transparent),
+  radial-gradient(1.5px 1.5px at 66% 12%, #fff4d6bb, transparent), radial-gradient(1px 1px at 84% 64%, #fff4d699, transparent),
+  radial-gradient(1px 1px at 46% 88%, #fff4d688, transparent), radial-gradient(2px 2px at 92% 22%, #ffe9b8aa, transparent),
+  radial-gradient(ellipse at 50% 120%, #e8c88e26, transparent 60%); animation: twinkle 6s ease-in-out infinite alternate; }
+
+.header { position: relative; z-index: 2; flex-shrink: 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 22px 28px 10px; }
+.kicker { display: block; font-size: 11px; letter-spacing: .18em; color: #d7bd84; }
+.header h2 { margin: 6px 0 0; font: 28px/1.2 Georgia, 'Noto Serif KR', serif; letter-spacing: .08em; color: #fff0cd; text-shadow: 0 2px 18px #0a0614; }
+.close { flex-shrink: 0; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #c8ad7b80; background: #271c32e0; color: #f5ddae; cursor: pointer; }
+.close:hover { background: #3c2b48; border-color: #e0bd7c; }
+.closeMark { position: relative; display: block; width: 14px; height: 14px; }
+.closeMark::before, .closeMark::after { content: ''; position: absolute; top: 50%; left: 50%; width: 16px; height: 1.8px; margin: -0.9px 0 0 -8px; border-radius: 1px; background: currentColor; transform: rotate(45deg); }
+.closeMark::after { transform: rotate(-45deg); }
+
+.stage { position: relative; z-index: 1; flex: 1; min-height: 0; padding: 18px 40px; container-type: size; display: grid; place-items: center; }
+.screen { position: relative; width: min(100cqw, calc(100cqh * 16 / 9)); aspect-ratio: 16 / 9; border: 1px solid #d4b373aa; border-radius: 4px; background: #07050d;
+  box-shadow: 0 0 0 7px #1a1326, 0 0 0 8px #d4b37355, 0 30px 90px #000c, 0 0 140px #e8c88e1f; }
+.corner { position: absolute; z-index: 4; font-size: 15px; line-height: 1; color: #f2d293; text-shadow: 0 0 10px #f2d29399; pointer-events: none; }
+.corner[data-corner='tl'] { top: -17px; left: -17px; }
+.corner[data-corner='tr'] { top: -17px; right: -17px; }
+.corner[data-corner='bl'] { bottom: -17px; left: -17px; }
+.corner[data-corner='br'] { bottom: -17px; right: -17px; }
+
+.poster { position: absolute; inset: 0; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: 0; border-radius: inherit; background: #07050d; color: inherit; cursor: pointer; }
+.poster > img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; transition: transform .8s ease, filter .4s ease; filter: brightness(.82); }
+.poster:hover > img, .poster:focus-visible > img { transform: scale(1.03); filter: brightness(.95); }
+.poster:focus-visible { outline: 3px solid #f5d192; outline-offset: 6px; }
+.posterCopy { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 16px; text-align: center; background: radial-gradient(ellipse at center, #120e2466, #120e24cc 85%); }
+.posterCopy strong { font: 20px Georgia, 'Noto Serif KR', serif; letter-spacing: .06em; color: #fff0cd; text-shadow: 0 2px 12px #000; }
+.posterCopy small { font-size: 12px; color: #e4d7bc; text-shadow: 0 1px 8px #000; }
+.play { position: relative; display: grid; place-items: center; width: 84px; height: 84px; border-radius: 50%; background: linear-gradient(135deg, #f3e0b2, #d6ae73); box-shadow: 0 0 0 1px #fff3d0aa, 0 10px 34px #000a, 0 0 46px #f2d29366; }
+.play::before { content: ''; position: absolute; inset: -10px; border-radius: 50%; border: 1px solid #f2d29399; animation: pulse 2.4s ease-out infinite; }
+.play i { display: block; width: 26px; height: 30px; margin-left: 6px; background: #3c2940; clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.poster:hover .play { box-shadow: 0 0 0 1px #fff3d0, 0 10px 34px #000a, 0 0 60px #f2d29399; }
+
+.film { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: inherit; }
+/* 막이 양옆으로 열리며 영상이 드러난다 — 한 번만, 다 열리면 누르는 것을 가로막지 않는다. */
+.curtain { position: absolute; inset: 0; z-index: 3; display: flex; overflow: hidden; pointer-events: none; border-radius: inherit; }
+.curtain i { flex: 1; background: repeating-linear-gradient(90deg, #4a1f3a 0 14px, #5d2747 14px 26px, #3e1931 26px 34px); box-shadow: inset 0 -40px 60px #0008; animation: curtainLeft 1.3s cubic-bezier(.7, 0, .3, 1) .15s both; }
+.curtain i:last-child { animation-name: curtainRight; }
+
+.endCard { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 20px; text-align: center; border-radius: inherit; background: radial-gradient(ellipse at center, #241a33, #0d0a16); animation: theaterIn .6s ease-out both; }
+.endStar { font-size: 40px; color: #f2d293; text-shadow: 0 0 22px #f2d293aa; }
+.endCard h3 { margin: 0; font: 26px Georgia, 'Noto Serif KR', serif; letter-spacing: .1em; color: #fff0cd; }
+.endCard p { margin: 0 0 8px; font-size: 14px; color: #d9c7af; }
+.endCard > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.endCard button { min-height: 44px; padding: 10px 18px; border: 1px solid #c5a26888; border-radius: 4px; background: #2b2035; color: #f3d49a; font-size: 14px; cursor: pointer; }
+.endCard button:hover { border-color: #e0bd7c; background: #3c2b48; }
+.endCard .primary { border-color: #f2d293; background: linear-gradient(110deg, #efdcaf, #d6ae73); color: #3c2940; font-weight: 600; }
+.endCard .primary:hover { background: linear-gradient(110deg, #f6e6bf, #e0b97f); }
+.close:focus-visible, .endCard button:focus-visible, .footer a:focus-visible { outline: 3px solid #f5d192; outline-offset: 3px; }
+
+.footer { position: relative; z-index: 2; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 28px 22px; font-size: 12px; }
+.footer p { margin: 0; color: #d9c7af; }
+.rotateHint { display: none; }
+.footer a { flex-shrink: 0; display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; color: #f2d293; text-decoration: underline; text-underline-offset: 3px; }
+
+@keyframes theaterIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes twinkle { from { opacity: .55; } to { opacity: 1; } }
+@keyframes pulse { from { transform: scale(.92); opacity: .9; } to { transform: scale(1.35); opacity: 0; } }
+@keyframes curtainLeft { from { transform: translateX(0); } to { transform: translateX(-102%); } }
+@keyframes curtainRight { from { transform: translateX(0); } to { transform: translateX(102%); } }
+
+.theater[data-reduced], .theater[data-reduced] .sky, .theater[data-reduced] .play::before, .theater[data-reduced] .endCard { animation: none; }
+@media (prefers-reduced-motion: reduce) { .theater, .sky, .play::before, .endCard, .curtain i { animation: none; } .curtain { display: none; } .poster > img { transition: none; } }
+
+@media (max-width: 560px) {
+  .header { padding: 16px 16px 6px; }
+  .header h2 { font-size: 21px; }
+  .stage { padding: 14px; }
+  .corner { font-size: 12px; }
+  .corner[data-corner='tl'], .corner[data-corner='tr'] { top: -13px; }
+  .corner[data-corner='bl'], .corner[data-corner='br'] { bottom: -13px; }
+  .corner[data-corner='tl'], .corner[data-corner='bl'] { left: -11px; }
+  .corner[data-corner='tr'], .corner[data-corner='br'] { right: -11px; }
+  .play { width: 64px; height: 64px; }
+  .play i { width: 20px; height: 24px; margin-left: 5px; }
+  .posterCopy strong { font-size: 16px; }
+  .posterCopy small { font-size: 11px; }
+  .endCard h3 { font-size: 20px; }
+  .endStar { font-size: 30px; }
+  .footer { flex-direction: column; align-items: flex-start; gap: 0; padding: 4px 16px 16px; }
+}
+/* 휴대폰 세로 — 16:9 는 폭에 묶여 작아진다. 가로로 돌리면 커진다고 화면 바로 아래에서 알려 준다. */
+@media (max-width: 560px) and (orientation: portrait) {
+  .stage { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; }
+  .rotateHint { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 13px; color: #e4d7bc; }
+  .rotateHint i { display: block; width: 12px; height: 19px; border: 1.5px solid #f2d293; border-radius: 3px; transform: rotate(-90deg); }
+}
+/* 휴대폰 가로 — 머리글·바닥글을 줄여 영상에 높이를 몰아준다(아카데미의 다른 가로 규칙과 같은 조건). */
+@media (orientation: landscape) and (max-height: 520px) {
+  .header { padding: 10px 16px 0; align-items: center; }
+  .header h2 { font-size: 17px; margin-top: 2px; }
+  .kicker { font-size: 9px; }
+  .stage { padding: 12px 28px; }
+  .footer { padding: 0 16px 8px; }
+  .footer p { display: none; }
+  .play { width: 58px; height: 58px; }
+  .posterCopy small { display: none; }
+}

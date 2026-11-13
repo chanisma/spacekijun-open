@@ -1,0 +1,216 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교환경›교내위생점검#학교›측정대행사업관리›측정대행사업관리",
+ "name": "측정대행사업관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:27:57+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      155,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      405,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검사유형",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:검사유형"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사업명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사업명"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "업체명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:업체명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "측정대행사업관리 목록",
+     "box": [
+      25,
+      143,
+      166,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "측정대행사업관리 목록",
+     "id": "heading:측정대행사업관리 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "기관명",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        258,
+        36
+       ],
+       "id": "col:그리드/기관명"
+      },
+      {
+       "label": "사업명",
+       "depth": 0,
+       "box": [
+        334,
+        174,
+        506,
+        36
+       ],
+       "id": "col:그리드/사업명"
+      },
+      {
+       "label": "계약번호",
+       "depth": 0,
+       "box": [
+        840,
+        174,
+        270,
+        36
+       ],
+       "id": "col:그리드/계약번호"
+      },
+      {
+       "label": "검사유형",
+       "depth": 0,
+       "box": [
+        1110,
+        174,
+        203,
+        36
+       ],
+       "id": "col:그리드/검사유형"
+      },
+      {
+       "label": "사업기간",
+       "depth": 0,
+       "box": [
+        1313,
+        174,
+        301,
+        36
+       ],
+       "id": "col:그리드/사업기간"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교환경}교내위생점검 > 측정대행사업관리 > 측정대행사업관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,1011 @@
+.game { --gold: #e6c68e; --ink: #f1e8da; min-height: 100dvh; padding: 0 3.2vw; color: var(--ink); background: radial-gradient(ellipse at 60% 0, #382b47, #171320 70%); font-family: 'Pretendard', 'Noto Sans KR', sans-serif; }
+.researchPanel, .postPanel { width: 1160px; }
+.dailyPanel { width: 740px; }
+.facilityHeader { display: flex; align-items: center; gap: 24px; border-bottom: 1px solid #9d7e4940; margin: -10px 0 24px; padding: 0 28px 16px 0; }
+.facilityHeader > img { width: 108px; height: 160px; flex-shrink: 0; object-fit: contain; object-position: center top; filter: drop-shadow(0 6px 12px #2c203d40); }
+.facilityHeader h2 { margin: 10px 0; }
+.facilityHeader p { margin: 8px 0; font-family: Georgia, 'Noto Serif KR', serif; }
+.facilityTabs { display: flex; gap: 8px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #9d7e4940; overflow-x: auto; }
+.facilityTabs button { flex: 1; min-width: 90px; padding: 11px 12px; border: 1px solid #a1845950; border-radius: 4px; white-space: nowrap; }
+.facilityTabs button[aria-pressed=true] { color: #ffedc6; background: #49394c; border-color: #b99154; box-shadow: inset 0 0 0 3px #d7b77f20; }
+.facilityTools { display: flex; align-items: center; gap: 12px; margin: 16px 0; }
+.facilityTools input { flex: 1; min-width: 0; }
+.facilityTools button { border: 1px solid #a1845950; padding: 8px 12px; border-radius: 3px; }
+/* 별자리 지도(.fullConstellation) 안의 입력·라벨은 지도가 스스로 색·크기를 정한다(--kg-* 변수) — 여기 양식 규칙에서 뺀다.
+   종전엔 이 규칙이 검색창 폭·패딩까지 덮어 돋보기 아이콘이 글자 위에 겹쳤다. */
+.researchPanel label:not(.fullConstellation *), .postPanel label, .dailyPanel label { display: block; font-size: 13px; line-height: 1.8; }
+.researchPanel textarea, .postPanel textarea, .dailyPanel textarea, .researchPanel input:not([type=checkbox]):not(.fullConstellation *), .postPanel input, .researchPanel select:not(.fullConstellation *), .postPanel select, .dailyPanel select { display: block; width: 100%; margin: 7px 0 14px; border: 1px solid #a68d675e; border-radius: 4px; padding: 11px 13px; color: #3b3040; background: #fffdf488; font: inherit; }
+.researchPanel textarea, .postPanel textarea { min-height: 110px; resize: vertical; }
+.researchPanel select, .postPanel select { font-size: 12px; }
+.observationLayout, .researchDesk, .interviewChamber { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(250px, 1fr); gap: 26px; }
+.researchDesk, .interviewChamber { grid-template-columns: minmax(240px, .8fr) minmax(0, 1.3fr); }
+.researchDesk > aside, .interviewChamber > aside { border-right: 1px solid #aa906747; padding-right: 25px; }
+.researchDesk .kicker { margin-top: 25px; }
+.lens { position: relative; border: 10px solid #53414e; border-radius: 50%; background: radial-gradient(ellipse at 60% 40%, #302246, #100f24 65%); box-shadow: 0 0 0 2px #b49a6b, inset 0 0 50px #000; aspect-ratio: 1.2; overflow: hidden; }
+.lens svg { width: 100%; height: 100%; }
+.lensLabel { position: absolute; bottom: 10%; left: 0; right: 0; text-align: center; color: #dfc78c; font-size: 8px; letter-spacing: .2em; pointer-events: none; }
+.versionPicker { max-width: 350px; }
+.starCatalogue h3 { margin-top: 0; }
+.starList { max-height: 280px; overflow-y: auto; border-top: 1px solid #ad93633d; }
+.starList button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px; border-bottom: 1px solid #ad93633d; text-align: left; font-size: 12px; }
+.starList button[aria-pressed=true] { background: #49374f; color: #f9e9cc; }
+.starList button > span:first-child { font-size: 24px; text-shadow: 0 0 5px #3c234a; }
+.starList small { display: block; opacity: .7; font-size: 10px; }
+.starEvidence { border-left: 2px solid #aa8450; margin: 16px 0; padding-left: 14px; font-size: 12px; line-height: 1.9; }
+.professorSpeech { background: #3c3046; color: #f2e3cf; padding: 26px; border: 1px solid #b89767; border-radius: 2px 20px 20px; margin: 10px 0 24px; box-shadow: 0 6px 22px #3b294724; }
+.professorSpeech p { font-family: Georgia, 'Noto Serif KR', serif; line-height: 2; }
+.professorSpeech small { color: #c9b8ce; }
+.analysisPages { background: #fff9e875; border: 1px solid #a88c5850; padding: 24px; margin-bottom: 22px; box-shadow: 4px 4px 0 #b79a6030; }
+.analysisPages h3 { font-family: Georgia, 'Noto Serif KR', serif; font-size: 23px; }
+.analysisPages h4 { margin: 25px 0 10px; color: #7a5835; }
+.analysisPages p, .analysisPages li, .adviceChamber p { line-height: 1.9; font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.analysisPages ol { padding-left: 22px; }
+.analysisPages li { margin: 20px 0; }
+.analysisPages small { color: #756774; }
+.evidenceChoices { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.evidenceChoices label { display: flex; align-items: flex-start; gap: 8px; padding: 9px 12px; background: #fff8e977; border: 1px solid #b19b7550; border-radius: 4px; }
+.evidenceChoices input, .directionCards input { margin-top: 6px; accent-color: #715873; }
+.directionCards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 22px 0; }
+.directionCards > label, .directionCards > article { padding: 20px; background: #fffbef70; border: 1px solid #ae976656; border-radius: 5px; }
+.directionCards > label > strong { margin-left: 10px; }
+.feedbackGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.feedbackGrid > div { padding: 15px; border: 1px solid #b29b744f; background: #fcf7eac4; font-size: 12px; }
+.feedbackGrid small { display: block; margin-top: 6px; color: #7b543a; }
+.feedbackGrid p { line-height: 1.8; }
+.researchRecord { border: 1px solid #b29b7466; border-radius: 5px; padding: 18px; margin: 15px 0; }
+.researchRecord summary { cursor: pointer; font-weight: 600; }
+.researchRecord summary small { margin-left: 10px; color: #86694e; font-size: 10px; }
+.researchRecord > .analysisPages { margin-top: 20px; }
+.researchWaiting { padding: 22px; margin-top: 20px; text-align: center; background: #4b3a51; color: #f4e8d3; border: 1px solid #bca06b; }
+.researchWaiting > span { display: inline-block; font-size: 36px; animation: beacon 2.8s infinite; }
+.mailGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; padding: 20px; background: #493633; border: 7px solid #6d5043; box-shadow: inset 0 0 20px #0008; }
+.envelope { position: relative; padding: 20px; border: 1px solid #b49a70; border-radius: 3px; color: #4c3844; background: linear-gradient(155deg, #fff7de 49.7%, #d7c59f 50%, #f1e2bd 50.3%); box-shadow: 0 6px 14px #140b193f; text-align: center; transform-origin: center bottom; }
+.envelope:hover { transform: translateY(-5px) rotate(-1deg); }
+.envelope > small { display: block; font-size: 9px; color: #866849; }
+.envelope > span { display: grid; place-items: center; width: 42px; height: 42px; margin: 18px auto; border-radius: 50%; background: #783f54; color: #e9b892; box-shadow: inset 0 0 0 3px #a6667177, 0 3px 5px #67433044; font-size: 23px; }
+.envelope > strong { font-family: Georgia, 'Noto Serif KR', serif; font-size: 15px; line-height: 1.8; }
+.envelope p, .envelope em { font-size: 10px; }
+.sealedLetter { display: block; width: min(100%, 530px); min-height: 350px; margin: 30px auto; padding: 40px; }
+.letterOpen { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(240px, .8fr); gap: 35px; margin-top: 24px; animation: unfoldLetter .55s ease both; }
+.letterOpen > article { padding-right: 28px; border-right: 1px solid #b9a27160; }
+.letterOpen h3 { margin-top: 28px; color: #75503b; }
+.letterOpen p { font-size: 13px; line-height: 2; overflow-wrap: anywhere; }
+.letterHook { border-left: 3px solid #aa875b; padding: 10px 15px; font-family: Georgia, 'Noto Serif KR', serif; }
+.prose { white-space: pre-wrap; }
+.articleQuestions button { display: block; width: 100%; margin: 8px 0; padding: 10px 14px; border: 1px solid #b2a075; border-radius: 3px; text-align: left; font-size: 12px; background: #fbf5e781; }
+.newsNotebook { padding: 20px; background: repeating-linear-gradient(#fff9ebaa 0 29px, #c4b59544 29px 30px); box-shadow: 3px 3px 0 #b6a07944; }
+.comicInsert img { width: 100%; height: auto; border: 1px solid #a7957666; }
+.comicInsert details { font-size: 12px; }
+.pageControls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 24px; }
+.dailyInvite { display: flex; width: 100%; flex-direction: column; gap: 10px; margin-top: 24px; padding: 17px 12px; border: 1px solid #d2aa656e; border-radius: 5px; background: #c09a4d15; text-align: left; color: #f0d6a9; }
+.dailyInvite small { font-size: 8px; letter-spacing: .2em; color: #bda078; }
+.dailyInvite strong { font-size: 13px; }
+.dailyInvite > span { font-size: 10px; line-height: 1.8; }
+.chatBubble[data-kind=waiting] { font-style: italic; opacity: .8; }
+.waitingDots { animation: beacon 1.6s infinite; }
+.telescopeTransition, .pigeonTransition { position: absolute; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px; background: #151127e8; color: #f8ddb0; }
+.telescopeTransition { animation: telescopeIris .85s ease both; }
+.telescopeTransition > span { font-size: 80px; text-shadow: 0 0 40px #ddc2fc; }
+.pigeonTransition > span { font-size: 80px; animation: pigeonFlight .85s ease both; }
+.telescopeTransition p, .pigeonTransition p { font-size: 12px; }
+@keyframes unfoldLetter { from { opacity: 0; transform: perspective(900px) rotateX(-12deg) translateY(20px); } to { opacity: 1; transform: none; } }
+@keyframes telescopeIris { from { clip-path: circle(0 at 50% 50%); } to { clip-path: circle(80% at 50% 50%); } }
+@keyframes pigeonFlight { from { transform: translate(-200px, -150px) rotate(-15deg); opacity: 0; } to { transform: translate(0, 0); opacity: 1; } }
+.game button, .modal button { cursor: pointer; transition: background .2s, transform .2s, border-color .2s; }
+.game button:disabled, .modal button:disabled { opacity: .5; cursor: not-allowed; }
+.game button[aria-busy=true], .modal button[aria-busy=true] { cursor: wait; }
+.game button:focus-visible, .game a:focus-visible, .modal button:focus-visible, .modal a:focus-visible { outline: 2px solid #f5d58e; outline-offset: 4px; }
+.hud { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 105px; border-bottom: 1px solid #e9c98a26; }
+.exit { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #c9bdcd; }
+.location { text-align: center; }
+.location > span, .kicker { display: block; color: #bc9b64; font-size: 10px; font-weight: 600; letter-spacing: .22em; }
+.location h1 { margin: 7px 0 0; font-family: Georgia, 'Noto Serif KR', serif; font-size: 24px; letter-spacing: .15em; font-weight: 500; }
+.hudActions { display: flex; gap: 8px; align-items: center; }
+.hudActions button { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid #d9b57840; border-radius: 50%; color: #d9c7df; }
+.hudActions button[aria-pressed=true] { color: #f6d499; background: #9f805638; }
+.sealCount { margin-right: 10px; color: #e8c381; font-size: 17px; }
+.sceneLayout { display: grid; grid-template-columns: minmax(0, 1fr) 265px; gap: 24px; max-width: 1650px; margin: 26px auto 0; align-items: center; }
+.stage { position: relative; width: 100%; aspect-ratio: 1.5; overflow: hidden; border: 1px solid #e1c08a60; border-radius: 4px; box-shadow: 0 12px 80px #0008; background: #241d31; isolation: isolate; }
+.stage::after { content: ''; position: absolute; inset: 8px; border: 1px solid #f1d49338; pointer-events: none; z-index: 2; }
+.canvas { position: absolute; inset: 0; }
+.canvas canvas { display: block; }
+.hotspots { position: absolute; inset: 0; pointer-events: none; }
+.hotspots > button { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 7px; transform: translate(-50%, -50%); pointer-events: auto; color: #fff1d9; min-width: 44px; min-height: 44px; }
+.marker { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid #f3cf8d; border-radius: 50%; background: #34233dde; font-family: Georgia, serif; font-size: 23px; box-shadow: 0 0 0 5px #edc78e1c, 0 0 24px #ecc08565; animation: beacon 2.8s ease-in-out infinite; }
+.hotspotLabel { background: #261c2de8; border: 1px solid #e4c69466; border-radius: 3px; padding: 5px 10px; white-space: nowrap; font-size: 11px; letter-spacing: .025em; }
+.hotspots button:hover .marker { background: #75533b; box-shadow: 0 0 30px #ffe0a5; }
+.sceneCaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 45px 24px 20px; pointer-events: none; text-align: center; background: linear-gradient(transparent, #171320e0); }
+.sceneCaption > span { font-size: 9px; letter-spacing: .23em; color: #e5c78d; }
+.sceneCaption p { margin: 5px 0; font-family: Georgia, 'Noto Serif KR', serif; font-size: 13px; color: #e5d9dd; }
+.loading, .travel { position: absolute; inset: 0; z-index: 4; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; padding: 30px; text-align: center; background: #21182cf5; font-size: 14px; }
+.loading > span, .travel > span { font-size: 64px; color: #e6c68e; }
+.loading button { color: #e6c68e; text-decoration: underline; }
+.travel { z-index:60; background:#21182c; animation:none; }
+.questCard { padding: 25px 0; }
+.questCard h2 { font-family: Georgia, 'Noto Serif KR', serif; font-size: 24px; margin: 14px 0 10px; font-weight: 500; color: #f4e6d1; }
+.questSubtitle { font-size: 12px; color: #b7aabf; line-height: 1.9; }
+.questProgress { display: flex; gap: 7px; margin: 25px 0 16px; }
+.questProgress span { flex: 1; height: 3px; background: #67566e; }
+.questProgress span[data-done=true] { background: #eccb89; box-shadow: 0 0 9px #eccb8940; }
+.objective { font-size: 14px; line-height: 1.9; min-height: 56px; }
+.rewardPreview { display: flex; align-items: center; gap: 14px; padding: 16px 0; margin: 15px 0; border-block: 1px solid #d7bd912b; }
+.rewardPreview > span { display: grid; place-items: center; width: 48px; height: 48px; color: #e6c68e; border: 1px solid #ab85564d; border-radius: 50%; font-size: 35px; background: radial-gradient(#94744155, transparent); }
+.rewardPreview small, .rewardPreview strong { display: block; }
+.rewardPreview small { color: #a999ae; font-size: 10px; margin-bottom: 5px; }
+.rewardPreview strong { font-size: 13px; color: #e7cc9a; font-weight: 500; }
+.goldButton { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; border: 1px solid #dcc18b; border-radius: 3px; background: linear-gradient(110deg, #e7c992, #bc9765); padding: 12px 14px; color: #2a1d2b; font-size: 13px; font-weight: 650; }
+.goldButton:hover { filter: brightness(1.08); }
+.mapButton { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; border: 1px solid #ccad7845; border-radius: 3px; padding: 11px; margin-top: 10px; font-size: 12px; color: #d1bda0; }
+.hint { margin-top: 22px; font-size: 10px; line-height: 1.9; color: #a99aaf; }
+.actionBar { display: flex; justify-content: center; gap: 10px; padding: 23px 0; flex-wrap: wrap; }
+.actionBar button { display: flex; gap: 8px; align-items: center; min-height: 40px; padding: 8px 14px; border: 1px solid #d1b98030; border-radius: 3px; color: #d7c7dc; font-size: 11px; background: #32283d77; }
+.actionBar button:hover { background: #604753; }
+.actionBar span { color: #d6b680; font-size: 17px; }
+.footer { display: flex; align-items: center; justify-content: flex-end; gap: 22px; padding: 18px 0; border-top: 1px solid #d7b88624; color: #97869f; font-size: 10px; }
+.footer > span { margin-right: auto; letter-spacing: .12em; }
+.preview { margin-top: 10px; padding: 8px 12px; border: 1px solid #d1b98050; color: #e4d0a8; font-size: 12px; }
+.veil { position: fixed; inset: 0; z-index: 100; background: #100c19b5; backdrop-filter: blur(3px); animation: arrival .2s ease both; }
+.modal { --gold: #e6c68e; position: fixed; z-index: 101; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: calc(100vw - 32px); max-height: calc(100dvh - 40px); overflow-y: auto; overscroll-behavior: contain; width: 640px; padding: 36px; color: #eee4d4; border: 1px solid #d3b37d88; border-radius: 5px; background: #2a2035; box-shadow: 0 30px 120px #000b; font-family: 'Pretendard', 'Noto Sans KR', sans-serif; }
+.modal h2 { font-family: Georgia, 'Noto Serif KR', serif; font-weight: 500; font-size: 26px; line-height: 1.5; margin: 12px 0 18px; }
+.modal p { font-size: 14px; line-height: 1.95; }
+.close { position: absolute; right: 10px; top: 10px; z-index: 3; display: grid; place-items: center; height: 36px; width: 36px; background: #271c32e0; border: 1px solid #c8ad7b60; border-radius: 50%; color: #f5ddae; font-size: 24px; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.dialogue { width: 1040px; top: auto; bottom: 5vh; transform: translateX(-50%); display: grid; grid-template-columns: 260px 1fr; padding: 0; overflow: visible; background: linear-gradient(120deg, #302139f7, #201a2cfb); }
+.portrait { align-self: end; width: 260px; height: 260px; background-repeat: no-repeat; background-size: 200% 200%; filter: drop-shadow(0 0 20px #e6c68e18); pointer-events: none; }
+.speech { min-height: 280px; padding: 28px 45px 28px 25px; max-height: 65dvh; overflow-y: auto; }
+.speech h2 { margin: 8px 0 14px; color: #ecd09a; font-size: 24px; }
+.speech > p { min-height: 85px; margin-bottom: 14px; }
+.choices { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.choices button { text-align: left; padding: 10px 15px; color: #efd9af; border: 1px solid #c8a5724d; border-radius: 3px; font-size: 13px; background: #8c6b4820; }
+.choices button:hover { border-color: #e6c68e; background: #84684950; }
+.textButton { display: inline-block; margin: 14px 0 0; font-size: 12px; color: #bf995f; text-decoration: underline; text-underline-offset: 4px; }
+.cursor { color: #e1bc82; }
+.error { color: #ffbcb2; padding: 8px 0; font-size: 12px !important; }
+.bookModal { width: 1040px; padding: 0; background: #241a2b; perspective: 1500px; }
+.shelfPanel { padding: 40px; }
+.shelfPanel > p { color: #bfafc3; }
+.shelfPanel input { width: 100%; background: #17111f; color: #eee1cf; padding: 12px 16px; margin: 22px 0; border: 1px solid #9f846453; border-radius: 4px; font-size: 13px; }
+.bookRow { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); align-items: stretch; gap: 13px; border-bottom: 12px solid #584032; padding: 16px 0 8px; }
+.spine { min-height: 220px; display: flex; flex-direction: column; align-items: center; gap: 18px; justify-content: space-between; padding: 20px 12px; color: #ecd39c; border-radius: 3px 8px 8px 3px; border: 1px solid #b08c555e; box-shadow: inset 5px 0 #ffffff08, inset 8px 0 #0003, 4px 4px 0 #c4b391, 7px 7px 10px #0008; background: linear-gradient(100deg, #35243f, #594061); }
+.spine[data-tone='1'] { background: linear-gradient(100deg, #223b3c, #395354); }
+.spine[data-tone='2'] { background: linear-gradient(100deg, #563a37, #7d5347); }
+.spine[data-tone='3'] { background: linear-gradient(100deg, #29384e, #49556f); }
+.spine:hover { transform: translateY(-15px) rotate(-2deg); }
+.spine strong { writing-mode: vertical-rl; font-size: 18px; letter-spacing: .16em; font-weight: 500; max-height: 200px; }
+.spine small { font-size: 8px; letter-spacing: .1em; }
+.coverStage { min-height: 530px; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 45px; }
+.bookCover { width: 290px; min-height: 390px; padding: 32px; display: flex; flex-direction: column; align-items: center; justify-content: space-around; gap: 20px; border: 1px solid #b9945d; border-radius: 3px 12px 12px 3px; background: radial-gradient(ellipse at 40% 30%, #674e70, #2b1e37); color: #e6c68e; box-shadow: inset 8px 0 #ffffff0c, inset 0 0 0 14px #211b3030, 8px 3px 0 #ddceb2, 12px 7px 40px #0008; animation: takeBook .6s ease both; transform: rotate(-4deg); }
+.bookCover > span { font-size: 11px; letter-spacing: .12em; }
+.bookCover .coverStar { font-size: 95px; font-family: Georgia, serif; }
+.bookCover h2 { font-size: 28px; margin: 0; }
+.bookCover:hover { transform: rotate(0) scale(1.025); }
+.openBook { display: grid; grid-template-columns: 35% 65%; color: #453845; background: #f3e9d3; min-height: 540px; animation: unfold .65s ease both; transform-origin: left center; }
+.openBook aside { padding: 35px 24px; background: linear-gradient(90deg, #e7d9be, #f4ecd9 95%, #c5b699); border-right: 1px solid #baa47d; }
+/* 펼친 책의 목차 검색 — 종전엔 스타일이 없어 흰 맨 상자에 글자가 붙어 있었다(2026-10-03 UI 확인). 종이 위 입력. */
+.openBook aside input { box-sizing: border-box; width: 100%; margin: 14px 0 6px; padding: 10px 12px; border: 1px solid #b89a6c; border-radius: 4px; color: #3d2c35; background: #fffaf0; font-size: 14px; }
+.openBook aside input::placeholder { color: #8d7663; }
+.openBook article { display: flex; flex-direction: column; padding: 36px 40px 30px; background: linear-gradient(90deg, #d6c7aa, #fbf4e4 5%, #f3e8d1); min-width: 0; }
+.openBook h2 { font-size: 22px; }
+.openBook h3 { font-size: 14px; color: #806141; font-weight: 600; margin: 20px 0 12px; }
+.openBook ol { list-style: none; margin-top: 22px; padding: 0; }
+.recordKeywords { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0 0; padding: 0; }
+.recordKeywords li { padding: 6px 12px; border: 1px solid #b89a6c; border-radius: 999px; color: #3d2c35; background: #fffaf0; font-size: 14px; line-height: 1.4; }
+.recordKeywordsNote { margin-top: 18px; color: #6f5a45; font-size: 13px; line-height: 1.7; }
+.openBook li button { display: flex; gap: 12px; width: 100%; text-align: left; border-bottom: 1px solid #8c6f4433; padding: 14px 5px; font-size: 13px; line-height: 1.7; }
+.openBook li small { color: #a28055; }
+.openBook li button[aria-pressed=true] { color: #743f7a; font-weight: 650; background: #b1956817; }
+.prose { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 2.05 !important; }
+.pageTurn { flex: 1; animation: pageTurn .4s ease both; }
+.pageControls { display: flex; gap: 15px; justify-content: space-between; align-items: center; margin: 30px 0 20px; border-top: 1px solid #9a7d4940; padding-top: 18px; font-size: 12px; color: #805d38; }
+.pageControls button { min-height: 40px; }
+/* 책장 → 연구대 직행 (2026-10-03) — 본문 아래, 페이지 넘김 줄 다음. 종이 위 잉크 색. */
+.bookToDesk { display: grid; justify-items: start; gap: 10px; margin-top: 4px; padding: 14px 16px; border: 1px dashed #9a7d4980; border-radius: 4px 14px; background: #fffaf0b3; }
+.bookToDesk p { margin: 0; color: #5a4636; font-size: 13px; line-height: 1.7; }
+.readPrompt { display: grid; place-content: center; flex: 1; text-align: center; color: #897157; }
+.readPrompt > span { font-size: 64px; }
+.openBook .error { color: #a13932; }
+.journal { background: linear-gradient(110deg, #f3e5ca, #fcf5e7); color: #4d3b45; }
+.journal > p { color: #826c56; }
+.checklist { list-style: none; padding: 15px 0; margin: 12px 0 22px; border-block: 1px solid #a486533b; }
+.checklist li { display: flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 13px; color: #8b7a69; }
+.checklist li > span { display: grid; place-items: center; width: 23px; height: 23px; border: 1px solid #a38964; border-radius: 50%; font-size: 11px; }
+.checklist li[data-done=true] { color: #596943; }
+.checklist li[data-done=true] > span { background: #68724c; color: #fff6df; }
+.journal label { display: block; font-size: 15px; font-weight: 650; margin-bottom: 8px; }
+.journal form p { font-size: 12px; color: #856c57; }
+.journal textarea { width: 100%; min-height: 150px; margin-top: 12px; border: 1px solid #bea47a; border-radius: 4px; background: #fffaf0; color: #433548; padding: 14px; line-height: 1.9; font-size: 14px; resize: vertical; }
+.journal form > small { display: block; color: #8b7359; margin: 8px 0 18px; font-size: 11px; }
+.journal .error { color: #a13932; }
+.modal blockquote { padding: 18px; margin: 20px 0; border-left: 2px solid #b69b68; background: #ad8a5415; font-size: 14px; line-height: 1.9; white-space: pre-wrap; overflow-wrap: anywhere; }
+.earned { color: #746032; border: 1px solid #b19860; padding: 15px; text-align: center; }
+.mapPanel { width: 800px; background: radial-gradient(ellipse at center, #433346, #231b30); }
+.mapPlaces { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 25px 0 0; }
+.mapPlaces button { position: relative; min-height: 150px; display: flex; flex-direction: column; gap: 10px; align-items: center; justify-content: center; border: 1px solid #c3a67655; background: #30263b88; padding: 16px; border-radius: 4px; }
+.mapPlaces button:hover { background: #79604760; }
+.mapPlaces button > span { font-size: 36px; color: #e7c78f; }
+.mapPlaces strong { font-size: 16px; font-weight: 500; }
+.mapPlaces small { font-size: 11px; color: #c3b0c2; }
+.mapPlaces em { color: #e7c78f; font-size: 10px; font-style: normal; }
+.rewardModal { text-align: center; background: radial-gradient(ellipse at 50% 10%, #675044, #2b2035 65%); }
+.rewardBurst { width: 160px; height: 160px; display: grid; place-items: center; margin: 15px auto 35px; border: 2px solid #ddbc7e; border-radius: 50%; font-size: 110px; color: #ffe6a3; background: radial-gradient(#ffe4a126, transparent); box-shadow: 0 0 0 10px #e6c68e0a, 0 0 0 22px #e6c68e08, 0 0 100px #e6c68e45; animation: seal 1s ease both; }
+.rewardModal blockquote { color: #d6c4d8; text-align: left; }
+.chatPanel { width: 740px; }
+.chatHeader { display: flex; align-items: center; gap: 18px; padding-right: 10px; }
+.chatPortrait { width: 90px; height: 90px; flex-shrink: 0; background-size: 200% 200%; border-radius: 50%; border: 1px solid #c1a36e; background-color: #2a2035; }
+.chatHeader h2 { font-size: 22px; margin: 8px 0 0; }
+.chatHeader p { font-size: 12px; color: #c4b1c6; margin: 4px 0; }
+.chatLog { max-height: 34dvh; overflow-y: auto; overscroll-behavior: contain; padding: 18px 3px; margin: 16px 0; border-block: 1px solid #b3936433; }
+.chatWelcome { color: #e6cfaa; padding: 15px; }
+.chatBubble { max-width: 92%; padding: 12px 16px; margin-bottom: 14px; background: #8e70462c; border: 1px solid #c9a8733b; border-radius: 4px 16px 16px; }
+.chatBubble[data-speaker=user] { margin-left: auto; background: #7f5f9f33; border-color: #a383c344; border-radius: 16px 4px 16px 16px; }
+.chatBubble small { color: #ccad78; font-size: 10px; }
+.chatBubble p { margin: 5px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
+.chatThinking { color: #cbb690; font-size: 12px !important; }
+.chatPanel textarea { width: 100%; margin: 15px 0 10px; padding: 12px; border: 1px solid #bd9f6966; border-radius: 4px; background: #19121f; color: #eddfcb; font-size: 13px; line-height: 1.8; resize: vertical; }
+.chatNote { font-size: 10px !important; color: #b5a5be; margin-top: 12px; }
+@keyframes beacon { 50% { transform: translateY(-5px); box-shadow: 0 0 0 8px #edc78e0e, 0 0 25px #ecc08555; } }
+@keyframes arrival { from { opacity: 0; } to { opacity: 1; } }
+@keyframes takeBook { from { opacity: 0; transform: translateY(80px) rotate(-15deg) scale(.75); } to { opacity: 1; transform: rotate(-4deg); } }
+@keyframes unfold { from { opacity: .2; transform: rotateY(-75deg) scale(.85); } to { opacity: 1; transform: rotateY(0) scale(1); } }
+@keyframes pageTurn { from { opacity: .3; transform: translateX(18px) rotateY(-15deg); } to { opacity: 1; transform: none; } }
+@keyframes seal { from { transform: scale(.3) rotate(-50deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }
+[data-reduced=true] *, [data-reduced=true] *::before, [data-reduced=true] *::after { animation: none !important; transition: none !important; }
+@media (min-width: 1750px) { .sceneLayout { grid-template-columns: minmax(0, 1fr) 295px; } }
+@media (max-width: 1050px) {
+  .sceneLayout { grid-template-columns: 1fr; gap: 5px; }
+  .questCard { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; padding: 20px 5px; }
+  .questCard > .kicker, .questCard h2, .questSubtitle, .questProgress, .objective { grid-column: 1; }
+  .questCard h2 { margin-top: 8px; }
+  .questProgress { margin: 15px 0; }
+  .questCard .rewardPreview { grid-column: 2; grid-row: 1 / 4; margin: 0; }
+  .questCard > .goldButton { grid-column: 2; grid-row: 4; }
+  .questCard > .mapButton { grid-column: 2; grid-row: 5; }
+  .questCard .hint { display: none; }
+  .actionBar { padding-top: 0; }
+  .dialogue { grid-template-columns: 200px 1fr; }
+  .portrait { width: 200px; height: 200px; }
+}
+@media (max-width: 600px) {
+  .game { padding: 0 12px; }
+  .hud { min-height: 83px; gap: 8px; }
+  .exit { font-size: 10px; }
+  .location h1 { font-size: 17px; letter-spacing: .05em; }
+  .location > span { font-size: 7px; letter-spacing: .13em; }
+  .hudActions { gap: 5px; }
+  .hudActions button { width: 29px; height: 32px; }
+  .sealCount { font-size: 13px; margin-right: 0; }
+  .sceneLayout { margin-top: 14px; }
+  .stage { border-radius: 3px; }
+  .marker { width: 30px; height: 30px; font-size: 18px; box-shadow: 0 0 10px #e6c68e88; }
+  .hotspots > button { gap: 2px; }
+  .hotspotLabel { font-size: 8px; padding: 3px 5px; }
+  .sceneCaption { padding: 15px 5px 7px; }
+  .sceneCaption > span { font-size: 7px; }
+  .sceneCaption p { display: none; }
+  .questCard { column-gap: 15px; padding-bottom: 18px; }
+  .questCard > .kicker { font-size: 7px; letter-spacing: .12em; }
+  .questCard h2 { font-size: 19px; }
+  .questSubtitle { display: none; }
+  .questCard .rewardPreview { grid-row: 1 / 3; gap: 8px; }
+  .rewardPreview > span { width: 35px; height: 35px; font-size: 27px; flex-shrink: 0; }
+  .rewardPreview strong { font-size: 11px; }
+  .questProgress { margin: 4px 0 12px; }
+  .objective { font-size: 12px; line-height: 1.8; grid-row: 4 / 6; }
+  .questCard .goldButton { padding: 11px 4px; font-size: 11px; }
+  .questCard .mapButton { font-size: 11px; padding: 8px; }
+  .actionBar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .actionBar button { font-size: 10px; justify-content: center; padding: 6px; min-height: 42px; }
+  .footer { gap: 12px; flex-wrap: wrap; font-size: 9px; }
+  .footer > span { width: 100%; font-size: 8px; }
+  .modal { max-width: calc(100vw - 20px); max-height: calc(100dvh - 24px); padding: 30px 22px; }
+  .modal h2 { font-size: 22px; }
+  .dialogue { bottom: 12px; padding: 0; display: block; overflow: hidden; }
+  .portrait { position: absolute; right: 18px; top: 10px; width: 108px; height: 108px; margin: 0; }
+  .speech { padding: 28px 20px 22px; max-height: calc(100dvh - 50px); }
+  .speech > .kicker { font-size: 8px; margin-right: 110px; }
+  .speech h2 { margin-bottom: 50px; }
+  .speech > p { font-size: 14px; min-height: 110px; }
+  .choices button { min-height: 44px; font-size: 12px; }
+  .bookModal { padding: 0; }
+  .shelfPanel { padding: 35px 22px; }
+  .bookRow { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+  .spine { min-height: 190px; }
+  .coverStage { min-height: 490px; padding: 35px 25px; }
+  .bookCover { width: 240px; min-height: 350px; }
+  .openBook { display: block; }
+  .openBook aside { padding: 30px 22px 20px; border-right: 0; border-bottom: 1px solid #bba782; }
+  .openBook aside h2 { margin-bottom: 0; }
+  .openBook ol { max-height: 145px; overflow-y: auto; margin-top: 15px; }
+  .openBook article { padding: 26px 22px; min-height: 300px; }
+  .openBook h2 { font-size: 20px; }
+  .mapPlaces { gap: 10px; }
+  .mapPlaces button { padding: 14px 8px; min-height: 155px; }
+  .mapPlaces strong { font-size: 13px; }
+  .mapPlaces small { font-size: 10px; }
+}
+
+/* Character PNGs use their alpha channel; no painted portrait background. */
+.portrait { object-fit: contain; background: transparent; }
+.chatPortrait { object-fit: contain; background: transparent; }
+.modal.researchPanel, .modal.postPanel { width: 1160px; max-width: calc(100vw - 48px); background: radial-gradient(ellipse at 30% 0, #fffbed, #e8dcc5); color: #443449; }
+.modal.dailyPanel { width: 740px; }
+.modal.researchPanel .goldButton, .modal.postPanel .goldButton { color: #3b283b; }
+.modal.researchPanel .mapButton, .modal.postPanel .mapButton { color: #624852; border-color: #9b7b5480; background: #fffbed60; }
+.modal.researchPanel .textButton, .modal.postPanel .textButton { color: #795631; }
+.modal.researchPanel textarea, .modal.postPanel textarea { color: #443449; background: #fffaf0c9; border-color: #a68d675e; }
+.modal.dailyPanel textarea, .modal.dailyPanel select { color: #f7e9cf; background: #33283e; border: 1px solid #b99a6860; }
+.modal.dailyPanel textarea::placeholder { color: #b9acbf; }
+.modal.researchPanel .error, .modal.postPanel .error { color: #9b3041; }
+.modal.researchPanel .close, .modal.postPanel .close { color: #694956; }
+@media (max-width: 800px) {
+  .facilityHeader { gap: 14px; }
+  .facilityHeader > img { width: 75px; height: 125px; }
+  .facilityHeader .kicker { font-size: 8px; }
+  .facilityHeader p { font-size: 12px; }
+  .observationLayout, .researchDesk, .interviewChamber, .letterOpen { grid-template-columns: 1fr; }
+  .researchDesk > aside, .interviewChamber > aside, .letterOpen > article { border-right: 0; padding-right: 0; }
+  .mailGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 12px; gap: 12px; }
+  .envelope { padding: 14px; }
+  .envelope > strong { font-size: 12px; }
+  .directionCards { grid-template-columns: 1fr; }
+  .feedbackGrid { grid-template-columns: 1fr; }
+  .facilityTools { flex-wrap: wrap; }
+  .facilityTools select { width: 100%; }
+  .dailyInvite { grid-column: 1 / -1; margin-top: 6px; }
+}
+[data-reduced=true] .letterOpen, [data-reduced=true] .telescopeTransition, [data-reduced=true] .pigeonTransition > span, [data-reduced=true] .waitingDots, [data-reduced=true] .researchWaiting > span { animation: none; }
+.growthPanel { width: min(820px, 94vw); }
+.growthBody { border: 0; padding: 0; min-width: 0; }
+.growthBody button { margin-block: 6px; }
+.growthBody label { display: block; margin-block: 12px; }
+.growthBody textarea, .growthBody select { display: block; width: 100%; padding: 12px; margin-top: 8px; border: 1px solid #9d814c88; border-radius: 8px; color: #f0e5ce; background: #181b30; }
+.growthBody textarea { min-height: 110px; resize: vertical; }
+.growthBody blockquote { padding: 18px; border-left: 2px solid #cfad69; background: #ffffff08; white-space: pre-wrap; overflow-wrap: anywhere; }
+.growthBody details { padding: 12px; margin-block: 12px; border: 1px solid #c0a16544; border-radius: 8px; }
+.growthBody p { line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; }
+.growthLinks { grid-column: 1 / -1; display: grid; gap: 6px; margin-top: 8px; }
+.tutorialList { display: grid; gap: 16px; padding: 0; list-style: none; }
+.tutorialList > li { display: flex; gap: 16px; padding: 18px; border: 1px solid #a18b6244; border-radius: 12px; background: #ffffff04; }
+.tutorialList > li > span { color: #d5b77a; font-size: 24px; }
+.tutorialList > li[data-done=true] { border-color: #81bba366; }
+.tutorialList h3 { margin: 0; }
+.innerSky { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 24px; border-radius: 50% 50% 12px 12px; background: radial-gradient(ellipse at top, #283658, #101326); }
+.innerSky button { display: grid; gap: 10px; justify-items: center; padding: 14px; border: 1px solid transparent; border-radius: 12px; text-align: center; }
+.innerSky button[aria-pressed=true] { border-color: #caae70; }
+.innerSky span { font-size: 55px; color: #9dacc5; }
+.innerSky [data-lit=true] span { color: #ffe2a3; text-shadow: 0 0 24px #f4bb6988; animation: heartStar 2s ease-in-out; }
+.innerSky small { max-width: 220px; overflow-wrap: anywhere; }
+.confirmDiscovery { display: flex !important; gap: 10px; align-items: center; }
+.journeyStar { position: absolute; z-index: 3; top: 6%; right: 4%; display: grid; padding: 12px; border: 1px solid #d8b67577; border-radius: 12px; color: #e2d9c6; background: #13182dcc; }
+.journeyStar span { font-size: 38px; }
+.journeyStar[data-complete=true] span { color: #ffe1a1; text-shadow: 0 0 20px #f4bb69; }
+@keyframes heartStar { from { transform: scale(.7); opacity: .4; } to { transform: scale(1); opacity: 1; } }
+[data-reduced=true] .innerSky span { animation: none; }
+@media (max-width: 600px) { .innerSky { gap: 8px; padding: 12px; } .innerSky button { padding: 8px; } .innerSky small { font-size: 11px; } .journeyStar { font-size: 10px; padding: 7px; } .journeyStar span { font-size: 24px; } }
+/* Scene-first presentation: every game control and surface lives inside the frame. */
+.titleScene { position: absolute; inset: 0; z-index: 60; overflow: hidden; color: #fae9c9; background: linear-gradient(90deg,#120e24ef,#231a3588 50%,#19122522),url('/images/academy-game/plaza.png') center/cover; }
+.titleScene::after { content: ''; position: absolute; inset: 12px; border: 1px solid #d4b77744; pointer-events: none; }
+.titleCast { position: absolute; right: 0; bottom: -12%; width: 57%; height: 110%; pointer-events: none; }
+.titleCast img { position: absolute; bottom: 0; object-fit: contain; object-position: bottom; filter: drop-shadow(0 0 30px #100920aa); }
+.titleCast img:first-child { left: -4%; width: 58%; height: 79%; z-index: 1; }
+.titleCast img:last-child { right: -3%; width: 64%; height: 100%; }
+.titleCopy { position: absolute; top: 15%; left: 7%; width: 42%; max-height: 80%; overflow-y: auto; scrollbar-width: none; text-shadow: 0 2px 15px #100a22; }
+.titleCopy .kicker { font-size: 9px; color: #d7bd84; }
+.titleStar { display: block; font-size: 40px; margin: 12px 0; color: #ffdda0; }
+.titleCopy h1 { font: 76px/1.15 Georgia,'Noto Serif KR',serif; letter-spacing: .12em; margin: 0; color: #fff0cd; }
+.titleCopy > p { margin: 24px 0; font-size: 17px; line-height: 1.9; color: #e4d7bc; }
+.titleCopy > small { display: block; font-size: 10px; color: #c1b398; margin-top: 24px; letter-spacing: .14em; }
+.titleMenu { width: min(330px,100%); display: grid; gap: 8px; }
+.titleMenu > button { padding: 13px 18px; border: 1px solid #d4b37355; border-radius: 3px; color: #e9d6af; background: #211629ce; font-size: 14px; }
+.titleMenu > .titleStart { display: flex; justify-content: space-between; color: #3c2940; background: linear-gradient(110deg,#efdcaf,#d6ae73); font-weight: 600; border-color: #f2d293; }
+.titleMenu > button:disabled { opacity: .65; }
+/* 프롤로그 영상 — 시작 단추 다음 자리. 금빛 테두리로 «보는 것»임을 시작(채운 금)과 구분한다. */
+.titleMenu > .titleFilm { display: flex; align-items: center; gap: 10px; color: #f6dfb7; border-color: #e0bd7c99; background: linear-gradient(110deg,#2c1f37e6,#3a2840d9); }
+.titleFilm > span { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; font-size: 9px; padding-left: 2px; color: #3c2940; background: linear-gradient(135deg,#f3e0b2,#d6ae73); }
+.titleMenu > .titleFilm:hover { border-color: #f2d293; background: #3c2b48e6; }
+.titleExit { position: absolute; top: 25px; left: 28px; font-size: 12px; color: #e5d5b6; }
+.prologue { position: absolute; inset: 0; z-index: 65; overflow: hidden; color: #f6e9d2; background: radial-gradient(ellipse at top,#42304d,#100e1c); }
+.prologueArt { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; animation: prologueArrival .8s ease-out both; }
+.prologueHeader { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; padding: 25px 35px 40px; background: linear-gradient(#120d22bb,transparent); text-shadow: 0 2px 10px #000; }
+.prologueHeader p { margin-top: 8px; font-family: Georgia,'Noto Serif KR',serif; }
+.prologueHeader > div:last-child { display: flex; gap: 8px; }
+.prologueHeader button { font-size: 12px; padding: 9px 12px; border: 1px solid #dac18b66; border-radius: 4px; background: #22192cbb; }
+.prologueHeader .prologueFilm { color: #3c2940; border-color: #f2d293; background: linear-gradient(110deg,#efdcaf,#d6ae73); font-weight: 600; }
+.prologueDialogue { position: absolute; bottom: 4%; left: 4%; right: 4%; max-height: 55%; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; border: 1px solid #d2ae77aa; border-radius: 7px; padding: 25px 35px 15px; background: linear-gradient(120deg,#2f2238f5,#161220f7); box-shadow: 0 18px 60px #100a1aaa; }
+.prologueSpeaker { display: inline-block; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #cfab6b66; font: 22px Georgia,'Noto Serif KR',serif; color: #f7dca7; }
+.prologueText { display: block; width: 100%; text-align: left; min-height: 95px; font-size: 18px; line-height: 1.9; white-space: pre-wrap; overflow-wrap: anywhere; }
+.prologueDialogue nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 18px; margin-top: 15px; border-top: 1px solid #d4b67a33; }
+.prologueDialogue nav button, .prologueSkip button { padding: 9px 14px; font-size: 13px; color: #f3d49a; border: 1px solid #c5a26866; border-radius: 4px; }
+.prologueDialogue nav small { font-size: 11px; color: #b9abbe; }
+.prologueDialogue button:disabled { opacity: .55; }
+.prologueSkip { padding-top: 16px; }
+.prologueSkip p { margin-bottom: 12px; font-size: 14px; }
+.prologueSkip button { margin-right: 10px; }
+@keyframes prologueArrival { from { opacity: .2; transform: scale(1.025); } to { opacity: 1; transform: scale(1); } }
+@media (max-width: 650px) {
+  .titleCast { width: 100%; height: 62%; right: -10%; bottom: 36%; }
+  .titleCopy { top: auto; left: 6%; bottom: 5%; width: 88%; max-height: 60%; padding-top: 22px; background: linear-gradient(transparent,#161024dd 25%); }
+  .titleCopy .kicker { font-size: 7px; }
+  .titleCopy h1 { font-size: 44px; line-height: 1.05; }
+  .titleCopy > p { font-size: 13px; margin: 15px 0; }
+  .titleStar { display: none; }
+  .titleMenu { width: 100%; }
+  .titleCopy > small { margin-top: 15px; font-size: 8px; }
+  .titleExit { top: 20px; left: 22px; }
+  .prologueArt { object-fit: contain; object-position: center 22%; }
+  .prologueHeader { padding: 18px 15px; }
+  .prologueHeader .kicker { font-size: 7px; letter-spacing: .12em; }
+  .prologueHeader p { font-size: 11px; }
+  .prologueHeader button { padding: 7px; font-size: 10px; }
+  .prologueHeader > div:last-child { gap: 5px; }
+  .prologueDialogue { left: 3%; right: 3%; bottom: 3%; padding: 18px 18px 12px; max-height: 52%; }
+  .prologueSpeaker { font-size: 19px; }
+  .prologueText { font-size: 15px; min-height: 125px; }
+  .prologueDialogue nav { gap: 7px; }
+  .prologueDialogue nav button { font-size: 11px; padding: 8px; }
+}
+.actionScene { position: absolute; z-index: 45; inset: 0; overflow: hidden; background: #100b18; color: #f7e6c6; }
+.actionIllustration { width: 100%; height: 100%; object-fit: cover; object-position: center; animation: actionApproach 4s ease-out both; }
+.actionCaption { position: absolute; inset: auto 0 0; padding: 65px 8% 35px; background: linear-gradient(transparent, #100b18ef 40%); text-align: center; }
+.actionCaption h2 { margin: 8px 0; font: 26px Georgia, 'Noto Serif KR', serif; }
+.actionCaption p { margin: 10px auto; max-width: 680px; line-height: 1.8; }
+.actionCaption button, .actionSkip { border: 1px solid #d9b87b88; background: #21162be6; color: #f2d69a; border-radius: 4px; padding: 10px 18px; }
+.actionSkip { position: absolute; top: 18px; right: 18px; font-size: 12px; }
+.actionFallback { display: flex; align-items: flex-end; justify-content: center; height: 85%; background: url('/images/academy-game/library.png') center/cover; }
+.actionFallback img { width: 45%; height: 95%; object-fit: contain; object-position: bottom; }
+.actionFallback img:first-child { height: 76%; }
+.scenePanel.tableScene { padding: 0; background: #160f1c; container-type: size; }
+.tableTitle { position: absolute; z-index: 5; top: 20px; left: 30px; right: 230px; pointer-events: none; text-shadow: 0 2px 8px #000; }
+.tableTitle h2 { margin: 8px 0; font: 27px Georgia, 'Noto Serif KR', serif; }
+.tableTitle p { font-size: 13px; }
+/* 그림(1.5 비율)이 **패널 안에** 꼭 맞는 가장 큰 상자 — 폭은 패널 폭과 «패널 높이 × 1.5» 중 작은 쪽(cqh = 패널 높이).
+   종전 `150dvh` 는 패널이 아니라 뷰포트 높이라 휴대폰(390×844)에서 폭이 546px 로 뷰포트를 넘쳐 그림 좌우가 잘렸다(2026-10-02 실측). */
+.tablePlane { position: absolute; width: 100%; width: min(100%, 150cqh); aspect-ratio: 1.5; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.tablePlane > img { width: 100%; height: 100%; object-fit: contain; }
+.tablePlane > img[data-ready=false] { opacity: 0; }
+.tableLoading { position: absolute; top: 40%; left: 10%; right: 10%; text-align: center; padding: 25px; background: #201529dd; border: 1px solid #c2a26855; border-radius: 5px; }
+.tableLoading button { text-decoration: underline; }
+/* 상자는 그림(research-desk.png 1536×1024)에 그려진 종이·수첩 자리 그대로다 — 종이 x 16~51% · y 25~73%, 수첩 x 59~86% · y 32~76%
+   (2026-10-02 스크린샷 실측). `.tablePlane` 이 그림과 같은 1.5 비율이라 % 가 곧 그림 좌표다. 라벨은 상자 가운데. */
+.tablePlane > button { position: absolute; border: 2px solid transparent; border-radius: 4% / 3%; transition: border-color .2s, background .2s, box-shadow .2s; }
+.tablePaper { left: 17%; top: 25%; width: 33%; height: 48%; transform: rotate(-2deg); }
+.tableNotebook { left: 60%; top: 32%; width: 25%; height: 43%; transform: rotate(2deg); }
+.tablePlane > button:hover, .tablePlane > button:focus-visible { border-color: #ffe1a5b0; background: #f6c26d18; outline: none; box-shadow: 0 0 35px #ffc77544; }
+.tablePlane > button > span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: max-content; max-width: 90%; padding: 12px 20px; color: #f5dcad; background: #211329ed; border: 1px solid #d8b27399; border-radius: 5px; font-size: 18px; text-align: center; }
+.tablePlane small { display: block; font-size: 11px; margin-top: 4px; }
+.adminPreview input { width: 100%; margin: 8px 0 14px; padding: 12px; border: 1px solid #bb975b88; border-radius: 4px; color: #f5e4c8; background: #1b1426; }
+.previewResults { margin: 16px 0; max-height: 35dvh; overflow-y: auto; }
+.previewResults button { width: 100%; padding: 14px; border-bottom: 1px solid #ac8c5a44; text-align: left; }
+.previewResults small { display: block; margin-top: 5px; color: #c5b59d; }
+@keyframes actionApproach { from { transform: scale(1.035); opacity: .3; } to { transform: scale(1); opacity: 1; } }
+@media (max-width: 650px) {
+  .actionIllustration { object-fit: contain; object-position: center 30%; }
+  .actionCaption { padding: 35px 22px 25px; }
+  .actionCaption h2 { font-size: 21px; }
+  .actionCaption p { font-size: 13px; }
+  .tableTitle { top: 70px; left: 20px; right: 20px; }
+  .tableTitle h2 { font-size: 23px; }
+  .tablePlane { top: 52%; width: clamp(100%, 65dvh, 140vw); }
+  .tablePlane > button > span { padding: 10px; font-size: 13px; max-width: 145px; }
+  .tablePlane small { font-size: 9px; }
+}
+.surfacePortal .bookReading { height: min(800px, calc(100dvh - 48px)); padding: 0; overflow: hidden; }
+.bookReading .openBook { height: 100%; min-height: 0; overflow: hidden; }
+.bookReading .openBook aside { display: flex; flex-direction: column; min-height: 0; min-width: 0; overflow: hidden; }
+.bookReading .openBook aside > :not(ol) { flex-shrink: 0; }
+.bookReading .openBook ol { flex: 1; min-height: 0; max-height: none; overflow-y: auto; }
+.bookReading .openBook article { min-height: 0; overflow-y: auto; }
+.bookReading .openBook article > * { flex-shrink: 0; }
+.bookReading .openBook ol, .bookReading .openBook article { overscroll-behavior-y: contain; scrollbar-width: none; }
+.bookReading .openBook ol::-webkit-scrollbar, .bookReading .openBook article::-webkit-scrollbar { display: none; }
+@media (max-width: 600px) {
+  .surfacePortal .bookReading { height: calc(100dvh - 24px); padding: 0; }
+  .bookReading .openBook { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(150px, 32%) minmax(0, 1fr); }
+  .bookReading .openBook aside { padding: 16px 22px 12px; }
+}
+.game { position: fixed; inset: 0; z-index: 80; min-height: 0; height: 100dvh; padding: 0; overflow: hidden; background: #100d18; }
+.sceneLayout { display: block; width: 100%; height: 100%; max-width: none; margin: 0; }
+.stage { width: 100%; height: 100%; aspect-ratio: auto; border: 0; border-radius: 0; background-position: center; background-size: cover; }
+.stage::before { content: ''; position: absolute; inset: 0; background: #130e21a8; pointer-events: none; }
+.stage::after { inset: 10px; z-index: 4; }
+.worldPlane { position: absolute; width: min(100%, 150dvh); aspect-ratio: 1.5; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.stage[data-conversation=true] .worldPlane, .stage[data-conversation=true] .hud, .stage[data-conversation=true] .questCard { visibility: hidden; }
+.stage > .preview { position: absolute; top: 75px; left: 20px; right: 20px; z-index: 7; }
+.hud { position: absolute; inset: 0 0 auto; z-index: 8; min-height: 70px; padding: 10px 24px; border: 0; background: linear-gradient(#130f20cc, transparent); pointer-events: none; }
+.hud > * { pointer-events: auto; }
+.hud .location { text-align: center; }
+.hud .location h1 { font-size: clamp(16px, 2vw, 26px); }
+.sceneCaption { bottom: 0; padding: 20px; }
+.questCard { position: absolute; z-index: 9; bottom: 24px; right: 24px; display: block; width: min(310px, calc(100% - 32px)); padding: 0; }
+.questCard > summary { list-style: none; padding: 13px 20px; border: 1px solid #ddba7f88; border-radius: 4px; color: #f5deb0; background: #1b1428e8; cursor: pointer; text-align: center; box-shadow: 0 8px 30px #0005; }
+.inventoryBody { position: absolute; right: 0; bottom: 58px; width: 100%; max-height: min(70dvh, 680px); overflow-y: auto; overscroll-behavior: contain; padding: 20px; border: 1px solid #ddba7f66; background: #1c1629f5; border-radius: 6px; }
+.inventoryBody .kicker { font-size: 8px; }
+.inventoryBody h2 { font-size: 20px; }
+.inventoryBody .hint { display: none; }
+.inventoryBody .dailyInvite { margin-top: 12px; }
+.hotspots button { pointer-events: auto; }
+.surfacePortal { position: absolute; inset: 0; z-index: 20; pointer-events: none; isolation: isolate; }
+.surfacePortal > * { pointer-events: auto; }
+.surfacePortal .veil { position: absolute; z-index: 48; background: #0d091745; backdrop-filter: none; }
+.surfacePortal .modal { position: absolute; z-index: 49; max-width: calc(100% - 32px); max-height: calc(100% - 32px); }
+.surfacePortal .close { position: absolute; top: 14px; right: 16px; z-index: 10; width: 34px; height: 34px; background: #171020d9; border: 1px solid #d9ba8177; color: #f9e3b8; border-radius: 50%; }
+.surfacePortal .characterScene { inset: 0; transform: none; width: 100%; max-width: none; max-height: none; height: 100%; border: 0; border-radius: 0; padding: 0; overflow: hidden; background: linear-gradient(0deg, #110d20bb, transparent 65%); box-shadow: none; display: block; }
+.vnPortrait { position: absolute; left: 1%; bottom: -12%; width: 45%; height: 112%; max-width: none; object-fit: contain; object-position: bottom; pointer-events: none; filter: drop-shadow(0 10px 25px #100b2088); }
+.vnContent { position: absolute; right: 4%; bottom: 5%; width: 57%; max-height: 83%; overflow-y: auto; overscroll-behavior: contain; padding: 25px 30px; border: 1px solid #d7b888aa; border-radius: 5px; color: #f2e6d2; background: linear-gradient(130deg,#30233bed,#171423f2); box-shadow: 0 20px 70px #0007; }
+.dialogue .vnContent { bottom: 6%; max-height: 65%; }
+.dialogue .speech { padding: 0; min-height: 0; max-height: none; overflow: visible; }
+.dialogue .speech > p { min-height: 0; font-size: clamp(15px, 1.5vw, 20px); line-height: 1.9; }
+.dialogue .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.characterScene .facilityHeader > img, .characterScene .chatPortrait { display: none; }
+.characterScene .facilityHeader, .characterScene .chatHeader { padding: 0; border: 0; }
+.characterScene .chatLog { max-height: 30dvh; }
+.proposalScene label { display: block; margin: 12px 0; font-size: 13px; }
+.proposalScene input, .proposalScene textarea, .proposalScene select { display: block; width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #bf9c665e; border-radius: 4px; color: #f3e4cb; background: #201728; }
+.proposalScene fieldset { min-width: 0; }
+.characterScene .facilityHeader p { color: #e0cfae; }
+.characterScene.researchPanel .vnContent { color: #382c38; background: linear-gradient(120deg,#f6ead2f7,#ddcbaefa); }
+.characterScene.researchPanel .kicker { color: #785d37; }
+.characterScene.researchPanel .facilityHeader p { color: #695142; }
+.scenePanel { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; overflow: hidden; padding: 20px; color: #f2e5cc; background: #121225; }
+.scenePanel.researchPanel { width: 100%; max-width: none; }
+.sceneBack { position: absolute; z-index: 30; top: 18px; right: 20px; padding: 10px 14px; color: #f3dfb7; background: #171322ee; border: 1px solid #d8b27888; border-radius: 4px; }
+.scenePanel > .facilityHeader { flex-shrink: 0; min-height: 58px; padding: 0 220px 10px 0; }
+.scenePanel > .facilityHeader > img, .scenePanel > .facilityHeader p, .scenePanel > .facilityHeader .kicker { display: none; }
+.scenePanel > .facilityHeader h2 { margin: 5px 0; font-family: Georgia, 'Noto Serif KR', serif; font-size: 24px; }
+.telescopeSky { flex: 1; min-height: 0; position: relative; border: 1px solid #bb955855; box-shadow: inset 0 0 50px #000; }
+.fullConstellation { position: relative; width: 100%; height: 100%; min-height: 0; }
+.fullConstellation > :global(.starfield) { min-height: 0 !important; height: 100%; }
+.fullConstellation :global(.starfield-layer) { pointer-events: none; }
+/* 고른 별·길의 기록 — 오른쪽 아래(왼쪽 아래는 범례). 제목·내용 두 칸. */
+.graphDetail { position: absolute; z-index: 15; right: 16px; bottom: 16px; display: flex; flex-direction: column; width: min(400px, calc(100% - 32px)); max-height: 42%; color: #efdfc0; background: #231b32f2; border: 1px solid #d4b27899; border-radius: 6px; box-shadow: 0 14px 40px #00000066; backdrop-filter: blur(6px); }
+.graphDetail > header { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 10px; padding: 12px 14px 10px; border-bottom: 1px solid #d4b27833; }
+.graphDetail > header > .kicker { grid-column: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.graphDetail h3 { grid-column: 1; margin: 5px 0 0; font: 500 17px/1.4 Georgia, 'Noto Serif KR', serif; color: #f8ecd4; overflow-wrap: anywhere; }
+.graphDetail > header > button { grid-column: 2; grid-row: 1 / span 2; align-self: start; width: 28px; height: 28px; margin: -4px -6px 0 0; border-radius: 50%; color: #d8c29a; font-size: 20px; line-height: 1; }
+.graphDetail > header > button:hover { background: #ffffff14; color: #f8ecd4; }
+.graphDetailBody { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 10px 14px 14px; }
+.graphDetailBody p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.8; white-space: pre-wrap; overflow-wrap: anywhere; }
+.graphDetailBody p:last-child { margin-bottom: 0; }
+.graphDetailNote { color: #c2ad8f; font-size: 11.5px; }
+.telescopeScene > .mapButton { align-self: flex-start; width: auto; flex-shrink: 0; }
+.designScene { background: radial-gradient(ellipse at 40% 40%, #63442b88, #211823ee), url('/images/academy-game/observatory.png') center/cover; }
+.deskWorkspace { position: relative; flex: 1; min-height: 0; padding: 0; }
+.deskMap { position: absolute; z-index: 1; isolation: isolate; inset: 26px 30% 24px 0; border: 12px solid #917043; border-radius: 6px; box-shadow: 8px 12px 30px #0008; }
+.deskWorkspace[data-paper=false] .deskMap { right: 0; }
+.paperToggleRow { position: absolute; z-index: 20; top: 0; left: 10px; display: flex; align-items: center; gap: 8px; }
+.paperToggle { padding: 10px; border: 1px solid #ddb879; border-radius: 4px; background: #32233cee; color: #efdcac; }
+.paperToggleRow .guidePointer { position: static; }
+/* 지도를 펼친 동안의 안내 카드 — 설계지가 숨어 있으니 지도 위 왼쪽에 띄운다. */
+.mapGuide { position: absolute; z-index: 20; top: 52px; left: 10px; width: min(380px, calc(100% - 20px)); margin: 0; }
+.deskWorkspace .researchDesk { position: absolute; z-index: 12; inset: 42px 0 0 auto; display: block; width: min(470px, 44%); overflow-y: auto; overscroll-behavior: contain; padding: 24px; border: 1px solid #ab8754; color: #3c303b; background: linear-gradient(100deg,#dbc69f,#fbefd5 8%,#f0dfbb); box-shadow: -12px 12px 35px #0009, inset 6px 0 5px #c5a877; border-radius: 2px 9px 12px 2px; }
+.deskWorkspace[data-paper=false] .researchDesk { display: none; }
+.deskWorkspace .researchDesk > aside { border: 0; padding: 0; }
+.deskWorkspace .researchDesk .kicker { color: #795933; }
+.deskWorkspace .researchDesk .mapButton { color: #654d39; }
+/* 설계 의뢰 = 포스트잇 (2026-10-03) — 연구대 오른쪽 아래에 누군가 붙여 둔 쪽지. 진행 중 노랑 · 완성 연두빛 노랑 · 멈춤 분홍.
+   글자는 모두 쪽지 바탕 대비 4.5:1 이상(짙은 갈색). 떼면 위로 들리며 사라진다(움직임 줄이기에서는 바로). */
+/* 자리 = 별자리 지도 틀의 오른쪽 아래(설계지 왼편) — 설계지 위에 붙이면 «설계도 만들기» 단추를 가렸다. 지도 틀은 오른쪽 30% 를 비운다(.deskMap). */
+.postits { position: absolute; z-index: 45; right: calc(30% + 46px); bottom: 48px; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; width: min(268px, calc(100% - 44px)); max-height: 72%; overflow-y: auto; overscroll-behavior: contain; padding: 14px 6px 6px; }
+.postit { position: relative; display: grid; gap: 4px; width: 100%; padding: 18px 16px 12px; color: #3a2c17; background: linear-gradient(180deg, #fff7b8, #ffef8a); box-shadow: 0 1px 0 #0000000d, 0 10px 18px -6px #3a2a0a66, inset 0 -18px 24px -20px #b8901a66;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 93% 100%, 0 100%); transform: rotate(-1.4deg); animation: postitIn .35s cubic-bezier(.3, 1.4, .5, 1) both; }
+.postit[data-tilt='1'] { transform: rotate(1.2deg); }
+.postit[data-tilt='2'] { transform: rotate(-.4deg); }
+.postit[data-status=completed] { background: linear-gradient(180deg, #f6fbb6, #e6f28a); }
+.postit[data-status=failed] { background: linear-gradient(180deg, #ffe1dc, #ffc9c1); color: #4a1f1a; }
+.postit[data-peeling] { animation: postitPeel .45s ease-in forwards; }
+@keyframes postitIn { from { opacity: 0; transform: translateY(14px) rotate(-6deg); } }
+@keyframes postitPeel { 30% { transform: rotate(-4deg) translateY(-6px); } to { opacity: 0; transform: rotate(14deg) translate(40px, -60px) scale(.9); } }
+.postitTape { position: absolute; top: -8px; left: 50%; width: 74px; height: 20px; margin-left: -37px; background: #ffffff8c; border-left: 1px dashed #ffffffcc; border-right: 1px dashed #ffffffcc; box-shadow: 0 1px 3px #0000001f; transform: rotate(-3deg); }
+.postitFrom { color: #6b5320; font-size: 11px; font-weight: 700; letter-spacing: .04em; }
+.postit[data-status=failed] .postitFrom { color: #7a2e26; }
+.postitHead { font: 700 15px/1.35 'Pretendard', sans-serif; }
+.postitTitle { margin: 0; overflow: hidden; color: inherit; font: 21px/1.2 'Nanum Pen Script', 'Gowun Batang', cursive; text-overflow: ellipsis; white-space: nowrap; }
+.postitMeta { color: #5c4a22; font-size: 11px; line-height: 1.5; }
+.postit[data-status=failed] .postitMeta { color: #6b2a22; }
+.postitActions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 4px; }
+.postitButton { min-height: 32px; padding: 4px 12px; border: 1px solid #8a6a1f; border-radius: 999px; color: #fff8dc; background: #6b4e14; font-size: 12px; font-weight: 700; }
+.postitButton:hover:not(:disabled) { background: #57400f; }
+.postitButton:disabled { opacity: .55; }
+.postitPeel { min-height: 32px; padding: 4px 10px; border: 1px dashed #8a6a1f; border-radius: 999px; color: #4a3812; background: #ffffff66; font-size: 12px; font-weight: 700; }
+.postitPeel:hover { background: #ffffffaa; }
+.postitError { margin: 4px 0 0; padding: 8px 10px; border-radius: 6px; color: #7a1f1f; background: #fff1ee; font-size: 12px; }
+.postitMore { min-height: 32px; padding: 4px 12px; border: 1px solid #d9c48a; border-radius: 999px; color: #f6e7c8; background: #3a2c17cc; font-size: 12px; }
+:global([data-reduced=true]) .postit { animation: none; }
+:global([data-reduced=true]) .postit[data-peeling] { animation: postitPeel .01s forwards; }
+@media (max-width: 650px) { .postits { right: 10px; bottom: 10px; width: min(250px, calc(100% - 20px)); max-height: 55%; } }
+.professorDesignButton { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:16px; padding:16px 12px; border:2px solid #d8b478; border-radius:7px; color:#fff0d4; background:linear-gradient(120deg,#50334f,#35283f); box-shadow:0 4px 12px #4a293833,inset 0 0 0 2px #ffffff0b; font-size:15px; font-weight:700; }
+.professorDesignButton:hover:not(:disabled) { background:linear-gradient(120deg,#714a69,#493451); box-shadow:0 4px 16px #78553255; }
+.professorDesignButton:focus-visible { outline:3px solid #81578b; outline-offset:3px; }
+.designMethods { display:grid; grid-template-columns:minmax(0,1fr); grid-auto-rows:1fr; gap:10px; margin-top:16px; }
+.designMethods .professorDesignButton { min-height:58px; height:100%; margin:0; font-size:14px; }
+.newsContextNotice { margin:12px 0; padding:10px 12px; border:1px solid #a1845950; border-radius:5px; background:#f0e3c6; color:#49354d; font-size:13px; }
+.postPanel .postFilters { display:grid; grid-template-columns:minmax(0,1fr) minmax(130px,190px); align-items:stretch; }
+.postPanel .postFilters input, .postPanel .postFilters select { box-sizing:border-box; width:100%; min-width:0; height:44px; margin:0; padding:10px 12px; font-size:14px; }
+.postChapterGuide { padding:14px 18px; margin:12px 0; border:1px solid #b99a65; border-radius:6px; background:#f2e6ce; color:#4f3652; }
+.postChapterGuide .goldButton { display:block; margin:10px 0; }
+@media(max-width:560px) {
+  .postPanel .postFilters { grid-template-columns:minmax(0,1fr) 116px; gap:8px; }
+  .postPanel .postFilters input, .postPanel .postFilters select { padding:10px 8px; font-size:13px; }
+}
+.professorDesignHint { margin:8px 0 16px; color:#674a50; font-size:12px; line-height:1.7; }
+.achievementChoice { display:block; margin-top:16px; padding:12px; border:1px solid #a9875c77; border-radius:4px; background:#fff9e947; font-size:13px; }
+.achievementChoice small { display:block; margin-top:6px; line-height:1.6; }
+/* 연구 수첩 — 새 별 찾기와 같은 연구시설 그림 위에, 수첩 상자가 머리글 아래를 **꽉 채운다**(2026-10-02).
+   종전엔 배경이 반투명 자주색뿐이고 상자가 내용 높이만큼만 떠 있어 아래가 빈 어둠이었고, 기록이 많으면 상자가 틀 밖으로 넘쳐 잘렸다. */
+.historyScene { background: radial-gradient(ellipse at 40% 40%, #63442b88, #211823ee), url('/images/academy-game/observatory.png') center/cover; }
+/* 펼친 자주 가죽 수첩 (2026-10-03 개편) — 연구대 그림의 보라색 수첩을 그대로 펼친 모양. 두 쪽이 각자 스크롤한다. */
+.historyScene > .notebook { flex: 1; min-height: 0; width: min(1180px, 100%); margin: 0 auto; display: grid; grid-template-columns: minmax(260px, 38%) minmax(0, 1fr); padding: 14px; border-radius: 14px 18px 18px 14px;
+  background: radial-gradient(ellipse at 20% 0%, #7a4a86, transparent 60%), radial-gradient(ellipse at 90% 100%, #2a1633, transparent 55%), linear-gradient(135deg, #5a2f68, #2e1838);
+  box-shadow: 0 22px 50px #0b061a99, inset 0 0 0 2px #d8b77a66, inset 0 0 0 7px #3e2148, inset 0 0 0 8px #e4c48a55; }
+.nbPage { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 26px 28px 40px; color: #3b2c3a;
+  background-color: #fbf3e2; background-image: repeating-linear-gradient(transparent 0 33px, #c9b38d38 33px 34px); background-attachment: local; }
+.nbLeft { border-radius: 8px 2px 2px 8px; box-shadow: inset -26px 0 30px -18px #6b4b3a55; }
+.nbRight { border-radius: 2px 8px 8px 2px; box-shadow: inset 26px 0 30px -18px #6b4b3a55; }
+.nbPage h3 { margin: 6px 0 4px; color: #2c2340; font: 700 24px/1.3 'Gowun Batang', Georgia, serif; }
+.nbCount { margin: 0 0 14px; color: #6b5444; font-size: 13px; }
+.nbHeading { margin: 18px 0 8px; padding-bottom: 6px; border-bottom: 1px solid #b89a6c66; color: #6b3a6a; font-size: 13px; letter-spacing: .04em; }
+.nbIndex { display: grid; gap: 4px; margin: 0; padding: 0; list-style: none; }
+.nbIndex button { display: grid; grid-template-columns: 46px minmax(0, 1fr); align-items: center; gap: 10px; width: 100%; min-height: 54px; padding: 6px 8px; border: 1px solid transparent; border-radius: 8px; color: inherit; background: none; text-align: left; transition: background .15s, transform .15s; }
+.nbIndex button:hover { background: #f1e2c3; }
+.nbIndex button[aria-pressed=true] { border-color: #b89a6c; background: #fffaf0; box-shadow: 0 4px 12px #6b4b3a2e; transform: translateX(4px); }
+.nbEntryText { display: grid; min-width: 0; }
+.nbEntryText strong { color: #2c2340; font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nbEntryText small { color: #6b5444; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* 상태 인장 — 밀랍 도장. 색은 뜻을 갖는다: 초안 회색 · 제안 남색 · 확정 초록 · 실행 금 · 보관 흐림 · 조언 자주 */
+.nbSeal { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; color: #fff4dc; font-size: 11px; font-weight: 800; text-shadow: 0 1px 0 #0006;
+  background: radial-gradient(circle at 35% 30%, #ffffff40, transparent 42%), var(--seal, #6b6475); box-shadow: 0 2px 3px #0005, inset 0 -2px 3px #0004; }
+.nbSeal[data-tone=draft] { --seal: #6b6475; }
+.nbSeal[data-tone=proposed] { --seal: #3f4f8a; }
+.nbSeal[data-tone=saved] { --seal: #2f6b4a; }
+.nbSeal[data-tone=observed] { --seal: #8a5a14; }
+.nbSeal[data-tone=archived] { --seal: #7d7380; }
+.nbSeal[data-tone=advice] { --seal: #6b3a6a; }
+.nbEmpty { margin: 4px 0 0; color: #6b5444; font-size: 13px; line-height: 1.7; }
+.nbEntry { animation: nbTurn .35s ease-out both; }
+@keyframes nbTurn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: none; } }
+.historyScene .nbRight .researchRecord { margin: 0; padding: 0; border: 0; }
+.nbStatus { display: inline-block; margin: 0 0 12px; padding: 2px 12px; border-radius: 999px; color: #fff4dc; background: #6b6475; font-size: 12px; font-weight: 700; }
+.nbStatus[data-tone=proposed] { background: #3f4f8a; }
+.nbStatus[data-tone=saved] { background: #2f6b4a; }
+.nbStatus[data-tone=observed] { background: #8a5a14; }
+.nbAdvice { margin: 12px 0; padding: 12px 14px; border: 1px solid #cdb187; border-radius: 6px; background: #fffaf0b8; }
+.nbAdvice h4 { margin: 0 0 4px; color: #2c2340; }
+.nbBlank { display: grid; place-items: center; align-content: center; gap: 12px; min-height: 100%; color: #5a4636; text-align: center; }
+.nbBlank span { color: #a8742f; font-size: 34px; }
+.nbBlank p { margin: 0; font-size: 15px; line-height: 1.8; }
+@media (max-width: 760px) {
+  .historyScene > .notebook { display: block; overflow-y: auto; padding: 8px; border-radius: 14px; }
+  .nbPage { overflow: visible; padding: 18px 14px 22px; border-radius: 8px; box-shadow: none; }
+  .nbRight { margin-top: 6px; }
+}
+:global([data-reduced=true]) .nbEntry { animation: none; }
+.historyScene .researchRecord { margin: 14px 0; }
+.scenePanel .researchWaiting { position: absolute; z-index: 40; inset: auto 20px 20px; }
+.scenePanel > .error { position: absolute; z-index: 40; bottom: 15px; left: 15px; right: 15px; padding: 14px; background: #372038; }
+.journeyStar { top: 12%; right: 4%; }
+@media (max-width: 650px) {
+  .hud { min-height: 62px; padding: 8px 12px; gap: 8px; }
+  .hud .location > span { display: none; }
+  .hudActions { gap: 3px; }
+  .hudActions button { width: 28px; height: 28px; }
+  .worldPlane { top: 40%; }
+  .sceneCaption { transform: translateY(100%); padding: 8px; }
+  .questCard { right: 16px; bottom: 18px; width: 220px; }
+  .inventoryBody { width: min(310px, calc(100vw - 32px)); }
+  .hotspotLabel { display: block; font-size: 9px; white-space: nowrap; }
+  .surfacePortal .modal { max-width: calc(100% - 16px); max-height: calc(100% - 20px); padding: 20px; }
+  .surfacePortal .characterScene { max-width: none; max-height: none; padding: 0; }
+  .vnPortrait { left: 1%; bottom: 30%; width: 86%; height: 77%; }
+  .vnContent, .dialogue .vnContent { left: 3%; right: 3%; bottom: 3%; width: auto; max-height: 57%; padding: 18px; }
+  .dialogue .choices { grid-template-columns: 1fr; }
+  .dialogue .speech > p { font-size: 14px; }
+  .scenePanel { padding: 8px; }
+  .scenePanel > .facilityHeader { min-height: 80px; padding: 40px 0 0; }
+  .scenePanel > .facilityHeader h2 { font-size: 17px; }
+  .sceneBack { top: 8px; right: 8px; padding: 8px; font-size: 11px; }
+  .deskMap { inset: 35px 0 0; border-width: 5px; }
+  .deskWorkspace .researchDesk { width: 93%; inset: 48px 0 0 auto; padding: 18px; }
+  .paperToggleRow { left: 0; flex-wrap: wrap; gap: 4px; }
+  .paperToggle { font-size: 11px; }
+  .mapGuide { top: 46px; left: 0; width: 100%; }
+  .fullConstellation :global(.starfield) > div:global(.absolute.left-4) { max-width: calc(100% - 20px); }
+  .graphDetail { right: 8px; bottom: 8px; left: 8px; width: auto; max-height: 46%; }
+}
+
+.surfacePortal .exitVeil { z-index: 80; background: #100a20aa; }
+.surfacePortal .exitConfirm { z-index: 81; width: min(460px, calc(100% - 32px)); }
+.exitChoices { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+
+.roommateScene .vnPortrait { height:78%; }
+@media(max-width:650px) { .roommateScene .vnPortrait { height:58%; } }
+.hotspots button:disabled { cursor:not-allowed; }
+.hotspots button:disabled .marker { filter:grayscale(.7); opacity:.6; }
+.hotspots button:disabled .hotspotLabel { color:#d2c6b8; }
+.lockHint { display:block; margin-top:3px; color:#d4b886; font-size:10px; white-space:nowrap; }
+.mapPlaces button:disabled { cursor:not-allowed; opacity:.6; }
+
+/* 제1장 안내 — 망원경·설계지 위의 카시안 안내 상자와, 지금 채울 칸의 금빛 테두리 (2026-10-03). */
+.tutorialGuide { display: grid; gap: 8px; margin: 0 0 16px; padding: 14px 16px; border: 1px solid #d8b478; border-radius: 6px; color: #f7e6c6; background: linear-gradient(120deg, #50334f, #35283f); box-shadow: 0 4px 14px #1b102444; }
+.tutorialGuide > .kicker { color: #e6c68e; }
+.tutorialGuide > strong { font-family: Georgia, 'Noto Serif KR', serif; font-size: 15px; line-height: 1.5; font-weight: 500; }
+.tutorialGuide > p { margin: 0; font-size: 13px; line-height: 1.8; }
+.tutorialGuide > .goldButton, .tutorialGuide > .mapButton { margin-top: 4px; }
+.scenePanel > .tutorialGuide { flex-shrink: 0; margin: 10px 0 0; }
+[data-guide=active] { outline: 2px solid #e6c68e !important; outline-offset: 3px; border-radius: 6px; box-shadow: 0 0 0 6px #e6c68e26; animation: guidePulse 1.8s ease-in-out infinite; }
+@keyframes guidePulse { 0%, 100% { box-shadow: 0 0 0 4px #e6c68e1f; } 50% { box-shadow: 0 0 0 9px #e6c68e3d; } }
+[data-reduced=true] [data-guide=active] { animation: none; }
+/* 안내 손가락 — 지금 조작할 칸 바로 위에 붙는 짧은 말. 설계지(.researchDesk)가 기준 상자다. */
+.guidePointer { position: absolute; z-index: 25; padding: 4px 10px; border: 1px solid #e6c68e; border-radius: 999px; background: #3b2a4e; color: #ffe9bd; font-size: 12px; font-weight: 600; white-space: nowrap; box-shadow: 0 4px 12px #1b102466; pointer-events: none; animation: guideNudge 1.4s ease-in-out infinite; }
+@keyframes guideNudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+[data-reduced=true] .guidePointer { animation: none; }
+.deskWorkspace .paperToggle[data-guide=active] { outline-offset: 2px; }
+/* 단추 옆에 흐름대로 붙는 안내 손가락(GuideHint) — 제2~6장 공용. 모양은 .guidePointer 와 같고 위치만 정적이다. */
+.guideHint { display: inline-block; align-self: center; justify-self: center; width: max-content; max-width: 100%; margin: 4px 6px; padding: 3px 10px; border: 1px solid #e6c68e; border-radius: 999px; background: #3b2a4e; color: #ffe9bd; font-size: 12px; font-weight: 600; line-height: 1.5; white-space: nowrap; box-shadow: 0 3px 10px #1b102455; pointer-events: none; animation: guideHintNudge 1.4s ease-in-out infinite; }
+@keyframes guideHintNudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-4px); } }
+[data-reduced=true] .guideHint { animation: none; }
+@media (prefers-reduced-motion: reduce) { .guideHint { animation: none; } }
+
+/* ── UI 선명도 정리 (2026-10-03 사용자 요청: «UI 가 명확하지 않은 요소가 여러 곳») ──
+ * 근거 = scripts/academy-test/ui-audit-browser-checks.mjs 의 전수 점검(화면 46개 · 글자 대비는 실제 픽셀로 잰다).
+ * 이 블록은 파일 맨 끝에 있어야 한다 — 앞의 @media 안 규칙과 특이도가 같아 «나중 것이 이긴다»로 덮는다. */
+
+/* 스크롤바는 게임처럼 감춘다(사용자 결정). 스크롤 자체는 그대로 — 휠·터치·키보드로 움직인다. */
+.game, .game * { scrollbar-width: none; }
+.game::-webkit-scrollbar, .game *::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+/* 글자 하한 11px — 장식용 영문 머리글(kicker)도 읽을 수 있어야 한다. */
+.location > span, .kicker, .inventoryBody .kicker, .questCard > .kicker, .facilityHeader .kicker, .speech > .kicker, .titleCopy .kicker, .prologueHeader .kicker { font-size: 11px; letter-spacing: .16em; }
+.dailyInvite small { font-size: 11px; letter-spacing: .14em; color: #e0c493; }
+.dailyInvite > span { font-size: 12px; color: #eadcc4; }
+.exit { font-size: 12px; }
+.envelope p, .envelope em { font-size: 12px; }
+.chatNote { font-size: 12px !important; color: #d4c6da; }
+.lensLabel { font-size: 11px; }
+.hotspotLabel { font-size: 12px; }
+@media (max-width: 700px) { .hotspotLabel { font-size: 11px; padding: 3px 6px; } }
+
+/* 밝은 종이 창(연구·우편) 위의 머리글·닫기 단추 — 어두운 창 기준 색이라 종이 위에서 흐렸다. */
+.modal.researchPanel .kicker, .modal.postPanel .kicker, .journal .kicker { color: #7a5a2e; }
+.surfacePortal .modal.researchPanel .close, .surfacePortal .modal.postPanel .close, .surfacePortal .modal.journal .close { color: #3d2c35; background: #fffaf0; border-color: #a4875c; }
+
+/* 누를 수 없는 주행동은 «흐린 금빛»이 아니라 «비어 있는 단추»로 — 흐린 금빛은 눌러도 되는지 모호했다. */
+.goldButton:disabled { opacity: 1; color: #c9bccf; background: #2c2337; border-color: #6d5c7a; box-shadow: none; }
+.modal.researchPanel .goldButton:disabled, .modal.postPanel .goldButton:disabled, .journal .goldButton:disabled { color: #7d6a5a; background: #ece0c8; border-color: #b8a07c; }
+
+/* 창이 열려 있으면 바닥의 장소 표식을 감춘다 — 엷은 막 너머로 밝게 남아 «여기도 누를 수 있다»처럼 보였다. 막도 조금 짙게. */
+.stage[data-panel=true] .hotspots { visibility: hidden; }
+.surfacePortal .veil { background: #0d0917a6; }
+
+/* 여정과 소지품 — 지금 이어갈 장 하나만 주행동, 지난 장은 조용한 줄. */
+.continueButton { margin-top: 14px; padding: 13px 12px; font-size: 14px; font-weight: 700; }
+.allDone { margin: 14px 0 0; color: #eadcc4; font-size: 13px; line-height: 1.7; }
+.menuGroup { display: grid; gap: 4px; margin-top: 16px; padding-top: 12px; border-top: 1px solid #ddba7f40; }
+.menuGroupTitle { color: #d9bd8e; font-size: 11px; font-weight: 600; letter-spacing: .08em; }
+.chapterRow { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 40px; padding: 8px 10px; border: 1px solid transparent; border-radius: 4px; color: #eadcc4; font-size: 13px; text-align: left; }
+.chapterRow:hover { border-color: #ddba7f66; background: #ffffff0a; }
+.chapterRow > span { flex-shrink: 0; color: #d9bd8e; font-size: 12px; }
+.chapterRow > em { margin-left: auto; color: #b9e0b0; font-style: normal; }
+
+
+/* 연구대 머리글 — 혼천의·종이 그림 위에 글자가 바로 얹혀 읽히지 않았다. 글자 뒤에 어두운 판을 깐다. */
+.tableTitle { right: auto; max-width: min(560px, calc(100% - 240px)); padding: 12px 18px 10px; border: 1px solid #ddba7f55; border-radius: 6px; background: #160f1ccc; backdrop-filter: blur(2px); text-shadow: none; }
+.tableTitle h2 { margin: 6px 0; }
+.tableTitle p { margin: 0; color: #eadcc4; }
+@media (max-width: 760px) { .tableTitle { max-width: none; right: 16px; } }
+/* 남은 작은 글자·흐린 장식 (UI 점검 2차) */
+.spine small { font-size: 10px; letter-spacing: .06em; }
+.mapPlaces em { font-size: 12px; }
+.envelope > span { color: #ffe1c4; }
+/* 망원경 범례·필터처럼 공용 그래프 화면이 Tailwind 10px 을 쓰는 곳 — 아카데미 안에서는 11px 로 올린다. */
+.game [class*='text-[10px]'] { font-size: 11px; }
+.formHint { margin: 4px 0 8px; color: #e0cfae; font-size: 13px; }
+.spine small { font-size: 11px; letter-spacing: .04em; }
+.envelope small { font-size: 11px; }
+.sceneCaption > span { font-size: 11px; }
+
+/* ── 전서구 우편국 편지함 (2026-10-03 개편) — 한 줄 머리글 + 나무 우편함 칸에 꽂힌 봉투 ── */
+.postHead { display: flex; align-items: center; gap: 14px; margin: -14px 40px 14px 0; padding-bottom: 12px; border-bottom: 1px solid #9d7e4940; }
+.postHead h2 { margin: 0; font-size: 21px; line-height: 1.3; }
+.postHead p { margin: 2px 0 0; color: #6b5340; font-size: 13px; line-height: 1.5; }
+.postPortrait { flex-shrink: 0; width: 52px; height: 52px; overflow: hidden; border-radius: 50%; border: 2px solid #b8935a; background: radial-gradient(circle at 50% 30%, #7a5a6a, #3a2a34); box-shadow: 0 3px 8px #0004; }
+.postPortrait img { display: block; width: 210%; max-width: none; height: auto; margin: -6% 0 0 -55%; }
+.mailCabinet { position: relative; padding: 16px; border: 10px solid #6a4a32; border-radius: 6px; background: linear-gradient(180deg, #4a3226, #3a2619); box-shadow: inset 0 0 0 2px #8a6a48, inset 0 16px 24px #0007, 0 14px 30px #0006; }
+.mailPlate { display: inline-block; margin: 0 0 14px; padding: 4px 14px; border-radius: 3px; color: #3a2614; background: linear-gradient(180deg, #e9cd8a, #b9934f); box-shadow: 0 2px 4px #0006; font-size: 13px; font-weight: 800; }
+.mailSlots { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+/* 한 칸 = 안쪽이 어두운 우편함 구멍. 봉투는 칸 위로 조금 솟아 있다가, 가리키면 쑥 빠져나온다. */
+.mailSlot { position: relative; display: flex; align-items: flex-end; min-height: 188px; padding: 10px 10px 0; border-radius: 4px; background: linear-gradient(180deg, #1f140d, #2e1f15 70%); box-shadow: inset 0 10px 16px #000a, inset 0 -2px 0 #6a4a32; }
+.mailSlot[data-empty] { opacity: .65; }
+.mailEnvelope { position: relative; display: grid; align-content: start; gap: 4px; width: 100%; min-height: 168px; padding: 16px 16px 14px; border: 1px solid #b49a70; border-radius: 3px 3px 0 0; color: #3d2c35; text-align: left; cursor: pointer;
+  background: linear-gradient(165deg, transparent 0 49.6%, #eadbb9 49.8% 50.2%, transparent 50.4%) top / 100% 26% no-repeat, linear-gradient(195deg, transparent 0 49.6%, #eadbb9 49.8% 50.2%, transparent 50.4%) top / 100% 26% no-repeat, #fbf1d8;
+  box-shadow: 0 -4px 10px #0006; transform: translateY(8px); transition: transform .22s cubic-bezier(.3, 1.4, .5, 1), box-shadow .2s; }
+.mailEnvelope:hover { transform: translateY(-6px) rotate(-.6deg); box-shadow: 0 10px 18px #000a; }
+.mailEnvelope:focus-visible { outline: 2px solid #f2c04e; outline-offset: 2px; }
+.mailEnvelope strong { padding-right: 56px; color: #2c2026; font: 600 15px/1.55 Georgia, 'Noto Serif KR', serif; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.mailEnvelope small { color: #6b5340; font-size: 12px; }
+.mailEnvelope em { margin-top: auto; color: #6b3a4a; font-size: 12px; font-style: normal; font-weight: 700; }
+.envelopeStamp { position: absolute; top: 10px; right: 10px; display: grid; place-items: center; min-width: 46px; height: 40px; padding: 0 6px; border: 2px dotted #a8742f; color: #6b4314; background: #f3e2bf; font-size: 11px; font-weight: 800; transform: rotate(4deg); }
+.envelopePostmark { display: inline-grid; place-items: center; justify-self: start; min-height: 26px; padding: 0 10px; border: 1.5px solid #7a6a8a99; border-radius: 999px; color: #5a4a6a; font-size: 11px; font-weight: 700; transform: rotate(-3deg); }
+.envelopeSeal { position: absolute; right: 16px; bottom: 12px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; color: #ffe1c4; background: radial-gradient(circle at 35% 30%, #ffffff40, transparent 42%), #7a2a3a; box-shadow: 0 2px 3px #0005, inset 0 -2px 3px #0004; font-size: 14px; }
+.mailEnvelope[data-read] { background-color: #f4ead6; transform: translateY(14px); }
+.mailEnvelope[data-read] .envelopeSeal { background: none; box-shadow: none; border: 2px dashed #7a2a3a66; }
+.mailEnvelope[data-read]:hover { transform: translateY(-4px); }
+:global([data-reduced=true]) .mailEnvelope { transition: none; }
+@media (max-width: 650px) {
+  .postHead { margin-right: 36px; gap: 10px; }
+  .postHead h2 { font-size: 18px; }
+  .postPortrait { width: 44px; height: 44px; }
+  .mailCabinet { border-width: 6px; padding: 10px; }
+  .mailSlots { grid-template-columns: minmax(0, 1fr); }
+  .mailSlot { min-height: 160px; }
+  .mailSlot[data-empty] { display: none; } /* 휴대폰은 한 줄이라 빈 칸이 세로로 길게 늘어질 뿐이다 */
+  .mailEnvelope { min-height: 140px; }
+}
+
+/* 닫기 단추의 × — 선 두 개(가운데 정렬이 글꼴 여백에 좌우되지 않는다). 색은 단추의 글자색(currentColor)을 따른다. */
+.closeMark { position: relative; display: block; width: 14px; height: 14px; }
+.closeMark::before, .closeMark::after { content: ''; position: absolute; top: 50%; left: 50%; width: 16px; height: 1.8px; margin: -0.9px 0 0 -8px; border-radius: 1px; background: currentColor; transform: rotate(45deg); }
+.closeMark::after { transform: rotate(-45deg); }
+
+/* 가로/세로 바꾸기의 «돌린 iframe» (2026-10-03, `screenRotation.ts`) — 화면 잠금을 못 하는 브라우저(아이폰 사파리)용.
+   상자를 뷰포트의 가로·세로를 맞바꾼 크기로 만들고 왼쪽 위 모서리를 축으로 돌린다. iframe 은 자기 뷰포트를 가지므로
+   안쪽의 100dvh·미디어 쿼리·Phaser 좌표가 돌린 크기로 맞게 계산된다. */
+.rotatedShell { position: fixed; z-index: 90; top: 0; left: 0; width: 100dvh; height: 100dvw; transform-origin: top left; background: #100d18; overflow: hidden; }
+.rotatedShell[data-rotate='90'] { transform: rotate(90deg) translateY(-100%); }
+.rotatedShell[data-rotate='-90'] { transform: rotate(-90deg) translateX(-100%); }
+.rotatedFrame { display: block; width: 100%; height: 100%; border: 0; }
+
+/* ── 휴대폰 가로 화면 (2026-10-03 사용자 요청 «가로 모드에서는 기존 비율 고정으로는 어렵다») ──
+ * 세로 화면의 배치(아래쪽 기능 줄 + 여정 카드)는 높이 390px 에서 세계의 아래 1/4 을 덮어 NPC 를 누를 수 없었다(UI 점검 blocked 5건).
+ * 가로 화면의 세계 평면은 높이 × 1.5(844×390 이면 가운데 585px)라 양옆에 장식 여백이 남는다 — 그 여백을 쓴다:
+ *   왼쪽 여백 = 기능 줄(세로 레일) · 오른쪽 아래 여백 = 여정 칩 · 위 = 얇은 HUD. 세계 위에는 아무것도 얹지 않는다.
+ * 조건 = 가로 ∧ 높이 520px 이하(휴대폰 가로만 — 태블릿·데스크톱은 그대로). 이 블록은 파일 끝에 둔다(같은 특이도의 앞 규칙을 덮는다). */
+@media (orientation: landscape) and (max-height: 520px) {
+  /* 제목 글씨가 작아지면 «큰 글자» 대비(3:1)를 못 쓴다 — 띠를 더 짙게 깐다(UI 점검 대비 3.95 → 4.5↑). */
+  .hud { min-height: 44px; padding: 6px 12px; background: linear-gradient(#130f20f2 0, #130f20d0 70%, #130f2000); }
+  .hud .location > span { font-size: 11px; letter-spacing: .1em; }
+  .hud .location h1 { margin-top: 1px; font-size: 15px; letter-spacing: .1em; }
+  .hudActions { gap: 6px; }
+  .hudActions button { width: 32px; height: 32px; }
+
+
+  .questCard { top: auto; bottom: 8px; right: 8px; width: min(132px, calc((100vw - 150dvh) / 2 - 12px)); min-width: 118px; }
+  .questCard > summary { padding: 8px 6px; font-size: 13px; }
+  .inventoryBody { right: 0; bottom: calc(100% + 6px); width: min(340px, calc(100vw - 90px)); max-height: calc(100dvh - 110px); padding: 14px 16px; }
+
+  /* 장소 이름 띠는 HUD 가 이미 말한다 — 가로 화면에서는 아래 가운데의 핫스팟(루온의 «!»)을 덮었다. */
+  .sceneCaption { display: none; }
+
+  .sceneBack { top: 6px; right: 8px; padding: 6px 10px; font-size: 12px; }
+  .scenePanel { padding: 8px 12px; }
+  .scenePanel > .facilityHeader { min-height: 36px; margin: 0 0 8px; padding: 0 190px 6px 0; }
+  .scenePanel > .facilityHeader h2 { margin: 2px 0; font-size: 17px; }
+  .tableTitle { top: 8px; left: 12px; max-width: calc(100% - 210px); padding: 6px 12px; }
+  .tableTitle h2 { margin: 2px 0; font-size: 18px; }
+
+  .modal { max-height: calc(100dvh - 16px); padding: 18px 22px; }
+  .modal h2 { margin: 4px 0 10px; font-size: 20px; line-height: 1.35; }
+  .close { top: 6px; right: 6px; }
+
+  /* 왕립 도서관 책장 — 제목·소개·찾기 칸이 위 230px 를 먹어 책이 화면 밖이었다. 소개는 감추고 책등을 낮춘다. */
+  .shelfPanel { padding: 14px 20px 16px; }
+  .shelfPanel h2 { margin: 2px 0 4px; font-size: 18px; }
+  .shelfPanel > p { display: none; }
+  .shelfPanel input { margin: 6px 0; padding: 8px 12px; }
+  .bookRow { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px; padding-top: 10px; }
+  .spine { min-height: 150px; gap: 8px; padding: 12px 8px; }
+  .spine strong { max-height: 110px; font-size: 16px; }
+  .coverStage { min-height: 0; padding: 14px; gap: 6px; }
+  .bookCover { width: 220px; min-height: 0; padding: 16px; gap: 6px; }
+  .bookCover .coverStar { font-size: 44px; }
+  .bookCover h2 { font-size: 20px; }
+  .surfacePortal .bookReading { height: calc(100dvh - 16px); }
+  .openBook aside { padding: 14px 16px; }
+  .openBook article { padding: 16px 20px; }
+
+  /* 지도 — 다섯 장소가 두 줄 × 세 칸(150px)이라 아래 줄이 화면 밖이었다. 한 줄 다섯 칸. */
+  .mapPlaces { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
+  .mapPlaces button { min-height: 112px; gap: 6px; padding: 8px 4px; }
+  .mapPlaces button > span { font-size: 26px; }
+  .mapPlaces strong { font-size: 14px; }
+
+  /* 타이틀 — 76px 두 줄 제목이 높이를 다 먹어 «이어서 하기»가 화면 밖이었다. 제목을 한 줄로, 문단·단추를 낮춰 세로 가운데. */
+  .titleCopy { top: 44px; bottom: 14px; left: 5%; width: 46%; max-height: none; display: flex; flex-direction: column; justify-content: center; }
+  .titleStar { margin: 2px 0 4px; font-size: 22px; }
+  .titleCopy h1 { font-size: 36px; letter-spacing: .08em; white-space: nowrap; }
+  .titleCopy > p { margin: 8px 0 10px; font-size: 13px; line-height: 1.6; }
+  .titleCopy > small { margin-top: 8px; }
+  .titleMenu { gap: 6px; }
+  .titleMenu > button { padding: 9px 14px; font-size: 13px; }
+  .titleExit { top: 12px; left: 16px; }
+
+  /* 망원경 안내 — 안내 카드(170px)가 아래를 차지해 그래프가 150px 로 줄고 범례가 검색창을 덮었다.
+     안내 카드가 있으면 오른쪽 세로 단으로 — 그래프는 높이를 다 쓴다(:has — 카드가 없으면 종전 그대로). */
+  .scenePanel:has(> .tutorialGuide) { display: grid; grid-template-columns: minmax(0, 1fr) 290px; grid-template-rows: auto minmax(0, 1fr); column-gap: 10px; }
+  .scenePanel:has(> .tutorialGuide) > :not(.tutorialGuide):not(.sceneBack) { grid-column: 1; }
+  .scenePanel:has(> .tutorialGuide) > .facilityHeader { grid-column: 1 / -1; grid-row: 1; }
+  .scenePanel:has(> .tutorialGuide) > .telescopeSky { grid-row: 2; }
+  .scenePanel > .tutorialGuide { grid-column: 2; grid-row: 2; align-self: stretch; margin: 0; overflow-y: auto; padding: 12px 14px; }
+  .tutorialGuide > p { line-height: 1.65; }
+
+  /* 새 별 찾기 — 설계지(오른쪽 44%)가 지도 오른쪽(30%)을 덮어 지도의 «필터» 단추가 가려졌다. 지도를 설계지 앞에서 끝낸다. */
+  .deskWorkspace .researchDesk { inset: 40px 0 0 auto; width: 46%; padding: 16px 18px; }
+  .deskMap { inset: 40px calc(46% + 10px) 6px 0; border-width: 8px; }
+
+  /* 연구대 — 탁자 그림이 높이에 맞춰 작아지면 «연구 수첩» 이름표가 두 줄로 꺾였다. */
+  .tablePlane > button > span { padding: 7px 12px; font-size: 15px; white-space: nowrap; max-width: none; }
+
+  /* 전서구 우편국 편지함 — 머리글·찾기 줄이 위 170px 를 먹었다. 머리글은 한 줄(노엘의 한마디 감춤), 찾기 줄은 낮게. */
+  .postHead { margin: -8px 40px 8px 0; padding-bottom: 6px; gap: 10px; }
+  .postHead p { display: none; }
+  .postHead h2 { font-size: 17px; }
+  .postPortrait { width: 36px; height: 36px; }
+  .postFilters { margin: 6px 0 8px; }
+  .postFilters input, .postFilters select { min-height: 36px; padding-top: 6px; padding-bottom: 6px; }
+  .mailCabinet { padding: 10px; border-width: 6px; }
+}
+
+
+/* 좌우로 늘린 장소 배경 (2026-10-03, wideBackdrops.ts) — 화면이 3:2 보다 넓으면 세계 평면은 높이에 맞춰지고 양옆이 빈다.
+   늘린 판(가운데 = 원본)을 «높이 100% · 가운데»로 깔면 가운데가 캔버스와 정확히 겹쳐 장면이 이어진다.
+   인라인 style 의 원본 배경을 덮어야 하므로 !important. 덮개(::before)는 옅게 — 이어진 장면이 보이되 세계가 앞에 선다. */
+@media (min-aspect-ratio: 3/2) {
+  .stage[data-wide=true] { background-image: var(--wide-backdrop) !important; background-size: auto 100%; background-position: center; background-repeat: no-repeat; }
+  .stage[data-wide=true]::before { background: linear-gradient(90deg, #130e21c8 0%, #130e2166 16%, #130e2133 50%, #130e2166 84%, #130e21c8 100%); }
+}
+
+
+/* 관리자 «이야기 다시 실행» (2026-10-04, AdminStoryReset.tsx) */
+.storyResetSelect { width: 100%; min-height: 40px; margin: 2px 0 6px; padding: 6px 10px; border: 1px solid #c3a67688; border-radius: 4px; background: #241b2e; color: #f3e2bf; font-size: 13px; }
+.storyResetActions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+
+/* ── 이야기가 기다리는 인물 표식 (2026-10-04 사용자 요청 «다른 게임의 느낌표처럼, 우리 게임에 맞게 세련되게») ──
+ * 표식 위에 금빛 마름모 인장 + 세리프 «!» 가 둥실 떠 있고, 인장 뒤로 빛 고리가 천천히 번진다.
+ * 인물 표식(.marker) 자체에도 금빛 테두리를 둘러 «여기를 누르라»가 멀리서도 읽힌다.
+ * 글자 대비: «!» #2a1d2b / 금 #e8c88e ≈ 10:1. 동작 줄이기(data-reduced)·prefers-reduced-motion 에서는 멈춘다. */
+.hotspots > button[data-story] { z-index: 2; }
+.hotspots > button[data-story] .marker { border: 2px solid #f6d79a; background: radial-gradient(circle at 40% 30%, #5a3f5e, #2b1d36 75%); box-shadow: 0 0 0 4px #f2d29340, 0 0 26px #f6d79acc; }
+.hotspots > button[data-story] .hotspotLabel { border-color: #f2d293cc; color: #fff4dc; background: linear-gradient(90deg, #3a2843f0, #2a1f36f0); }
+.storyBeacon { position: absolute; left: 50%; bottom: calc(100% - 2px); width: 30px; height: 30px; margin-left: -15px; pointer-events: none; animation: storyBob 2.4s ease-in-out infinite; }
+.storyBeacon::before { content: ''; position: absolute; inset: 3px; border-radius: 50%; background: radial-gradient(circle, #f6d79a99 0, transparent 70%); animation: storyHalo 2.4s ease-out infinite; }
+.storyBeacon i {
+  position: absolute; inset: 5px;
+  transform: rotate(45deg); border-radius: 5px;
+  background: linear-gradient(135deg, #fff1cf 0%, #e8c88e 45%, #b48a52 100%);
+  box-shadow: 0 0 0 1.5px #2a1d2bcc, 0 0 0 3px #f6d79a66, 0 4px 10px #0008, 0 0 18px #f6d79aaa;
+}
+/* 글자는 돌리지 않는다 — 마름모(i)만 45° 돌리고 «!»(b)는 그 위에 똑바로 얹는다. */
+.storyBeacon b { position: absolute; inset: 0; display: grid; place-items: center; color: #2a1d2b; font: 700 16px/1 Georgia, 'Noto Serif KR', serif; text-shadow: 0 1px 0 #fff6e199; }
+@keyframes storyBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+@keyframes storyHalo { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(1.9); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .storyBeacon, .storyBeacon::before { animation: none; } }
+/* 그려진 인물은 «머리 위»에 — 세계 대비 % 자리(worldActors.npcHeadPoint). 핫스팟 줄과 같은 겹층 안이라 같은 좌표계다. */
+.storyHead { bottom: auto; margin-left: 0; width: 38px; height: 38px; transform: translate(-50%, -100%); animation: storyBobHead 2.4s ease-in-out infinite; z-index: 1; }
+.storyHead i { inset: 6px; }
+.storyHead b { font-size: 19px; }
+@keyframes storyBobHead { 0%, 100% { transform: translate(-50%, -100%); } 50% { transform: translate(-50%, calc(-100% - 6px)); } }
+@media (prefers-reduced-motion: reduce) { .storyHead { animation: none; } }
+
+/* 별자리 조언 카드 — 대화와 연구 수첩이 함께 쓴다(AdviceCards.tsx, 2026-10-04). */
+.directionCards > .adviceDirection { position: relative; display: grid; gap: 6px; align-content: start; }
+.directionCards > .adviceDirection[data-picked] { border-color: #b8925e; box-shadow: inset 0 0 0 1px #b8925e55, 0 4px 12px #6b4b3a22; background: #fff6e2c8; }
+.advicePicked { justify-self: start; padding: 2px 8px; border-radius: 999px; background: #6b3a6a; color: #fff4dc; font-size: 11px; letter-spacing: .04em; }
+.adviceSubjects { display: flex; flex-wrap: wrap; gap: 5px; }
+.adviceSubjects span { padding: 2px 8px; border: 1px solid #b19b7570; border-radius: 999px; color: #5a4a3f; font-size: 11.5px; }
+.adviceSubjects span[data-picked] { border-color: #6b3a6a; color: #4b2a4e; background: #6b3a6a14; font-weight: 600; }
+.adviceWhy { margin-top: 8px !important; padding-left: 10px; border-left: 2px solid #c9ad7f; color: #5c4b52; font-size: 13px; }
+/* 수첩의 오른쪽 쪽은 좁다 — 카드를 한 줄에 하나씩. */
+.nbRight .directionCards { grid-template-columns: 1fr; gap: 12px; margin: 12px 0 18px; }
+.nbRight .directionCards > article { padding: 14px 16px; }
+.nbAdviceNote { margin: 8px 0 0; padding: 10px 12px; border-radius: 6px; background: #f3e6cf; color: #4b3c55; font-size: 13px; line-height: 1.7; white-space: pre-wrap; }
+
+/* ── 인물 이름표 (2026-10-04 사용자 요청 «NPC 밑에는 이름만, 동그라미 버튼은 삭제») ──
+ * 그려진 인물은 동그라미 표식 없이 발밑에 이름표 하나. 누르면 핫스팟과 같은 상호작용이고, 인물 그림 자체를 눌러도 된다(createWorld.talkable).
+ * 이야기가 기다리면 금테(머리 위 «!» 와 짝), 오늘의 만남 인물은 이름 앞 작은 ✦. 글자 대비: #fff1d9 / #1d1527 ≈ 14:1. */
+.hotspots > button.npcName { gap: 0; min-height: 36px; transform: translate(-50%, 4px); }
+.npcNameTag { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px 5px; border: 1px solid #e4c69455; border-radius: 999px; background: linear-gradient(180deg, #2a1f36e8, #1d1527e8); color: #fff1d9; font: 500 13px/1.2 Georgia, 'Noto Serif KR', serif; letter-spacing: .08em; white-space: nowrap; box-shadow: 0 4px 12px #0007; transition: border-color .15s, box-shadow .15s, transform .15s; }
+.npcNameTag i { color: #f2d293; font-style: normal; font-size: 11px; }
+.hotspots > button.npcName:hover .npcNameTag, .hotspots > button.npcName:focus-visible .npcNameTag { border-color: #f2d293; box-shadow: 0 0 16px #f2d29366, 0 4px 12px #0007; transform: translateY(-1px); }
+.hotspots > button.npcName:focus-visible { outline: none; }
+.hotspots > button.npcName:focus-visible .npcNameTag { outline: 2px solid #ffe7b2; outline-offset: 2px; }
+.hotspots > button.npcName[data-story] .npcNameTag { border-color: #f6d79a; background: linear-gradient(180deg, #3d2b46f0, #2a1f36f0); box-shadow: 0 0 0 3px #f2d29330, 0 0 18px #f6d79a88, 0 4px 12px #0007; }
+@media (orientation: landscape) and (max-height: 520px) { .npcNameTag { padding: 3px 10px 4px; font-size: 12px; } }

@@ -1,0 +1,274 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›시간표관리›결보강일지조회",
+ "name": "결보강일지조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:00:46+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": "검색시작일 하루빼기",
+     "box": [
+      545,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색시작일 하루빼기",
+     "variant": "plain",
+     "id": "button:검색시작일 하루빼기"
+    },
+    {
+     "aria": "검색시작일 하루더하기",
+     "box": [
+      575,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색시작일 하루더하기",
+     "variant": "plain",
+     "id": "button:검색시작일 하루더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      618,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "검색종료일 하루빼기",
+     "box": [
+      748,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색종료일 하루빼기",
+     "variant": "plain",
+     "id": "button:검색종료일 하루빼기"
+    },
+    {
+     "aria": "검색종료일 하루더하기",
+     "box": [
+      778,
+      82,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "검색종료일 하루더하기",
+     "variant": "plain",
+     "id": "button:검색종료일 하루더하기"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교사",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1055,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "교사",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:교사#2"
+    },
+    {
+     "aria": "교사찾기",
+     "box": [
+      1165,
+      82,
+      74,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "교사찾기",
+     "variant": "secondary",
+     "id": "button:교사찾기"
+    },
+    {
+     "aria": "교사기준 선택",
+     "box": [
+      175,
+      122,
+      380,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "조회기준",
+     "options": [
+      "결강교사기준",
+      "보강교사기준"
+     ],
+     "id": "radio:조회기준"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1551,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "secondary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "일괄생성",
+     "box": [
+      486,
+      213,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄생성",
+     "variant": "primary",
+     "id": "button:일괄생성"
+    },
+    {
+     "aria": "결보강목록",
+     "box": [
+      25,
+      253,
+      525,
+      560
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "결보강목록",
+     "selectable": true,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        254,
+        50,
+        36
+       ],
+       "id": "col:결보강목록/순번"
+      },
+      {
+       "label": "날짜",
+       "depth": 0,
+       "box": [
+        126,
+        254,
+        423,
+        36
+       ],
+       "span": 3,
+       "id": "col:결보강목록/날짜"
+      }
+     ],
+     "id": "grid:결보강목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 시간표관리 > 결보강일지조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

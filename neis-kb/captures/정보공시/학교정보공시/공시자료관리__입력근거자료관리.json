@@ -1,0 +1,200 @@
+{
+ "schema": "neis-capture/1",
+ "key": "정보공시›학교정보공시›공시자료관리›입력근거자료관리",
+ "name": "입력근거자료관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:54:53+00:00",
+ "collector": "collect.py@2",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      129,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:공시연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      350,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "공시차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:공시차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 공시기간의 입력근거자료만 수정이 가능합니다.",
+     "id": "note:※ 공시기간의 입력근거자료만 수정이 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1551,
+      171,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "인쇄",
+     "variant": "primary",
+     "id": "button:인쇄"
+    },
+    {
+     "aria": "공시항목별 입력근거자료 조회",
+     "box": [
+      25,
+      211,
+      1590,
+      603
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "공시항목별 입력근거자료 조회",
+     "selectable": false,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "공시항목 순서",
+       "depth": 0,
+       "box": [
+        26,
+        212,
+        60,
+        40
+       ],
+       "id": "col:공시항목별 입력근거자료 조회/공시항목 순서"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        86,
+        212,
+        317,
+        40
+       ],
+       "id": "col:공시항목별 입력근거자료 조회/항목"
+      },
+      {
+       "label": "입력근거명",
+       "depth": 0,
+       "box": [
+        403,
+        212,
+        317,
+        40
+       ],
+       "id": "col:공시항목별 입력근거자료 조회/입력근거명"
+      },
+      {
+       "label": "자료경로 및 출처",
+       "depth": 0,
+       "box": [
+        721,
+        212,
+        317,
+        40
+       ],
+       "id": "col:공시항목별 입력근거자료 조회/자료경로 및 출처"
+      },
+      {
+       "label": "첨부파일",
+       "depth": 0,
+       "box": [
+        1038,
+        212,
+        317,
+        40
+       ],
+       "id": "col:공시항목별 입력근거자료 조회/첨부파일"
+      },
+      {
+       "label": "작성자",
+       "depth": 0,
+       "box": [
+        1355,
+        212,
+        159,
+        40
+       ],
+       "id": "col:공시항목별 입력근거자료 조회/작성자"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1514,
+        212,
+        100,
+        40
+       ],
+       "id": "col:공시항목별 입력근거자료 조회/비고"
+      }
+     ],
+     "id": "grid:공시항목별 입력근거자료 조회"
+    }
+   ],
+   "query": {
+    "alerts": [],
+    "opened": false
+   }
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {정보공시}학교정보공시 > 공시자료관리 > 공시자료확인 > 입력근거자료관리",
+ "alsoVia": [
+  "부서장(정보공시)",
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

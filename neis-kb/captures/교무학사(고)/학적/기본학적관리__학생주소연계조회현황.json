@@ -1,0 +1,192 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›기본학적관리›학생주소연계조회현황",
+ "name": "학생주소연계조회현황",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:10:41+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      59,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      374,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      529,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 요청건수 : 나이스를 통해 주민등록정보시스템으로 학생 주소정보를 확인 요청한 건수. ※ 수신건수 : 주민등록정보시스템으로부터 회신된 학생 주소정보 건수. ※ 반영건수 : 회신된 학생 주소정보를 확인하고, 학교생활기록부 인적사항에 반영한 건수.",
+     "id": "note:※ 요청건수 : 나이스를 통해 주민등록정보시스템으로 학생 주소정보를 확인 요청한 건수. ※ 수신건수 : 주민등록정보시스템으로부터 회신된 학생 주소정보 건수. ※ 반영건수 : 회신된 학생 주소정보를 확인하고, 학교생활기록부 인적사항에 반영한 건수."
+    },
+    {
+     "aria": "이력내려받기",
+     "box": [
+      1352,
+      224,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "이력내려받기",
+     "variant": "plain",
+     "id": "button:이력내려받기"
+    },
+    {
+     "aria": "전체이력내려받기",
+     "box": [
+      1475,
+      224,
+      140,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체이력내려받기",
+     "variant": "plain",
+     "id": "button:전체이력내려받기"
+    },
+    {
+     "aria": "학생주소연계현황",
+     "box": [
+      25,
+      264,
+      1590,
+      550
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생주소연계현황",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "담당자",
+       "depth": 0,
+       "box": [
+        26,
+        265,
+        574,
+        36
+       ],
+       "id": "col:학생주소연계현황/담당자"
+      },
+      {
+       "label": "요청건수",
+       "depth": 0,
+       "box": [
+        600,
+        265,
+        338,
+        36
+       ],
+       "id": "col:학생주소연계현황/요청건수"
+      },
+      {
+       "label": "수신건수",
+       "depth": 0,
+       "box": [
+        938,
+        265,
+        338,
+        36
+       ],
+       "id": "col:학생주소연계현황/수신건수"
+      },
+      {
+       "label": "반영건수",
+       "depth": 0,
+       "box": [
+        1276,
+        265,
+        338,
+        36
+       ],
+       "id": "col:학생주소연계현황/반영건수"
+      }
+     ],
+     "id": "grid:학생주소연계현황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 기본학적관리 > 학생주소연계조회현황",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

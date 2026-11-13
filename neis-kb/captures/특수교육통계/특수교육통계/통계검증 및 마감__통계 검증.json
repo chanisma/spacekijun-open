@@ -1,0 +1,224 @@
+{
+ "schema": "neis-capture/1",
+ "key": "특수교육통계›특수교육통계›통계검증 및 마감›통계 검증",
+ "name": "통계 검증",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:46:55+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:통계년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      375,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "차수",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:차수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      450,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ '항목마감'이 완료된 통계 조사 항목에 대해서만 자료 '검증'이 가능합니다.",
+     "id": "note:※ '항목마감'이 완료된 통계 조사 항목에 대해서만 자료 '검증'이 가능합니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "검증",
+     "variant": "primary",
+     "id": "button:검증"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      133,
+      112,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료내려받기",
+     "variant": "plain",
+     "id": "button:자료내려받기"
+    },
+    {
+     "aria": "통계검증목록",
+     "box": [
+      25,
+      173,
+      1590,
+      310
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "통계검증목록",
+     "selectable": true,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "통계항목",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        923,
+        36
+       ],
+       "id": "col:통계검증목록/통계항목"
+      },
+      {
+       "label": "검증결과",
+       "depth": 0,
+       "box": [
+        999,
+        174,
+        308,
+        36
+       ],
+       "id": "col:통계검증목록/검증결과"
+      },
+      {
+       "label": "검증일",
+       "depth": 0,
+       "box": [
+        1306,
+        174,
+        308,
+        36
+       ],
+       "id": "col:통계검증목록/검증일"
+      }
+     ],
+     "id": "grid:통계검증목록"
+    },
+    {
+     "aria": "통계검증목록",
+     "box": [
+      25,
+      493,
+      1590,
+      310
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "통계검증목록",
+     "selectable": false,
+     "declaredColumns": 4,
+     "columns": [
+      {
+       "label": "결과",
+       "depth": 0,
+       "box": [
+        26,
+        494,
+        144,
+        36
+       ],
+       "id": "col:통계검증목록/결과"
+      },
+      {
+       "label": "상세내용",
+       "depth": 0,
+       "box": [
+        170,
+        494,
+        577,
+        36
+       ],
+       "id": "col:통계검증목록/상세내용"
+      },
+      {
+       "label": "비교대상(A)",
+       "depth": 0,
+       "box": [
+        748,
+        494,
+        433,
+        36
+       ],
+       "id": "col:통계검증목록/비교대상(A)"
+      },
+      {
+       "label": "비교대상(B)",
+       "depth": 0,
+       "box": [
+        1181,
+        494,
+        433,
+        36
+       ],
+       "id": "col:통계검증목록/비교대상(B)"
+      }
+     ],
+     "id": "grid:통계검증목록#2"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 특수교육통계 > 통계검증 및 마감 > 통계 검증",
+ "viewport": [
+  1920,
+  945
+ ]
+}

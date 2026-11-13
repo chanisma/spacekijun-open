@@ -1,0 +1,154 @@
+{
+ "schema": "neis-capture/1",
+ "key": "체육›학교스포츠클럽관리#학교›학교스포츠클럽관리#학교›학교스포츠클럽지도교사별담당클럽조회",
+ "name": "학교스포츠클럽지도교사별담당클럽조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:09:21+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "스포츠클럽 지도교사 현황 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "스포츠클럽 지도교사 현황 목록",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        265,
+        36
+       ],
+       "id": "col:스포츠클럽 지도교사 현황 목록/학년도"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        291,
+        174,
+        265,
+        36
+       ],
+       "id": "col:스포츠클럽 지도교사 현황 목록/구분"
+      },
+      {
+       "label": "소속 기관명",
+       "depth": 0,
+       "box": [
+        555,
+        174,
+        265,
+        36
+       ],
+       "id": "col:스포츠클럽 지도교사 현황 목록/소속 기관명"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        820,
+        174,
+        265,
+        36
+       ],
+       "id": "col:스포츠클럽 지도교사 현황 목록/성명"
+      },
+      {
+       "label": "나이스 개인번호 끝3자리 (동명이인 구분용)",
+       "depth": 0,
+       "box": [
+        1085,
+        174,
+        265,
+        36
+       ],
+       "id": "col:스포츠클럽 지도교사 현황 목록/나이스 개인번호 끝3자리 (동명이인 구분용)"
+      },
+      {
+       "label": "담당클럽수",
+       "depth": 0,
+       "box": [
+        1349,
+        174,
+        265,
+        36
+       ],
+       "id": "col:스포츠클럽 지도교사 현황 목록/담당클럽수"
+      }
+     ],
+     "id": "grid:스포츠클럽 지도교사 현황 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {체육}학교스포츠클럽관리 > 학교스포츠클럽관리 > 학교스포츠클럽지도교사별담당클럽조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

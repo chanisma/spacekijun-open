@@ -1,0 +1,460 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›프로그램관리›프로그램관리",
+ "name": "프로그램관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:59:32+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      97,
+      82,
+      148,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      317,
+      82,
+      148,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간명",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:기간명"
+    },
+    {
+     "aria": null,
+     "box": [
+      543,
+      82,
+      142,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "유형분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:유형분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      763,
+      82,
+      142,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "내용분류",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:내용분류"
+    },
+    {
+     "aria": null,
+     "box": [
+      995,
+      82,
+      230,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "프로그램명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:프로그램명"
+    },
+    {
+     "aria": null,
+     "box": [
+      91,
+      122,
+      254,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강사명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:강사명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1539,
+      122,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      713,
+      173,
+      115,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      845,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄등록",
+     "variant": "primary",
+     "id": "button:일괄등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      917,
+      173,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "프로그램등록",
+     "variant": "link",
+     "id": "button:프로그램등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1012,
+      173,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "프로그램복사",
+     "variant": "primary",
+     "id": "button:프로그램복사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1108,
+      173,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "프로그램개설",
+     "variant": "primary",
+     "id": "button:프로그램개설"
+    },
+    {
+     "aria": null,
+     "box": [
+      1204,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "개설취소",
+     "variant": "primary",
+     "id": "button:개설취소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1276,
+      173,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "패키지묶기",
+     "variant": "link",
+     "id": "button:패키지묶기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1360,
+      173,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "패키지해제",
+     "variant": "primary",
+     "id": "button:패키지해제"
+    },
+    {
+     "aria": null,
+     "box": [
+      1443,
+      173,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "수강생복사",
+     "variant": "link",
+     "id": "button:수강생복사"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "폐강",
+     "variant": "primary",
+     "id": "button:폐강"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      173,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      213,
+      1590,
+      600
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        214,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "프로그램명",
+       "depth": 0,
+       "box": [
+        126,
+        214,
+        358,
+        36
+       ],
+       "id": "col:그리드/프로그램명"
+      },
+      {
+       "label": "프로그램분류",
+       "depth": 0,
+       "box": [
+        484,
+        214,
+        201,
+        36
+       ],
+       "id": "col:그리드/프로그램분류"
+      },
+      {
+       "label": "강사명",
+       "depth": 0,
+       "box": [
+        685,
+        214,
+        100,
+        36
+       ],
+       "id": "col:그리드/강사명"
+      },
+      {
+       "label": "수강료",
+       "depth": 0,
+       "box": [
+        785,
+        214,
+        86,
+        36
+       ],
+       "id": "col:그리드/수강료"
+      },
+      {
+       "label": "정원",
+       "depth": 0,
+       "box": [
+        871,
+        214,
+        86,
+        36
+       ],
+       "id": "col:그리드/정원"
+      },
+      {
+       "label": "대상학년",
+       "depth": 0,
+       "box": [
+        957,
+        214,
+        158,
+        36
+       ],
+       "id": "col:그리드/대상학년"
+      },
+      {
+       "label": "신청자수",
+       "depth": 0,
+       "box": [
+        1115,
+        214,
+        83,
+        36
+       ],
+       "id": "col:그리드/신청자수"
+      },
+      {
+       "label": "대기자수",
+       "depth": 0,
+       "box": [
+        1198,
+        214,
+        83,
+        36
+       ],
+       "id": "col:그리드/대기자수"
+      },
+      {
+       "label": "반조정하기",
+       "depth": 0,
+       "box": [
+        1281,
+        214,
+        83,
+        36
+       ],
+       "id": "col:그리드/반조정하기"
+      },
+      {
+       "label": "폐강하기",
+       "depth": 0,
+       "box": [
+        1365,
+        214,
+        83,
+        36
+       ],
+       "id": "col:그리드/폐강하기"
+      },
+      {
+       "label": "출결관리",
+       "depth": 0,
+       "box": [
+        1448,
+        214,
+        83,
+        36
+       ],
+       "id": "col:그리드/출결관리"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        1531,
+        214,
+        83,
+        36
+       ],
+       "id": "col:그리드/상태"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 프로그램관리 > 프로그램관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

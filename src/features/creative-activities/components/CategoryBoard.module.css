@@ -1,0 +1,14 @@
+.listEnter {
+  animation: list-enter 140ms ease-out;
+}
+
+@keyframes list-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .listEnter {
+    animation: none;
+  }
+}

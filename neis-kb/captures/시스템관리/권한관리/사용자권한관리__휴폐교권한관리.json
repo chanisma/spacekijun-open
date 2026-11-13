@@ -1,0 +1,11 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›권한관리›사용자권한관리›휴폐교권한관리",
+ "name": "휴폐교권한관리",
+ "status": "not_found",
+ "capturedAt": "2026-10-05T08:51:54+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [],
+ "error": "메뉴 검색 결과 0건 중 경로가 맞는 것이 없습니다"
+}

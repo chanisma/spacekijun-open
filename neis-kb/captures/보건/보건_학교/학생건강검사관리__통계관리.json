@@ -1,0 +1,360 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›학생건강검사관리›통계관리",
+ "name": "통계관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:47:13+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:신체발달통계생성",
+   "tab": "신체발달통계생성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭화면이 2개 존재합니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달통계생성",
+      "학생건강검사통계생성"
+     ],
+     "active": "신체발달통계생성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "통계생성",
+     "box": [
+      1204,
+      126,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계재생성",
+     "variant": "primary",
+     "id": "button:통계재생성"
+    },
+    {
+     "aria": "오류데이터확인",
+     "box": [
+      1288,
+      126,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "오류데이터확인",
+     "variant": "link",
+     "id": "button:오류데이터확인"
+    },
+    {
+     "aria": "통계조회",
+     "box": [
+      1396,
+      126,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계조회",
+     "variant": "link",
+     "id": "button:통계조회"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1467,
+      126,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "link",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "교육청전송",
+     "box": [
+      1539,
+      126,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교육청전송",
+     "variant": "link",
+     "id": "button:교육청전송"
+    },
+    {
+     "aria": "통계구분",
+     "box": [
+      907,
+      172,
+      502,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "통계구분",
+     "options": [
+      "전체",
+      "표본"
+     ],
+     "id": "radio:통계구분"
+    }
+   ]
+  },
+  {
+   "id": "tab:학생건강검사통계생성",
+   "tab": "학생건강검사통계생성",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭화면이 2개 존재합니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "신체발달통계생성",
+      "학생건강검사통계생성"
+     ],
+     "active": "학생건강검사통계생성",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "성별/키/몸무게오류확인",
+     "box": [
+      1134,
+      126,
+      146,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "성별/키/몸무게오류확인",
+     "variant": "primary",
+     "id": "button:성별/키/몸무게오류확인"
+    },
+    {
+     "aria": "데이터확인",
+     "box": [
+      1288,
+      126,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "데이터확인",
+     "variant": "primary",
+     "id": "button:데이터확인"
+    },
+    {
+     "aria": "통계생성",
+     "box": [
+      1372,
+      126,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "통계생성취소",
+     "variant": "primary",
+     "id": "button:통계생성취소"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      1467,
+      126,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "link",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "교육청전송",
+     "box": [
+      1539,
+      126,
+      76,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "교육청전송",
+     "variant": "primary",
+     "id": "button:교육청전송"
+    },
+    {
+     "aria": "통계구분",
+     "box": [
+      945,
+      172,
+      363,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "통계구분",
+     "options": [
+      "전체",
+      "표본"
+     ],
+     "id": "radio:통계구분"
+    },
+    {
+     "aria": "신체발달통계표",
+     "box": [
+      150,
+      212,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "신체발달통계표",
+     "variant": "primary",
+     "id": "button:신체발달통계표"
+    },
+    {
+     "aria": "건강검진통계표",
+     "box": [
+      258,
+      212,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "건강검진통계표",
+     "variant": "primary",
+     "id": "button:건강검진통계표"
+    },
+    {
+     "aria": "구강검진통계표",
+     "box": [
+      365,
+      212,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "구강검진통계표",
+     "variant": "primary",
+     "id": "button:구강검진통계표"
+    },
+    {
+     "aria": "건강조사통계표",
+     "box": [
+      473,
+      212,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "건강조사통계표",
+     "variant": "primary",
+     "id": "button:건강조사통계표"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      367,
+      300,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당자명",
+     "control": "input",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:담당자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      945,
+      367,
+      300,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "담당자연락처",
+     "control": "input",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:담당자연락처"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      423,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 담당자명과 담당자 연락처는 교육청 전송시 입력하시기 바랍니다.",
+     "id": "note:※ 담당자명과 담당자 연락처는 교육청 전송시 입력하시기 바랍니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      462,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 통계 생성 시 작업시간은 1~2분이상 소요됩니다. 작업완료 메시지가 나타날때 까지 기다려 주시기 바랍니다.",
+     "id": "note:※ 통계 생성 시 작업시간은 1~2분이상 소요됩니다. 작업완료 메시지가 나타날때 까지 기다려 주시기 바랍니다."
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 학생건강검사관리 > 통계관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

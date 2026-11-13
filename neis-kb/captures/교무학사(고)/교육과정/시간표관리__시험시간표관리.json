@@ -1,0 +1,442 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›시간표관리›시험시간표관리",
+ "name": "시험시간표관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:05:33+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "복사",
+     "box": [
+      297,
+      133,
+      86,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "시간표복사",
+     "variant": "primary",
+     "id": "button:시간표복사"
+    },
+    {
+     "aria": "추가",
+     "box": [
+      391,
+      133,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "추가",
+     "variant": "plain",
+     "id": "button:추가"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      449,
+      133,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "시간표작성도우미전송",
+     "box": [
+      507,
+      133,
+      150,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "시간표작성도우미전송",
+     "variant": "primary",
+     "id": "button:시간표작성도우미전송"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1565,
+      133,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "시험시간표 목록",
+     "box": [
+      25,
+      143,
+      117,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "시험시간표 목록",
+     "id": "heading:시험시간표 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      667,
+      143,
+      69,
+      20
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "heading",
+     "label": "시험 정보",
+     "id": "heading:시험 정보"
+    },
+    {
+     "aria": "시험시간표목록",
+     "box": [
+      25,
+      173,
+      632,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "시험시간표목록",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        83,
+        174,
+        57,
+        36
+       ],
+       "id": "col:시험시간표목록/순번"
+      },
+      {
+       "label": "시험명",
+       "depth": 0,
+       "box": [
+        141,
+        174,
+        172,
+        36
+       ],
+       "id": "col:시험시간표목록/시험명"
+      },
+      {
+       "label": "감독배정현황",
+       "depth": 0,
+       "box": [
+        312,
+        174,
+        115,
+        36
+       ],
+       "id": "col:시험시간표목록/감독배정현황"
+      },
+      {
+       "label": "시간표결과보기",
+       "depth": 0,
+       "box": [
+        427,
+        174,
+        115,
+        36
+       ],
+       "id": "col:시험시간표목록/시간표결과보기"
+      },
+      {
+       "label": "미배정확인",
+       "depth": 0,
+       "box": [
+        541,
+        174,
+        115,
+        36
+       ],
+       "id": "col:시험시간표목록/미배정확인"
+      }
+     ],
+     "id": "grid:시험시간표목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      911,
+      174,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "시험명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:시험명"
+    },
+    {
+     "aria": "설정",
+     "box": [
+      1211,
+      212,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정"
+    },
+    {
+     "aria": "설정",
+     "box": [
+      1211,
+      250,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정#2"
+    },
+    {
+     "aria": "설정",
+     "box": [
+      1211,
+      288,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정#3"
+    },
+    {
+     "aria": "설정",
+     "box": [
+      911,
+      326,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정#4"
+    },
+    {
+     "aria": "설정",
+     "box": [
+      911,
+      364,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정#5"
+    },
+    {
+     "aria": " 설정",
+     "box": [
+      911,
+      402,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정#6"
+    },
+    {
+     "aria": "설정",
+     "box": [
+      911,
+      440,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정#7"
+    },
+    {
+     "aria": "택1과목시험유형코드",
+     "box": [
+      911,
+      478,
+      240,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "radio",
+     "label": "택1 과목 시험 유형 설정",
+     "options": [
+      "행정학급형",
+      "분반이동형"
+     ],
+     "id": "radio:택1 과목 시험 유형 설정"
+    },
+    {
+     "aria": null,
+     "box": [
+      667,
+      530,
+      69,
+      20
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "heading",
+     "label": "엄수 조건",
+     "id": "heading:엄수 조건"
+    },
+    {
+     "aria": "설정",
+     "box": [
+      1121,
+      606,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정#8"
+    },
+    {
+     "aria": null,
+     "box": [
+      1407,
+      606,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "사용여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사용여부"
+    },
+    {
+     "aria": "설정",
+     "box": [
+      1121,
+      646,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "설정",
+     "variant": "primary",
+     "id": "button:설정#9"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 시간표관리 > 시험시간표관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

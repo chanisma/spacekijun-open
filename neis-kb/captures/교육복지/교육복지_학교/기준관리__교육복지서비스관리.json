@@ -1,0 +1,714 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육복지›교육복지#학교›기준관리›교육복지서비스관리",
+ "name": "교육복지서비스관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:16:57+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:교육급여(학교별 관리)",
+   "tab": "교육급여(학교별 관리)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭이 3개 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육급여(학교별 관리)",
+      "교육비 지원(기준관리)",
+      "교육비 지원(학교항목별단가관리)"
+     ],
+     "active": "교육급여(학교별 관리)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      405
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "지원내용",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        397,
+        31
+       ],
+       "span": 7,
+       "id": "col:그리드/지원내용"
+      },
+      {
+       "label": "지원금액",
+       "depth": 0,
+       "box": [
+        423,
+        239,
+        596,
+        31
+       ],
+       "span": 6,
+       "id": "col:그리드/지원금액"
+      },
+      {
+       "label": "수정일시",
+       "depth": 0,
+       "box": [
+        1019,
+        239,
+        397,
+        62
+       ],
+       "id": "col:그리드/수정일시"
+      },
+      {
+       "label": "수정자",
+       "depth": 0,
+       "box": [
+        1416,
+        239,
+        199,
+        62
+       ],
+       "id": "col:그리드/수정자"
+      },
+      {
+       "label": "지원항목명",
+       "depth": 1,
+       "box": [
+        26,
+        270,
+        199,
+        31
+       ],
+       "id": "col:그리드/지원내용>지원항목명"
+      },
+      {
+       "label": "계열구분",
+       "depth": 1,
+       "box": [
+        225,
+        270,
+        199,
+        31
+       ],
+       "id": "col:그리드/지원내용>계열구분"
+      },
+      {
+       "label": "1학년",
+       "depth": 1,
+       "box": [
+        423,
+        270,
+        199,
+        31
+       ],
+       "id": "col:그리드/지원금액>1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 1,
+       "box": [
+        622,
+        270,
+        199,
+        31
+       ],
+       "id": "col:그리드/지원금액>2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 1,
+       "box": [
+        820,
+        270,
+        199,
+        31
+       ],
+       "id": "col:그리드/지원금액>3학년"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      653,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      28,
+      656,
+      122,
+      19
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "업무 담당자 등록",
+     "id": "heading:업무 담당자 등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      693,
+      1590,
+      80
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "담당자전화번호(휴대번호 또는 내선번호)",
+       "depth": 0,
+       "box": [
+        26,
+        694,
+        794,
+        31
+       ],
+       "id": "col:그리드/담당자전화번호(휴대번호 또는 내선번호)"
+      },
+      {
+       "label": "담당자명",
+       "depth": 0,
+       "box": [
+        820,
+        694,
+        794,
+        31
+       ],
+       "id": "col:그리드/담당자명"
+      }
+     ],
+     "id": "grid:그리드#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      783,
+      1590,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 보장결정 통지서에 표시되는 담당자명 및 연락처를 입력합니다.",
+     "id": "note:※ 보장결정 통지서에 표시되는 담당자명 및 연락처를 입력합니다."
+    }
+   ]
+  },
+  {
+   "id": "tab:교육비 지원(기준관리)",
+   "tab": "교육비 지원(기준관리)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭이 3개 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육급여(학교별 관리)",
+      "교육비 지원(기준관리)",
+      "교육비 지원(학교항목별단가관리)"
+     ],
+     "active": "교육비 지원(기준관리)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1465,
+      201,
+      150,
+      25
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "학교 기준 예외처리",
+     "variant": "primary",
+     "id": "button:학교 기준 예외처리"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 13,
+     "columns": [
+      {
+       "label": "지원 내용",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        677,
+        20
+       ],
+       "span": 6,
+       "id": "col:그리드/지원 내용"
+      },
+      {
+       "label": "지원학년",
+       "depth": 0,
+       "box": [
+        703,
+        239,
+        390,
+        20
+       ],
+       "span": 13,
+       "id": "col:그리드/지원학년"
+      },
+      {
+       "label": "중위소득비율",
+       "depth": 0,
+       "box": [
+        1093,
+        239,
+        521,
+        20
+       ],
+       "span": 2,
+       "id": "col:그리드/중위소득비율"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        26,
+        259,
+        104,
+        105
+       ],
+       "id": "col:그리드/지원 내용>순번"
+      },
+      {
+       "label": "구분",
+       "depth": 1,
+       "box": [
+        130,
+        259,
+        156,
+        105
+       ],
+       "id": "col:그리드/지원 내용>구분"
+      },
+      {
+       "label": "지원항목",
+       "depth": 1,
+       "box": [
+        286,
+        259,
+        260,
+        105
+       ],
+       "id": "col:그리드/지원 내용>지원항목"
+      },
+      {
+       "label": "단가기준",
+       "depth": 1,
+       "box": [
+        547,
+        259,
+        156,
+        105
+       ],
+       "id": "col:그리드/지원 내용>단가기준"
+      },
+      {
+       "label": "고등학교",
+       "depth": 1,
+       "box": [
+        703,
+        259,
+        390,
+        20
+       ],
+       "span": 3,
+       "id": "col:그리드/지원학년>고등학교"
+      },
+      {
+       "label": "이 상",
+       "depth": 1,
+       "box": [
+        1093,
+        259,
+        260,
+        105
+       ],
+       "id": "col:그리드/중위소득비율>이 상"
+      },
+      {
+       "label": "이 하",
+       "depth": 1,
+       "box": [
+        1354,
+        259,
+        260,
+        105
+       ],
+       "id": "col:그리드/중위소득비율>이 하"
+      },
+      {
+       "label": "1",
+       "depth": 2,
+       "box": [
+        703,
+        279,
+        130,
+        85
+       ],
+       "id": "col:그리드/지원학년>고등학교>1"
+      },
+      {
+       "label": "2",
+       "depth": 2,
+       "box": [
+        833,
+        279,
+        130,
+        85
+       ],
+       "id": "col:그리드/지원학년>고등학교>2"
+      },
+      {
+       "label": "3",
+       "depth": 2,
+       "box": [
+        963,
+        279,
+        130,
+        85
+       ],
+       "id": "col:그리드/지원학년>고등학교>3"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:교육비 지원(학교항목별단가관리)",
+   "tab": "교육비 지원(학교항목별단가관리)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "탭이 3개 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "교육급여(학교별 관리)",
+      "교육비 지원(기준관리)",
+      "교육비 지원(학교항목별단가관리)"
+     ],
+     "active": "교육비 지원(학교항목별단가관리)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      198,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      238,
+      1590,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "지원 내용",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        650,
+        31
+       ],
+       "span": 14,
+       "id": "col:그리드/지원 내용"
+      },
+      {
+       "label": "순번",
+       "depth": 1,
+       "box": [
+        26,
+        270,
+        40,
+        93
+       ],
+       "id": "col:그리드/지원 내용>순번"
+      },
+      {
+       "label": "학교급",
+       "depth": 1,
+       "box": [
+        66,
+        270,
+        100,
+        93
+       ],
+       "id": "col:그리드/지원 내용>학교급"
+      },
+      {
+       "label": "주야 구분",
+       "depth": 1,
+       "box": [
+        166,
+        270,
+        50,
+        93
+       ],
+       "id": "col:그리드/지원 내용>주야 구분"
+      },
+      {
+       "label": "계열",
+       "depth": 1,
+       "box": [
+        216,
+        270,
+        80,
+        93
+       ],
+       "id": "col:그리드/지원 내용>계열"
+      },
+      {
+       "label": "학과",
+       "depth": 1,
+       "box": [
+        296,
+        270,
+        80,
+        93
+       ],
+       "id": "col:그리드/지원 내용>학과"
+      },
+      {
+       "label": "구분",
+       "depth": 1,
+       "box": [
+        376,
+        270,
+        50,
+        93
+       ],
+       "id": "col:그리드/지원 내용>구분"
+      },
+      {
+       "label": "지원항목명",
+       "depth": 1,
+       "box": [
+        426,
+        270,
+        150,
+        93
+       ],
+       "id": "col:그리드/지원 내용>지원항목명"
+      },
+      {
+       "label": "단가 기준",
+       "depth": 1,
+       "box": [
+        576,
+        270,
+        100,
+        93
+       ],
+       "id": "col:그리드/지원 내용>단가 기준"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육복지 > 기준관리 > 교육복지서비스관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

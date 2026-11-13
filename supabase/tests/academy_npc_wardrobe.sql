@@ -1,0 +1,428 @@
+-- Each added NPC follows the same paid workshop and ownership regression.
+-- professor
+begin;
+select set_config('workshop.owner',(select id::text from public.profiles where role='student' limit 1),true);
+select set_config('workshop.other',(select id::text from public.profiles where role='student' and id::text<>current_setting('workshop.owner') limit 1),true);
+select set_config('workshop.admin',(select p.id::text from public.profiles p where p.role='admin' and exists(select 1 from public.user_resource where user_id=p.id) limit 1),true);
+select set_config('workshop.token',gen_random_uuid()::text,true);
+-- Isolate the test student's existing pending count; everything rolls back below.
+update public.academy_workshop_orders set status='cancelled' where student_id=current_setting('workshop.owner')::uuid and status in ('submitted','crafting');
+insert into public.academy_user_stats(user_id,coins) values(current_setting('workshop.owner')::uuid,300),(current_setting('workshop.other')::uuid,100) on conflict(user_id) do update set coins=excluded.coins;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.owner'),'role','authenticated')::text,true);
+do $$ declare a jsonb; b jsonb; begin
+ a:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',current_setting('workshop.token'),'title','검증용 은빛 별 의상','prompt','은빛 별 자수가 들어간 남색 벨벳 의상을 만들어 주세요.','slot','professor','sale_price',20,'student_id',current_setting('workshop.other')));
+ perform set_config('workshop.order',a->>'id',true);
+ if (a->>'sale_price')::integer<>35 then raise exception 'Default sale price changed'; end if;
+ if a->>'student_id'<>current_setting('workshop.owner') then raise exception 'forged owner accepted'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',current_setting('workshop.token'),'title','중복','prompt','중복','slot','room'));
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',a->>'id','sale_price',20)); raise exception 'Fixed price changed' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if b->>'id'<>a->>'id' then raise exception 'submission is not idempotent'; end if;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>200 then raise exception 'Expected exactly one 100-coin charge'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','취소 환불 검사','prompt','취소와 재시도에서 제작비를 중복 환불하지 않는지 확인합니다.','slot','professor'));
+ perform public.academy_workshop_write('cancel',jsonb_build_object('id',b->>'id'));
+ perform public.academy_workshop_write('cancel',jsonb_build_object('id',b->>'id'));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>200 then raise exception 'Cancel refund not exactly once'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','반려 환불 검사','prompt','제작 불가 시 제작비를 전액 환불하고 재시도에 보존해야 합니다.','slot','professor'));
+ perform set_config('workshop.decline',b->>'id',true);
+ begin perform public.academy_workshop_write('start',jsonb_build_object('id',a->>'id')); raise exception 'student could produce'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','짧은 주문','prompt','짧음','slot','professor')); raise exception 'short prompt accepted'; exception when check_violation then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.other'),'role','authenticated')::text,true);
+do $$ begin
+ if exists(select 1 from public.academy_workshop_orders where id=current_setting('workshop.order')::uuid) then raise exception 'order leaked';
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',current_setting('workshop.order'),'sale_price',20)); raise exception 'Another student changed price'; exception when insufficient_privilege then null; end; end if;
+ begin perform public.academy_workshop_write('cancel',jsonb_build_object('id',current_setting('workshop.order'))); raise exception 'other student cancelled order'; exception when insufficient_privilege then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.admin'),'role','authenticated')::text,true);
+do $$ declare o jsonb; image text:=current_setting('workshop.order')||'/'||gen_random_uuid()::text||'.png'; begin
+ if not exists(select 1 from public.notification_events where type='academy_workshop_submitted' and meta->>'order_id'=current_setting('workshop.order')) then raise exception 'admin notification missing'; end if;
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','관리자 주문','prompt','관리자는 학생 대신 주문할 수 없어야 합니다.','slot','professor')); raise exception 'admin submitted as student'; exception when insufficient_privilege then null; end;
+ perform public.academy_workshop_write('decline',jsonb_build_object('id',current_setting('workshop.decline'),'note','제작 불가 환불 검사'));
+ perform public.academy_workshop_write('decline',jsonb_build_object('id',current_setting('workshop.decline'),'note','중복 반려 검사'));
+ perform public.academy_workshop_write('start',jsonb_build_object('id',current_setting('workshop.order')));
+ insert into storage.objects(bucket_id,name,metadata) values('academy-workshop',image,'{"mimetype":"image/png","size":1024}');
+ perform set_config('workshop.image',image,true);
+ o:=public.academy_workshop_write('deliver',jsonb_build_object('id',current_setting('workshop.order'),'image_path',image,'note','당신만의 별빛 의상입니다.'));
+ perform set_config('workshop.item',o->>'item_id',true);
+ o:=public.academy_workshop_write('deliver',jsonb_build_object('id',current_setting('workshop.order'),'image_path',image));
+ if o->>'item_id'<>current_setting('workshop.item') then raise exception 'delivery minted duplicate'; end if;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.other'),'role','authenticated')::text,true);
+do $$ declare d jsonb; begin
+ if not exists(select 1 from public.academy_shop_items where id=current_setting('workshop.item')::integer and price=35 and is_active and description<>'당신만의 별빛 의상입니다.') then raise exception 'public artwork missing or private letter leaked'; end if;
+ if not exists(select 1 from storage.objects where bucket_id='academy-workshop' and name=current_setting('workshop.image')) then raise exception 'listed artwork image missing'; end if;
+ d:=public.academy_dormitory_read(current_date);
+ if not exists(select 1 from jsonb_array_elements(d->'catalog') i where i->>'id'=current_setting('workshop.item')) then raise exception 'dorm RPC missing artwork'; end if;
+ if exists(select 1 from public.academy_workshop_orders where id=current_setting('workshop.order')::uuid) then raise exception 'Private order leaked after publication'; end if;
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item'),'price',0,'commission',999,'recipient',auth.uid()));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item')));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Purchase price or duplicate charge incorrect'; end if;
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',current_setting('workshop.item')));
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','잔액 부족 검사','prompt','백 코인 미만에서는 주문과 잔액 변경이 없어야 합니다.','slot','professor')); raise exception 'Insufficient wallet accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Failed order charged'; end if;
+ begin insert into public.academy_workshop_commissions(order_id,buyer_id,recipient_id) values(current_setting('workshop.order')::uuid,auth.uid(),current_setting('workshop.owner')::uuid); raise exception 'Client minted commission'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order'))); raise exception 'other student received'; exception when insufficient_privilege then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.owner'),'role','authenticated')::text,true);
+do $$ declare r jsonb; begin
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',current_setting('workshop.order'),'sale_price',50)); raise exception 'Fixed price changed' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select price from public.academy_shop_items where id=current_setting('workshop.item')::integer)<>35 then raise exception 'Catalog fixed price changed'; end if;
+ if (select sale_price from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>35 then raise exception 'Historical sale price overwritten'; end if;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>210 then raise exception 'Commission/refund balance incorrect'; end if;
+ if (select count(*) from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>1 then raise exception 'Duplicate or missing commission'; end if;
+ begin perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item'))); raise exception 'Self purchase accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if exists(select 1 from public.academy_user_items where item_id=current_setting('workshop.item')::integer) then raise exception 'item granted before parcel opened'; end if;
+ if not exists(select 1 from storage.objects where name=current_setting('workshop.image')) then raise exception 'owner cannot read delivered image'; end if;
+ r:=public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order')));
+ perform public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order')));
+ if r->>'status'<>'received' or (select count(*) from public.academy_user_items where item_id=current_setting('workshop.item')::integer)<>1 then raise exception 'receipt is not idempotent'; end if;
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',current_setting('workshop.item')));
+ if not exists(select 1 from public.academy_user_items where item_id=current_setting('workshop.item')::integer and is_equipped) then raise exception 'custom item could not equip'; end if;
+end $$;
+reset role;
+select set_config('workshop.third',(select id::text from public.profiles where role='student' and id::text not in (current_setting('workshop.owner'),current_setting('workshop.other')) limit 1),true);
+insert into public.academy_user_stats(user_id,coins) values(current_setting('workshop.third')::uuid,100) on conflict(user_id) do update set coins=excluded.coins;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.third'),'role','authenticated')::text,true);
+do $$ begin
+ begin perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',50)); raise exception 'Stale price charged' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>100 then raise exception 'Stale confirmation lost coins'; end if;
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',35));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',35));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Actual price or duplicate purchase incorrect'; end if;
+end $$;
+reset role;
+do $$ begin
+ if (select coins from public.academy_user_stats where user_id=current_setting('workshop.owner')::uuid)<>220 then raise exception 'Commission should remain 10 at either price'; end if;
+ if (select sum(sale_price) from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>70 then raise exception 'Actual sale prices missing'; end if;
+ if (select count(*) from public.academy_shop_items where academy_asset='workshop:'||current_setting('workshop.order'))<>1 then raise exception 'duplicate catalog'; end if;
+ if exists(select resource_id from public.notification_events where type='academy_workshop_delivered' and meta->>'order_id'=current_setting('workshop.order') group by resource_id having count(*)>1) then raise exception 'duplicate delivery notification'; end if;
+end $$;
+set local role anon;
+do $$ begin
+ begin perform public.academy_workshop_read(); raise exception 'anonymous can read'; exception when insufficient_privilege then null; end;
+end $$;
+rollback;
+select 'PASS: workshop ownership, administrator inbox, prompt validation, production, public artwork/private orders, 100-coin charge/refunds, fixed 35-coin price, stale-price rejection and fixed 10-coin commission, idempotent submit/delivery/receipt, equipment and anonymous permissions (rolled back)' as result;
+
+-- librarian
+begin;
+select set_config('workshop.owner',(select id::text from public.profiles where role='student' limit 1),true);
+select set_config('workshop.other',(select id::text from public.profiles where role='student' and id::text<>current_setting('workshop.owner') limit 1),true);
+select set_config('workshop.admin',(select p.id::text from public.profiles p where p.role='admin' and exists(select 1 from public.user_resource where user_id=p.id) limit 1),true);
+select set_config('workshop.token',gen_random_uuid()::text,true);
+-- Isolate the test student's existing pending count; everything rolls back below.
+update public.academy_workshop_orders set status='cancelled' where student_id=current_setting('workshop.owner')::uuid and status in ('submitted','crafting');
+insert into public.academy_user_stats(user_id,coins) values(current_setting('workshop.owner')::uuid,300),(current_setting('workshop.other')::uuid,100) on conflict(user_id) do update set coins=excluded.coins;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.owner'),'role','authenticated')::text,true);
+do $$ declare a jsonb; b jsonb; begin
+ a:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',current_setting('workshop.token'),'title','검증용 은빛 별 의상','prompt','은빛 별 자수가 들어간 남색 벨벳 의상을 만들어 주세요.','slot','librarian','sale_price',20,'student_id',current_setting('workshop.other')));
+ perform set_config('workshop.order',a->>'id',true);
+ if (a->>'sale_price')::integer<>35 then raise exception 'Default sale price changed'; end if;
+ if a->>'student_id'<>current_setting('workshop.owner') then raise exception 'forged owner accepted'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',current_setting('workshop.token'),'title','중복','prompt','중복','slot','room'));
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',a->>'id','sale_price',20)); raise exception 'Fixed price changed' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if b->>'id'<>a->>'id' then raise exception 'submission is not idempotent'; end if;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>200 then raise exception 'Expected exactly one 100-coin charge'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','취소 환불 검사','prompt','취소와 재시도에서 제작비를 중복 환불하지 않는지 확인합니다.','slot','librarian'));
+ perform public.academy_workshop_write('cancel',jsonb_build_object('id',b->>'id'));
+ perform public.academy_workshop_write('cancel',jsonb_build_object('id',b->>'id'));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>200 then raise exception 'Cancel refund not exactly once'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','반려 환불 검사','prompt','제작 불가 시 제작비를 전액 환불하고 재시도에 보존해야 합니다.','slot','librarian'));
+ perform set_config('workshop.decline',b->>'id',true);
+ begin perform public.academy_workshop_write('start',jsonb_build_object('id',a->>'id')); raise exception 'student could produce'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','짧은 주문','prompt','짧음','slot','librarian')); raise exception 'short prompt accepted'; exception when check_violation then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.other'),'role','authenticated')::text,true);
+do $$ begin
+ if exists(select 1 from public.academy_workshop_orders where id=current_setting('workshop.order')::uuid) then raise exception 'order leaked';
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',current_setting('workshop.order'),'sale_price',20)); raise exception 'Another student changed price'; exception when insufficient_privilege then null; end; end if;
+ begin perform public.academy_workshop_write('cancel',jsonb_build_object('id',current_setting('workshop.order'))); raise exception 'other student cancelled order'; exception when insufficient_privilege then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.admin'),'role','authenticated')::text,true);
+do $$ declare o jsonb; image text:=current_setting('workshop.order')||'/'||gen_random_uuid()::text||'.png'; begin
+ if not exists(select 1 from public.notification_events where type='academy_workshop_submitted' and meta->>'order_id'=current_setting('workshop.order')) then raise exception 'admin notification missing'; end if;
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','관리자 주문','prompt','관리자는 학생 대신 주문할 수 없어야 합니다.','slot','librarian')); raise exception 'admin submitted as student'; exception when insufficient_privilege then null; end;
+ perform public.academy_workshop_write('decline',jsonb_build_object('id',current_setting('workshop.decline'),'note','제작 불가 환불 검사'));
+ perform public.academy_workshop_write('decline',jsonb_build_object('id',current_setting('workshop.decline'),'note','중복 반려 검사'));
+ perform public.academy_workshop_write('start',jsonb_build_object('id',current_setting('workshop.order')));
+ insert into storage.objects(bucket_id,name,metadata) values('academy-workshop',image,'{"mimetype":"image/png","size":1024}');
+ perform set_config('workshop.image',image,true);
+ o:=public.academy_workshop_write('deliver',jsonb_build_object('id',current_setting('workshop.order'),'image_path',image,'note','당신만의 별빛 의상입니다.'));
+ perform set_config('workshop.item',o->>'item_id',true);
+ o:=public.academy_workshop_write('deliver',jsonb_build_object('id',current_setting('workshop.order'),'image_path',image));
+ if o->>'item_id'<>current_setting('workshop.item') then raise exception 'delivery minted duplicate'; end if;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.other'),'role','authenticated')::text,true);
+do $$ declare d jsonb; begin
+ if not exists(select 1 from public.academy_shop_items where id=current_setting('workshop.item')::integer and price=35 and is_active and description<>'당신만의 별빛 의상입니다.') then raise exception 'public artwork missing or private letter leaked'; end if;
+ if not exists(select 1 from storage.objects where bucket_id='academy-workshop' and name=current_setting('workshop.image')) then raise exception 'listed artwork image missing'; end if;
+ d:=public.academy_dormitory_read(current_date);
+ if not exists(select 1 from jsonb_array_elements(d->'catalog') i where i->>'id'=current_setting('workshop.item')) then raise exception 'dorm RPC missing artwork'; end if;
+ if exists(select 1 from public.academy_workshop_orders where id=current_setting('workshop.order')::uuid) then raise exception 'Private order leaked after publication'; end if;
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item'),'price',0,'commission',999,'recipient',auth.uid()));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item')));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Purchase price or duplicate charge incorrect'; end if;
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',current_setting('workshop.item')));
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','잔액 부족 검사','prompt','백 코인 미만에서는 주문과 잔액 변경이 없어야 합니다.','slot','librarian')); raise exception 'Insufficient wallet accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Failed order charged'; end if;
+ begin insert into public.academy_workshop_commissions(order_id,buyer_id,recipient_id) values(current_setting('workshop.order')::uuid,auth.uid(),current_setting('workshop.owner')::uuid); raise exception 'Client minted commission'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order'))); raise exception 'other student received'; exception when insufficient_privilege then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.owner'),'role','authenticated')::text,true);
+do $$ declare r jsonb; begin
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',current_setting('workshop.order'),'sale_price',50)); raise exception 'Fixed price changed' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select price from public.academy_shop_items where id=current_setting('workshop.item')::integer)<>35 then raise exception 'Catalog fixed price changed'; end if;
+ if (select sale_price from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>35 then raise exception 'Historical sale price overwritten'; end if;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>210 then raise exception 'Commission/refund balance incorrect'; end if;
+ if (select count(*) from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>1 then raise exception 'Duplicate or missing commission'; end if;
+ begin perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item'))); raise exception 'Self purchase accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if exists(select 1 from public.academy_user_items where item_id=current_setting('workshop.item')::integer) then raise exception 'item granted before parcel opened'; end if;
+ if not exists(select 1 from storage.objects where name=current_setting('workshop.image')) then raise exception 'owner cannot read delivered image'; end if;
+ r:=public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order')));
+ perform public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order')));
+ if r->>'status'<>'received' or (select count(*) from public.academy_user_items where item_id=current_setting('workshop.item')::integer)<>1 then raise exception 'receipt is not idempotent'; end if;
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',current_setting('workshop.item')));
+ if not exists(select 1 from public.academy_user_items where item_id=current_setting('workshop.item')::integer and is_equipped) then raise exception 'custom item could not equip'; end if;
+end $$;
+reset role;
+select set_config('workshop.third',(select id::text from public.profiles where role='student' and id::text not in (current_setting('workshop.owner'),current_setting('workshop.other')) limit 1),true);
+insert into public.academy_user_stats(user_id,coins) values(current_setting('workshop.third')::uuid,100) on conflict(user_id) do update set coins=excluded.coins;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.third'),'role','authenticated')::text,true);
+do $$ begin
+ begin perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',50)); raise exception 'Stale price charged' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>100 then raise exception 'Stale confirmation lost coins'; end if;
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',35));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',35));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Actual price or duplicate purchase incorrect'; end if;
+end $$;
+reset role;
+do $$ begin
+ if (select coins from public.academy_user_stats where user_id=current_setting('workshop.owner')::uuid)<>220 then raise exception 'Commission should remain 10 at either price'; end if;
+ if (select sum(sale_price) from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>70 then raise exception 'Actual sale prices missing'; end if;
+ if (select count(*) from public.academy_shop_items where academy_asset='workshop:'||current_setting('workshop.order'))<>1 then raise exception 'duplicate catalog'; end if;
+ if exists(select resource_id from public.notification_events where type='academy_workshop_delivered' and meta->>'order_id'=current_setting('workshop.order') group by resource_id having count(*)>1) then raise exception 'duplicate delivery notification'; end if;
+end $$;
+set local role anon;
+do $$ begin
+ begin perform public.academy_workshop_read(); raise exception 'anonymous can read'; exception when insufficient_privilege then null; end;
+end $$;
+rollback;
+select 'PASS: workshop ownership, administrator inbox, prompt validation, production, public artwork/private orders, 100-coin charge/refunds, fixed 35-coin price, stale-price rejection and fixed 10-coin commission, idempotent submit/delivery/receipt, equipment and anonymous permissions (rolled back)' as result;
+
+-- postmaster
+begin;
+select set_config('workshop.owner',(select id::text from public.profiles where role='student' limit 1),true);
+select set_config('workshop.other',(select id::text from public.profiles where role='student' and id::text<>current_setting('workshop.owner') limit 1),true);
+select set_config('workshop.admin',(select p.id::text from public.profiles p where p.role='admin' and exists(select 1 from public.user_resource where user_id=p.id) limit 1),true);
+select set_config('workshop.token',gen_random_uuid()::text,true);
+-- Isolate the test student's existing pending count; everything rolls back below.
+update public.academy_workshop_orders set status='cancelled' where student_id=current_setting('workshop.owner')::uuid and status in ('submitted','crafting');
+insert into public.academy_user_stats(user_id,coins) values(current_setting('workshop.owner')::uuid,300),(current_setting('workshop.other')::uuid,100) on conflict(user_id) do update set coins=excluded.coins;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.owner'),'role','authenticated')::text,true);
+do $$ declare a jsonb; b jsonb; begin
+ a:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',current_setting('workshop.token'),'title','검증용 은빛 별 의상','prompt','은빛 별 자수가 들어간 남색 벨벳 의상을 만들어 주세요.','slot','postmaster','sale_price',20,'student_id',current_setting('workshop.other')));
+ perform set_config('workshop.order',a->>'id',true);
+ if (a->>'sale_price')::integer<>35 then raise exception 'Default sale price changed'; end if;
+ if a->>'student_id'<>current_setting('workshop.owner') then raise exception 'forged owner accepted'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',current_setting('workshop.token'),'title','중복','prompt','중복','slot','room'));
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',a->>'id','sale_price',20)); raise exception 'Fixed price changed' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if b->>'id'<>a->>'id' then raise exception 'submission is not idempotent'; end if;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>200 then raise exception 'Expected exactly one 100-coin charge'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','취소 환불 검사','prompt','취소와 재시도에서 제작비를 중복 환불하지 않는지 확인합니다.','slot','postmaster'));
+ perform public.academy_workshop_write('cancel',jsonb_build_object('id',b->>'id'));
+ perform public.academy_workshop_write('cancel',jsonb_build_object('id',b->>'id'));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>200 then raise exception 'Cancel refund not exactly once'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','반려 환불 검사','prompt','제작 불가 시 제작비를 전액 환불하고 재시도에 보존해야 합니다.','slot','postmaster'));
+ perform set_config('workshop.decline',b->>'id',true);
+ begin perform public.academy_workshop_write('start',jsonb_build_object('id',a->>'id')); raise exception 'student could produce'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','짧은 주문','prompt','짧음','slot','postmaster')); raise exception 'short prompt accepted'; exception when check_violation then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.other'),'role','authenticated')::text,true);
+do $$ begin
+ if exists(select 1 from public.academy_workshop_orders where id=current_setting('workshop.order')::uuid) then raise exception 'order leaked';
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',current_setting('workshop.order'),'sale_price',20)); raise exception 'Another student changed price'; exception when insufficient_privilege then null; end; end if;
+ begin perform public.academy_workshop_write('cancel',jsonb_build_object('id',current_setting('workshop.order'))); raise exception 'other student cancelled order'; exception when insufficient_privilege then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.admin'),'role','authenticated')::text,true);
+do $$ declare o jsonb; image text:=current_setting('workshop.order')||'/'||gen_random_uuid()::text||'.png'; begin
+ if not exists(select 1 from public.notification_events where type='academy_workshop_submitted' and meta->>'order_id'=current_setting('workshop.order')) then raise exception 'admin notification missing'; end if;
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','관리자 주문','prompt','관리자는 학생 대신 주문할 수 없어야 합니다.','slot','postmaster')); raise exception 'admin submitted as student'; exception when insufficient_privilege then null; end;
+ perform public.academy_workshop_write('decline',jsonb_build_object('id',current_setting('workshop.decline'),'note','제작 불가 환불 검사'));
+ perform public.academy_workshop_write('decline',jsonb_build_object('id',current_setting('workshop.decline'),'note','중복 반려 검사'));
+ perform public.academy_workshop_write('start',jsonb_build_object('id',current_setting('workshop.order')));
+ insert into storage.objects(bucket_id,name,metadata) values('academy-workshop',image,'{"mimetype":"image/png","size":1024}');
+ perform set_config('workshop.image',image,true);
+ o:=public.academy_workshop_write('deliver',jsonb_build_object('id',current_setting('workshop.order'),'image_path',image,'note','당신만의 별빛 의상입니다.'));
+ perform set_config('workshop.item',o->>'item_id',true);
+ o:=public.academy_workshop_write('deliver',jsonb_build_object('id',current_setting('workshop.order'),'image_path',image));
+ if o->>'item_id'<>current_setting('workshop.item') then raise exception 'delivery minted duplicate'; end if;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.other'),'role','authenticated')::text,true);
+do $$ declare d jsonb; begin
+ if not exists(select 1 from public.academy_shop_items where id=current_setting('workshop.item')::integer and price=35 and is_active and description<>'당신만의 별빛 의상입니다.') then raise exception 'public artwork missing or private letter leaked'; end if;
+ if not exists(select 1 from storage.objects where bucket_id='academy-workshop' and name=current_setting('workshop.image')) then raise exception 'listed artwork image missing'; end if;
+ d:=public.academy_dormitory_read(current_date);
+ if not exists(select 1 from jsonb_array_elements(d->'catalog') i where i->>'id'=current_setting('workshop.item')) then raise exception 'dorm RPC missing artwork'; end if;
+ if exists(select 1 from public.academy_workshop_orders where id=current_setting('workshop.order')::uuid) then raise exception 'Private order leaked after publication'; end if;
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item'),'price',0,'commission',999,'recipient',auth.uid()));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item')));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Purchase price or duplicate charge incorrect'; end if;
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',current_setting('workshop.item')));
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','잔액 부족 검사','prompt','백 코인 미만에서는 주문과 잔액 변경이 없어야 합니다.','slot','postmaster')); raise exception 'Insufficient wallet accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Failed order charged'; end if;
+ begin insert into public.academy_workshop_commissions(order_id,buyer_id,recipient_id) values(current_setting('workshop.order')::uuid,auth.uid(),current_setting('workshop.owner')::uuid); raise exception 'Client minted commission'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order'))); raise exception 'other student received'; exception when insufficient_privilege then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.owner'),'role','authenticated')::text,true);
+do $$ declare r jsonb; begin
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',current_setting('workshop.order'),'sale_price',50)); raise exception 'Fixed price changed' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select price from public.academy_shop_items where id=current_setting('workshop.item')::integer)<>35 then raise exception 'Catalog fixed price changed'; end if;
+ if (select sale_price from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>35 then raise exception 'Historical sale price overwritten'; end if;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>210 then raise exception 'Commission/refund balance incorrect'; end if;
+ if (select count(*) from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>1 then raise exception 'Duplicate or missing commission'; end if;
+ begin perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item'))); raise exception 'Self purchase accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if exists(select 1 from public.academy_user_items where item_id=current_setting('workshop.item')::integer) then raise exception 'item granted before parcel opened'; end if;
+ if not exists(select 1 from storage.objects where name=current_setting('workshop.image')) then raise exception 'owner cannot read delivered image'; end if;
+ r:=public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order')));
+ perform public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order')));
+ if r->>'status'<>'received' or (select count(*) from public.academy_user_items where item_id=current_setting('workshop.item')::integer)<>1 then raise exception 'receipt is not idempotent'; end if;
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',current_setting('workshop.item')));
+ if not exists(select 1 from public.academy_user_items where item_id=current_setting('workshop.item')::integer and is_equipped) then raise exception 'custom item could not equip'; end if;
+end $$;
+reset role;
+select set_config('workshop.third',(select id::text from public.profiles where role='student' and id::text not in (current_setting('workshop.owner'),current_setting('workshop.other')) limit 1),true);
+insert into public.academy_user_stats(user_id,coins) values(current_setting('workshop.third')::uuid,100) on conflict(user_id) do update set coins=excluded.coins;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.third'),'role','authenticated')::text,true);
+do $$ begin
+ begin perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',50)); raise exception 'Stale price charged' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>100 then raise exception 'Stale confirmation lost coins'; end if;
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',35));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',35));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Actual price or duplicate purchase incorrect'; end if;
+end $$;
+reset role;
+do $$ begin
+ if (select coins from public.academy_user_stats where user_id=current_setting('workshop.owner')::uuid)<>220 then raise exception 'Commission should remain 10 at either price'; end if;
+ if (select sum(sale_price) from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>70 then raise exception 'Actual sale prices missing'; end if;
+ if (select count(*) from public.academy_shop_items where academy_asset='workshop:'||current_setting('workshop.order'))<>1 then raise exception 'duplicate catalog'; end if;
+ if exists(select resource_id from public.notification_events where type='academy_workshop_delivered' and meta->>'order_id'=current_setting('workshop.order') group by resource_id having count(*)>1) then raise exception 'duplicate delivery notification'; end if;
+end $$;
+set local role anon;
+do $$ begin
+ begin perform public.academy_workshop_read(); raise exception 'anonymous can read'; exception when insufficient_privilege then null; end;
+end $$;
+rollback;
+select 'PASS: workshop ownership, administrator inbox, prompt validation, production, public artwork/private orders, 100-coin charge/refunds, fixed 35-coin price, stale-price rejection and fixed 10-coin commission, idempotent submit/delivery/receipt, equipment and anonymous permissions (rolled back)' as result;
+
+-- serin
+begin;
+select set_config('workshop.owner',(select id::text from public.profiles where role='student' limit 1),true);
+select set_config('workshop.other',(select id::text from public.profiles where role='student' and id::text<>current_setting('workshop.owner') limit 1),true);
+select set_config('workshop.admin',(select p.id::text from public.profiles p where p.role='admin' and exists(select 1 from public.user_resource where user_id=p.id) limit 1),true);
+select set_config('workshop.token',gen_random_uuid()::text,true);
+-- Isolate the test student's existing pending count; everything rolls back below.
+update public.academy_workshop_orders set status='cancelled' where student_id=current_setting('workshop.owner')::uuid and status in ('submitted','crafting');
+insert into public.academy_user_stats(user_id,coins) values(current_setting('workshop.owner')::uuid,300),(current_setting('workshop.other')::uuid,100) on conflict(user_id) do update set coins=excluded.coins;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.owner'),'role','authenticated')::text,true);
+do $$ declare a jsonb; b jsonb; begin
+ a:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',current_setting('workshop.token'),'title','검증용 은빛 별 의상','prompt','은빛 별 자수가 들어간 남색 벨벳 의상을 만들어 주세요.','slot','serin','sale_price',20,'student_id',current_setting('workshop.other')));
+ perform set_config('workshop.order',a->>'id',true);
+ if (a->>'sale_price')::integer<>35 then raise exception 'Default sale price changed'; end if;
+ if a->>'student_id'<>current_setting('workshop.owner') then raise exception 'forged owner accepted'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',current_setting('workshop.token'),'title','중복','prompt','중복','slot','room'));
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',a->>'id','sale_price',20)); raise exception 'Fixed price changed' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if b->>'id'<>a->>'id' then raise exception 'submission is not idempotent'; end if;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>200 then raise exception 'Expected exactly one 100-coin charge'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','취소 환불 검사','prompt','취소와 재시도에서 제작비를 중복 환불하지 않는지 확인합니다.','slot','serin'));
+ perform public.academy_workshop_write('cancel',jsonb_build_object('id',b->>'id'));
+ perform public.academy_workshop_write('cancel',jsonb_build_object('id',b->>'id'));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>200 then raise exception 'Cancel refund not exactly once'; end if;
+ b:=public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','반려 환불 검사','prompt','제작 불가 시 제작비를 전액 환불하고 재시도에 보존해야 합니다.','slot','serin'));
+ perform set_config('workshop.decline',b->>'id',true);
+ begin perform public.academy_workshop_write('start',jsonb_build_object('id',a->>'id')); raise exception 'student could produce'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','짧은 주문','prompt','짧음','slot','serin')); raise exception 'short prompt accepted'; exception when check_violation then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.other'),'role','authenticated')::text,true);
+do $$ begin
+ if exists(select 1 from public.academy_workshop_orders where id=current_setting('workshop.order')::uuid) then raise exception 'order leaked';
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',current_setting('workshop.order'),'sale_price',20)); raise exception 'Another student changed price'; exception when insufficient_privilege then null; end; end if;
+ begin perform public.academy_workshop_write('cancel',jsonb_build_object('id',current_setting('workshop.order'))); raise exception 'other student cancelled order'; exception when insufficient_privilege then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.admin'),'role','authenticated')::text,true);
+do $$ declare o jsonb; image text:=current_setting('workshop.order')||'/'||gen_random_uuid()::text||'.png'; begin
+ if not exists(select 1 from public.notification_events where type='academy_workshop_submitted' and meta->>'order_id'=current_setting('workshop.order')) then raise exception 'admin notification missing'; end if;
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','관리자 주문','prompt','관리자는 학생 대신 주문할 수 없어야 합니다.','slot','serin')); raise exception 'admin submitted as student'; exception when insufficient_privilege then null; end;
+ perform public.academy_workshop_write('decline',jsonb_build_object('id',current_setting('workshop.decline'),'note','제작 불가 환불 검사'));
+ perform public.academy_workshop_write('decline',jsonb_build_object('id',current_setting('workshop.decline'),'note','중복 반려 검사'));
+ perform public.academy_workshop_write('start',jsonb_build_object('id',current_setting('workshop.order')));
+ insert into storage.objects(bucket_id,name,metadata) values('academy-workshop',image,'{"mimetype":"image/png","size":1024}');
+ perform set_config('workshop.image',image,true);
+ o:=public.academy_workshop_write('deliver',jsonb_build_object('id',current_setting('workshop.order'),'image_path',image,'note','당신만의 별빛 의상입니다.'));
+ perform set_config('workshop.item',o->>'item_id',true);
+ o:=public.academy_workshop_write('deliver',jsonb_build_object('id',current_setting('workshop.order'),'image_path',image));
+ if o->>'item_id'<>current_setting('workshop.item') then raise exception 'delivery minted duplicate'; end if;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.other'),'role','authenticated')::text,true);
+do $$ declare d jsonb; begin
+ if not exists(select 1 from public.academy_shop_items where id=current_setting('workshop.item')::integer and price=35 and is_active and description<>'당신만의 별빛 의상입니다.') then raise exception 'public artwork missing or private letter leaked'; end if;
+ if not exists(select 1 from storage.objects where bucket_id='academy-workshop' and name=current_setting('workshop.image')) then raise exception 'listed artwork image missing'; end if;
+ d:=public.academy_dormitory_read(current_date);
+ if not exists(select 1 from jsonb_array_elements(d->'catalog') i where i->>'id'=current_setting('workshop.item')) then raise exception 'dorm RPC missing artwork'; end if;
+ if exists(select 1 from public.academy_workshop_orders where id=current_setting('workshop.order')::uuid) then raise exception 'Private order leaked after publication'; end if;
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item'),'price',0,'commission',999,'recipient',auth.uid()));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item')));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Purchase price or duplicate charge incorrect'; end if;
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',current_setting('workshop.item')));
+ begin perform public.academy_workshop_write('submit',jsonb_build_object('confirm_cost',100,'publish_design',true,'client_token',gen_random_uuid(),'title','잔액 부족 검사','prompt','백 코인 미만에서는 주문과 잔액 변경이 없어야 합니다.','slot','serin')); raise exception 'Insufficient wallet accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Failed order charged'; end if;
+ begin insert into public.academy_workshop_commissions(order_id,buyer_id,recipient_id) values(current_setting('workshop.order')::uuid,auth.uid(),current_setting('workshop.owner')::uuid); raise exception 'Client minted commission'; exception when insufficient_privilege then null; end;
+ begin perform public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order'))); raise exception 'other student received'; exception when insufficient_privilege then null; end;
+end $$;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.owner'),'role','authenticated')::text,true);
+do $$ declare r jsonb; begin
+ begin perform public.academy_workshop_write('set_price',jsonb_build_object('id',current_setting('workshop.order'),'sale_price',50)); raise exception 'Fixed price changed' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select price from public.academy_shop_items where id=current_setting('workshop.item')::integer)<>35 then raise exception 'Catalog fixed price changed'; end if;
+ if (select sale_price from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>35 then raise exception 'Historical sale price overwritten'; end if;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>210 then raise exception 'Commission/refund balance incorrect'; end if;
+ if (select count(*) from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>1 then raise exception 'Duplicate or missing commission'; end if;
+ begin perform public.academy_dormitory_write('purchase',jsonb_build_object('expected_price',35,'item_id',current_setting('workshop.item'))); raise exception 'Self purchase accepted' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if exists(select 1 from public.academy_user_items where item_id=current_setting('workshop.item')::integer) then raise exception 'item granted before parcel opened'; end if;
+ if not exists(select 1 from storage.objects where name=current_setting('workshop.image')) then raise exception 'owner cannot read delivered image'; end if;
+ r:=public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order')));
+ perform public.academy_workshop_write('receive',jsonb_build_object('id',current_setting('workshop.order')));
+ if r->>'status'<>'received' or (select count(*) from public.academy_user_items where item_id=current_setting('workshop.item')::integer)<>1 then raise exception 'receipt is not idempotent'; end if;
+ perform public.academy_dormitory_write('equip',jsonb_build_object('item_id',current_setting('workshop.item')));
+ if not exists(select 1 from public.academy_user_items where item_id=current_setting('workshop.item')::integer and is_equipped) then raise exception 'custom item could not equip'; end if;
+end $$;
+reset role;
+select set_config('workshop.third',(select id::text from public.profiles where role='student' and id::text not in (current_setting('workshop.owner'),current_setting('workshop.other')) limit 1),true);
+insert into public.academy_user_stats(user_id,coins) values(current_setting('workshop.third')::uuid,100) on conflict(user_id) do update set coins=excluded.coins;
+set local role authenticated;
+select set_config('request.jwt.claims',json_build_object('sub',current_setting('workshop.third'),'role','authenticated')::text,true);
+do $$ begin
+ begin perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',50)); raise exception 'Stale price charged' using errcode='XX000'; exception when sqlstate 'P0001' then null; end;
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>100 then raise exception 'Stale confirmation lost coins'; end if;
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',35));
+ perform public.academy_dormitory_write('purchase',jsonb_build_object('item_id',current_setting('workshop.item'),'expected_price',35));
+ if (select coins from public.academy_user_stats where user_id=auth.uid())<>65 then raise exception 'Actual price or duplicate purchase incorrect'; end if;
+end $$;
+reset role;
+do $$ begin
+ if (select coins from public.academy_user_stats where user_id=current_setting('workshop.owner')::uuid)<>220 then raise exception 'Commission should remain 10 at either price'; end if;
+ if (select sum(sale_price) from public.academy_workshop_commissions where order_id=current_setting('workshop.order')::uuid)<>70 then raise exception 'Actual sale prices missing'; end if;
+ if (select count(*) from public.academy_shop_items where academy_asset='workshop:'||current_setting('workshop.order'))<>1 then raise exception 'duplicate catalog'; end if;
+ if exists(select resource_id from public.notification_events where type='academy_workshop_delivered' and meta->>'order_id'=current_setting('workshop.order') group by resource_id having count(*)>1) then raise exception 'duplicate delivery notification'; end if;
+end $$;
+set local role anon;
+do $$ begin
+ begin perform public.academy_workshop_read(); raise exception 'anonymous can read'; exception when insufficient_privilege then null; end;
+end $$;
+rollback;
+select 'PASS: workshop ownership, administrator inbox, prompt validation, production, public artwork/private orders, 100-coin charge/refunds, fixed 35-coin price, stale-price rejection and fixed 10-coin commission, idempotent submit/delivery/receipt, equipment and anonymous permissions (rolled back)' as result;

@@ -1,0 +1,172 @@
+{
+ "schema": "neis-capture/1",
+ "key": "보건›보건#학교›건강기록부관리›정정대장등록",
+ "name": "정정대장등록",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:49:22+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "조회구분",
+     "box": [
+      175,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "조회구분",
+     "options": [
+      "개인별",
+      "반별"
+     ],
+     "id": "radio:조회구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      387,
+      82,
+      98,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      536,
+      82,
+      109,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과정",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과정"
+    },
+    {
+     "aria": null,
+     "box": [
+      755,
+      82,
+      170,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "계열/학년/학과",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:계열/학년/학과"
+    },
+    {
+     "aria": null,
+     "box": [
+      975,
+      82,
+      110,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      177,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생목록",
+     "id": "heading:학생목록"
+    },
+    {
+     "aria": "학생목록",
+     "box": [
+      25,
+      207,
+      394,
+      606
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생목록",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        208,
+        131,
+        36
+       ],
+       "id": "col:학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        157,
+        208,
+        261,
+        36
+       ],
+       "id": "col:학생목록/성명"
+      }
+     ],
+     "id": "grid:학생목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 보건 > 건강기록부관리 > 정정대장등록",
+ "viewport": [
+  1920,
+  945
+ ]
+}

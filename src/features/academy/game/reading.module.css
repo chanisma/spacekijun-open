@@ -1,0 +1,157 @@
+/* 세린의 서가 (2026-10-03 개편) — 크림색 목록 창 → 도서관 안의 나무 책장 · 독서대 · 카드 서랍.
+ * 바탕이 어두운 나무라 글자는 크림(#f3e6cc 계열, 바탕 대비 9:1 이상), 종이(카드·이름표) 위 글자는 짙은 갈색(4.5:1 이상).
+ * 책등 색은 readingModel.SPINE_TONES — 크림 글자와 4.5:1 이상이 회귀로 고정돼 있다. */
+.shelf { width: min(1180px, calc(100vw - 32px)); padding: 26px 28px 30px; color: #f3e6cc;
+  background: radial-gradient(ellipse at 18% 0%, #4a2f42, transparent 55%), radial-gradient(ellipse at 100% 100%, #1d1220, transparent 60%), linear-gradient(160deg, #2e1d2a, #1f1420); }
+.kicker { display: block; color: #e2c289; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+.head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 460px); align-items: end; gap: 16px; margin: 0 40px 14px 0; }
+.head h2 { margin: 6px 0 0; color: #f8ecd2; }
+
+/* 세린 — 곁에서 지금 할 일 하나 */
+.serin { display: flex; align-items: center; gap: 12px; margin: 0; }
+.portrait { flex-shrink: 0; width: 66px; height: 66px; overflow: hidden; border-radius: 50%; border: 2px solid #d9b873; background: radial-gradient(circle at 50% 30%, #5a3a55, #2a1a28); box-shadow: 0 4px 14px #0008; }
+/* 전신 그림이라 얼굴 쪽으로 당겨 자른다 */
+.portrait img { display: block; width: 200%; max-width: none; height: auto; margin: -4% 0 0 -50%; } /* 전역 초기화의 img { max-width: 100% } 가 200% 를 66px 로 눌러 얼굴이 밖으로 밀렸다 */
+.serin figcaption { position: relative; padding: 10px 14px; border: 1px solid #d9b873; border-radius: 4px 16px 16px 16px; color: #2c2340; background: linear-gradient(160deg, #fff8ea, #f1e1c1); font: 14px/1.6 'Gowun Batang', Georgia, serif; }
+.serin figcaption b { margin-right: 4px; color: #6b3a6a; font-family: 'Pretendard', sans-serif; font-size: 12px; }
+
+/* 두 장 — 책갈피 리본 모양 */
+.tabs { display: flex; gap: 8px; margin: 0 0 14px; border-bottom: 1px solid #d9b87355; }
+.tabs button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 18px; border: 1px solid #d9b87366; border-bottom: 0; border-radius: 10px 10px 0 0; color: #e9d8b6; background: #ffffff0d; font-size: 14px; font-weight: 700; transition: background .15s, transform .15s; }
+.tabs button span { color: #e2c289; }
+.tabs button:hover:not(:disabled) { background: #ffffff1a; }
+.tabs button[aria-pressed=true] { color: #2c1c14; background: linear-gradient(180deg, #ecd39a, #c9a35c); border-color: #ecd39a; transform: translateY(1px); }
+.tabs button[aria-pressed=true] span { color: #6b3a1a; }
+.notice, .paperNote { margin: 0 0 10px; padding: 8px 12px; border: 1px solid #d9b87366; border-radius: 6px; color: #f3e6cc; background: #ffffff10; font-size: 13px; }
+
+/* ── 추천 서가 = 책장 + 독서대 ── */
+.library { display: grid; grid-template-columns: minmax(0, 1fr) 300px; align-items: start; gap: 18px; }
+.case { position: relative; padding: 14px 14px 16px; border: 10px solid #4a2e1c; border-radius: 6px; background: linear-gradient(180deg, #3a2416, #2a190f); box-shadow: inset 0 0 0 2px #6b4528, inset 0 18px 30px #0007, 0 18px 40px #0009; }
+.plaques { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.plaques button { display: grid; gap: 1px; min-height: 52px; padding: 7px 14px; border: 1px solid #f3dca2; border-radius: 4px; color: #3a2614; background: linear-gradient(180deg, #c9a868, #9c7a3e); box-shadow: inset 0 1px 0 #fff3, 0 2px 4px #0006; font-size: 15px; font-weight: 800; text-align: left; transition: filter .15s, transform .15s; }
+.plaques button small { color: #3f2a15; font-size: 12px; font-weight: 500; }
+.plaques button:hover:not(:disabled) { filter: brightness(1.08); }
+.plaques button[aria-selected=true] { background: linear-gradient(180deg, #f6dea0, #d2a956); box-shadow: inset 0 1px 0 #fff8, 0 0 0 2px #f6dea0, 0 0 18px #f2c04e66; }
+.labels { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.labels button { position: relative; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 5px 12px 5px 18px; border: 1px solid #b8996a; border-radius: 2px 8px 8px 2px; color: #4a3424; background: #e9d6b0; font-size: 13px; font-weight: 600; transition: transform .15s, background .15s; }
+.labels button::before { content: ''; position: absolute; left: 6px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: #8a6a45; }
+.labels button small { color: #6b5444; font-size: 11px; }
+.labels button:hover:not(:disabled) { transform: translateY(-2px); }
+.labels button[aria-selected=true] { color: #2c1c14; background: #fff6dc; border-color: #f3dca2; box-shadow: 0 3px 10px #0007; }
+.labels button[aria-selected=true]::before { background: #b3262e; }
+.caseHint, .sourceNote { margin: 0 0 10px; color: #e9d8b6; font-size: 13px; line-height: 1.6; }
+.sourceNote { margin: 10px 0 0; font-size: 12px; }
+.shelves { display: grid; gap: 6px; }
+.row { padding: 6px 4px 0; }
+.row > h3 { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin: 0 0 8px; padding: 3px 12px; border-radius: 3px; color: #3a2614; background: linear-gradient(180deg, #e2c487, #b9934f); box-shadow: 0 2px 4px #0006; font-size: 14px; font-weight: 800; }
+.row > h3 small { color: #3f2a15; font-size: 11px; font-weight: 500; }
+/* 한 칸 높이 200px + 선반 널 16px — 줄이 넘쳐도 줄마다 널이 깔린다(반복 그라데이션의 주기 = 칸 + 널). */
+.spines { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 3px; margin: 0; padding: 0 6px 16px; list-style: none;
+  background: repeating-linear-gradient(to bottom, transparent 0 200px, #8a5d38 200px 203px, #5a3a22 203px 216px); }
+.spines li { position: relative; display: flex; align-items: flex-end; height: 200px; }
+.spine { position: relative; display: flex; align-items: center; justify-content: center; padding: 16px 0; border: 0; border-radius: 3px 3px 1px 1px; color: #f6e7c8; cursor: pointer; overflow: hidden;
+  background: linear-gradient(90deg, #0006, transparent 18%, #ffffff1f 45%, transparent 70%, #0007), var(--tone); box-shadow: 1px 0 0 #0008, inset 0 -6px 8px #0005; transition: transform .22s cubic-bezier(.3, 1.4, .5, 1), box-shadow .2s; }
+.spine span { max-height: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; writing-mode: vertical-rl; font: 600 13px/1 'Gowun Batang', Georgia, serif; letter-spacing: .06em; text-shadow: 0 1px 0 #0008; }
+.spine::before, .spine::after { content: ''; position: absolute; left: 4px; right: 4px; height: 3px; border-top: 1px solid #d9b873; border-bottom: 1px solid #d9b873; opacity: .85; }
+.spine::before { top: 7px; }
+.spine::after { bottom: 7px; }
+.spine[data-band='1']::before { height: 6px; }
+.spine[data-band='2']::after { height: 6px; }
+.spine:hover:not(:disabled) { transform: translateY(-8px); }
+.spine:focus-visible { outline: 2px solid #f2c04e; outline-offset: 2px; }
+.spine[aria-pressed=true] { transform: translateY(-26px); box-shadow: 0 0 0 2px #f2c04e, 0 0 22px #f2c04e88, 0 10px 14px #0009; }
+/* 제6장에서 담은 책 — 붉은 책갈피 리본이 선반 널 위로 늘어진다 */
+.spines li[data-chosen]::after { content: ''; position: absolute; bottom: -12px; left: 50%; width: 8px; height: 26px; margin-left: -4px; background: #c22f38; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 78%, 0 100%); box-shadow: 0 2px 2px #0006; pointer-events: none; }
+
+/* 독서대 — 꺼낸 책의 표지 */
+.lectern { position: sticky; top: 0; min-height: 360px; padding: 14px; border-radius: 10px; background: linear-gradient(180deg, #4a2e1c, #2e1c10); box-shadow: inset 0 0 0 1px #8a5d38, 0 14px 30px #0008; }
+.cover { position: relative; display: grid; align-content: start; gap: 10px; min-height: 330px; padding: 26px 22px 20px; border-radius: 4px 10px 10px 4px; color: #f6e7c8;
+  background: linear-gradient(90deg, #0007 0, transparent 9%, #ffffff14 40%, transparent 70%), var(--tone); box-shadow: inset 0 0 0 1px #d9b87399, inset 0 0 0 7px var(--tone), inset 0 0 0 8px #d9b87355, 0 12px 26px #000a;
+  animation: pullOut .45s cubic-bezier(.2, .8, .3, 1) both; transform-origin: left center; }
+@keyframes pullOut { from { opacity: 0; transform: perspective(900px) rotateY(-35deg) translateX(-24px); } to { opacity: 1; transform: none; } }
+.coverStar { color: #f2c04e; font-size: 22px; text-align: center; }
+.cover h3 { margin: 0; color: #fff3da; font: 600 22px/1.4 'Gowun Batang', Georgia, serif; text-align: center; overflow-wrap: anywhere; }
+.author { margin: 0; color: #f0dfbd; font-size: 14px; text-align: center; }
+.note { margin: 6px 0 0; padding-top: 10px; border-top: 1px solid #d9b87366; color: #f6e7c8; font-size: 13px; line-height: 1.7; }
+.source { margin: 0; color: #e9d8b6; font-size: 12px; }
+.chosenTag { margin: 0; color: #ffd98a; font-size: 13px; font-weight: 700; }
+.coverActions { display: grid; gap: 8px; margin-top: 8px; }
+.coverActions button { width: 100%; margin: 0; }
+.putBack { min-height: 40px; border: 1px solid #f6e7c866; border-radius: 6px; color: #f6e7c8; background: transparent; font-size: 13px; }
+.putBack:hover:not(:disabled) { background: #ffffff14; }
+.lecternEmpty { display: grid; place-items: center; align-content: center; gap: 8px; min-height: 330px; border: 1px dashed #d9b87366; border-radius: 6px; color: #e9d8b6; text-align: center; }
+.lecternEmpty span { color: #e2c289; font-size: 30px; }
+.lecternEmpty p { margin: 0; font-size: 14px; line-height: 1.7; }
+
+/* ── 설명 카드 = 카드 서랍 ── */
+.drawerScene { display: grid; }
+.drawer { border: 10px solid #4a2e1c; border-radius: 6px; background: #2e1c10; box-shadow: inset 0 18px 30px #0008, 0 18px 40px #0009; }
+.drawerFront { display: flex; align-items: center; gap: 14px; padding: 10px 16px; background: linear-gradient(180deg, #6b4528, #4a2e1c); border-bottom: 2px solid #2a190f; }
+.drawerFront p { margin: 0; color: #f3e6cc; font-size: 13px; line-height: 1.6; }
+.handle { flex-shrink: 0; width: 64px; height: 14px; border-radius: 8px; background: linear-gradient(180deg, #f6dea0, #a57f3e); box-shadow: inset 0 -2px 0 #0004, 0 2px 4px #0007; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 22px 16px; margin: 0; padding: 26px 18px 18px; list-style: none; }
+.cards li { display: grid; gap: 6px; align-content: start; }
+.cards li:nth-child(odd) .cardOpen { transform: rotate(-.7deg); }
+.cards li:nth-child(even) .cardOpen { transform: rotate(.6deg); }
+.cardOpen { position: relative; display: grid; gap: 6px; width: 100%; min-height: 150px; padding: 22px 14px 12px; border: 0; border-radius: 2px; text-align: left; color: #3d2c35; cursor: pointer;
+  background: linear-gradient(#c22f3855, #c22f3855) 0 18px / 100% 1px no-repeat, repeating-linear-gradient(transparent 0 27px, #8fb0d466 27px 28px) 0 18px / 100% calc(100% - 18px) no-repeat, #fffaf0;
+  box-shadow: 0 6px 14px #0009; transition: transform .18s, box-shadow .18s; }
+.cards li .cardOpen:hover:not(:disabled) { transform: translateY(-6px) rotate(0); box-shadow: 0 12px 22px #000b; }
+.cardTab { position: absolute; top: -12px; left: 12px; max-width: calc(100% - 24px); padding: 3px 10px; border-radius: 6px 6px 0 0; color: #3d2c35; background: #f1dfb8; font-size: 12px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cardOpen strong { color: #2c2340; font: 22px/1.25 'Nanum Pen Script', 'Gowun Batang', cursive; overflow-wrap: anywhere; }
+.cardOpen em { color: #6b4a2a; font-size: 12px; font-style: normal; font-weight: 600; }
+.cardOpen[data-done='4'] { box-shadow: 0 0 0 2px #d9b873, 0 6px 14px #0009; }
+.dots { display: inline-flex; gap: 5px; margin: 2px 0; }
+.dots i { width: 11px; height: 11px; border-radius: 50%; border: 1.5px dashed #8d7663; }
+.dots i[data-done=true] { border: 0; background: radial-gradient(circle at 35% 30%, #ffffff66, transparent 45%), #a8742f; }
+.newCard { display: grid; place-items: center; align-content: center; gap: 4px; width: 100%; min-height: 150px; border: 2px dashed #e2c28999; border-radius: 4px; color: #f3e6cc; background: #ffffff0a; font-size: 14px; font-weight: 700; transition: background .15s; }
+.newCard span { color: #e2c289; font-size: 28px; line-height: 1; }
+.newCard:hover:not(:disabled) { background: #ffffff16; }
+.removeCard { justify-self: start; min-height: 32px; padding: 2px 6px; border: 0; color: #e9d8b6; background: transparent; font-size: 12px; text-decoration: underline; }
+.deleteRow { display: inline-flex; gap: 8px; }
+.drawer .deleteRow :global(button), .drawer > .empty { color: #f3e6cc; }
+.empty { margin: 0; padding: 0 18px 18px; color: #f3e6cc; font-size: 13px; line-height: 1.7; }
+
+/* 펼친 카드 — 줄 친 큰 색인 카드 */
+.indexCard { display: grid; gap: 14px; max-width: 760px; width: 100%; margin: 0 auto; padding: 30px 30px 24px; border-radius: 3px; color: #3d2c35;
+  background: linear-gradient(#c22f3866, #c22f3866) 0 64px / 100% 2px no-repeat, #fffcf3; box-shadow: 0 16px 34px #000b; animation: cardIn .35s ease-out both; }
+@keyframes cardIn { from { opacity: 0; transform: translateY(18px) rotate(-1deg); } to { opacity: 1; transform: none; } }
+.indexCard label { display: grid; gap: 6px; color: #3d2c35; font-size: 14px; font-weight: 600; }
+.indexCard label small { color: #6b5444; font-size: 12px; font-weight: 400; }
+.indexCard input, .indexCard textarea { box-sizing: border-box; width: 100%; margin: 0; padding: 8px 4px; border: 0; border-bottom: 1.5px dotted #a08a6a; border-radius: 0; color: #2c2340; background: transparent; font: inherit; font-size: 16px; font-weight: 400; }
+.indexCard input:focus, .indexCard textarea:focus { outline: 0; border-bottom: 1.5px solid #6b3a6a; }
+.indexCard input::placeholder, .indexCard textarea::placeholder { color: #8d7663; }
+.indexCard textarea { min-height: 112px; resize: vertical; border: 1px solid #d7c3a0; border-radius: 4px; padding: 8px 10px; background: repeating-linear-gradient(transparent 0 31px, #8fb0d455 31px 32px) local, #fffdf8; line-height: 32px; }
+.indexCard .ink { font: 22px/1.45 'Nanum Pen Script', 'Gowun Batang', cursive; }
+.indexCard textarea.ink { line-height: 32px; }
+.cardTitle input { font-weight: 600; }
+.indexCard details { padding: 10px 12px; border: 1px dashed #b8996a; border-radius: 6px; background: #fff7e680; }
+.indexCard summary { cursor: pointer; color: #3d2c35; font-size: 14px; font-weight: 600; }
+.indexCard summary small { margin-left: 8px; color: #6b5444; font-size: 12px; font-weight: 400; }
+.indexCard details label { margin-top: 12px; }
+.formActions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.formActions button { width: auto; margin: 0; }
+.indexCard :global(.error), .indexCard [role=alert] { color: #9b3041; }
+
+@media (max-width: 860px) {
+  .library { grid-template-columns: minmax(0, 1fr); }
+  .lectern { position: static; min-height: 0; }
+  .cover, .lecternEmpty { min-height: 0; }
+  .lecternEmpty { padding: 18px; }
+}
+@media (max-width: 650px) {
+  .shelf { padding: 18px 14px 20px; }
+  .head { grid-template-columns: minmax(0, 1fr); margin-right: 36px; }
+  .portrait { width: 52px; height: 52px; }
+  .serin figcaption { font-size: 13px; }
+  .tabs button { flex: 1; justify-content: center; padding: 8px 10px; font-size: 13px; }
+  .case, .drawer { border-width: 6px; padding: 10px; }
+  .drawer { padding: 0; }
+  .plaques button { min-height: 48px; padding: 6px 10px; font-size: 14px; }
+  .spines { gap: 14px 2px; padding: 0 2px 14px; background: repeating-linear-gradient(to bottom, transparent 0 150px, #8a5d38 150px 152px, #5a3a22 152px 164px); }
+  .spines li { height: 150px; }
+  .spine span { font-size: 12px; }
+  .cards { grid-template-columns: minmax(0, 1fr); padding: 22px 12px 12px; }
+  .indexCard { padding: 22px 16px 18px; }
+}
+:global([data-reduced=true]) .spine, :global([data-reduced=true]) .cover, :global([data-reduced=true]) .indexCard, :global([data-reduced=true]) .cardOpen { transition: none; animation: none; }

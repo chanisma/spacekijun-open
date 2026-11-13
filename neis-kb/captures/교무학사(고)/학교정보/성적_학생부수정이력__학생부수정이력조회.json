@@ -1,0 +1,875 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학교정보›성적/학생부수정이력›학생부수정이력조회",
+ "name": "학생부수정이력조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:54:05+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:학생별조회",
+   "tab": "학생별조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생별조회",
+      "사용자별조회",
+      "항목별조회"
+     ],
+     "active": "학생별조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "학생 목록 그리드",
+     "box": [
+      25,
+      228,
+      394,
+      585
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록 그리드",
+     "selectable": false,
+     "declaredColumns": 2,
+     "columns": [
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        26,
+        229,
+        131,
+        36
+       ],
+       "id": "col:학생 목록 그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        157,
+        229,
+        261,
+        36
+       ],
+       "id": "col:학생 목록 그리드/성명"
+      }
+     ],
+     "id": "grid:학생 목록 그리드"
+    },
+    {
+     "aria": "수정이력 목록",
+     "box": [
+      434,
+      228,
+      1181,
+      270
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수정이력 목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        435,
+        229,
+        50,
+        36
+       ],
+       "id": "col:수정이력 목록/순번"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        485,
+        229,
+        941,
+        36
+       ],
+       "id": "col:수정이력 목록/항목"
+      },
+      {
+       "label": "건수",
+       "depth": 0,
+       "box": [
+        1426,
+        229,
+        188,
+        36
+       ],
+       "id": "col:수정이력 목록/건수"
+      }
+     ],
+     "id": "grid:수정이력 목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1407,
+      513,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      513,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "수정이력비교",
+     "variant": "primary",
+     "id": "button:수정이력비교"
+    },
+    {
+     "aria": "인적사항 수정이력 그리드",
+     "box": [
+      434,
+      553,
+      1181,
+      260
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "인적사항 수정이력 그리드",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        485,
+        554,
+        50,
+        36
+       ],
+       "id": "col:인적사항 수정이력 그리드/순번"
+      },
+      {
+       "label": "수정구분",
+       "depth": 0,
+       "box": [
+        535,
+        554,
+        100,
+        36
+       ],
+       "id": "col:인적사항 수정이력 그리드/수정구분"
+      },
+      {
+       "label": "수정일시",
+       "depth": 0,
+       "box": [
+        635,
+        554,
+        170,
+        36
+       ],
+       "id": "col:인적사항 수정이력 그리드/수정일시"
+      },
+      {
+       "label": "수정자",
+       "depth": 0,
+       "box": [
+        805,
+        554,
+        100,
+        36
+       ],
+       "id": "col:인적사항 수정이력 그리드/수정자"
+      },
+      {
+       "label": "학생주소",
+       "depth": 0,
+       "box": [
+        905,
+        554,
+        405,
+        36
+       ],
+       "id": "col:인적사항 수정이력 그리드/학생주소"
+      },
+      {
+       "label": "학적특기사항내용",
+       "depth": 0,
+       "box": [
+        1310,
+        554,
+        304,
+        36
+       ],
+       "id": "col:인적사항 수정이력 그리드/학적특기사항내용"
+      }
+     ],
+     "id": "grid:인적사항 수정이력 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:사용자별조회",
+   "tab": "사용자별조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생별조회",
+      "사용자별조회",
+      "항목별조회"
+     ],
+     "active": "사용자별조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      550,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": null,
+     "box": [
+      810,
+      137,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:사용자명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1503,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "학생 목록 그리드",
+     "box": [
+      25,
+      238,
+      394,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생 목록 그리드",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        239,
+        78,
+        36
+       ],
+       "id": "col:학생 목록 그리드/순번"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        104,
+        239,
+        157,
+        36
+       ],
+       "id": "col:학생 목록 그리드/성명"
+      },
+      {
+       "label": "사용자ID",
+       "depth": 0,
+       "box": [
+        261,
+        239,
+        157,
+        36
+       ],
+       "id": "col:학생 목록 그리드/사용자ID"
+      }
+     ],
+     "id": "grid:학생 목록 그리드"
+    },
+    {
+     "aria": "학생부 수정이력 목록 그리드",
+     "box": [
+      434,
+      238,
+      1181,
+      575
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생부 수정이력 목록 그리드",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        435,
+        239,
+        50,
+        36
+       ],
+       "id": "col:학생부 수정이력 목록 그리드/순번"
+      },
+      {
+       "label": "항목",
+       "depth": 0,
+       "box": [
+        485,
+        239,
+        353,
+        36
+       ],
+       "id": "col:학생부 수정이력 목록 그리드/항목"
+      },
+      {
+       "label": "건수",
+       "depth": 0,
+       "box": [
+        838,
+        239,
+        176,
+        36
+       ],
+       "id": "col:학생부 수정이력 목록 그리드/건수"
+      },
+      {
+       "label": "최초등록일시",
+       "depth": 0,
+       "box": [
+        1014,
+        239,
+        300,
+        36
+       ],
+       "id": "col:학생부 수정이력 목록 그리드/최초등록일시"
+      },
+      {
+       "label": "최종수정일시",
+       "depth": 0,
+       "box": [
+        1314,
+        239,
+        300,
+        36
+       ],
+       "id": "col:학생부 수정이력 목록 그리드/최종수정일시"
+      }
+     ],
+     "id": "grid:학생부 수정이력 목록 그리드"
+    }
+   ]
+  },
+  {
+   "id": "tab:항목별조회",
+   "tab": "항목별조회",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      71,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "학생별조회",
+      "사용자별조회",
+      "항목별조회"
+     ],
+     "active": "항목별조회",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      137,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": null,
+     "box": [
+      550,
+      137,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간~"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      137,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "엑셀내려받기",
+     "box": [
+      1503,
+      198,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "엑셀내려받기",
+     "variant": "plain",
+     "id": "button:엑셀내려받기"
+    },
+    {
+     "aria": "학생부 수정이력 항목별 조회 그리드",
+     "box": [
+      25,
+      248,
+      1590,
+      565
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생부 수정이력 항목별 조회 그리드",
+     "selectable": false,
+     "declaredColumns": 19,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        249,
+        50,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/순번"
+      },
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        76,
+        249,
+        50,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/과정"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        126,
+        249,
+        150,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/계열/학년/학과"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        276,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        376,
+        249,
+        80,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/반"
+      },
+      {
+       "label": "인적사항",
+       "depth": 0,
+       "box": [
+        456,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/인적사항"
+      },
+      {
+       "label": "출결상황",
+       "depth": 0,
+       "box": [
+        556,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/출결상황"
+      },
+      {
+       "label": "진로희망사항",
+       "depth": 0,
+       "box": [
+        656,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/진로희망사항"
+      },
+      {
+       "label": "봉사활동실적",
+       "depth": 0,
+       "box": [
+        756,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/봉사활동실적"
+      },
+      {
+       "label": "과목별세부능력 및특기사항",
+       "depth": 0,
+       "box": [
+        856,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/과목별세부능력 및특기사항"
+      },
+      {
+       "label": "개인별세부능력 및특기사항",
+       "depth": 0,
+       "box": [
+        956,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/개인별세부능력 및특기사항"
+      },
+      {
+       "label": "독서활동상황",
+       "depth": 0,
+       "box": [
+        1056,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/독서활동상황"
+      },
+      {
+       "label": "행동특성및 종합의견",
+       "depth": 0,
+       "box": [
+        1156,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/행동특성및 종합의견"
+      },
+      {
+       "label": "국가직무표준능력 이수상황",
+       "depth": 0,
+       "box": [
+        1256,
+        249,
+        100,
+        62
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/국가직무표준능력 이수상황"
+      },
+      {
+       "label": "창의적체험활동",
+       "depth": 0,
+       "box": [
+        1356,
+        249,
+        400,
+        31
+       ],
+       "span": 4,
+       "id": "col:학생부 수정이력 항목별 조회 그리드/창의적체험활동"
+      },
+      {
+       "label": "자율활동",
+       "depth": 1,
+       "box": [
+        1356,
+        280,
+        100,
+        31
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/창의적체험활동>자율활동"
+      },
+      {
+       "label": "동아리활동",
+       "depth": 1,
+       "box": [
+        1456,
+        280,
+        100,
+        31
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/창의적체험활동>동아리활동"
+      },
+      {
+       "label": "봉사활동",
+       "depth": 1,
+       "box": [
+        1556,
+        280,
+        100,
+        31
+       ],
+       "id": "col:학생부 수정이력 항목별 조회 그리드/창의적체험활동>봉사활동"
+      }
+     ],
+     "id": "grid:학생부 수정이력 항목별 조회 그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학교정보 > 성적/학생부수정이력 > 학생부수정이력조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

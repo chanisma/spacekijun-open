@@ -1,0 +1,242 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›개별화교육계획›전입생개별화교육추가›전입생개별화교육추가조회및승인",
+ "name": "전입생개별화교육추가조회및승인",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:43:16+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "결재상태",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:결재상태"
+    },
+    {
+     "aria": "입력구분",
+     "box": [
+      175,
+      122,
+      305,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "입력구분",
+     "options": [
+      "교과영역",
+      "생활지원영역",
+      "기능중심영역"
+     ],
+     "id": "radio:입력구분"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "전입생 개별화교육 추가 테이블",
+     "box": [
+      25,
+      243,
+      1590,
+      570
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전입생 개별화교육 추가 테이블",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        26,
+        244,
+        192,
+        36
+       ],
+       "id": "col:전입생 개별화교육 추가 테이블/학년도"
+      },
+      {
+       "label": "학기",
+       "depth": 0,
+       "box": [
+        218,
+        244,
+        120,
+        36
+       ],
+       "id": "col:전입생 개별화교육 추가 테이블/학기"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        339,
+        244,
+        120,
+        36
+       ],
+       "id": "col:전입생 개별화교육 추가 테이블/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        459,
+        244,
+        144,
+        36
+       ],
+       "id": "col:전입생 개별화교육 추가 테이블/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        603,
+        244,
+        120,
+        36
+       ],
+       "id": "col:전입생 개별화교육 추가 테이블/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        724,
+        244,
+        241,
+        36
+       ],
+       "id": "col:전입생 개별화교육 추가 테이블/성명"
+      },
+      {
+       "label": "과목",
+       "depth": 0,
+       "box": [
+        964,
+        244,
+        361,
+        36
+       ],
+       "id": "col:전입생 개별화교육 추가 테이블/과목"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        1325,
+        244,
+        289,
+        36
+       ],
+       "id": "col:전입생 개별화교육 추가 테이블/구분"
+      }
+     ],
+     "id": "grid:전입생 개별화교육 추가 테이블"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 개별화교육계획 > 전입생개별화교육추가 > 전입생개별화교육추가조회및승인",
+ "viewport": [
+  1920,
+  945
+ ]
+}

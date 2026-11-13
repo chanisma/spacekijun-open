@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-13",
+  "generator": "built-in imagegen",
+  "assets": [
+    {
+      "file": "prologue-school.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-6df9015f-c72d-4644-a303-9c8c1d8fac64.png",
+      "key": "prologue-school",
+      "refs": [
+        "D:/spacekijun/public/images/academy-game/ria-player.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished landscape 1536x1024 visual novel prologue CG. Reference image defines heroine Ria's face, long wavy brown hair and violet eyes ONLY; change her outfit to a modest modern Korean high-school uniform, white blouse, charcoal cardigan/blazer, purple ribbon tie, dark skirt. She sits alone at a classroom desk after school in modern-day Korea, looking thoughtfully and a little worried at an open career-planning notebook with blank lines, pencil hesitating over a blank future-dream field. No legible text. Quiet empty school desks, schoolbag, late afternoon rain-cleared window, soft gold sunlight, ordinary modern classroom. She is unsure about her future, not despairing. Three-quarter medium shot, her face and notebook central; detailed painterly Korean romance fantasy visual novel art style matching reference, wistful gentle mood, muted slate and warm violet colors. Full opaque background, no additional characters, no fantasy costume, no text, no UI, no watermark."
+    },
+    {
+      "file": "prologue-door.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-e567dfaa-9f3f-4328-a1cd-b7bb0dc5898f.png",
+      "key": "prologue-door",
+      "refs": [
+        "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-6df9015f-c72d-4644-a303-9c8c1d8fac64.png",
+        "D:/spacekijun/public/images/academy-game/plaza.png"
+      ],
+      "prompt": "Use case: illustration-story. ONE finished landscape 1536x1024 visual novel CG. First reference establishes Ria's modern school uniform and exact identity; second establishes the fantasy world beyond the doorway. Ria with long wavy brown hair, violet ribbon and modest charcoal school cardigan/white blouse/purple tie is in an ordinary quiet Korean school corridor after school. She has discovered an impossible antique ivory-and-gold door between ordinary classroom walls. Show her from three-quarter rear at left center, one hand actively pushing this door OPEN, head turning with astonishment. THROUGH the open door at center-right is a luminous glimpse of a romance-fantasy academy courtyard with violet evening sky, golden stone and rose vines, not the classroom that should be there. Golden dust drifts across threshold, classroom corridor remains mundane slate tile and window light. A tiny gold star-shaped keyhole with no writing. Door/heroine visible together in central composition, detailed painterly rofan visual novel style, wonder and invitation, not horror. She is alone here because the guide awaits beyond the doorway. Full opaque scene, no textual labels, no UI, no watermarks."
+    },
+    {
+      "file": "prologue-arrival.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-3c02c41c-75ec-492b-9f4d-cf10bddc3c54.png",
+      "key": "prologue-arrival",
+      "refs": [
+        "prologue-arrival.png (previous version)",
+        "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-97edadac-6b5e-46f6-bf09-2fa4eb9ee33b.png"
+      ],
+      "prompt": "Edit the FIRST image (the prologue academy arrival scene). Change ONLY the male guide Luon's identity and costume to match the SILVER-HAIRED man in the SECOND reference: silver-white wavy layered center-parted hair, pale BLUE eyes, refined gentle face, navy and gold high collar coat, ivory trousers. Use SECOND reference as the canonical Luon face and clothing model. Keep him in exactly the existing pose welcoming Ria with one hand extended, tall beside the smaller heroine. Ria's face, brown hair, violet eyes, purple dress, pose, notebook, all background architecture, flowers, lighting, composition and canvas1536x1024 must remain the same. No brown hair or purple eyes on the man. Preserve detailed romantic fantasy painterly manhwa art. Finished opaque illustration, no transparency no checkerboard no labels no text.",
+      "previous_source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-710655f8-26b7-4079-ae69-dc1893eeae6b.png",
+      "status": "ready"
+    },
+    {
+      "file": "prologue-threshold.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-1747c2ab-81ed-448d-8ed3-7a7aed0bb23e.png",
+      "key": "prologue-threshold",
+      "refs": [
+        "D:/spacekijun/public/images/academy-game/prologue-door.png",
+        "D:/spacekijun/public/images/academy-game/prologue-arrival.png"
+      ],
+      "prompt": "Create one landscape 1536x1024 Korean romance fantasy visual novel CG, matching referenced character identity and painterly art exactly. Ria alone steps across the magical threshold FROM modern school INTO academy, a magical swirl of gold star motes around her modest clothing changing into the purple gold long dress of second reference. Long wavy brown hair violet eyes purple ribbon. No nudity or exposed transformation: dress already complete, a trace of dark school cardigan dissolving into gold at sleeve edge. She looks in surprised wonder at a small blank travel notebook in her hands. Three quarter full body side view centered, one foot on academy stone, ordinary dim school corridor glimpsed through ivory golden open door behind at left, violet evening academy towers at right. Ria actively walking through doorway, no other characters because she has not met guide yet. Hopeful gentle wonder, warm gold and violet, hands anatomically natural, face sharp and consistent. Keep head in top half and hands middle for dialogue at bottom. Full opaque scene no labels no words no UI no watermarks."
+    },
+    {
+      "file": "prologue-notebook.png",
+      "source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-60d60a12-5a19-4c24-9f72-7928d2b2abc7.png",
+      "key": "prologue-notebook",
+      "refs": [
+        "prologue-notebook.png (previous version)",
+        "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-97edadac-6b5e-46f6-bf09-2fa4eb9ee33b.png"
+      ],
+      "prompt": "Edit the FIRST image (Ria writing in the prologue). Correct ONLY Luon, the taller male beside her holding a gold star lantern. Replace his brown hair/purple eyes/wrong face with the exact SILVER-WHITE wavy layered hair, pale BLUE eyes and refined gentle face of the male in SECOND reference. Match second reference navy antique-gold high collar academy coat and cream trousers. Preserve his lantern-holding pose helping Ria, the heroine actively writing with quill, heroine face/body/hair/dress entirely unchanged, composition, sunset, architecture, stone balustrade and book, exact 1536x1024 canvas. His hair MUST be silver white, eyes BLUE. Finished opaque romantic fantasy manhwa painterly illustration. No text, no new objects, no watermark.",
+      "previous_source": "C:\\Users\\chani\\AppData\\Roaming\\orca\\codex-accounts\\ad2941ea-e520-477a-b2c6-38d3c48f3056\\home\\generated_images\\01a09634-0dc7-7f60-8c55-181340b887fd\\exec-a413868b-dc33-48c8-8106-005f2a05d48e.png",
+      "status": "ready"
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교환경›석면관리#학교›석면조사결과등록›석면조사기관현황관리",
+ "name": "석면조사기관현황관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:32:12+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기관명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:기관명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1344,
+      133,
+      115,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "자료 내려받기",
+     "variant": "plain",
+     "id": "button:자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1467,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      438
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "사업자명",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        170,
+        36
+       ],
+       "id": "col:그리드/사업자명"
+      },
+      {
+       "label": "대표이사",
+       "depth": 0,
+       "box": [
+        296,
+        174,
+        170,
+        36
+       ],
+       "id": "col:그리드/대표이사"
+      },
+      {
+       "label": "사업자등록번호",
+       "depth": 0,
+       "box": [
+        466,
+        174,
+        170,
+        36
+       ],
+       "id": "col:그리드/사업자등록번호"
+      },
+      {
+       "label": "조사일자",
+       "depth": 0,
+       "box": [
+        636,
+        174,
+        170,
+        36
+       ],
+       "id": "col:그리드/조사일자"
+      },
+      {
+       "label": "연락처",
+       "depth": 0,
+       "box": [
+        806,
+        174,
+        170,
+        36
+       ],
+       "id": "col:그리드/연락처"
+      },
+      {
+       "label": "주소",
+       "depth": 0,
+       "box": [
+        976,
+        174,
+        638,
+        36
+       ],
+       "id": "col:그리드/주소"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      627,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "사업자명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:사업자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      627,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "대표자",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:대표자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      627,
+      400,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "사업자등록번호",
+     "control": "mask",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:사업자등록번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      667,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "조사일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:조사일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      667,
+      220,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "연락처",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:연락처"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      707,
+      832,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:주소"
+    },
+    {
+     "aria": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "box": [
+      988,
+      707,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "variant": "link",
+     "id": "button:우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다."
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교환경}석면관리 > 석면조사결과등록 > 석면조사기관현황관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

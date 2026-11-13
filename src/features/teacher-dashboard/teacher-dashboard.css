@@ -1,0 +1,112 @@
+.teacher-dashboard-v2 {
+  --teacher-ink: #172033;
+  --teacher-muted: #6b7280;
+  --teacher-line: #e7eaf0;
+  --teacher-surface: rgba(255, 255, 255, 0.96);
+}
+
+.teacher-dashboard-surface {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--teacher-line);
+  border-radius: 1.5rem;
+  background: var(--teacher-surface);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.03),
+    0 18px 48px -36px rgba(15, 23, 42, 0.38);
+}
+
+.teacher-dashboard-briefing {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(14, 165, 233, 0.1), transparent 30%),
+    linear-gradient(135deg, #ffffff 0%, #fbfdff 52%, #f8fbff 100%);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.03),
+    0 18px 48px -36px rgba(15, 23, 42, 0.38);
+}
+
+.teacher-dashboard-briefing::after {
+  position: absolute;
+  top: -6rem;
+  right: -4rem;
+  z-index: 0;
+  width: 18rem;
+  height: 18rem;
+  content: '';
+  pointer-events: none;
+  border: 1px solid rgba(14, 165, 233, 0.09);
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 2.5rem rgba(14, 165, 233, 0.025),
+    0 0 0 5rem rgba(14, 165, 233, 0.018);
+}
+
+.teacher-dashboard-metric {
+  box-shadow: 0 8px 24px -22px rgba(15, 23, 42, 0.45);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.teacher-dashboard-metric:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 30px -22px rgba(15, 23, 42, 0.42);
+}
+
+.teacher-dashboard-row {
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.teacher-dashboard-row:hover {
+  background-color: #f8fafc;
+}
+
+.teacher-dashboard-roster-scroll {
+  scrollbar-color: #cbd5e1 transparent;
+  scrollbar-width: thin;
+}
+
+.teacher-dashboard-roster-scroll::-webkit-scrollbar,
+.teacher-dashboard-filter-scroll::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+.teacher-dashboard-roster-scroll::-webkit-scrollbar-thumb,
+.teacher-dashboard-filter-scroll::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #cbd5e1;
+}
+
+.teacher-dashboard-roster-scroll::-webkit-scrollbar-track,
+.teacher-dashboard-filter-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (max-width: 639px) {
+  .teacher-dashboard-briefing {
+    border-radius: 1.125rem;
+  }
+
+  .teacher-dashboard-briefing::after {
+    top: -5rem;
+    right: -5rem;
+    width: 12rem;
+    height: 12rem;
+    opacity: 0.7;
+  }
+
+  .teacher-dashboard-metric {
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .teacher-dashboard-row,
+  .teacher-dashboard-metric {
+    transition: none;
+  }
+}

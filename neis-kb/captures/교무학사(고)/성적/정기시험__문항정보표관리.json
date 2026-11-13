@@ -1,0 +1,1052 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›정기시험›문항정보표관리",
+ "name": "문항정보표관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:53:20+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:선택형(진위형, 배합형, 선다형)",
+   "tab": "선택형(진위형, 배합형, 선다형)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 고사 시행 종료까지 문항정보표의 작성/열람/수정/출력은 사용자 권한을 갖고 있는 교과별 한 선생님만 가능합니다. ※ 채점을 하지 않는 서답형 100% 과목에 대해서는 과목점수 저장 또는 서답형 정답/배점 입력도 불필요합니다.",
+     "id": "note:※ 고사 시행 종료까지 문항정보표의 작성/열람/수정/출력은 사용자 권한을 갖고 있는 교과별 한 선생님만 가능합니다. ※ 채점을 하지 않는 서답형 100% 과목에 대해서는 과목점수 저장 또는 서답형 정답/배점 입력도 불필요합니다."
+    },
+    {
+     "aria": "과목점수저장",
+     "box": [
+      1252,
+      205,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "과목점수저장",
+     "variant": "primary",
+     "id": "button:과목점수저장"
+    },
+    {
+     "aria": "타학과복사",
+     "box": [
+      1348,
+      205,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "타학과복사",
+     "variant": "primary",
+     "id": "button:타학과복사"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1431,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "정답배점출력",
+     "box": [
+      1479,
+      205,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "정답배점출력",
+     "variant": "primary",
+     "id": "button:정답배점출력"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      285,
+      251,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "선택형 만점/배점합",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:선택형 만점/배점합"
+    },
+    {
+     "aria": null,
+     "box": [
+      651,
+      251,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "서답형 만점/배점합",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:서답형 만점/배점합"
+    },
+    {
+     "aria": null,
+     "box": [
+      1018,
+      251,
+      39,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "과목만점",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:과목만점"
+    },
+    {
+     "aria": null,
+     "box": [
+      1262,
+      251,
+      104,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "기타점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:기타점수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1506,
+      251,
+      104,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "기타2점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:기타2점수"
+    },
+    {
+     "aria": "복수구분 안내",
+     "box": [
+      1212,
+      295,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "[복수구분 안내]",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:[복수구분 안내]"
+    },
+    {
+     "aria": "배점일괄입력",
+     "box": [
+      1340,
+      295,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "배점일괄입력",
+     "variant": "primary",
+     "id": "button:배점일괄입력"
+    },
+    {
+     "aria": "행 값 지우기",
+     "box": [
+      1436,
+      295,
+      83,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행 값 지우기",
+     "variant": "secondary",
+     "id": "button:행 값 지우기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      295,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "마감",
+     "box": [
+      1575,
+      295,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감",
+     "variant": "secondary",
+     "id": "button:마감"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      325,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "선택형(진위형, 배합형, 선다형)",
+      "서답형(완성형, 단답형, 서술형, 논술형)"
+     ],
+     "active": "선택형(진위형, 배합형, 선다형)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "선택형 문항정보표",
+     "box": [
+      25,
+      360,
+      1590,
+      453
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "선택형 문항정보표",
+     "selectable": true,
+     "declaredColumns": 11,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        76,
+        361,
+        73,
+        62
+       ],
+       "id": "col:선택형 문항정보표/문항"
+      },
+      {
+       "label": "내용영역",
+       "depth": 0,
+       "box": [
+        149,
+        361,
+        294,
+        62
+       ],
+       "id": "col:선택형 문항정보표/내용영역"
+      },
+      {
+       "label": "성취기준",
+       "depth": 0,
+       "box": [
+        443,
+        361,
+        245,
+        62
+       ],
+       "id": "col:선택형 문항정보표/성취기준"
+      },
+      {
+       "label": "난이도",
+       "depth": 0,
+       "box": [
+        689,
+        361,
+        264,
+        31
+       ],
+       "span": 3,
+       "id": "col:선택형 문항정보표/난이도"
+      },
+      {
+       "label": "배점",
+       "depth": 0,
+       "box": [
+        953,
+        361,
+        147,
+        62
+       ],
+       "id": "col:선택형 문항정보표/배점"
+      },
+      {
+       "label": "정답",
+       "depth": 0,
+       "box": [
+        1100,
+        361,
+        367,
+        62
+       ],
+       "span": 5,
+       "id": "col:선택형 문항정보표/정답"
+      },
+      {
+       "label": "복수 구분",
+       "depth": 0,
+       "box": [
+        1467,
+        361,
+        147,
+        62
+       ],
+       "id": "col:선택형 문항정보표/복수 구분"
+      },
+      {
+       "label": "어려움",
+       "depth": 1,
+       "box": [
+        689,
+        392,
+        88,
+        31
+       ],
+       "id": "col:선택형 문항정보표/난이도>어려움"
+      },
+      {
+       "label": "보통",
+       "depth": 1,
+       "box": [
+        777,
+        392,
+        88,
+        31
+       ],
+       "id": "col:선택형 문항정보표/난이도>보통"
+      },
+      {
+       "label": "쉬움",
+       "depth": 1,
+       "box": [
+        865,
+        392,
+        88,
+        31
+       ],
+       "id": "col:선택형 문항정보표/난이도>쉬움"
+      }
+     ],
+     "id": "grid:선택형 문항정보표"
+    }
+   ]
+  },
+  {
+   "id": "tab:서답형(완성형, 단답형, 서술형, 논술형)",
+   "tab": "서답형(완성형, 단답형, 서술형, 논술형)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "고사",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:고사"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      37
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 고사 시행 종료까지 문항정보표의 작성/열람/수정/출력은 사용자 권한을 갖고 있는 교과별 한 선생님만 가능합니다. ※ 채점을 하지 않는 서답형 100% 과목에 대해서는 과목점수 저장 또는 서답형 정답/배점 입력도 불필요합니다.",
+     "id": "note:※ 고사 시행 종료까지 문항정보표의 작성/열람/수정/출력은 사용자 권한을 갖고 있는 교과별 한 선생님만 가능합니다. ※ 채점을 하지 않는 서답형 100% 과목에 대해서는 과목점수 저장 또는 서답형 정답/배점 입력도 불필요합니다."
+    },
+    {
+     "aria": "과목점수저장",
+     "box": [
+      1252,
+      205,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "과목점수저장",
+     "variant": "primary",
+     "id": "button:과목점수저장"
+    },
+    {
+     "aria": "타학과복사",
+     "box": [
+      1348,
+      205,
+      76,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "타학과복사",
+     "variant": "primary",
+     "id": "button:타학과복사"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1431,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "정답배점출력",
+     "box": [
+      1479,
+      205,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "정답배점출력",
+     "variant": "primary",
+     "id": "button:정답배점출력"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      205,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "link",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      285,
+      251,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "선택형 만점/배점합",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:선택형 만점/배점합"
+    },
+    {
+     "aria": null,
+     "box": [
+      651,
+      251,
+      100,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "서답형 만점/배점합",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:서답형 만점/배점합"
+    },
+    {
+     "aria": null,
+     "box": [
+      1018,
+      251,
+      39,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "과목만점",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:과목만점"
+    },
+    {
+     "aria": null,
+     "box": [
+      1262,
+      251,
+      104,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "기타점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:기타점수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1506,
+      251,
+      104,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "기타2점수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:기타2점수"
+    },
+    {
+     "aria": "복수구분 안내",
+     "box": [
+      1212,
+      295,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "[복수구분 안내]",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:[복수구분 안내]"
+    },
+    {
+     "aria": "배점일괄입력",
+     "box": [
+      1340,
+      295,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "배점일괄입력",
+     "variant": "primary",
+     "id": "button:배점일괄입력"
+    },
+    {
+     "aria": "행 값 지우기",
+     "box": [
+      1436,
+      295,
+      83,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "행 값 지우기",
+     "variant": "secondary",
+     "id": "button:행 값 지우기"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      295,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "마감",
+     "box": [
+      1575,
+      295,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "마감",
+     "variant": "secondary",
+     "id": "button:마감"
+    },
+    {
+     "aria": "2개의 탭이 있습니다.",
+     "box": [
+      25,
+      325,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "선택형(진위형, 배합형, 선다형)",
+      "서답형(완성형, 단답형, 서술형, 논술형)"
+     ],
+     "active": "서답형(완성형, 단답형, 서술형, 논술형)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "서답형 문항정보표",
+     "box": [
+      25,
+      360,
+      1590,
+      411
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "서답형 문항정보표",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "문항",
+       "depth": 0,
+       "box": [
+        76,
+        361,
+        78,
+        62
+       ],
+       "id": "col:서답형 문항정보표/문항"
+      },
+      {
+       "label": "내용영역",
+       "depth": 0,
+       "box": [
+        154,
+        361,
+        471,
+        62
+       ],
+       "id": "col:서답형 문항정보표/내용영역"
+      },
+      {
+       "label": "성취기준",
+       "depth": 0,
+       "box": [
+        625,
+        361,
+        157,
+        62
+       ],
+       "id": "col:서답형 문항정보표/성취기준"
+      },
+      {
+       "label": "난이도",
+       "depth": 0,
+       "box": [
+        782,
+        361,
+        282,
+        31
+       ],
+       "span": 3,
+       "id": "col:서답형 문항정보표/난이도"
+      },
+      {
+       "label": "배점",
+       "depth": 0,
+       "box": [
+        1065,
+        361,
+        157,
+        62
+       ],
+       "id": "col:서답형 문항정보표/배점"
+      },
+      {
+       "label": "정답",
+       "depth": 0,
+       "box": [
+        1222,
+        361,
+        392,
+        62
+       ],
+       "id": "col:서답형 문항정보표/정답"
+      },
+      {
+       "label": "어려움",
+       "depth": 1,
+       "box": [
+        782,
+        392,
+        94,
+        31
+       ],
+       "id": "col:서답형 문항정보표/난이도>어려움"
+      },
+      {
+       "label": "보통",
+       "depth": 1,
+       "box": [
+        876,
+        392,
+        94,
+        31
+       ],
+       "id": "col:서답형 문항정보표/난이도>보통"
+      },
+      {
+       "label": "쉬움",
+       "depth": 1,
+       "box": [
+        971,
+        392,
+        94,
+        31
+       ],
+       "id": "col:서답형 문항정보표/난이도>쉬움"
+      }
+     ],
+     "id": "grid:서답형 문항정보표"
+    },
+    {
+     "aria": null,
+     "box": [
+      930,
+      777,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": "파일내려받기",
+     "box": [
+      990,
+      777,
+      112,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "파일내려받기",
+     "variant": "secondary",
+     "id": "button:파일내려받기"
+    },
+    {
+     "aria": "첨부파일삭제",
+     "box": [
+      1112,
+      777,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "첨부파일삭제",
+     "variant": "secondary",
+     "id": "button:첨부파일삭제"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 정기시험 > 문항정보표관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

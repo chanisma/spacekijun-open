@@ -1,0 +1,105 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교육설문›학생정서행동특성검사#학교›기본사항관리›온라인검사기간조회",
+ "name": "온라인검사기간조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T05:52:42+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "검사연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:검사연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "온라인 검사 기간 조회목록",
+     "box": [
+      25,
+      163,
+      1590,
+      650
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "온라인 검사 기간 조회목록",
+     "selectable": false,
+     "declaredColumns": 3,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        26,
+        164,
+        334,
+        36
+       ],
+       "id": "col:온라인 검사 기간 조회목록/구분"
+      },
+      {
+       "label": "시작일자",
+       "depth": 0,
+       "box": [
+        360,
+        164,
+        627,
+        36
+       ],
+       "id": "col:온라인 검사 기간 조회목록/시작일자"
+      },
+      {
+       "label": "종료일자",
+       "depth": 0,
+       "box": [
+        987,
+        164,
+        627,
+        36
+       ],
+       "id": "col:온라인 검사 기간 조회목록/종료일자"
+      }
+     ],
+     "id": "grid:온라인 검사 기간 조회목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생정서행동특성검사 > 기본사항관리 > 온라인검사기간조회",
+ "viewport": [
+  1920,
+  945
+ ]
+}

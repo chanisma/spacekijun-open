@@ -1,0 +1,291 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›졸업/수료관리›졸업/수료대장 번호 부여",
+ "name": "졸업/수료대장 번호 부여",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:03:26+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      25,
+      71,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 졸업대장 시작번호 부여방법중 학적편제순(학과포함)은 계열-학년-학과-반-번호 순서로 채번됩니다. 학적편제순(학과미포함)은 계열-학년-반-번호의 순서로 채번됩니다. 반코드순은 반-번호의 순서로 채번됩니다.",
+     "id": "note:※ 졸업대장 시작번호 부여방법중 학적편제순(학과포함)은 계열-학년-학과-반-번호 순서로 채번됩니다. 학적편제순(학과미포함)은 계열-학년-반-번호의 순서로 채번됩니다. 반코드순은 반-번호의 순서로 채번됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      127,
+      1590,
+      74
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 졸업대장 시작번호는 숫자만으로 이루어진 자료와 ####-#####의 형식만으로 부여할 수 있습니다. 숫자만으로 이루어진 자료는 하이픈(-) 뒤에 위치한 입력창에 대장번호를 입력해 주시기 바랍니다. 예) 2010-10001, 10987 최대부여가능 자릿수는 16자리까지입니다.",
+     "id": "note:※ 졸업대장 시작번호는 숫자만으로 이루어진 자료와 ####-#####의 형식만으로 부여할 수 있습니다. 숫자만으로 이루어진 자료는 하이픈(-) 뒤에 위치한 입력창에 대장번호를 입력해 주시기 바랍니다. 예) 2010-10001, 10987 최대부여가능 자릿수는 16자리까지입니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      201,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 졸업대장번호수정파일올리기는 엑셀다운로드로 받은 자료에 졸업/수료대장번호를 입력하고 엑셀업로드를 수행하여 주십시오.",
+     "id": "note:※ 졸업대장번호수정파일올리기는 엑셀다운로드로 받은 자료에 졸업/수료대장번호를 입력하고 엑셀업로드를 수행하여 주십시오."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      254,
+      172,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "졸업/수료대장번호 부여",
+     "id": "heading:졸업/수료대장번호 부여"
+    },
+    {
+     "aria": null,
+     "box": [
+      160,
+      290,
+      100,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업학년도",
+     "control": "input",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:졸업학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      160,
+      330,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업회차",
+     "control": "number",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:졸업회차"
+    },
+    {
+     "aria": null,
+     "box": [
+      246,
+      330,
+      569,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "대장번호형식변경",
+     "checked": false,
+     "id": "check:대장번호형식변경"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      330,
+      58,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업대장시작번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:졸업대장시작번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1028,
+      330,
+      87,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업대장시작번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:졸업대장시작번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1121,
+      330,
+      489,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "조기졸업대장번호구분",
+     "checked": false,
+     "id": "check:조기졸업대장번호구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      160,
+      370,
+      58,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수료대장시작번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:수료대장시작번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      233,
+      370,
+      87,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "수료대장시작번호",
+     "control": "input",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:수료대장시작번호#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      955,
+      370,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "졸업일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:졸업일자"
+    },
+    {
+     "aria": "졸업대장번호부여",
+     "box": [
+      160,
+      410,
+      589,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "졸업대장번호부여",
+     "options": [
+      "성명순",
+      "주민번호순",
+      "학적편제순(학과포함)",
+      "학적편제순(학과미포함)",
+      "반코드순"
+     ],
+     "id": "radio:졸업대장번호부여"
+    },
+    {
+     "aria": null,
+     "box": [
+      765,
+      410,
+      73,
+      30
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "남녀구분",
+     "checked": false,
+     "id": "check:남녀구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      30,
+      450,
+      1580,
+      30
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 졸업대상자가 존재하지 않습니다.",
+     "id": "note:※ 졸업대상자가 존재하지 않습니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      496,
+      209,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "졸업대장번호수정파일올리기",
+     "id": "heading:졸업대장번호수정파일올리기"
+    },
+    {
+     "aria": "엑셀업로드",
+     "box": [
+      1364,
+      532,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "엑셀업로드",
+     "variant": "secondary",
+     "id": "button:엑셀업로드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 졸업/수료관리 > 졸업/수료대장 번호 부여",
+ "viewport": [
+  1920,
+  945
+ ]
+}

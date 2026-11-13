@@ -1,0 +1,491 @@
+{
+ "schema": "neis-capture/1",
+ "key": "업무승인관리›업무승인›결재경로관리›전결자지정",
+ "name": "전결자지정",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:53:37+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      135,
+      82,
+      150,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "권한조직",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:권한조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "사용자명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:사용자명"
+    },
+    {
+     "aria": null,
+     "box": [
+      631,
+      82,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "찾기",
+     "variant": "link",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      544,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "조직추가",
+     "variant": "primary",
+     "id": "button:조직추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1276,
+      133,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "plain",
+     "id": "button:행추가"
+    },
+    {
+     "aria": null,
+     "box": [
+      1336,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "위임이력조회",
+     "variant": "primary",
+     "id": "button:위임이력조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1431,
+      133,
+      88,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전결이력조회",
+     "variant": "primary",
+     "id": "button:전결이력조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "조직목록",
+     "box": [
+      25,
+      143,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "조직목록",
+     "id": "heading:조직목록"
+    },
+    {
+     "aria": "전결문서목록",
+     "box": [
+      623,
+      143,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "전결문서목록",
+     "id": "heading:전결문서목록"
+    },
+    {
+     "aria": "조직목록",
+     "box": [
+      25,
+      173,
+      583,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "조직목록",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        26,
+        174,
+        40,
+        36
+       ],
+       "id": "col:조직목록/순번"
+      },
+      {
+       "label": "조직구분",
+       "depth": 0,
+       "box": [
+        66,
+        174,
+        74,
+        36
+       ],
+       "id": "col:조직목록/조직구분"
+      },
+      {
+       "label": "조직코드",
+       "depth": 0,
+       "box": [
+        140,
+        174,
+        106,
+        36
+       ],
+       "id": "col:조직목록/조직코드"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        246,
+        174,
+        212,
+        36
+       ],
+       "id": "col:조직목록/조직명"
+      },
+      {
+       "label": "만료건수",
+       "depth": 0,
+       "box": [
+        458,
+        174,
+        74,
+        36
+       ],
+       "id": "col:조직목록/만료건수"
+      },
+      {
+       "label": "전체건수",
+       "depth": 0,
+       "box": [
+        533,
+        174,
+        74,
+        36
+       ],
+       "id": "col:조직목록/전체건수"
+      }
+     ],
+     "id": "grid:조직목록"
+    },
+    {
+     "aria": "전결문서목록",
+     "box": [
+      623,
+      173,
+      992,
+      518
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "전결문서목록",
+     "selectable": true,
+     "declaredColumns": 9,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        664,
+        174,
+        40,
+        36
+       ],
+       "id": "col:전결문서목록/순번"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        704,
+        174,
+        50,
+        36
+       ],
+       "id": "col:전결문서목록/상태"
+      },
+      {
+       "label": "업무영역",
+       "depth": 0,
+       "box": [
+        754,
+        174,
+        100,
+        36
+       ],
+       "id": "col:전결문서목록/업무영역"
+      },
+      {
+       "label": "학교과정구분",
+       "depth": 0,
+       "box": [
+        854,
+        174,
+        98,
+        36
+       ],
+       "id": "col:전결문서목록/학교과정구분"
+      },
+      {
+       "label": "결재문서번호",
+       "depth": 0,
+       "box": [
+        952,
+        174,
+        98,
+        36
+       ],
+       "id": "col:전결문서목록/결재문서번호"
+      },
+      {
+       "label": "결재문서명",
+       "depth": 0,
+       "box": [
+        1051,
+        174,
+        235,
+        36
+       ],
+       "span": 2,
+       "id": "col:전결문서목록/결재문서명"
+      },
+      {
+       "label": "적용시작일시",
+       "depth": 0,
+       "box": [
+        1286,
+        174,
+        164,
+        36
+       ],
+       "id": "col:전결문서목록/적용시작일시"
+      },
+      {
+       "label": "적용종료일시",
+       "depth": 0,
+       "box": [
+        1450,
+        174,
+        164,
+        36
+       ],
+       "id": "col:전결문서목록/적용종료일시"
+      }
+     ],
+     "id": "grid:전결문서목록"
+    },
+    {
+     "aria": null,
+     "box": [
+      623,
+      701,
+      992,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "전결자지정",
+     "id": "heading:전결자지정"
+    },
+    {
+     "aria": null,
+     "box": [
+      728,
+      737,
+      221,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전결자ID",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:전결자ID"
+    },
+    {
+     "aria": null,
+     "box": [
+      1059,
+      737,
+      165,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전결자",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:전결자"
+    },
+    {
+     "aria": null,
+     "box": [
+      1229,
+      737,
+      50,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "검색",
+     "variant": "link",
+     "id": "button:검색"
+    },
+    {
+     "aria": null,
+     "box": [
+      1389,
+      737,
+      221,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "직위",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:직위"
+    },
+    {
+     "aria": null,
+     "box": [
+      728,
+      777,
+      221,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조직코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:조직코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      1059,
+      777,
+      552,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "조직명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:조직명"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {업무승인관리}업무승인 > 결재경로관리 > 전결자지정",
+ "viewport": [
+  1920,
+  945
+ ]
+}

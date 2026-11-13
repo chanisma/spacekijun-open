@@ -1,0 +1,295 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›성적›성적처리›교양교과이수관리",
+ "name": "교양교과이수관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:33:17+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학기",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "semester",
+     "id": "field:학기"
+    },
+    {
+     "aria": "계열/학년/학과",
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": "과목",
+     "box": [
+      895,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "과목",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:과목"
+    },
+    {
+     "aria": "강의실",
+     "box": [
+      1135,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "강의실",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "number",
+     "id": "field:강의실"
+    },
+    {
+     "aria": "이수선택",
+     "box": [
+      1245,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "radio",
+     "label": "강의실",
+     "options": [
+      "전체",
+      "미이수"
+     ],
+     "id": "radio:강의실"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      133,
+      1590,
+      56
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 교양교과 이수관리 유의사항 1.[학기말]에 해당하는 산출기준이 존재하지 않으면 이수처리를 할 수 없으며, 마감된 경우는 입력할 수 없습니다. 2. 재학아닌 학생은 이수처리 없이 마감이 가능하며, 학적변동명을 클릭하여 이수 처리를 할 수 있습니다.",
+     "id": "note:※ 교양교과 이수관리 유의사항 1.[학기말]에 해당하는 산출기준이 존재하지 않으면 이수처리를 할 수 없으며, 마감된 경우는 입력할 수 없습니다. 2. 재학아닌 학생은 이수처리 없이 마감이 가능하며, 학적변동명을 클릭하여 이수 처리를 할 수 있습니다."
+    },
+    {
+     "aria": "전체이수선택",
+     "box": [
+      1320,
+      224,
+      88,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전체이수선택",
+     "variant": "primary",
+     "id": "button:전체이수선택"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1416,
+      224,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "이수여부 초기화",
+     "box": [
+      1464,
+      224,
+      103,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "이수여부 초기화",
+     "variant": "secondary",
+     "id": "button:이수여부 초기화"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      224,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      264,
+      1590,
+      550
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 7,
+     "columns": [
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        76,
+        265,
+        175,
+        36
+       ],
+       "id": "col:그리드/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        251,
+        265,
+        175,
+        36
+       ],
+       "id": "col:그리드/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        426,
+        265,
+        245,
+        36
+       ],
+       "id": "col:그리드/성명"
+      },
+      {
+       "label": "학적변동구분",
+       "depth": 0,
+       "box": [
+        670,
+        265,
+        245,
+        36
+       ],
+       "id": "col:그리드/학적변동구분"
+      },
+      {
+       "label": "이수여부",
+       "depth": 0,
+       "box": [
+        915,
+        265,
+        280,
+        36
+       ],
+       "id": "col:그리드/이수여부"
+      },
+      {
+       "label": "등록/학적변동여부",
+       "depth": 0,
+       "box": [
+        1195,
+        265,
+        419,
+        36
+       ],
+       "id": "col:그리드/등록/학적변동여부"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 성적 > 성적처리 > 교양교과이수관리",
+ "alsoVia": [
+  "교과담임"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

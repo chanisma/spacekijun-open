@@ -1,0 +1,160 @@
+{
+ "schema": "neis-capture/1",
+ "key": "전자이미지관인관리›전자이미지관인관리›전자이미지관인조회›전자이미지관인조회",
+ "name": "전자이미지관인조회",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:56:09+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "조직명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:조직명"
+    },
+    {
+     "aria": null,
+     "box": [
+      385,
+      82,
+      73,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "등록조직",
+     "checked": true,
+     "id": "check:등록조직"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      158,
+      1590,
+      397
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": false,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        25,
+        158,
+        50,
+        36
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "조직명",
+       "depth": 0,
+       "box": [
+        75,
+        158,
+        390,
+        36
+       ],
+       "id": "col:그리드/조직명"
+      },
+      {
+       "label": "등록관인",
+       "depth": 0,
+       "box": [
+        465,
+        158,
+        500,
+        36
+       ],
+       "span": 5,
+       "id": "col:그리드/등록관인"
+      },
+      {
+       "label": "미등록관인",
+       "depth": 0,
+       "box": [
+        965,
+        158,
+        500,
+        36
+       ],
+       "span": 5,
+       "id": "col:그리드/미등록관인"
+      },
+      {
+       "label": "비고",
+       "depth": 0,
+       "box": [
+        1465,
+        158,
+        150,
+        36
+       ],
+       "id": "col:그리드/비고"
+      }
+     ],
+     "id": "grid:그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      211,
+      563,
+      40,
+      25
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "확인",
+     "variant": "secondary",
+     "id": "button:확인"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 전자이미지관인관리 > 전자이미지관인조회",
+ "alsoVia": [
+  "부서장(정보화부)"
+ ],
+ "viewport": [
+  1920,
+  945
+ ]
+}

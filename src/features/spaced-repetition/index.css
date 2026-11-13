@@ -1,0 +1,328 @@
+/* =============================================
+ * Spaced Repetition System - Theme
+ * Sage green / cream / orange color scheme
+ * Scoped to .srs-theme to avoid conflicts
+ * ============================================= */
+
+.srs-theme {
+  --srs-sage: #8a9a7b;
+  --srs-sage-light: #a3b394;
+  --srs-sage-dark: #6b7d5e;
+  --srs-sage-muted: #c5cfc0;
+  --srs-teal: #6b9b8a;
+  --srs-teal-light: #7fb3a0;
+  --srs-cream: #f5f0e1;
+  --srs-cream-dark: #e8e0cc;
+  --srs-cream-light: #faf7f0;
+  --srs-dark: #2d3a2e;
+  --srs-dark-light: #3d4e3f;
+  --srs-accent: #ff6b35;
+  --srs-accent-hover: #e85a28;
+  --srs-text: #1a1a1a;
+  --srs-text-muted: #6b6b5e;
+  --srs-text-light: #8a8a7a;
+  --srs-border: #d4d0c4;
+}
+
+/* Base layout */
+.srs-theme {
+  min-height: calc(100vh - 64px);
+  background-color: var(--srs-sage);
+  color: var(--srs-text);
+  font-family: 'Inter', sans-serif;
+}
+
+/* 3-Column Grid Layout */
+.srs-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr 280px;
+  gap: 0;
+  min-height: calc(100vh - 64px);
+}
+
+@media (max-width: 1024px) {
+  .srs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Column panels */
+.srs-panel-left {
+  background-color: var(--srs-sage-dark);
+  padding: 24px 20px;
+  overflow-y: auto;
+}
+
+.srs-panel-center {
+  background-color: var(--srs-teal);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.srs-panel-right {
+  background-color: var(--srs-cream);
+  padding: 24px 20px;
+  overflow-y: auto;
+}
+
+/* Card styles */
+.srs-card {
+  background-color: var(--srs-cream);
+  border: 1px solid var(--srs-border);
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.srs-card-dark {
+  background-color: var(--srs-dark);
+  color: var(--srs-cream);
+  border: none;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+/* Section headers - bold uppercase */
+.srs-section-title {
+  font-family: 'Inter', serif;
+  font-weight: 900;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--srs-text);
+}
+
+.srs-section-title-sm {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--srs-text-muted);
+}
+
+/* Large metric numbers */
+.srs-metric {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--srs-text);
+}
+
+.srs-metric-md {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.srs-metric-sm {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.srs-metric-unit {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--srs-text-muted);
+  margin-left: 2px;
+}
+
+/* Accent button (orange circle) */
+.srs-btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--srs-accent);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.srs-btn-accent:hover {
+  background-color: var(--srs-accent-hover);
+  transform: scale(1.05);
+}
+
+.srs-btn-accent:active {
+  transform: scale(0.95);
+}
+
+/* Dark circle button */
+.srs-btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--srs-text);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.srs-btn-dark:hover {
+  opacity: 0.85;
+}
+
+/* Response buttons (Again/Hard/Good/Easy) */
+.srs-response-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  width: 100%;
+}
+
+.srs-response-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  background-color: var(--srs-sage);
+  border: 1px solid var(--srs-sage-dark);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.srs-response-btn:hover {
+  background-color: var(--srs-sage-dark);
+}
+
+.srs-response-btn:first-child {
+  border-radius: 0 0 0 8px;
+}
+
+.srs-response-btn:last-child {
+  border-radius: 0 0 8px 0;
+}
+
+/* Flashcard flip animation */
+.srs-flashcard-container {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.srs-flashcard {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.srs-flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.srs-flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  background-color: var(--srs-cream);
+  border: 1px solid var(--srs-border);
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.srs-flashcard-back {
+  transform: rotateY(180deg);
+}
+
+/* Progress bar */
+.srs-progress-bar {
+  height: 6px;
+  background-color: var(--srs-sage-dark);
+  border-radius: 3px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.srs-progress-fill {
+  height: 100%;
+  background-color: var(--srs-text);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Activity heatmap */
+.srs-heatmap-cell {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.srs-heatmap-0 { background-color: var(--srs-sage-muted); opacity: 0.3; }
+.srs-heatmap-1 { background-color: var(--srs-sage); opacity: 0.5; }
+.srs-heatmap-2 { background-color: var(--srs-sage-dark); opacity: 0.7; }
+.srs-heatmap-3 { background-color: var(--srs-dark-light); opacity: 0.85; }
+.srs-heatmap-4 { background-color: var(--srs-text); }
+
+/* Subject list item */
+.srs-subject-item {
+  padding: 12px;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.srs-subject-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.srs-subject-item.active {
+  border-left-color: var(--srs-accent);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Retention mini-bar chart (for concept table) */
+.srs-retention-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 24px;
+}
+
+.srs-retention-bar-segment {
+  width: 8px;
+  background-color: var(--srs-accent);
+  border-radius: 1px;
+  transition: height 0.2s ease;
+}
+
+.srs-retention-bar-segment.low {
+  opacity: 0.4;
+}
+
+/* Scrollbar styling */
+.srs-theme ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.srs-theme ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.srs-theme ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}

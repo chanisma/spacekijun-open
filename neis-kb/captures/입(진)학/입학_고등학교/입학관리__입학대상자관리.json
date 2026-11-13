@@ -1,0 +1,1043 @@
+{
+ "schema": "neis-capture/1",
+ "key": "입(진)학›입학#고등학교›입학관리›입학대상자관리",
+ "name": "입학대상자관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:51:08+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:재학생",
+   "tab": "재학생",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      165,
+      82,
+      70,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "입학예정 학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:입학예정 학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      345,
+      82,
+      170,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신학교",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:출신학교"
+    },
+    {
+     "aria": null,
+     "box": [
+      625,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신교상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:출신교상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      825,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "본교확인",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:본교확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1025,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "자료도착",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:자료도착"
+    },
+    {
+     "aria": null,
+     "box": [
+      1225,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학적반영",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학적반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      145,
+      122,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전송상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전송상태"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "전체출력",
+     "box": [
+      1551,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체출력",
+     "variant": "secondary",
+     "id": "button:전체출력"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      213,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "재학생",
+      "졸업생",
+      "기타(검정고시,직접입력)"
+     ],
+     "active": "재학생",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "본교확인일괄선택",
+     "box": [
+      151,
+      316,
+      209,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "본교확인일괄선택",
+     "options": [
+      "대상",
+      "비대상",
+      "미확인"
+     ],
+     "id": "radio:본교확인일괄선택"
+    },
+    {
+     "aria": "재학생목록",
+     "box": [
+      25,
+      366,
+      1590,
+      447
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "재학생목록",
+     "selectable": true,
+     "declaredColumns": 17,
+     "columns": [
+      {
+       "label": "본교 확인",
+       "depth": 0,
+       "box": [
+        26,
+        367,
+        64,
+        62
+       ],
+       "id": "col:재학생목록/본교 확인"
+      },
+      {
+       "label": "출신학교",
+       "depth": 0,
+       "box": [
+        90,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/출신학교"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        217,
+        367,
+        64,
+        93
+       ],
+       "id": "col:재학생목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        280,
+        367,
+        64,
+        93
+       ],
+       "id": "col:재학생목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        344,
+        367,
+        64,
+        93
+       ],
+       "id": "col:재학생목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        407,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/성명"
+      },
+      {
+       "label": "본교확인",
+       "depth": 0,
+       "box": [
+        534,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/본교확인"
+      },
+      {
+       "label": "출신교상태",
+       "depth": 0,
+       "box": [
+        661,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/출신교상태"
+      },
+      {
+       "label": "자료도착",
+       "depth": 0,
+       "box": [
+        788,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/자료도착"
+      },
+      {
+       "label": "학적반영",
+       "depth": 0,
+       "box": [
+        915,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/학적반영"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        1042,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/전송상태"
+      },
+      {
+       "label": "주야구분",
+       "depth": 0,
+       "box": [
+        1169,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/주야구분"
+      },
+      {
+       "label": "계열",
+       "depth": 0,
+       "box": [
+        1296,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/계열"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        1423,
+        367,
+        127,
+        93
+       ],
+       "id": "col:재학생목록/학과"
+      },
+      {
+       "label": "삭제",
+       "depth": 0,
+       "box": [
+        1550,
+        367,
+        64,
+        62
+       ],
+       "id": "col:재학생목록/삭제"
+      }
+     ],
+     "id": "grid:재학생목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:졸업생",
+   "tab": "졸업생",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      165,
+      82,
+      70,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "입학예정 학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:입학예정 학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      345,
+      82,
+      170,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신학교",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:출신학교"
+    },
+    {
+     "aria": null,
+     "box": [
+      625,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신교상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:출신교상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      825,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "본교확인",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:본교확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1025,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "자료도착",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:자료도착"
+    },
+    {
+     "aria": null,
+     "box": [
+      1225,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학적반영",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학적반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      145,
+      122,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전송상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전송상태"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "전체출력",
+     "box": [
+      1551,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체출력",
+     "variant": "secondary",
+     "id": "button:전체출력"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      213,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "재학생",
+      "졸업생",
+      "기타(검정고시,직접입력)"
+     ],
+     "active": "졸업생",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "본교확인일괄선택",
+     "box": [
+      151,
+      316,
+      209,
+      30
+     ],
+     "region": "body",
+     "kind": "radio",
+     "label": "본교확인일괄선택",
+     "options": [
+      "대상",
+      "비대상",
+      "미확인"
+     ],
+     "id": "radio:본교확인일괄선택"
+    },
+    {
+     "aria": "졸업생목록",
+     "box": [
+      25,
+      366,
+      1590,
+      447
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "졸업생목록",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "출신학교",
+       "depth": 0,
+       "box": [
+        76,
+        367,
+        140,
+        36
+       ],
+       "id": "col:졸업생목록/출신학교"
+      },
+      {
+       "label": "졸업학년도",
+       "depth": 0,
+       "box": [
+        216,
+        367,
+        112,
+        36
+       ],
+       "id": "col:졸업생목록/졸업학년도"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        327,
+        367,
+        140,
+        36
+       ],
+       "id": "col:졸업생목록/성명"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        467,
+        367,
+        140,
+        36
+       ],
+       "id": "col:졸업생목록/생년월일"
+      },
+      {
+       "label": "입학대상자",
+       "depth": 0,
+       "box": [
+        607,
+        367,
+        140,
+        36
+       ],
+       "id": "col:졸업생목록/입학대상자"
+      },
+      {
+       "label": "출신교상태",
+       "depth": 0,
+       "box": [
+        746,
+        367,
+        140,
+        36
+       ],
+       "id": "col:졸업생목록/출신교상태"
+      },
+      {
+       "label": "자료도착",
+       "depth": 0,
+       "box": [
+        886,
+        367,
+        112,
+        36
+       ],
+       "id": "col:졸업생목록/자료도착"
+      },
+      {
+       "label": "학적반영",
+       "depth": 0,
+       "box": [
+        998,
+        367,
+        112,
+        36
+       ],
+       "id": "col:졸업생목록/학적반영"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        1109,
+        367,
+        112,
+        36
+       ],
+       "id": "col:졸업생목록/전송상태"
+      },
+      {
+       "label": "주야구분",
+       "depth": 0,
+       "box": [
+        1221,
+        367,
+        112,
+        36
+       ],
+       "id": "col:졸업생목록/주야구분"
+      },
+      {
+       "label": "계열",
+       "depth": 0,
+       "box": [
+        1333,
+        367,
+        112,
+        36
+       ],
+       "id": "col:졸업생목록/계열"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        1444,
+        367,
+        112,
+        36
+       ],
+       "id": "col:졸업생목록/학과"
+      },
+      {
+       "label": "삭제",
+       "depth": 0,
+       "box": [
+        1556,
+        367,
+        58,
+        36
+       ],
+       "id": "col:졸업생목록/삭제"
+      }
+     ],
+     "id": "grid:졸업생목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:기타(검정고시,직접입력)",
+   "tab": "기타(검정고시,직접입력)",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      165,
+      82,
+      70,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "입학예정 학년도",
+     "control": "date",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:입학예정 학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      345,
+      82,
+      170,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "출신학교",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:출신학교"
+    },
+    {
+     "aria": null,
+     "box": [
+      625,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "출신교상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:출신교상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      825,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "본교확인",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:본교확인"
+    },
+    {
+     "aria": null,
+     "box": [
+      1025,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "자료도착",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:자료도착"
+    },
+    {
+     "aria": null,
+     "box": [
+      1225,
+      82,
+      90,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학적반영",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학적반영"
+    },
+    {
+     "aria": null,
+     "box": [
+      145,
+      122,
+      90,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "전송상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전송상태"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "전체출력",
+     "box": [
+      1551,
+      173,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "전체출력",
+     "variant": "secondary",
+     "id": "button:전체출력"
+    },
+    {
+     "aria": "3개의 탭이 있습니다.",
+     "box": [
+      25,
+      213,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "재학생",
+      "졸업생",
+      "기타(검정고시,직접입력)"
+     ],
+     "active": "기타(검정고시,직접입력)",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "기타(검정고시,직접입력) 목록",
+     "box": [
+      25,
+      308,
+      1590,
+      505
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기타(검정고시,직접입력) 목록",
+     "selectable": true,
+     "declaredColumns": 12,
+     "columns": [
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        76,
+        309,
+        71,
+        25
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/구분"
+      },
+      {
+       "label": "입학구분",
+       "depth": 0,
+       "box": [
+        147,
+        309,
+        176,
+        50
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/입학구분"
+      },
+      {
+       "label": "출신학교명",
+       "depth": 0,
+       "box": [
+        323,
+        309,
+        176,
+        50
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/출신학교명"
+      },
+      {
+       "label": "졸업일자",
+       "depth": 0,
+       "box": [
+        499,
+        309,
+        141,
+        50
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/졸업일자"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        640,
+        309,
+        118,
+        50
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/성명"
+      },
+      {
+       "label": "성별",
+       "depth": 0,
+       "box": [
+        758,
+        309,
+        118,
+        50
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/성별"
+      },
+      {
+       "label": "주민등록번호 (외국인등록번호)",
+       "depth": 0,
+       "box": [
+        876,
+        309,
+        209,
+        50
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/주민등록번호 (외국인등록번호)"
+      },
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        1085,
+        309,
+        176,
+        50
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/과정"
+      },
+      {
+       "label": "계열",
+       "depth": 0,
+       "box": [
+        1261,
+        309,
+        176,
+        50
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/계열"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        1438,
+        309,
+        176,
+        50
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/학과"
+      },
+      {
+       "label": "직접입력",
+       "depth": 1,
+       "box": [
+        76,
+        334,
+        71,
+        25
+       ],
+       "id": "col:기타(검정고시,직접입력) 목록/구분>직접입력"
+      }
+     ],
+     "id": "grid:기타(검정고시,직접입력) 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 입학 > 입학관리 > 입학대상자관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

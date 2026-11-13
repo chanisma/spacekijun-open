@@ -1,0 +1,369 @@
+{
+ "schema": "neis-capture/1",
+ "key": "학교운영위원회›회의관리›회의결과등록관리›회의결과등록관리",
+ "name": "회의결과등록관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:32:29+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "연도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:연도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "기수",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:기수"
+    },
+    {
+     "aria": null,
+     "box": [
+      635,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "회수",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:회수"
+    },
+    {
+     "aria": null,
+     "box": [
+      875,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1425,
+      133,
+      83,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록 및 수정",
+     "variant": "plain",
+     "id": "button:등록 및 수정"
+    },
+    {
+     "aria": null,
+     "box": [
+      1524,
+      133,
+      91,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "회의결과 출력",
+     "variant": "link",
+     "id": "button:회의결과 출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "grid",
+     "label": "그리드",
+     "selectable": true,
+     "declaredColumns": 23,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        93
+       ],
+       "id": "col:그리드/순번"
+      },
+      {
+       "label": "회수",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        100,
+        93
+       ],
+       "id": "col:그리드/회수"
+      },
+      {
+       "label": "구분",
+       "depth": 0,
+       "box": [
+        226,
+        174,
+        100,
+        93
+       ],
+       "id": "col:그리드/구분"
+      },
+      {
+       "label": "안건수",
+       "depth": 0,
+       "box": [
+        326,
+        174,
+        100,
+        93
+       ],
+       "id": "col:그리드/안건수"
+      },
+      {
+       "label": "심의결과",
+       "depth": 0,
+       "box": [
+        426,
+        174,
+        300,
+        31
+       ],
+       "span": 3,
+       "id": "col:그리드/심의결과"
+      },
+      {
+       "label": "회의일시",
+       "depth": 0,
+       "box": [
+        726,
+        174,
+        200,
+        93
+       ],
+       "id": "col:그리드/회의일시"
+      },
+      {
+       "label": "회의록",
+       "depth": 0,
+       "box": [
+        926,
+        174,
+        200,
+        31
+       ],
+       "span": 2,
+       "id": "col:그리드/회의록"
+      },
+      {
+       "label": "참석자(명)",
+       "depth": 0,
+       "box": [
+        1126,
+        174,
+        300,
+        31
+       ],
+       "span": 3,
+       "id": "col:그리드/참석자(명)"
+      },
+      {
+       "label": "학생참여(횟수)",
+       "depth": 0,
+       "box": [
+        1426,
+        174,
+        500,
+        31
+       ],
+       "span": 5,
+       "id": "col:그리드/학생참여(횟수)"
+      },
+      {
+       "label": "원안 가결",
+       "depth": 1,
+       "box": [
+        426,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/심의결과>원안 가결"
+      },
+      {
+       "label": "수정 가결",
+       "depth": 1,
+       "box": [
+        526,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/심의결과>수정 가결"
+      },
+      {
+       "label": "부결",
+       "depth": 1,
+       "box": [
+        626,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/심의결과>부결"
+      },
+      {
+       "label": "원본",
+       "depth": 1,
+       "box": [
+        926,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/회의록>원본"
+      },
+      {
+       "label": "공개용",
+       "depth": 1,
+       "box": [
+        1026,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/회의록>공개용"
+      },
+      {
+       "label": "학부모 위원",
+       "depth": 1,
+       "box": [
+        1126,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/참석자(명)>학부모 위원"
+      },
+      {
+       "label": "교원 위원",
+       "depth": 1,
+       "box": [
+        1226,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/참석자(명)>교원 위원"
+      },
+      {
+       "label": "지역 위원",
+       "depth": 1,
+       "box": [
+        1326,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/참석자(명)>지역 위원"
+      },
+      {
+       "label": "홍보",
+       "depth": 1,
+       "box": [
+        1426,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/학생참여(횟수)>홍보"
+      },
+      {
+       "label": "참관",
+       "depth": 1,
+       "box": [
+        1526,
+        205,
+        100,
+        62
+       ],
+       "id": "col:그리드/학생참여(횟수)>참관"
+      }
+     ],
+     "id": "grid:그리드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {학교운영위원회}회의관리 > 회의결과등록관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

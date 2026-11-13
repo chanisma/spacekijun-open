@@ -1,0 +1,232 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›예비학생관리›예비학생관리",
+ "name": "예비학생관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:03:28+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학생명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1455,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "일괄등록",
+     "variant": "primary",
+     "id": "button:일괄등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1527,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "예비학생 목록",
+     "box": [
+      25,
+      173,
+      1590,
+      640
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "예비학생 목록",
+     "selectable": true,
+     "declaredColumns": 10,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        76,
+        174,
+        50,
+        36
+       ],
+       "id": "col:예비학생 목록/순번"
+      },
+      {
+       "label": "학생명",
+       "depth": 0,
+       "box": [
+        126,
+        174,
+        186,
+        36
+       ],
+       "id": "col:예비학생 목록/학생명"
+      },
+      {
+       "label": "주야과정",
+       "depth": 0,
+       "box": [
+        312,
+        174,
+        186,
+        36
+       ],
+       "id": "col:예비학생 목록/주야과정"
+      },
+      {
+       "label": "계열/학년/학과",
+       "depth": 0,
+       "box": [
+        498,
+        174,
+        186,
+        36
+       ],
+       "id": "col:예비학생 목록/계열/학년/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        684,
+        174,
+        186,
+        36
+       ],
+       "id": "col:예비학생 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        870,
+        174,
+        186,
+        36
+       ],
+       "id": "col:예비학생 목록/번호"
+      },
+      {
+       "label": "생년월일",
+       "depth": 0,
+       "box": [
+        1056,
+        174,
+        186,
+        36
+       ],
+       "id": "col:예비학생 목록/생년월일"
+      },
+      {
+       "label": "학부모연락처",
+       "depth": 0,
+       "box": [
+        1242,
+        174,
+        186,
+        36
+       ],
+       "id": "col:예비학생 목록/학부모연락처"
+      },
+      {
+       "label": "학적연결",
+       "depth": 0,
+       "box": [
+        1428,
+        174,
+        186,
+        36
+       ],
+       "id": "col:예비학생 목록/학적연결"
+      }
+     ],
+     "id": "grid:예비학생 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 예비학생관리 > 예비학생관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

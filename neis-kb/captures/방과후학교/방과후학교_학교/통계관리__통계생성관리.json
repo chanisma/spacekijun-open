@@ -1,0 +1,843 @@
+{
+ "schema": "neis-capture/1",
+ "key": "방과후학교›방과후학교#학교›통계관리›통계생성관리",
+ "name": "통계생성관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T06:04:44+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "tab:기본현황",
+   "tab": "기본현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:통계년월"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1120,
+      133,
+      160,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "3세대 자료 내려받기",
+     "variant": "plain",
+     "id": "button:3세대 자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1288,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "통계생성",
+     "variant": "primary",
+     "id": "button:통계생성"
+    },
+    {
+     "aria": null,
+     "box": [
+      1360,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "통계저장",
+     "variant": "primary",
+     "id": "button:통계저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1431,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "통계제출",
+     "variant": "primary",
+     "id": "button:통계제출"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "탭이 2개 있습니다.",
+     "box": [
+      25,
+      225,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "기본현황",
+      "위탁업체현황"
+     ],
+     "active": "기본현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": "기본현황 목록",
+     "box": [
+      25,
+      320,
+      1590,
+      493
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "기본현황 목록",
+     "selectable": false,
+     "declaredColumns": 135,
+     "columns": [
+      {
+       "label": "학교현황",
+       "depth": 0,
+       "box": [
+        26,
+        321,
+        900,
+        31
+       ],
+       "span": 23,
+       "id": "col:기본현황 목록/학교현황"
+      },
+      {
+       "label": "방과후학교 학생 참여 현황",
+       "depth": 0,
+       "box": [
+        926,
+        321,
+        800,
+        31
+       ],
+       "span": 11,
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황"
+      },
+      {
+       "label": "학교명",
+       "depth": 1,
+       "box": [
+        26,
+        352,
+        100,
+        129
+       ],
+       "id": "col:기본현황 목록/학교현황>학교명"
+      },
+      {
+       "label": "학생현황",
+       "depth": 1,
+       "box": [
+        126,
+        352,
+        400,
+        31
+       ],
+       "span": 7,
+       "id": "col:기본현황 목록/학교현황>학생현황"
+      },
+      {
+       "label": "학급현황",
+       "depth": 1,
+       "box": [
+        526,
+        352,
+        400,
+        31
+       ],
+       "span": 7,
+       "id": "col:기본현황 목록/학교현황>학급현황"
+      },
+      {
+       "label": "방과후학교 운영여부",
+       "depth": 1,
+       "box": [
+        926,
+        352,
+        100,
+        129
+       ],
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황>방과후학교 운영여부"
+      },
+      {
+       "label": "학년별 참여 학생 수(단수)",
+       "depth": 1,
+       "box": [
+        1026,
+        352,
+        400,
+        31
+       ],
+       "span": 7,
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황>학년별 참여 학생 수(단수)"
+      },
+      {
+       "label": "전체 참여 학생수(단수)",
+       "depth": 1,
+       "box": [
+        1426,
+        352,
+        300,
+        31
+       ],
+       "span": 3,
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황>전체 참여 학생수(단수)"
+      },
+      {
+       "label": "1학년",
+       "depth": 2,
+       "box": [
+        126,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/학교현황>학생현황>1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 2,
+       "box": [
+        226,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/학교현황>학생현황>2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 2,
+       "box": [
+        326,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/학교현황>학생현황>3학년"
+      },
+      {
+       "label": "전체 학생수",
+       "depth": 2,
+       "box": [
+        426,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/학교현황>학생현황>전체 학생수"
+      },
+      {
+       "label": "1학년",
+       "depth": 2,
+       "box": [
+        526,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/학교현황>학급현황>1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 2,
+       "box": [
+        626,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/학교현황>학급현황>2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 2,
+       "box": [
+        726,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/학교현황>학급현황>3학년"
+      },
+      {
+       "label": "전체 학급수",
+       "depth": 2,
+       "box": [
+        826,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/학교현황>학급현황>전체 학급수"
+      },
+      {
+       "label": "1학년",
+       "depth": 2,
+       "box": [
+        1026,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황>학년별 참여 학생 수(단수)>1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 2,
+       "box": [
+        1126,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황>학년별 참여 학생 수(단수)>2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 2,
+       "box": [
+        1226,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황>학년별 참여 학생 수(단수)>3학년"
+      },
+      {
+       "label": "계(A)",
+       "depth": 2,
+       "box": [
+        1326,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황>학년별 참여 학생 수(단수)>계(A)"
+      },
+      {
+       "label": "무상참여",
+       "depth": 2,
+       "box": [
+        1426,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황>전체 참여 학생수(단수)>무상참여"
+      },
+      {
+       "label": "유상참여 (부분포함)",
+       "depth": 2,
+       "box": [
+        1526,
+        383,
+        100,
+        98
+       ],
+       "id": "col:기본현황 목록/방과후학교 학생 참여 현황>전체 참여 학생수(단수)>유상참여 (부분포함)"
+      }
+     ],
+     "id": "grid:기본현황 목록"
+    }
+   ]
+  },
+  {
+   "id": "tab:위탁업체현황",
+   "tab": "위탁업체현황",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      80,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      395,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "통계년월",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:통계년월"
+    },
+    {
+     "aria": null,
+     "box": [
+      1531,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      1120,
+      133,
+      160,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "3세대 자료 내려받기",
+     "variant": "plain",
+     "id": "button:3세대 자료 내려받기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1288,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "통계생성",
+     "variant": "primary",
+     "id": "button:통계생성"
+    },
+    {
+     "aria": null,
+     "box": [
+      1360,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "통계저장",
+     "variant": "primary",
+     "id": "button:통계저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      1431,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": null,
+     "box": [
+      1503,
+      133,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "통계제출",
+     "variant": "primary",
+     "id": "button:통계제출"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "탭이 2개 있습니다.",
+     "box": [
+      25,
+      225,
+      1590,
+      35
+     ],
+     "region": "body",
+     "kind": "tabs",
+     "label": "안쪽 탭",
+     "items": [
+      "기본현황",
+      "위탁업체현황"
+     ],
+     "active": "위탁업체현황",
+     "id": "tabs:안쪽 탭"
+    },
+    {
+     "aria": null,
+     "box": [
+      1575,
+      280,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "plain",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "위탁업체현황 목록",
+     "box": [
+      25,
+      320,
+      1590,
+      493
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "위탁업체현황 목록",
+     "selectable": true,
+     "declaredColumns": 21,
+     "columns": [
+      {
+       "label": "계약명",
+       "depth": 0,
+       "box": [
+        76,
+        321,
+        150,
+        93
+       ],
+       "id": "col:위탁업체현황 목록/계약명"
+      },
+      {
+       "label": "계약방법",
+       "depth": 0,
+       "box": [
+        226,
+        321,
+        130,
+        93
+       ],
+       "id": "col:위탁업체현황 목록/계약방법"
+      },
+      {
+       "label": "입찰 현황",
+       "depth": 0,
+       "box": [
+        356,
+        321,
+        740,
+        31
+       ],
+       "span": 7,
+       "id": "col:위탁업체현황 목록/입찰 현황"
+      },
+      {
+       "label": "연간 계약금액 (원)",
+       "depth": 0,
+       "box": [
+        1096,
+        321,
+        120,
+        93
+       ],
+       "id": "col:위탁업체현황 목록/연간 계약금액 (원)"
+      },
+      {
+       "label": "연간계약기간",
+       "depth": 0,
+       "box": [
+        1216,
+        321,
+        340,
+        31
+       ],
+       "span": 3,
+       "id": "col:위탁업체현황 목록/연간계약기간"
+      },
+      {
+       "label": "위탁범위",
+       "depth": 0,
+       "box": [
+        1556,
+        321,
+        100,
+        93
+       ],
+       "id": "col:위탁업체현황 목록/위탁범위"
+      },
+      {
+       "label": "낙찰(계약)업체",
+       "depth": 1,
+       "box": [
+        356,
+        352,
+        400,
+        31
+       ],
+       "span": 4,
+       "id": "col:위탁업체현황 목록/입찰 현황>낙찰(계약)업체"
+      },
+      {
+       "label": "기초금액 (원)",
+       "depth": 1,
+       "box": [
+        756,
+        352,
+        120,
+        62
+       ],
+       "id": "col:위탁업체현황 목록/입찰 현황>기초금액 (원)"
+      },
+      {
+       "label": "낙찰금액 (원)",
+       "depth": 1,
+       "box": [
+        876,
+        352,
+        120,
+        62
+       ],
+       "id": "col:위탁업체현황 목록/입찰 현황>낙찰금액 (원)"
+      },
+      {
+       "label": "낙찰률 (%)",
+       "depth": 1,
+       "box": [
+        996,
+        352,
+        100,
+        62
+       ],
+       "id": "col:위탁업체현황 목록/입찰 현황>낙찰률 (%)"
+      },
+      {
+       "label": "계약일자",
+       "depth": 1,
+       "box": [
+        1216,
+        352,
+        240,
+        31
+       ],
+       "span": 2,
+       "id": "col:위탁업체현황 목록/연간계약기간>계약일자"
+      },
+      {
+       "label": "월",
+       "depth": 1,
+       "box": [
+        1456,
+        352,
+        100,
+        62
+       ],
+       "id": "col:위탁업체현황 목록/연간계약기간>월"
+      },
+      {
+       "label": "사업자등록번호",
+       "depth": 2,
+       "box": [
+        356,
+        383,
+        100,
+        31
+       ],
+       "id": "col:위탁업체현황 목록/입찰 현황>낙찰(계약)업체>사업자등록번호"
+      },
+      {
+       "label": "업체명",
+       "depth": 2,
+       "box": [
+        456,
+        383,
+        100,
+        31
+       ],
+       "id": "col:위탁업체현황 목록/입찰 현황>낙찰(계약)업체>업체명"
+      },
+      {
+       "label": "설립구분",
+       "depth": 2,
+       "box": [
+        556,
+        383,
+        100,
+        31
+       ],
+       "id": "col:위탁업체현황 목록/입찰 현황>낙찰(계약)업체>설립구분"
+      },
+      {
+       "label": "영리/비영리",
+       "depth": 2,
+       "box": [
+        656,
+        383,
+        100,
+        31
+       ],
+       "id": "col:위탁업체현황 목록/입찰 현황>낙찰(계약)업체>영리/비영리"
+      },
+      {
+       "label": "시작일자",
+       "depth": 2,
+       "box": [
+        1216,
+        383,
+        120,
+        31
+       ],
+       "id": "col:위탁업체현황 목록/연간계약기간>계약일자>시작일자"
+      },
+      {
+       "label": "종료일자",
+       "depth": 2,
+       "box": [
+        1336,
+        383,
+        120,
+        31
+       ],
+       "id": "col:위탁업체현황 목록/연간계약기간>계약일자>종료일자"
+      }
+     ],
+     "id": "grid:위탁업체현황 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 방과후학교 > 통계관리 > 통계생성관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

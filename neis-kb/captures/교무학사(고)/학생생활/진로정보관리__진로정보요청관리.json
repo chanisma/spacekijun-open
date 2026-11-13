@@ -1,0 +1,446 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학생생활›진로정보관리›진로정보요청관리",
+ "name": "진로정보요청관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:25:29+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      415,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "grade",
+     "id": "field:학년"
+    },
+    {
+     "aria": null,
+     "box": [
+      655,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "반",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "class",
+     "id": "field:반"
+    },
+    {
+     "aria": null,
+     "box": [
+      895,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:등록일"
+    },
+    {
+     "aria": null,
+     "box": [
+      1050,
+      82,
+      120,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "등록일~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:등록일~"
+    },
+    {
+     "aria": null,
+     "box": [
+      1310,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전송상태",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전송상태"
+    },
+    {
+     "aria": null,
+     "box": [
+      175,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "출신교",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:출신교"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      122,
+      200,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성명"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1531,
+      122,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      173,
+      1590,
+      93
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 진로정보 요청 및 출신학교 변경, 삭제 처리는 전송 상태가 '등록', '학생미동의','학생동의서미존재','학생미존재','오류','전송거부'일 때만 작업하실 수 있습니다. ※ 진로정보 요청 시에는 요청자 연락처(학교 연락처)를 반드시 입력하셔야 합니다. ※ 전송상태가 '전송 중'으로 장시간 지속되는 경우 조회 버튼을 시간을 두고 클릭해서 확인하시기 바랍니다. 다시 확인한 후에도 전송상태가 변경이 없는 경우에는 시스템 관리자에게 문의하시기 바랍니다. ※ 진로정보 전송 요청은 전송상태가 '전송완료' 상태에서 최종적으로 <자료반영>버튼",
+     "id": "note:※ 진로정보 요청 및 출신학교 변경, 삭제 처리는 전송 상태가 '등록', '학생미동의','학생동의서미존재','학생미존재','오류','전송거부'일 때만 작업하실 수 있습니다. ※ 진로정보 요청 시에는 요청자 연락처(학교 연락처)를 반드시 입력하셔야 합니다. ※ 전송상태가 '전송 중'으로 장시간 지속되는 경우 조회 버튼을 시간을 두고 클릭해서 확인하시기 바랍니다. 다시 확인한 후에도 전송상태가 변경이 없는 경우에는 시스템 관리자에게 문의하시기 바랍니다. ※ 진로정보 전송 요청은 전송상태가 '전송완료' 상태에서 최종적으로 <자료반영>버튼"
+    },
+    {
+     "aria": "등록",
+     "box": [
+      1336,
+      301,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "등록",
+     "variant": "link",
+     "id": "button:등록"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1383,
+      301,
+      40,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "전송요청",
+     "box": [
+      1431,
+      301,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "전송요청",
+     "variant": "primary",
+     "id": "button:전송요청"
+    },
+    {
+     "aria": "자료반영",
+     "box": [
+      1503,
+      301,
+      64,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "자료반영",
+     "variant": "primary",
+     "id": "button:자료반영"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1575,
+      301,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "primary",
+     "id": "button:출력"
+    },
+    {
+     "aria": null,
+     "box": [
+      91,
+      339,
+      150,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "요청자성명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:요청자성명"
+    },
+    {
+     "aria": null,
+     "box": [
+      289,
+      339,
+      220,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "연락처",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:연락처"
+    },
+    {
+     "aria": "진로정보요청 목록",
+     "box": [
+      25,
+      379,
+      1590,
+      435
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "진로정보요청 목록",
+     "selectable": true,
+     "declaredColumns": 14,
+     "columns": [
+      {
+       "label": "등록일",
+       "depth": 0,
+       "box": [
+        76,
+        380,
+        130,
+        36
+       ],
+       "id": "col:진로정보요청 목록/등록일"
+      },
+      {
+       "label": "과정",
+       "depth": 0,
+       "box": [
+        206,
+        380,
+        104,
+        36
+       ],
+       "id": "col:진로정보요청 목록/과정"
+      },
+      {
+       "label": "계열",
+       "depth": 0,
+       "box": [
+        311,
+        380,
+        104,
+        36
+       ],
+       "id": "col:진로정보요청 목록/계열"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        415,
+        380,
+        130,
+        36
+       ],
+       "id": "col:진로정보요청 목록/학과"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        545,
+        380,
+        65,
+        36
+       ],
+       "id": "col:진로정보요청 목록/학년"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        610,
+        380,
+        65,
+        36
+       ],
+       "id": "col:진로정보요청 목록/반"
+      },
+      {
+       "label": "번호",
+       "depth": 0,
+       "box": [
+        676,
+        380,
+        65,
+        36
+       ],
+       "id": "col:진로정보요청 목록/번호"
+      },
+      {
+       "label": "성명",
+       "depth": 0,
+       "box": [
+        741,
+        380,
+        130,
+        36
+       ],
+       "id": "col:진로정보요청 목록/성명"
+      },
+      {
+       "label": "출신학교코드",
+       "depth": 0,
+       "box": [
+        871,
+        380,
+        130,
+        36
+       ],
+       "id": "col:진로정보요청 목록/출신학교코드"
+      },
+      {
+       "label": "출신학교명",
+       "depth": 0,
+       "box": [
+        1001,
+        380,
+        196,
+        36
+       ],
+       "id": "col:진로정보요청 목록/출신학교명"
+      },
+      {
+       "label": "전송상태",
+       "depth": 0,
+       "box": [
+        1197,
+        380,
+        104,
+        36
+       ],
+       "id": "col:진로정보요청 목록/전송상태"
+      },
+      {
+       "label": "요청일시",
+       "depth": 0,
+       "box": [
+        1301,
+        380,
+        156,
+        36
+       ],
+       "id": "col:진로정보요청 목록/요청일시"
+      },
+      {
+       "label": "자료반영일시",
+       "depth": 0,
+       "box": [
+        1458,
+        380,
+        156,
+        36
+       ],
+       "id": "col:진로정보요청 목록/자료반영일시"
+      }
+     ],
+     "id": "grid:진로정보요청 목록"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학생생활 > 진로정보관리 > 진로정보요청관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

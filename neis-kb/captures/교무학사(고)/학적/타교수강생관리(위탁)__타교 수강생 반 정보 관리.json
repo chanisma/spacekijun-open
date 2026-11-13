@@ -1,0 +1,356 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›학적›타교수강생관리(위탁)›타교 수강생 반 정보 관리",
+ "name": "타교 수강생 반 정보 관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T09:02:50+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      425,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학년"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1539,
+      82,
+      56,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      152,
+      1590,
+      19
+     ],
+     "region": "body",
+     "kind": "note",
+     "label": "※ 반명에 '반'을 붙이지 마세요.",
+     "id": "note:※ 반명에 '반'을 붙이지 마세요."
+    },
+    {
+     "aria": "행추가",
+     "box": [
+      1419,
+      189,
+      52,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "행추가",
+     "variant": "link",
+     "id": "button:행추가"
+    },
+    {
+     "aria": "출력",
+     "box": [
+      1479,
+      189,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력",
+     "variant": "secondary",
+     "id": "button:출력"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1527,
+      189,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "link",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1575,
+      189,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "link",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "타교수강생반정보 목록",
+     "box": [
+      25,
+      199,
+      166,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "타교수강생반정보 목록",
+     "id": "heading:타교수강생반정보 목록"
+    },
+    {
+     "aria": "타교수강생반정보 목록 그리드",
+     "box": [
+      25,
+      229,
+      1590,
+      238
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "타교수강생반정보 목록 그리드",
+     "selectable": true,
+     "declaredColumns": 8,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        195,
+        230,
+        169,
+        36
+       ],
+       "id": "col:타교수강생반정보 목록 그리드/순번"
+      },
+      {
+       "label": "정렬",
+       "depth": 0,
+       "box": [
+        364,
+        230,
+        169,
+        36
+       ],
+       "id": "col:타교수강생반정보 목록 그리드/정렬"
+      },
+      {
+       "label": "학년도",
+       "depth": 0,
+       "box": [
+        533,
+        230,
+        169,
+        36
+       ],
+       "id": "col:타교수강생반정보 목록 그리드/학년도"
+      },
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        702,
+        230,
+        169,
+        36
+       ],
+       "id": "col:타교수강생반정보 목록 그리드/학년"
+      },
+      {
+       "label": "반명",
+       "depth": 0,
+       "box": [
+        871,
+        230,
+        338,
+        36
+       ],
+       "id": "col:타교수강생반정보 목록 그리드/반명"
+      },
+      {
+       "label": "반코드",
+       "depth": 0,
+       "box": [
+        1209,
+        230,
+        169,
+        36
+       ],
+       "id": "col:타교수강생반정보 목록 그리드/반코드"
+      },
+      {
+       "label": "성적반코드",
+       "depth": 0,
+       "box": [
+        1377,
+        230,
+        237,
+        36
+       ],
+       "id": "col:타교수강생반정보 목록 그리드/성적반코드"
+      }
+     ],
+     "id": "grid:타교수강생반정보 목록 그리드"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      477,
+      450,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "반 정보",
+     "id": "heading:반 정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      513,
+      80,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년도",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:학년도#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      553,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학년",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:학년#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      553,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반코드",
+     "control": "number",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:반코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      593,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "반명",
+     "control": "input",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:반명"
+    },
+    {
+     "aria": null,
+     "box": [
+      680,
+      593,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "정렬순서",
+     "control": "number",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:정렬순서"
+    },
+    {
+     "aria": null,
+     "box": [
+      1210,
+      593,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "성적반코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:성적반코드"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 학적 > 타교수강생관리(위탁) > 타교 수강생 반 정보 관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

@@ -1,0 +1,931 @@
+{
+ "schema": "neis-capture/1",
+ "key": "교무학사(고)›교육과정›학교일지관리›학교일지관리",
+ "name": "학교일지관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T04:07:52+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": "학년도",
+     "box": [
+      165,
+      82,
+      100,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학년도",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "year",
+     "id": "field:학년도"
+    },
+    {
+     "aria": null,
+     "box": [
+      815,
+      82,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "check",
+     "label": "검색조건(생성)",
+     "checked": false,
+     "id": "check:검색조건(생성)"
+    },
+    {
+     "aria": "조회",
+     "box": [
+      1516,
+      82,
+      64,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "조회",
+     "variant": "primary",
+     "id": "button:조회"
+    },
+    {
+     "aria": "기간",
+     "box": [
+      358,
+      85,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "기간",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:기간"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      488,
+      85,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      518,
+      85,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기"
+    },
+    {
+     "aria": "~",
+     "box": [
+      573,
+      85,
+      130,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "~",
+     "control": "date",
+     "required": false,
+     "valueKind": "date",
+     "id": "field:~"
+    },
+    {
+     "aria": "일자빼기",
+     "box": [
+      703,
+      85,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자빼기",
+     "variant": "plain",
+     "id": "button:일자빼기#2"
+    },
+    {
+     "aria": "일자더하기",
+     "box": [
+      733,
+      85,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "일자더하기",
+     "variant": "plain",
+     "id": "button:일자더하기#2"
+    },
+    {
+     "aria": "일괄생성",
+     "box": [
+      207,
+      138,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄생성",
+     "variant": "primary",
+     "id": "button:일괄생성"
+    },
+    {
+     "aria": "일괄제거",
+     "box": [
+      279,
+      138,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "일괄제거",
+     "variant": "secondary",
+     "id": "button:일괄제거"
+    },
+    {
+     "aria": "승인요청",
+     "box": [
+      351,
+      138,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "승인요청",
+     "variant": "primary",
+     "id": "button:승인요청"
+    },
+    {
+     "aria": "저장",
+     "box": [
+      1151,
+      138,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": "삭제",
+     "box": [
+      1199,
+      138,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "삭제",
+     "variant": "secondary",
+     "id": "button:삭제"
+    },
+    {
+     "aria": "출력(지시및전달사항)",
+     "box": [
+      1247,
+      138,
+      132,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력(지시및전달사항)",
+     "variant": "primary",
+     "id": "button:출력(지시및전달사항)"
+    },
+    {
+     "aria": "출력(출결미포함)",
+     "box": [
+      1387,
+      138,
+      109,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력(출결미포함)",
+     "variant": "primary",
+     "id": "button:출력(출결미포함)"
+    },
+    {
+     "aria": "출력(출결포함)",
+     "box": [
+      1503,
+      138,
+      97,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "출력(출결포함)",
+     "variant": "primary",
+     "id": "button:출력(출결포함)"
+    },
+    {
+     "aria": "2026년10월01일 - 목요일",
+     "box": [
+      430,
+      148,
+      193,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "2026년10월01일 - 목요일",
+     "id": "heading:2026년10월01일 - 목요일"
+    },
+    {
+     "aria": "학교일지 리스트",
+     "box": [
+      25,
+      178,
+      390,
+      598
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학교일지 리스트",
+     "selectable": true,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "순번",
+       "depth": 0,
+       "box": [
+        61,
+        179,
+        45,
+        36
+       ],
+       "id": "col:학교일지 리스트/순번"
+      },
+      {
+       "label": "날짜",
+       "depth": 0,
+       "box": [
+        106,
+        179,
+        111,
+        36
+       ],
+       "id": "col:학교일지 리스트/날짜"
+      },
+      {
+       "label": "상태",
+       "depth": 0,
+       "box": [
+        217,
+        179,
+        97,
+        36
+       ],
+       "id": "col:학교일지 리스트/상태"
+      },
+      {
+       "label": "생성",
+       "depth": 0,
+       "box": [
+        314,
+        179,
+        50,
+        36
+       ],
+       "id": "col:학교일지 리스트/생성"
+      },
+      {
+       "label": "제거",
+       "depth": 0,
+       "box": [
+        364,
+        179,
+        50,
+        36
+       ],
+       "id": "col:학교일지 리스트/제거"
+      }
+     ],
+     "id": "grid:학교일지 리스트"
+    },
+    {
+     "aria": "수업일수누계",
+     "box": [
+      430,
+      178,
+      1170,
+      78
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "수업일수누계",
+     "selectable": false,
+     "declaredColumns": 5,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        431,
+        179,
+        95,
+        36
+       ],
+       "id": "col:수업일수누계/학년"
+      },
+      {
+       "label": "1학년",
+       "depth": 0,
+       "box": [
+        527,
+        179,
+        80,
+        36
+       ],
+       "id": "col:수업일수누계/1학년"
+      },
+      {
+       "label": "2학년",
+       "depth": 0,
+       "box": [
+        607,
+        179,
+        80,
+        36
+       ],
+       "id": "col:수업일수누계/2학년"
+      },
+      {
+       "label": "3학년",
+       "depth": 0,
+       "box": [
+        687,
+        179,
+        80,
+        36
+       ],
+       "id": "col:수업일수누계/3학년"
+      }
+     ],
+     "id": "grid:수업일수누계"
+    },
+    {
+     "aria": null,
+     "box": [
+      585,
+      277,
+      526,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "제목",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:제목"
+    },
+    {
+     "aria": null,
+     "box": [
+      1241,
+      277,
+      354,
+      155
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "학생이동",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학생이동"
+    },
+    {
+     "aria": null,
+     "box": [
+      585,
+      317,
+      526,
+      135
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "내용",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:내용"
+    },
+    {
+     "aria": null,
+     "box": [
+      1241,
+      442,
+      354,
+      155
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "행사",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:행사"
+    },
+    {
+     "aria": null,
+     "box": [
+      585,
+      462,
+      526,
+      135
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "직원상황",
+     "control": "textarea",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:직원상황"
+    },
+    {
+     "aria": "복무자료가져오기",
+     "box": [
+      442,
+      520,
+      132,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "복무자료가져오기",
+     "variant": "link",
+     "id": "button:복무자료가져오기"
+    },
+    {
+     "aria": null,
+     "box": [
+      450,
+      550,
+      120,
+      24
+     ],
+     "region": "body",
+     "kind": "check",
+     "label": "상세내역포함",
+     "checked": false,
+     "id": "check:상세내역포함"
+    },
+    {
+     "aria": "결보강",
+     "box": [
+      430,
+      633,
+      48,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "결보강",
+     "id": "heading:결보강"
+    },
+    {
+     "aria": "결보강",
+     "box": [
+      430,
+      663,
+      1170,
+      158
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "결보강",
+     "selectable": false,
+     "declaredColumns": 6,
+     "columns": [
+      {
+       "label": "결강교사",
+       "depth": 0,
+       "box": [
+        431,
+        664,
+        195,
+        36
+       ],
+       "id": "col:결보강/결강교사"
+      },
+      {
+       "label": "학반",
+       "depth": 0,
+       "box": [
+        626,
+        664,
+        195,
+        36
+       ],
+       "id": "col:결보강/학반"
+      },
+      {
+       "label": "교시",
+       "depth": 0,
+       "box": [
+        820,
+        664,
+        195,
+        36
+       ],
+       "id": "col:결보강/교시"
+      },
+      {
+       "label": "과목",
+       "depth": 0,
+       "box": [
+        1015,
+        664,
+        195,
+        36
+       ],
+       "id": "col:결보강/과목"
+      },
+      {
+       "label": "보강교사",
+       "depth": 0,
+       "box": [
+        1210,
+        664,
+        195,
+        36
+       ],
+       "id": "col:결보강/보강교사"
+      },
+      {
+       "label": "보강과목",
+       "depth": 0,
+       "box": [
+        1404,
+        664,
+        195,
+        36
+       ],
+       "id": "col:결보강/보강과목"
+      }
+     ],
+     "id": "grid:결보강"
+    },
+    {
+     "aria": "마감현황",
+     "box": [
+      1536,
+      841,
+      64,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "마감현황",
+     "variant": "primary",
+     "id": "button:마감현황"
+    },
+    {
+     "aria": "학생출결상황",
+     "box": [
+      430,
+      851,
+      97,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학생출결상황",
+     "id": "heading:학생출결상황"
+    },
+    {
+     "aria": "학생출결상황",
+     "box": [
+      430,
+      881,
+      1170,
+      304
+     ],
+     "region": "body",
+     "kind": "grid",
+     "label": "학생출결상황",
+     "selectable": false,
+     "declaredColumns": 24,
+     "columns": [
+      {
+       "label": "학년",
+       "depth": 0,
+       "box": [
+        431,
+        882,
+        56,
+        62
+       ],
+       "id": "col:학생출결상황/학년"
+      },
+      {
+       "label": "학과",
+       "depth": 0,
+       "box": [
+        487,
+        882,
+        89,
+        62
+       ],
+       "id": "col:학생출결상황/학과"
+      },
+      {
+       "label": "반",
+       "depth": 0,
+       "box": [
+        576,
+        882,
+        56,
+        62
+       ],
+       "id": "col:학생출결상황/반"
+      },
+      {
+       "label": "재적",
+       "depth": 0,
+       "box": [
+        632,
+        882,
+        56,
+        62
+       ],
+       "id": "col:학생출결상황/재적"
+      },
+      {
+       "label": "결석",
+       "depth": 0,
+       "box": [
+        688,
+        882,
+        224,
+        31
+       ],
+       "span": 4,
+       "id": "col:학생출결상황/결석"
+      },
+      {
+       "label": "지각",
+       "depth": 0,
+       "box": [
+        912,
+        882,
+        224,
+        31
+       ],
+       "span": 4,
+       "id": "col:학생출결상황/지각"
+      },
+      {
+       "label": "조퇴",
+       "depth": 0,
+       "box": [
+        1136,
+        882,
+        224,
+        31
+       ],
+       "span": 4,
+       "id": "col:학생출결상황/조퇴"
+      },
+      {
+       "label": "결과",
+       "depth": 0,
+       "box": [
+        1359,
+        882,
+        224,
+        31
+       ],
+       "span": 4,
+       "id": "col:학생출결상황/결과"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        688,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/결석>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        744,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/결석>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        800,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/결석>기타"
+      },
+      {
+       "label": "인정",
+       "depth": 1,
+       "box": [
+        856,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/결석>인정"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        912,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/지각>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        968,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/지각>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1024,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/지각>기타"
+      },
+      {
+       "label": "인정",
+       "depth": 1,
+       "box": [
+        1080,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/지각>인정"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1136,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/조퇴>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1192,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/조퇴>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1247,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/조퇴>기타"
+      },
+      {
+       "label": "인정",
+       "depth": 1,
+       "box": [
+        1303,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/조퇴>인정"
+      },
+      {
+       "label": "질병",
+       "depth": 1,
+       "box": [
+        1359,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/결과>질병"
+      },
+      {
+       "label": "미인정",
+       "depth": 1,
+       "box": [
+        1415,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/결과>미인정"
+      },
+      {
+       "label": "기타",
+       "depth": 1,
+       "box": [
+        1471,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/결과>기타"
+      },
+      {
+       "label": "인정",
+       "depth": 1,
+       "box": [
+        1527,
+        913,
+        56,
+        31
+       ],
+       "id": "col:학생출결상황/결과>인정"
+      }
+     ],
+     "id": "grid:학생출결상황"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > 교육과정 > 학교일지관리 > 학교일지관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}

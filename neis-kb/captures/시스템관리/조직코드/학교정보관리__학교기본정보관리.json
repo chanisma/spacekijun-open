@@ -1,0 +1,618 @@
+{
+ "schema": "neis-capture/1",
+ "key": "시스템관리›조직코드›학교정보관리›학교기본정보관리",
+ "name": "학교기본정보관리",
+ "status": "ok",
+ "capturedAt": "2026-10-05T08:48:29+00:00",
+ "collector": "collect.py@1",
+ "menuSource": "학교업무분장 메뉴목록(2026.09.11.17.13.56).xlsx",
+ "views": [
+  {
+   "id": "main",
+   "size": [
+    1640,
+    828
+   ],
+   "elements": [
+    {
+     "aria": null,
+     "box": [
+      175,
+      82,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학교코드",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학교코드"
+    },
+    {
+     "aria": null,
+     "box": [
+      515,
+      82,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학교명",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학교명"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      133,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      143,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "기본정보",
+     "id": "heading:기본정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      1280,
+      179,
+      80,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "도로명우편번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:도로명우편번호"
+    },
+    {
+     "aria": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "box": [
+      1366,
+      179,
+      30,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다.",
+     "variant": "link",
+     "id": "button:우편번호 검색 버튼. 버튼을 누르면 주소검색 팝업이 호출됩니다."
+    },
+    {
+     "aria": null,
+     "box": [
+      1280,
+      219,
+      155,
+      30
+     ],
+     "region": "search",
+     "disabled": true,
+     "kind": "field",
+     "label": "도로명주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:도로명주소"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      259,
+      214,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "학교명(영어)",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학교명(영어)"
+    },
+    {
+     "aria": null,
+     "box": [
+      370,
+      259,
+      50,
+      30
+     ],
+     "region": "search",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      1280,
+      259,
+      315,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "전화번호",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:전화번호"
+    },
+    {
+     "aria": null,
+     "box": [
+      1280,
+      299,
+      315,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "FAX",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:FAX"
+    },
+    {
+     "aria": null,
+     "box": [
+      1280,
+      339,
+      315,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "홈페이지주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:홈페이지주소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1280,
+      379,
+      315,
+      30
+     ],
+     "region": "search",
+     "kind": "field",
+     "label": "영문주소",
+     "control": "input",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:영문주소"
+    },
+    {
+     "aria": null,
+     "box": [
+      1560,
+      481,
+      40,
+      30
+     ],
+     "region": "body",
+     "kind": "button",
+     "label": "저장",
+     "variant": "primary",
+     "id": "button:저장#3"
+    },
+    {
+     "aria": null,
+     "box": [
+      25,
+      491,
+      64,
+      20
+     ],
+     "region": "body",
+     "kind": "heading",
+     "label": "학사정보",
+     "id": "heading:학사정보"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      527,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "변경구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "empty",
+     "id": "field:변경구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      527,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "특수학급운영수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:특수학급운영수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      527,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학력인정여부",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:학력인정여부"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      567,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "설립일자",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:설립일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      567,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "특수학급편성수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:특수학급편성수"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      567,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "학력인정기준일",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:학력인정기준일"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      607,
+      120,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "개교기념일",
+     "control": "date",
+     "required": true,
+     "valueKind": "date",
+     "id": "field:개교기념일"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      607,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "도서관할기관",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:도서관할기관"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      647,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "주야구분",
+     "control": "combobox",
+     "required": true,
+     "valueKind": "text",
+     "id": "field:주야구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      687,
+      200,
+      30
+     ],
+     "region": "body",
+     "kind": "field",
+     "label": "전체학급수",
+     "control": "number",
+     "required": false,
+     "valueKind": "number",
+     "id": "field:전체학급수"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      687,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "본교기관명",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:본교기관명"
+    },
+    {
+     "aria": null,
+     "box": [
+      881,
+      687,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      687,
+      120,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "폐교일자",
+     "control": "date",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:폐교일자"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      727,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "고등학교구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:고등학교구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      727,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "폐교관리기관",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:폐교관리기관"
+    },
+    {
+     "aria": null,
+     "box": [
+      1406,
+      727,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기#2"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      767,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "일반/전문구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:일반/전문구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      807,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "특목고구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:특목고구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      150,
+      847,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "남여공학구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:남여공학구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      675,
+      847,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "입시전후기구분",
+     "control": "combobox",
+     "required": false,
+     "valueKind": "text",
+     "id": "field:입시전후기구분"
+    },
+    {
+     "aria": null,
+     "box": [
+      1200,
+      847,
+      200,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "field",
+     "label": "병설교",
+     "control": "input",
+     "required": false,
+     "valueKind": "empty",
+     "id": "field:병설교"
+    },
+    {
+     "aria": null,
+     "box": [
+      1406,
+      847,
+      50,
+      30
+     ],
+     "region": "body",
+     "disabled": true,
+     "kind": "button",
+     "label": "찾기",
+     "variant": "primary",
+     "id": "button:찾기#3"
+    }
+   ]
+  }
+ ],
+ "reachedVia": "부서장(나이스부) > {시스템관리}조직코드 > 학교정보관리 > 학교기본정보관리",
+ "viewport": [
+  1920,
+  945
+ ]
+}
